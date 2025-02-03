@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 
-import { ComponentComponent } from './component.component';
+import { NavComponent } from './nav.component';
 
-const meta: Meta<typeof ComponentComponent> = {
-  component: ComponentComponent,
+const meta: Meta<typeof NavComponent> = {
+  component: NavComponent,
 };
 
 export default meta;
