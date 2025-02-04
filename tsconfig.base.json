@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@olejarczyk-jakub/component": ["libs/component/src/index.ts"]
+      "@olejarczyk-jakub/component": ["libs/component/src/index.ts"],
+      "@olejarczyk-jakub/system": ["libs/system/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
