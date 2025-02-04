@@ -1,7 +1,12 @@
+:host {
+  display: contents;
+}
+
 .menu {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
 
   &__horizontal {
     flex-direction: row;
