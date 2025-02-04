@@ -1,23 +1,26 @@
 .logo {
-  color: white;
-  font-size: 1.5rem;
   display: flex;
   align-items: center;
-  color: white;
+  justify-content: center;
+  color: var(--accent-dark);
+  text-transform: uppercase;
+  font-size: 1em;
+  letter-spacing: 2px;
+
+  &::before,
+  &::after {
+    color: var(--accent-light);
+    font-size: 2em;
+    transform: translateY(-2px);
+  }
 
   &::before {
-    content: '<';
+    content: '{';
     margin-right: 0.5rem;
   }
 
   &::after {
-    content: '/>';
+    content: '}';
     margin-left: 0.5rem;
-  }
-
-  &::before,
-  &::after {
-    font-size: 2rem;
-    color: gold;
   }
 }
