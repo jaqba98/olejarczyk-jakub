@@ -19,11 +19,4 @@ export class HamburgerComponent extends BaseComponent<boolean> {
     this.isOpen = !this.isOpen;
     this.event.emit(this.isOpen);
   }
-
-  getStyle() {
-    return {
-      width: this.size,
-      height: this.size,
-    };
-  }
 }

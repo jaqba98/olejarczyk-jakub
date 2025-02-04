@@ -2,11 +2,11 @@ import type { Meta, StoryObj } from '@storybook/angular';
 
 import { NavComponent } from './nav.component';
 
-const meta: Meta<typeof NavComponent> = {
+const meta: Meta<NavComponent> = {
   component: NavComponent,
 };
 
 export default meta;
-type Story = StoryObj<typeof meta>;
+type Story = StoryObj<NavComponent>;
 
 export const Default: Story = {};

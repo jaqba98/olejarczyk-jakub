@@ -1,7 +1,7 @@
 <button
   class="hamburger"
   (click)="onClick()"
-  [ngStyle]="getStyle()"
+  [ngStyle]="{ width: size, height: size }"
   [ngClass]="{ hamburger__open: isOpen }"
 >
   <div class="hamburger__line hamburger__line-top"></div>
