@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable } from 'rxjs';
 
-export type MediaType = 'mobile' | 'tablet' | 'desktop' | 'tv';
+import { MediaEnum } from '../enum/media.enum';
 
 @Injectable({ providedIn: 'root' })
 export class MediaService {
-  media$: Observable<MediaType>;
+  media$: Observable<MediaEnum>;
 
-  constructor(private readonly obs: BreakpointObserver) {
-    this.media$ = this.obs
+  constructor(private readonly breakpoint: BreakpointObserver) {
+    this.media$ = this.breakpoint
       .observe([
         Breakpoints.XSmall,
         Breakpoints.Small,
@@ -18,19 +18,14 @@ export class MediaService {
         Breakpoints.XLarge,
       ])
       .pipe(
-        map((result) => {
-          if (
-            result.breakpoints[Breakpoints.XSmall] ||
-            result.breakpoints[Breakpoints.Small]
-          ) {
-            return 'mobile';
-          } else if (result.breakpoints[Breakpoints.Medium]) {
-            return 'tablet';
-          } else if (result.breakpoints[Breakpoints.Large]) {
-            return 'desktop';
-          } else {
-            return 'tv';
-          }
+        map((type) => {
+          const { breakpoints } = type;
+          if (breakpoints[Breakpoints.XSmall]) return MediaEnum.mobile;
+          if (breakpoints[Breakpoints.Small]) return MediaEnum.mobile;
+          if (breakpoints[Breakpoints.Medium]) return MediaEnum.tablet;
+          if (breakpoints[Breakpoints.Large]) return MediaEnum.desktop;
+          if (breakpoints[Breakpoints.XLarge]) return MediaEnum.tv;
+          return MediaEnum.tv;
         })
       );
   }
