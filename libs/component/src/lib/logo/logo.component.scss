@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent-dark);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1em;
+  color: var(--accent-dark);
 
   &::before,
   &::after {
