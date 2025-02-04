@@ -1,33 +1,27 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 
 import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'lib-logo',
   templateUrl: './logo.component.html',
   styleUrl: './logo.component.scss',
 })
-export class LogoComponent implements OnInit, OnDestroy {
+export class LogoComponent extends BaseComponent<void> {
   title!: string;
 
   private readonly fullname = 'Jakub Olejarczyk';
 
   private readonly initials = 'JO';
 
-  private sub!: Subscription;
-
-  constructor(private readonly media: MediaService) {}
-
-  ngOnInit() {
-    this.sub = this.media.media$.subscribe((media) => {
-      this.title = this.media.lessOrEqual(media, MediaEnum.mobileSmall)
-        ? this.initials
-        : this.fullname;
-    });
+  constructor(protected override readonly media: MediaService) {
+    super(media);
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
+  override onInit(media: MediaEnum) {
+    this.title = this.media.lessOrEqual(media, MediaEnum.mobileSmall)
+      ? this.initials
+      : this.fullname;
   }
 }

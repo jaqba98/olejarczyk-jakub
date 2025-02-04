@@ -1,11 +1,11 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Subscription } from 'rxjs';
 
 import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
 import { LogoComponent } from '../logo/logo.component';
 import { HamburgerComponent } from '../hamburger/hamburger.component';
 import { MenuComponent } from '../menu/menu.component';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'lib-nav',
@@ -13,32 +13,25 @@ import { MenuComponent } from '../menu/menu.component';
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
-export class NavComponent implements OnInit, OnDestroy {
+export class NavComponent extends BaseComponent<void> {
   spaceAround = false;
 
   menuIsVisible = false;
 
   menuIsActive = false;
 
-  private sub!: Subscription;
-
-  constructor(private readonly media: MediaService) {}
-
-  ngOnInit() {
-    this.sub = this.media.media$.subscribe((media) => {
-      this.spaceAround = this.media.moreOrEqual(media, MediaEnum.tablet);
-
-      if (this.media.lessOrEqual(media, MediaEnum.mobileLarge)) {
-        this.menuIsActive = true;
-      } else {
-        this.menuIsActive = false;
-        this.menuIsVisible = false;
-      }
-    });
+  constructor(protected override readonly media: MediaService) {
+    super(media);
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
+  override onInit(media: MediaEnum): void {
+    this.spaceAround = this.media.moreOrEqual(media, MediaEnum.tablet);
+    if (this.media.lessOrEqual(media, MediaEnum.mobileLarge)) {
+      this.menuIsActive = true;
+    } else {
+      this.menuIsActive = false;
+      this.menuIsVisible = false;
+    }
   }
 
   onClick(event: boolean) {
