@@ -1,5 +1,6 @@
 export enum MediaEnum {
-  mobile = 'mobile',
+  mobileSmall = 'mobileSmall',
+  mobileLarge = 'mobileLarge',
   tablet = 'tablet',
   desktop = 'desktop',
   tv = 'tv',

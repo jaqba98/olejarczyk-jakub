@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MediaService } from '@olejarczyk-jakub/system';
+import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
 import { HamburgerComponent } from '../hamburger/hamburger.component';
 import { LogoComponent } from '../logo/logo.component';
 import { MenuComponent } from '../menu/menu.component';
@@ -14,6 +14,8 @@ import { MenuModel } from '../menu/menu.model';
   styleUrl: './nav.component.scss',
 })
 export class NavComponent {
+  title: MediaEnum = MediaEnum.mobileSmall;
+
   menu: MenuModel = {
     links: [
       { label: 'Link1' },
@@ -26,7 +28,7 @@ export class NavComponent {
 
   constructor(private readonly media: MediaService) {
     this.media.media$.subscribe((type) => {
-      console.log('Typ urządzenia:', type);
+      this.title = type;
     });
   }
 }

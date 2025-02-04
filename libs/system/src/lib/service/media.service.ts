@@ -20,8 +20,8 @@ export class MediaService {
       .pipe(
         map((type) => {
           const { breakpoints } = type;
-          if (breakpoints[Breakpoints.XSmall]) return MediaEnum.mobile;
-          if (breakpoints[Breakpoints.Small]) return MediaEnum.mobile;
+          if (breakpoints[Breakpoints.XSmall]) return MediaEnum.mobileSmall;
+          if (breakpoints[Breakpoints.Small]) return MediaEnum.mobileLarge;
           if (breakpoints[Breakpoints.Medium]) return MediaEnum.tablet;
           if (breakpoints[Breakpoints.Large]) return MediaEnum.desktop;
           if (breakpoints[Breakpoints.XLarge]) return MediaEnum.tv;
