@@ -1,14 +1,8 @@
 import { CommonModule } from '@angular/common';
-import {
-  Component,
-  OnInit,
-  OnDestroy,
-  Output,
-  EventEmitter,
-} from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component } from '@angular/core';
 
 import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
+import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'lib-hamburger',
@@ -16,35 +10,27 @@ import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
   templateUrl: './hamburger.component.html',
   styleUrl: './hamburger.component.scss',
 })
-export class HamburgerComponent implements OnInit, OnDestroy {
-  @Output() clickEvent = new EventEmitter<boolean>();
-
+export class HamburgerComponent extends BaseComponent<boolean> {
   isVisible = true;
 
   isOpen = false;
 
-  private sub!: Subscription;
-
-  constructor(private readonly media: MediaService) {}
-
-  ngOnInit() {
-    this.sub = this.media.media$.subscribe((media) => {
-      if (this.media.lessOrEqual(media, MediaEnum.mobileLarge)) {
-        this.isVisible = true;
-      } else {
-        this.isVisible = false;
-        this.isOpen = false;
-        this.clickEvent.emit(this.isOpen);
-      }
-    });
+  constructor(protected override readonly media: MediaService) {
+    super(media);
   }
 
-  ngOnDestroy() {
-    this.sub.unsubscribe();
+  override onInit(media: MediaEnum) {
+    if (this.media.lessOrEqual(media, MediaEnum.mobileLarge)) {
+      this.isVisible = true;
+    } else {
+      this.isVisible = false;
+      this.isOpen = false;
+      this.event.emit(this.isOpen);
+    }
   }
 
   onClick() {
     this.isOpen = !this.isOpen;
-    this.clickEvent.emit(this.isOpen);
+    this.event.emit(this.isOpen);
   }
 }
