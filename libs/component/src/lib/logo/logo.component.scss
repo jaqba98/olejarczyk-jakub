@@ -4,12 +4,13 @@
   justify-content: center;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: bold;
   font-size: 1em;
   color: var(--accent-light);
 
   &::before,
   &::after {
-    font-size: 2em;
+    font-size: 1.5em;
     transform: translateY(-2px);
   }
 
