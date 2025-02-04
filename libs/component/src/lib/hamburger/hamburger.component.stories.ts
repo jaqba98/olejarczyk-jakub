@@ -11,6 +11,6 @@ type Story = StoryObj<HamburgerComponent>;
 
 export const Default: Story = {
   args: {
-    size: '3rem',
+    size: '2rem',
   },
 };
