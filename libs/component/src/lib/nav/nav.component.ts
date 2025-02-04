@@ -5,11 +5,11 @@ import { Subscription } from 'rxjs';
 import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
 import { LogoComponent } from '../logo/logo.component';
 import { HamburgerComponent } from '../hamburger/hamburger.component';
-import { ButtonComponent } from '../button/button.component';
+import { MenuComponent } from '../menu/menu.component';
 
 @Component({
   selector: 'lib-nav',
-  imports: [CommonModule, LogoComponent, HamburgerComponent, ButtonComponent],
+  imports: [CommonModule, LogoComponent, HamburgerComponent, MenuComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
