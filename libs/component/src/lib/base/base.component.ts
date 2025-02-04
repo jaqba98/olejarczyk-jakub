@@ -17,8 +17,6 @@ export class BaseComponent<TEvent> implements OnInit, OnDestroy {
 
   private sub!: Subscription;
 
-  // I am here
-
   constructor(protected readonly media: MediaService) {}
 
   ngOnInit() {
