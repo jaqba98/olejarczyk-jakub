@@ -1,4 +1,4 @@
-$line-height: 18%;
+$line-height: 15%;
 
 .hamburger {
   display: block;
@@ -11,7 +11,7 @@ $line-height: 18%;
     width: 100%;
     height: $line-height;
     border-radius: 0.5rem;
-    background-color: white;
+    background-color: var(--text);
     transition: all 0.25s ease-in-out;
     position: absolute;
 
