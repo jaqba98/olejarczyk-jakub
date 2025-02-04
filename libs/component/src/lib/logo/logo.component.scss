@@ -5,11 +5,10 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1em;
-  color: var(--accent-dark);
+  color: var(--accent-light);
 
   &::before,
   &::after {
-    color: var(--accent-light);
     font-size: 2em;
     transform: translateY(-2px);
   }

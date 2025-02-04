@@ -1,34 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Subscription } from 'rxjs';
 
 import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
-import { HamburgerComponent } from '../hamburger/hamburger.component';
 import { LogoComponent } from '../logo/logo.component';
-import { MenuComponent } from '../menu/menu.component';
-import { MenuModel } from '../menu/menu.model';
+import { HamburgerComponent } from '../hamburger/hamburger.component';
 
 @Component({
   selector: 'lib-nav',
-  imports: [CommonModule, LogoComponent, MenuComponent, HamburgerComponent],
+  imports: [CommonModule, LogoComponent, HamburgerComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })
-export class NavComponent {
-  title: MediaEnum = MediaEnum.mobileSmall;
+export class NavComponent implements OnInit, OnDestroy {
+  spaceAround = false;
 
-  menu: MenuModel = {
-    links: [
-      { label: 'Link1' },
-      { label: 'Link2' },
-      { label: 'Link3' },
-      { label: 'Link4' },
-      { label: 'Link5' },
-    ],
-  };
+  private sub!: Subscription;
 
-  constructor(private readonly media: MediaService) {
-    this.media.media$.subscribe((type) => {
-      this.title = type;
+  constructor(private readonly media: MediaService) {}
+
+  ngOnInit() {
+    this.sub = this.media.media$.subscribe((media) => {
+      this.spaceAround = this.media.moreOrEqual(media, MediaEnum.tablet);
     });
+  }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
   }
 }

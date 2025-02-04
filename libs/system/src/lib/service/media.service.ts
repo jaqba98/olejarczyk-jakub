@@ -54,4 +54,21 @@ export class MediaService {
         throw new Error('Not supported media type!');
     }
   }
+
+  moreOrEqual(currMedia: MediaEnum, targetMedia: MediaEnum) {
+    switch (targetMedia) {
+      case MediaEnum.mobileSmall:
+        return this.breakpoints.slice(0).includes(currMedia);
+      case MediaEnum.mobileLarge:
+        return this.breakpoints.slice(1).includes(currMedia);
+      case MediaEnum.tablet:
+        return this.breakpoints.slice(2).includes(currMedia);
+      case MediaEnum.desktop:
+        return this.breakpoints.slice(3).includes(currMedia);
+      case MediaEnum.tv:
+        return this.breakpoints.slice(4).includes(currMedia);
+      default:
+        throw new Error('Not supported media type!');
+    }
+  }
 }

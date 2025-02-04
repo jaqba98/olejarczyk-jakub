@@ -1,5 +1,4 @@
-<nav class="nav">
-  <lib-logo [title]="title"></lib-logo>
-  <lib-menu [menu]="menu"></lib-menu>
-  <lib-hamburger size="2rem"></lib-hamburger>
+<nav class="nav" [ngClass]="{ 'nav__space-around': spaceAround }">
+  <lib-logo></lib-logo>
+  <lib-hamburger></lib-hamburger>
 </nav>
