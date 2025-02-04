@@ -1,1 +1,1 @@
-export * from './lib/system/system.component';
+export * from './lib/service/media.service';
