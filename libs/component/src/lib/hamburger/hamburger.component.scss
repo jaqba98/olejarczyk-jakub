@@ -1,48 +1,51 @@
-$line-height: 15%;
+$hamburger-size: 2rem;
+$line-height: calc($hamburger-size / 5);
 
 .hamburger {
+  width: $hamburger-size;
+  height: $hamburger-size;
   display: block;
+  position: relative;
   background-color: transparent;
   border: none;
-  position: relative;
   cursor: pointer;
+}
 
-  &__line {
-    width: 100%;
-    height: $line-height;
-    border-radius: 0.5rem;
-    background-color: var(--text);
-    transition: all 0.25s ease-in-out;
-    position: absolute;
+.line {
+  width: 100%;
+  height: $line-height;
+  background-color: var(--text);
+  position: absolute;
+  border-radius: 10px;
+  transition: all 0.25s ease-in-out;
 
+  &-top {
+    top: 0;
+  }
+
+  &-middle {
+    top: calc(50% - $line-height / 2);
+  }
+
+  &-bottom {
+    bottom: 0;
+  }
+}
+
+.hamburger__open {
+  .line {
     &-top {
-      top: 0;
+      top: calc(50% - $line-height / 2);
+      transform: rotate(45deg);
     }
 
     &-middle {
-      top: calc(50% - $line-height / 2);
+      transform: rotate(45deg);
     }
 
     &-bottom {
-      bottom: 0;
-    }
-  }
-
-  &__open {
-    .hamburger__line {
-      &-top {
-        transform: rotate(45deg);
-        top: calc(50% - $line-height / 2);
-      }
-
-      &-middle {
-        transform: rotate(-45deg);
-      }
-
-      &-bottom {
-        transform: rotate(-45deg);
-        bottom: calc(50% - $line-height / 2);
-      }
+      bottom: calc(50% - $line-height / 2);
+      transform: rotate(-45deg);
     }
   }
 }

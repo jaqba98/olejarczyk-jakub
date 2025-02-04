@@ -1,10 +1,11 @@
-<button
-  class="hamburger"
-  (click)="onClick()"
-  [ngStyle]="{ width: size, height: size }"
-  [ngClass]="{ hamburger__open: isOpen }"
->
-  <div class="hamburger__line hamburger__line-top"></div>
-  <div class="hamburger__line hamburger__line-middle"></div>
-  <div class="hamburger__line hamburger__line-bottom"></div>
-</button>
+<ng-container *ngIf="isVisible">
+  <button
+    class="hamburger"
+    [ngClass]="{ hamburger__open: isOpen }"
+    (click)="onClick()"
+  >
+    <div class="line line-top"></div>
+    <div class="line line-middle"></div>
+    <div class="line line-bottom"></div>
+  </button>
+</ng-container>

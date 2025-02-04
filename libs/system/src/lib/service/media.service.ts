@@ -8,6 +8,14 @@ import { MediaEnum } from '../enum/media.enum';
 export class MediaService {
   media$: Observable<MediaEnum>;
 
+  private readonly breakpoints: MediaEnum[] = [
+    MediaEnum.mobileSmall,
+    MediaEnum.mobileLarge,
+    MediaEnum.tablet,
+    MediaEnum.desktop,
+    MediaEnum.tv,
+  ];
+
   constructor(private readonly breakpoint: BreakpointObserver) {
     this.media$ = this.breakpoint
       .observe([
@@ -28,5 +36,22 @@ export class MediaService {
           return MediaEnum.tv;
         })
       );
+  }
+
+  lessOrEqual(currMedia: MediaEnum, targetMedia: MediaEnum) {
+    switch (targetMedia) {
+      case MediaEnum.mobileSmall:
+        return this.breakpoints.slice(0, 1).includes(currMedia);
+      case MediaEnum.mobileLarge:
+        return this.breakpoints.slice(0, 2).includes(currMedia);
+      case MediaEnum.tablet:
+        return this.breakpoints.slice(0, 3).includes(currMedia);
+      case MediaEnum.desktop:
+        return this.breakpoints.slice(0, 4).includes(currMedia);
+      case MediaEnum.tv:
+        return this.breakpoints.slice(0, 5).includes(currMedia);
+      default:
+        throw new Error('Not supported media type!');
+    }
   }
 }
