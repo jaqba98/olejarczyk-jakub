@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 
@@ -12,6 +12,8 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './menu.component.scss',
 })
 export class MenuComponent implements OnInit, OnDestroy {
+  @Input() horizontal = false;
+
   private sub!: Subscription;
 
   isVisible = false;
@@ -20,7 +22,11 @@ export class MenuComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub = this.media.media$.subscribe((media) => {
-      this.isVisible = this.media.moreOrEqual(media, MediaEnum.mobileLarge);
+      if (this.horizontal) {
+        this.isVisible = this.media.more(media, MediaEnum.mobileLarge);
+      } else {
+        this.isVisible = this.media.lessOrEqual(media, MediaEnum.mobileLarge);
+      }
     });
   }
 

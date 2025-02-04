@@ -16,6 +16,10 @@ import { MenuComponent } from '../menu/menu.component';
 export class NavComponent implements OnInit, OnDestroy {
   spaceAround = false;
 
+  menuIsVisible = false;
+
+  menuIsActive = false;
+
   private sub!: Subscription;
 
   constructor(private readonly media: MediaService) {}
@@ -23,10 +27,21 @@ export class NavComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub = this.media.media$.subscribe((media) => {
       this.spaceAround = this.media.moreOrEqual(media, MediaEnum.tablet);
+
+      if (this.media.lessOrEqual(media, MediaEnum.mobileLarge)) {
+        this.menuIsActive = true;
+      } else {
+        this.menuIsActive = false;
+        this.menuIsVisible = false;
+      }
     });
   }
 
   ngOnDestroy() {
     this.sub.unsubscribe();
+  }
+
+  onClick(event: boolean) {
+    this.menuIsVisible = event;
   }
 }

@@ -10,4 +10,14 @@ const meta: Meta<MenuComponent> = {
 export default meta;
 type Story = StoryObj<MenuComponent>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    horizontal: false,
+  },
+};
+
+export const Pc: Story = {
+  args: {
+    horizontal: true,
+  },
+};

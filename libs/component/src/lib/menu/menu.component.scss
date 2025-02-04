@@ -1,0 +1,9 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  &__horizontal {
+    flex-direction: row;
+  }
+}

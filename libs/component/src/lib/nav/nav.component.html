@@ -1,7 +1,19 @@
 <nav class="nav" [ngClass]="{ 'nav__space-around': spaceAround }">
   <lib-logo></lib-logo>
   <div>
-    <lib-menu></lib-menu>
-    <lib-hamburger></lib-hamburger>
+    <lib-menu [horizontal]="true"></lib-menu>
+    <lib-hamburger (clickEvent)="onClick($event)"></lib-hamburger>
   </div>
 </nav>
+
+<ng-container *ngIf="menuIsActive">
+  <nav
+    class="nav nav-mobile"
+    [ngClass]="{
+      'nav-mobile__open': menuIsVisible,
+      'nav-mobile__close': !menuIsVisible
+    }"
+  >
+    <lib-menu></lib-menu>
+  </nav>
+</ng-container>

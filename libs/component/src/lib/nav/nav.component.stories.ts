@@ -5,6 +5,9 @@ import { NavComponent } from './nav.component';
 const meta: Meta<NavComponent> = {
   title: 'Nav',
   component: NavComponent,
+  parameters: {
+    layout: 'fullscreen',
+  },
 };
 
 export default meta;

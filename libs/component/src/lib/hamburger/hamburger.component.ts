@@ -29,11 +29,12 @@ export class HamburgerComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.sub = this.media.media$.subscribe((media) => {
-      if (this.media.lessOrEqual(media, MediaEnum.mobileSmall)) {
+      if (this.media.lessOrEqual(media, MediaEnum.mobileLarge)) {
         this.isVisible = true;
       } else {
         this.isVisible = false;
         this.isOpen = false;
+        this.clickEvent.emit(this.isOpen);
       }
     });
   }

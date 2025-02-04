@@ -9,3 +9,17 @@
     justify-content: space-around;
   }
 }
+
+.nav-mobile {
+  position: fixed;
+  width: 100%;
+  transition: all 0.25s ease-in-out;
+
+  &__open {
+    left: 0;
+  }
+
+  &__close {
+    left: 100%;
+  }
+}
