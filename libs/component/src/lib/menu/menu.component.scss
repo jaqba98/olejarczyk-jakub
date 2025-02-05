@@ -5,10 +5,13 @@
 .menu {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1rem;
   width: 100%;
+  padding: 1rem;
 
   &__horizontal {
     flex-direction: row;
+    gap: 0.5rem;
+    padding: 0;
   }
 }

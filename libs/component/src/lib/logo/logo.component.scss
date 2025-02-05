@@ -3,24 +3,22 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: bold;
+  letter-spacing: 5px;
   font-size: 1em;
-  color: var(--accent-light);
+  color: var(--accent);
 
   &::before,
   &::after {
-    font-size: 1.5em;
-    transform: translateY(-2px);
+    font-size: 2em;
   }
 
   &::before {
-    content: '{';
-    margin-right: 0.5rem;
+    content: '<';
+    margin-right: 0.25rem;
   }
 
   &::after {
-    content: '}';
-    margin-left: 0.5rem;
+    content: '/>';
+    margin-left: 0.25rem;
   }
 }
