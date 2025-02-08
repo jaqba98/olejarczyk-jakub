@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
 import { LogoComponent } from '../logo/logo.component';
-import { HamburgerComponent } from '../hamburger/hamburger.component';
 import { MenuComponent } from '../menu/menu.component';
 import { BaseComponent } from '../base/base.component';
 
 @Component({
   selector: 'lib-nav',
-  imports: [CommonModule, LogoComponent, HamburgerComponent, MenuComponent],
+  imports: [CommonModule, LogoComponent, MenuComponent],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss',
 })

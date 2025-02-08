@@ -1,0 +1,51 @@
+$hamburger-size: 2rem;
+$line-height: 5px;
+
+.hamburger {
+  display: block;
+  width: $hamburger-size;
+  height: $hamburger-size;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+
+  &__line {
+    width: 100%;
+    height: $line-height;
+    border-radius: 10px;
+    background-color: var(--accent-color);
+    position: absolute;
+    transition: all 0.25s ease-in-out;
+
+    &-top {
+      top: 0;
+    }
+
+    &-middle {
+      top: calc(50% - $line-height / 2);
+    }
+
+    &-bottom {
+      bottom: 0;
+    }
+  }
+
+  &__open {
+    .hamburger__line {
+      &-top {
+        top: calc(50% - $line-height / 2);
+        transform: rotate(45deg);
+      }
+
+      &-middle {
+        transform: rotate(45deg);
+      }
+
+      &-bottom {
+        bottom: calc(50% - $line-height / 2);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
