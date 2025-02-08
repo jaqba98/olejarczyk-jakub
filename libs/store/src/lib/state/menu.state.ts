@@ -1,6 +1,6 @@
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
-import { MenuModel } from '@olejarczyk-jakub/model';
+import { MenuModel, TitleEnum } from '@olejarczyk-jakub/model';
 import { MenuSwitchAction } from '../action/menu-switch.action';
 import { MenuSetTitleAction } from '../action/menu-set-title.action';
 
@@ -8,7 +8,7 @@ import { MenuSetTitleAction } from '../action/menu-set-title.action';
   name: 'menu',
   defaults: {
     isOpen: false,
-    title: 'JO',
+    title: TitleEnum.short,
   },
 })
 export class MenuState {

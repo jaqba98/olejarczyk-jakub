@@ -7,7 +7,8 @@ import {
 } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
+import { MediaService } from '@olejarczyk-jakub/system';
+import { MediaEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   template: '',

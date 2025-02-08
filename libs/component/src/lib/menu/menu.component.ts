@@ -1,9 +1,10 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { MediaEnum, MediaService } from '@olejarczyk-jakub/system';
+import { MediaService } from '@olejarczyk-jakub/system';
 import { ButtonComponent } from '../button/button.component';
 import { BaseComponent } from '../base/base.component';
+import { MediaEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-menu',

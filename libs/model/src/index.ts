@@ -1,1 +1,4 @@
-export * from './lib/menu.model';
+export * from './lib/enum/media.enum';
+export * from './lib/enum/title.enum';
+export * from './lib/model/menu.model';
+export * from './lib/model/system.model';

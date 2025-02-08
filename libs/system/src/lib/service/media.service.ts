@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map, Observable } from 'rxjs';
 
-import { MediaEnum } from '../enum/media.enum';
+import { MediaEnum } from '@olejarczyk-jakub/model';
 
 @Injectable({ providedIn: 'root' })
 export class MediaService {
