@@ -2,11 +2,13 @@ import { Action, Selector, State, StateContext } from '@ngxs/store';
 
 import { MenuModel } from '@olejarczyk-jakub/model';
 import { MenuSwitchAction } from '../action/menu-switch.action';
+import { MenuSetTitleAction } from '../action/menu-set-title.action';
 
 @State<MenuModel>({
   name: 'menu',
   defaults: {
     isOpen: false,
+    title: 'JO',
   },
 })
 export class MenuState {
@@ -15,9 +17,19 @@ export class MenuState {
     return state.isOpen;
   }
 
+  @Selector()
+  static getTitle(state: MenuModel): MenuModel['title'] {
+    return state.title;
+  }
+
   @Action(MenuSwitchAction)
-  switchMenu(ctx: StateContext<MenuModel>) {
+  switch(ctx: StateContext<MenuModel>) {
     const isOpen = ctx.getState().isOpen;
     ctx.patchState({ isOpen: !isOpen });
+  }
+
+  @Action(MenuSetTitleAction)
+  setTitle(ctx: StateContext<MenuModel>, action: MenuSetTitleAction) {
+    ctx.patchState({ title: action.title });
   }
 }
