@@ -8,11 +8,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './hamburger-dumb.component.scss',
 })
 export class HamburgerDumbComponent {
-  @Output() event = new EventEmitter<boolean>();
+  @Output() event = new EventEmitter();
 
   @Input() isOpen = false;
 
   onClick() {
-    this.event.emit(true);
+    this.event.emit();
   }
 }

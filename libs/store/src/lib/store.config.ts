@@ -2,8 +2,8 @@ import { ApplicationConfig } from '@angular/core';
 import { provideStore } from '@ngxs/store';
 import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 
-import { HamburgerState } from './state/hamburger.state';
+import { MenuState } from './state/menu.state';
 
 export const storeConfig: ApplicationConfig = {
-  providers: [provideStore([HamburgerState]), withNgxsReduxDevtoolsPlugin()],
+  providers: [provideStore([MenuState]), withNgxsReduxDevtoolsPlugin()],
 };
