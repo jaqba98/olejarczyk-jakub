@@ -1,0 +1,9 @@
+.skills-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: var(--secondary-background);
+  padding: 1rem;
+}
