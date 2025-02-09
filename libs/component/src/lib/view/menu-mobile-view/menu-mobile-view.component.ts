@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { MenuViewComponent } from '../menu-view/menu-view.component';
 
@@ -9,4 +9,6 @@ import { MenuViewComponent } from '../menu-view/menu-view.component';
   templateUrl: './menu-mobile-view.component.html',
   styleUrl: './menu-mobile-view.component.scss',
 })
-export class MenuMobileViewComponent {}
+export class MenuMobileViewComponent {
+  @Input() isOpen = false;
+}

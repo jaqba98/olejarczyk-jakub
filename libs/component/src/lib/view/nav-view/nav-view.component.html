@@ -9,6 +9,6 @@
     </ng-template>
   </div>
 </nav>
-<ng-container *ngIf="isMobile && isOpen">
-  <lib-menu-mobile-view></lib-menu-mobile-view>
+<ng-container *ngIf="isMobile">
+  <lib-menu-mobile-view [isOpen]="isOpen"></lib-menu-mobile-view>
 </ng-container>

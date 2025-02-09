@@ -1,3 +1,5 @@
-<div class="menu-mobile">
-  <lib-menu-view [vertical]="true"></lib-menu-view>
+<div class="menu-mobile" [ngClass]="{ 'menu-mobile__open': isOpen }">
+  <div>
+    <lib-menu-view [vertical]="true"></lib-menu-view>
+  </div>
 </div>
