@@ -30,6 +30,6 @@ export class MenuState {
 
   @Action(MenuSetTitleAction)
   setTitle(ctx: StateContext<MenuModel>, action: MenuSetTitleAction) {
-    ctx.patchState({ title: action.title });
+    ctx.patchState({ title: action.payload });
   }
 }

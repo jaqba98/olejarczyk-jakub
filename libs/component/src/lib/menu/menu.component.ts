@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { MediaService } from '@olejarczyk-jakub/system';
 import { ButtonComponent } from '../button/button.component';
 import { BaseComponent } from '../base/base.component';
-import { MediaEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-menu',
@@ -19,13 +18,5 @@ export class MenuComponent extends BaseComponent<void> {
 
   constructor(protected override readonly media: MediaService) {
     super(media);
-  }
-
-  override onInit(media: MediaEnum): void {
-    if (this.horizontal) {
-      this.isVisible = this.media.more(media, MediaEnum.mobileLarge);
-    } else {
-      this.isVisible = this.media.lessOrEqual(media, MediaEnum.mobileLarge);
-    }
   }
 }

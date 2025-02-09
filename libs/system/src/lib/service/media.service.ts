@@ -8,13 +8,13 @@ import { MediaEnum } from '@olejarczyk-jakub/model';
 export class MediaService {
   media$: Observable<MediaEnum>;
 
-  private readonly breakpoints: MediaEnum[] = [
-    MediaEnum.mobileSmall,
-    MediaEnum.mobileLarge,
-    MediaEnum.tablet,
-    MediaEnum.desktop,
-    MediaEnum.tv,
-  ];
+  // private readonly breakpoints: MediaEnum[] = [
+  //   MediaEnum.mobileSmall,
+  //   MediaEnum.mobileLarge,
+  //   MediaEnum.tablet,
+  //   MediaEnum.desktop,
+  //   MediaEnum.tv,
+  // ];
 
   constructor(private readonly breakpoint: BreakpointObserver) {
     this.media$ = this.breakpoint
@@ -38,54 +38,54 @@ export class MediaService {
       );
   }
 
-  lessOrEqual(currMedia: MediaEnum, targetMedia: MediaEnum) {
-    switch (targetMedia) {
-      case MediaEnum.mobileSmall:
-        return this.breakpoints.slice(0, 1).includes(currMedia);
-      case MediaEnum.mobileLarge:
-        return this.breakpoints.slice(0, 2).includes(currMedia);
-      case MediaEnum.tablet:
-        return this.breakpoints.slice(0, 3).includes(currMedia);
-      case MediaEnum.desktop:
-        return this.breakpoints.slice(0, 4).includes(currMedia);
-      case MediaEnum.tv:
-        return this.breakpoints.slice(0, 5).includes(currMedia);
-      default:
-        throw new Error('Not supported media type!');
-    }
-  }
+  // lessOrEqual(currMedia: MediaEnum, targetMedia: MediaEnum) {
+  //   switch (targetMedia) {
+  //     case MediaEnum.mobileSmall:
+  //       return this.breakpoints.slice(0, 1).includes(currMedia);
+  //     case MediaEnum.mobileLarge:
+  //       return this.breakpoints.slice(0, 2).includes(currMedia);
+  //     case MediaEnum.tablet:
+  //       return this.breakpoints.slice(0, 3).includes(currMedia);
+  //     case MediaEnum.desktop:
+  //       return this.breakpoints.slice(0, 4).includes(currMedia);
+  //     case MediaEnum.tv:
+  //       return this.breakpoints.slice(0, 5).includes(currMedia);
+  //     default:
+  //       throw new Error('Not supported media type!');
+  //   }
+  // }
 
-  more(currMedia: MediaEnum, targetMedia: MediaEnum) {
-    switch (targetMedia) {
-      case MediaEnum.mobileSmall:
-        return this.breakpoints.slice(1).includes(currMedia);
-      case MediaEnum.mobileLarge:
-        return this.breakpoints.slice(2).includes(currMedia);
-      case MediaEnum.tablet:
-        return this.breakpoints.slice(3).includes(currMedia);
-      case MediaEnum.desktop:
-        return this.breakpoints.slice(4).includes(currMedia);
-      case MediaEnum.tv:
-        return this.breakpoints.slice(5).includes(currMedia);
-      default:
-        throw new Error('Not supported media type!');
-    }
-  }
+  // more(currMedia: MediaEnum, targetMedia: MediaEnum) {
+  //   switch (targetMedia) {
+  //     case MediaEnum.mobileSmall:
+  //       return this.breakpoints.slice(1).includes(currMedia);
+  //     case MediaEnum.mobileLarge:
+  //       return this.breakpoints.slice(2).includes(currMedia);
+  //     case MediaEnum.tablet:
+  //       return this.breakpoints.slice(3).includes(currMedia);
+  //     case MediaEnum.desktop:
+  //       return this.breakpoints.slice(4).includes(currMedia);
+  //     case MediaEnum.tv:
+  //       return this.breakpoints.slice(5).includes(currMedia);
+  //     default:
+  //       throw new Error('Not supported media type!');
+  //   }
+  // }
 
-  moreOrEqual(currMedia: MediaEnum, targetMedia: MediaEnum) {
-    switch (targetMedia) {
-      case MediaEnum.mobileSmall:
-        return this.breakpoints.includes(currMedia);
-      case MediaEnum.mobileLarge:
-        return this.breakpoints.slice(1).includes(currMedia);
-      case MediaEnum.tablet:
-        return this.breakpoints.slice(2).includes(currMedia);
-      case MediaEnum.desktop:
-        return this.breakpoints.slice(3).includes(currMedia);
-      case MediaEnum.tv:
-        return this.breakpoints.slice(4).includes(currMedia);
-      default:
-        throw new Error('Not supported media type!');
-    }
-  }
+  // moreOrEqual(currMedia: MediaEnum, targetMedia: MediaEnum) {
+  //   switch (targetMedia) {
+  //     case MediaEnum.mobileSmall:
+  //       return this.breakpoints.includes(currMedia);
+  //     case MediaEnum.mobileLarge:
+  //       return this.breakpoints.slice(1).includes(currMedia);
+  //     case MediaEnum.tablet:
+  //       return this.breakpoints.slice(2).includes(currMedia);
+  //     case MediaEnum.desktop:
+  //       return this.breakpoints.slice(3).includes(currMedia);
+  //     case MediaEnum.tv:
+  //       return this.breakpoints.slice(4).includes(currMedia);
+  //     default:
+  //       throw new Error('Not supported media type!');
+  //   }
+  // }
 }
