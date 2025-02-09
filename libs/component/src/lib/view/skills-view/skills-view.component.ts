@@ -50,13 +50,13 @@ export class SkillsViewComponent extends BaseComponent {
       title: 'Tools',
       technologies: [
         {
-          name: 'Nx Monorepo',
+          name: 'Nx',
           comment:
             'I know how to manage multiple projects within one git control system.',
           link: 'https://nx.dev/',
         },
         {
-          name: 'Visual Studio Code',
+          name: 'VSC',
           comment: 'Znam prawie kazdy aspekt tego',
           link: '',
         },
