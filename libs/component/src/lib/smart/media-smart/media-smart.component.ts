@@ -2,7 +2,10 @@ import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
 
 import { MediaService } from '@olejarczyk-jakub/system';
-import { SystemSetMediaAction } from '@olejarczyk-jakub/store';
+import {
+  MenuSetIsOpenAction,
+  SystemSetMediaAction,
+} from '@olejarczyk-jakub/store';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
@@ -18,6 +21,9 @@ export class MediaSmartComponent extends BaseComponent {
     this.addSub(
       this.media.media$.subscribe((media) => {
         this.store.dispatch(new SystemSetMediaAction(media));
+        if (!this.isMobile) {
+          this.store.dispatch(new MenuSetIsOpenAction(false));
+        }
       })
     );
   }

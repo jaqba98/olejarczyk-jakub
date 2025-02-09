@@ -28,7 +28,7 @@ export class LogoSmartComponent extends BaseComponent {
     );
     this.addSub(
       this.store.select(SystemState.getMedia).subscribe((media) => {
-        const newTitle = mediaLessOrEqual(media, MediaEnum.mobileLarge)
+        const newTitle = mediaLessOrEqual(media, MediaEnum.tablet)
           ? TitleEnum.short
           : TitleEnum.long;
         this.store.dispatch(new MenuSetTitleAction(newTitle));

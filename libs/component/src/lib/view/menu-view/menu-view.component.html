@@ -1,7 +1,9 @@
 <div class="menu">
-  <lib-button-smart label="Hello" value="hello"></lib-button-smart>
-  <lib-button-smart label="Hello" value="hello"></lib-button-smart>
-  <lib-button-smart label="Hello" value="hello"></lib-button-smart>
-  <lib-button-smart label="Hello" value="hello"></lib-button-smart>
-  <lib-button-smart label="Hello" value="hello"></lib-button-smart>
+  @for (option of getOptions(); track option) {
+  <lib-button-smart
+    [label]="getLabel(option)"
+    [value]="option"
+    (event)="onClick($event)"
+  ></lib-button-smart>
+  }
 </div>
