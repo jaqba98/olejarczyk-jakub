@@ -1,10 +1,11 @@
 <nav class="nav">
   <lib-logo-smart></lib-logo-smart>
   <div>
-    @if (isMobile) {
-    <lib-hamburger-smart></lib-hamburger-smart>
-    } @else {
-    <lib-menu-view></lib-menu-view>
-    }
+    <ng-container *ngIf="isMobile; else pc">
+      <lib-hamburger-smart></lib-hamburger-smart>
+    </ng-container>
+    <ng-template #pc>
+      <lib-menu-view></lib-menu-view>
+    </ng-template>
   </div>
 </nav>
