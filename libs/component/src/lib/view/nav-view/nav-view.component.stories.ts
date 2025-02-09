@@ -6,12 +6,12 @@ import {
 } from '@storybook/angular';
 
 import { storeConfig } from '@olejarczyk-jakub/store';
-import { NavDumbComponent } from './nav-dumb.component';
+import { NavViewComponent } from './nav-view.component';
 import { MediaSmartComponent } from '../../smart/media-smart/media-smart.component';
 
-const meta: Meta<NavDumbComponent> = {
-  title: 'Component/Dumb/Nav',
-  component: NavDumbComponent,
+const meta: Meta<NavViewComponent> = {
+  title: 'Component/View/Nav',
+  component: NavViewComponent,
   decorators: [
     moduleMetadata({
       imports: [MediaSmartComponent],
@@ -21,6 +21,6 @@ const meta: Meta<NavDumbComponent> = {
 };
 
 export default meta;
-type Story = StoryObj<NavDumbComponent>;
+type Story = StoryObj<NavViewComponent>;
 
 export const Default: Story = {};
