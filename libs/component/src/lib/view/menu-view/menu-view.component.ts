@@ -2,10 +2,14 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { Store } from '@ngxs/store';
 
+import {
+  MenuSetIsOpenAction,
+  SystemSetSectionAction,
+  SystemState,
+} from '@olejarczyk-jakub/store';
 import { SectionEnum, SectionLabelEnum } from '@olejarczyk-jakub/model';
 import { ButtonSmartComponent } from '../../smart/button-smart/button-smart.component';
 import { BaseComponent } from '../../base/base.component';
-import { SystemSetSectionAction, SystemState } from '@olejarczyk-jakub/store';
 
 @Component({
   selector: 'lib-menu-view',
@@ -42,5 +46,6 @@ export class MenuViewComponent extends BaseComponent {
   onClick(event: string) {
     const section = event as SectionEnum;
     this.store.dispatch(new SystemSetSectionAction(section));
+    this.store.dispatch(new MenuSetIsOpenAction(false));
   }
 }
