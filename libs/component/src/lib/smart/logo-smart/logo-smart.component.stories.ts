@@ -1,23 +1,12 @@
-import {
-  applicationConfig,
-  Meta,
-  moduleMetadata,
-  StoryObj,
-} from '@storybook/angular';
+import { Meta, StoryObj } from '@storybook/angular';
 
-import { storeConfig } from '@olejarczyk-jakub/store';
 import { LogoSmartComponent } from './logo-smart.component';
-import { MediaSmartComponent } from '../media-smart/media-smart.component';
+import { StorybookUtils } from '../../utils/storybook.utils';
 
 const meta: Meta<LogoSmartComponent> = {
   title: 'Component/Smart/Logo',
   component: LogoSmartComponent,
-  decorators: [
-    moduleMetadata({
-      imports: [MediaSmartComponent],
-    }),
-    applicationConfig({ ...storeConfig }),
-  ],
+  ...StorybookUtils.decorators(),
 };
 
 export default meta;

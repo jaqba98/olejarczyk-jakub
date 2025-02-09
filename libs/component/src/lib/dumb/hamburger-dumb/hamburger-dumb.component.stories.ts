@@ -1,23 +1,12 @@
-import {
-  applicationConfig,
-  Meta,
-  moduleMetadata,
-  StoryObj,
-} from '@storybook/angular';
+import { Meta, StoryObj } from '@storybook/angular';
 
-import { storeConfig } from '@olejarczyk-jakub/store';
 import { HamburgerDumbComponent } from './hamburger-dumb.component';
-import { MediaSmartComponent } from '../../smart/media-smart/media-smart.component';
+import { StorybookUtils } from '../../utils/storybook.utils';
 
 const meta: Meta<HamburgerDumbComponent> = {
   title: 'Component/Dumb/Hamburger',
   component: HamburgerDumbComponent,
-  decorators: [
-    moduleMetadata({
-      imports: [MediaSmartComponent],
-    }),
-    applicationConfig({ ...storeConfig }),
-  ],
+  ...StorybookUtils.decorators(),
 };
 
 export default meta;
