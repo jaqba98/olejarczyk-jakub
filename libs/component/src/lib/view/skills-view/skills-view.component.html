@@ -1,10 +1,20 @@
-<div class="skills-view">
-  <lib-html></lib-html>
-  <lib-html></lib-html>
-  <lib-html></lib-html>
-  <lib-html></lib-html>
-  <lib-html></lib-html>
-  <lib-html></lib-html>
-  <lib-html></lib-html>
-  <lib-html></lib-html>
+<div class="skills">
+  <h2 class="skills__title">Skills</h2>
+  <div class="skills__content">
+    <ng-container *ngFor="let skill of skills">
+      <div class="skill">
+        <h3 class="skill__title">{{ skill.title }}</h3>
+        <ul class="skill__list">
+          <ng-container *ngFor="let technology of skill.technologies">
+            <li class="skill__list-item">
+              <lib-html></lib-html>
+              <a [href]="technology.link" target="_blank" class="skill__link">
+                {{ technology.name }}
+              </a>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </ng-container>
+  </div>
 </div>
