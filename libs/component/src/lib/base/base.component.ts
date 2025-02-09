@@ -6,7 +6,9 @@ import { MediaEnum } from '@olejarczyk-jakub/model';
 import { SystemState } from '@olejarczyk-jakub/store';
 import { mediaLessOrEqual } from '@olejarczyk-jakub/system';
 
-@Component({ template: '' })
+@Component({
+  template: '',
+})
 export class BaseComponent implements OnDestroy {
   private sub: Subscription;
 

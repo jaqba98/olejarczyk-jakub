@@ -1,4 +1,4 @@
-<div class="menu">
+<div class="menu" [ngClass]="{ menu__vertical: vertical }">
   <ng-container *ngFor="let option of getOptions()">
     <lib-button-smart
       [label]="getLabel(option)"

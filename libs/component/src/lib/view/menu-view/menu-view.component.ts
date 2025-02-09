@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Store } from '@ngxs/store';
 
 import { SectionEnum, SectionLabelEnum } from '@olejarczyk-jakub/model';
@@ -14,6 +14,8 @@ import { SystemSetSectionAction, SystemState } from '@olejarczyk-jakub/store';
   styleUrl: './menu-view.component.scss',
 })
 export class MenuViewComponent extends BaseComponent {
+  @Input() vertical = false;
+
   section = SectionEnum.home;
 
   constructor(protected override readonly store: Store) {
