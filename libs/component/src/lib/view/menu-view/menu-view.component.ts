@@ -9,7 +9,7 @@ import { SystemSetSectionAction, SystemState } from '@olejarczyk-jakub/store';
 
 @Component({
   selector: 'lib-menu-view',
-  imports: [CommonModule, ButtonSmartComponent, BaseComponent],
+  imports: [CommonModule, ButtonSmartComponent],
   templateUrl: './menu-view.component.html',
   styleUrl: './menu-view.component.scss',
 })
