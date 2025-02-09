@@ -5,7 +5,7 @@ export const decorators = [
     const storyOutput = story(context.args, context);
     return {
       ...storyOutput,
-      template: `<lib-media-smart></lib-media-smart> ${storyOutput.template}`,
+      template: `<lib-system-smart></lib-system-smart> ${storyOutput.template}`,
     };
   },
 ];

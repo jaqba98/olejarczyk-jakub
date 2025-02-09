@@ -1,4 +1,4 @@
-<nav class="nav">
+<nav class="nav" [ngClass]="{ 'nav__space-around': moreOrEqualDesktop }">
   <lib-logo-smart></lib-logo-smart>
   <div>
     <ng-container *ngIf="isMobile; else pc">

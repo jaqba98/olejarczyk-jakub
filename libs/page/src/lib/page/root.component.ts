@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { MediaSmartComponent } from '@olejarczyk-jakub/component';
+import { SystemSmartComponent } from '@olejarczyk-jakub/component';
 
 @Component({
   selector: 'lib-root',
-  imports: [MediaSmartComponent, RouterModule],
+  imports: [SystemSmartComponent, RouterModule],
   templateUrl: './root.component.html',
 })
 export class RootComponent {}

@@ -4,7 +4,7 @@ import { Subscription } from 'rxjs';
 
 import { MediaEnum } from '@olejarczyk-jakub/model';
 import { SystemState } from '@olejarczyk-jakub/store';
-import { mediaLessOrEqual } from '@olejarczyk-jakub/system';
+import { mediaLessOrEqual, mediaMoreOrEqual } from '@olejarczyk-jakub/system';
 import { StyleOffDirective } from './style-off.directive';
 
 @Component({
@@ -15,6 +15,8 @@ export class BaseComponent implements OnDestroy {
   private sub: Subscription;
 
   protected isMobile = true;
+
+  protected moreOrEqualDesktop = false;
 
   constructor(protected readonly store: Store) {
     this.sub = new Subscription();
@@ -33,6 +35,7 @@ export class BaseComponent implements OnDestroy {
     this.addSub(
       this.store.select(SystemState.getMedia).subscribe((media) => {
         this.isMobile = mediaLessOrEqual(media, MediaEnum.mobileLarge);
+        this.moreOrEqualDesktop = mediaMoreOrEqual(media, MediaEnum.desktop);
       })
     );
   }

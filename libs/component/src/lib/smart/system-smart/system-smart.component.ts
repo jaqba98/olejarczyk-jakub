@@ -1,21 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2 } from '@angular/core';
 import { Store } from '@ngxs/store';
 
 import { MediaService } from '@olejarczyk-jakub/system';
 import {
   MenuSetIsOpenAction,
+  MenuState,
   SystemSetMediaAction,
 } from '@olejarczyk-jakub/store';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
-  selector: 'lib-media-smart',
+  selector: 'lib-system-smart',
   template: '',
 })
-export class MediaSmartComponent extends BaseComponent {
+export class SystemSmartComponent extends BaseComponent {
   constructor(
     protected override readonly store: Store,
-    private readonly media: MediaService
+    private readonly media: MediaService,
+    private readonly renderer: Renderer2
   ) {
     super(store);
     this.addSub(
@@ -24,6 +26,12 @@ export class MediaSmartComponent extends BaseComponent {
         if (!this.isMobile) {
           this.store.dispatch(new MenuSetIsOpenAction(false));
         }
+      })
+    );
+    this.addSub(
+      this.store.select(MenuState.getIsOpen).subscribe((isOpen) => {
+        const overflow = isOpen && this.isMobile ? 'hidden' : 'auto';
+        this.renderer.setStyle(document.body, 'overflow', overflow);
       })
     );
   }
