@@ -1,9 +1,10 @@
 <div class="menu">
-  @for (option of getOptions(); track option) {
-  <lib-button-smart
-    [label]="getLabel(option)"
-    [value]="option"
-    (event)="onClick($event)"
-  ></lib-button-smart>
-  }
+  <ng-container *ngFor="let option of getOptions()">
+    <lib-button-smart
+      [label]="getLabel(option)"
+      [value]="option"
+      [active]="getActive(option)"
+      (event)="onClick($event)"
+    ></lib-button-smart>
+  </ng-container>
 </div>

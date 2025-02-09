@@ -14,6 +14,8 @@ export class ButtonSmartComponent {
 
   @Input({ required: true }) value!: string;
 
+  @Input() active = false;
+
   onClick(event: string) {
     this.event.emit(event);
   }

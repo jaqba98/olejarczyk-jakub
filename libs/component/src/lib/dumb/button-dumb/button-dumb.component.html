@@ -1,1 +1,7 @@
-<button class="button" (click)="onClick()">{{ label }}</button>
+<button
+  class="button"
+  [ngClass]="{ button__active: active }"
+  (click)="onClick()"
+>
+  {{ label }}
+</button>

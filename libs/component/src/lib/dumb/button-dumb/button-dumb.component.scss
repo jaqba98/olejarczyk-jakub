@@ -8,6 +8,11 @@
   cursor: pointer;
   transition: all 0.05s ease-in-out;
 
+  &__active {
+    background-color: var(--accent-color);
+    color: var(--primary-text);
+  }
+
   &:hover {
     background-color: var(--accent-color);
     color: var(--primary-text);
