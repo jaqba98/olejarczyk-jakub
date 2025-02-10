@@ -10,4 +10,3 @@ export * from './lib/view/home-view/home-view.component';
 export * from './lib/view/projects-view/projects-view.component';
 export * from './lib/view/experience-view/experience-view.component';
 export * from './lib/view/base-view/base-view.component';
-export * from './lib/utils/storybook.utils';
