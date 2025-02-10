@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { StyleOffDirective } from '../../base/style-off.directive';
 
@@ -10,8 +10,4 @@ import { StyleOffDirective } from '../../base/style-off.directive';
   styleUrl: './base-view.component.scss',
   hostDirectives: [StyleOffDirective],
 })
-export class BaseViewComponent {
-  @Input({ required: true }) title!: string;
-
-  @Input() primaryBackground = false;
-}
+export class BaseViewComponent {}
