@@ -19,7 +19,8 @@
       "@olejarczyk-jakub/model": ["libs/model/src/index.ts"],
       "@olejarczyk-jakub/page": ["libs/page/src/index.ts"],
       "@olejarczyk-jakub/store": ["libs/store/src/index.ts"],
-      "@olejarczyk-jakub/system": ["libs/system/src/index.ts"]
+      "@olejarczyk-jakub/system": ["libs/system/src/index.ts"],
+      "@olejarczyk-jakub/view": ["libs/view/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
