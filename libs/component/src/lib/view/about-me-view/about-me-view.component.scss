@@ -1,21 +1,5 @@
-.about-me {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  max-width: 960px;
-  margin: auto;
-
-  &__title {
-    font-weight: normal;
-    text-transform: uppercase;
-    color: var(--accent-color);
-  }
-
-  &__description {
-    font-size: 1.1em;
-    line-height: 2;
-
-    color: var(--secondary-text);
-  }
+p {
+  font-size: 1.1em;
+  line-height: 2;
+  color: var(--secondary-text);
 }

@@ -5,10 +5,11 @@ import { Store } from '@ngxs/store';
 import { SkillsState } from '@olejarczyk-jakub/store';
 import { SkillModel } from '@olejarczyk-jakub/model';
 import { BaseComponent } from '../../base/base.component';
+import { BaseViewComponent } from '../base-view/base-view.component';
 
 @Component({
   selector: 'lib-skills-view',
-  imports: [CommonModule],
+  imports: [CommonModule, BaseViewComponent],
   templateUrl: './skills-view.component.html',
   styleUrl: './skills-view.component.scss',
 })

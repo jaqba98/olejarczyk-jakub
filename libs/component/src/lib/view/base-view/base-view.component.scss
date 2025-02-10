@@ -1,0 +1,20 @@
+.base-view {
+  &__primary-background {
+    background-color: var(--secondary-background);
+  }
+
+  &__wrapper {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 960px;
+    margin: auto;
+  }
+
+  &__title {
+    font-weight: normal;
+    text-transform: uppercase;
+    color: var(--accent-color);
+  }
+}
