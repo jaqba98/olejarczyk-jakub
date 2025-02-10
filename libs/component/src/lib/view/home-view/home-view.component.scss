@@ -1,0 +1,9 @@
+.home {
+  height: 500px;
+  background-image: url('../../../../../../apps/olejarczyk-jakub/public/home-background.jpg');
+
+  &__image {
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
