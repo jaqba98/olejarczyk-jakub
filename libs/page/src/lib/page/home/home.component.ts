@@ -11,9 +11,9 @@ import {
   EducationViewComponent,
   ResumeViewComponent,
   ContactViewComponent,
-  CopyrightViewComponent,
   BaseComponent,
 } from '@olejarczyk-jakub/component';
+import { CopyrightViewComponent } from '@olejarczyk-jakub/view';
 
 @Component({
   selector: 'lib-home',

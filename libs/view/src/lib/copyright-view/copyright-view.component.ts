@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BaseViewComponent } from '../base-view/base-view.component';
+import { BaseComponent, BaseViewComponent } from '@olejarczyk-jakub/component';
 
 @Component({
   selector: 'lib-copyright-view',
@@ -9,4 +9,4 @@ import { BaseViewComponent } from '../base-view/base-view.component';
   templateUrl: './copyright-view.component.html',
   styleUrl: './copyright-view.component.scss',
 })
-export class CopyrightViewComponent {}
+export class CopyrightViewComponent extends BaseComponent {}

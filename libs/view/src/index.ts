@@ -1,1 +1,1 @@
-export * from './lib/view/view.component';
+export * from './lib/copyright-view/copyright-view.component';
