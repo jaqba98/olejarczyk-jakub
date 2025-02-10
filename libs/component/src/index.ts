@@ -5,3 +5,4 @@ export * from './lib/view/about-me-view/about-me-view.component';
 export * from './lib/view/education-view/education-view.component';
 export * from './lib/view/resume-view/resume-view.component';
 export * from './lib/view/contact-view/contact-view.component';
+export * from './lib/view/copyright-view/copyright-view.component';

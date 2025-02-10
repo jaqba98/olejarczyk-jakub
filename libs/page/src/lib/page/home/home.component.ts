@@ -7,6 +7,7 @@ import {
   EducationViewComponent,
   ResumeViewComponent,
   ContactViewComponent,
+  CopyrightViewComponent,
 } from '@olejarczyk-jakub/component';
 
 @Component({
@@ -18,6 +19,7 @@ import {
     EducationViewComponent,
     ResumeViewComponent,
     ContactViewComponent,
+    CopyrightViewComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
