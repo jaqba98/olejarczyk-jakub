@@ -1,4 +1,7 @@
 .base-view {
   flex: 1;
-  border: 1px solid red;
+
+  &__secondary {
+    background-color: var(--secondary-background);
+  }
 }

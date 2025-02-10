@@ -10,10 +10,16 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { BaseViewComponent } from '../base-view/base-view.component';
 import { BaseComponent } from '../../base/base.component';
 import { ContactItemDumbComponent } from '../../dumb/contact-item-dumb/contact-item-dumb.component';
+import { TitleViewComponent } from '../title-view/title-view.component';
 
 @Component({
   selector: 'lib-contact-view',
-  imports: [CommonModule, BaseViewComponent, ContactItemDumbComponent],
+  imports: [
+    CommonModule,
+    BaseViewComponent,
+    TitleViewComponent,
+    ContactItemDumbComponent,
+  ],
   templateUrl: './contact-view.component.html',
   styleUrl: './contact-view.component.scss',
 })

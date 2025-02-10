@@ -1,27 +1,29 @@
 <lib-base-view>
-  <div
-    class="skills__content"
-    [ngClass]="{ 'skills__content-center': !isMobile }"
-  >
-    <ng-container *ngFor="let skill of skills">
-      <div class="skill">
-        <h3 class="skill__title">{{ skill.title }}</h3>
-        <div class="skill__technologies">
-          <ng-container *ngFor="let tech of skill.technologies">
-            <div class="technology">
-              <i
-                class="technology__icon"
-                [class]="tech.className"
-                [ngClass]="{
+  <lib-title-view title="Skills" [marginAuto]="true">
+    <div
+      class="skills__content"
+      [ngClass]="{ 'skills__content-center': !isMobile }"
+    >
+      <ng-container *ngFor="let skill of skills">
+        <div class="skill">
+          <h3 class="skill__title">{{ skill.title }}</h3>
+          <div class="skill__technologies">
+            <ng-container *ngFor="let tech of skill.technologies">
+              <div class="technology">
+                <i
+                  class="technology__icon"
+                  [class]="tech.className"
+                  [ngClass]="{
                   colored: tech.colored,
                   no__colored: !tech.colored,
                 }"
-              ></i>
-              <p class="technology__title">{{ tech.title }}</p>
-            </div>
-          </ng-container>
+                ></i>
+                <p class="technology__title">{{ tech.title }}</p>
+              </div>
+            </ng-container>
+          </div>
         </div>
-      </div>
-    </ng-container>
-  </div>
+      </ng-container>
+    </div>
+  </lib-title-view>
 </lib-base-view>

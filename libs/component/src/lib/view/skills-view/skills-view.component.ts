@@ -6,10 +6,11 @@ import { SkillsState } from '@olejarczyk-jakub/store';
 import { SkillModel } from '@olejarczyk-jakub/model';
 import { BaseComponent } from '../../base/base.component';
 import { BaseViewComponent } from '../base-view/base-view.component';
+import { TitleViewComponent } from '../title-view/title-view.component';
 
 @Component({
   selector: 'lib-skills-view',
-  imports: [CommonModule, BaseViewComponent],
+  imports: [CommonModule, BaseViewComponent, TitleViewComponent],
   templateUrl: './skills-view.component.html',
   styleUrl: './skills-view.component.scss',
 })

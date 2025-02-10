@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { StyleOffDirective } from '../../base/style-off.directive';
 
@@ -10,4 +10,6 @@ import { StyleOffDirective } from '../../base/style-off.directive';
   styleUrl: './base-view.component.scss',
   hostDirectives: [StyleOffDirective],
 })
-export class BaseViewComponent {}
+export class BaseViewComponent {
+  @Input() secondary = false;
+}
