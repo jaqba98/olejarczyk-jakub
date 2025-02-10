@@ -1,0 +1,13 @@
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { BaseViewComponent } from '../base-view/base-view.component';
+import { BaseComponent } from '../../base/base.component';
+
+@Component({
+  selector: 'lib-education-view',
+  imports: [CommonModule, BaseViewComponent],
+  templateUrl: './education-view.component.html',
+  styleUrl: './education-view.component.scss',
+})
+export class EducationViewComponent extends BaseComponent {}
