@@ -44,13 +44,13 @@ import {
             colored: true,
           },
           {
-            title: SkillsTitleEnum.storybook,
-            className: SkillsClassNameEnum.storybook,
+            title: SkillsTitleEnum.angularMaterial,
+            className: SkillsClassNameEnum.angularMaterial,
             colored: true,
           },
           {
-            title: SkillsTitleEnum.redux,
-            className: SkillsClassNameEnum.redux,
+            title: SkillsTitleEnum.rxjs,
+            className: SkillsClassNameEnum.rxjs,
             colored: true,
           },
           {
@@ -59,8 +59,8 @@ import {
             colored: false,
           },
           {
-            title: SkillsTitleEnum.rxjs,
-            className: SkillsClassNameEnum.rxjs,
+            title: SkillsTitleEnum.redux,
+            className: SkillsClassNameEnum.redux,
             colored: true,
           },
           {
@@ -71,6 +71,11 @@ import {
           {
             title: SkillsTitleEnum.karma,
             className: SkillsClassNameEnum.karma,
+            colored: true,
+          },
+          {
+            title: SkillsTitleEnum.storybook,
+            className: SkillsClassNameEnum.storybook,
             colored: true,
           },
         ],
@@ -89,9 +94,19 @@ import {
             colored: true,
           },
           {
-            title: SkillsTitleEnum.mysql,
-            className: SkillsClassNameEnum.mysql,
+            title: SkillsTitleEnum.hibernate,
+            className: SkillsClassNameEnum.hibernate,
             colored: true,
+          },
+          {
+            title: SkillsTitleEnum.postgreSQL,
+            className: SkillsClassNameEnum.postgreSQL,
+            colored: true,
+          },
+          {
+            title: SkillsTitleEnum.oauth,
+            className: SkillsClassNameEnum.oauth,
+            colored: false,
           },
           {
             title: SkillsTitleEnum.junit,
@@ -169,8 +184,8 @@ import {
             colored: false,
           },
           {
-            title: SkillsTitleEnum.webstorm,
-            className: SkillsClassNameEnum.webstorm,
+            title: SkillsTitleEnum.intellij,
+            className: SkillsClassNameEnum.intellij,
             colored: true,
           },
           {
