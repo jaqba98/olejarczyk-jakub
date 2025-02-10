@@ -1,34 +1,36 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 import {
-  HomeViewComponent,
   NavViewComponent,
-  SkillsViewComponent,
+  HomeViewComponent,
   AboutMeViewComponent,
+  SkillsViewComponent,
+  ProjectsViewComponent,
+  ExperienceViewComponent,
   EducationViewComponent,
   ResumeViewComponent,
   ContactViewComponent,
   CopyrightViewComponent,
-  ProjectsViewComponent,
-  ExperienceViewComponent,
+  BaseComponent,
 } from '@olejarczyk-jakub/component';
 
 @Component({
   selector: 'lib-home',
   imports: [
-    HomeViewComponent,
+    CommonModule,
     NavViewComponent,
-    SkillsViewComponent,
+    HomeViewComponent,
     AboutMeViewComponent,
+    SkillsViewComponent,
+    ProjectsViewComponent,
+    ExperienceViewComponent,
     EducationViewComponent,
     ResumeViewComponent,
     ContactViewComponent,
     CopyrightViewComponent,
-    HomeViewComponent,
-    ProjectsViewComponent,
-    ExperienceViewComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent extends BaseComponent {}

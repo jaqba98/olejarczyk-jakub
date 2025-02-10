@@ -1,8 +1,12 @@
 .main {
   padding-top: 75px;
-}
 
-.aaa {
-  display: flex;
-  flex-direction: column;
+  &__group {
+    display: flex;
+    flex-direction: column;
+
+    &-horizontal {
+      flex-direction: row;
+    }
+  }
 }

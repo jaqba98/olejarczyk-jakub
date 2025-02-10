@@ -1,18 +1,16 @@
 <lib-nav-view></lib-nav-view>
 <main class="main">
-  <div class="aaa">
+  <div class="main__group" [ngClass]="{ 'main__group-horizontal': !isMobile }">
     <lib-home-view></lib-home-view>
     <lib-about-me-view></lib-about-me-view>
   </div>
-  <div class="aaa">
-    <lib-skills-view></lib-skills-view>
-    <lib-projects-view></lib-projects-view>
-  </div>
-  <div class="aaa">
+  <lib-skills-view></lib-skills-view>
+  <lib-projects-view></lib-projects-view>
+  <div class="main__group" [ngClass]="{ 'main__group-horizontal': !isMobile }">
     <lib-experience-view></lib-experience-view>
     <lib-education-view></lib-education-view>
   </div>
-  <div class="aaa">
+  <div class="main__group" [ngClass]="{ 'main__group-horizontal': !isMobile }">
     <lib-resume-view></lib-resume-view>
     <lib-contact-view></lib-contact-view>
   </div>
