@@ -1,38 +1,39 @@
 .skills {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 2rem;
   background-color: var(--secondary-background);
 
   &__title {
     font-weight: normal;
-    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--accent-color);
   }
 
   &__content {
     display: flex;
-    //ppc
-    // justify-content: space-around;
-    // width: 960px;
-    // margin: auto;
     flex-direction: column;
-    gap: 2rem;
+    gap: 4rem;
+    padding-bottom: 4rem;
+
+    &-center {
+      flex-direction: row;
+      max-width: 960px;
+      margin: auto;
+    }
   }
 }
 
 .skill {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   flex: 1;
 
   &__title {
     font-size: 1em;
     font-weight: normal;
-    letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--secondary-text);
   }
@@ -40,17 +41,27 @@
   &__technologies {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 2rem;
   }
 }
 
 .technology {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: 75px;
+  gap: 0.5rem;
+  width: 50px;
+
+  &__icon {
+    font-size: 3em;
+  }
+
+  .no__colored {
+    color: var(--secondary-text);
+  }
 
   &__title {
     color: var(--secondary-text);
+    text-align: center;
+    font-size: 0.8em;
   }
 }
