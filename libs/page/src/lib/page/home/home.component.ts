@@ -6,6 +6,7 @@ import {
   AboutMeViewComponent,
   EducationViewComponent,
   ResumeViewComponent,
+  ContactViewComponent,
 } from '@olejarczyk-jakub/component';
 
 @Component({
@@ -16,6 +17,7 @@ import {
     AboutMeViewComponent,
     EducationViewComponent,
     ResumeViewComponent,
+    ContactViewComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
