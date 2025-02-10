@@ -1,20 +1,18 @@
-<div class="skills">
+<section class="skills">
   <h2 class="skills__title">Skills</h2>
   <div class="skills__content">
     <ng-container *ngFor="let skill of skills">
       <div class="skill">
         <h3 class="skill__title">{{ skill.title }}</h3>
-        <ul class="skill__list">
-          <ng-container *ngFor="let technology of skill.technologies">
-            <li class="skill__list-item">
+        <div class="skill__technologies">
+          <ng-container *ngFor="let tech of skill.technologies">
+            <div class="technology">
               <lib-html></lib-html>
-              <a [href]="technology.link" target="_blank" class="skill__link">
-                {{ technology.name }}
-              </a>
-            </li>
+              <p class="technology__title">{{ tech.name }}</p>
+            </div>
           </ng-container>
-        </ul>
+        </div>
       </div>
     </ng-container>
   </div>
-</div>
+</section>
