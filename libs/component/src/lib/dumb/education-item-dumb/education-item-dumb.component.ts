@@ -14,7 +14,7 @@ import { BaseComponent } from '../../base/base.component';
 export class EducationItemDumbComponent extends BaseComponent {
   @Input({ required: true }) year!: string;
 
-  @Input({ required: true }) title!: string;
+  @Input({ required: true }) header!: string;
 
   @Input({ required: true }) course!: string;
 
