@@ -1,0 +1,11 @@
+<div class="contact-item" [ngClass]="{ 'contact-item__large': !isMobile }">
+  <div class="contact-item__logo">
+    <fa-icon [icon]="faSchool" class="contact-item__icon"></fa-icon>
+    <p class="contact-item__text">{{ year }}</p>
+  </div>
+  <div class="contact-item__content">
+    <h3 class="contact-item__text">{{ title }}</h3>
+    <p class="contact-item__text">{{ course }}</p>
+    <p class="contact-item__text">{{ diploma }}</p>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex: 1;
+
+  &__logo {
+    text-align: center;
+  }
+
+  &__text {
+    color: var(--secondary-text);
+  }
+
+  &__icon {
+    width: 30px;
+    font-size: 2em;
+    text-align: center;
+    color: var(--secondary-text);
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  @media screen and (max-width: 375px) {
+    &__text {
+      font-size: 0.75em;
+    }
+  }
+}
