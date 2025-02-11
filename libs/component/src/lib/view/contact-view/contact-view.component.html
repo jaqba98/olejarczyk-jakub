@@ -1,28 +1,33 @@
 <lib-base-view>
   <lib-title-view title="Contact" [marginAuto]="true">
-    <div class="contact-items">
+    <div class="contact-view" [ngClass]="{ 'contact-view__large': !isMobile }">
       <lib-contact-item-dumb
         [icon]="faEnvelope"
+        title="Send me a message"
         link="mailto:jakubolejarczyk98@gmail.com"
         label="jakubolejarczyk98@gmail.com"
       ></lib-contact-item-dumb>
       <lib-contact-item-dumb
         [icon]="faPhone"
+        title="Call me"
         link="tel:501-007-197"
         label="501 007 197"
       ></lib-contact-item-dumb>
       <lib-contact-item-dumb
         [icon]="faLocationDot"
+        title="See where I'm from"
         link="https://maps.app.goo.gl/WfaYw2oHqbq8crmk6"
         label="Kielce"
       ></lib-contact-item-dumb>
       <lib-contact-item-dumb
         [icon]="faLinkedin"
+        title="Check out my Linkedin"
         link="https://www.linkedin.com/in/jakub-olejarczyk"
         label="www.linkedin.com/in/jakub-olejarczyk"
       ></lib-contact-item-dumb>
       <lib-contact-item-dumb
         [icon]="faGithub"
+        title="Check out my GitHub"
         link="https://www.github.com/jaqba98"
         label="www.github.com/jaqba98"
       ></lib-contact-item-dumb>

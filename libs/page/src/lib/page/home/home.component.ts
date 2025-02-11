@@ -12,8 +12,8 @@ import {
   ResumeViewComponent,
   ContactViewComponent,
   BaseComponent,
+  CopyrightViewComponent,
 } from '@olejarczyk-jakub/component';
-import { CopyrightViewComponent } from '@olejarczyk-jakub/view';
 
 @Component({
   selector: 'lib-home',

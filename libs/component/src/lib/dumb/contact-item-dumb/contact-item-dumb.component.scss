@@ -1,10 +1,38 @@
 .contact-item {
   display: flex;
-  gap: 0.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex: 1;
+
+  &__large {
+    flex: none;
+    width: calc(50% - 2rem);
+  }
+
+  &__icon {
+    width: 30px;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  &__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 
   &__icon,
+  &__title,
   &__label {
-    font-size: 1em;
     color: var(--secondary-text);
+  }
+
+  @media screen and (max-width: 375px) {
+    &__title,
+    &__label {
+      font-size: 0.75em;
+    }
   }
 }

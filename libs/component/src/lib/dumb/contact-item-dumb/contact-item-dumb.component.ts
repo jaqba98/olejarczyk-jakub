@@ -17,4 +17,6 @@ export class ContactItemDumbComponent extends BaseComponent {
   @Input({ required: true }) label!: string;
 
   @Input({ required: true }) link!: string;
+
+  @Input({ required: true }) title!: string;
 }

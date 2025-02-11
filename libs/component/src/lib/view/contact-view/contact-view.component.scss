@@ -1,5 +1,10 @@
-.contact-items {
-  display: inline-flex;
+.contact-view {
+  display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  &__large {
+    flex-direction: row;
+  }
 }

@@ -1,4 +1,7 @@
-<div class="contact-item">
+<div class="contact-item" [ngClass]="{ 'contact-item__large': !isMobile }">
   <fa-icon [icon]="icon" class="contact-item__icon"></fa-icon>
-  <a [href]="link" target="_blank" class="contact-item__label">{{ label }}</a>
+  <div class="contact-item__content">
+    <h3 class="contact-item__title">{{ title }}</h3>
+    <a [href]="link" target="_blank" class="contact-item__label">{{ label }}</a>
+  </div>
 </div>

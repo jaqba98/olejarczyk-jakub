@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import {
   faEnvelope,
   faLocationDot,
   faPhone,
 } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-import { BaseViewComponent } from '../base-view/base-view.component';
 import { BaseComponent } from '../../base/base.component';
+import { BaseViewComponent } from '../base-view/base-view.component';
 import { ContactItemDumbComponent } from '../../dumb/contact-item-dumb/contact-item-dumb.component';
 import { TitleViewComponent } from '../title-view/title-view.component';
 
@@ -17,8 +17,8 @@ import { TitleViewComponent } from '../title-view/title-view.component';
   imports: [
     CommonModule,
     BaseViewComponent,
-    TitleViewComponent,
     ContactItemDumbComponent,
+    TitleViewComponent,
   ],
   templateUrl: './contact-view.component.html',
   styleUrl: './contact-view.component.scss',
