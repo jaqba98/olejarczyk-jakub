@@ -1,0 +1,18 @@
+<div
+  class="experience-item"
+  [ngClass]="{ 'experience-item__large': !isMobile }"
+>
+  <div class="experience-item__logo">
+    <fa-icon [icon]="faBuilding" class="experience-item__icon"></fa-icon>
+    <p class="experience-item__text">{{ year }}</p>
+  </div>
+  <div class="experience-item__content">
+    <h3 class="experience-item__text">{{ company }}</h3>
+    <p class="experience-item__text">{{ profession }}</p>
+    <ul>
+      <li *ngFor="let task of tasks">
+        <p class="experience-item__text">{{ task }}</p>
+      </li>
+    </ul>
+  </div>
+</div>
