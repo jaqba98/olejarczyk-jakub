@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { BaseComponent, BaseViewComponent } from '@olejarczyk-jakub/component';
+import { BaseComponent } from '../../base/base.component';
+import { BaseViewComponent } from '../base-view/base-view.component';
 
 @Component({
   selector: 'lib-copyright-view',
