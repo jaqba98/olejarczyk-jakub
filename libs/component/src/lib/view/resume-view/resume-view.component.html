@@ -1,8 +1,11 @@
 <lib-base-view [secondary]="true">
-  <section class="resume">
-    <lib-button-smart
-      label="Download my resume"
-      value="resule"
-    ></lib-button-smart>
-  </section>
+  <lib-title-view title="Resume" textAlign="center" [marginAuto]="true">
+    <div class="resume-view">
+      <lib-button-smart
+        label="Download my resume"
+        value=""
+        (event)="onClick()"
+      ></lib-button-smart>
+    </div>
+  </lib-title-view>
 </lib-base-view>

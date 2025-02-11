@@ -14,4 +14,6 @@ export class TitleViewComponent {
   @Input({ required: true }) title!: string;
 
   @Input() marginAuto = false;
+
+  @Input() textAlign = 'left';
 }
