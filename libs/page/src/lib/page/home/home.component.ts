@@ -13,6 +13,7 @@ import {
   ContactViewComponent,
   BaseComponent,
   CopyrightViewComponent,
+  KnowledgeViewComponent,
 } from '@olejarczyk-jakub/component';
 
 @Component({
@@ -23,6 +24,7 @@ import {
     HomeViewComponent,
     AboutMeViewComponent,
     SkillsViewComponent,
+    KnowledgeViewComponent,
     ProjectsViewComponent,
     ExperienceViewComponent,
     EducationViewComponent,
