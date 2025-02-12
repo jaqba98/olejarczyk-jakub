@@ -16,4 +16,6 @@ export class TitleViewComponent {
   @Input() marginAuto = false;
 
   @Input() textAlign = 'left';
+
+  @Input() justifyContent = 'flex-start';
 }
