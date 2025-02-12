@@ -12,11 +12,13 @@ import { ButtonDumbComponent } from '../../dumb/button-dumb/button-dumb.componen
 export class ButtonSmartComponent extends BaseComponent {
   @Output() event = new EventEmitter();
 
-  @Input() label = '';
+  @Input({ required: true }) label!: string;
+
+  @Input({ required: true }) id!: string;
 
   @Input() isPressed = false;
 
-  onEvent() {
-    this.event.emit();
+  onEvent(event: string) {
+    this.event.emit(event);
   }
 }

@@ -2,6 +2,8 @@
   <ng-container *ngFor="let option of getOptions()">
     <lib-button-smart
       [label]="getLabel(option)"
+      [id]="option"
+      [isPressed]="section === option"
       (event)="onClick($event)"
     ></lib-button-smart>
   </ng-container>

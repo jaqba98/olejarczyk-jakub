@@ -15,12 +15,14 @@ type Story = StoryObj<ButtonSmartComponent>;
 export const Default: Story = {
   args: {
     label: 'Hello',
+    id: 'hello',
   },
 };
 
 export const Pressed: Story = {
   args: {
     label: 'Hello',
+    id: 'hello',
     isPressed: true,
   },
 };
