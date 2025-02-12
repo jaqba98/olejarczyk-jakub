@@ -19,6 +19,7 @@
       "@olejarczyk-jakub/main": ["libs/main/src/index.ts"],
       "@olejarczyk-jakub/model": ["libs/model/src/index.ts"],
       "@olejarczyk-jakub/page": ["libs/page/src/index.ts"],
+      "@olejarczyk-jakub/route": ["libs/route/src/index.ts"],
       "@olejarczyk-jakub/store": ["libs/store/src/index.ts"],
       "@olejarczyk-jakub/system": ["libs/system/src/index.ts"]
     }

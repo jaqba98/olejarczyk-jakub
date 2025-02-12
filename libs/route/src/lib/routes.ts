@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 
 import { HomeComponent } from '@olejarczyk-jakub/page';
 
-export const mainRoutes: Route[] = [
+export const routes: Route[] = [
   {
     path: '',
     redirectTo: 'home',
