@@ -1,14 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
-import { TextDumbComponent } from '../../dumb/text-dumb/text-dumb.component';
 import { BaseComponent } from '../../base/base.component';
-import { TextTypeEnum } from '../../dumb/text-dumb/text-type.enum';
+import { TextDumbComponent } from '../../dumb/text-dumb/text-dumb.component';
 
 @Component({
   selector: 'lib-text-smart',
-  imports: [TextDumbComponent],
+  imports: [CommonModule, TextDumbComponent],
   templateUrl: './text-smart.component.html',
 })
-export class TextSmartComponent extends BaseComponent {
-  @Input() tag: keyof typeof TextTypeEnum = 'p';
-}
+export class TextSmartComponent extends BaseComponent {}

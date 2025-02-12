@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { BaseComponent } from '../../base/base.component';
-import { TextTypeEnum } from './text-type.enum';
 
 @Component({
   selector: 'lib-text-dumb',
@@ -10,6 +9,4 @@ import { TextTypeEnum } from './text-type.enum';
   templateUrl: './text-dumb.component.html',
   styleUrl: './text-dumb.component.scss',
 })
-export class TextDumbComponent extends BaseComponent {
-  @Input() tag: keyof typeof TextTypeEnum = 'p';
-}
+export class TextDumbComponent extends BaseComponent {}
