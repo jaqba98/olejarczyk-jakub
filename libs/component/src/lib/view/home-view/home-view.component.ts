@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { BaseComponent } from '../../base/base.component';
 import { BaseViewComponent } from '../base-view/base-view.component';
+import { SectionEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-home-view',
@@ -10,4 +11,6 @@ import { BaseViewComponent } from '../base-view/base-view.component';
   templateUrl: './home-view.component.html',
   styleUrl: './home-view.component.scss',
 })
-export class HomeViewComponent extends BaseComponent {}
+export class HomeViewComponent extends BaseComponent {
+  id = SectionEnum.home;
+}

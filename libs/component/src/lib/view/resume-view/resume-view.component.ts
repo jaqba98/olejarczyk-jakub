@@ -7,6 +7,7 @@ import { BaseComponent } from '../../base/base.component';
 import { ButtonSmartComponent } from '../../smart/button-smart/button-smart.component';
 import { BaseViewComponent } from '../base-view/base-view.component';
 import { TitleViewComponent } from '../title-view/title-view.component';
+import { SectionEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-resume-view',
@@ -20,6 +21,8 @@ import { TitleViewComponent } from '../title-view/title-view.component';
   styleUrl: './resume-view.component.scss',
 })
 export class ResumeViewComponent extends BaseComponent {
+  id = SectionEnum.resume;
+
   constructor(
     protected override readonly store: Store,
     private readonly http: HttpClient

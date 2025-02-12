@@ -5,6 +5,7 @@ import { BaseViewComponent } from '../base-view/base-view.component';
 import { StyleOffDirective } from '../../base/style-off.directive';
 import { TitleViewComponent } from '../title-view/title-view.component';
 import { ExperienceItemDumbComponent } from '../../dumb/experience-item-dumb/experience-item-dumb.component';
+import { SectionEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-experience-view',
@@ -19,6 +20,8 @@ import { ExperienceItemDumbComponent } from '../../dumb/experience-item-dumb/exp
   hostDirectives: [StyleOffDirective],
 })
 export class ExperienceViewComponent {
+  id = SectionEnum.experience;
+
   tasks = [
     'Creating and styling user interfaces in Angular',
     'Building dynamically generated reusable components in the Storybook environment',

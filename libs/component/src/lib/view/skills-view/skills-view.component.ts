@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngxs/store';
 
 import { SkillsState } from '@olejarczyk-jakub/store';
-import { SkillModel } from '@olejarczyk-jakub/model';
+import { SectionEnum, SkillModel } from '@olejarczyk-jakub/model';
 import { BaseComponent } from '../../base/base.component';
 import { BaseViewComponent } from '../base-view/base-view.component';
 import { TitleViewComponent } from '../title-view/title-view.component';
@@ -15,6 +15,8 @@ import { TitleViewComponent } from '../title-view/title-view.component';
   styleUrl: './skills-view.component.scss',
 })
 export class SkillsViewComponent extends BaseComponent {
+  id = SectionEnum.skills;
+
   skills: SkillModel[];
 
   constructor(protected override readonly store: Store) {

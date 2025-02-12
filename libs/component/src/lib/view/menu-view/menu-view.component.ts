@@ -47,5 +47,15 @@ export class MenuViewComponent extends BaseComponent {
     const section = event as SectionEnum;
     this.store.dispatch(new SystemSetSectionAction(section));
     this.store.dispatch(new MenuSetIsOpenAction(false));
+    const element = document.getElementById(section);
+    if (element) {
+      const offset = 75;
+      const elementPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({
+        top: elementPosition - offset,
+        behavior: 'smooth',
+      });
+    }
   }
 }

@@ -11,6 +11,7 @@ import { BaseComponent } from '../../base/base.component';
 import { BaseViewComponent } from '../base-view/base-view.component';
 import { ContactItemDumbComponent } from '../../dumb/contact-item-dumb/contact-item-dumb.component';
 import { TitleViewComponent } from '../title-view/title-view.component';
+import { SectionEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-contact-view',
@@ -24,6 +25,8 @@ import { TitleViewComponent } from '../title-view/title-view.component';
   styleUrl: './contact-view.component.scss',
 })
 export class ContactViewComponent extends BaseComponent {
+  id = SectionEnum.contact;
+
   faEnvelope = faEnvelope;
 
   faPhone = faPhone;

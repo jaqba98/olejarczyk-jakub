@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 import { StyleOffDirective } from '../../base/style-off.directive';
+import { SectionEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-base-view',
@@ -12,4 +13,6 @@ import { StyleOffDirective } from '../../base/style-off.directive';
 })
 export class BaseViewComponent {
   @Input() secondary = false;
+
+  @Input() id!: SectionEnum;
 }

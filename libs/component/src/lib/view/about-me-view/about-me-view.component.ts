@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { BaseViewComponent } from '../base-view/base-view.component';
 import { StyleOffDirective } from '../../base/style-off.directive';
 import { TitleViewComponent } from '../title-view/title-view.component';
+import { SectionEnum } from '@olejarczyk-jakub/model';
 
 @Component({
   selector: 'lib-about-me-view',
@@ -12,4 +13,6 @@ import { TitleViewComponent } from '../title-view/title-view.component';
   styleUrl: './about-me-view.component.scss',
   hostDirectives: [StyleOffDirective],
 })
-export class AboutMeViewComponent {}
+export class AboutMeViewComponent {
+  id = SectionEnum.aboutMe;
+}
