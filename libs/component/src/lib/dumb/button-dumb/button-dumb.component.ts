@@ -1,26 +1,29 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
+import { TextDumbComponent } from '../text-dumb/text-dumb.component';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
   selector: 'lib-button-dumb',
-  imports: [CommonModule],
+  imports: [CommonModule, TextDumbComponent],
   templateUrl: './button-dumb.component.html',
   styleUrl: './button-dumb.component.scss',
 })
 export class ButtonDumbComponent extends BaseComponent {
-  @Output() event = new EventEmitter<string>();
+  @Output() event = new EventEmitter();
 
-  @Input({ required: true }) label!: string;
+  @Input() label = '';
 
-  @Input({ required: true }) value!: string;
-
-  @Input() active = false;
-
-  @Input() full = false;
+  @Input() isPressed = false;
 
   onClick() {
-    this.event.emit(this.value);
+    this.event.emit();
+  }
+
+  getClassList() {
+    return {
+      button__pressed: this.isPressed,
+    };
   }
 }

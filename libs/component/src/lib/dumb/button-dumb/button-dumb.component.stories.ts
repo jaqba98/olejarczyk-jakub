@@ -14,7 +14,13 @@ type Story = StoryObj<ButtonDumbComponent>;
 
 export const Default: Story = {
   args: {
-    label: 'Click',
-    value: 'hello',
+    label: 'Hello',
+  },
+};
+
+export const Pressed: Story = {
+  args: {
+    label: 'Hello',
+    isPressed: true,
   },
 };

@@ -1,7 +1,5 @@
 <lib-button-dumb
   [label]="label"
-  [value]="value"
-  [active]="active"
-  [full]="full"
-  (event)="onClick($event)"
+  [isPressed]="isPressed"
+  (event)="onEvent()"
 ></lib-button-dumb>

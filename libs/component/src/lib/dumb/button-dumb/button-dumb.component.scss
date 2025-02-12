@@ -1,28 +1,11 @@
 .button {
-  padding: 0.75rem 0.5rem;
+  padding: 0.75rem 0.75rem;
   background-color: transparent;
   border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  border-radius: 5px;
-  text-transform: uppercase;
+  border-radius: 3px;
   cursor: pointer;
-  transition: all 0.05s ease-in-out;
 
-  &__full {
-    width: 100%;
-  }
-
-  &__active {
+  &__pressed {
     background-color: var(--accent-color);
-    color: var(--primary-text);
-  }
-
-  &:hover {
-    background-color: var(--accent-color);
-    color: var(--primary-text);
-  }
-
-  &:active {
-    transform: scale(0.9);
   }
 }

@@ -2,9 +2,6 @@
   <ng-container *ngFor="let option of getOptions()">
     <lib-button-smart
       [label]="getLabel(option)"
-      [value]="option"
-      [active]="getActive(option)"
-      [full]="vertical"
       (event)="onClick($event)"
     ></lib-button-smart>
   </ng-container>

@@ -1,7 +1,5 @@
-<button
-  class="button"
-  [ngClass]="{ button__active: active, button__full: full }"
-  (click)="onClick()"
->
-  {{ label }}
+<button class="button" [ngClass]="getClassList()" (click)="onClick()">
+  <lib-text-dumb [isUppercase]="true" [isAccentTextColor]="!isPressed">
+    {{ label }}
+  </lib-text-dumb>
 </button>
