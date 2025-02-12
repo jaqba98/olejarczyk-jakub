@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 import { SystemSmartComponent } from '@olejarczyk-jakub/component';
 
 @Component({
-  selector: 'lib-root',
+  selector: 'lib-page',
   imports: [SystemSmartComponent, RouterModule],
-  templateUrl: './root.component.html',
+  templateUrl: './page.component.html',
 })
-export class RootComponent {}
+export class PageComponent {}
