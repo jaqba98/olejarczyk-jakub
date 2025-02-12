@@ -7,7 +7,22 @@
   background-image: url('../../../../../../apps/olejarczyk-jakub/public/home-background.jpg');
 
   &__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.8);
+    gap: 1rem;
+
+    img {
+      width: 200px;
+      border-radius: 100%;
+      border: 2px solid var(--accent-color);
+    }
+
+    p {
+      color: var(--primary-text);
+    }
   }
 }
