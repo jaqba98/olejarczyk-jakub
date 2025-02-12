@@ -1,23 +1,10 @@
 .logo {
   display: inline-flex;
   align-items: center;
-  text-transform: uppercase;
-  font-size: 1em;
-  letter-spacing: 2px;
-  color: var(--accent-color);
+  justify-content: space-between;
+  gap: 0.25rem;
 
-  &::before,
-  &::after {
-    font-size: 2em;
-  }
-
-  &::before {
-    content: '{';
-    margin-right: 0.25rem;
-  }
-
-  &::after {
-    content: '}';
-    margin-left: 0.25rem;
+  &__sign {
+    margin-bottom: 2px;
   }
 }

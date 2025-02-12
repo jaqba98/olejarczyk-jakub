@@ -5,12 +5,8 @@ import { Subscription } from 'rxjs';
 import { MediaEnum } from '@olejarczyk-jakub/model';
 import { SystemState } from '@olejarczyk-jakub/store';
 import { mediaLessOrEqual, mediaMoreOrEqual } from '@olejarczyk-jakub/system';
-import { StyleOffDirective } from './style-off.directive';
 
-@Component({
-  template: '',
-  hostDirectives: [StyleOffDirective],
-})
+@Component({ template: '' })
 export class BaseComponent implements OnDestroy {
   private sub: Subscription;
 

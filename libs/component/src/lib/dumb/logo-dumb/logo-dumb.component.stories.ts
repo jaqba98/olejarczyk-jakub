@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/angular';
 
 import { LogoDumbComponent } from './logo-dumb.component';
 import { StorybookUtils } from '../../utils/storybook.utils';
+import { LogoEnum } from '@olejarczyk-jakub/model';
 
 const meta: Meta<LogoDumbComponent> = {
   title: 'Component/Dumb/Logo',
@@ -12,14 +13,14 @@ const meta: Meta<LogoDumbComponent> = {
 export default meta;
 type Story = StoryObj<LogoDumbComponent>;
 
-export const Long: Story = {
+export const LongLogo: Story = {
   args: {
-    title: 'Jakub Olejarczyk',
+    logo: LogoEnum.full,
   },
 };
 
 export const Short: Story = {
   args: {
-    title: 'JO',
+    logo: LogoEnum.short,
   },
 };

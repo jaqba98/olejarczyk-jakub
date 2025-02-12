@@ -1,6 +1,6 @@
-import { TitleEnum } from '../enum/title.enum';
+import { LogoEnum } from '../enum/logo.enum';
 
 export interface MenuModel {
   isOpen: boolean;
-  title: TitleEnum;
+  logo: LogoEnum;
 }

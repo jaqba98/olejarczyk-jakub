@@ -1,4 +1,4 @@
-export * from './lib/action/menu-set-title.action';
+export * from './lib/action/menu-set-logo.action';
 export * from './lib/action/menu-set-is-open.action';
 export * from './lib/action/menu-switch.action';
 export * from './lib/action/system-set-media.action';

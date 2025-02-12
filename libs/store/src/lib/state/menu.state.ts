@@ -1,15 +1,15 @@
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
-import { MenuModel, TitleEnum } from '@olejarczyk-jakub/model';
+import { MenuModel, LogoEnum } from '@olejarczyk-jakub/model';
 import { MenuSwitchAction } from '../action/menu-switch.action';
-import { MenuSetTitleAction } from '../action/menu-set-title.action';
+import { MenuSetLogoAction } from '../action/menu-set-logo.action';
 import { MenuSetIsOpenAction } from '../action/menu-set-is-open.action';
 
 @State<MenuModel>({
   name: 'menu',
   defaults: {
     isOpen: false,
-    title: TitleEnum.short,
+    logo: LogoEnum.short,
   },
 })
 export class MenuState {
@@ -19,8 +19,8 @@ export class MenuState {
   }
 
   @Selector()
-  static getTitle(state: MenuModel): MenuModel['title'] {
-    return state.title;
+  static getLogo(state: MenuModel): MenuModel['logo'] {
+    return state.logo;
   }
 
   @Action(MenuSwitchAction)
@@ -34,8 +34,8 @@ export class MenuState {
     ctx.patchState({ isOpen: action.payload });
   }
 
-  @Action(MenuSetTitleAction)
-  setTitle(ctx: StateContext<MenuModel>, action: MenuSetTitleAction) {
-    ctx.patchState({ title: action.payload });
+  @Action(MenuSetLogoAction)
+  setLogo(ctx: StateContext<MenuModel>, action: MenuSetLogoAction) {
+    ctx.patchState({ logo: action.payload });
   }
 }

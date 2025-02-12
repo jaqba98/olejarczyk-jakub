@@ -1,3 +1,24 @@
 .text {
+  font-size: 1em;
   color: var(--primary-text-color);
+
+  &__uppercase {
+    text-transform: uppercase;
+  }
+
+  &__secondary-text-color {
+    color: var(--secondary-text-color);
+  }
+
+  &__accent-text-color {
+    color: var(--accent-color);
+  }
+
+  &__letter-spacing {
+    letter-spacing: 2px;
+  }
+
+  &__medium-size {
+    font-size: 1.5em;
+  }
 }

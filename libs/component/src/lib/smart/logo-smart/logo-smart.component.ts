@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
 
 import {
-  MenuSetTitleAction,
+  MenuSetLogoAction,
   MenuState,
   SystemState,
 } from '@olejarczyk-jakub/store';
 import { mediaLessOrEqual } from '@olejarczyk-jakub/system';
-import { MediaEnum, TitleEnum } from '@olejarczyk-jakub/model';
+import { MediaEnum, LogoEnum } from '@olejarczyk-jakub/model';
 import { LogoDumbComponent } from '../../dumb/logo-dumb/logo-dumb.component';
 import { BaseComponent } from '../../base/base.component';
 
@@ -17,21 +17,21 @@ import { BaseComponent } from '../../base/base.component';
   templateUrl: './logo-smart.component.html',
 })
 export class LogoSmartComponent extends BaseComponent {
-  title!: string;
+  logo = '';
 
   constructor(protected override readonly store: Store) {
     super(store);
     this.addSub(
       this.store
-        .select(MenuState.getTitle)
-        .subscribe((title) => (this.title = title))
+        .select(MenuState.getLogo)
+        .subscribe((logo) => (this.logo = logo))
     );
     this.addSub(
       this.store.select(SystemState.getMedia).subscribe((media) => {
-        const newTitle = mediaLessOrEqual(media, MediaEnum.tablet)
-          ? TitleEnum.short
-          : TitleEnum.long;
-        this.store.dispatch(new MenuSetTitleAction(newTitle));
+        const newLogo = mediaLessOrEqual(media, MediaEnum.tablet)
+          ? LogoEnum.short
+          : LogoEnum.full;
+        this.store.dispatch(new MenuSetLogoAction(newLogo));
       })
     );
   }
