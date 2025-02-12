@@ -15,4 +15,10 @@ export class HamburgerDumbComponent {
   onClick() {
     this.event.emit();
   }
+
+  getClassList() {
+    return {
+      hamburger__open: this.isOpen,
+    };
+  }
 }
