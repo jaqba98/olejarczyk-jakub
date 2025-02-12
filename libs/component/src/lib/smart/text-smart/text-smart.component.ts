@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
-import { BaseComponent } from '../../base/base.component';
 import { TextDumbComponent } from '../../dumb/text-dumb/text-dumb.component';
 
 @Component({
@@ -9,7 +8,7 @@ import { TextDumbComponent } from '../../dumb/text-dumb/text-dumb.component';
   imports: [CommonModule, TextDumbComponent],
   templateUrl: './text-smart.component.html',
 })
-export class TextSmartComponent extends BaseComponent {
+export class TextSmartComponent {
   @Input() isUppercase = false;
 
   @Input() isSecondaryTextColor = false;
