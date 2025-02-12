@@ -15,7 +15,7 @@ type Story = StoryObj<EducationItemDumbComponent>;
 export const Default: Story = {
   args: {
     year: '2017 - 2021',
-    title: 'Jan Kochanowski University of Kielce',
+    header: 'Jan Kochanowski University of Kielce',
     course: 'Information technology',
     diploma: 'Engineering diploma',
   },
