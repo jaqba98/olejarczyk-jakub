@@ -12,13 +12,16 @@ import { StyleOffDirective } from '../../base/style-off.directive';
   hostDirectives: [StyleOffDirective],
 })
 export class BaseViewComponent {
-  @Input() id: SectionEnum | undefined;
+  @Input() id!: SectionEnum;
 
   @Input() isCenter = false;
+
+  @Input() isSecondaryColor = false;
 
   getClassList() {
     return {
       'base-view__center': this.isCenter,
+      'base-view__secondary-color': this.isSecondaryColor,
     };
   }
 }
