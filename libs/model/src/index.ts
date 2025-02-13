@@ -1,3 +1,4 @@
+export * from './lib/const/const';
 export * from './lib/enum/skills.enum';
 export * from './lib/enum/media.enum';
 export * from './lib/enum/section.enum';

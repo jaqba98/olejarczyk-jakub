@@ -1,16 +1,20 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
-import { BaseComponent } from '../../base/base.component';
+import { LogoEnum, profession, SectionEnum } from '@olejarczyk-jakub/model';
 import { BaseViewComponent } from '../base-view/base-view.component';
-import { SectionEnum } from '@olejarczyk-jakub/model';
+import { TextSmartComponent } from '../../smart/text-smart/text-smart.component';
 
 @Component({
   selector: 'lib-home-view',
-  imports: [CommonModule, BaseViewComponent],
+  imports: [CommonModule, BaseViewComponent, TextSmartComponent],
   templateUrl: './home-view.component.html',
   styleUrl: './home-view.component.scss',
 })
-export class HomeViewComponent extends BaseComponent {
-  id = SectionEnum.home;
+export class HomeViewComponent {
+  readonly id = SectionEnum.home;
+
+  readonly logo = LogoEnum.full;
+
+  readonly profession = profession;
 }

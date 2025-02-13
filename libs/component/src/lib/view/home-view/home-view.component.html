@@ -1,11 +1,21 @@
 <lib-base-view [id]="id">
-  <div class="aaa">
-    <section class="home">
-      <section class="home__image">
-        <img src="olejarczyk-jakub-photo.jpg" alt="Olejarczyk Jakub" />
-        <p>Jakub Olejarczyk</p>
-        <p>Mid Full Stack Developer</p>
-      </section>
-    </section>
-  </div>
+  <header class="home">
+    <div class="home__content">
+      <div class="home__avatar"></div>
+      <lib-text-smart
+        [isMediumSize]="true"
+        [isLatterSpacing]="true"
+        [isUppercase]="true"
+      >
+        {{ logo }}
+      </lib-text-smart>
+      <lib-text-smart
+        [isSecondaryTextColor]="true"
+        [isLatterSpacing]="true"
+        [isUppercase]="true"
+      >
+        {{ profession }}
+      </lib-text-smart>
+    </div>
+  </header>
 </lib-base-view>

@@ -1,28 +1,27 @@
-.aaa {
-  flex: 1;
-}
-
 .home {
   height: 500px;
-  background-image: url('../../../../../../apps/olejarczyk-jakub/public/home-background.jpg');
+  background-image: url(../../../../../../apps/olejarczyk-jakub/public/home-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  &__image {
+  &__avatar {
+    width: 10rem;
+    height: 10rem;
+    background-image: url(../../../../../../apps/olejarczyk-jakub/public/olejarczyk-jakub.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+  }
+
+  &__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    gap: 1rem;
-
-    img {
-      width: 200px;
-      border-radius: 100%;
-      border: 2px solid var(--accent-color);
-    }
-
-    p {
-      color: var(--primary-text);
-    }
   }
 }
