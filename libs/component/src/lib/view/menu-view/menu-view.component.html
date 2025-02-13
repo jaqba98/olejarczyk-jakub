@@ -1,10 +1,10 @@
-<div class="menu" [ngClass]="{ menu__vertical: vertical }">
+<div class="menu">
   <ng-container *ngFor="let option of getOptions()">
     <lib-button-smart
       [label]="getLabel(option)"
       [id]="option"
-      [isPressed]="section === option"
-      (event)="onClick($event)"
+      [isPressed]="getIsPressed(option)"
+      (event)="onEvent($event)"
     ></lib-button-smart>
   </ng-container>
 </div>

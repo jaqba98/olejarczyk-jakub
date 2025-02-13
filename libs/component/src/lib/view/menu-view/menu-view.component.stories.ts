@@ -13,9 +13,3 @@ export default meta;
 type Story = StoryObj<MenuViewComponent>;
 
 export const Default: Story = {};
-
-export const Vertical: Story = {
-  args: {
-    vertical: true,
-  },
-};

@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
 
+import { SectionEnum, SectionLabelEnum } from '@olejarczyk-jakub/model';
 import {
   MenuSetIsOpenAction,
   SystemSetSectionAction,
   SystemState,
 } from '@olejarczyk-jakub/store';
-import { SectionEnum, SectionLabelEnum } from '@olejarczyk-jakub/model';
 import { ButtonSmartComponent } from '../../smart/button-smart/button-smart.component';
 import { BaseComponent } from '../../base/base.component';
 
@@ -18,8 +18,6 @@ import { BaseComponent } from '../../base/base.component';
   styleUrl: './menu-view.component.scss',
 })
 export class MenuViewComponent extends BaseComponent {
-  @Input() vertical = false;
-
   section = SectionEnum.home;
 
   constructor(protected override readonly store: Store) {
@@ -39,14 +37,17 @@ export class MenuViewComponent extends BaseComponent {
     return SectionLabelEnum[section];
   }
 
-  getActive(section: SectionEnum) {
+  getIsPressed(section: SectionEnum) {
     return section === this.section;
   }
 
-  onClick(event: string) {
-    const section = event as SectionEnum;
-    this.store.dispatch(new SystemSetSectionAction(section));
+  onEvent(event: SectionEnum) {
+    this.store.dispatch(new SystemSetSectionAction(event));
     this.store.dispatch(new MenuSetIsOpenAction(false));
+    this.scrollTo(event);
+  }
+
+  private scrollTo(section: SectionEnum) {
     const element = document.getElementById(section);
     if (element) {
       const offset = 75;
