@@ -20,7 +20,7 @@ export class ButtonSmartComponent extends BaseComponent {
 
   @Input() isPressed = false;
 
-  @Input() fullWidth = false;
+  @Input() isFullWidth = false;
 
   onEvent(event: string) {
     this.event.emit(event);

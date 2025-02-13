@@ -20,7 +20,7 @@ export class ButtonDumbComponent {
 
   @Input() isPressed = false;
 
-  @Input() fullWidth = false;
+  @Input() isFullWidth = false;
 
   onClick() {
     this.event.emit(this.id);
@@ -29,7 +29,7 @@ export class ButtonDumbComponent {
   getClassList() {
     return {
       button__pressed: this.isPressed,
-      'button__full-width': this.fullWidth,
+      'button__full-width': this.isFullWidth,
     };
   }
 }

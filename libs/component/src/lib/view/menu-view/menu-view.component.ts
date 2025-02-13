@@ -10,15 +10,19 @@ import {
 } from '@olejarczyk-jakub/store';
 import { ButtonSmartComponent } from '../../smart/button-smart/button-smart.component';
 import { BaseComponent } from '../../base/base.component';
+import { StyleOffDirective } from '../../base/style-off.directive';
 
 @Component({
   selector: 'lib-menu-view',
   imports: [CommonModule, ButtonSmartComponent],
   templateUrl: './menu-view.component.html',
   styleUrl: './menu-view.component.scss',
+  hostDirectives: [StyleOffDirective],
 })
 export class MenuViewComponent extends BaseComponent {
   @Input() isVertical = false;
+
+  @Input() isFullWidth = false;
 
   section = SectionEnum.home;
 

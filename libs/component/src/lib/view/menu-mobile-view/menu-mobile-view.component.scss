@@ -1,12 +1,12 @@
 .menu-mobile {
   display: flex;
   align-items: center;
-  justify-content: center;
   position: fixed;
   top: 75px;
   left: 100%;
   bottom: 0;
   width: 100%;
+  height: calc(100svh - 75px);
   overflow-y: auto;
   background-color: var(--primary-color);
   transition: left 0.5s ease-in-out;
