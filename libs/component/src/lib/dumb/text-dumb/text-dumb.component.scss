@@ -2,7 +2,7 @@
   font-size: 1em;
   color: var(--primary-text-color);
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: 425px) {
     font-size: 0.75em;
   }
 
@@ -21,7 +21,7 @@
   &__letter-spacing {
     letter-spacing: 2px;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 425px) {
       letter-spacing: 1px;
     }
   }
@@ -29,7 +29,7 @@
   &__medium-size {
     font-size: 2em;
 
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 425px) {
       font-size: 1.5em;
     }
   }
