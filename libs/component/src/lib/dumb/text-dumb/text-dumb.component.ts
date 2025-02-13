@@ -18,6 +18,8 @@ export class TextDumbComponent {
 
   @Input() isMediumSize = false;
 
+  @Input() isTextCenter = false;
+
   getClassList() {
     return {
       text__uppercase: this.isUppercase,
@@ -25,6 +27,7 @@ export class TextDumbComponent {
       'text__accent-text-color': this.isAccentTextColor,
       'text__letter-spacing': this.isLatterSpacing,
       'text__medium-size': this.isMediumSize,
+      'text__text-center': this.isTextCenter,
     };
   }
 }

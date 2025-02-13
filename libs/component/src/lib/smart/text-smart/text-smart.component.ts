@@ -18,4 +18,6 @@ export class TextSmartComponent {
   @Input() isLatterSpacing = false;
 
   @Input() isMediumSize = false;
+
+  @Input() isTextCenter = false;
 }

@@ -83,3 +83,15 @@ export const MediumSize: Story = {
     </lib-text-dumb>`,
   }),
 };
+
+export const TextCenter: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+    <lib-text-dumb [isTextCenter]="true">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro eaque in commodi ea,
+      explicabo aut at distinctio nesciunt laborum praesentium asperiores numquam facere 
+      error iusto est libero provident impedit? Iusto.
+    </lib-text-dumb>`,
+  }),
+};
