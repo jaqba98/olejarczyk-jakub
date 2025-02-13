@@ -1,22 +1,20 @@
+import { CommonModule } from '@angular/common';
 import { Component, ElementRef, HostListener } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { CommonModule } from '@angular/common';
 
+import { MenuSetIsOpenAction, MenuState } from '@olejarczyk-jakub/store';
 import { LogoSmartComponent } from '../../smart/logo-smart/logo-smart.component';
 import { HamburgerSmartComponent } from '../../smart/hamburger-smart/hamburger-smart.component';
 import { MenuViewComponent } from '../menu-view/menu-view.component';
 import { BaseComponent } from '../../base/base.component';
-import { MenuMobileViewComponent } from '../menu-mobile-view/menu-mobile-view.component';
-import { MenuSetIsOpenAction, MenuState } from '@olejarczyk-jakub/store';
 
 @Component({
   selector: 'lib-nav-view',
   imports: [
+    CommonModule,
     LogoSmartComponent,
     HamburgerSmartComponent,
     MenuViewComponent,
-    CommonModule,
-    MenuMobileViewComponent,
   ],
   templateUrl: './nav-view.component.html',
   styleUrl: './nav-view.component.scss',
@@ -41,5 +39,11 @@ export class NavViewComponent extends BaseComponent {
     if (!this.element.nativeElement.contains(event.target)) {
       this.store.dispatch(new MenuSetIsOpenAction(false));
     }
+  }
+
+  getClassList() {
+    return {
+      'nav__space-around': this.moreOrEqualDesktop,
+    };
   }
 }

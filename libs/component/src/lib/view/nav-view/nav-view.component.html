@@ -1,14 +1,9 @@
-<nav class="nav" [ngClass]="{ 'nav__space-around': moreOrEqualDesktop }">
+<nav class="nav" [ngClass]="getClassList()">
   <lib-logo-smart></lib-logo-smart>
-  <div>
-    <ng-container *ngIf="isMobile; else pc">
-      <lib-hamburger-smart></lib-hamburger-smart>
-    </ng-container>
-    <ng-template #pc>
-      <lib-menu-view></lib-menu-view>
-    </ng-template>
-  </div>
+  <ng-container *ngIf="isMobile; else menu">
+    <lib-hamburger-smart></lib-hamburger-smart>
+  </ng-container>
+  <ng-template #menu>
+    <lib-menu-view></lib-menu-view>
+  </ng-template>
 </nav>
-<ng-container *ngIf="isMobile">
-  <lib-menu-mobile-view [isOpen]="isOpen"></lib-menu-mobile-view>
-</ng-container>
