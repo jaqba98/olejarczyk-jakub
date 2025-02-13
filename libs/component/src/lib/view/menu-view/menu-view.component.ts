@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Store } from '@ngxs/store';
 
 import { SectionEnum, SectionLabelEnum } from '@olejarczyk-jakub/model';
@@ -18,6 +18,8 @@ import { BaseComponent } from '../../base/base.component';
   styleUrl: './menu-view.component.scss',
 })
 export class MenuViewComponent extends BaseComponent {
+  @Input() isVertical = false;
+
   section = SectionEnum.home;
 
   constructor(protected override readonly store: Store) {
@@ -45,6 +47,12 @@ export class MenuViewComponent extends BaseComponent {
     this.store.dispatch(new SystemSetSectionAction(event));
     this.store.dispatch(new MenuSetIsOpenAction(false));
     this.scrollTo(event);
+  }
+
+  getClassList() {
+    return {
+      menu__vertical: this.isVertical,
+    };
   }
 
   private scrollTo(section: SectionEnum) {

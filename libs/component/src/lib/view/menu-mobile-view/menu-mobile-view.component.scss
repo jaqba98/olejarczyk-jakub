@@ -1,13 +1,15 @@
 .menu-mobile {
-  background-color: var(--primary-color);
-  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 75px;
   left: 100%;
-  width: 100%;
   bottom: 0;
-  transition: all 0.5s ease-in-out;
-  overflow: auto;
+  width: 100%;
+  overflow-y: auto;
+  background-color: var(--primary-color);
+  transition: left 0.5s ease-in-out;
 
   &__open {
     left: 0;

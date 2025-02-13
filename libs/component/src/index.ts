@@ -1,3 +1,7 @@
+export * from './lib/view/menu-mobile-view/menu-mobile-view.component';
+export * from './lib/view/menu-view/menu-view.component';
+export * from './lib/view/nav-view/nav-view.component';
+
 export * from './lib/base/base.component';
 export * from './lib/smart/system-smart/system-smart.component';
 export * from './lib/view/nav-view/nav-view.component';

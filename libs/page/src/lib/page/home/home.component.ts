@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 
 import {
   NavViewComponent,
+  MenuMobileViewComponent,
   HomeViewComponent,
   AboutMeViewComponent,
   SkillsViewComponent,
@@ -21,6 +22,7 @@ import {
   imports: [
     CommonModule,
     NavViewComponent,
+    MenuMobileViewComponent,
     HomeViewComponent,
     AboutMeViewComponent,
     SkillsViewComponent,
