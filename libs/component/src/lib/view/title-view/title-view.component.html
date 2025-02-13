@@ -1,10 +1,6 @@
-<div
-  class="title-view"
-  [ngClass]="{ 'title-view__margin-auto': marginAuto }"
-  [ngStyle]="{ justifyContent: justifyContent }"
->
-  <h2 class="title-view__title" [ngStyle]="{ textAlign: textAlign }">
-    {{ header }}
-  </h2>
+<div class="title-view">
+  <lib-text-smart [isUppercase]="true" [isMediumSize]="true">
+    {{ value }}
+  </lib-text-smart>
   <ng-content></ng-content>
 </div>

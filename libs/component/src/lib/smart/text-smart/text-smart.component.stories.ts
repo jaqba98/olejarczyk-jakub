@@ -72,11 +72,35 @@ export const MediumSize: Story = {
   }),
 };
 
+export const LargeSize: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+    <lib-text-smart [isLargeSize]="true">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro eaque in commodi ea,
+      explicabo aut at distinctio nesciunt laborum praesentium asperiores numquam facere 
+      error iusto est libero provident impedit? Iusto.
+    </lib-text-smart>`,
+  }),
+};
+
 export const TextCenter: Story = {
   render: (args) => ({
     props: args,
     template: `
     <lib-text-smart [isTextCenter]="true">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro eaque in commodi ea,
+      explicabo aut at distinctio nesciunt laborum praesentium asperiores numquam facere 
+      error iusto est libero provident impedit? Iusto.
+    </lib-text-smart>`,
+  }),
+};
+
+export const LineHeight: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+    <lib-text-smart [isLineHeight]="true">
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro eaque in commodi ea,
       explicabo aut at distinctio nesciunt laborum praesentium asperiores numquam facere 
       error iusto est libero provident impedit? Iusto.

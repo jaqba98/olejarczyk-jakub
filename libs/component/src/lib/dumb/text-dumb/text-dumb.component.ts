@@ -18,7 +18,11 @@ export class TextDumbComponent {
 
   @Input() isMediumSize = false;
 
+  @Input() isLargeSize = false;
+
   @Input() isTextCenter = false;
+
+  @Input() isLineHeight = false;
 
   getClassList() {
     return {
@@ -27,7 +31,9 @@ export class TextDumbComponent {
       'text__accent-text-color': this.isAccentTextColor,
       'text__letter-spacing': this.isLatterSpacing,
       'text__medium-size': this.isMediumSize,
+      'text__large-size': this.isLargeSize,
       'text__text-center': this.isTextCenter,
+      'text__line-height': this.isLineHeight,
     };
   }
 }

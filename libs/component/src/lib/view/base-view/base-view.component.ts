@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
-import { StyleOffDirective } from '../../base/style-off.directive';
 import { SectionEnum } from '@olejarczyk-jakub/model';
+import { StyleOffDirective } from '../../base/style-off.directive';
 
 @Component({
   selector: 'lib-base-view',
@@ -12,7 +12,13 @@ import { SectionEnum } from '@olejarczyk-jakub/model';
   hostDirectives: [StyleOffDirective],
 })
 export class BaseViewComponent {
-  @Input() secondary = false;
+  @Input() id: SectionEnum | undefined;
 
-  @Input() id!: SectionEnum;
+  @Input() isCenter = false;
+
+  getClassList() {
+    return {
+      'base-view__center': this.isCenter,
+    };
+  }
 }

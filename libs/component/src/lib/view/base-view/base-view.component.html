@@ -1,7 +1,3 @@
-<section
-  class="base-view"
-  [ngClass]="{ 'base-view__secondary': secondary }"
-  [id]="id"
->
+<section class="base-view" [id]="id" [ngClass]="getClassList()">
   <ng-content></ng-content>
 </section>

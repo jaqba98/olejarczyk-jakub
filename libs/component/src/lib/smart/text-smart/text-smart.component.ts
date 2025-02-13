@@ -19,5 +19,9 @@ export class TextSmartComponent {
 
   @Input() isMediumSize = false;
 
+  @Input() isLargeSize = false;
+
   @Input() isTextCenter = false;
+
+  @Input() isLineHeight = false;
 }
