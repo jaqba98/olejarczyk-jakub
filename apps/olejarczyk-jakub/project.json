@@ -22,7 +22,10 @@
             "input": "apps/olejarczyk-jakub/public"
           }
         ],
-        "styles": ["apps/olejarczyk-jakub/src/index.scss"],
+        "styles": [
+          "apps/olejarczyk-jakub/public/devicon.min.css",
+          "apps/olejarczyk-jakub/src/index.scss"
+        ],
         "scripts": []
       },
       "configurations": {

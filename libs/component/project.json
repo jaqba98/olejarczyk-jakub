@@ -38,7 +38,10 @@
         "configDir": "libs/component/.storybook",
         "browserTarget": "component:build-storybook",
         "compodoc": false,
-        "styles": ["apps/olejarczyk-jakub/src/index.scss"]
+        "styles": [
+          "apps/olejarczyk-jakub/public/devicon.min.css",
+          "apps/olejarczyk-jakub/src/index.scss"
+        ]
       },
       "configurations": {
         "ci": {
