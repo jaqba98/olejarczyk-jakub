@@ -1,17 +1,26 @@
 <lib-base-view [id]="id" [isSecondaryColor]="true">
   <lib-title-view value="Knowledge" [isMarginAuto]="true">
     <ul class="knowledge">
-      <li>
+      <li class="knowledge__item">
+        <lib-text-smart [isMediumSize]="true">
+          <lib-icon-smart [icon]="faComments"></lib-icon-smart>
+        </lib-text-smart>
         <lib-text-smart [isSecondaryTextColor]="true">
           English B2
         </lib-text-smart>
       </li>
-      <li>
+      <li class="knowledge__item">
+        <lib-text-smart [isMediumSize]="true">
+          <lib-icon-smart [icon]="faComments"></lib-icon-smart>
+        </lib-text-smart>
         <lib-text-smart [isSecondaryTextColor]="true">
           Polish Native Speaker
         </lib-text-smart>
       </li>
-      <li>
+      <li class="knowledge__item">
+        <lib-text-smart [isMediumSize]="true">
+          <lib-icon-smart [icon]="faCar"></lib-icon-smart>
+        </lib-text-smart>
         <lib-text-smart [isSecondaryTextColor]="true">
           Driving license category B
         </lib-text-smart>
