@@ -56,11 +56,11 @@ import {
           {
             title: SkillsTitleEnum.ngrx,
             className: SkillsClassNameEnum.ngrx,
-            colored: false,
+            colored: true,
           },
           {
-            title: SkillsTitleEnum.redux,
-            className: SkillsClassNameEnum.redux,
+            title: SkillsTitleEnum.storybook,
+            className: SkillsClassNameEnum.storybook,
             colored: true,
           },
           {
@@ -71,11 +71,6 @@ import {
           {
             title: SkillsTitleEnum.karma,
             className: SkillsClassNameEnum.karma,
-            colored: true,
-          },
-          {
-            title: SkillsTitleEnum.storybook,
-            className: SkillsClassNameEnum.storybook,
             colored: true,
           },
         ],
@@ -104,11 +99,6 @@ import {
             colored: true,
           },
           {
-            title: SkillsTitleEnum.oauth,
-            className: SkillsClassNameEnum.oauth,
-            colored: false,
-          },
-          {
             title: SkillsTitleEnum.junit,
             className: SkillsClassNameEnum.junit,
             colored: true,
@@ -121,7 +111,7 @@ import {
           {
             title: SkillsTitleEnum.express,
             className: SkillsClassNameEnum.express,
-            colored: false,
+            colored: true,
           },
           {
             title: SkillsTitleEnum.socketIo,
