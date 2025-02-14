@@ -17,6 +17,8 @@ export class TextSmartComponent {
 
   @Input() isLatterSpacing = false;
 
+  @Input() isTinySize = false;
+
   @Input() isMediumSize = false;
 
   @Input() isLargeSize = false;

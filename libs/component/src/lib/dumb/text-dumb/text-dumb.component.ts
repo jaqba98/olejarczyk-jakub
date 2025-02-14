@@ -16,6 +16,8 @@ export class TextDumbComponent {
 
   @Input() isLatterSpacing = false;
 
+  @Input() isTinySize = false;
+
   @Input() isMediumSize = false;
 
   @Input() isLargeSize = false;
@@ -30,6 +32,7 @@ export class TextDumbComponent {
       'text__secondary-text-color': this.isSecondaryTextColor,
       'text__accent-text-color': this.isAccentTextColor,
       'text__letter-spacing': this.isLatterSpacing,
+      'text__tiny-size': this.isTinySize,
       'text__medium-size': this.isMediumSize,
       'text__large-size': this.isLargeSize,
       'text__text-center': this.isTextCenter,
