@@ -1,5 +1,6 @@
 .base-view {
   flex: 1;
+  background-color: var(--primary-color);
 
   &__center {
     display: flex;

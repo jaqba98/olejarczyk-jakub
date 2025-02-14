@@ -1,5 +1,5 @@
-<lib-base-view>
-  <p class="copyright" [ngClass]="{ copyright__small: isMobile }">
-    © 2025 Jakub Olejarczyk. All Rights Reserved.
-  </p>
+<lib-base-view [isCenter]="true">
+  <div class="copyright">
+    <lib-text-smart [isTinySize]="true">{{ getCopyright() }}</lib-text-smart>
+  </div>
 </lib-base-view>
