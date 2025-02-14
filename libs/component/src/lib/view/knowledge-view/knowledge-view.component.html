@@ -1,14 +1,20 @@
-<lib-base-view [id]="id">
-  <lib-title-view value="Knowledge">
+<lib-base-view [id]="id" [isSecondaryColor]="true">
+  <lib-title-view value="Knowledge" [isMarginAuto]="true">
     <ul class="knowledge">
       <li>
-        <p>English B2</p>
+        <lib-text-smart [isSecondaryTextColor]="true">
+          English B2
+        </lib-text-smart>
       </li>
       <li>
-        <p>Polish Native Speaker</p>
+        <lib-text-smart [isSecondaryTextColor]="true">
+          Polish Native Speaker
+        </lib-text-smart>
       </li>
       <li>
-        <p>Driving license category B</p>
+        <lib-text-smart [isSecondaryTextColor]="true">
+          Driving license category B
+        </lib-text-smart>
       </li>
     </ul>
   </lib-title-view>
