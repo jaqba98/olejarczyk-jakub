@@ -13,4 +13,12 @@ import { StyleOffDirective } from '../../base/style-off.directive';
 })
 export class TitleViewComponent {
   @Input({ required: true }) value!: string;
+
+  @Input() isMarginAuto = false;
+
+  getClassList() {
+    return {
+      'title-view__margin-auto': this.isMarginAuto,
+    };
+  }
 }

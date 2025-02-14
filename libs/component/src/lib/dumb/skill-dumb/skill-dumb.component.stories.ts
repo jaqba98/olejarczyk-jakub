@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 
+import { SkillsClassNameEnum, SkillsTitleEnum } from '@olejarczyk-jakub/model';
 import { SkillDumbComponent } from './skill-dumb.component';
 import { StorybookUtils } from '../../utils/storybook.utils';
 
@@ -14,19 +15,22 @@ type Story = StoryObj<SkillDumbComponent>;
 
 export const HTML: Story = {
   args: {
-    skill: 'html',
+    skillTitle: SkillsTitleEnum.html,
+    skillClassName: SkillsClassNameEnum.html,
   },
 };
 
 export const VisualStudioCode: Story = {
   args: {
-    skill: 'vscode',
+    skillTitle: SkillsTitleEnum.vscode,
+    skillClassName: SkillsClassNameEnum.vscode,
   },
 };
 
 export const GitHub: Story = {
   args: {
-    skill: 'gitHub',
+    skillTitle: SkillsTitleEnum.gitHub,
+    skillClassName: SkillsClassNameEnum.vscode,
     isColored: false,
     isPrimaryColor: true,
   },

@@ -1,25 +1,19 @@
 <lib-base-view [id]="id" [isSecondaryColor]="true">
-  <lib-title-view value="Skills">
-    <div
-      class="skills__content"
-      [ngClass]="{ 'skills__content-center': !isMobile }"
-    >
+  <lib-title-view value="Skills" [isMarginAuto]="true">
+    <div class="skills" [ngClass]="getClassList()">
       <ng-container *ngFor="let skill of skills">
-        <div class="skill">
-          <h3 class="skill__title">{{ skill.title }}</h3>
-          <div class="skill__technologies">
-            <ng-container *ngFor="let tech of skill.technologies">
-              <div class="technology">
-                <i
-                  class="technology__icon"
-                  [class]="tech.className"
-                  [ngClass]="{
-                    colored: tech.colored,
-                    no__colored: !tech.colored,
-                  }"
-                ></i>
-                <p class="technology__title">{{ tech.title }}</p>
-              </div>
+        <div class="skills__content">
+          <lib-text-smart [isUppercase]="true">
+            {{ skill.title }}
+          </lib-text-smart>
+          <div class="skills__technologies">
+            <ng-container *ngFor="let technology of skill.technologies">
+              <lib-skill-smart
+                [skillTitle]="technology.title"
+                [skillClassName]="technology.className"
+                [isColored]="technology.colored"
+                [isPrimaryColor]="!technology.colored"
+              ></lib-skill-smart>
             </ng-container>
           </div>
         </div>

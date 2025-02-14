@@ -11,4 +11,9 @@
   &__secondary-color {
     background-color: var(--secondary-color);
   }
+
+  &__margin-auto {
+    margin: auto;
+    max-width: 960px;
+  }
 }
