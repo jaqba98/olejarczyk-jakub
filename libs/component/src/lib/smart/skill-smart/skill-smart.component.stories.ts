@@ -1,16 +1,16 @@
 import { Meta, StoryObj } from '@storybook/angular';
 
-import { SkillDumbComponent } from './skill-dumb.component';
+import { SkillSmartComponent } from './skill-smart.component';
 import { StorybookUtils } from '../../utils/storybook.utils';
 
-const meta: Meta<SkillDumbComponent> = {
-  title: 'Component/Dumb/Skill',
-  component: SkillDumbComponent,
+const meta: Meta<SkillSmartComponent> = {
+  title: 'Component/Smart/Skill',
+  component: SkillSmartComponent,
   ...StorybookUtils.decorators(),
 };
 
 export default meta;
-type Story = StoryObj<SkillDumbComponent>;
+type Story = StoryObj<SkillSmartComponent>;
 
 export const HTML: Story = {
   args: {

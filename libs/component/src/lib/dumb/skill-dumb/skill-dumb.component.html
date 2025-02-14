@@ -1,1 +1,4 @@
-<i [class]="skillClass" class="colored"></i>
+<div class="skill">
+  <i class="skill__icon" [ngClass]="getClassList()"></i>
+  <lib-text-smart [isTextCenter]="true">{{ getTitle() }}</lib-text-smart>
+</div>
