@@ -1,17 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faSchool } from '@fortawesome/free-solid-svg-icons';
 
-import { BaseComponent } from '../../base/base.component';
+import { IconDumbComponent } from '../icon-dumb/icon-dumb.component';
+import { TextDumbComponent } from '../text-dumb/text-dumb.component';
 
 @Component({
   selector: 'lib-education-item-dumb',
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, IconDumbComponent, TextDumbComponent],
   templateUrl: './education-item-dumb.component.html',
   styleUrl: './education-item-dumb.component.scss',
 })
-export class EducationItemDumbComponent extends BaseComponent {
+export class EducationItemDumbComponent {
   @Input({ required: true }) year!: string;
 
   @Input({ required: true }) header!: string;

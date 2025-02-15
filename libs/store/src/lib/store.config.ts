@@ -6,10 +6,17 @@ import { MenuState } from './state/menu.state';
 import { SystemState } from './state/system.state';
 import { SkillsState } from './state/skills.state';
 import { ContactsState } from './state/contacts.state';
+import { EducationsState } from './state/educations.state';
 
 export const storeConfig: ApplicationConfig = {
   providers: [
-    provideStore([MenuState, SystemState, SkillsState, ContactsState]),
+    provideStore([
+      MenuState,
+      SystemState,
+      SkillsState,
+      ContactsState,
+      EducationsState,
+    ]),
     withNgxsReduxDevtoolsPlugin(),
   ],
 };

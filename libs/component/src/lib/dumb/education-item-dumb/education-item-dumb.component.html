@@ -1,11 +1,13 @@
-<div class="contact-item" [ngClass]="{ 'contact-item__large': !isMobile }">
-  <div class="contact-item__logo">
-    <fa-icon [icon]="faSchool" class="contact-item__icon"></fa-icon>
-    <p class="contact-item__text">{{ year }}</p>
+<div class="education-item">
+  <div class="education-item__logo">
+    <lib-icon-dumb [icon]="faSchool" [isMediumSize]="true"></lib-icon-dumb>
+    <lib-text-dumb [isTextCenter]="true" [isTinySize]="true">
+      {{ year }}
+    </lib-text-dumb>
   </div>
-  <div class="contact-item__content">
-    <h3 class="contact-item__text">{{ header }}</h3>
-    <p class="contact-item__text">{{ course }}</p>
-    <p class="contact-item__text">{{ diploma }}</p>
+  <div class="education-item__content">
+    <lib-text-dumb>{{ header }}</lib-text-dumb>
+    <lib-text-dumb [isSecondaryTextColor]="true">{{ course }}</lib-text-dumb>
+    <lib-text-dumb [isSecondaryTextColor]="true">{{ diploma }}</lib-text-dumb>
   </div>
 </div>

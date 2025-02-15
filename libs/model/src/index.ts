@@ -7,3 +7,4 @@ export * from './lib/model/menu.model';
 export * from './lib/model/system.model';
 export * from './lib/model/skills.model';
 export * from './lib/model/contact.model';
+export * from './lib/model/educations.model';
