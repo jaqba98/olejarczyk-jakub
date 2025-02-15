@@ -1,17 +1,22 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
-import { BaseComponent } from '../../base/base.component';
+import { SectionEnum } from '@olejarczyk-jakub/model';
 import { BaseViewComponent } from '../base-view/base-view.component';
 import { TitleViewComponent } from '../title-view/title-view.component';
-import { SectionEnum } from '@olejarczyk-jakub/model';
+import { TextSmartComponent } from '../../smart/text-smart/text-smart.component';
 
 @Component({
   selector: 'lib-projects-view',
-  imports: [CommonModule, BaseViewComponent, TitleViewComponent],
+  imports: [
+    CommonModule,
+    BaseViewComponent,
+    TitleViewComponent,
+    TextSmartComponent,
+  ],
   templateUrl: './projects-view.component.html',
   styleUrl: './projects-view.component.scss',
 })
-export class ProjectsViewComponent extends BaseComponent {
-  id = SectionEnum.projects;
+export class ProjectsViewComponent {
+  readonly id = SectionEnum.projects;
 }

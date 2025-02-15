@@ -8,6 +8,7 @@ import { TitleViewComponent } from '../title-view/title-view.component';
 import { EducationItemSmartComponent } from '../../smart/education-item-smart/education-item-smart.component';
 import { BaseComponent } from '../../base/base.component';
 import { EducationsState } from '@olejarczyk-jakub/store';
+import { StyleOffDirective } from '../../base/style-off.directive';
 
 @Component({
   selector: 'lib-education-view',
@@ -19,6 +20,7 @@ import { EducationsState } from '@olejarczyk-jakub/store';
   ],
   templateUrl: './education-view.component.html',
   styleUrl: './education-view.component.scss',
+  hostDirectives: [StyleOffDirective],
 })
 export class EducationViewComponent extends BaseComponent {
   readonly id = SectionEnum.education;
