@@ -1,18 +1,23 @@
-<div
-  class="experience-item"
-  [ngClass]="{ 'experience-item__large': !isMobile }"
->
-  <div class="experience-item__logo">
-    <fa-icon [icon]="faBuilding" class="experience-item__icon"></fa-icon>
-    <p class="experience-item__text">{{ year }}</p>
+<div class="experience-item">
+  <div class="experience-item__header">
+    <div class="experience-item__logo">
+      <lib-icon-dumb [icon]="faBuilding" [isMediumSize]="true"></lib-icon-dumb>
+      <lib-text-dumb [isTextCenter]="true" [isTinySize]="true">
+        {{ year }}
+      </lib-text-dumb>
+    </div>
+    <div class="experience-item__content">
+      <lib-text-dumb>{{ company }}</lib-text-dumb>
+      <lib-text-dumb [isSecondaryTextColor]="true">
+        {{ profession }}
+      </lib-text-dumb>
+    </div>
   </div>
-  <div class="experience-item__content">
-    <h3 class="experience-item__text">{{ company }}</h3>
-    <p class="experience-item__text">{{ profession }}</p>
-    <ul>
-      <li *ngFor="let task of tasks">
-        <p class="experience-item__text">{{ task }}</p>
+  <ul class="experience-item__list">
+    <ng-container *ngFor="let task of tasks">
+      <li>
+        <lib-text-smart>{{ task }}</lib-text-smart>
       </li>
-    </ul>
-  </div>
+    </ng-container>
+  </ul>
 </div>

@@ -14,9 +14,17 @@ type Story = StoryObj<ExperienceItemDumbComponent>;
 
 export const Default: Story = {
   args: {
-    year: '2017 - 2021',
+    year: '2020 - 2025',
     company: 'APR System',
     profession: 'Full Stack Developer',
-    tasks: [],
+    tasks: [
+      'Creating and styling user interfaces in Angular',
+      'Building dynamically generated reusable components in the Storybook environment',
+      'Managing application state using NGXS with the Redux DevTools plugin',
+      'Creating internal NPM packages to automate work in a monorepo environment, improving collaboration with GIT and integrating automated tests',
+      'Implementing client-server communication using REST API',
+      'Executing queries to relational databases using SQL',
+      'Managing multiple projects in a monorepo environment',
+    ],
   },
 };
