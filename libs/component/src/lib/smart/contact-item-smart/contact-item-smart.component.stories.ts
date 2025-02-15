@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 
-import { ContactItemDumbComponent } from './contact-item-dumb.component';
+import { ContactItemSmartComponent } from './contact-item-smart.component';
 import { StorybookUtils } from '../../utils/storybook.utils';
 
-const meta: Meta<ContactItemDumbComponent> = {
-  title: 'Component/Dumb/ContactItem',
-  component: ContactItemDumbComponent,
+const meta: Meta<ContactItemSmartComponent> = {
+  title: 'Component/Smart/ContactItem',
+  component: ContactItemSmartComponent,
   ...StorybookUtils.decorators(),
 };
 
 export default meta;
-type Story = StoryObj<ContactItemDumbComponent>;
+type Story = StoryObj<ContactItemSmartComponent>;
 
 export const Default: Story = {
   args: {
