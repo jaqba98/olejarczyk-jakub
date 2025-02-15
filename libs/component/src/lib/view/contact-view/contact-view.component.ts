@@ -1,39 +1,38 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import {
-  faEnvelope,
-  faLocationDot,
-  faPhone,
-} from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { Store } from '@ngxs/store';
 
-import { BaseComponent } from '../../base/base.component';
+import { ContactsModel, SectionEnum } from '@olejarczyk-jakub/model';
+import { ContactsState } from '@olejarczyk-jakub/store';
 import { BaseViewComponent } from '../base-view/base-view.component';
-import { ContactItemDumbComponent } from '../../dumb/contact-item-dumb/contact-item-dumb.component';
 import { TitleViewComponent } from '../title-view/title-view.component';
-import { SectionEnum } from '@olejarczyk-jakub/model';
+import { ContactItemSmartComponent } from '../../smart/contact-item-smart/contact-item-smart.component';
+import { BaseComponent } from '../../base/base.component';
+import { StyleOffDirective } from '../../base/style-off.directive';
 
 @Component({
   selector: 'lib-contact-view',
   imports: [
     CommonModule,
     BaseViewComponent,
-    ContactItemDumbComponent,
     TitleViewComponent,
+    ContactItemSmartComponent,
   ],
   templateUrl: './contact-view.component.html',
   styleUrl: './contact-view.component.scss',
+  hostDirectives: [StyleOffDirective],
 })
 export class ContactViewComponent extends BaseComponent {
   id = SectionEnum.contact;
 
-  faEnvelope = faEnvelope;
+  contacts: ContactsModel['contacts'] = [];
 
-  faPhone = faPhone;
-
-  faLocationDot = faLocationDot;
-
-  faLinkedin = faLinkedin;
-
-  faGithub = faGithub;
+  constructor(protected override readonly store: Store) {
+    super(store);
+    this.addSub(
+      this.store
+        .select(ContactsState.getContacts)
+        .subscribe((contacts) => (this.contacts = contacts))
+    );
+  }
 }

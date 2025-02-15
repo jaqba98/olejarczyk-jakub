@@ -2,6 +2,10 @@
   font-size: 1em;
   color: var(--primary-text-color);
 
+  @media screen and (max-width: 425px) {
+    font-size: 0.8em;
+  }
+
   &__uppercase {
     text-transform: uppercase;
   }

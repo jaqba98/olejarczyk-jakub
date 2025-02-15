@@ -12,6 +12,8 @@ import { ContactItemDumbComponent } from '../../dumb/contact-item-dumb/contact-i
 export class ContactItemSmartComponent {
   @Input({ required: true }) icon!: IconDefinition;
 
+  @Input({ required: true }) header!: string;
+
   @Input({ required: true }) label!: string;
 
   @Input({ required: true }) link!: string;

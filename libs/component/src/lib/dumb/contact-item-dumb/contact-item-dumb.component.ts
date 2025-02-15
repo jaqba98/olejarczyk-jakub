@@ -14,6 +14,8 @@ import { TextDumbComponent } from '../text-dumb/text-dumb.component';
 export class ContactItemDumbComponent {
   @Input({ required: true }) icon!: IconDefinition;
 
+  @Input({ required: true }) header!: string;
+
   @Input({ required: true }) label!: string;
 
   @Input({ required: true }) link!: string;

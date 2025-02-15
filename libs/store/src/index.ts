@@ -6,4 +6,5 @@ export * from './lib/action/system-set-section.action';
 export * from './lib/state/menu.state';
 export * from './lib/state/system.state';
 export * from './lib/state/skills.state';
+export * from './lib/state/contacts.state';
 export * from './lib/store.config';

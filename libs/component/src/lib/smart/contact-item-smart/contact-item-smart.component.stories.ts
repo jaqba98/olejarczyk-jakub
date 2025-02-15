@@ -16,6 +16,7 @@ type Story = StoryObj<ContactItemSmartComponent>;
 export const Default: Story = {
   args: {
     icon: faPhone,
+    header: 'Call me',
     label: '000-000-000',
     link: 'tel:000-000-000',
   },

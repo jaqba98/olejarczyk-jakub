@@ -14,4 +14,12 @@ import { StyleOffDirective } from '../../base/style-off.directive';
 })
 export class IconDumbComponent {
   @Input({ required: true }) icon!: IconDefinition;
+
+  @Input() isMediumSize = false;
+
+  getClassList() {
+    return {
+      'icon__medium-size': this.isMediumSize,
+    };
+  }
 }

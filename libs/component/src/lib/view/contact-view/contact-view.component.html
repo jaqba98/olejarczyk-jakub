@@ -1,36 +1,14 @@
 <lib-base-view [id]="id">
-  <lib-title-view value="Contact">
-    <div class="contact-view" [ngClass]="{ 'contact-view__large': !isMobile }">
-      <lib-contact-item-dumb
-        [icon]="faEnvelope"
-        header="Send me a message"
-        link="mailto:jakubolejarczyk98@gmail.com"
-        label="jakubolejarczyk98@gmail.com"
-      ></lib-contact-item-dumb>
-      <lib-contact-item-dumb
-        [icon]="faPhone"
-        header="Call me"
-        link="tel:501-007-197"
-        label="501 007 197"
-      ></lib-contact-item-dumb>
-      <lib-contact-item-dumb
-        [icon]="faLocationDot"
-        header="See where I'm from"
-        link="https://maps.app.goo.gl/WfaYw2oHqbq8crmk6"
-        label="Kielce"
-      ></lib-contact-item-dumb>
-      <lib-contact-item-dumb
-        [icon]="faLinkedin"
-        header="Check out my Linkedin"
-        link="https://www.linkedin.com/in/jakub-olejarczyk"
-        label="www.linkedin.com/in/jakub-olejarczyk"
-      ></lib-contact-item-dumb>
-      <lib-contact-item-dumb
-        [icon]="faGithub"
-        header="Check out my GitHub"
-        link="https://www.github.com/jaqba98"
-        label="www.github.com/jaqba98"
-      ></lib-contact-item-dumb>
+  <lib-title-view value="Contact" [isMarginAuto]="true">
+    <div class="contact-view">
+      <ng-container *ngFor="let contact of contacts">
+        <lib-contact-item-smart
+          [icon]="contact.icon"
+          [header]="contact.header"
+          [label]="contact.label"
+          [link]="contact.link"
+        ></lib-contact-item-smart>
+      </ng-container>
     </div>
   </lib-title-view>
 </lib-base-view>

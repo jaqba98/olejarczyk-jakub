@@ -1,6 +1,11 @@
 <div class="contact-item">
-  <lib-icon-dumb [icon]="icon"></lib-icon-dumb>
-  <a [href]="link" target="_blank" class="contact-item__link">
-    <lib-text-dumb>{{ label }}</lib-text-dumb>
-  </a>
+  <lib-icon-dumb [icon]="icon" [isMediumSize]="true"></lib-icon-dumb>
+  <div class="contact-item__content">
+    <lib-text-dumb [isUppercase]="true">
+      {{ header }}
+    </lib-text-dumb>
+    <a [href]="link" target="_blank" class="contact-item__link">
+      <lib-text-dumb [isSecondaryTextColor]="true">{{ label }}</lib-text-dumb>
+    </a>
+  </div>
 </div>

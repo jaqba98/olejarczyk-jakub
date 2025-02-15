@@ -13,4 +13,6 @@ import { IconDumbComponent } from '../../dumb/icon-dumb/icon-dumb.component';
 })
 export class IconSmartComponent {
   @Input({ required: true }) icon!: IconDefinition;
+
+  @Input() isMediumSize = false;
 }
