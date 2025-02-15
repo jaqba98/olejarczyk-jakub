@@ -1,7 +1,8 @@
 import { applicationConfig, moduleMetadata } from '@storybook/angular';
 
-import { storeConfig } from '@olejarczyk-jakub/store';
 import { SystemSmartComponent } from '../smart/system-smart/system-smart.component';
+import { systemModule } from '@olejarczyk-jakub/system';
+import { storeConfig } from '@olejarczyk-jakub/store';
 
 export class StorybookUtils {
   static decorators() {
@@ -10,7 +11,9 @@ export class StorybookUtils {
         moduleMetadata({
           imports: [SystemSmartComponent],
         }),
-        applicationConfig({ ...storeConfig }),
+        applicationConfig({
+          providers: [...systemModule.providers, ...storeConfig.providers],
+        }),
       ],
     };
   }

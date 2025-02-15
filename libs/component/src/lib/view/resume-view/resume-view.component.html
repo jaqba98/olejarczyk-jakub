@@ -1,10 +1,15 @@
-<lib-base-view [id]="id">
-  <lib-title-view value="Resume" textAlign="center">
+<lib-base-view [id]="id" [isSecondaryColor]="true">
+  <lib-title-view value="Resume" [isMarginAuto]="true">
     <div class="resume-view">
       <lib-button-smart
-        label="Download my resume"
-        id=""
-        (event)="onClick()"
+        label="Download resume in Polish"
+        id="polish"
+        (event)="onDownload('polish')"
+      ></lib-button-smart>
+      <lib-button-smart
+        label="Download resume in English"
+        id="english"
+        (event)="onDownload('english')"
       ></lib-button-smart>
     </div>
   </lib-title-view>
