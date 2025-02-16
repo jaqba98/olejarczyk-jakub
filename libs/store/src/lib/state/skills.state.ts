@@ -144,6 +144,11 @@ import {
             colored: true,
           },
           {
+            title: SkillsTitleEnum.maven,
+            className: SkillsClassNameEnum.maven,
+            colored: true,
+          },
+          {
             title: SkillsTitleEnum.npm,
             className: SkillsClassNameEnum.npm,
             colored: true,
