@@ -5,6 +5,6 @@ import { CommonModule } from '@angular/common';
   selector: 'app-root',
   imports: [CommonModule],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
 export class App {}
