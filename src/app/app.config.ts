@@ -4,10 +4,10 @@ import {
   provideZoneChangeDetection,
 } from '@angular/core';
 import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
 import { provideStore } from '@ngxs/store';
 import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
+
+import { routes } from './app.routes';
 import { CompanyState } from './store/company/company.state';
 
 export const appConfig: ApplicationConfig = {

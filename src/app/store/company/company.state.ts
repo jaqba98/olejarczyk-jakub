@@ -1,28 +1,19 @@
+import { State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
-import { State, Action, Selector, StateContext } from '@ngxs/store';
-import { CompanyAction } from './company.actions';
 
-export interface CompanyStateModel {
-  items: string[];
-}
+import { CompanyStateModel } from './company.model';
+import { CompanyLabelEnum } from './company.enum';
 
 @State<CompanyStateModel>({
   name: 'company',
   defaults: {
-    items: [],
+    aprSystem: {
+      label: CompanyLabelEnum.aprSystem,
+    },
+    primaris: {
+      label: CompanyLabelEnum.primaris,
+    },
   },
 })
 @Injectable()
-export class CompanyState {
-  @Selector()
-  static getState(state: CompanyStateModel) {
-    return state;
-  }
-
-  @Action(CompanyAction)
-  add(ctx: StateContext<CompanyStateModel>, { payload }: CompanyAction) {
-    const stateModel = ctx.getState();
-    stateModel.items = [...stateModel.items, payload];
-    ctx.setState(stateModel);
-  }
-}
+export class CompanyState {}
