@@ -1,17 +1,16 @@
 import { State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
-import { CompanyStateModel } from './company.model';
-import { CompanyLabelEnum } from './company.enum';
+import { CompanyStateModel } from '../model/state/company-state.model';
 
 @State<CompanyStateModel>({
   name: 'company',
   defaults: {
     aprSystem: {
-      label: CompanyLabelEnum.aprSystem,
+      label: 'APR System',
     },
     primaris: {
-      label: CompanyLabelEnum.primaris,
+      label: 'Primaris',
     },
   },
 })
