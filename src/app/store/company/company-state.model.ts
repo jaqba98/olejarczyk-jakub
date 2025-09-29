@@ -1,7 +1,7 @@
-import { CompanyKeyEnum } from './company-key.enum';
+import { CompanyKindEnum } from '../../enum/kind/company-kind.enum';
 
 interface CompanyModel {
   label: string;
 }
 
-export type CompanyStateModel = Record<CompanyKeyEnum, CompanyModel>;
+export type CompanyStateModel = Record<CompanyKindEnum, CompanyModel>;

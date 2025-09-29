@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Selector, State } from '@ngxs/store';
+import { State } from '@ngxs/store';
 
 import { CompanyStateModel } from './company-state.model';
 
