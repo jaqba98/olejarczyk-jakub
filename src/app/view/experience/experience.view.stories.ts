@@ -17,10 +17,4 @@ const meta: Meta<ExperienceView> = {
 export default meta;
 type Story = StoryObj<ExperienceView>;
 
-export const Primary: Story = {
-  decorators: [
-    moduleMetadata({
-      providers: [],
-    }),
-  ],
-};
+export const Primary: Story = {};
