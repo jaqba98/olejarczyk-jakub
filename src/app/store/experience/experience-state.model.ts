@@ -1,4 +1,4 @@
-import { CompanyKindEnum } from '../../enum/kind/company-kind.enum';
+import { CompanyKindEnum } from '../company/company.type';
 
 interface ExperienceModel {
   title: string;
