@@ -11,12 +11,16 @@ import { routes } from './app.routes';
 import { CompanyState } from './store/company/company.state';
 import { DomainState } from './store/domain/domain.state';
 import { CategoryState } from './store/category/category.state';
+import { TechnologyState } from './store/technology/technology.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideStore([CategoryState, CompanyState, DomainState], withNgxsReduxDevtoolsPlugin()),
+    provideStore(
+      [CategoryState, CompanyState, DomainState, TechnologyState],
+      withNgxsReduxDevtoolsPlugin(),
+    ),
   ],
 };

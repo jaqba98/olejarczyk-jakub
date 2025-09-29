@@ -6,13 +6,17 @@ import { ExperienceView } from './experience.view';
 import { CompanyState } from '../../store/company/company.state';
 import { DomainState } from '../../store/domain/domain.state';
 import { CategoryState } from '../../store/category/category.state';
+import { TechnologyState } from '../../store/technology/technology.state';
 
 const meta: Meta<ExperienceView> = {
   component: ExperienceView,
   decorators: [
     applicationConfig({
       providers: [
-        provideStore([CategoryState, CompanyState, DomainState], withNgxsReduxDevtoolsPlugin()),
+        provideStore(
+          [CategoryState, CompanyState, DomainState, TechnologyState],
+          withNgxsReduxDevtoolsPlugin(),
+        ),
       ],
     }),
   ],
