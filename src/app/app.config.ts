@@ -9,7 +9,7 @@ import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 
 import { routes } from './app.routes';
 import { CompanyState } from './store/company/company.state';
-import { DomainState } from './store/domain/domain.state';
+import { DomainState } from './store/technology-group/technology-group.state';
 import { CategoryState } from './store/category/category.state';
 import { TechnologyState } from './store/technology/technology.state';
 import { ExperienceState } from './store/experience/experience.state';
