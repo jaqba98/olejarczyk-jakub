@@ -1,4 +1,4 @@
-import { CompanyKindEnum } from '../company/company.type';
+import { CompanyType } from '../company/company.type';
 
 interface ExperienceModel {
   title: string;
@@ -10,4 +10,4 @@ interface ExperienceModel {
   descriptionList: string[];
 }
 
-export type ExperienceStateModel = Record<CompanyKindEnum, ExperienceModel>;
+export type ExperienceStateModel = Record<CompanyType, ExperienceModel>;
