@@ -1,4 +1,4 @@
-import { CategoryKindEnum } from '../../enum/kind/category-kind.enum';
+import { CategoryKindEnum } from '../category/category.type';
 import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
 import { LevelTypeEnum } from '../../enum/type/level-type.enum';
 import { CompanyType } from '../company/company.type';

@@ -1,0 +1,17 @@
+export type CategoryType =
+  | 'markupLanguage'
+  | 'styleLanguage'
+  | 'programmingLanguage'
+  | 'framework'
+  | 'library'
+  | 'test'
+  | 'database'
+  | 'server'
+  | 'runtime'
+  | 'containerization'
+  | 'integration'
+  | 'versionControlSystem'
+  | 'packageManager'
+  | 'codeQuality'
+  | 'developerTool'
+  | 'operatingSystem';
