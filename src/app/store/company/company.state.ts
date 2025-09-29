@@ -6,8 +6,16 @@ import { CompanyStateModel } from './company.state.model';
 @State<CompanyStateModel>({
   name: 'company',
   defaults: {
-    aprSystem: { label: 'APR System' },
-    primaris: { label: 'Primaris' },
+    aprSystem: {
+      label: 'APR System',
+      city: 'Kielce',
+      country: 'Poland',
+    },
+    primaris: {
+      label: 'Primaris',
+      city: 'Warsaw',
+      country: 'Poland',
+    },
   },
 })
 @Injectable()
