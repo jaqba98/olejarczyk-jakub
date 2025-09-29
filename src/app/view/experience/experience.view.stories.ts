@@ -3,7 +3,7 @@ import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { provideStore } from '@ngxs/store';
 
 import { ExperienceView } from './experience.view';
-import { CompanyState } from '../../state/company.state';
+import { CompanyState } from '../../store/company/company.state';
 
 const meta: Meta<ExperienceView> = {
   component: ExperienceView,

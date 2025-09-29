@@ -1,14 +1,19 @@
 import { Injectable } from '@angular/core';
 import { Selector, State } from '@ngxs/store';
 
-export interface CompanyStateModel {
-  items: string[];
-}
+import { CompanyStateModel } from './company-state.model';
 
 @State<CompanyStateModel>({
   name: 'company',
   defaults: {
-    items: [],
+    company: {
+      aprSystem: {
+        label: 'APR System',
+      },
+      primaris: {
+        label: 'Primaris',
+      },
+    },
   },
 })
 @Injectable()
