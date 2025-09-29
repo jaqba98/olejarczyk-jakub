@@ -5,12 +5,15 @@ import { provideStore } from '@ngxs/store';
 import { ExperienceView } from './experience.view';
 import { CompanyState } from '../../store/company/company.state';
 import { DomainState } from '../../store/domain/domain.state';
+import { CategoryState } from '../../store/category/category.state';
 
 const meta: Meta<ExperienceView> = {
   component: ExperienceView,
   decorators: [
     applicationConfig({
-      providers: [provideStore([CompanyState, DomainState], withNgxsReduxDevtoolsPlugin())],
+      providers: [
+        provideStore([CategoryState, CompanyState, DomainState], withNgxsReduxDevtoolsPlugin()),
+      ],
     }),
   ],
 };
