@@ -8,18 +8,23 @@ import { DomainStateModel } from './domain-state.model';
   defaults: {
     frontend: {
       label: 'Frontend',
+      order: 0,
     },
     backend: {
       label: 'Backend',
+      order: 1,
     },
     devops: {
       label: 'DevOps',
+      order: 2,
     },
     integration: {
       label: 'Integration',
+      order: 3,
     },
     common: {
       label: 'Common',
+      order: 4,
     },
   },
 })
