@@ -15,9 +15,4 @@ import { CompanyStateModel } from './company-state.model';
   },
 })
 @Injectable()
-export class CompanyState {
-  @Selector()
-  static getState(state: CompanyStateModel) {
-    return state;
-  }
-}
+export class CompanyState {}
