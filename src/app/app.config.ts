@@ -12,6 +12,7 @@ import { CompanyState } from './store/company/company.state';
 import { DomainState } from './store/domain/domain.state';
 import { CategoryState } from './store/category/category.state';
 import { TechnologyState } from './store/technology/technology.state';
+import { ExperienceState } from './store/experience/experience.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -19,7 +20,7 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideStore(
-      [CategoryState, CompanyState, DomainState, TechnologyState],
+      [CategoryState, CompanyState, DomainState, ExperienceState, TechnologyState],
       withNgxsReduxDevtoolsPlugin(),
     ),
   ],
