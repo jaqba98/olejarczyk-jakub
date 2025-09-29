@@ -3,7 +3,6 @@ import { State } from '@ngxs/store';
 
 import { TechnologyStateModel } from './technology-state.model';
 import { LevelTypeEnum } from '../../enum/type/level-type.enum';
-import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
 
 @State<TechnologyStateModel>({
   name: 'technology',
@@ -12,9 +11,9 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       html: {
         label: 'HTML',
         level: LevelTypeEnum.advanced,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
@@ -23,18 +22,18 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       css: {
         label: 'CSS',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
       scss: {
         label: 'SCSS',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
@@ -43,25 +42,25 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       javascript: {
         label: 'JavaScript',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          primaris: [DomainKindEnum.integration],
-          aprSystem: [DomainKindEnum.frontend, DomainKindEnum.backend],
+          primaris: ['integration'],
+          aprSystem: ['frontend', 'backend'],
         },
       },
       typescript: {
         label: 'TypeScript',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend, DomainKindEnum.backend],
+          aprSystem: ['frontend', 'backend'],
           primaris: [],
         },
       },
       java: {
         label: 'Java',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.backend,
+        defaultDomain: 'backend',
         companies: {
           aprSystem: [],
           primaris: [],
@@ -72,9 +71,9 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       angular: {
         label: 'Angular',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
@@ -83,36 +82,36 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       rxjs: {
         label: 'RxJS',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
       ngxs: {
         label: 'NGXS',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
       storybook: {
         label: 'Storybook',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
       primeng: {
         label: 'PrimeNG',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
@@ -121,9 +120,9 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       jest: {
         label: 'Jest',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.frontend,
+        defaultDomain: 'frontend',
         companies: {
-          aprSystem: [DomainKindEnum.frontend],
+          aprSystem: ['frontend'],
           primaris: [],
         },
       },
@@ -132,19 +131,19 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       postgresql: {
         label: 'PostgreSQL',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.backend,
+        defaultDomain: 'backend',
         companies: {
-          aprSystem: [DomainKindEnum.backend],
+          aprSystem: ['backend'],
           primaris: [],
         },
       },
       microsoftSqlServer: {
         label: 'Microsoft SQL Server',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.integration,
+        defaultDomain: 'integration',
         companies: {
           aprSystem: [],
-          primaris: [DomainKindEnum.integration],
+          primaris: ['integration'],
         },
       },
     },
@@ -152,7 +151,7 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       nginx: {
         label: 'NGINX',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.devops,
+        defaultDomain: 'devops',
         companies: {
           aprSystem: [],
           primaris: [],
@@ -163,9 +162,9 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       nodejs: {
         label: 'Node.js',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.backend,
+        defaultDomain: 'backend',
         companies: {
-          aprSystem: [DomainKindEnum.backend],
+          aprSystem: ['backend'],
           primaris: [],
         },
       },
@@ -174,9 +173,9 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       docker: {
         label: 'Docker',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.devops,
+        defaultDomain: 'devops',
         companies: {
-          aprSystem: [DomainKindEnum.devops],
+          aprSystem: ['devops'],
           primaris: [],
         },
       },
@@ -185,10 +184,10 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       snaplogic: {
         label: 'SnapLogic',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.integration,
+        defaultDomain: 'integration',
         companies: {
           aprSystem: [],
-          primaris: [DomainKindEnum.integration],
+          primaris: ['integration'],
         },
       },
     },
@@ -196,27 +195,27 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       git: {
         label: 'Git',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       github: {
         label: 'GitHub',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
           aprSystem: [],
-          primaris: [DomainKindEnum.common],
+          primaris: ['common'],
         },
       },
       gitlab: {
         label: 'GitLab',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
@@ -225,18 +224,18 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       npm: {
         label: 'npm',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       pnpm: {
         label: 'pnpm',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
@@ -245,27 +244,27 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       eslint: {
         label: 'Eslint',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       prettier: {
         label: 'Prettier',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       stylelint: {
         label: 'Stylelint',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
@@ -274,52 +273,52 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       postman: {
         label: 'Postman',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
-          primaris: [DomainKindEnum.common],
+          aprSystem: ['common'],
+          primaris: ['common'],
         },
       },
       nx: {
         label: 'Nx',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       enterpriseArchitect: {
         label: 'Enterprise Architect',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       webstorm: {
         label: 'WebStorm',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       visualStudioCode: {
         label: 'Visual Studio Code',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          aprSystem: [DomainKindEnum.common],
+          aprSystem: ['common'],
           primaris: [],
         },
       },
       eclipse: {
         label: 'Eclipse',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
           aprSystem: [],
           primaris: [],
@@ -328,10 +327,10 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       jira: {
         label: 'Jira',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
           aprSystem: [],
-          primaris: [DomainKindEnum.common],
+          primaris: ['common'],
         },
       },
     },
@@ -339,10 +338,10 @@ import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
       windows: {
         label: 'Windows',
         level: LevelTypeEnum.beginner,
-        defaultDomain: DomainKindEnum.common,
+        defaultDomain: 'common',
         companies: {
-          primaris: [DomainKindEnum.common],
-          aprSystem: [DomainKindEnum.common],
+          primaris: ['common'],
+          aprSystem: ['common'],
         },
       },
     },

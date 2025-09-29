@@ -1,13 +1,13 @@
-import { CategoryKindEnum } from '../category/category.type';
-import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
 import { LevelTypeEnum } from '../../enum/type/level-type.enum';
+import { CategoryType } from '../category/category.type';
 import { CompanyType } from '../company/company.type';
+import { DomainType } from '../domain/domain.type';
 
 interface TechnologyModel {
   label: string;
   level: LevelTypeEnum;
-  defaultDomain: DomainKindEnum;
-  companies: Record<CompanyType, DomainKindEnum[]>;
+  defaultDomain: DomainType;
+  companies: Record<CompanyType, DomainType[]>;
 }
 
-export type TechnologyStateModel = Record<CategoryKindEnum, Record<string, TechnologyModel>>;
+export type TechnologyStateModel = Record<CategoryType, Record<string, TechnologyModel>>;

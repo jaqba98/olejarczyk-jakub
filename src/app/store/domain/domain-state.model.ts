@@ -1,8 +1,7 @@
-import { DomainKindEnum } from '../../enum/kind/domain-kind.enum';
+import { DomainType } from './domain.type';
 
 interface DomainModel {
   label: string;
-  order: number;
 }
 
-export type DomainStateModel = Record<DomainKindEnum, DomainModel>;
+export type DomainStateModel = Record<DomainType, DomainModel>;
