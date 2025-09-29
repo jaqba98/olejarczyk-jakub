@@ -4,6 +4,4 @@ interface CompanyModel {
   label: string;
 }
 
-export interface CompanyStateModel {
-  company: Record<CompanyKeyEnum, CompanyModel>;
-}
+export type CompanyStateModel = Record<CompanyKeyEnum, CompanyModel>;

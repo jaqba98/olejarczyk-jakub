@@ -6,13 +6,11 @@ import { CompanyStateModel } from './company-state.model';
 @State<CompanyStateModel>({
   name: 'company',
   defaults: {
-    company: {
-      aprSystem: {
-        label: 'APR System',
-      },
-      primaris: {
-        label: 'Primaris',
-      },
+    aprSystem: {
+      label: 'APR System',
+    },
+    primaris: {
+      label: 'Primaris',
     },
   },
 })
