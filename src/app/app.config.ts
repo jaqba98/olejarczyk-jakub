@@ -9,12 +9,13 @@ import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 
 import { routes } from './app.routes';
 import { CompanyState } from './store/company/company.state';
+import { DomainState } from './store/domain/domain.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    provideStore([CompanyState], withNgxsReduxDevtoolsPlugin()),
+    provideStore([CompanyState, DomainState], withNgxsReduxDevtoolsPlugin()),
   ],
 };
