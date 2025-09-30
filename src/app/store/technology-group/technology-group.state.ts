@@ -18,6 +18,9 @@ import { TechnologyGroupStateModel } from './technology-group.state.model';
     integration: {
       label: 'Integration',
     },
+    ai: {
+      label: 'AI',
+    },
     common: {
       label: 'Common',
     },

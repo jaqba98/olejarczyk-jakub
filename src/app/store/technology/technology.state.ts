@@ -65,6 +65,15 @@ import { TechnologyStateModel } from './technology.state.model';
           primaris: [],
         },
       },
+      python: {
+        label: 'Python',
+        level: 'beginner',
+        defaultGroup: 'ai',
+        companies: {
+          aprSystem: [],
+          primaris: [],
+        },
+      },
     },
     framework: {
       angular: {
