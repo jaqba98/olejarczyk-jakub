@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { State } from '@ngxs/store';
 
-import { TechnologyStateModel } from './technology-state.model';
-import { LevelTypeEnum } from '../../enum/type/level-type.enum';
+import { TechnologyStateModel } from './technology.state.model';
 
 @State<TechnologyStateModel>({
   name: 'technology',
@@ -10,8 +9,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     markupLanguage: {
       html: {
         label: 'HTML',
-        level: LevelTypeEnum.advanced,
-        defaultDomain: 'frontend',
+        level: 'advanced',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -21,8 +20,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     styleLanguage: {
       css: {
         label: 'CSS',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -30,8 +29,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       scss: {
         label: 'SCSS',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -41,8 +40,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     programmingLanguage: {
       javascript: {
         label: 'JavaScript',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           primaris: ['integration'],
           aprSystem: ['frontend', 'backend'],
@@ -50,8 +49,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       typescript: {
         label: 'TypeScript',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend', 'backend'],
           primaris: [],
@@ -59,8 +58,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       java: {
         label: 'Java',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'backend',
+        level: 'beginner',
+        defaultGroup: 'backend',
         companies: {
           aprSystem: [],
           primaris: [],
@@ -70,8 +69,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     framework: {
       angular: {
         label: 'Angular',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -81,8 +80,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     library: {
       rxjs: {
         label: 'RxJS',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -90,8 +89,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       ngxs: {
         label: 'NGXS',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -99,8 +98,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       storybook: {
         label: 'Storybook',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -108,8 +107,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       primeng: {
         label: 'PrimeNG',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -119,8 +118,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     test: {
       jest: {
         label: 'Jest',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'frontend',
+        level: 'beginner',
+        defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -130,8 +129,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     database: {
       postgresql: {
         label: 'PostgreSQL',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'backend',
+        level: 'beginner',
+        defaultGroup: 'backend',
         companies: {
           aprSystem: ['backend'],
           primaris: [],
@@ -139,8 +138,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       microsoftSqlServer: {
         label: 'Microsoft SQL Server',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'integration',
+        level: 'beginner',
+        defaultGroup: 'integration',
         companies: {
           aprSystem: [],
           primaris: ['integration'],
@@ -150,8 +149,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     server: {
       nginx: {
         label: 'NGINX',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'devops',
+        level: 'beginner',
+        defaultGroup: 'devops',
         companies: {
           aprSystem: [],
           primaris: [],
@@ -161,8 +160,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     runtime: {
       nodejs: {
         label: 'Node.js',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'backend',
+        level: 'beginner',
+        defaultGroup: 'backend',
         companies: {
           aprSystem: ['backend'],
           primaris: [],
@@ -172,8 +171,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     containerization: {
       docker: {
         label: 'Docker',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'devops',
+        level: 'beginner',
+        defaultGroup: 'devops',
         companies: {
           aprSystem: ['devops'],
           primaris: [],
@@ -183,8 +182,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     integration: {
       snaplogic: {
         label: 'SnapLogic',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'integration',
+        level: 'beginner',
+        defaultGroup: 'integration',
         companies: {
           aprSystem: [],
           primaris: ['integration'],
@@ -194,8 +193,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     versionControlSystem: {
       git: {
         label: 'Git',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -203,8 +202,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       github: {
         label: 'GitHub',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: [],
           primaris: ['common'],
@@ -212,8 +211,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       gitlab: {
         label: 'GitLab',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -223,8 +222,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     packageManager: {
       npm: {
         label: 'npm',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -232,8 +231,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       pnpm: {
         label: 'pnpm',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -243,8 +242,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     codeQuality: {
       eslint: {
         label: 'Eslint',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -252,8 +251,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       prettier: {
         label: 'Prettier',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -261,8 +260,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       stylelint: {
         label: 'Stylelint',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -272,8 +271,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     developerTool: {
       postman: {
         label: 'Postman',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: ['common'],
@@ -281,8 +280,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       nx: {
         label: 'Nx',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -290,8 +289,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       enterpriseArchitect: {
         label: 'Enterprise Architect',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -299,8 +298,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       webstorm: {
         label: 'WebStorm',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -308,8 +307,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       visualStudioCode: {
         label: 'Visual Studio Code',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -317,8 +316,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       eclipse: {
         label: 'Eclipse',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: [],
           primaris: [],
@@ -326,8 +325,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
       },
       jira: {
         label: 'Jira',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           aprSystem: [],
           primaris: ['common'],
@@ -337,8 +336,8 @@ import { LevelTypeEnum } from '../../enum/type/level-type.enum';
     operatingSystem: {
       windows: {
         label: 'Windows',
-        level: LevelTypeEnum.beginner,
-        defaultDomain: 'common',
+        level: 'beginner',
+        defaultGroup: 'common',
         companies: {
           primaris: ['common'],
           aprSystem: ['common'],
