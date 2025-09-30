@@ -21,11 +21,11 @@ export const appConfig: ApplicationConfig = {
     provideRouter(routes),
     provideStore(
       [
-        TechnologyCategoryState,
         CompanyState,
-        TechnologyGroupState,
         ExperienceState,
         TechnologyState,
+        TechnologyGroupState,
+        TechnologyCategoryState,
       ],
       withNgxsReduxDevtoolsPlugin(),
     ),

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { State } from '@ngxs/store';
+import { Selector, State } from '@ngxs/store';
 
 import { TechnologyGroupStateModel } from './technology-group.state.model';
 
@@ -24,4 +24,9 @@ import { TechnologyGroupStateModel } from './technology-group.state.model';
   },
 })
 @Injectable()
-export class TechnologyGroupState {}
+export class TechnologyGroupState {
+  @Selector()
+  static getTechnologyGroups(state: TechnologyGroupStateModel) {
+    return state;
+  }
+}

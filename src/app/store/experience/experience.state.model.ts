@@ -1,6 +1,6 @@
 import { CompanyType } from '../company/company.type';
 
-interface ExperienceModel {
+export interface ExperienceModel {
   title: string;
   employmentType: string;
   startDate: string;

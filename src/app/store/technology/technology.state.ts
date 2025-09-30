@@ -1,4 +1,4 @@
-import { State } from '@ngxs/store';
+import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { TechnologyStateModel } from './technology.state.model';
@@ -356,4 +356,9 @@ import { TechnologyStateModel } from './technology.state.model';
   },
 })
 @Injectable()
-export class TechnologyState {}
+export class TechnologyState {
+  @Selector()
+  static getTechnologies(state: TechnologyStateModel) {
+    return state;
+  }
+}

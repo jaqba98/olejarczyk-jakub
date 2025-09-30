@@ -1,4 +1,4 @@
-import { State } from '@ngxs/store';
+import { Selector, State } from '@ngxs/store';
 
 import { ExperienceStateModel } from './experience.state.model';
 import { Injectable } from '@angular/core';
@@ -48,4 +48,9 @@ import { Injectable } from '@angular/core';
   },
 })
 @Injectable()
-export class ExperienceState {}
+export class ExperienceState {
+  @Selector()
+  static getExperience(state: ExperienceStateModel) {
+    return state;
+  }
+}

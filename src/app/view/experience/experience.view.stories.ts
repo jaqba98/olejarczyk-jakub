@@ -16,11 +16,11 @@ const meta: Meta<ExperienceView> = {
       providers: [
         provideStore(
           [
-            TechnologyCategoryState,
             CompanyState,
-            TechnologyGroupState,
             ExperienceState,
             TechnologyState,
+            TechnologyGroupState,
+            TechnologyCategoryState,
           ],
           withNgxsReduxDevtoolsPlugin(),
         ),

@@ -1,4 +1,4 @@
-import { State } from '@ngxs/store';
+import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { CompanyStateModel } from './company.state.model';
@@ -19,4 +19,9 @@ import { CompanyStateModel } from './company.state.model';
   },
 })
 @Injectable()
-export class CompanyState {}
+export class CompanyState {
+  @Selector()
+  static getCompanies(state: CompanyStateModel) {
+    return state;
+  }
+}
