@@ -8,11 +8,11 @@ import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { provideStore } from '@ngxs/store';
 
 import { routes } from './app.routes';
-import { CategoryState } from './store/category/category.state';
 import { CompanyState } from './store/company/company.state';
 import { ExperienceState } from './store/experience/experience.state';
 import { TechnologyGroupState } from './store/technology-group/technology-group.state';
 import { TechnologyState } from './store/technology/technology.state';
+import { TechnologyCategoryState } from './store/technology-category/technology-category.state';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -20,7 +20,13 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideStore(
-      [CategoryState, CompanyState, TechnologyGroupState, ExperienceState, TechnologyState],
+      [
+        TechnologyCategoryState,
+        CompanyState,
+        TechnologyGroupState,
+        ExperienceState,
+        TechnologyState,
+      ],
       withNgxsReduxDevtoolsPlugin(),
     ),
   ],

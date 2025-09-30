@@ -1,13 +1,13 @@
-import { applicationConfig, moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { provideStore } from '@ngxs/store';
+import { applicationConfig, Meta, StoryObj } from '@storybook/angular';
 
-import { ExperienceView } from './experience.view';
 import { CompanyState } from '../../store/company/company.state';
-import { CategoryState } from '../../store/category/category.state';
-import { TechnologyState } from '../../store/technology/technology.state';
 import { ExperienceState } from '../../store/experience/experience.state';
 import { TechnologyGroupState } from '../../store/technology-group/technology-group.state';
+import { TechnologyState } from '../../store/technology/technology.state';
+import { ExperienceView } from './experience.view';
+import { TechnologyCategoryState } from '../../store/technology-category/technology-category.state';
 
 const meta: Meta<ExperienceView> = {
   component: ExperienceView,
@@ -15,7 +15,13 @@ const meta: Meta<ExperienceView> = {
     applicationConfig({
       providers: [
         provideStore(
-          [CategoryState, CompanyState, TechnologyGroupState, ExperienceState, TechnologyState],
+          [
+            TechnologyCategoryState,
+            CompanyState,
+            TechnologyGroupState,
+            ExperienceState,
+            TechnologyState,
+          ],
           withNgxsReduxDevtoolsPlugin(),
         ),
       ],
