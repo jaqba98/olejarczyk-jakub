@@ -1,6 +1,6 @@
 export type TechnologyCategoryType =
   | 'markupLanguage'
-  | 'styleLanguage'
+  | 'stylesheetLanguage'
   | 'programmingLanguage'
   | 'framework'
   | 'library'

@@ -9,8 +9,8 @@ import { TechnologyCategoryStateModel } from './technology-category.state.model'
     markupLanguage: {
       label: 'Markup Language',
     },
-    styleLanguage: {
-      label: 'Style Language',
+    stylesheetLanguage: {
+      label: 'Stylesheet Language',
     },
     programmingLanguage: {
       label: 'Programming Language',

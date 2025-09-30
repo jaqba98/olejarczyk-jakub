@@ -1,14 +1,14 @@
-import { Injectable } from '@angular/core';
 import { State } from '@ngxs/store';
 
 import { TechnologyStateModel } from './technology.state.model';
+import { Injectable } from '@angular/core';
 
 @State<TechnologyStateModel>({
   name: 'technology',
   defaults: {
     markupLanguage: {
       html: {
-        label: 'HTML',
+        label: '',
         level: 'advanced',
         defaultGroup: 'frontend',
         companies: {
@@ -17,7 +17,7 @@ import { TechnologyStateModel } from './technology.state.model';
         },
       },
     },
-    styleLanguage: {
+    stylesheetLanguage: {
       css: {
         label: 'CSS',
         level: 'beginner',
@@ -43,8 +43,8 @@ import { TechnologyStateModel } from './technology.state.model';
         level: 'beginner',
         defaultGroup: 'frontend',
         companies: {
-          primaris: ['integration'],
           aprSystem: ['frontend', 'backend'],
+          primaris: ['integration'],
         },
       },
       typescript: {
@@ -89,7 +89,7 @@ import { TechnologyStateModel } from './technology.state.model';
       },
       ngxs: {
         label: 'NGXS',
-        level: 'beginner',
+        level: 'intermediate',
         defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
@@ -98,7 +98,7 @@ import { TechnologyStateModel } from './technology.state.model';
       },
       storybook: {
         label: 'Storybook',
-        level: 'beginner',
+        level: 'intermediate',
         defaultGroup: 'frontend',
         companies: {
           aprSystem: ['frontend'],
