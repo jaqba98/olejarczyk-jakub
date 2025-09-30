@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { State } from '@ngxs/store';
 
-import { TechnologyCategoryStateModel } from './technology-category-state.model';
+import { TechnologyCategoryStateModel } from './technology-category.state.model';
 
 @State<TechnologyCategoryStateModel>({
   name: 'technologyCategory',
