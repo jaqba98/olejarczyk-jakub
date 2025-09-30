@@ -343,6 +343,15 @@ import { TechnologyStateModel } from './technology.state.model';
           aprSystem: ['common'],
         },
       },
+      linux: {
+        label: 'Linux',
+        level: 'beginner',
+        defaultGroup: 'common',
+        companies: {
+          primaris: [],
+          aprSystem: [],
+        },
+      },
     },
   },
 })
