@@ -1,7 +1,7 @@
 import { State } from '@ngxs/store';
+import { Injectable } from '@angular/core';
 
 import { TechnologyStateModel } from './technology.state.model';
-import { Injectable } from '@angular/core';
 
 @State<TechnologyStateModel>({
   name: 'technology',

@@ -5,9 +5,8 @@ interface ExperienceModel {
   employmentType: string;
   startDate: string;
   endDate: string;
-  location: string;
   locationType: string;
   descriptionList: string[];
 }
 
-export type ExperienceStateModel = Record<CompanyType, ExperienceModel>;
+export type ExperienceStateModel = Record<CompanyType, ExperienceModel[]>;
