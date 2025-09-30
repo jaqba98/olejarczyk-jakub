@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
   defaults: {
     markupLanguage: {
       html: {
-        label: '',
+        label: 'HTML',
         level: 'advanced',
         defaultGroup: 'frontend',
         companies: {
