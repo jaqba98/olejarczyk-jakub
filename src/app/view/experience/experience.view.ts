@@ -10,8 +10,8 @@ import { ExperienceService } from './experience.service';
 })
 export class ExperienceView {
   constructor(private readonly experience: ExperienceService) {
-    this.experience.getExperiences().subscribe(([states, experiences]) => {
-      console.log(states, experiences);
+    this.experience.getExperiences().subscribe((data) => {
+      console.log(data);
     });
   }
 }

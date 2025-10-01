@@ -1,6 +1,6 @@
 import { TechnologyCategoryType } from './technology-category.type';
 
-interface TechnologyCategoryModel {
+export interface TechnologyCategoryModel {
   label: string;
 }
 

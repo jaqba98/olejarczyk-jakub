@@ -1,6 +1,6 @@
 import { TechnologyGroupType } from './technology-group.type';
 
-interface TechnologyGroupModel {
+export interface TechnologyGroupModel {
   label: string;
 }
 

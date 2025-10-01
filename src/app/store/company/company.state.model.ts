@@ -1,6 +1,6 @@
 import { CompanyType } from './company.type';
 
-interface CompanyModel {
+export interface CompanyModel {
   label: string;
   city: string;
   country: string;
