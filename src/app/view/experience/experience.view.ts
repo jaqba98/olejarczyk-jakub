@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { ExperienceService } from './experience.service';
@@ -6,12 +7,13 @@ import { ExperienceService } from './experience.service';
   selector: 'view-experience',
   templateUrl: './experience.view.html',
   styleUrl: './experience.view.scss',
+  imports: [CommonModule],
   providers: [ExperienceService],
 })
 export class ExperienceView {
+  experiences$;
+
   constructor(private readonly experience: ExperienceService) {
-    this.experience.getExperiences().subscribe((data) => {
-      console.log(data);
-    });
+    this.experiences$ = this.experience.getExperiences();
   }
 }

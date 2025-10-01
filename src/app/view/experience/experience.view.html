@@ -1,1 +1,37 @@
-<p>experience works!</p>
+@for (experience of experiences$ | async; track experience.companyType) {
+  <p>{{ experience.experience.title }}</p>
+  <div>
+    <p>{{ experience.company.label }}</p>
+    <p>{{ experience.experience.employmentType }}</p>
+  </div>
+  <div>
+    <p>{{ experience.experience.startDate }}</p>
+    <p>{{ experience.experience.endDate }}</p>
+  </div>
+  <p>
+    {{ experience.company.city }}, {{ experience.company.country }},
+    {{ experience.experience.locationType }}
+  </p>
+  <p>Description</p>
+  <ul>
+    @for (descriptionListItem of experience.experience.descriptionList; track descriptionListItem) {
+      <li>{{ descriptionListItem }}</li>
+    }
+  </ul>
+  <p>Technologies</p>
+  <ul>
+    @for (group of experience.groups; track group.groupType) {
+      <li>
+        {{ group.groupData.label }}
+        <ul>
+          @for (category of group.categories; track category.categoryType) {
+            @for (technology of category.technologies; track technology.technologyType) {
+              <li>{{ technology.technologyData.label }}</li>
+            }
+          }
+        </ul>
+      </li>
+    }
+  </ul>
+  <br />
+}
