@@ -30,6 +30,7 @@ import { Injectable } from '@angular/core';
           'Tested and documented REST APIs to ensure correct client-server communication.',
           'Modeled system architectures and documented business processes using Enterprise Architect.',
         ],
+        order: 1,
       },
     ],
     primaris: [
@@ -43,6 +44,7 @@ import { Injectable } from '@angular/core';
           'Designed, managed, and optimized relational databases using Microsoft SQL Server, including writing complex queries and stored procedures.',
           'Developed and maintained data integration pipelines in SnapLogic to automate workflows and enable seamless data exchange between systems.',
         ],
+        order: 0,
       },
     ],
   },

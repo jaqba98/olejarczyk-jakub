@@ -45,7 +45,8 @@ export class ExperienceService {
           experience,
         }));
       })
-      .flat();
+      .flat()
+      .sort((a, b) => a.experience.order - b.experience.order);
   }
 
   private addCompanies(

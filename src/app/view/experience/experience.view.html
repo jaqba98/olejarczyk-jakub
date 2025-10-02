@@ -1,37 +1,39 @@
-@for (experience of experiences$ | async; track experience.companyType) {
-  <p>{{ experience.experience.title }}</p>
-  <div>
-    <p>{{ experience.company.label }}</p>
-    <p>{{ experience.experience.employmentType }}</p>
-  </div>
-  <div>
-    <p>{{ experience.experience.startDate }}</p>
-    <p>{{ experience.experience.endDate }}</p>
-  </div>
-  <p>
-    {{ experience.company.city }}, {{ experience.company.country }},
-    {{ experience.experience.locationType }}
-  </p>
-  <p>Description</p>
-  <ul>
-    @for (descriptionListItem of experience.experience.descriptionList; track descriptionListItem) {
-      <li>{{ descriptionListItem }}</li>
-    }
-  </ul>
-  <p>Technologies</p>
-  <ul>
-    @for (group of experience.groups; track group.groupType) {
-      <li>
-        {{ group.groupData.label }}
-        <ul>
-          @for (category of group.categories; track category.categoryType) {
-            @for (technology of category.technologies; track technology.technologyType) {
-              <li>{{ technology.technologyData.label }}</li>
+<section class="experience">
+  <div class="experience__companies">
+    @for (experience of experiences$ | async; track experience.companyType) {
+      <article class="experience__company">
+        <header class="company__header">
+          <div class="company__header-icon"></div>
+          <h3 class="company__header-title">
+            {{ experience.experience.title }} · {{ experience.company.label }}
+          </h3>
+        </header>
+        <section class="company__content">
+          <p class="company__content-date">
+            {{ experience.experience.startDate }} · {{ experience.experience.endDate }}
+          </p>
+          <p>
+            {{ experience.company.city }}, {{ experience.company.country }} ·
+            {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
+          </p>
+          <ul class="company__content-list company__content-description">
+            <!-- I am here -->
+            @for (item of experience.experience.descriptionList; track item) {
+              <li>{{ item }}</li>
             }
-          }
-        </ul>
-      </li>
+          </ul>
+          <ul class="company__content-list company__content-technologies">
+            <!-- I am here -->
+            @for (group of experience.groups; track group.groupType) {
+              @for (category of group.categories; track category.categoryType) {
+                @for (technology of category.technologies; track technology.technologyType) {
+                  <li class="company__content-technology">{{ technology.technologyData.label }}</li>
+                }
+              }
+            }
+          </ul>
+        </section>
+      </article>
     }
-  </ul>
-  <br />
-}
+  </div>
+</section>

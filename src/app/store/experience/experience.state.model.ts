@@ -7,6 +7,7 @@ export interface ExperienceModel {
   endDate: string;
   locationType: string;
   descriptionList: string[];
+  order: number;
 }
 
 export type ExperienceStateModel = Record<CompanyType, ExperienceModel[]>;
