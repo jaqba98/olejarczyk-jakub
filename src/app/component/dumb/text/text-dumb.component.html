@@ -1,1 +1,26 @@
-<p>text-dumb works!</p>
+@switch (type()) {
+  @case ('p') {
+    <p>p works!</p>
+  }
+  @case ('h1') {
+    <h1>h1 works!</h1>
+  }
+  @case ('h2') {
+    <h2>h2 works!</h2>
+  }
+  @case ('h3') {
+    <h3>h3 works!</h3>
+  }
+  @case ('h4') {
+    <h4>h4 works!</h4>
+  }
+  @case ('h5') {
+    <h5>h5 works!</h5>
+  }
+  @case ('h6') {
+    <h6>h6 works!</h6>
+  }
+  @case ('small') {
+    <small>small works!</small>
+  }
+}
