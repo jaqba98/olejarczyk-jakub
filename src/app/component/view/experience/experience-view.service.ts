@@ -4,7 +4,7 @@ import { from } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 
 import { CompanyState } from '../../../store/company/company.state';
-import { CompanyModel } from '../../../store/company/company.state.model';
+import { CompanyModel } from '../../../store/company/company-state.model';
 import { CompanyType } from '../../../store/company/company.type';
 import { ExperienceState } from '../../../store/experience/experience.state';
 import {
