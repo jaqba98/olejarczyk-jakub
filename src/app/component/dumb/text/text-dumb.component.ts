@@ -9,4 +9,6 @@ import { TextDumbType } from './text-dumb.type';
 })
 export class TextDumbComponent {
   type = input.required<TextDumbType>();
+
+  value = input.required<string>();
 }
