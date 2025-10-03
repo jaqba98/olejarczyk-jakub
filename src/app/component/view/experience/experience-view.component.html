@@ -1,4 +1,7 @@
-<section class="experience">
+<p>experience-view works!</p>
+
+<!-- TODO: I am here -->
+<!-- <section class="experience">
   <div class="experience__companies">
     @for (experience of experiences$ | async; track experience.companyType) {
       <article class="experience__company">
@@ -27,7 +30,6 @@
             "
           ></component-text-dumb>
           <ul class="company__content-list company__content-description">
-            <!-- I am here -->
             @for (item of experience.experience.descriptionList; track item) {
               <li>
                 <component-text-dumb type="p" [value]="item"></component-text-dumb>
@@ -35,7 +37,6 @@
             }
           </ul>
           <ul class="company__content-list company__content-technologies">
-            <!-- I am here -->
             @for (group of experience.groups; track group.groupType) {
               @for (category of group.categories; track category.categoryType) {
                 @for (technology of category.technologies; track technology.technologyType) {
@@ -51,4 +52,4 @@
       </article>
     }
   </div>
-</section>
+</section> -->
