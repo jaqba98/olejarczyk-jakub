@@ -1,55 +1,37 @@
-<p>experience-view works!</p>
-
-<!-- TODO: I am here -->
-<!-- <section class="experience">
-  <div class="experience__companies">
-    @for (experience of experiences$ | async; track experience.companyType) {
-      <article class="experience__company">
-        <header class="company__header">
-          <div class="company__header-icon"></div>
-          <component-text-dumb
-            type="h3"
-            [value]="experience.experience.title + ' · ' + experience.company.label"
-          ></component-text-dumb>
-        </header>
-        <section class="company__content">
-          <component-text-dumb
-            type="p"
-            [value]="experience.experience.startDate + '·' + experience.experience.endDate"
-          ></component-text-dumb>
-          <component-text-dumb
-            type="p"
-            [value]="
-              experience.company.city +
-              ', ' +
-              experience.company.country +
-              ' · ' +
-              experience.experience.employmentType +
-              ', ' +
-              experience.experience.locationType
-            "
-          ></component-text-dumb>
-          <ul class="company__content-list company__content-description">
-            @for (item of experience.experience.descriptionList; track item) {
-              <li>
-                <component-text-dumb type="p" [value]="item"></component-text-dumb>
-              </li>
-            }
-          </ul>
-          <ul class="company__content-list company__content-technologies">
-            @for (group of experience.groups; track group.groupType) {
-              @for (category of group.categories; track category.categoryType) {
-                @for (technology of category.technologies; track technology.technologyType) {
-                  <component-text-dumb
-                    type="p"
-                    [value]="technology.technologyData.label"
-                  ></component-text-dumb>
-                }
-              }
-            }
-          </ul>
-        </section>
-      </article>
+@for (experience of experiences$ | async; track experience.companyType) {
+  <text-dumb type="p">
+    <div p>{{ experience.experience.title }} · {{ experience.company.label }}</div>
+  </text-dumb>
+  <text-dumb type="p">
+    <div p>{{ experience.experience.startDate }} · {{ experience.experience.endDate }}</div>
+  </text-dumb>
+  <text-dumb type="p">
+    <div p>{{ experience.company.city }}, {{ experience.company.country }}</div>
+  </text-dumb>
+  <text-dumb type="p">
+    <div p>
+      {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
+    </div>
+  </text-dumb>
+  <br />
+  <ul>
+    @for (descriptionListItem of experience.experience.descriptionList; track descriptionListItem) {
+      <li>
+        <div p>{{ descriptionListItem }}</div>
+      </li>
     }
-  </div>
-</section> -->
+  </ul>
+  <br />
+  <ul>
+    @for (group of experience.groups; track group.groupType) {
+      @for (category of group.categories; track category.categoryType) {
+        @for (technology of category.technologies; track technology.technologyType) {
+          <li>
+            <div p>{{ technology.technologyData.label }}</div>
+          </li>
+        }
+      }
+    }
+  </ul>
+  <br />
+}
