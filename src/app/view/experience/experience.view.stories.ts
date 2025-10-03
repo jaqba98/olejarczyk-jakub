@@ -11,6 +11,9 @@ import { TechnologyCategoryState } from '../../store/technology-category/technol
 
 const meta: Meta<ExperienceView> = {
   component: ExperienceView,
+  parameters: {
+    layout: 'fullscreen',
+  },
   decorators: [
     applicationConfig({
       providers: [

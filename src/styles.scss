@@ -1,10 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  min-width: 400px;
+html {
+  font-size: 100%;
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 80%;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+@media (min-width: 1440px) {
+  html {
+    font-size: 120%;
+  }
 }
