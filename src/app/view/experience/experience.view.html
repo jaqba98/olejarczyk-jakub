@@ -4,22 +4,34 @@
       <article class="experience__company">
         <header class="company__header">
           <div class="company__header-icon"></div>
-          <h3 class="company__header-title">
-            {{ experience.experience.title }} · {{ experience.company.label }}
-          </h3>
+          <component-text-dumb
+            type="h3"
+            [value]="experience.experience.title + ' · ' + experience.company.label"
+          ></component-text-dumb>
         </header>
         <section class="company__content">
-          <p class="company__content-date">
-            {{ experience.experience.startDate }} · {{ experience.experience.endDate }}
-          </p>
-          <p>
-            {{ experience.company.city }}, {{ experience.company.country }} ·
-            {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
-          </p>
+          <component-text-dumb
+            type="p"
+            [value]="experience.experience.startDate + '·' + experience.experience.endDate"
+          ></component-text-dumb>
+          <component-text-dumb
+            type="p"
+            [value]="
+              experience.company.city +
+              ', ' +
+              experience.company.country +
+              ' · ' +
+              experience.experience.employmentType +
+              ', ' +
+              experience.experience.locationType
+            "
+          ></component-text-dumb>
           <ul class="company__content-list company__content-description">
             <!-- I am here -->
             @for (item of experience.experience.descriptionList; track item) {
-              <li>{{ item }}</li>
+              <li>
+                <component-text-dumb type="p" [value]="item"></component-text-dumb>
+              </li>
             }
           </ul>
           <ul class="company__content-list company__content-technologies">
@@ -27,7 +39,10 @@
             @for (group of experience.groups; track group.groupType) {
               @for (category of group.categories; track category.categoryType) {
                 @for (technology of category.technologies; track technology.technologyType) {
-                  <li class="company__content-technology">{{ technology.technologyData.label }}</li>
+                  <component-text-dumb
+                    type="p"
+                    [value]="technology.technologyData.label"
+                  ></component-text-dumb>
                 }
               }
             }
