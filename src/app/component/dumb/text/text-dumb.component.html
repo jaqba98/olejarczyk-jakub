@@ -1,26 +1,42 @@
 @switch (type()) {
   @case ('p') {
-    <p class="text text__paragraph">{{ value() }}</p>
+    <p class="text text__paragraph">
+      <ng-content select="[p]"></ng-content>
+    </p>
   }
   @case ('h1') {
-    <h1 class="text text__header1">{{ value() }}</h1>
+    <h1 class="text text__header1">
+      <ng-content select="[h1]"></ng-content>
+    </h1>
   }
   @case ('h2') {
-    <h2 class="text text__header2">{{ value() }}</h2>
+    <h2 class="text text__header2">
+      <ng-content select="[h2]"></ng-content>
+    </h2>
   }
   @case ('h3') {
-    <h3 class="text text__header3">{{ value() }}</h3>
+    <h3 class="text text__header3">
+      <ng-content select="[h3]"></ng-content>
+    </h3>
   }
   @case ('h4') {
-    <h4 class="text text__header4">{{ value() }}</h4>
+    <h4 class="text text__header4">
+      <ng-content select="[h4]"></ng-content>
+    </h4>
   }
   @case ('h5') {
-    <h5 class="text text__header5">{{ value() }}</h5>
+    <h5 class="text text__header5">
+      <ng-content select="[h5]"></ng-content>
+    </h5>
   }
   @case ('h6') {
-    <h6 class="text text__header6">{{ value() }}</h6>
+    <h6 class="text text__header6">
+      <ng-content select="[h6]"></ng-content>
+    </h6>
   }
   @case ('small') {
-    <small class="text text__small">{{ value() }}</small>
+    <small class="text text__small">
+      <ng-content select="[small]"></ng-content>
+    </small>
   }
 }
