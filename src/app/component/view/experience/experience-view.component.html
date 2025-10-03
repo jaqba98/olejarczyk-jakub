@@ -1,37 +1,48 @@
-@for (experience of experiences$ | async; track experience.companyType) {
-  <text-dumb type="p">
-    <div p>{{ experience.experience.title }} · {{ experience.company.label }}</div>
-  </text-dumb>
-  <text-dumb type="p">
-    <div p>{{ experience.experience.startDate }} · {{ experience.experience.endDate }}</div>
-  </text-dumb>
-  <text-dumb type="p">
-    <div p>{{ experience.company.city }}, {{ experience.company.country }}</div>
-  </text-dumb>
-  <text-dumb type="p">
-    <div p>
-      {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
-    </div>
-  </text-dumb>
-  <br />
-  <ul>
-    @for (descriptionListItem of experience.experience.descriptionList; track descriptionListItem) {
-      <li>
-        <div p>{{ descriptionListItem }}</div>
-      </li>
+<section class="experience-view">
+  <div class="experience-view__content">
+    @for (experience of experiences$ | async; track experience.companyType) {
+      <article class="experience-view__experience">
+        <header class="experience-view__experience-header">
+          <text-dumb type="h4">
+            <div h4>{{ experience.experience.title }} · {{ experience.company.label }}</div>
+          </text-dumb>
+          <text-dumb type="small">
+            <div small>
+              {{ experience.experience.startDate }} · {{ experience.experience.endDate }}
+            </div>
+          </text-dumb>
+          <text-dumb type="small">
+            <div small>{{ experience.company.city }}, {{ experience.company.country }}</div>
+          </text-dumb>
+          <text-dumb type="small">
+            <div small>
+              {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
+            </div>
+          </text-dumb>
+        </header>
+        <ul class="experience-view__experience-description">
+          @for (item of experience.experience.descriptionList; track item) {
+            <li>
+              <text-dumb type="p">
+                <div p>{{ item }}</div>
+              </text-dumb>
+            </li>
+          }
+        </ul>
+        <ul class="experience-view__experience-technology">
+          @for (group of experience.groups; track group.groupType) {
+            @for (category of group.categories; track category.categoryType) {
+              @for (technology of category.technologies; track technology.technologyType) {
+                <li class="experience-view__experience-technology-item">
+                  <text-dumb type="small">
+                    <div small>{{ technology.technologyData.label }}</div>
+                  </text-dumb>
+                </li>
+              }
+            }
+          }
+        </ul>
+      </article>
     }
-  </ul>
-  <br />
-  <ul>
-    @for (group of experience.groups; track group.groupType) {
-      @for (category of group.categories; track category.categoryType) {
-        @for (technology of category.technologies; track technology.technologyType) {
-          <li>
-            <div p>{{ technology.technologyData.label }}</div>
-          </li>
-        }
-      }
-    }
-  </ul>
-  <br />
-}
+  </div>
+</section>

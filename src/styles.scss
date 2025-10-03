@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dominant: #2a4494;
+  --complementary: #f8f8ff;
+  --accent: #f8f8ff;
+}
+
 html {
   font-size: 100%;
 }

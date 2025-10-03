@@ -7,6 +7,7 @@
 .text {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
+  color: var(--accent);
 
   &__paragraph {
     font-size: 1rem;
@@ -40,6 +41,6 @@
   }
 
   &__small {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 }
