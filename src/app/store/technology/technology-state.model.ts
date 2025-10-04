@@ -2,13 +2,15 @@ import { CompanyType } from '../company/company.type';
 import { TechnologyCategoryType } from '../technology-category/technology-category.type';
 import { TechnologyGroupType } from '../technology-group/technology-group.type';
 
-type TechnologyCompanyType = Record<CompanyType, TechnologyGroupType[]>;
+type TechnologyLevelType = 'beginner' | 'intermediate' | 'advanced';
+
+type TechnologyCompaniesType = Record<CompanyType, TechnologyGroupType[]>;
 
 interface TechnologyModel {
-  label: string;
-  level: 'beginner' | 'intermediate' | 'advanced';
+  name: string;
+  level: TechnologyLevelType;
   defaultGroup: TechnologyGroupType;
-  companies: TechnologyCompanyType;
+  companies: TechnologyCompaniesType;
 }
 
 type TechnologyType = Record<string, TechnologyModel>;
