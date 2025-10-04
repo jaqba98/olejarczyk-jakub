@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TextDumbComponent } from '../../dumb/text/text-dumb.component';
-import { ExperienceViewService } from './experience-view.service';
+import { ExperienceBuilder } from '../../../builder/experience.builder';
 
 @Component({
   selector: 'experience-view',
   templateUrl: './experience-view.component.html',
   styleUrl: './experience-view.component.scss',
-  imports: [CommonModule, TextDumbComponent],
-  providers: [ExperienceViewService],
+  imports: [CommonModule],
+  providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {
-  experiences$;
-
-  constructor(private readonly experienceViewService: ExperienceViewService) {
-    this.experiences$ = this.experienceViewService.getExperiences();
+  constructor(private readonly builder: ExperienceBuilder) {
+    this.builder.build().subscribe((experiences) => {
+      console.log(experiences);
+    });
   }
 }
