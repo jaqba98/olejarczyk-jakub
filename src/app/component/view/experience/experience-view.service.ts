@@ -10,7 +10,7 @@ import { ExperienceState } from '../../../store/experience/experience.state';
 import {
   ExperienceModel,
   ExperienceStateModel,
-} from '../../../store/experience/experience.state.model';
+} from '../../../store/experience/experience-state.model';
 import { TechnologyCategoryState } from '../../../store/technology-category/technology-category.state';
 import { TechnologyCategoryModel } from '../../../store/technology-category/technology-category-state.model';
 import { TechnologyCategoryType } from '../../../store/technology-category/technology-category.type';

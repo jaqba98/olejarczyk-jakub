@@ -1,7 +1,7 @@
 import { Selector, State } from '@ngxs/store';
-
-import { ExperienceStateModel } from './experience.state.model';
 import { Injectable } from '@angular/core';
+
+import { ExperienceStateModel } from './experience-state.model';
 
 @State<ExperienceStateModel>({
   name: 'experience',
@@ -10,10 +10,10 @@ import { Injectable } from '@angular/core';
       {
         title: 'Full Stack Developer',
         employmentType: 'Full-time',
-        startDate: '2020-08-01',
-        endDate: '2025-03-01',
+        startDate: new Date('2020-08-01'),
+        endDate: new Date('2025-03-01'),
         locationType: 'On-site',
-        descriptionList: [
+        description: [
           'Developed and styled user interfaces using HTML, CSS/SCSS, JavaScript/TypeScript, and the Angular framework.',
           'Built dynamic and reusable components in the Storybook environment using the PrimeNG library.',
           'Managed application state using NGXS and RxJS, and integrated developer tools such as Redux DevTools.',
@@ -30,21 +30,19 @@ import { Injectable } from '@angular/core';
           'Tested and documented REST APIs to ensure correct client-server communication.',
           'Modeled system architectures and documented business processes using Enterprise Architect.',
         ],
-        order: 1,
       },
     ],
     primaris: [
       {
         title: 'Integration Engineer',
         employmentType: 'Full-time',
-        startDate: '2025-06-01',
-        endDate: 'Present',
+        startDate: new Date('2025-06-01'),
+        endDate: null,
         locationType: 'Remote',
-        descriptionList: [
-          'Designed, managed, and optimized relational databases using Microsoft SQL Server, including writing complex queries and stored procedures.',
+        description: [
+          'Designed, and managed relational databases using Microsoft SQL Server, including writing complex queries and stored procedures.',
           'Developed and maintained data integration pipelines in SnapLogic to automate workflows and enable seamless data exchange between systems.',
         ],
-        order: 0,
       },
     ],
   },
@@ -52,7 +50,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class ExperienceState {
   @Selector()
-  static getExperience(state: ExperienceStateModel) {
+  static getState(state: ExperienceStateModel) {
     return state;
   }
 }
