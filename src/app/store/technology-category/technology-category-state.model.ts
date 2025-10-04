@@ -1,7 +1,7 @@
 import { TechnologyCategoryType } from './technology-category.type';
 
 export interface TechnologyCategoryModel {
-  label: string;
+  name: string;
 }
 
 export type TechnologyCategoryStateModel = Record<TechnologyCategoryType, TechnologyCategoryModel>;

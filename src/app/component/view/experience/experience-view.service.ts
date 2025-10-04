@@ -12,7 +12,7 @@ import {
   ExperienceStateModel,
 } from '../../../store/experience/experience.state.model';
 import { TechnologyCategoryState } from '../../../store/technology-category/technology-category.state';
-import { TechnologyCategoryModel } from '../../../store/technology-category/technology-category.state.model';
+import { TechnologyCategoryModel } from '../../../store/technology-category/technology-category-state.model';
 import { TechnologyCategoryType } from '../../../store/technology-category/technology-category.type';
 import { TechnologyGroupState } from '../../../store/technology-group/technology-group.state';
 import { TechnologyGroupModel } from '../../../store/technology-group/technology-group-state.model';

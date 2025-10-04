@@ -1,65 +1,65 @@
-import { Injectable } from '@angular/core';
 import { Selector, State } from '@ngxs/store';
+import { Injectable } from '@angular/core';
 
-import { TechnologyCategoryStateModel } from './technology-category.state.model';
+import { TechnologyCategoryStateModel } from './technology-category-state.model';
 
 @State<TechnologyCategoryStateModel>({
   name: 'technologyCategory',
   defaults: {
     markupLanguage: {
-      label: 'Markup Language',
+      name: 'Markup Language',
     },
     stylesheetLanguage: {
-      label: 'Stylesheet Language',
+      name: 'Stylesheet Language',
     },
     programmingLanguage: {
-      label: 'Programming Language',
+      name: 'Programming Language',
     },
     framework: {
-      label: 'Framework',
+      name: 'Framework',
     },
     library: {
-      label: 'Library',
+      name: 'Library',
     },
     test: {
-      label: 'Test',
+      name: 'Test',
     },
     database: {
-      label: 'Database',
+      name: 'Database',
     },
     server: {
-      label: 'Server',
+      name: 'Server',
     },
     runtime: {
-      label: 'Runtime',
+      name: 'Runtime',
     },
     containerization: {
-      label: 'Containerization',
+      name: 'Containerization',
     },
     integration: {
-      label: 'Integration',
+      name: 'Integration',
     },
     versionControlSystem: {
-      label: 'Version Control System',
+      name: 'Version Control System',
     },
     packageManager: {
-      label: 'Package Manager',
+      name: 'Package Manager',
     },
     codeQuality: {
-      label: 'Code Quality',
+      name: 'Code Quality',
     },
     developerTool: {
-      label: 'Developer Tool',
+      name: 'Developer Tool',
     },
     operatingSystem: {
-      label: 'Operating System',
+      name: 'Operating System',
     },
   },
 })
 @Injectable()
 export class TechnologyCategoryState {
   @Selector()
-  static getTechnologyCategories(state: TechnologyCategoryStateModel) {
+  static getState(state: TechnologyCategoryStateModel) {
     return state;
   }
 }
