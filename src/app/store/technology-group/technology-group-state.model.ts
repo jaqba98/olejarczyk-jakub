@@ -1,7 +1,7 @@
 import { TechnologyGroupType } from './technology-group.type';
 
 export interface TechnologyGroupModel {
-  label: string;
+  name: string;
 }
 
 export type TechnologyGroupStateModel = Record<TechnologyGroupType, TechnologyGroupModel>;

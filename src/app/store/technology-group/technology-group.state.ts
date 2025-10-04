@@ -1,35 +1,35 @@
-import { Injectable } from '@angular/core';
 import { Selector, State } from '@ngxs/store';
+import { Injectable } from '@angular/core';
 
-import { TechnologyGroupStateModel } from './technology-group.state.model';
+import { TechnologyGroupStateModel } from './technology-group-state.model';
 
 @State<TechnologyGroupStateModel>({
   name: 'technologyGroup',
   defaults: {
     frontend: {
-      label: 'Frontend',
+      name: 'Frontend',
     },
     backend: {
-      label: 'Backend',
+      name: 'Backend',
     },
     devops: {
-      label: 'DevOps',
+      name: 'DevOps',
     },
     integration: {
-      label: 'Integration',
+      name: 'Integration',
     },
     ai: {
-      label: 'AI',
+      name: 'AI',
     },
     common: {
-      label: 'Common',
+      name: 'Common',
     },
   },
 })
 @Injectable()
 export class TechnologyGroupState {
   @Selector()
-  static getTechnologyGroups(state: TechnologyGroupStateModel) {
+  static getState(state: TechnologyGroupStateModel) {
     return state;
   }
 }

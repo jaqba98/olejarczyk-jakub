@@ -15,7 +15,7 @@ import { TechnologyCategoryState } from '../../../store/technology-category/tech
 import { TechnologyCategoryModel } from '../../../store/technology-category/technology-category.state.model';
 import { TechnologyCategoryType } from '../../../store/technology-category/technology-category.type';
 import { TechnologyGroupState } from '../../../store/technology-group/technology-group.state';
-import { TechnologyGroupModel } from '../../../store/technology-group/technology-group.state.model';
+import { TechnologyGroupModel } from '../../../store/technology-group/technology-group-state.model';
 import { TechnologyGroupType } from '../../../store/technology-group/technology-group.type';
 import { TechnologyState } from '../../../store/technology/technology.state';
 
