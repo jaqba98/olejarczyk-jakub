@@ -7,12 +7,12 @@ import { CompanyStateModel } from './company-state.model';
   name: 'company',
   defaults: {
     aprSystem: {
-      label: 'APR System',
+      name: 'APR System',
       city: 'Kielce',
       country: 'Poland',
     },
     primaris: {
-      label: 'Primaris',
+      name: 'Primaris',
       city: 'Warsaw',
       country: 'Poland',
     },
