@@ -130,72 +130,23 @@ export class ExperienceBuilder {
   ) {
     return from(this.store.selectOnce(TechnologyState.getState)).pipe(
       map((technologyState) => {
-        return previousState;
-        // return previousState.map((previousStateItem) => ({
-        //   ...previousStateItem,
-        //   group: previousStateItem.group.map((groupItem) => ({
-        //     ...groupItem,
-        //     category: Object.entries(categoryState).map((state) => ({
-        //       categoryType: state[0] as TechnologyCategoryType,
-        //       categoryData: state[1],
-        //     })),
-        //   })),
-        // }));
+        return previousState.map((previousStateItem) => ({
+          ...previousStateItem,
+          group: previousStateItem.group.map((groupItem) => ({
+            ...groupItem,
+            category: groupItem.category.map((categoryItem) => ({
+              ...categoryItem,
+              technology: Object.entries(technologyState).map((state) => ({
+                categoryType: state[0] as TechnologyCategoryType,
+                technologyData: Object.entries(state[1]).map((state) => ({
+                  technologyType: state[0],
+                  technologyData: state[1],
+                })),
+              })),
+            })),
+          })),
+        }));
       }),
     );
   }
-
-  // private addTechnologies(
-  //   experiences: {
-  //     groups: {
-  //       categories: {
-  //         categoryType: TechnologyCategoryType;
-  //         categoryData: TechnologyCategoryModel;
-  //       }[];
-  //       groupType: TechnologyGroupType;
-  //       groupData: TechnologyGroupModel;
-  //     }[];
-  //     company: CompanyModel;
-  //     companyType: CompanyType;
-  //     experience: ExperienceModel;
-  //   }[],
-  // ) {
-  //   return from(
-  //     this.store.selectOnce(TechnologyState.getTechnologies).pipe(
-  //       map((technologies) => {
-  //         return experiences.map((experience) => ({
-  //           ...experience,
-  //           groups: experience.groups
-  //             .map((group) => ({
-  //               ...group,
-  //               categories: group.categories
-  //                 .map((category) => ({
-  //                   ...category,
-  //                   technologies: Object.entries(technologies)
-  //                     .map((technology) => ({
-  //                       categoryType: technology[0] as TechnologyCategoryType,
-  //                       technologies: technology[1],
-  //                     }))
-  //                     .filter((technology) => technology.categoryType == category.categoryType)
-  //                     .map((technology) => {
-  //                       return Object.entries(technology.technologies).map((technology) => ({
-  //                         technologyType: technology[0],
-  //                         technologyData: technology[1],
-  //                       }));
-  //                     })
-  //                     .flat()
-  //                     .filter((technology) =>
-  //                       technology.technologyData.companies[experience.companyType].includes(
-  //                         group.groupType,
-  //                       ),
-  //                     ),
-  //                 }))
-  //                 .filter((category) => category.technologies.length > 0),
-  //             }))
-  //             .filter((group) => group.categories.length > 0),
-  //         }));
-  //       }),
-  //     ),
-  //   );
-  // }
 }
