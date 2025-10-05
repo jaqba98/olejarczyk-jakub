@@ -132,23 +132,32 @@ export class ExperienceBuilder {
       map((technologyState) => {
         return previousState.map((previousStateItem) => ({
           ...previousStateItem,
-          group: previousStateItem.group.map((groupItem) => ({
-            ...groupItem,
-            category: groupItem.category.map((categoryItem) => ({
-              ...categoryItem,
-              technology: Object.entries(technologyState)
-                .map((state) => ({
-                  categoryType: state[0] as TechnologyCategoryType,
-                  technologyData: Object.entries(state[1]).map((state) => ({
-                    technologyType: state[0],
-                    technologyData: state[1],
-                  })),
+          group: previousStateItem.group
+            .map((groupItem) => ({
+              ...groupItem,
+              category: groupItem.category
+                .map((categoryItem) => ({
+                  ...categoryItem,
+                  technology: Object.entries(technologyState)
+                    .map((state) => ({
+                      categoryType: state[0] as TechnologyCategoryType,
+                      technologyData: Object.entries(state[1]).map((state) => ({
+                        technologyType: state[0],
+                        technologyData: state[1],
+                      })),
+                    }))
+                    .filter((state) => state.categoryType === categoryItem.categoryType)
+                    .map((state) => state.technologyData)
+                    .flat()
+                    .filter((state) =>
+                      state.technologyData.companies[previousStateItem.companyType].includes(
+                        groupItem.groupType,
+                      ),
+                    ),
                 }))
-                .filter((state) => state.categoryType === categoryItem.categoryType)
-                .map((state) => state.technologyData)
-                .flat(),
-            })),
-          })),
+                .filter((categoryItem) => categoryItem.technology.length > 0),
+            }))
+            .filter((groupItem) => groupItem.category.length > 0),
         }));
       }),
     );
