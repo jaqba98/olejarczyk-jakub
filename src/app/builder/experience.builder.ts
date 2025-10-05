@@ -18,18 +18,23 @@ export class ExperienceBuilder {
   }
 
   private buildExperience(state: ExperienceStateModel) {
-    return Object.entries(state).map((state) => ({
-      companyType: state[0] as CompanyType,
-      experiences: state[1],
-    }));
-    //   .map((experienceStateItem) => {
-    //     return experienceStateItem.experiences.map((experience) => ({
-    //       companyType: experienceStateItem.companyType,
-    //       experience,
-    //     }));
-    //   })
-    //   .flat()
-    //   .sort((previous, next) => previous.experience.order - next.experience.order);
+    return Object.entries(state)
+      .map((state) => ({
+        companyType: state[0] as CompanyType,
+        experiences: state[1],
+      }))
+      .map((state) => {
+        return state.experiences.map((experience) => ({
+          companyType: state.companyType,
+          experience,
+        }));
+      })
+      .flat()
+      .sort((previous, next) => {
+        const previousStartDate = previous.experience.startDate.getDate();
+        const nextStartDate = next.experience.startDate.getDate();
+        return nextStartDate - previousStartDate;
+      });
   }
 
   // constructor(private readonly store: Store) {}
