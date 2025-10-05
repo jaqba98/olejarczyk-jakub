@@ -136,13 +136,17 @@ export class ExperienceBuilder {
             ...groupItem,
             category: groupItem.category.map((categoryItem) => ({
               ...categoryItem,
-              technology: Object.entries(technologyState).map((state) => ({
-                categoryType: state[0] as TechnologyCategoryType,
-                technologyData: Object.entries(state[1]).map((state) => ({
-                  technologyType: state[0],
-                  technologyData: state[1],
-                })),
-              })),
+              technology: Object.entries(technologyState)
+                .map((state) => ({
+                  categoryType: state[0] as TechnologyCategoryType,
+                  technologyData: Object.entries(state[1]).map((state) => ({
+                    technologyType: state[0],
+                    technologyData: state[1],
+                  })),
+                }))
+                .filter((state) => state.categoryType === categoryItem.categoryType)
+                .map((state) => state.technologyData)
+                .flat(),
             })),
           })),
         }));
