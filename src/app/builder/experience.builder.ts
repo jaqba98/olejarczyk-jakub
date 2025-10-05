@@ -31,8 +31,8 @@ export class ExperienceBuilder {
       })
       .flat()
       .sort((previous, next) => {
-        const previousStartDate = previous.experience.startDate.getDate();
-        const nextStartDate = next.experience.startDate.getDate();
+        const previousStartDate = previous.experience.startDate.getTime();
+        const nextStartDate = next.experience.startDate.getTime();
         return nextStartDate - previousStartDate;
       });
   }
