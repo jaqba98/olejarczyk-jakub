@@ -10,6 +10,9 @@ import { CompanyState } from '../store/company/company.state';
 import { CompanyModel } from '../store/company/company-state.model';
 import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
 import { TechnologyGroupType } from '../store/technology-group/technology-group.type';
+import { TechnologyGroupModel } from '../store/technology-group/technology-group-state.model';
+import { TechnologyCategoryState } from '../store/technology-category/technology-category.state';
+import { TechnologyCategoryType } from '../store/technology-category/technology-category.type';
 
 @Injectable()
 export class ExperienceBuilder {
@@ -20,6 +23,7 @@ export class ExperienceBuilder {
       map((state) => this.buildExperience(state)),
       switchMap((state) => this.addCompany(state)),
       switchMap((state) => this.addGroup(state)),
+      switchMap((state) => this.addCategory(state)),
     );
   }
 
@@ -79,34 +83,33 @@ export class ExperienceBuilder {
     );
   }
 
-  // private addCategories(
-  //   experiences: {
-  //     groups: {
-  //       groupType: TechnologyGroupType;
-  //       groupData: TechnologyGroupModel;
-  //     }[];
-  //     company: CompanyModel;
-  //     companyType: CompanyType;
-  //     experience: ExperienceModel;
-  //   }[],
-  // ) {
-  //   return from(
-  //     this.store.selectOnce(TechnologyCategoryState.getTechnologyCategories).pipe(
-  //       map((categories) => {
-  //         return experiences.map((experience) => ({
-  //           ...experience,
-  //           groups: experience.groups.map((group) => ({
-  //             ...group,
-  //             categories: Object.entries(categories).map((category) => ({
-  //               categoryType: category[0] as TechnologyCategoryType,
-  //               categoryData: category[1],
-  //             })),
-  //           })),
-  //         }));
-  //       }),
-  //     ),
-  //   );
-  // }
+  private addCategory(
+    previousState: {
+      group: {
+        groupType: TechnologyGroupType;
+        groupData: TechnologyGroupModel;
+      }[];
+      company: CompanyModel;
+      companyType: CompanyType;
+      experience: ExperienceModel;
+    }[],
+  ) {
+    return from(this.store.selectOnce(TechnologyCategoryState.getState)).pipe(
+      map((categoryState) => {
+        return previousState.map((previousStateItem) => ({
+          ...previousStateItem,
+          group: previousStateItem.group.map((groupItem) => ({
+            ...groupItem,
+            category: Object.entries(categoryState).map((state) => ({
+              categoryType: state[0] as TechnologyCategoryType,
+              categoryData: state[1],
+            })),
+          })),
+        }));
+      }),
+    );
+  }
+
   // private addTechnologies(
   //   experiences: {
   //     groups: {
