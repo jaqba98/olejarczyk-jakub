@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
+import { from } from 'rxjs';
 
 import { ExperienceState } from '../store/experience/experience.state';
-import { ExperienceStateModel } from '../store/experience/experience-state.model';
+import { ExperienceModel, ExperienceStateModel } from '../store/experience/experience-state.model';
 import { CompanyType } from '../store/company/company.type';
+import { CompanyState } from '../store/company/company.state';
 
 @Injectable()
 export class ExperienceBuilder {
@@ -13,7 +15,7 @@ export class ExperienceBuilder {
   build() {
     return this.store.selectOnce(ExperienceState.getState).pipe(
       map((state) => this.buildExperience(state)),
-      //
+      switchMap((state) => this.addCompany(state)),
     );
   }
 
@@ -37,6 +39,22 @@ export class ExperienceBuilder {
       });
   }
 
+  private addCompany(
+    previousState: {
+      companyType: CompanyType;
+      experience: ExperienceModel;
+    }[],
+  ) {
+    return from(this.store.selectOnce(CompanyState.getState)).pipe(
+      map((state) => {
+        return previousState.map((previousStateItem) => ({
+          ...previousStateItem,
+          company: state[previousStateItem.companyType],
+        }));
+      }),
+    );
+  }
+
   // constructor(private readonly store: Store) {}
   // getExperiences() {
   //   return this.store.selectOnce(ExperienceState.getExperience).pipe(
@@ -48,23 +66,6 @@ export class ExperienceBuilder {
   //   );
   // }
 
-  // private addCompanies(
-  //   experiences: {
-  //     companyType: CompanyType;
-  //     experience: ExperienceModel;
-  //   }[],
-  // ) {
-  //   return from(
-  //     this.store.selectOnce(CompanyState.getCompanies).pipe(
-  //       map((companies) => {
-  //         return experiences.map((experience) => ({
-  //           ...experience,
-  //           company: companies[experience.companyType],
-  //         }));
-  //       }),
-  //     ),
-  //   );
-  // }
   // private addGroups(
   //   experiences: {
   //     company: CompanyModel;
