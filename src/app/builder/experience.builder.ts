@@ -7,6 +7,9 @@ import { ExperienceState } from '../store/experience/experience.state';
 import { ExperienceModel, ExperienceStateModel } from '../store/experience/experience-state.model';
 import { CompanyType } from '../store/company/company.type';
 import { CompanyState } from '../store/company/company.state';
+import { CompanyModel } from '../store/company/company-state.model';
+import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
+import { TechnologyGroupType } from '../store/technology-group/technology-group.type';
 
 @Injectable()
 export class ExperienceBuilder {
@@ -16,11 +19,12 @@ export class ExperienceBuilder {
     return this.store.selectOnce(ExperienceState.getState).pipe(
       map((state) => this.buildExperience(state)),
       switchMap((state) => this.addCompany(state)),
+      switchMap((state) => this.addGroup(state)),
     );
   }
 
-  private buildExperience(state: ExperienceStateModel) {
-    return Object.entries(state)
+  private buildExperience(experienceState: ExperienceStateModel) {
+    return Object.entries(experienceState)
       .map((state) => ({
         companyType: state[0] as CompanyType,
         experiences: state[1],
@@ -46,47 +50,35 @@ export class ExperienceBuilder {
     }[],
   ) {
     return from(this.store.selectOnce(CompanyState.getState)).pipe(
-      map((state) => {
+      map((companyState) => {
         return previousState.map((previousStateItem) => ({
           ...previousStateItem,
-          company: state[previousStateItem.companyType],
+          company: companyState[previousStateItem.companyType],
         }));
       }),
     );
   }
 
-  // constructor(private readonly store: Store) {}
-  // getExperiences() {
-  //   return this.store.selectOnce(ExperienceState.getExperience).pipe(
-  //     map((experienceState) => this.buildExperiences(experienceState)),
-  //     switchMap((experiences) => this.addCompanies(experiences)),
-  //     switchMap((experiences) => this.addGroups(experiences)),
-  //     switchMap((experiences) => this.addCategories(experiences)),
-  //     switchMap((experiences) => this.addTechnologies(experiences)),
-  //   );
-  // }
+  private addGroup(
+    previousState: {
+      company: CompanyModel;
+      companyType: CompanyType;
+      experience: ExperienceModel;
+    }[],
+  ) {
+    return from(this.store.selectOnce(TechnologyGroupState.getState)).pipe(
+      map((groupState) => {
+        return previousState.map((previousStateItem) => ({
+          ...previousStateItem,
+          group: Object.entries(groupState).map((state) => ({
+            groupType: state[0] as TechnologyGroupType,
+            groupData: state[1],
+          })),
+        }));
+      }),
+    );
+  }
 
-  // private addGroups(
-  //   experiences: {
-  //     company: CompanyModel;
-  //     companyType: CompanyType;
-  //     experience: ExperienceModel;
-  //   }[],
-  // ) {
-  //   return from(
-  //     this.store.selectOnce(TechnologyGroupState.getTechnologyGroups).pipe(
-  //       map((groups) => {
-  //         return experiences.map((experience) => ({
-  //           ...experience,
-  //           groups: Object.entries(groups).map((group) => ({
-  //             groupType: group[0] as TechnologyGroupType,
-  //             groupData: group[1],
-  //           })),
-  //         }));
-  //       }),
-  //     ),
-  //   );
-  // }
   // private addCategories(
   //   experiences: {
   //     groups: {
