@@ -3,18 +3,19 @@ import { CommonModule } from '@angular/common';
 
 import { ExperienceBuilder } from '../../../builder/experience.builder';
 import { SectionDumbComponent } from '../../dumb/section/section-dumb.component';
+import { TextDumbComponent } from '../../dumb/text/text-dumb.component';
 
 @Component({
   selector: 'experience-view',
   templateUrl: './experience-view.component.html',
   styleUrl: './experience-view.component.scss',
-  imports: [CommonModule, SectionDumbComponent],
+  imports: [CommonModule, SectionDumbComponent, TextDumbComponent],
   providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {
+  experiences$;
+
   constructor(private readonly builder: ExperienceBuilder) {
-    this.builder.build().subscribe((experiences) => {
-      console.log(experiences);
-    });
+    this.experiences$ = this.builder.build();
   }
 }
