@@ -1,8 +1,8 @@
 <section-dumb>
   <margin-auto-dumb>
     <children-dumb>
-      <!-- I am here -->
-      @for (experience of experiences$ | async; track experience.companyType; let last = $last) {
+      @for (experience of experiences$ | async; track experience; let last = $last) {
+        <!-- I am here -->
         <article class="experience-view__experience">
           <div class="experience-view__experience-content">
             <header class="experience-view__experience-content-header">
