@@ -3,12 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { ExperienceBuilder } from '../../../builder/experience.builder';
 import { ParagraphDumbComponent } from '../../dumb/paragraph/paragraph-dumb.component';
+import { SmallDumbComponent } from '../../dumb/small/small-dumb.component';
 
 @Component({
   selector: 'experience-view',
   templateUrl: './experience-view.component.html',
   styleUrl: './experience-view.component.scss',
-  imports: [CommonModule, ParagraphDumbComponent],
+  imports: [CommonModule, ParagraphDumbComponent, SmallDumbComponent],
   providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {

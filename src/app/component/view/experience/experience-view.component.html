@@ -9,18 +9,19 @@
                 {{ experience.experience.title }} · {{ experience.company.name }}
               </paragraph-dumb>
               @if (!experience.experience.endDate) {
-                <paragraph-dumb>Current</paragraph-dumb>
+                <small-dumb>Current</small-dumb>
               }
             </div>
-            <paragraph-dumb>
+            <small-dumb>
               {{ experience.experience.startDate.toDateString() }} ·
               {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
+            </small-dumb>
+            <paragraph-dumb>
+              Location: {{ experience.company.city }}, {{ experience.company.country }}
             </paragraph-dumb>
             <paragraph-dumb>
-              {{ experience.company.city }}, {{ experience.company.country }}
-            </paragraph-dumb>
-            <paragraph-dumb>
-              {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
+              Type: {{ experience.experience.employmentType }},
+              {{ experience.experience.locationType }}
             </paragraph-dumb>
           </header>
           <ul class="experience-view__experience-content-description">
@@ -38,9 +39,7 @@
               @for (category of group.category; track category.categoryType) {
                 @for (technology of category.technology; track technology.technologyType) {
                   <li class="experience-view__experience-technology-list-item">
-                    <paragraph-dumb>
-                      {{ technology.technologyData.name }}
-                    </paragraph-dumb>
+                    <small-dumb> {{ technology.technologyData.name }} </small-dumb>
                   </li>
                 }
               }
