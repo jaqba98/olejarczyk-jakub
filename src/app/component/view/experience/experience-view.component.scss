@@ -3,65 +3,97 @@
 }
 
 .experience-view {
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   background-color: var(--dominant);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--accent);
 
-  &__experiences {
+  &__content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: 960px;
-    margin: auto;
+    gap: 1.5rem;
   }
 
-  .experience {
-    font-family: 'Open Sans', sans-serif;
-    color: var(--accent);
+  &__experience {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 1rem;
 
-    &__content {
-      padding: 0.5rem;
-      border-radius: 0.25rem;
-      &-list {
-        padding-left: 1rem;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
+    &-content {
+      &-header {
+        margin-bottom: 1rem;
+
+        &-title {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+
+          &-mark {
+            background-color: green;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+          }
+        }
       }
-    }
 
-    &__technology {
-      &-list {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+      &-description {
+        margin-left: 1rem;
+        margin-bottom: 1rem;
 
-        &-item {
-          font-size: 0.8rem;
-          background-color: var(--complementary);
-          padding: 0.5rem;
-          border-radius: 0.25rem;
+        &:last-child {
+          margin-bottom: 0;
         }
       }
     }
 
-    @media (min-width: 1024px) {
-      flex-direction: row;
+    &-technology {
+      &-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        list-style: none;
 
-      &__content {
+        &-item {
+          background-color: var(--complementary);
+          padding: 0.25rem 0.5rem;
+          border-radius: 0.25rem;
+        }
+      }
+    }
+  }
+
+  &__line {
+    color: var(--complementary);
+  }
+
+  @media (min-width: 480px) {
+    padding: 3rem 1.5rem;
+
+    &__content {
+      gap: 2rem;
+    }
+
+    &__experience {
+      flex-direction: row;
+      gap: 2rem;
+
+      &-content {
         flex: 2;
       }
 
-      &__technology {
+      &-technology {
         flex: 1;
       }
     }
   }
-}
 
-hr {
-  color: var(--complementary);
+  @media (min-width: 1024px) {
+    padding: 4rem 2rem;
+
+    &__content {
+      gap: 3rem;
+      max-width: 960px;
+      margin: auto;
+    }
+  }
 }

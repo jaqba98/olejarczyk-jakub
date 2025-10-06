@@ -1,31 +1,37 @@
 <section class="experience-view">
-  <div class="experience-view__experiences">
+  <div class="experience-view__content">
     @for (experience of experiences$ | async; track experience.companyType; let last = $last) {
-      <article class="experience">
-        <div class="experience__content">
-          <h4>{{ experience.experience.title }} · {{ experience.company.name }}</h4>
-          <small>
-            {{ experience.experience.startDate.toDateString() }} ·
-            {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
-          </small>
-          <br />
-          <p>{{ experience.company.city }}, {{ experience.company.country }}</p>
-          <p>
-            {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
-          </p>
-          <br />
-          <ul class="experience__content-list">
+      <article class="experience-view__experience">
+        <div class="experience-view__experience-content">
+          <header class="experience-view__experience-content-header">
+            <div class="experience-view__experience-content-header-title">
+              <h3>{{ experience.experience.title }} · {{ experience.company.name }}</h3>
+              @if (!experience.experience.endDate) {
+                <p class="experience-view__experience-content-header-title-mark">Current</p>
+              }
+            </div>
+            <p>
+              {{ experience.experience.startDate.toDateString() }} ·
+              {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
+            </p>
+            <p>{{ experience.company.city }}, {{ experience.company.country }}</p>
+            <p>
+              {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
+            </p>
+          </header>
+          <ul class="experience-view__experience-content-description">
             @for (item of experience.experience.description; track item) {
               <li>{{ item }}</li>
             }
           </ul>
         </div>
-        <div class="experience__technology">
-          <ul class="experience__technology-list">
+        <div class="experience-view__experience-technology">
+          <!-- I am here -->
+          <ul class="experience-view__experience-technology-list">
             @for (group of experience.group; track group.groupType) {
               @for (category of group.category; track category.categoryType) {
                 @for (technology of category.technology; track technology.technologyType) {
-                  <li class="experience__technology-list-item">
+                  <li class="experience-view__experience-technology-list-item">
                     {{ technology.technologyData.name }}
                   </li>
                 }
@@ -35,7 +41,7 @@
         </div>
       </article>
       @if (!last) {
-        <hr />
+        <hr class="experience-view__line" />
       }
     }
   </div>
