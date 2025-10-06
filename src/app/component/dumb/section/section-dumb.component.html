@@ -1,3 +1,5 @@
-<section class="section" [ngClass]="buildClassNames()">
-  <ng-content></ng-content>
+<section class="section" [ngClass]="buildMainClassNames()">
+  <div [ngClass]="buildContentClassNames()">
+    <ng-content></ng-content>
+  </div>
 </section>
