@@ -2,8 +2,8 @@
   <margin-auto-dumb>
     <children-dumb>
       @for (experience of experiences$ | async; track experience; let last = $last) {
-        <!-- I am here -->
-        <article class="experience-view__experience">
+        <children-dumb>
+          <!-- I am here -->
           <div class="experience-view__experience-content">
             <header class="experience-view__experience-content-header">
               <div class="experience-view__experience-content-header-title">
@@ -48,7 +48,7 @@
               }
             </ul>
           </div>
-        </article>
+        </children-dumb>
         @if (!last) {
           <line-dumb></line-dumb>
         }
