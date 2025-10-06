@@ -1,53 +1,56 @@
 <section-dumb>
-  @for (experience of experiences$ | async; track experience.companyType; let last = $last) {
-    <article class="experience-view__experience">
-      <div class="experience-view__experience-content">
-        <header class="experience-view__experience-content-header">
-          <div class="experience-view__experience-content-header-title">
+  <content-dumb>
+    <!-- I am here -->
+    @for (experience of experiences$ | async; track experience.companyType; let last = $last) {
+      <article class="experience-view__experience">
+        <div class="experience-view__experience-content">
+          <header class="experience-view__experience-content-header">
+            <div class="experience-view__experience-content-header-title">
+              <paragraph-dumb>
+                {{ experience.experience.title }} · {{ experience.company.name }}
+              </paragraph-dumb>
+              @if (!experience.experience.endDate) {
+                <small-dumb>Current</small-dumb>
+              }
+            </div>
+            <small-dumb>
+              {{ experience.experience.startDate.toDateString() }} ·
+              {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
+            </small-dumb>
             <paragraph-dumb>
-              {{ experience.experience.title }} · {{ experience.company.name }}
+              Location: {{ experience.company.city }}, {{ experience.company.country }}
             </paragraph-dumb>
-            @if (!experience.experience.endDate) {
-              <small-dumb>Current</small-dumb>
+            <paragraph-dumb>
+              Type: {{ experience.experience.employmentType }},
+              {{ experience.experience.locationType }}
+            </paragraph-dumb>
+          </header>
+          <ul class="experience-view__experience-content-description">
+            @for (item of experience.experience.description; track item) {
+              <li>
+                <paragraph-dumb>{{ item }}</paragraph-dumb>
+              </li>
             }
-          </div>
-          <small-dumb>
-            {{ experience.experience.startDate.toDateString() }} ·
-            {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
-          </small-dumb>
-          <paragraph-dumb>
-            Location: {{ experience.company.city }}, {{ experience.company.country }}
-          </paragraph-dumb>
-          <paragraph-dumb>
-            Type: {{ experience.experience.employmentType }},
-            {{ experience.experience.locationType }}
-          </paragraph-dumb>
-        </header>
-        <ul class="experience-view__experience-content-description">
-          @for (item of experience.experience.description; track item) {
-            <li>
-              <paragraph-dumb>{{ item }}</paragraph-dumb>
-            </li>
-          }
-        </ul>
-      </div>
-      <div class="experience-view__experience-technology">
-        <!-- I am here -->
-        <ul class="experience-view__experience-technology-list">
-          @for (group of experience.group; track group.groupType) {
-            @for (category of group.category; track category.categoryType) {
-              @for (technology of category.technology; track technology.technologyType) {
-                <li class="experience-view__experience-technology-list-item">
-                  <small-dumb> {{ technology.technologyData.name }} </small-dumb>
-                </li>
+          </ul>
+        </div>
+        <div class="experience-view__experience-technology">
+          <!-- I am here -->
+          <ul class="experience-view__experience-technology-list">
+            @for (group of experience.group; track group.groupType) {
+              @for (category of group.category; track category.categoryType) {
+                @for (technology of category.technology; track technology.technologyType) {
+                  <li class="experience-view__experience-technology-list-item">
+                    <small-dumb> {{ technology.technologyData.name }} </small-dumb>
+                  </li>
+                }
               }
             }
-          }
-        </ul>
-      </div>
-    </article>
-    @if (!last) {
-      <hr class="experience-view__line" />
+          </ul>
+        </div>
+      </article>
+      @if (!last) {
+        <hr class="experience-view__line" />
+      }
     }
-  }
+  </content-dumb>
 </section-dumb>

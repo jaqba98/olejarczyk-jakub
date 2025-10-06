@@ -2,62 +2,62 @@
   display: block;
 }
 
-.experience-view {
-  &__content {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
+// .experience-view {
+//   &__content {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1.5rem;
+//   }
 
-  &__experience {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+//   &__experience {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 1rem;
 
-    &-content {
-      &-header {
-        margin-bottom: 1rem;
+//     &-content {
+//       &-header {
+//         margin-bottom: 1rem;
 
-        &-title {
-          display: flex;
-          align-items: center;
-          gap: 1rem;
+//         &-title {
+//           display: flex;
+//           align-items: center;
+//           gap: 1rem;
 
-          &-mark {
-            background-color: green;
-            padding: 0.25rem 0.5rem;
-            border-radius: 0.25rem;
-          }
-        }
-      }
+//           &-mark {
+//             background-color: green;
+//             padding: 0.25rem 0.5rem;
+//             border-radius: 0.25rem;
+//           }
+//         }
+//       }
 
-      &-description {
-        margin-left: 1rem;
-        margin-bottom: 1rem;
+//       &-description {
+//         margin-left: 1rem;
+//         margin-bottom: 1rem;
 
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
+//         &:last-child {
+//           margin-bottom: 0;
+//         }
+//       }
+//     }
 
-    &-technology {
-      &-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        list-style: none;
+//     &-technology {
+//       &-list {
+//         display: flex;
+//         flex-wrap: wrap;
+//         gap: 0.5rem;
+//         list-style: none;
 
-        &-item {
-          background-color: var(--complementary);
-          padding: 0.25rem 0.5rem;
-          border-radius: 0.25rem;
-        }
-      }
-    }
-  }
+//         &-item {
+//           background-color: var(--complementary);
+//           padding: 0.25rem 0.5rem;
+//           border-radius: 0.25rem;
+//         }
+//       }
+//     }
+//   }
 
-  &__line {
-    color: var(--complementary);
-  }
-}
+//   &__line {
+//     color: var(--complementary);
+//   }
+// }
