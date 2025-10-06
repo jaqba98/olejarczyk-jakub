@@ -1,47 +1,42 @@
-<section-dumb color="dominant" [maxWidth960px]="true" [marginAuto]="true">
-  @for (experience of experiences$ | async; track experience.companyType) {
-    <article class="experience">
-      <div class="aaa">
-        <text-dumb type="h4">
-          <div h4>{{ experience.experience.title }} · {{ experience.company.name }}</div>
-        </text-dumb>
-        <text-dumb type="small">
-          <div small>
+<section class="experience-view">
+  <div class="experience-view__experiences">
+    @for (experience of experiences$ | async; track experience.companyType; let last = $last) {
+      <article class="experience">
+        <div class="experience__content">
+          <h4>{{ experience.experience.title }} · {{ experience.company.name }}</h4>
+          <small>
             {{ experience.experience.startDate.toDateString() }} ·
             {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
-          </div>
-        </text-dumb>
-        <text-dumb type="p">
-          <div p>{{ experience.company.city }}, {{ experience.company.country }}</div>
-        </text-dumb>
-        <text-dumb type="p">
-          <div p>
+          </small>
+          <br />
+          <p>{{ experience.company.city }}, {{ experience.company.country }}</p>
+          <p>
             {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
-          </div>
-        </text-dumb>
-        <div class="experience__description">
-          @for (item of experience.experience.description; track item) {
-            <text-dumb type="p">
-              <div p>{{ item }}</div>
-            </text-dumb>
-          }
+          </p>
+          <br />
+          <ul class="experience__content-list">
+            @for (item of experience.experience.description; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
         </div>
-      </div>
-      <div class="bbb">
         <div class="experience__technology">
-          @for (group of experience.group; track group.groupType) {
-            @for (category of group.category; track category.categoryType) {
-              @for (technology of category.technology; track technology.technologyType) {
-                <div class="experience__technology-item">
-                  <text-dumb type="small">
-                    <div small>{{ technology.technologyData.name }}</div>
-                  </text-dumb>
-                </div>
+          <ul class="experience__technology-list">
+            @for (group of experience.group; track group.groupType) {
+              @for (category of group.category; track category.categoryType) {
+                @for (technology of category.technology; track technology.technologyType) {
+                  <li class="experience__technology-list-item">
+                    {{ technology.technologyData.name }}
+                  </li>
+                }
               }
             }
-          }
+          </ul>
         </div>
-      </div>
-    </article>
-  }
-</section-dumb>
+      </article>
+      @if (!last) {
+        <hr />
+      }
+    }
+  </div>
+</section>
