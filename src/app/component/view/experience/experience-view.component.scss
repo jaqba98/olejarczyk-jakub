@@ -3,11 +3,6 @@
 }
 
 .experience-view {
-  padding: 2rem 1rem;
-  background-color: var(--dominant);
-  font-family: 'Open Sans', sans-serif;
-  color: var(--accent);
-
   &__content {
     display: flex;
     flex-direction: column;
@@ -64,36 +59,5 @@
 
   &__line {
     color: var(--complementary);
-  }
-
-  @media (min-width: 480px) {
-    padding: 3rem 1.5rem;
-
-    &__content {
-      gap: 2rem;
-    }
-
-    &__experience {
-      flex-direction: row;
-      gap: 2rem;
-
-      &-content {
-        flex: 2;
-      }
-
-      &-technology {
-        flex: 1;
-      }
-    }
-  }
-
-  @media (min-width: 1024px) {
-    padding: 4rem 2rem;
-
-    &__content {
-      gap: 3rem;
-      max-width: 960px;
-      margin: auto;
-    }
   }
 }
