@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.section {
+  padding: 3rem 1rem;
+
+  &__background {
+    &--dominant {
+      background-color: var(--dominant);
+    }
+
+    &--complementary {
+      background-color: var(--complementary);
+    }
+
+    &--accent {
+      background-color: var(--accent);
+    }
+  }
+}
