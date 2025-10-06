@@ -6,6 +6,8 @@ import { ParagraphDumbComponent } from '../../dumb/paragraph/paragraph-dumb.comp
 import { SmallDumbComponent } from '../../dumb/small/small-dumb.component';
 import { SectionDumbComponent } from '../../dumb/section/section-dumb.component';
 import { MarginAutoDumbComponent } from '../../dumb/margin-auto/margin-auto-dumb.component';
+import { ChildrenDumbComponent } from '../../dumb/children/children-dumb.component';
+import { LineDumbComponent } from '../../dumb/line/line-dumb.component';
 
 @Component({
   selector: 'experience-view',
@@ -17,6 +19,8 @@ import { MarginAutoDumbComponent } from '../../dumb/margin-auto/margin-auto-dumb
     SmallDumbComponent,
     SectionDumbComponent,
     MarginAutoDumbComponent,
+    ChildrenDumbComponent,
+    LineDumbComponent,
   ],
   providers: [ExperienceBuilder],
 })
