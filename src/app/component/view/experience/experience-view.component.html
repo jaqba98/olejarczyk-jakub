@@ -5,23 +5,29 @@
         <div class="experience-view__experience-content">
           <header class="experience-view__experience-content-header">
             <div class="experience-view__experience-content-header-title">
-              <h3>{{ experience.experience.title }} · {{ experience.company.name }}</h3>
+              <paragraph-dumb>
+                {{ experience.experience.title }} · {{ experience.company.name }}
+              </paragraph-dumb>
               @if (!experience.experience.endDate) {
-                <p class="experience-view__experience-content-header-title-mark">Current</p>
+                <paragraph-dumb>Current</paragraph-dumb>
               }
             </div>
-            <p>
+            <paragraph-dumb>
               {{ experience.experience.startDate.toDateString() }} ·
               {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
-            </p>
-            <p>{{ experience.company.city }}, {{ experience.company.country }}</p>
-            <p>
+            </paragraph-dumb>
+            <paragraph-dumb>
+              {{ experience.company.city }}, {{ experience.company.country }}
+            </paragraph-dumb>
+            <paragraph-dumb>
               {{ experience.experience.employmentType }}, {{ experience.experience.locationType }}
-            </p>
+            </paragraph-dumb>
           </header>
           <ul class="experience-view__experience-content-description">
             @for (item of experience.experience.description; track item) {
-              <li>{{ item }}</li>
+              <li>
+                <paragraph-dumb>{{ item }}</paragraph-dumb>
+              </li>
             }
           </ul>
         </div>
@@ -32,7 +38,9 @@
               @for (category of group.category; track category.categoryType) {
                 @for (technology of category.technology; track technology.technologyType) {
                   <li class="experience-view__experience-technology-list-item">
-                    {{ technology.technologyData.name }}
+                    <paragraph-dumb>
+                      {{ technology.technologyData.name }}
+                    </paragraph-dumb>
                   </li>
                 }
               }
