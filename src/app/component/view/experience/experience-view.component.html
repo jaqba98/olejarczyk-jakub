@@ -16,7 +16,6 @@
                 </header4-dumb>
                 <small-dumb>{{ getDate(experience.experience) }}</small-dumb>
               </child-dumb>
-              <!-- I am here -->
               <child-dumb>
                 <small-dumb>
                   <fa-icon [icon]="faLocationDot"></fa-icon>
@@ -31,6 +30,7 @@
                   {{ experience.experience.employmentType }}
                 </small-dumb>
               </child-dumb>
+              <!-- I am here -->
               <ul class="experience-view__experience-content-description">
                 @for (item of experience.experience.description; track item) {
                   <li>
