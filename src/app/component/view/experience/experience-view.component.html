@@ -30,27 +30,28 @@
                   {{ experience.experience.employmentType }}
                 </small-dumb>
               </child-dumb>
-              <!-- I am here -->
-              <ul class="experience-view__experience-content-description">
-                @for (item of experience.experience.description; track item) {
+              <header4-dumb>Description</header4-dumb>
+              <ul>
+                @for (descriptionItem of experience.experience.description; track descriptionItem) {
                   <li>
-                    <paragraph-dumb>{{ item }}</paragraph-dumb>
+                    <paragraph-dumb>{{ descriptionItem }}</paragraph-dumb>
                   </li>
                 }
               </ul>
             </children-dumb>
           </child-dumb>
           <child-dumb>
-            <!-- I am here -->
-            @for (group of experience.group; track group.groupType) {
-              @for (category of group.category; track category.categoryType) {
-                @for (technology of category.technology; track technology.technologyType) {
-                  <li class="experience-view__experience-technology-list-item">
-                    <paragraph-dumb> {{ technology.technologyData.name }} </paragraph-dumb>
-                  </li>
+            <ul>
+              @for (group of experience.group; track group.groupType) {
+                @for (category of group.category; track category.categoryType) {
+                  @for (technology of category.technology; track technology.technologyType) {
+                    <li class="experience-view__experience-technology-list-item">
+                      <paragraph-dumb> {{ technology.technologyData.name }} </paragraph-dumb>
+                    </li>
+                  }
                 }
               }
-            }
+            </ul>
           </child-dumb>
         </children-dumb>
         @if (!last) {
