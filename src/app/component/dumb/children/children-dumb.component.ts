@@ -13,6 +13,8 @@ import { BemUtil } from '../../../util/bem.util';
 export class ChildrenDumbComponent {
   gap = input<SizeType>('none');
 
+  directionRow = input(false);
+
   constructor(private readonly bemUtil: BemUtil) {}
 
   getClassNames() {
@@ -20,6 +22,7 @@ export class ChildrenDumbComponent {
 
     return {
       [this.bemUtil.build('children', 'gap', this.gap())]: true,
+      [this.bemUtil.build('children', 'direction', 'row')]: this.directionRow(),
     };
   }
 }

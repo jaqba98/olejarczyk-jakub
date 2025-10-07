@@ -2,7 +2,7 @@
   <margin-auto-dumb>
     <children-dumb gap="big">
       @for (experience of experiences$ | async; track experience; let last = $last) {
-        <children-dumb gap="medium">
+        <children-dumb gap="medium" [directionRow]="true">
           <!-- I am here -->
           <div class="experience-view__experience-content">
             <header class="experience-view__experience-content-header">

@@ -23,4 +23,14 @@
       gap: 2rem;
     }
   }
+
+  &__direction {
+    &--row {
+      flex-direction: row;
+
+      @media (max-width: 480px) {
+        flex-direction: column;
+      }
+    }
+  }
 }
