@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import dateFormat from 'dateformat';
 import { faClock, faFileContract, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import dateFormat from 'dateformat';
 
 import { ExperienceBuilder } from '../../../builder/experience.builder';
 import { ParagraphDumbComponent } from '../../dumb/paragraph/paragraph-dumb.component';
@@ -16,6 +16,7 @@ import { Header4DumbComponent } from '../../dumb/header4/header4-dumb.component'
 import { SmallDumbComponent } from '../../dumb/small/small-dumb.component';
 import { ExperienceModel } from '../../../store/experience/experience-state.model';
 import { CompanyModel } from '../../../store/company/company-state.model';
+import { Header6DumbComponent } from '../../dumb/header6/header6-dumb.component';
 
 @Component({
   selector: 'experience-view',
@@ -33,6 +34,7 @@ import { CompanyModel } from '../../../store/company/company-state.model';
     Header4DumbComponent,
     SmallDumbComponent,
     FontAwesomeModule,
+    Header6DumbComponent,
   ],
   providers: [ExperienceBuilder],
 })

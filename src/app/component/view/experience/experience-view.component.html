@@ -17,30 +17,35 @@
                 <small-dumb>{{ getDate(experience.experience) }}</small-dumb>
               </child-dumb>
               <child-dumb>
-                <small-dumb>
+                <header6-dumb>Details</header6-dumb>
+                <paragraph-dumb>
                   <fa-icon [icon]="faLocationDot"></fa-icon>
                   {{ experience.company.city }}, {{ experience.company.country }}
-                </small-dumb>
-                <small-dumb>
+                </paragraph-dumb>
+                <paragraph-dumb>
                   <fa-icon [icon]="faFileContract"></fa-icon>
                   {{ experience.experience.locationType }}
-                </small-dumb>
-                <small-dumb>
+                </paragraph-dumb>
+                <paragraph-dumb>
                   <fa-icon [icon]="faClock"></fa-icon>
                   {{ experience.experience.employmentType }}
-                </small-dumb>
+                </paragraph-dumb>
               </child-dumb>
-              <header4-dumb>Description</header4-dumb>
-              <ul>
-                @for (descriptionItem of experience.experience.description; track descriptionItem) {
-                  <li>
-                    <paragraph-dumb>{{ descriptionItem }}</paragraph-dumb>
-                  </li>
-                }
-              </ul>
+              <child-dumb>
+                <header6-dumb>Description</header6-dumb>
+                <!-- TODO: I am here -->
+                <ul>
+                  @for (item of experience.experience.description; track item) {
+                    <li>
+                      <paragraph-dumb>{{ item }}</paragraph-dumb>
+                    </li>
+                  }
+                </ul>
+              </child-dumb>
             </children-dumb>
           </child-dumb>
           <child-dumb>
+            <!-- TODO: I am here -->
             <ul>
               @for (group of experience.group; track group.groupType) {
                 @for (category of group.category; track category.categoryType) {
