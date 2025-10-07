@@ -3,8 +3,8 @@
     <children-dumb gap="big">
       @for (experience of experiences$ | async; track experience; let last = $last) {
         <children-dumb gap="medium" [directionRow]="true">
-          <!-- I am here -->
-          <div class="experience-view__experience-content">
+          <child-dumb [flex]="2">
+            <!-- I am here -->
             <header class="experience-view__experience-content-header">
               <div class="experience-view__experience-content-header-title">
                 <paragraph-dumb>
@@ -33,8 +33,8 @@
                 </li>
               }
             </ul>
-          </div>
-          <div class="experience-view__experience-technology">
+          </child-dumb>
+          <child-dumb>
             <!-- I am here -->
             <ul class="experience-view__experience-technology-list">
               @for (group of experience.group; track group.groupType) {
@@ -47,7 +47,7 @@
                 }
               }
             </ul>
-          </div>
+          </child-dumb>
         </children-dumb>
         @if (!last) {
           <line-dumb></line-dumb>

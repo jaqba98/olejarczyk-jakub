@@ -18,8 +18,6 @@ export class ChildrenDumbComponent {
   constructor(private readonly bemUtil: BemUtil) {}
 
   getClassNames() {
-    console.log(this.gap());
-
     return {
       [this.bemUtil.build('children', 'gap', this.gap())]: true,
       [this.bemUtil.build('children', 'direction', 'row')]: this.directionRow(),
