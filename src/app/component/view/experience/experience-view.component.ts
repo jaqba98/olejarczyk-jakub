@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import dateFormat from 'dateformat';
 
 import { ExperienceBuilder } from '../../../builder/experience.builder';
 import { ParagraphDumbComponent } from '../../dumb/paragraph/paragraph-dumb.component';
@@ -44,8 +45,13 @@ export class ExperienceViewComponent {
   }
 
   getDate(experience: ExperienceModel) {
-    const startDate = experience.startDate.toDateString();
-    const endDate = experience.endDate?.toDateString() ?? 'Present';
-    return `${startDate} · ${endDate}`;
+    const startUTC = dateFormat(experience.startDate, 'yyyy-mm-dd');
+    let endUTC;
+    if (experience.endDate) {
+      endUTC = dateFormat(experience.endDate, 'yyyy-mm-dd');
+    } else {
+      endUTC = 'Current';
+    }
+    return `${startUTC} · ${endUTC}`;
   }
 }

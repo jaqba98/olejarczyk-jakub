@@ -17,13 +17,15 @@
                 <small-dumb>{{ getDate(experience.experience) }}</small-dumb>
               </child-dumb>
               <!-- I am here -->
-              <paragraph-dumb>
-                Location: {{ experience.company.city }}, {{ experience.company.country }}
-              </paragraph-dumb>
-              <paragraph-dumb>
-                Type: {{ experience.experience.employmentType }},
-                {{ experience.experience.locationType }}
-              </paragraph-dumb>
+              <child-dumb>
+                <small-dumb>
+                  Location: {{ experience.company.city }}, {{ experience.company.country }}
+                </small-dumb>
+                <small-dumb>
+                  Type: {{ experience.experience.employmentType }},
+                  {{ experience.experience.locationType }}
+                </small-dumb>
+              </child-dumb>
               <ul class="experience-view__experience-content-description">
                 @for (item of experience.experience.description; track item) {
                   <li>
