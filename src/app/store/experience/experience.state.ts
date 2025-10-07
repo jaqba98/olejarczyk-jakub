@@ -14,7 +14,7 @@ import { ExperienceStateModel } from './experience-state.model';
         endDate: new Date('2025-03-01'),
         locationType: 'On-site',
         description: [
-          'Developed and styled user interfaces using HTML, CSS/SCSS, JavaScript/TypeScript, and the Angular framework.',
+          'Developed and styled user interfaces using HTML, CSS/SCSS, JavaScript, TypeScript, and the Angular framework.',
           'Built dynamic and reusable components in the Storybook environment using the PrimeNG library.',
           'Managed application state using NGXS and RxJS, and integrated developer tools such as Redux DevTools.',
           'Designed and developed applications using NX Monorepo, which provides a single Git project for all applications.',

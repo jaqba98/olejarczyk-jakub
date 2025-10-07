@@ -5,6 +5,7 @@
 .children {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   &__gap {
     &--none {
@@ -27,8 +28,10 @@
   &__direction {
     &--row {
       flex-direction: row;
+    }
 
-      @media (max-width: 480px) {
+    @media (max-width: 480px) {
+      &--row-flexible {
         flex-direction: column;
       }
     }

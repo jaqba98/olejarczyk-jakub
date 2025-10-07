@@ -2,7 +2,7 @@
   <margin-auto-dumb>
     <children-dumb gap="big">
       @for (experience of experiences$ | async; track experience; let last = $last) {
-        <children-dumb gap="medium" [directionRow]="true">
+        <children-dumb gap="medium" [directionRow]="true" [directionRowFlexible]="true">
           <child-dumb [flex]="2">
             <children-dumb gap="small">
               @if (!experience.experience.endDate) {
@@ -33,7 +33,6 @@
               </child-dumb>
               <child-dumb>
                 <header6-dumb>Description</header6-dumb>
-                <!-- TODO: I am here -->
                 <ul>
                   @for (item of experience.experience.description; track item) {
                     <li>
@@ -45,18 +44,15 @@
             </children-dumb>
           </child-dumb>
           <child-dumb>
-            <!-- TODO: I am here -->
-            <ul>
+            <children-dumb gap="small" [directionRow]="true">
               @for (group of experience.group; track group.groupType) {
                 @for (category of group.category; track category.categoryType) {
                   @for (technology of category.technology; track technology.technologyType) {
-                    <li class="experience-view__experience-technology-list-item">
-                      <paragraph-dumb> {{ technology.technologyData.name }} </paragraph-dumb>
-                    </li>
+                    <technology-dumb [name]="technology.technologyData.name"></technology-dumb>
                   }
                 }
               }
-            </ul>
+            </children-dumb>
           </child-dumb>
         </children-dumb>
         @if (!last) {

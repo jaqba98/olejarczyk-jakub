@@ -15,12 +15,15 @@ export class ChildrenDumbComponent {
 
   directionRow = input(false);
 
+  directionRowFlexible = input(false);
+
   constructor(private readonly bemUtil: BemUtil) {}
 
   getClassNames() {
     return {
       [this.bemUtil.build('children', 'gap', this.gap())]: true,
       [this.bemUtil.build('children', 'direction', 'row')]: this.directionRow(),
+      [this.bemUtil.build('children', 'direction', 'row-flexible')]: this.directionRowFlexible(),
     };
   }
 }

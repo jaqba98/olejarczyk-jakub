@@ -17,6 +17,7 @@ import { SmallDumbComponent } from '../../dumb/small/small-dumb.component';
 import { ExperienceModel } from '../../../store/experience/experience-state.model';
 import { CompanyModel } from '../../../store/company/company-state.model';
 import { Header6DumbComponent } from '../../dumb/header6/header6-dumb.component';
+import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
 
 @Component({
   selector: 'experience-view',
@@ -35,6 +36,7 @@ import { Header6DumbComponent } from '../../dumb/header6/header6-dumb.component'
     SmallDumbComponent,
     FontAwesomeModule,
     Header6DumbComponent,
+    TechnologyDumbComponent,
   ],
   providers: [ExperienceBuilder],
 })
