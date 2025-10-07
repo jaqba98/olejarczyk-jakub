@@ -10,14 +10,13 @@
                   <mark-dumb text="Current"></mark-dumb>
                 </child-dumb>
               }
+              <child-dumb>
+                <header4-dumb>
+                  {{ getTitle(experience.experience, experience.company) }}
+                </header4-dumb>
+                <small-dumb>{{ getDate(experience.experience) }}</small-dumb>
+              </child-dumb>
               <!-- I am here -->
-              <paragraph-dumb>
-                {{ experience.experience.title }} · {{ experience.company.name }}
-              </paragraph-dumb>
-              <paragraph-dumb>
-                {{ experience.experience.startDate.toDateString() }} ·
-                {{ experience.experience.endDate?.toDateString() ?? 'Present' }}
-              </paragraph-dumb>
               <paragraph-dumb>
                 Location: {{ experience.company.city }}, {{ experience.company.country }}
               </paragraph-dumb>
