@@ -5,13 +5,22 @@
 .children {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
 
-  @media (min-width: 480px) {
-    gap: 1.5rem;
-  }
+  &__gap {
+    &--none {
+      gap: 0;
+    }
 
-  @media (min-width: 1024px) {
-    gap: 2rem;
+    &--small {
+      gap: 0.5rem;
+    }
+
+    &--medium {
+      gap: 1rem;
+    }
+
+    &--big {
+      gap: 2rem;
+    }
   }
 }
