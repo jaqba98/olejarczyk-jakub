@@ -1,0 +1,10 @@
+:host {
+  display: block;
+}
+
+.mark {
+  display: inline-block;
+  background-color: var(--success);
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.25rem;
+}
