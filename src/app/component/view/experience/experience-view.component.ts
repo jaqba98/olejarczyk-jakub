@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import dateFormat from 'dateformat';
+import { faClock, faFileContract, faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ExperienceBuilder } from '../../../builder/experience.builder';
 import { ParagraphDumbComponent } from '../../dumb/paragraph/paragraph-dumb.component';
@@ -30,11 +32,18 @@ import { CompanyModel } from '../../../store/company/company-state.model';
     MarkDumbComponent,
     Header4DumbComponent,
     SmallDumbComponent,
+    FontAwesomeModule,
   ],
   providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {
   experiences$;
+
+  faLocationDot = faLocationDot;
+
+  faFileContract = faFileContract;
+
+  faClock = faClock;
 
   constructor(private readonly builder: ExperienceBuilder) {
     this.experiences$ = this.builder.build();

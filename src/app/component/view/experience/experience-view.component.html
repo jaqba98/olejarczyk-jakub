@@ -19,11 +19,16 @@
               <!-- I am here -->
               <child-dumb>
                 <small-dumb>
-                  Location: {{ experience.company.city }}, {{ experience.company.country }}
+                  <fa-icon [icon]="faLocationDot"></fa-icon>
+                  {{ experience.company.city }}, {{ experience.company.country }}
                 </small-dumb>
                 <small-dumb>
-                  Type: {{ experience.experience.employmentType }},
+                  <fa-icon [icon]="faFileContract"></fa-icon>
                   {{ experience.experience.locationType }}
+                </small-dumb>
+                <small-dumb>
+                  <fa-icon [icon]="faClock"></fa-icon>
+                  {{ experience.experience.employmentType }}
                 </small-dumb>
               </child-dumb>
               <ul class="experience-view__experience-content-description">
