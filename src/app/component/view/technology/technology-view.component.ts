@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TechnologyBuilder } from '../../../builder/technology.builder';
-import { SectionDumbComponent } from '../../block/section/section-block.component';
+// import { SectionDumbComponent } from '../../block/section/section-block.component';
 import { FlexDumbComponent } from '../../dumb/flex/flex-dumb.component';
 import { HeaderDumbComponent } from '../../dumb/header/header-dumb.component';
 import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
@@ -13,7 +13,7 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
   styleUrl: './technology-view.component.scss',
   imports: [
     CommonModule,
-    SectionDumbComponent,
+    // SectionDumbComponent,
     FlexDumbComponent,
     HeaderDumbComponent,
     TechnologyDumbComponent,
