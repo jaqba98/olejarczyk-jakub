@@ -1,5 +1,9 @@
 <section-dumb id="experience" title="Experience" color="dominant">
-  @for (experience of experience$ | async; track experience; let last = $last) {
-    <p>{{ experience | json }}</p>
-  }
+  <flex-dumb [directionColumn]="true" gap="medium">
+    @for (experience of experience$ | async; track experience; let last = $last) {
+      <flex-item-dumb>
+        <p>{{ experience | json }}</p>
+      </flex-item-dumb>
+    }
+  </flex-dumb>
 </section-dumb>

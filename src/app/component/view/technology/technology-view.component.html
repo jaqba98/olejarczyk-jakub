@@ -1,5 +1,7 @@
 <section-dumb id="technology" title="Technology" color="accent">
-  @for (technology of technology$ | async; track technology; let last = $last) {
-    <p>{{ technology | json }}</p>
-  }
+  <flex-dumb gap="none">
+    @for (technology of technology$ | async; track technology; let last = $last) {
+      <p>{{ technology | json }}</p>
+    }
+  </flex-dumb>
 </section-dumb>
