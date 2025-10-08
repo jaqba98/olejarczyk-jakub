@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TechnologyBuilder } from '../../../builder/technology.builder';
-import { SectionDumbComponent } from '../../dumb/section/section-dumb.component';
+import { SectionDumbComponent } from '../../block/section/section-block.component';
 import { FlexDumbComponent } from '../../dumb/flex/flex-dumb.component';
 import { HeaderDumbComponent } from '../../dumb/header/header-dumb.component';
 import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';

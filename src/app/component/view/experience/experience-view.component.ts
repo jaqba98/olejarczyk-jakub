@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { ExperienceBuilder } from '../../../builder/experience.builder';
-import { SectionDumbComponent } from '../../dumb/section/section-dumb.component';
+import { SectionDumbComponent } from '../../block/section/section-block.component';
 import { FlexDumbComponent } from '../../dumb/flex/flex-dumb.component';
 import { FlexItemDumbComponent } from '../../dumb/flex-item/flex-item-dumb.component';
 
