@@ -12,12 +12,11 @@ import { ChildrenDumbComponent } from '../../dumb/children/children-dumb.compone
 import { LineDumbComponent } from '../../dumb/line/line-dumb.component';
 import { ChildDumbComponent } from '../../dumb/child/child-dumb.component';
 import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
-import { Header4DumbComponent } from '../../dumb/header4/header4-dumb.component';
 import { SmallDumbComponent } from '../../dumb/small/small-dumb.component';
 import { ExperienceModel } from '../../../store/experience/experience-state.model';
 import { CompanyModel } from '../../../store/company/company-state.model';
-import { Header6DumbComponent } from '../../dumb/header6/header6-dumb.component';
 import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
+import { HeaderDumbComponent } from '../../dumb/header/header-dumb.component';
 
 @Component({
   selector: 'experience-view',
@@ -32,11 +31,10 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
     LineDumbComponent,
     ChildDumbComponent,
     MarkDumbComponent,
-    Header4DumbComponent,
     SmallDumbComponent,
     FontAwesomeModule,
-    Header6DumbComponent,
     TechnologyDumbComponent,
+    HeaderDumbComponent,
   ],
   providers: [ExperienceBuilder],
 })

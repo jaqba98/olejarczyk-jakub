@@ -1,4 +1,4 @@
-<section-dumb>
+<section-dumb id="aaa" title="aaa">
   <margin-auto-dumb>
     <children-dumb gap="big">
       @for (experience of experiences$ | async; track experience; let last = $last) {
@@ -11,13 +11,16 @@
                 </child-dumb>
               }
               <child-dumb>
-                <header4-dumb>
-                  {{ getTitle(experience.experience, experience.company) }}
-                </header4-dumb>
+                <header-dumb
+                  type="h4"
+                  [content]="getTitle(experience.experience, experience.company)"
+                  color="accent"
+                >
+                </header-dumb>
                 <small-dumb>{{ getDate(experience.experience) }}</small-dumb>
               </child-dumb>
               <child-dumb>
-                <header6-dumb>Details</header6-dumb>
+                <header-dumb type="h5" content="Details" color="accent"></header-dumb>
                 <paragraph-dumb>
                   <fa-icon [icon]="faLocationDot"></fa-icon>
                   {{ experience.company.city }}, {{ experience.company.country }}
@@ -32,7 +35,7 @@
                 </paragraph-dumb>
               </child-dumb>
               <child-dumb>
-                <header6-dumb>Description</header6-dumb>
+                <header-dumb type="h5" content="Description" color="accent"></header-dumb>
                 <ul>
                   @for (item of experience.experience.description; track item) {
                     <li>
