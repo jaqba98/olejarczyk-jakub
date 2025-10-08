@@ -3,7 +3,7 @@ import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
 import { SectionDumbComponent } from './section-dumb.component';
 import { ColorType } from '../../../type/color.type';
 import { HeaderDumbComponent } from '../header/header-dumb.component';
-import { AccentColorBuilder } from '../../../builder/accent-color.builder';
+import { ColorUtil } from '../../../util/color.util';
 
 const meta: Meta<SectionDumbComponent> = {
   title: 'Component/Dumb/Section',
@@ -19,9 +19,9 @@ export default meta;
 type Story = StoryObj<SectionDumbComponent>;
 
 const buildTemplate = (id: string, title: string, color: ColorType) => {
-  const accentColor = new AccentColorBuilder();
+  const colorUtil = new ColorUtil();
   return `<section-dumb id="${id}" title="${title}" color="${color}">
-    <header-dumb type="h5" content="Content" color="${accentColor.build(color)}"></header-dumb>
+    <header-dumb type="h5" content="Content" color="${colorUtil.convertToAccent(color)}"></header-dumb>
   </section-dumb>`;
 };
 

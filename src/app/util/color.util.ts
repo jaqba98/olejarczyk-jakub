@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { ColorType } from '../type/color.type';
 
 @Injectable({ providedIn: 'root' })
-export class AccentColorBuilder {
-  build(color: ColorType): ColorType {
+export class ColorUtil {
+  convertToAccent(color: ColorType): ColorType {
     switch (color) {
       case 'dominant':
         return 'accent';

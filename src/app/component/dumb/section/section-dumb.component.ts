@@ -5,8 +5,8 @@ import { HeaderDumbComponent } from '../header/header-dumb.component';
 import { MarginDumbComponent } from '../margin/margin-dumb.component';
 import { ColorType } from '../../../type/color.type';
 import { BemUtil } from '../../../util/bem.util';
-import { AccentColorBuilder } from '../../../builder/accent-color.builder';
 import { FlexDumbComponent } from '../flex/flex-dumb.component';
+import { ColorUtil } from '../../../util/color.util';
 
 @Component({
   selector: 'section-dumb',
@@ -23,7 +23,7 @@ export class SectionDumbComponent {
 
   constructor(
     private readonly bemUtil: BemUtil,
-    private readonly accentColor: AccentColorBuilder,
+    private readonly colorUtil: ColorUtil,
   ) {}
 
   buildNgClass() {
@@ -33,6 +33,6 @@ export class SectionDumbComponent {
   }
 
   buildHeaderColor() {
-    return this.accentColor.build(this.color());
+    return this.colorUtil.convertToAccent(this.color());
   }
 }
