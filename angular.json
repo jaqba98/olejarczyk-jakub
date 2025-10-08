@@ -27,7 +27,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["node_modules/devicon/devicon.min.css", "src/styles.scss"]
           },
           "configurations": {
             "production": {
@@ -80,7 +80,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/styles.scss"]
+            "styles": ["node_modules/devicon/devicon.min.css", "src/styles.scss"]
           }
         },
         "storybook": {

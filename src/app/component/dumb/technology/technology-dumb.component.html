@@ -1,3 +1,6 @@
 <div class="technology">
-  <small-dumb>{{ name() }}</small-dumb>
+  <flex-dumb gap="small">
+    <icon-dumb [className]="className()"></icon-dumb>
+    <small-dumb>{{ name() }}</small-dumb>
+  </flex-dumb>
 </div>

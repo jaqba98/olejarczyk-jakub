@@ -1,13 +1,16 @@
 <section-dumb id="technology" title="Technology" color="accent">
-  <flex-dumb gap="medium">
+  <flex-dumb gap="medium" [directionColumn]="true">
     @for (technology of technology$ | async; track technology; let last = $last) {
-      <flex-item-dumb [columns]="3">
+      <flex-item-dumb>
         <header-dumb type="h4" [content]="technology.groupData.name" color="complementary">
         </header-dumb>
         <flex-dumb gap="small">
           @for (category of technology.category; track category) {
             @for (technology of category.technology; track technology) {
-              <p>{{ technology.technologyData.name }}</p>
+              <technology-dumb
+                [name]="technology.technologyData.name"
+                [className]="technology.technologyData.className"
+              ></technology-dumb>
             }
           }
         </flex-dumb>

@@ -24,7 +24,7 @@ export const Row: Story = {
   },
 };
 
-export const column: Story = {
+export const Column: Story = {
   render: (args) => ({
     props: args,
     template: buildTemplate(args),

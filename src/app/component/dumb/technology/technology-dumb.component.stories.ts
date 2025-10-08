@@ -13,5 +13,6 @@ type Story = StoryObj<TechnologyDumbComponent>;
 export const Default: Story = {
   args: {
     name: 'JavaScript',
+    className: 'devicon-javascript-plain',
   },
 };

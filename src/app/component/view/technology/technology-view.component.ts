@@ -6,6 +6,7 @@ import { SectionDumbComponent } from '../../dumb/section/section-dumb.component'
 import { FlexDumbComponent } from '../../dumb/flex/flex-dumb.component';
 import { FlexItemDumbComponent } from '../../dumb/flex-item/flex-item-dumb.component';
 import { HeaderDumbComponent } from '../../dumb/header/header-dumb.component';
+import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
 
 @Component({
   selector: 'technology-view',
@@ -17,6 +18,7 @@ import { HeaderDumbComponent } from '../../dumb/header/header-dumb.component';
     FlexDumbComponent,
     FlexItemDumbComponent,
     HeaderDumbComponent,
+    TechnologyDumbComponent,
   ],
   providers: [TechnologyBuilder],
 })

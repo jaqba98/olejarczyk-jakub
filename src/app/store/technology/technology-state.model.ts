@@ -10,6 +10,7 @@ interface TechnologyModel {
   name: string;
   level: TechnologyLevelType;
   defaultGroup: TechnologyGroupType;
+  className: string;
   companies: TechnologyCompaniesType;
 }
 
