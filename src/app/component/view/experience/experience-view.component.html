@@ -1,6 +1,5 @@
 <section-dumb id="experience" title="Experience" color="dominant">
   <!-- TODO: I am here -->
-  <!-- <children-dumb gap="big"> -->
   @for (experience of experiences$ | async; track experience; let last = $last) {
     <!-- <children-dumb gap="medium" [directionRow]="true" [directionRowFlexible]="true"> -->
     <child-dumb [flex]="2">
@@ -62,5 +61,4 @@
       <line-dumb></line-dumb>
     }
   }
-  <!-- </children-dumb> -->
 </section-dumb>
