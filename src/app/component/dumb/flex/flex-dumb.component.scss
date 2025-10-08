@@ -1,0 +1,31 @@
+:host {
+  display: block;
+}
+
+.flex {
+  display: flex;
+
+  &__direction {
+    &--column {
+      flex-direction: column;
+    }
+  }
+
+  &__gap {
+    &--none {
+      gap: 0;
+    }
+
+    &--small {
+      gap: 0.5rem;
+    }
+
+    &--medium {
+      gap: 1rem;
+    }
+
+    &--big {
+      gap: 1.5rem;
+    }
+  }
+}

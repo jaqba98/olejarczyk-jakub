@@ -1,10 +1,12 @@
 <section [id]="id()" class="section" [ngClass]="buildNgClass()">
   <margin-dumb [autoLeft]="true" [autoRight]="true" [maxWidth960px]="true">
-    <header class="section__header">
-      <header-dumb type="h2" [content]="title()" [color]="buildHeaderColor()"></header-dumb>
-    </header>
-    <div class="section__content">
-      <ng-content></ng-content>
-    </div>
+    <flex-dumb [directionColumn]="true" gap="big">
+      <header class="section__header">
+        <header-dumb type="h2" [content]="title()" [color]="buildHeaderColor()"></header-dumb>
+      </header>
+      <div class="section__content">
+        <ng-content></ng-content>
+      </div>
+    </flex-dumb>
   </margin-dumb>
 </section>
