@@ -10,9 +10,34 @@ const meta: Meta<SectionDumbComponent> = {
 export default meta;
 type Story = StoryObj<SectionDumbComponent>;
 
-export const Default: Story = {
+export const Dominant: Story = {
   args: {
     id: 'home',
     title: 'Home',
+    color: 'dominant',
+  },
+};
+
+export const Complementary: Story = {
+  args: {
+    id: 'home',
+    title: 'Home',
+    color: 'complementary',
+  },
+};
+
+export const Accent: Story = {
+  args: {
+    id: 'home',
+    title: 'Home',
+    color: 'accent',
+  },
+};
+
+export const Success: Story = {
+  args: {
+    id: 'home',
+    title: 'Home',
+    color: 'success',
   },
 };

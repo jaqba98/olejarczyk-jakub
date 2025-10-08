@@ -4,5 +4,22 @@
 
 .section {
   padding: 2rem 1rem;
-  background-color: var(--dominant);
+
+  &__color {
+    &--dominant {
+      background-color: var(--dominant);
+    }
+
+    &--complementary {
+      background-color: var(--complementary);
+    }
+
+    &--accent {
+      background-color: var(--accent);
+    }
+
+    &--success {
+      background-color: var(--success);
+    }
+  }
 }
