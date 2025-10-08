@@ -1,3 +1,5 @@
 <section-dumb id="technology" title="Technology" color="accent">
-  <p>Hello world</p>
+  @for (technology of technology$ | async; track technology; let last = $last) {
+    <p>{{ technology | json }}</p>
+  }
 </section-dumb>
