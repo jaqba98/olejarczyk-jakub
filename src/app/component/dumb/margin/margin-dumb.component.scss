@@ -1,0 +1,21 @@
+:host {
+  display: block;
+}
+
+.margin {
+  &__auto {
+    &--left {
+      margin-right: auto;
+    }
+
+    &--right {
+      margin-left: auto;
+    }
+  }
+
+  &__max-width {
+    &--960px {
+      max-width: 960px;
+    }
+  }
+}

@@ -7,7 +7,6 @@ import dateFormat from 'dateformat';
 import { ExperienceBuilder } from '../../../builder/experience.builder';
 import { ParagraphDumbComponent } from '../../dumb/paragraph/paragraph-dumb.component';
 import { SectionDumbComponent } from '../../dumb/section/section-dumb.component';
-import { MarginAutoDumbComponent } from '../../dumb/margin-auto/margin-auto-dumb.component';
 import { ChildrenDumbComponent } from '../../dumb/children/children-dumb.component';
 import { LineDumbComponent } from '../../dumb/line/line-dumb.component';
 import { ChildDumbComponent } from '../../dumb/child/child-dumb.component';
@@ -26,7 +25,6 @@ import { HeaderDumbComponent } from '../../dumb/header/header-dumb.component';
     CommonModule,
     ParagraphDumbComponent,
     SectionDumbComponent,
-    MarginAutoDumbComponent,
     ChildrenDumbComponent,
     LineDumbComponent,
     ChildDumbComponent,
