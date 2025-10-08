@@ -1,1 +1,1 @@
-export type ColorType = 'dominant' | 'complementary' | 'accent';
+export type ColorType = 'dominant' | 'complementary' | 'accent' | 'success';

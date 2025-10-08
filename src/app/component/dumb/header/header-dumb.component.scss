@@ -1,0 +1,49 @@
+:host {
+  display: block;
+}
+
+.header {
+  font-family: 'Open Sans', sans-serif;
+
+  &__color {
+    &--dominant {
+      color: var(--dominant);
+    }
+
+    &--complementary {
+      color: var(--complementary);
+    }
+
+    &--accent {
+      color: var(--accent);
+    }
+
+    &--success {
+      color: var(--success);
+    }
+  }
+
+  &1 {
+    font-size: 2rem;
+  }
+
+  &2 {
+    font-size: 1.75rem;
+  }
+
+  &3 {
+    font-size: 1.5rem;
+  }
+
+  &4 {
+    font-size: 1.25rem;
+  }
+
+  &5 {
+    font-size: 1rem;
+  }
+
+  &6 {
+    font-size: 0.75rem;
+  }
+}
