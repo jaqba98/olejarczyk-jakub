@@ -1,67 +1,66 @@
-<section-dumb id="aaa" title="aaa">
-  <margin-auto-dumb>
-    <children-dumb gap="big">
-      @for (experience of experiences$ | async; track experience; let last = $last) {
-        <children-dumb gap="medium" [directionRow]="true" [directionRowFlexible]="true">
-          <child-dumb [flex]="2">
-            <children-dumb gap="small">
-              @if (!experience.experience.endDate) {
-                <child-dumb>
-                  <mark-dumb text="Current"></mark-dumb>
-                </child-dumb>
-              }
+<section-dumb id="experience" title="Experience">
+  <!-- TODO: I am here -->
+  <children-dumb gap="big">
+    @for (experience of experiences$ | async; track experience; let last = $last) {
+      <children-dumb gap="medium" [directionRow]="true" [directionRowFlexible]="true">
+        <child-dumb [flex]="2">
+          <children-dumb gap="small">
+            @if (!experience.experience.endDate) {
               <child-dumb>
-                <header-dumb
-                  type="h4"
-                  [content]="getTitle(experience.experience, experience.company)"
-                  color="accent"
-                >
-                </header-dumb>
-                <small-dumb>{{ getDate(experience.experience) }}</small-dumb>
+                <mark-dumb text="Current"></mark-dumb>
               </child-dumb>
-              <child-dumb>
-                <header-dumb type="h5" content="Details" color="accent"></header-dumb>
-                <paragraph-dumb>
-                  <fa-icon [icon]="faLocationDot"></fa-icon>
-                  {{ experience.company.city }}, {{ experience.company.country }}
-                </paragraph-dumb>
-                <paragraph-dumb>
-                  <fa-icon [icon]="faFileContract"></fa-icon>
-                  {{ experience.experience.locationType }}
-                </paragraph-dumb>
-                <paragraph-dumb>
-                  <fa-icon [icon]="faClock"></fa-icon>
-                  {{ experience.experience.employmentType }}
-                </paragraph-dumb>
-              </child-dumb>
-              <child-dumb>
-                <header-dumb type="h5" content="Description" color="accent"></header-dumb>
-                <ul>
-                  @for (item of experience.experience.description; track item) {
-                    <li>
-                      <paragraph-dumb>{{ item }}</paragraph-dumb>
-                    </li>
-                  }
-                </ul>
-              </child-dumb>
-            </children-dumb>
-          </child-dumb>
-          <child-dumb>
-            <children-dumb gap="small" [directionRow]="true">
-              @for (group of experience.group; track group.groupType) {
-                @for (category of group.category; track category.categoryType) {
-                  @for (technology of category.technology; track technology.technologyType) {
-                    <technology-dumb [name]="technology.technologyData.name"></technology-dumb>
-                  }
+            }
+            <child-dumb>
+              <header-dumb
+                type="h4"
+                [content]="getTitle(experience.experience, experience.company)"
+                color="accent"
+              >
+              </header-dumb>
+              <small-dumb>{{ getDate(experience.experience) }}</small-dumb>
+            </child-dumb>
+            <child-dumb>
+              <header-dumb type="h5" content="Details" color="accent"></header-dumb>
+              <paragraph-dumb>
+                <fa-icon [icon]="faLocationDot"></fa-icon>
+                {{ experience.company.city }}, {{ experience.company.country }}
+              </paragraph-dumb>
+              <paragraph-dumb>
+                <fa-icon [icon]="faFileContract"></fa-icon>
+                {{ experience.experience.locationType }}
+              </paragraph-dumb>
+              <paragraph-dumb>
+                <fa-icon [icon]="faClock"></fa-icon>
+                {{ experience.experience.employmentType }}
+              </paragraph-dumb>
+            </child-dumb>
+            <child-dumb>
+              <header-dumb type="h5" content="Description" color="accent"></header-dumb>
+              <ul>
+                @for (item of experience.experience.description; track item) {
+                  <li>
+                    <paragraph-dumb>{{ item }}</paragraph-dumb>
+                  </li>
+                }
+              </ul>
+            </child-dumb>
+          </children-dumb>
+        </child-dumb>
+        <child-dumb>
+          <children-dumb gap="small" [directionRow]="true">
+            @for (group of experience.group; track group.groupType) {
+              @for (category of group.category; track category.categoryType) {
+                @for (technology of category.technology; track technology.technologyType) {
+                  <technology-dumb [name]="technology.technologyData.name"></technology-dumb>
                 }
               }
-            </children-dumb>
-          </child-dumb>
-        </children-dumb>
-        @if (!last) {
-          <line-dumb></line-dumb>
-        }
+            }
+          </children-dumb>
+        </child-dumb>
+      </children-dumb>
+      @if (!last) {
+        <line-dumb></line-dumb>
       }
-    </children-dumb>
-  </margin-auto-dumb>
+    }
+  </children-dumb>
 </section-dumb>

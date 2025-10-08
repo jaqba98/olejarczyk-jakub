@@ -1,7 +1,7 @@
 <section [id]="id()" class="section">
   <div class="section__wrapper">
     <header class="section__header">
-      <h1 class="section__header-title">{{ title() }}</h1>
+      <header-dumb type="h2" [content]="title()" color="accent"></header-dumb>
     </header>
     <div class="section__content">
       <ng-content></ng-content>

@@ -22,7 +22,7 @@ export const Header2: Story = {
   args: {
     type: 'h2',
     content: 'Header 2',
-    color: 'complementary',
+    color: 'dominant',
   },
 };
 
@@ -30,7 +30,7 @@ export const Header3: Story = {
   args: {
     type: 'h3',
     content: 'Header 3',
-    color: 'accent',
+    color: 'dominant',
   },
 };
 
@@ -38,7 +38,7 @@ export const Header4: Story = {
   args: {
     type: 'h4',
     content: 'Header 4',
-    color: 'success',
+    color: 'dominant',
   },
 };
 
@@ -50,10 +50,34 @@ export const Header5: Story = {
   },
 };
 
-export const Header6: Story = {
+export const Dominant: Story = {
   args: {
-    type: 'h6',
-    content: 'Header 6',
+    type: 'h1',
+    content: 'Dominant',
+    color: 'dominant',
+  },
+};
+
+export const Complementary: Story = {
+  args: {
+    type: 'h1',
+    content: 'Complementary',
     color: 'complementary',
+  },
+};
+
+export const Accent: Story = {
+  args: {
+    type: 'h1',
+    content: 'Accent',
+    color: 'accent',
+  },
+};
+
+export const Success: Story = {
+  args: {
+    type: 'h1',
+    content: 'Success',
+    color: 'success',
   },
 };
