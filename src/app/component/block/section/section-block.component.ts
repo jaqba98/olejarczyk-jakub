@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './section-block.component.html',
   styleUrl: './section-block.component.scss',
 })
-export class SectionDumbComponent {}
+export class SectionBlockComponent {}

@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 
-import { SectionDumbComponent } from './section-block.component';
+import { SectionBlockComponent } from './section-block.component';
 
-const meta: Meta<SectionDumbComponent> = {
+const meta: Meta<SectionBlockComponent> = {
   title: 'component/block/section',
-  component: SectionDumbComponent,
+  component: SectionBlockComponent,
 };
 
 export default meta;
-type Story = StoryObj<SectionDumbComponent>;
+type Story = StoryObj<SectionBlockComponent>;
 
 export const Primary: Story = {};
