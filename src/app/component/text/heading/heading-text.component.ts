@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 
-import { HeadingLevelType } from './heading-level.type';
+import { HeadingTextLevelType } from './heading-text.type';
 import { ColorType } from '../../../type/color.type';
 import { BemUtil } from '../../../util/bem.util';
 import { ColorUtil } from '../../../util/color.util';
@@ -13,7 +13,7 @@ import { ColorUtil } from '../../../util/color.util';
   imports: [NgClass],
 })
 export class HeadingTextComponent {
-  level = input.required<HeadingLevelType>();
+  level = input.required<HeadingTextLevelType>();
 
   value = input.required<string>();
 

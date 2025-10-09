@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 
-import { MarginMaxWidthType } from './margin-max-width.type';
+import { MarginUtilMaxWidthType } from './margin-util.type';
 import { BemUtil } from '../../../util/bem.util';
 
 @Component({
@@ -15,7 +15,7 @@ export class MarginUtilComponent {
 
   autoRight = input(false);
 
-  maxWidth = input<MarginMaxWidthType>('100%');
+  maxWidth = input<MarginUtilMaxWidthType>('100%');
 
   constructor(private readonly bemUtil: BemUtil) {}
 

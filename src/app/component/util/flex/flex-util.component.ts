@@ -1,7 +1,7 @@
 import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 
-import { FlexDirectionType, FlexGapType } from './flex-util.type';
+import { FlexUtilDirectionType, FlexUtilGapType } from './flex-util.type';
 import { BemUtil } from '../../../util/bem.util';
 
 @Component({
@@ -11,9 +11,9 @@ import { BemUtil } from '../../../util/bem.util';
   imports: [NgClass],
 })
 export class FlexUtilComponent {
-  direction = input<FlexDirectionType>('row');
+  direction = input<FlexUtilDirectionType>('row');
 
-  gap = input<FlexGapType>('none');
+  gap = input<FlexUtilGapType>('none');
 
   constructor(private readonly bemUtil: BemUtil) {}
 

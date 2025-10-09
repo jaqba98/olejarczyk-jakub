@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { NgStyle } from '@angular/common';
 
-import { FlexItemSizeType } from './flex-item-util.type';
+import { FlexItemUtilSizeType } from './flex-item-util.type';
 
 @Component({
   selector: 'flex-item-util',
@@ -10,7 +10,7 @@ import { FlexItemSizeType } from './flex-item-util.type';
   imports: [NgStyle],
 })
 export class FlexItemUtilComponent {
-  size = input<FlexItemSizeType>('1');
+  size = input<FlexItemUtilSizeType>('1');
 
   buildFlex() {
     switch (this.size()) {
