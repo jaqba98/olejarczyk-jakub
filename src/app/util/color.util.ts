@@ -11,7 +11,7 @@ export class ColorUtil {
       case 'complementary':
         return 'accent';
       case 'accent':
-        return 'complementary';
+        return 'dominant';
       default:
         throw new Error('Not supported color!');
     }
