@@ -35,4 +35,10 @@
       align-items: center;
     }
   }
+
+  &__justify-content {
+    &--center {
+      justify-content: center;
+    }
+  }
 }

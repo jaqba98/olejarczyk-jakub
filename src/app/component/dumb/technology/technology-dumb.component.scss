@@ -3,8 +3,13 @@
 }
 
 .technology {
+  padding: 0.5rem;
   border-radius: 0.25rem;
-  padding: 0.25rem;
+  min-width: 80px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &__color {
     &--dominant {
