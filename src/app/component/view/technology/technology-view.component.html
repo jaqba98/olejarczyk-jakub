@@ -1,5 +1,26 @@
-<section-block id="technology" title="Technology" color="accent">
-  @for (technology of technology$ | async; track technology; let last = $last) {
-    <p>{{ technology | json }}</p>
-  }
+<section-block id="technology" title="Technology" [color]="rootColor">
+  <flex-util direction="column" gap="medium">
+    @for (technology of technology$ | async; track technology) {
+      <flex-item-util>
+        <heading-text
+          [level]="4"
+          [rootColor]="rootColor"
+          [value]="technology.groupData.name"
+        ></heading-text>
+      </flex-item-util>
+      <flex-item-util>
+        <flex-util gap="small">
+          @for (category of technology.category; track category) {
+            @for (technology of category.technology; track technology) {
+              <heading-text
+                [level]="5"
+                [rootColor]="rootColor"
+                [value]="technology.technologyData.name"
+              ></heading-text>
+            }
+          }
+        </flex-util>
+      </flex-item-util>
+    }
+  </flex-util>
 </section-block>
