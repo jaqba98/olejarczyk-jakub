@@ -1,10 +1,12 @@
 <section [id]="id()" class="section" [ngClass]="buildClassNames()">
-  <header>
-    <heading-text [level]="2" [rootColor]="color()" [value]="title()"></heading-text>
-  </header>
-  <section>
-    <heading-text [level]="5" [rootColor]="color()" value="Content"></heading-text>
-  </section>
+  <margin-util [autoLeft]="true" [autoRight]="true" maxWidth="960px">
+    <header>
+      <heading-text [level]="2" [rootColor]="color()" [value]="title()"></heading-text>
+    </header>
+    <section>
+      <heading-text [level]="5" [rootColor]="color()" value="Content"></heading-text>
+    </section>
+  </margin-util>
 </section>
 
 <!-- TODO: I am here -->
