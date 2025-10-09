@@ -1,13 +1,22 @@
 :host {
-  display: block;
+  display: inline-block;
 }
 
 .technology {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.25rem;
-  border: 1px solid var(--dominant);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
+
+  &__color {
+    &--dominant {
+      border: 1px solid var(--dominant);
+    }
+
+    &--complementary {
+      border: 1px solid var(--complementary);
+    }
+
+    &--accent {
+      border: 1px solid var(--accent);
+    }
+  }
 }

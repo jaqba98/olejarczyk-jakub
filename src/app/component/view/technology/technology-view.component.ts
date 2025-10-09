@@ -7,6 +7,7 @@ import { HeadingTextComponent } from '../../text/heading/heading-text.component'
 import { ColorType } from '../../../type/color.type';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
+import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
 
 @Component({
   selector: 'technology-view',
@@ -18,6 +19,7 @@ import { FlexUtilComponent } from '../../util/flex/flex-util.component';
     HeadingTextComponent,
     FlexItemUtilComponent,
     FlexUtilComponent,
+    TechnologyDumbComponent,
   ],
   providers: [TechnologyBuilder],
 })

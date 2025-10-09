@@ -1,4 +1,6 @@
-<div class="technology">
-  <!-- <icon-dumb [className]="className()"></icon-dumb>
-  <header-dumb type="h6" color="complementary" [content]="name()"></header-dumb> -->
+<div class="technology" [ngClass]="buildClassNames()">
+  <flex-util gap="small" [alignItemsCenter]="true">
+    <icon-text [icon]="icon()" [rootColor]="rootColor()"></icon-text>
+    <heading-text [level]="6" [rootColor]="rootColor()" [value]="value()"></heading-text>
+  </flex-util>
 </div>

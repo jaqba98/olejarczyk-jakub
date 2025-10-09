@@ -29,4 +29,10 @@
       gap: 1.5rem;
     }
   }
+
+  &__align-items {
+    &--center {
+      align-items: center;
+    }
+  }
 }

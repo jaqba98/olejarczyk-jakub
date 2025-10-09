@@ -25,6 +25,7 @@ export class IconTextComponent {
     const accent = this.colorUtil.convertToAccent(this.rootColor());
     const iconColorAccent = this.bemUtil.build('icon', 'color', accent);
     return {
+      icon: true,
       [iconColorAccent]: true,
     };
   }

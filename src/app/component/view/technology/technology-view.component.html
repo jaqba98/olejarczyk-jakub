@@ -12,11 +12,11 @@
         <flex-util gap="small">
           @for (category of technology.category; track category) {
             @for (technology of category.technology; track technology) {
-              <heading-text
-                [level]="5"
+              <technology-dumb
+                [icon]="technology.technologyData.className"
                 [rootColor]="rootColor"
                 [value]="technology.technologyData.name"
-              ></heading-text>
+              ></technology-dumb>
             }
           }
         </flex-util>

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { TechnologyDumbComponent } from './technology-dumb.component';
 
 const meta: Meta<TechnologyDumbComponent> = {
-  title: 'Component/Dumb/Technology',
+  title: 'component/dumb/technology',
   component: TechnologyDumbComponent,
 };
 
@@ -12,7 +12,8 @@ type Story = StoryObj<TechnologyDumbComponent>;
 
 export const Default: Story = {
   args: {
-    name: 'JavaScript',
-    className: 'devicon-javascript-plain',
+    value: 'JavaScript',
+    icon: 'devicon-javascript-plain',
+    rootColor: 'accent',
   },
 };

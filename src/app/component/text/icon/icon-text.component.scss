@@ -1,8 +1,10 @@
 :host {
-  display: block;
+  display: contents;
 }
 
 .icon {
+  font-size: 1.5rem;
+
   &__color {
     &--dominant {
       color: var(--dominant);
