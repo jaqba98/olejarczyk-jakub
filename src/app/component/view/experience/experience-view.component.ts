@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { ExperienceBuilder } from '../../../builder/experience.builder';
 // import { SectionDumbComponent } from '../../block/section/section-block.component';
-import { FlexDumbComponent } from '../../dumb/flex/flex-dumb.component';
-import { FlexItemDumbComponent } from '../../dumb/flex-item/flex-item-dumb.component';
+// import { FlexDumbComponent } from '../../util/flex/flex-util.component';
+// import { FlexItemDumbComponent } from '../../util/flex-item/flex-item-util.component';
 
 @Component({
   selector: 'experience-view',
   templateUrl: './experience-view.component.html',
   styleUrl: './experience-view.component.scss',
-  imports: [CommonModule, FlexDumbComponent, FlexItemDumbComponent],
+  imports: [CommonModule],
   providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {

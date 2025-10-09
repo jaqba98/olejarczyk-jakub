@@ -1,24 +1,12 @@
 <section [id]="id()" class="section" [ngClass]="buildClassNames()">
   <margin-util [autoLeft]="true" [autoRight]="true" maxWidth="960px">
-    <header>
-      <heading-text [level]="2" [rootColor]="color()" [value]="title()"></heading-text>
-    </header>
-    <section>
-      <heading-text [level]="5" [rootColor]="color()" value="Content"></heading-text>
-    </section>
+    <flex-util direction="column" gap="big">
+      <flex-item-util>
+        <heading-text [level]="2" [rootColor]="color()" [value]="title()"></heading-text>
+      </flex-item-util>
+      <flex-item-util>
+        <content-util [color]="color()"></content-util>
+      </flex-item-util>
+    </flex-util>
   </margin-util>
 </section>
-
-<!-- TODO: I am here -->
-<!-- <section [id]="id()" class="section" [ngClass]="buildNgClass()">
-  <margin-dumb [autoLeft]="true" [autoRight]="true" [maxWidth960px]="true">
-    <flex-dumb [directionColumn]="true" gap="big">
-      <header class="section__header">
-        <header-dumb type="h2" [content]="title()" [color]="buildHeaderColor()"></header-dumb>
-      </header>
-      <div class="section__content">
-        <ng-content></ng-content>
-      </div>
-    </flex-dumb>
-  </margin-dumb>
-</section> -->

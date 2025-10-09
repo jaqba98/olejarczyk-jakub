@@ -5,12 +5,22 @@ import { ColorType } from '../../../type/color.type';
 import { BemUtil } from '../../../util/bem.util';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { MarginUtilComponent } from '../../util/margin/margin-util.component';
+import { FlexUtilComponent } from '../../util/flex/flex-util.component';
+import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
+import { ContentUtilComponent } from '../../util/content/content-util.component';
 
 @Component({
   selector: 'section-block',
   templateUrl: './section-block.component.html',
   styleUrl: './section-block.component.scss',
-  imports: [NgClass, HeadingTextComponent, MarginUtilComponent],
+  imports: [
+    NgClass,
+    HeadingTextComponent,
+    MarginUtilComponent,
+    FlexUtilComponent,
+    FlexItemUtilComponent,
+    ContentUtilComponent,
+  ],
 })
 export class SectionBlockComponent {
   id = input.required<string>();
