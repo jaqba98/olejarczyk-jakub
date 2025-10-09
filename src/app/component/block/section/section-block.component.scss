@@ -2,21 +2,20 @@
   display: block;
 }
 
-// TODO: I am here
-// .section {
-//   padding: 4rem 1rem;
-//   &__color {
-//     &--dominant {
-//       background-color: var(--dominant);
-//     }
-//     &--complementary {
-//       background-color: var(--complementary);
-//     }
-//     &--accent {
-//       background-color: var(--accent);
-//     }
-//     &--success {
-//       background-color: var(--success);
-//     }
-//   }
-// }
+.section {
+  padding: 4rem 2rem;
+
+  &__color {
+    &--dominant {
+      background-color: var(--dominant);
+    }
+
+    &--complementary {
+      background-color: var(--complementary);
+    }
+
+    &--accent {
+      background-color: var(--accent);
+    }
+  }
+}

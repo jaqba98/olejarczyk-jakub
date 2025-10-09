@@ -74,10 +74,10 @@ export const Accent: Story = {
   },
 };
 
-export const Success: Story = {
-  args: {
-    type: 'h1',
-    content: 'Success',
-    color: 'success',
-  },
-};
+// export const Success: Story = {
+//   args: {
+//     type: 'h1',
+//     content: 'Success',
+//     color: 'success',
+//   },
+// };

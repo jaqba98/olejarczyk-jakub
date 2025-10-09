@@ -1,4 +1,6 @@
-<section [id]="id()"></section>
+<section [id]="id()" class="section" [ngClass]="buildClassNames()">
+  <header-dumb type="h2" color="accent" [content]="title()"></header-dumb>
+</section>
 
 <!-- TODO: I am here -->
 <!-- <section [id]="id()" class="section" [ngClass]="buildNgClass()">

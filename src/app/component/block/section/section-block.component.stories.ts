@@ -10,9 +10,24 @@ const meta: Meta<SectionBlockComponent> = {
 export default meta;
 type Story = StoryObj<SectionBlockComponent>;
 
-export const Primary: Story = {
+export const Dominant: Story = {
   args: {
     id: 'technology',
+    title: 'Technology',
     color: 'dominant',
+  },
+};
+
+export const Complementary: Story = {
+  args: {
+    ...Dominant.args,
+    color: 'complementary',
+  },
+};
+
+export const Accent: Story = {
+  args: {
+    ...Dominant.args,
+    color: 'accent',
   },
 };
