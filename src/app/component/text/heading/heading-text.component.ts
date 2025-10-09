@@ -12,7 +12,7 @@ import { ColorUtil } from '../../../util/color.util';
   styleUrl: './heading-text.component.scss',
   imports: [NgClass],
 })
-export class HeaderTextComponent {
+export class HeadingTextComponent {
   level = input.required<HeadingLevelType>();
 
   value = input.required<string>();
