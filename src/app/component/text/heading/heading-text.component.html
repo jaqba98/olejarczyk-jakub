@@ -1,0 +1,20 @@
+@switch (level()) {
+  @case (1) {
+    <h1 class="heading heading1" [ngClass]="buildClassNames()">{{ value() }}</h1>
+  }
+  @case (2) {
+    <h2 class="heading heading2" [ngClass]="buildClassNames()">{{ value() }}</h2>
+  }
+  @case (3) {
+    <h3 class="heading heading3" [ngClass]="buildClassNames()">{{ value() }}</h3>
+  }
+  @case (4) {
+    <h4 class="heading heading4" [ngClass]="buildClassNames()">{{ value() }}</h4>
+  }
+  @case (5) {
+    <h5 class="heading heading5" [ngClass]="buildClassNames()">{{ value() }}</h5>
+  }
+  @case (6) {
+    <h6 class="heading heading6" [ngClass]="buildClassNames()">{{ value() }}</h6>
+  }
+}

@@ -2,7 +2,7 @@
   display: block;
 }
 
-.header {
+.heading {
   font-family: 'Open Sans', sans-serif;
 
   &__color {
@@ -16,10 +16,6 @@
 
     &--accent {
       color: var(--accent);
-    }
-
-    &--success {
-      color: var(--success);
     }
   }
 

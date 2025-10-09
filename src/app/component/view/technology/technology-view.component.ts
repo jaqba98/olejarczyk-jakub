@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { TechnologyBuilder } from '../../../builder/technology.builder';
 // import { SectionDumbComponent } from '../../block/section/section-block.component';
 import { FlexDumbComponent } from '../../dumb/flex/flex-dumb.component';
-import { HeaderDumbComponent } from '../../dumb/header/header-dumb.component';
 import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
 
 @Component({
@@ -15,7 +14,6 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
     CommonModule,
     // SectionDumbComponent,
     FlexDumbComponent,
-    HeaderDumbComponent,
     TechnologyDumbComponent,
   ],
   providers: [TechnologyBuilder],
