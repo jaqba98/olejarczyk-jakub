@@ -7,7 +7,6 @@ import { HeadingTextComponent } from '../../text/heading/heading-text.component'
 import { MarginUtilComponent } from '../../util/margin/margin-util.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
-import { ContentUtilComponent } from '../../util/content/content-util.component';
 
 @Component({
   selector: 'section-block',
@@ -19,7 +18,6 @@ import { ContentUtilComponent } from '../../util/content/content-util.component'
     MarginUtilComponent,
     FlexUtilComponent,
     FlexItemUtilComponent,
-    ContentUtilComponent,
   ],
 })
 export class SectionBlockComponent {

@@ -4,7 +4,7 @@ import { ExperienceViewComponent } from './experience-view.component';
 import { StoreUtil } from '../../../util/store.util';
 
 const meta: Meta<ExperienceViewComponent> = {
-  title: 'Component/View/Experience',
+  title: 'component/view/experience',
   component: ExperienceViewComponent,
   decorators: [...StoreUtil.getStorybookProvide()],
 };

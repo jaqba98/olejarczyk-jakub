@@ -4,7 +4,7 @@ import { TechnologyViewComponent } from './technology-view.component';
 import { StoreUtil } from '../../../util/store.util';
 
 const meta: Meta<TechnologyViewComponent> = {
-  title: 'Component/View/Technology',
+  title: 'component/view/technology',
   component: TechnologyViewComponent,
   decorators: [...StoreUtil.getStorybookProvide()],
 };

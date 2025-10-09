@@ -1,21 +1,14 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 
 import { TechnologyBuilder } from '../../../builder/technology.builder';
-// import { SectionDumbComponent } from '../../block/section/section-block.component';
-// import { FlexDumbComponent } from '../../util/flex/flex-util.component';
-import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
+import { SectionBlockComponent } from '../../block/section/section-block.component';
 
 @Component({
   selector: 'technology-view',
   templateUrl: './technology-view.component.html',
   styleUrl: './technology-view.component.scss',
-  imports: [
-    CommonModule,
-    // SectionDumbComponent,
-    // FlexDumbComponent,
-    TechnologyDumbComponent,
-  ],
+  imports: [CommonModule, SectionBlockComponent],
   providers: [TechnologyBuilder],
 })
 export class TechnologyViewComponent {
