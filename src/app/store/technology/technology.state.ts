@@ -87,7 +87,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'Angular',
         level: 'beginner',
         defaultGroup: 'frontend',
-        className: 'devicon-angularjs-plain',
+        className: 'devicon-angular-plain',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -99,7 +99,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'RxJS',
         level: 'beginner',
         defaultGroup: 'frontend',
-        className: 'devicon-devicon-plain',
+        className: 'devicon-rxjs-plain',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -109,7 +109,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'NGXS',
         level: 'beginner',
         defaultGroup: 'frontend',
-        className: 'devicon-devicon-plain',
+        className: '',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -129,7 +129,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'PrimeNG',
         level: 'beginner',
         defaultGroup: 'frontend',
-        className: 'devicon-devicon-plain',
+        className: 'devicon-primeng-plain',
         companies: {
           aprSystem: ['frontend'],
           primaris: [],
@@ -211,7 +211,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'SnapLogic',
         level: 'beginner',
         defaultGroup: 'integration',
-        className: 'devicon-devicon-plain',
+        className: '',
         companies: {
           aprSystem: [],
           primaris: ['integration'],
@@ -265,7 +265,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'pnpm',
         level: 'beginner',
         defaultGroup: 'common',
-        className: 'devicon-devicon-plain',
+        className: 'devicon-pnpm-plain',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -287,7 +287,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'Prettier',
         level: 'beginner',
         defaultGroup: 'common',
-        className: 'devicon-devicon-plain',
+        className: '',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -297,7 +297,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'Stylelint',
         level: 'beginner',
         defaultGroup: 'common',
-        className: 'devicon-devicon-plain',
+        className: '',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -309,7 +309,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'Postman',
         level: 'beginner',
         defaultGroup: 'common',
-        className: 'devicon-devicon-plain',
+        className: 'devicon-postman-plain',
         companies: {
           aprSystem: ['common'],
           primaris: ['common'],
@@ -319,7 +319,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'Nx',
         level: 'beginner',
         defaultGroup: 'common',
-        className: 'devicon-devicon-plain',
+        className: '',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -329,7 +329,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'Enterprise Architect',
         level: 'beginner',
         defaultGroup: 'common',
-        className: 'devicon-devicon-plain',
+        className: '',
         companies: {
           aprSystem: ['common'],
           primaris: [],
@@ -359,7 +359,7 @@ import { TechnologyStateModel } from './technology-state.model';
         name: 'Eclipse',
         level: 'beginner',
         defaultGroup: 'common',
-        className: 'devicon-devicon-plain',
+        className: 'devicon-eclipse-plain',
         companies: {
           aprSystem: [],
           primaris: [],
