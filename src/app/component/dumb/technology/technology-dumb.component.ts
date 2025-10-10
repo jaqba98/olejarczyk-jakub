@@ -1,29 +1,20 @@
 import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
-import { IconTextComponent } from '../../text/icon/icon-text.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { BemUtil } from '../../../util/bem.util';
 import { ColorUtil } from '../../../util/color.util';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { RootColorType } from '../../../type/color.type';
-import {
-  TechnologyIconType,
-  TechnologyModel,
-} from '../../../store/technology/technology-state.model';
 
 @Component({
   selector: 'technology-dumb',
   templateUrl: './technology-dumb.component.html',
   styleUrl: './technology-dumb.component.scss',
-  imports: [IconTextComponent, FlexUtilComponent, NgClass, HeadingTextComponent],
+  imports: [FlexUtilComponent, NgClass, HeadingTextComponent],
 })
 export class TechnologyDumbComponent {
   value = input.required<string>();
-
-  type = input.required<TechnologyIconType>();
-
-  devicon = input.required<string>();
 
   svg = input.required<string[]>();
 

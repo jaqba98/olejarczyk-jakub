@@ -27,7 +27,7 @@
                 "input": "public"
               }
             ],
-            "styles": ["node_modules/devicon/devicon.min.css", "src/styles.scss"]
+            "styles": ["src/styles.scss"]
           },
           "configurations": {
             "production": {
