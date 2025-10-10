@@ -22,7 +22,7 @@ export const Heading2: Story = {
   args: {
     level: 2,
     value: 'Heading 2',
-    rootColor: 'complementary',
+    rootColor: 'accent',
   },
 };
 
@@ -30,7 +30,7 @@ export const Heading3: Story = {
   args: {
     level: 3,
     value: 'Heading 3',
-    rootColor: 'accent',
+    rootColor: 'dominant',
   },
 };
 
@@ -38,7 +38,7 @@ export const Heading4: Story = {
   args: {
     level: 4,
     value: 'Heading 4',
-    rootColor: 'dominant',
+    rootColor: 'accent',
   },
 };
 
@@ -46,7 +46,7 @@ export const Heading5: Story = {
   args: {
     level: 5,
     value: 'Heading 5',
-    rootColor: 'complementary',
+    rootColor: 'dominant',
   },
 };
 

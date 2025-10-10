@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
-import { ColorType } from '../../../type/color.type';
+import { RootColorType } from '../../../type/color.type';
 import { ColorUtil } from '../../../util/color.util';
 import { BemUtil } from '../../../util/bem.util';
 
@@ -14,7 +14,7 @@ import { BemUtil } from '../../../util/bem.util';
 export class IconTextComponent {
   icon = input.required<string>();
 
-  rootColor = input.required<ColorType>();
+  rootColor = input.required<RootColorType>();
 
   constructor(
     private readonly bemUtil: BemUtil,

@@ -14,20 +14,13 @@ export const Dominant: Story = {
   args: {
     id: 'technology',
     title: 'Technology',
-    color: 'dominant',
-  },
-};
-
-export const Complementary: Story = {
-  args: {
-    ...Dominant.args,
-    color: 'complementary',
+    rootColor: 'dominant',
   },
 };
 
 export const Accent: Story = {
   args: {
     ...Dominant.args,
-    color: 'accent',
+    rootColor: 'accent',
   },
 };

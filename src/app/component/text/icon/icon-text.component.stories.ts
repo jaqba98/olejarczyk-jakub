@@ -17,13 +17,6 @@ export const Dominant: Story = {
   },
 };
 
-export const Complementary: Story = {
-  args: {
-    ...Dominant.args,
-    rootColor: 'complementary',
-  },
-};
-
 export const Accent: Story = {
   args: {
     ...Dominant.args,

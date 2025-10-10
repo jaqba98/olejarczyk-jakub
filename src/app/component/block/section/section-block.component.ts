@@ -1,12 +1,12 @@
 import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
-import { ColorType } from '../../../type/color.type';
 import { BemUtil } from '../../../util/bem.util';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { MarginUtilComponent } from '../../util/margin/margin-util.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
+import { RootColorType } from '../../../type/color.type';
 
 @Component({
   selector: 'section-block',
@@ -25,12 +25,12 @@ export class SectionBlockComponent {
 
   title = input.required<string>();
 
-  color = input.required<ColorType>();
+  rootColor = input.required<RootColorType>();
 
   constructor(private readonly bemUtil: BemUtil) {}
 
   buildClassNames() {
-    const sectionColor = this.bemUtil.build('section', 'color', this.color());
+    const sectionColor = this.bemUtil.build('section', 'color', this.rootColor());
     return {
       [sectionColor]: true,
     };

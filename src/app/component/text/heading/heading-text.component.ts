@@ -2,9 +2,9 @@ import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 import { HeadingTextLevelType } from './heading-text.type';
-import { ColorType } from '../../../type/color.type';
 import { BemUtil } from '../../../util/bem.util';
 import { ColorUtil } from '../../../util/color.util';
+import { RootColorType } from '../../../type/color.type';
 
 @Component({
   selector: 'heading-text',
@@ -17,7 +17,7 @@ export class HeadingTextComponent {
 
   value = input.required<string>();
 
-  rootColor = input.required<ColorType>();
+  rootColor = input.required<RootColorType>();
 
   constructor(
     private readonly bemUtil: BemUtil,

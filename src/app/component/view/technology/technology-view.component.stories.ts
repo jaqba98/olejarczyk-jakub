@@ -12,4 +12,14 @@ const meta: Meta<TechnologyViewComponent> = {
 export default meta;
 type Story = StoryObj<TechnologyViewComponent>;
 
-export const Primary: Story = {};
+export const Dominant: Story = {
+  args: {
+    rootColor: 'dominant'
+  }
+};
+
+export const Accent: Story = {
+  args: {
+    rootColor: 'accent'
+  }
+};

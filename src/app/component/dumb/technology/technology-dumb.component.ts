@@ -2,11 +2,11 @@ import { Component, input } from '@angular/core';
 import { NgClass } from '@angular/common';
 
 import { IconTextComponent } from '../../text/icon/icon-text.component';
-import { ColorType } from '../../../type/color.type';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { BemUtil } from '../../../util/bem.util';
 import { ColorUtil } from '../../../util/color.util';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
+import { RootColorType } from '../../../type/color.type';
 
 @Component({
   selector: 'technology-dumb',
@@ -24,7 +24,7 @@ export class TechnologyDumbComponent {
 
   icon = input.required<string>();
 
-  rootColor = input.required<ColorType>();
+  rootColor = input.required<RootColorType>();
 
   constructor(
     private readonly bemUtil: BemUtil,
