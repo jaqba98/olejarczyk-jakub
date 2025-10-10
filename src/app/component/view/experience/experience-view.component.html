@@ -1,4 +1,4 @@
-<section-block id="experience" title="Experience" rootColor="dominant">
+<section-block id="experience" title="Experience" rootColor="accent">
   @for (experience of experience$ | async; track experience; let last = $last) {
     <p>{{ experience | json }}</p>
   }

@@ -11,14 +11,16 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  border: 1px solid #50415475;
+  background-color: #50415425;
 
-  &__color {
-    &--dominant {
-      border: 1px solid var(--dominant);
-    }
-
-    &--accent {
-      border: 1px solid var(--accent);
-    }
-  }
+  //&__color {
+  //  &--dominant {
+  //    border: 1px solid var(--dominant);
+  //  }
+  //
+  //  &--accent {
+  //    border: 1px solid var(--accent);
+  //  }
+  //}
 }
