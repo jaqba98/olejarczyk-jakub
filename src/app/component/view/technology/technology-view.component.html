@@ -13,7 +13,14 @@
           @for (category of technology.category; track category) {
             @for (technology of category.technology; track technology) {
               <technology-dumb
-                [icon]="technology.technologyData.className"
+                [type]="technology.technologyData.type"
+                [devicon]="technology.technologyData.devicon"
+                [svg]="technology.technologyData.svg"
+                [width]="technology.technologyData.width"
+                [height]="technology.technologyData.height"
+                [viewBox]="technology.technologyData.viewBox"
+                [fill]="technology.technologyData.fill"
+                [stroke]="technology.technologyData.stroke"
                 [rootColor]="rootColor"
                 [value]="technology.technologyData.name"
               ></technology-dumb>

@@ -1,6 +1,25 @@
 <div class="technology" [ngClass]="buildClassNames()">
   <flex-util gap="small" direction="column" [alignItemsCenter]="true" [justifyContentCenter]="true">
-    <icon-text [icon]="icon()" [rootColor]="rootColor()"></icon-text>
+    @switch (type()) {
+      @case ('devicon') {
+        <icon-text [icon]="devicon()" [rootColor]="rootColor()"></icon-text>
+      }
+      @case ('svg') {
+        <svg
+          role="img"
+          [attr.viewBox]="viewBox()"
+          [attr.width]="width()"
+          [attr.height]="height()"
+          [attr.fill]="fill()"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <title>{{ value() }}</title>
+          @for (svg of svg(); track svg) {
+            <path [attr.d]="svg" [attr.stroke]="stroke()" stroke-width="8" />
+          }
+        </svg>
+      }
+    }
     <heading-text [level]="6" [rootColor]="rootColor()" [value]="value()"></heading-text>
   </flex-util>
 </div>

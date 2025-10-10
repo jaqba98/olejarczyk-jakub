@@ -7,6 +7,10 @@ import { BemUtil } from '../../../util/bem.util';
 import { ColorUtil } from '../../../util/color.util';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { RootColorType } from '../../../type/color.type';
+import {
+  TechnologyIconType,
+  TechnologyModel,
+} from '../../../store/technology/technology-state.model';
 
 @Component({
   selector: 'technology-dumb',
@@ -17,7 +21,21 @@ import { RootColorType } from '../../../type/color.type';
 export class TechnologyDumbComponent {
   value = input.required<string>();
 
-  icon = input.required<string>();
+  type = input.required<TechnologyIconType>();
+
+  devicon = input.required<string>();
+
+  svg = input.required<string[]>();
+
+  width = input.required<string>();
+
+  height = input.required<string>();
+
+  viewBox = input.required<string>();
+
+  fill = input.required<string>();
+
+  stroke = input.required<string>();
 
   rootColor = input.required<RootColorType>();
 
