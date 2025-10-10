@@ -1,5 +1,8 @@
 <section-block id="experience" title="Experience" rootColor="accent">
   @for (experience of experience$ | async; track experience; let last = $last) {
-    <p>{{ experience | json }}</p>
+    <p>{{ experience.company | json }}</p>
+    <p>{{ experience.companyType | json }}</p>
+    <p>{{ experience.experience | json }}</p>
+    <!-- <p>{{ experience.group | json }}</p> -->
   }
 </section-block>

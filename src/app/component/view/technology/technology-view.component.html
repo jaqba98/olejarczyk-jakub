@@ -9,7 +9,7 @@
         ></heading-text>
       </flex-item-util>
       <flex-item-util>
-        <flex-util gap="small">
+        <flex-util gap="small" [wrap]="true">
           @for (category of technology.category; track category) {
             @for (technology of category.technology; track technology) {
               <technology-dumb

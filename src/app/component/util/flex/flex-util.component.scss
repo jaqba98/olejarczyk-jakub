@@ -4,7 +4,10 @@
 
 .flex {
   display: flex;
-  flex-wrap: wrap;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
 
   &__direction {
     &--column {

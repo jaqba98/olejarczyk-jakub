@@ -17,9 +17,3 @@ export const Dominant: Story = {
     rootColor: 'dominant',
   },
 };
-
-export const Accent: Story = {
-  args: {
-    rootColor: 'accent',
-  },
-};

@@ -19,6 +19,8 @@ export class FlexUtilComponent {
 
   justifyContentCenter = input(false);
 
+  wrap = input(false);
+
   constructor(private readonly bemUtil: BemUtil) {}
 
   buildClassNames() {
@@ -26,11 +28,13 @@ export class FlexUtilComponent {
     const flexGap = this.bemUtil.build('flex', 'gap', this.gap());
     const flexAlignItemsCenter = this.bemUtil.build('flex', 'align-items', 'center');
     const flexJustifyContentCenter = this.bemUtil.build('flex', 'justify-content', 'center');
+    const flexWrap = this.bemUtil.build('flex', '', 'wrap');
     return {
       [flexDirectionColumn]: this.direction() === 'column',
       [flexGap]: true,
       [flexAlignItemsCenter]: this.alignItemsCenter(),
       [flexJustifyContentCenter]: this.justifyContentCenter(),
+      [flexWrap]: this.wrap(),
     };
   }
 }
