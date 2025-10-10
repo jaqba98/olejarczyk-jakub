@@ -14,12 +14,12 @@ type Story = StoryObj<TechnologyViewComponent>;
 
 export const Dominant: Story = {
   args: {
-    rootColor: 'dominant'
-  }
+    rootColor: 'dominant',
+  },
 };
 
 export const Accent: Story = {
   args: {
-    rootColor: 'accent'
-  }
+    rootColor: 'accent',
+  },
 };

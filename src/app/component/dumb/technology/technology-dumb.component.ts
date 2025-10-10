@@ -12,12 +12,7 @@ import { RootColorType } from '../../../type/color.type';
   selector: 'technology-dumb',
   templateUrl: './technology-dumb.component.html',
   styleUrl: './technology-dumb.component.scss',
-  imports: [
-    IconTextComponent,
-    FlexUtilComponent,
-    NgClass,
-    HeadingTextComponent,
-  ],
+  imports: [IconTextComponent, FlexUtilComponent, NgClass, HeadingTextComponent],
 })
 export class TechnologyDumbComponent {
   value = input.required<string>();

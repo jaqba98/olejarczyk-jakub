@@ -5,10 +5,7 @@ import { MarkDumbComponent } from './mark-dumb.component';
 const meta: Meta<MarkDumbComponent> = {
   title: 'Component/Dumb/Mark',
   component: MarkDumbComponent,
-  decorators: [
-    moduleMetadata({
-    }),
-  ],
+  decorators: [moduleMetadata({})],
 };
 
 export default meta;
