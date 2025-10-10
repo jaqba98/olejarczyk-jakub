@@ -1,0 +1,22 @@
+:host {
+  display: block;
+}
+
+.small {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.75rem;
+
+  &__color {
+    &--dominant {
+      color: var(--dominant);
+    }
+
+    &--complementary {
+      color: var(--complementary);
+    }
+
+    &--accent {
+      color: var(--accent);
+    }
+  }
+}

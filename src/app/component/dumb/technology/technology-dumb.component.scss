@@ -1,15 +1,16 @@
 :host {
-  display: inline-block;
+  display: block;
 }
 
 .technology {
   padding: 0.5rem;
   border-radius: 0.25rem;
-  min-width: 80px;
-  text-align: center;
+  width: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   &__color {
     &--dominant {

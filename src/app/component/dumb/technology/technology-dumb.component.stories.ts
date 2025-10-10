@@ -12,7 +12,7 @@ type Story = StoryObj<TechnologyDumbComponent>;
 
 export const Default: Story = {
   args: {
-    value: 'JavaScript',
+    value: 'Enterprise Architect',
     icon: 'devicon-javascript-plain',
     rootColor: 'accent',
   },

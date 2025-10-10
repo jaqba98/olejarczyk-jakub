@@ -26,7 +26,7 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
 export class TechnologyViewComponent {
   technology$;
 
-  rootColor: ColorType = 'accent';
+  rootColor: ColorType = 'complementary';
 
   constructor(private readonly builder: TechnologyBuilder) {
     this.technology$ = this.builder.build();
