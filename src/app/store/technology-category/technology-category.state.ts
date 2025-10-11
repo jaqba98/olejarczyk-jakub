@@ -36,8 +36,8 @@ import { TechnologyCategoryStateModel } from './technology-category-state.model'
     containerization: {
       name: 'Containerization',
     },
-    integration: {
-      name: 'Integration',
+    integrationPlatform: {
+      name: 'Integration Platform',
     },
     versionControlSystem: {
       name: 'Version Control System',

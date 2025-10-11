@@ -1,4 +1,4 @@
-export type TechnologyCategoryType =
+export type TechnologyCategoryStateType =
   | 'markupLanguage'
   | 'stylesheetLanguage'
   | 'programmingLanguage'
@@ -9,7 +9,7 @@ export type TechnologyCategoryType =
   | 'server'
   | 'runtime'
   | 'containerization'
-  | 'integration'
+  | 'integrationPlatform'
   | 'versionControlSystem'
   | 'packageManager'
   | 'codeQuality'

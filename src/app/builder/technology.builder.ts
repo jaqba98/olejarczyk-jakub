@@ -10,7 +10,7 @@ import {
   TechnologyGroupStateModel,
 } from '../store/technology-group/technology-group-state.model';
 import { TechnologyCategoryState } from '../store/technology-category/technology-category.state';
-import { TechnologyCategoryType } from '../store/technology-category/technology-category.type';
+import { TechnologyCategoryType } from '../store/technology-category/technology-category-state.type';
 import { TechnologyCategoryModel } from '../store/technology-category/technology-category-state.model';
 import { TechnologyState } from '../store/technology/technology.state';
 
