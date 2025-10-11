@@ -1,5 +1,6 @@
+import { SvgModel } from '../../model/svg.model';
 import { CompanyStateType } from '../company/company-state.type';
-import { TechnologyCategoryType } from '../technology-category/technology-category-state.type';
+import { TechnologyCategoryStateType } from '../technology-category/technology-category-state.type';
 import { TechnologyGroupStateType } from '../technology-group/technology-group-state.type';
 
 type TechnologyLevelType = 'beginner' | 'intermediate' | 'advanced';
@@ -10,15 +11,10 @@ export interface TechnologyModel {
   name: string;
   level: TechnologyLevelType;
   defaultGroup: TechnologyGroupStateType;
-  svg: string[];
-  width: string;
-  height: string;
-  viewBox: string;
-  fill: string;
-  stroke: string;
   companies: TechnologyCompaniesType;
+  svg: SvgModel;
 }
 
 type TechnologyType = Record<string, TechnologyModel>;
 
-export type TechnologyStateModel = Record<TechnologyCategoryType, TechnologyType>;
+export type TechnologyStateModel = Record<TechnologyCategoryStateType, TechnologyType>;
