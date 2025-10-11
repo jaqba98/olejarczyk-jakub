@@ -16,5 +16,6 @@ export class ExperienceViewComponent {
 
   constructor(private readonly builder: ExperienceBuilder) {
     this.experience$ = this.builder.build();
+    this.builder.build().subscribe((i) => console.log(i));
   }
 }

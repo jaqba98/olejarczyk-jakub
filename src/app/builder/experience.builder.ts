@@ -6,15 +6,15 @@ import { from } from 'rxjs';
 import { ExperienceState } from '../state/experience/experience.state';
 import { ExperienceModel, ExperienceStateModel } from '../state/experience/experience-state.model';
 import { CompanyStateType } from '../state/company/company-state.type';
+import { CompanyState } from '../state/company/company.state';
 import { CompanyModel } from '../state/company/company-state.model';
 import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
 import { TechnologyGroupStateType } from '../state/technology-group/technology-group-state.type';
 import { TechnologyGroupModel } from '../state/technology-group/technology-group-state.model';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
+import { TechnologyCategoryStateType } from '../state/technology-category/technology-category-state.type';
 import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
 import { TechnologyState } from '../state/technology/technology.state';
-import { CompanyState } from '../state/company/company.state';
-import { TechnologyCategoryStateType } from '../state/technology-category/technology-category-state.type';
 
 @Injectable()
 export class ExperienceBuilder {
@@ -30,8 +30,8 @@ export class ExperienceBuilder {
     );
   }
 
-  private buildExperience(experienceState: ExperienceStateModel) {
-    return Object.entries(experienceState)
+  private buildExperience(state: ExperienceStateModel) {
+    return Object.entries(state)
       .map((state) => ({
         companyType: state[0] as CompanyStateType,
         experiences: state[1],
@@ -51,35 +51,35 @@ export class ExperienceBuilder {
   }
 
   private addCompany(
-    previousState: {
+    rootState: {
       companyType: CompanyStateType;
       experience: ExperienceModel;
     }[],
   ) {
     return from(this.store.selectOnce(CompanyState.getState)).pipe(
-      map((companyState) => {
-        return previousState.map((previousStateItem) => ({
-          ...previousStateItem,
-          company: companyState[previousStateItem.companyType],
+      map((state) => {
+        return rootState.map((rootStateItem) => ({
+          ...rootStateItem,
+          company: state[rootStateItem.companyType],
         }));
       }),
     );
   }
 
   private addGroup(
-    previousState: {
+    rootState: {
       company: CompanyModel;
       companyType: CompanyStateType;
       experience: ExperienceModel;
     }[],
   ) {
     return from(this.store.selectOnce(TechnologyGroupState.getState)).pipe(
-      map((groupState) => {
-        return previousState.map((previousStateItem) => ({
-          ...previousStateItem,
-          group: Object.entries(groupState).map((state) => ({
-            groupType: state[0] as TechnologyGroupStateType,
-            groupData: state[1],
+      map((state) => {
+        return rootState.map((rootStateItem) => ({
+          ...rootStateItem,
+          group: Object.entries(state).map((array) => ({
+            groupType: array[0] as TechnologyGroupStateType,
+            groupModel: array[1],
           })),
         }));
       }),
@@ -87,10 +87,10 @@ export class ExperienceBuilder {
   }
 
   private addCategory(
-    previousState: {
+    rootState: {
       group: {
         groupType: TechnologyGroupStateType;
-        groupData: TechnologyGroupModel;
+        groupModel: TechnologyGroupModel;
       }[];
       company: CompanyModel;
       companyType: CompanyStateType;
@@ -98,14 +98,14 @@ export class ExperienceBuilder {
     }[],
   ) {
     return from(this.store.selectOnce(TechnologyCategoryState.getState)).pipe(
-      map((categoryState) => {
-        return previousState.map((previousStateItem) => ({
-          ...previousStateItem,
-          group: previousStateItem.group.map((groupItem) => ({
+      map((state) => {
+        return rootState.map((rootStateItem) => ({
+          ...rootStateItem,
+          group: rootStateItem.group.map((groupItem) => ({
             ...groupItem,
-            category: Object.entries(categoryState).map((state) => ({
-              categoryType: state[0] as TechnologyCategoryStateType,
-              categoryData: state[1],
+            category: Object.entries(state).map((array) => ({
+              categoryType: array[0] as TechnologyCategoryStateType,
+              categoryModel: array[1],
             })),
           })),
         }));
@@ -114,14 +114,14 @@ export class ExperienceBuilder {
   }
 
   private addTechnology(
-    previousState: {
+    rootState: {
       group: {
         category: {
           categoryType: TechnologyCategoryStateType;
-          categoryData: TechnologyCategoryModel;
+          categoryModel: TechnologyCategoryModel;
         }[];
         groupType: TechnologyGroupStateType;
-        groupData: TechnologyGroupModel;
+        groupModel: TechnologyGroupModel;
       }[];
       company: CompanyModel;
       companyType: CompanyStateType;
@@ -129,28 +129,28 @@ export class ExperienceBuilder {
     }[],
   ) {
     return from(this.store.selectOnce(TechnologyState.getState)).pipe(
-      map((technologyState) => {
-        return previousState.map((previousStateItem) => ({
-          ...previousStateItem,
-          group: previousStateItem.group
+      map((state) => {
+        return rootState.map((rootStateItem) => ({
+          ...rootStateItem,
+          group: rootStateItem.group
             .map((groupItem) => ({
               ...groupItem,
               category: groupItem.category
                 .map((categoryItem) => ({
                   ...categoryItem,
-                  technology: Object.entries(technologyState)
-                    .map((state) => ({
-                      categoryType: state[0] as TechnologyCategoryStateType,
-                      technologyData: Object.entries(state[1]).map((state) => ({
-                        technologyType: state[0],
-                        technologyData: state[1],
+                  technology: Object.entries(state)
+                    .map((array) => ({
+                      categoryType: array[0] as TechnologyCategoryStateType,
+                      technology: Object.entries(array[1]).map((array) => ({
+                        technologyType: array[0],
+                        technologyModel: array[1],
                       })),
                     }))
-                    .filter((state) => state.categoryType === categoryItem.categoryType)
-                    .map((state) => state.technologyData)
+                    .filter((technology) => technology.categoryType === categoryItem.categoryType)
+                    .map((technology) => technology.technology)
                     .flat()
-                    .filter((state) =>
-                      state.technologyData.companies[previousStateItem.companyType].includes(
+                    .filter((technology) =>
+                      technology.technologyModel.companies[rootStateItem.companyType].includes(
                         groupItem.groupType,
                       ),
                     ),
