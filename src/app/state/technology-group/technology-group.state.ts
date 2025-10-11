@@ -9,27 +9,27 @@ import { SvgConst } from '../../const/svg.const';
   defaults: {
     frontend: {
       name: 'Frontend',
-      svg: SvgConst.html,
+      svg: SvgConst.frontend,
     },
     backend: {
       name: 'Backend',
-      svg: SvgConst.html,
+      svg: SvgConst.backend,
     },
     devops: {
       name: 'DevOps',
-      svg: SvgConst.html,
+      svg: SvgConst.devops,
     },
     integration: {
       name: 'Integration',
-      svg: SvgConst.html,
+      svg: SvgConst.integration,
     },
     ai: {
       name: 'AI',
-      svg: SvgConst.html,
+      svg: SvgConst.ai,
     },
     common: {
       name: 'Common',
-      svg: SvgConst.html,
+      svg: SvgConst.common,
     },
   },
 })

@@ -27,7 +27,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.css,
       },
       sass: {
         name: 'Sass',
@@ -37,7 +37,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.sass,
       },
     },
     programmingLanguage: {
@@ -49,7 +49,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend', 'backend'],
           primaris: ['integration'],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.javascript,
       },
       typescript: {
         name: 'TypeScript',
@@ -59,7 +59,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend', 'backend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.typescript,
       },
       java: {
         name: 'Java',
@@ -69,7 +69,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.java,
       },
       python: {
         name: 'Python',
@@ -79,7 +79,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.python,
       },
     },
     framework: {
@@ -91,7 +91,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.angular,
       },
     },
     library: {
@@ -103,7 +103,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.rxjs,
       },
       ngxs: {
         name: 'NGXS',
@@ -113,7 +113,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.ngxs,
       },
       storybook: {
         name: 'Storybook',
@@ -123,7 +123,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.storybook,
       },
       primeng: {
         name: 'PrimeNG',
@@ -133,7 +133,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.primeng,
       },
       numpy: {
         name: 'NumPy',
@@ -143,7 +143,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.numpy,
       },
     },
     test: {
@@ -155,7 +155,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['frontend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.jest,
       },
     },
     database: {
@@ -167,7 +167,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['backend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.postgresql,
       },
       microsoftSqlServer: {
         name: 'Microsoft SQL Server',
@@ -177,7 +177,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: ['integration'],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.microsoftSqlServer,
       },
     },
     server: {
@@ -189,7 +189,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.nginx,
       },
     },
     runtime: {
@@ -201,7 +201,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['backend'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.nodejs,
       },
     },
     containerization: {
@@ -213,7 +213,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['devops'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.docker,
       },
     },
     integrationPlatform: {
@@ -225,7 +225,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: ['integration'],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.snaplogic,
       },
       n8n: {
         name: 'N8N',
@@ -235,7 +235,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.n8n,
       },
     },
     versionControlSystem: {
@@ -247,7 +247,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.git,
       },
       github: {
         name: 'GitHub',
@@ -257,7 +257,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: ['common'],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.github,
       },
       gitlab: {
         name: 'GitLab',
@@ -267,7 +267,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.gitlab,
       },
     },
     packageManager: {
@@ -279,7 +279,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.npm,
       },
       pnpm: {
         name: 'pnpm',
@@ -289,7 +289,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.pnpm,
       },
     },
     codeQuality: {
@@ -301,7 +301,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.eslint,
       },
       prettier: {
         name: 'Prettier',
@@ -311,7 +311,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.prettier,
       },
       stylelint: {
         name: 'Stylelint',
@@ -321,7 +321,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.stylelint,
       },
     },
     developerTool: {
@@ -333,7 +333,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: ['common'],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.postman,
       },
       nx: {
         name: 'Nx',
@@ -343,7 +343,17 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.nx,
+      },
+      enterpriseArchitect: {
+        name: 'Enterprise Architect',
+        level: 'beginner',
+        defaultGroup: 'common',
+        companies: {
+          aprSystem: ['common'],
+          primaris: [],
+        },
+        svg: SvgConst.enterpriseArchitect,
       },
       visualParadigm: {
         name: 'Visual Paradigm',
@@ -353,7 +363,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.visualParadigm,
       },
       webstorm: {
         name: 'WebStorm',
@@ -363,7 +373,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.webstorm,
       },
       visualStudioCode: {
         name: 'Visual Studio Code',
@@ -373,7 +383,7 @@ import { Injectable } from '@angular/core';
           aprSystem: ['common'],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.visualStudioCode,
       },
       eclipse: {
         name: 'Eclipse',
@@ -383,7 +393,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.eclipse,
       },
       jira: {
         name: 'Jira',
@@ -393,7 +403,7 @@ import { Injectable } from '@angular/core';
           aprSystem: [],
           primaris: ['common'],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.jira,
       },
     },
     operatingSystem: {
@@ -405,7 +415,7 @@ import { Injectable } from '@angular/core';
           primaris: ['common'],
           aprSystem: ['common'],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.window,
       },
       linux: {
         name: 'Linux',
@@ -415,7 +425,7 @@ import { Injectable } from '@angular/core';
           primaris: [],
           aprSystem: [],
         },
-        svg: SvgConst.html,
+        svg: SvgConst.linux,
       },
     },
   },
