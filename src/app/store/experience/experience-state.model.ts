@@ -1,4 +1,4 @@
-import { CompanyType } from '../company/company-state.type';
+import { CompanyStateType } from '../company/company-state.type';
 
 type TitleType = 'Full Stack Developer' | 'Integration Engineer';
 
@@ -15,4 +15,4 @@ export interface ExperienceModel {
   description: string[];
 }
 
-export type ExperienceStateModel = Record<CompanyType, ExperienceModel[]>;
+export type ExperienceStateModel = Record<CompanyStateType, ExperienceModel[]>;

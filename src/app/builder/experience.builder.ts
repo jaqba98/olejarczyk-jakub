@@ -5,8 +5,7 @@ import { from } from 'rxjs';
 
 import { ExperienceState } from '../store/experience/experience.state';
 import { ExperienceModel, ExperienceStateModel } from '../store/experience/experience-state.model';
-import { CompanyType } from '../store/company/company-state.type';
-import { CompanyState } from '../store/company/company.state';
+import { CompanyStateType } from '../store/company/company-state.type';
 import { CompanyModel } from '../store/company/company-state.model';
 import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
 import { TechnologyGroupType } from '../store/technology-group/technology-group.type';
@@ -15,6 +14,7 @@ import { TechnologyCategoryState } from '../store/technology-category/technology
 import { TechnologyCategoryType } from '../store/technology-category/technology-category.type';
 import { TechnologyCategoryModel } from '../store/technology-category/technology-category-state.model';
 import { TechnologyState } from '../store/technology/technology.state';
+import { CompanyState } from '../store/company/company.state';
 
 @Injectable()
 export class ExperienceBuilder {
@@ -33,7 +33,7 @@ export class ExperienceBuilder {
   private buildExperience(experienceState: ExperienceStateModel) {
     return Object.entries(experienceState)
       .map((state) => ({
-        companyType: state[0] as CompanyType,
+        companyType: state[0] as CompanyStateType,
         experiences: state[1],
       }))
       .map((state) => {
@@ -52,7 +52,7 @@ export class ExperienceBuilder {
 
   private addCompany(
     previousState: {
-      companyType: CompanyType;
+      companyType: CompanyStateType;
       experience: ExperienceModel;
     }[],
   ) {
@@ -69,7 +69,7 @@ export class ExperienceBuilder {
   private addGroup(
     previousState: {
       company: CompanyModel;
-      companyType: CompanyType;
+      companyType: CompanyStateType;
       experience: ExperienceModel;
     }[],
   ) {
@@ -93,7 +93,7 @@ export class ExperienceBuilder {
         groupData: TechnologyGroupModel;
       }[];
       company: CompanyModel;
-      companyType: CompanyType;
+      companyType: CompanyStateType;
       experience: ExperienceModel;
     }[],
   ) {
@@ -124,7 +124,7 @@ export class ExperienceBuilder {
         groupData: TechnologyGroupModel;
       }[];
       company: CompanyModel;
-      companyType: CompanyType;
+      companyType: CompanyStateType;
       experience: ExperienceModel;
     }[],
   ) {

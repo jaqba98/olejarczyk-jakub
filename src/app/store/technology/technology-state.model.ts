@@ -1,10 +1,10 @@
-import { CompanyType } from '../company/company-state.type';
+import { CompanyStateType } from '../company/company-state.type';
 import { TechnologyCategoryType } from '../technology-category/technology-category.type';
 import { TechnologyGroupType } from '../technology-group/technology-group.type';
 
 type TechnologyLevelType = 'beginner' | 'intermediate' | 'advanced';
 
-type TechnologyCompaniesType = Record<CompanyType, TechnologyGroupType[]>;
+type TechnologyCompaniesType = Record<CompanyStateType, TechnologyGroupType[]>;
 
 export interface TechnologyModel {
   name: string;
