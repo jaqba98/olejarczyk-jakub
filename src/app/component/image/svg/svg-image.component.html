@@ -6,7 +6,7 @@
   xmlns="http://www.w3.org/2000/svg"
   [attr.fill]="buildFill()"
 >
-  <g [attr.transform]="'scale(' + this.model().args.scale + ')'">
+  <g [attr.transform]="getTransform()">
     @for (path of model().paths; track path) {
       <path [attr.d]="path" stroke="#000" [attr.stroke-width]="model().args.strokeWidth" />
     }

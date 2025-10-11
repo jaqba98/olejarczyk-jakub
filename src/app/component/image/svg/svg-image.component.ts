@@ -12,4 +12,9 @@ export class SvgImageComponent {
   buildFill() {
     return this.model().args.fill ? '#000' : 'none';
   }
+
+  getTransform(): string {
+    const { transform, scale } = this.model().args;
+    return `translate(${transform.left}, ${transform.top}) scale(${scale})`;
+  }
 }

@@ -4,5 +4,9 @@ export interface SvgModel {
     scale: number;
     strokeWidth: number;
     fill: boolean;
+    transform: {
+      left: number;
+      top: number;
+    };
   };
 }
