@@ -1,4 +1,4 @@
-import { CompanyType } from './company.type';
+import { CompanyStateType } from './company-state.type';
 
 export interface CompanyModel {
   name: string;
@@ -6,4 +6,4 @@ export interface CompanyModel {
   country: string;
 }
 
-export type CompanyStateModel = Record<CompanyType, CompanyModel>;
+export type CompanyStateModel = Record<CompanyStateType, CompanyModel>;

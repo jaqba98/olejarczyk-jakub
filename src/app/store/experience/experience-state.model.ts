@@ -1,4 +1,4 @@
-import { CompanyType } from '../company/company.type';
+import { CompanyType } from '../company/company-state.type';
 
 type TitleType = 'Full Stack Developer' | 'Integration Engineer';
 

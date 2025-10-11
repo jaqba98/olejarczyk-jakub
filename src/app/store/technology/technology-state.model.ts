@@ -1,4 +1,4 @@
-import { CompanyType } from '../company/company.type';
+import { CompanyType } from '../company/company-state.type';
 import { TechnologyCategoryType } from '../technology-category/technology-category.type';
 import { TechnologyGroupType } from '../technology-group/technology-group.type';
 

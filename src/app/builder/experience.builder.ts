@@ -5,7 +5,7 @@ import { from } from 'rxjs';
 
 import { ExperienceState } from '../store/experience/experience.state';
 import { ExperienceModel, ExperienceStateModel } from '../store/experience/experience-state.model';
-import { CompanyType } from '../store/company/company.type';
+import { CompanyType } from '../store/company/company-state.type';
 import { CompanyState } from '../store/company/company.state';
 import { CompanyModel } from '../store/company/company-state.model';
 import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
