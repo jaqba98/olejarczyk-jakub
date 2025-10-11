@@ -1,17 +1,17 @@
 import { CompanyStateType } from '../company/company-state.type';
 
-type TitleType = 'Full Stack Developer' | 'Integration Engineer';
+type ExperienceTitleType = 'Full Stack Developer' | 'Integration Engineer';
 
-type EmploymentTypeType = 'Full-time';
+type ExperienceEmploymentType = 'Full-time';
 
-type LocationType = 'On-site' | 'Remote';
+type ExperienceLocationType = 'On-site' | 'Remote';
 
 export interface ExperienceModel {
-  title: TitleType;
-  employmentType: EmploymentTypeType;
+  title: ExperienceTitleType;
+  employment: ExperienceEmploymentType;
   startDate: Date;
   endDate: Date | null;
-  locationType: LocationType;
+  location: ExperienceLocationType;
   description: string[];
 }
 

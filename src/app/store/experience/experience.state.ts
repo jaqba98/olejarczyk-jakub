@@ -1,7 +1,7 @@
 import { Selector, State } from '@ngxs/store';
-import { Injectable } from '@angular/core';
 
 import { ExperienceStateModel } from './experience-state.model';
+import { Injectable } from '@angular/core';
 
 @State<ExperienceStateModel>({
   name: 'experience',
@@ -9,10 +9,10 @@ import { ExperienceStateModel } from './experience-state.model';
     aprSystem: [
       {
         title: 'Full Stack Developer',
-        employmentType: 'Full-time',
+        employment: 'Full-time',
         startDate: new Date('2020-08-01'),
         endDate: new Date('2025-03-01'),
-        locationType: 'On-site',
+        location: 'On-site',
         description: [
           'Developed and styled user interfaces using HTML, CSS/SCSS, JavaScript, TypeScript, and the Angular framework.',
           'Built dynamic and reusable components in the Storybook environment using the PrimeNG library.',
@@ -35,10 +35,10 @@ import { ExperienceStateModel } from './experience-state.model';
     primaris: [
       {
         title: 'Integration Engineer',
-        employmentType: 'Full-time',
+        employment: 'Full-time',
         startDate: new Date('2025-06-01'),
         endDate: null,
-        locationType: 'Remote',
+        location: 'Remote',
         description: [
           'Designed, and managed relational databases using Microsoft SQL Server, including writing complex queries and stored procedures.',
           'Developed and maintained data integration pipelines in SnapLogic to automate workflows and enable seamless data exchange between systems.',
