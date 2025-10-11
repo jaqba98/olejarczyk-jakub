@@ -1,4 +1,4 @@
-export type TechnologyGroupType =
+export type TechnologyGroupStateType =
   | 'frontend'
   | 'backend'
   | 'devops'

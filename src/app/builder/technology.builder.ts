@@ -4,7 +4,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { from } from 'rxjs';
 
 import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
-import { TechnologyGroupType } from '../store/technology-group/technology-group.type';
+import { TechnologyGroupStateType } from '../store/technology-group/technology-group-state.type';
 import {
   TechnologyGroupModel,
   TechnologyGroupStateModel,
@@ -28,14 +28,14 @@ export class TechnologyBuilder {
 
   private buildGroup(state: TechnologyGroupStateModel) {
     return Object.entries(state).map((group) => ({
-      groupType: group[0] as TechnologyGroupType,
+      groupType: group[0] as TechnologyGroupStateType,
       groupData: group[1],
     }));
   }
 
   private addCategory(
     previousState: {
-      groupType: TechnologyGroupType;
+      groupType: TechnologyGroupStateType;
       groupData: TechnologyGroupModel;
     }[],
   ) {
@@ -58,7 +58,7 @@ export class TechnologyBuilder {
         categoryType: TechnologyCategoryType;
         categoryData: TechnologyCategoryModel;
       }[];
-      groupType: TechnologyGroupType;
+      groupType: TechnologyGroupStateType;
       groupData: TechnologyGroupModel;
     }[],
   ) {

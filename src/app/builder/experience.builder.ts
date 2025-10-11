@@ -8,7 +8,7 @@ import { ExperienceModel, ExperienceStateModel } from '../store/experience/exper
 import { CompanyStateType } from '../store/company/company-state.type';
 import { CompanyModel } from '../store/company/company-state.model';
 import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
-import { TechnologyGroupType } from '../store/technology-group/technology-group.type';
+import { TechnologyGroupStateType } from '../store/technology-group/technology-group-state.type';
 import { TechnologyGroupModel } from '../store/technology-group/technology-group-state.model';
 import { TechnologyCategoryState } from '../store/technology-category/technology-category.state';
 import { TechnologyCategoryType } from '../store/technology-category/technology-category.type';
@@ -78,7 +78,7 @@ export class ExperienceBuilder {
         return previousState.map((previousStateItem) => ({
           ...previousStateItem,
           group: Object.entries(groupState).map((state) => ({
-            groupType: state[0] as TechnologyGroupType,
+            groupType: state[0] as TechnologyGroupStateType,
             groupData: state[1],
           })),
         }));
@@ -89,7 +89,7 @@ export class ExperienceBuilder {
   private addCategory(
     previousState: {
       group: {
-        groupType: TechnologyGroupType;
+        groupType: TechnologyGroupStateType;
         groupData: TechnologyGroupModel;
       }[];
       company: CompanyModel;
@@ -120,7 +120,7 @@ export class ExperienceBuilder {
           categoryType: TechnologyCategoryType;
           categoryData: TechnologyCategoryModel;
         }[];
-        groupType: TechnologyGroupType;
+        groupType: TechnologyGroupStateType;
         groupData: TechnologyGroupModel;
       }[];
       company: CompanyModel;

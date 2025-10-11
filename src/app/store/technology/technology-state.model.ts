@@ -1,15 +1,15 @@
 import { CompanyStateType } from '../company/company-state.type';
 import { TechnologyCategoryType } from '../technology-category/technology-category.type';
-import { TechnologyGroupType } from '../technology-group/technology-group.type';
+import { TechnologyGroupStateType } from '../technology-group/technology-group-state.type';
 
 type TechnologyLevelType = 'beginner' | 'intermediate' | 'advanced';
 
-type TechnologyCompaniesType = Record<CompanyStateType, TechnologyGroupType[]>;
+type TechnologyCompaniesType = Record<CompanyStateType, TechnologyGroupStateType[]>;
 
 export interface TechnologyModel {
   name: string;
   level: TechnologyLevelType;
-  defaultGroup: TechnologyGroupType;
+  defaultGroup: TechnologyGroupStateType;
   svg: string[];
   width: string;
   height: string;
