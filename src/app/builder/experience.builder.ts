@@ -3,18 +3,18 @@ import { Store } from '@ngxs/store';
 import { map, switchMap } from 'rxjs/operators';
 import { from } from 'rxjs';
 
-import { ExperienceState } from '../store/experience/experience.state';
-import { ExperienceModel, ExperienceStateModel } from '../store/experience/experience-state.model';
-import { CompanyStateType } from '../store/company/company-state.type';
-import { CompanyModel } from '../store/company/company-state.model';
-import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
-import { TechnologyGroupStateType } from '../store/technology-group/technology-group-state.type';
-import { TechnologyGroupModel } from '../store/technology-group/technology-group-state.model';
-import { TechnologyCategoryState } from '../store/technology-category/technology-category.state';
-import { TechnologyCategoryType } from '../store/technology-category/technology-category-state.type';
-import { TechnologyCategoryModel } from '../store/technology-category/technology-category-state.model';
-import { TechnologyState } from '../store/technology/technology.state';
-import { CompanyState } from '../store/company/company.state';
+import { ExperienceState } from '../state/experience/experience.state';
+import { ExperienceModel, ExperienceStateModel } from '../state/experience/experience-state.model';
+import { CompanyStateType } from '../state/company/company-state.type';
+import { CompanyModel } from '../state/company/company-state.model';
+import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
+import { TechnologyGroupStateType } from '../state/technology-group/technology-group-state.type';
+import { TechnologyGroupModel } from '../state/technology-group/technology-group-state.model';
+import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
+import { TechnologyCategoryType } from '../state/technology-category/technology-category-state.type';
+import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
+import { TechnologyState } from '../state/technology/technology.state';
+import { CompanyState } from '../state/company/company.state';
 
 @Injectable()
 export class ExperienceBuilder {

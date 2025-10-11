@@ -3,16 +3,16 @@ import { Store } from '@ngxs/store';
 import { map, switchMap } from 'rxjs/operators';
 import { from } from 'rxjs';
 
-import { TechnologyGroupState } from '../store/technology-group/technology-group.state';
-import { TechnologyGroupStateType } from '../store/technology-group/technology-group-state.type';
+import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
+import { TechnologyGroupStateType } from '../state/technology-group/technology-group-state.type';
 import {
   TechnologyGroupModel,
   TechnologyGroupStateModel,
-} from '../store/technology-group/technology-group-state.model';
-import { TechnologyCategoryState } from '../store/technology-category/technology-category.state';
-import { TechnologyCategoryType } from '../store/technology-category/technology-category-state.type';
-import { TechnologyCategoryModel } from '../store/technology-category/technology-category-state.model';
-import { TechnologyState } from '../store/technology/technology.state';
+} from '../state/technology-group/technology-group-state.model';
+import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
+import { TechnologyCategoryType } from '../state/technology-category/technology-category-state.type';
+import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
+import { TechnologyState } from '../state/technology/technology.state';
 
 @Injectable()
 export class TechnologyBuilder {
