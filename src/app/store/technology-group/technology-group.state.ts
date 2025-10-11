@@ -2,75 +2,34 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { TechnologyGroupStateModel } from './technology-group-state.model';
+import { SvgConst } from '../../const/svg.const';
 
 @State<TechnologyGroupStateModel>({
   name: 'technologyGroup',
   defaults: {
     frontend: {
       name: 'Frontend',
-      svg: {
-        paths: [],
-        width: '',
-        height: '',
-        viewBox: '',
-        fill: '',
-        stroke: '',
-      },
+      svg: SvgConst.html,
     },
     backend: {
       name: 'Backend',
-      svg: {
-        paths: [],
-        width: '',
-        height: '',
-        viewBox: '',
-        fill: '',
-        stroke: '',
-      },
+      svg: SvgConst.html,
     },
     devops: {
       name: 'DevOps',
-      svg: {
-        paths: [],
-        width: '',
-        height: '',
-        viewBox: '',
-        fill: '',
-        stroke: '',
-      },
+      svg: SvgConst.html,
     },
     integration: {
       name: 'Integration',
-      svg: {
-        paths: [],
-        width: '',
-        height: '',
-        viewBox: '',
-        fill: '',
-        stroke: '',
-      },
+      svg: SvgConst.html,
     },
     ai: {
       name: 'AI',
-      svg: {
-        paths: [],
-        width: '',
-        height: '',
-        viewBox: '',
-        fill: '',
-        stroke: '',
-      },
+      svg: SvgConst.html,
     },
     common: {
       name: 'Common',
-      svg: {
-        paths: [],
-        width: '',
-        height: '',
-        viewBox: '',
-        fill: '',
-        stroke: '',
-      },
+      svg: SvgConst.html,
     },
   },
 })
