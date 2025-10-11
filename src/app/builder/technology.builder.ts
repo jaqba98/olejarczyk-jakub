@@ -10,7 +10,7 @@ import {
   TechnologyGroupStateModel,
 } from '../state/technology-group/technology-group-state.model';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
-import { TechnologyCategoryType } from '../state/technology-category/technology-category-state.type';
+import { TechnologyCategoryStateType } from '../state/technology-category/technology-category-state.type';
 import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
 import { TechnologyState } from '../state/technology/technology.state';
 
@@ -44,7 +44,7 @@ export class TechnologyBuilder {
         return previousState.map((previousStateItem) => ({
           ...previousStateItem,
           category: Object.entries(categoryState).map((state) => ({
-            categoryType: state[0] as TechnologyCategoryType,
+            categoryType: state[0] as TechnologyCategoryStateType,
             categoryData: state[1],
           })),
         }));
@@ -55,7 +55,7 @@ export class TechnologyBuilder {
   private addTechnology(
     previousState: {
       category: {
-        categoryType: TechnologyCategoryType;
+        categoryType: TechnologyCategoryStateType;
         categoryData: TechnologyCategoryModel;
       }[];
       groupType: TechnologyGroupStateType;
@@ -72,7 +72,7 @@ export class TechnologyBuilder {
                 ...categoryItem,
                 technology: Object.entries(technologyState)
                   .map((state) => ({
-                    categoryType: state[0] as TechnologyCategoryType,
+                    categoryType: state[0] as TechnologyCategoryStateType,
                     technologyData: Object.entries(state[1]).map((state) => ({
                       technologyType: state[0],
                       technologyData: state[1],

@@ -11,10 +11,10 @@ import { TechnologyGroupState } from '../state/technology-group/technology-group
 import { TechnologyGroupStateType } from '../state/technology-group/technology-group-state.type';
 import { TechnologyGroupModel } from '../state/technology-group/technology-group-state.model';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
-import { TechnologyCategoryType } from '../state/technology-category/technology-category-state.type';
 import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
 import { TechnologyState } from '../state/technology/technology.state';
 import { CompanyState } from '../state/company/company.state';
+import { TechnologyCategoryStateType } from '../state/technology-category/technology-category-state.type';
 
 @Injectable()
 export class ExperienceBuilder {
@@ -104,7 +104,7 @@ export class ExperienceBuilder {
           group: previousStateItem.group.map((groupItem) => ({
             ...groupItem,
             category: Object.entries(categoryState).map((state) => ({
-              categoryType: state[0] as TechnologyCategoryType,
+              categoryType: state[0] as TechnologyCategoryStateType,
               categoryData: state[1],
             })),
           })),
@@ -117,7 +117,7 @@ export class ExperienceBuilder {
     previousState: {
       group: {
         category: {
-          categoryType: TechnologyCategoryType;
+          categoryType: TechnologyCategoryStateType;
           categoryData: TechnologyCategoryModel;
         }[];
         groupType: TechnologyGroupStateType;
@@ -140,7 +140,7 @@ export class ExperienceBuilder {
                   ...categoryItem,
                   technology: Object.entries(technologyState)
                     .map((state) => ({
-                      categoryType: state[0] as TechnologyCategoryType,
+                      categoryType: state[0] as TechnologyCategoryStateType,
                       technologyData: Object.entries(state[1]).map((state) => ({
                         technologyType: state[0],
                         technologyData: state[1],
