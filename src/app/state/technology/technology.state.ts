@@ -345,16 +345,6 @@ import { Injectable } from '@angular/core';
         },
         svg: SvgConst.nx,
       },
-      enterpriseArchitect: {
-        name: 'Enterprise Architect',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.enterpriseArchitect,
-      },
       visualParadigm: {
         name: 'Visual Paradigm',
         level: 'beginner',

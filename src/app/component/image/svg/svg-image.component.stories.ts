@@ -232,12 +232,6 @@ export const nx: Story = {
   },
 };
 
-export const enterpriseArchitect: Story = {
-  args: {
-    model: SvgConst.enterpriseArchitect,
-  },
-};
-
 export const visualParadigm: Story = {
   args: {
     model: SvgConst.visualParadigm,
