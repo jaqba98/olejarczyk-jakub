@@ -11,41 +11,6 @@ const meta: Meta<SvgImageComponent> = {
 export default meta;
 type Story = StoryObj<SvgImageComponent>;
 
-export const frontend: Story = {
-  args: {
-    model: SvgConst.frontend,
-  },
-};
-
-export const backend: Story = {
-  args: {
-    model: SvgConst.backend,
-  },
-};
-export const devops: Story = {
-  args: {
-    model: SvgConst.devops,
-  },
-};
-
-export const integration: Story = {
-  args: {
-    model: SvgConst.integration,
-  },
-};
-
-export const ai: Story = {
-  args: {
-    model: SvgConst.ai,
-  },
-};
-
-export const common: Story = {
-  args: {
-    model: SvgConst.common,
-  },
-};
-
 export const html: Story = {
   args: {
     model: SvgConst.html,
