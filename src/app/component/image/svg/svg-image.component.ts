@@ -8,4 +8,8 @@ import { SvgModel } from '../../../model/svg.model';
 })
 export class SvgImageComponent {
   model = input.required<SvgModel>();
+
+  buildFill() {
+    return this.model().args.fill ? '#000' : 'none';
+  }
 }
