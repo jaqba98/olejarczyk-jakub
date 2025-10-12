@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use '../const';
+@use '../util';
+
+:root {
+  @each $color in const.$color-palette {
+    $name: map.get($color, 'name');
+    $value: map.get($color, 'value');
+    $tonal-scale: map.get($color, 'tonal-scale');
+    @if $tonal-scale {
+      @each $key, $tonal-value in util.tonal-scale($value) {
+        --color-#{$name}-#{$key}: #{$tonal-value};
+      }
+    } @else {
+      --color-#{$name}: #{$value};
+    }
+  }
+}

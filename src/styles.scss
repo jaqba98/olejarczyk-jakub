@@ -1,14 +1,9 @@
+@forward 'style';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-:root {
-  --dominant: #222831;
-  --accent: #eeeeee;
-  --dominant25: #22283125;
-  --accent25: #eeeeee25;
 }
 
 html {

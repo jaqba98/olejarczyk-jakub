@@ -1,0 +1,16 @@
+@use 'sass:color';
+
+@function tonal-scale($color) {
+  @return (
+    50: color.adjust($color, $lightness: 25%),
+    100: color.adjust($color, $lightness: 20%),
+    200: color.adjust($color, $lightness: 15%),
+    300: color.adjust($color, $lightness: 10%),
+    400: color.adjust($color, $lightness: 5%),
+    500: $color,
+    600: color.adjust($color, $lightness: -5%),
+    700: color.adjust($color, $lightness: -10%),
+    800: color.adjust($color, $lightness: -15%),
+    900: color.adjust($color, $lightness: -20%)
+  );
+}
