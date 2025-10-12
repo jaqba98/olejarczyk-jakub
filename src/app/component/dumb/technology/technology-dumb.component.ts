@@ -5,7 +5,6 @@ import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { BemUtil } from '../../../util/bem.util';
 import { ColorUtil } from '../../../util/color.util';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
-import { RootColorType } from '../../../type/color.type';
 
 @Component({
   selector: 'technology-dumb',
@@ -28,7 +27,7 @@ export class TechnologyDumbComponent {
 
   stroke = input.required<string>();
 
-  rootColor = input.required<RootColorType>();
+  rootColor = input.required<string>();
 
   constructor(
     private readonly bemUtil: BemUtil,

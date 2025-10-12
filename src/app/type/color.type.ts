@@ -1,3 +1,24 @@
-export type ColorType = 'dominant' | 'complementary' | 'accent';
-
-export type RootColorType = 'dominant' | 'accent';
+export type ColorType =
+  | 'primary50'
+  | 'primary100'
+  | 'primary200'
+  | 'primary300'
+  | 'primary400'
+  | 'primary500'
+  | 'primary600'
+  | 'primary700'
+  | 'primary800'
+  | 'primary900'
+  | 'gray50'
+  | 'gray100'
+  | 'gray200'
+  | 'gray300'
+  | 'gray400'
+  | 'gray500'
+  | 'gray600'
+  | 'gray700'
+  | 'gray800'
+  | 'gray900'
+  | 'success'
+  | 'warning'
+  | 'error';

@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 import { TechnologyBuilder } from '../../../builder/technology.builder';
-import { RootColorType } from '../../../type/color.type';
 
 @Component({
   selector: 'technology-view',
@@ -14,7 +13,7 @@ import { RootColorType } from '../../../type/color.type';
 export class TechnologyViewComponent {
   // technology$;
 
-  rootColor: RootColorType = 'dominant';
+  rootColor: string = 'dominant';
 
   constructor(private readonly builder: TechnologyBuilder) {
     this.builder.build().subscribe((i) => console.log(i));

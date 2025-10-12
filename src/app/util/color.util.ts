@@ -1,10 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import { RootColorType } from '../type/color.type';
-
 @Injectable({ providedIn: 'root' })
 export class ColorUtil {
-  convertToAccent(rootColor: RootColorType): RootColorType {
+  convertToAccent(rootColor: string): string {
     switch (rootColor) {
       case 'dominant':
         return 'accent';

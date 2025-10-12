@@ -6,7 +6,6 @@ import { HeadingTextComponent } from '../../text/heading/heading-text.component'
 import { MarginUtilComponent } from '../../util/margin/margin-util.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
-import { RootColorType } from '../../../type/color.type';
 
 @Component({
   selector: 'section-block',
@@ -25,7 +24,7 @@ export class SectionBlockComponent {
 
   title = input.required<string>();
 
-  rootColor = input.required<RootColorType>();
+  rootColor = input.required<string>();
 
   constructor(private readonly bemUtil: BemUtil) {}
 

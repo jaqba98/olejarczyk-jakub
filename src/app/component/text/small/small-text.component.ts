@@ -1,7 +1,6 @@
 import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 
-import { RootColorType } from '../../../type/color.type';
 import { BemUtil } from '../../../util/bem.util';
 import { ColorUtil } from '../../../util/color.util';
 
@@ -14,7 +13,7 @@ import { ColorUtil } from '../../../util/color.util';
 export class SmallTextComponent {
   value = input.required<string>();
 
-  rootColor = input.required<RootColorType>();
+  rootColor = input.required<string>();
 
   constructor(
     private readonly bemUtil: BemUtil,
