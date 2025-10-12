@@ -8,5 +8,20 @@ $color-palette: (
     'name': 'gray',
     'value': #9ca3af,
     'tonal-scale': true,
+  ),
+  (
+    'name': 'success',
+    'value': #10b981,
+    'tonal-scale': false,
+  ),
+  (
+    'name': 'warning',
+    'value': #f59e0b,
+    'tonal-scale': false,
+  ),
+  (
+    'name': 'error',
+    'value': #ef4444,
+    'tonal-scale': false,
   )
 );
