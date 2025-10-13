@@ -1,1 +1,1 @@
-export type MarginUtilMaxWidthType = '100%' | '960px';
+export type MarginUtilMaxWidthType = 'full' | '960px';

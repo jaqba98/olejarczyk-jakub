@@ -1,17 +1,5 @@
-:host {
-  display: block;
-}
-
 .margin {
-  &__auto {
-    &--left {
-      margin-right: auto;
-    }
-
-    &--right {
-      margin-left: auto;
-    }
-  }
+  margin: auto;
 
   &__max-width {
     &--full {
