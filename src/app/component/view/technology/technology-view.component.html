@@ -5,7 +5,16 @@
   title="Technology"
   titleColor="gray--50"
 >
-  @for (technology of technology$ | async; track technology) {
-    <p>{{ technology.groupType }}</p>
-  }
+  <flex-util gap="big">
+    @for (technologyRoot of technology$ | async; track technologyRoot) {
+      <flex-item-util>
+        <p>{{ technologyRoot.groupModel.name }}</p>
+        @for (category of technologyRoot.category; track category) {
+          @for (technology of category.technology; track technology) {
+            <p>{{ technology.technologyModel.name }}</p>
+          }
+        }
+      </flex-item-util>
+    }
+  </flex-util>
 </section-block>

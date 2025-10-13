@@ -5,7 +5,28 @@
   title="Experience"
   titleColor="primary--500"
 >
-  @for (experience of experience$ | async; track experience) {
-    <p>{{ experience.company.name }}</p>
-  }
+  <flex-util gap="big">
+    @for (experience of experience$ | async; track experience) {
+      <flex-item-util>
+        <p>{{ experience.company.name }}</p>
+        <p>{{ experience.company.city }}</p>
+        <p>{{ experience.company.country }}</p>
+        <p>{{ experience.experience.employment }}</p>
+        <p>{{ experience.experience.startDate }}</p>
+        <p>{{ experience.experience.endDate }}</p>
+        <p>{{ experience.experience.location }}</p>
+        <p>{{ experience.experience.title }}</p>
+        @for (description of experience.experience.description; track description) {
+          <p>{{ description }}</p>
+        }
+        @for (group of experience.group; track group) {
+          @for (category of group.category; track category) {
+            @for (technology of category.technology; track technology) {
+              <p>{{ technology.technologyModel.name }}</p>
+            }
+          }
+        }
+      </flex-item-util>
+    }
+  </flex-util>
 </section-block>
