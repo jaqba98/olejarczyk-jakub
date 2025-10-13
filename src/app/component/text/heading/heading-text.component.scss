@@ -1,19 +1,5 @@
-:host {
-  display: block;
-}
-
 .heading {
   font-family: 'Open Sans', sans-serif;
-
-  &__color {
-    &--dominant {
-      color: var(--dominant);
-    }
-
-    &--accent {
-      color: var(--accent);
-    }
-  }
 
   &1 {
     font-size: 2rem;

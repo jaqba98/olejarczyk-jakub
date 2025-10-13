@@ -1,1 +1,1 @@
-export type PropertyType = 'fill' | 'background-color';
+export type PropertyType = 'fill' | 'background-color' | 'color';

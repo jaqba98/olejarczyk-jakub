@@ -15,5 +15,6 @@ export const Primary: Story = {
     color: 'primary--500',
     property: 'background-color',
     id: 'technology',
+    title: 'Technology',
   },
 };
