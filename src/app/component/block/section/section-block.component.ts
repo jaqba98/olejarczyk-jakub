@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BaseComponent } from '../../base/base.component';
@@ -9,4 +9,6 @@ import { PaddingUtilComponent } from '../../util/padding/padding-util.component'
   templateUrl: './section-block.component.html',
   imports: [CommonModule, PaddingUtilComponent],
 })
-export class SectionBlockComponent extends BaseComponent {}
+export class SectionBlockComponent extends BaseComponent {
+  id = input.required<string>();
+}
