@@ -3,13 +3,12 @@ import { NgClass } from '@angular/common';
 
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { BemUtil } from '../../../util/bem.util';
-import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 
 @Component({
   selector: 'technology-dumb',
   templateUrl: './technology-dumb.component.html',
   styleUrl: './technology-dumb.component.scss',
-  imports: [FlexUtilComponent, NgClass, HeadingTextComponent],
+  imports: [FlexUtilComponent, NgClass],
 })
 export class TechnologyDumbComponent {
   value = input.required<string>();

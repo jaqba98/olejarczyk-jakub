@@ -1,1 +1,1 @@
-export type SizeType = 'none' | 'small' | 'medium' | 'big' | 'huge';
+export type SizeType = 'none' | 'small' | 'medium' | 'big' | 'huge' | 'double-huge';

@@ -15,12 +15,15 @@ export class FlexUtilComponent {
 
   directionRow = input<boolean>(false);
 
+  directionColumnSmall = input<boolean>(false);
+
   constructor(private readonly bemUtil: BemUtil) {}
 
   buildClassNames() {
     return {
       [this.bemUtil.build('flex', 'gap', this.gap())]: true,
       [this.bemUtil.build('flex', 'direction', 'row')]: this.directionRow(),
+      [this.bemUtil.build('flex', 'direction', 'column-small')]: this.directionColumnSmall(),
     };
   }
 }

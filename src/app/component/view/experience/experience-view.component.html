@@ -7,10 +7,10 @@
 >
   <flex-util gap="big">
     @for (experience of experience$ | async; track experience) {
-      <!-- TODO: I am here -->
       <flex-item-util>
-        <flex-util gap="medium">
+        <flex-util gap="medium" [directionRow]="true" [directionColumnSmall]="true">
           <flex-item-util>
+            <!-- TODO: I am here -->
             <heading-text
               [level]="4"
               color="primary--500"
@@ -29,13 +29,16 @@
             }
           </flex-item-util>
           <flex-item-util>
-            @for (group of experience.group; track group) {
-              @for (category of group.category; track category) {
-                @for (technology of category.technology; track technology) {
-                  <p>{{ technology.technologyModel.name }}</p>
+            <flex-util gap="small" [directionRow]="true">
+              <!-- TODO: I am here -->
+              @for (group of experience.group; track group) {
+                @for (category of group.category; track category) {
+                  @for (technology of category.technology; track technology) {
+                    <p>{{ technology.technologyModel.name }}</p>
+                  }
                 }
               }
-            }
+            </flex-util>
           </flex-item-util>
         </flex-util>
       </flex-item-util>

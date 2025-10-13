@@ -1,4 +1,4 @@
-@use '../../../../style';
+@use '../../../../style/const/size';
 
 .flex {
   display: flex;
@@ -6,23 +6,27 @@
 
   &__gap {
     &--none {
-      gap: style.$none;
+      gap: size.$none;
     }
 
     &--small {
-      gap: style.$small;
+      gap: size.$small;
     }
 
     &--medium {
-      gap: style.$medium;
+      gap: size.$medium;
     }
 
     &--big {
-      gap: style.$big;
+      gap: size.$big;
     }
 
     &--huge {
-      gap: style.$huge;
+      gap: size.$huge;
+    }
+
+    &--double-huge {
+      gap: size.$double-huge;
     }
   }
 
@@ -30,6 +34,14 @@
     &--row {
       flex-direction: row;
       flex-wrap: wrap;
+    }
+
+    &--column {
+      &-small {
+        @media (max-width: 480px) {
+          flex-direction: column;
+        }
+      }
     }
   }
 }

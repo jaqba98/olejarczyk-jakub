@@ -1,57 +1,67 @@
-@use '../../../../style';
+@use '../../../../style/const/size';
 
 .padding {
   &__vertical {
     &--none {
-      padding-top: style.$none;
-      padding-bottom: style.$none;
+      padding-top: size.$none;
+      padding-bottom: size.$none;
     }
 
     &--small {
-      padding-top: style.$small;
-      padding-bottom: style.$small;
+      padding-top: size.$small;
+      padding-bottom: size.$small;
     }
 
     &--medium {
-      padding-top: style.$medium;
-      padding-bottom: style.$medium;
+      padding-top: size.$medium;
+      padding-bottom: size.$medium;
     }
 
     &--big {
-      padding-top: style.$big;
-      padding-bottom: style.$big;
+      padding-top: size.$big;
+      padding-bottom: size.$big;
     }
 
     &--huge {
-      padding-top: style.$huge;
-      padding-bottom: style.$huge;
+      padding-top: size.$huge;
+      padding-bottom: size.$huge;
+    }
+
+    &--double-huge {
+      padding-top: size.$double-huge;
+      padding-bottom: size.$double-huge;
     }
   }
 
   &__horizontal {
     &--none {
-      padding-left: style.$none;
-      padding-right: style.$none;
+      padding-left: size.$none;
+      padding-right: size.$none;
     }
 
     &--small {
-      padding-left: style.$small;
-      padding-right: style.$small;
+      padding-left: size.$small;
+      padding-right: size.$small;
     }
 
     &--medium {
-      padding-left: style.$medium;
-      padding-right: style.$medium;
+      padding-left: size.$medium;
+      padding-right: size.$medium;
     }
 
     &--big {
-      padding-left: style.$big;
-      padding-right: style.$big;
+      padding-left: size.$big;
+      padding-right: size.$big;
     }
 
     &--huge {
-      padding-left: style.$huge;
-      padding-right: style.$huge;
+      padding-left: size.$huge;
+      padding-right: size.$huge;
+    }
+
+    &--double-huge {
+      padding-left: size.$double-huge;
+      padding-right: size.$double-huge;
     }
   }
 }

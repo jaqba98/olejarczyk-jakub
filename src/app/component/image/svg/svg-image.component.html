@@ -1,11 +1,4 @@
-<svg
-  role="img"
-  width="64"
-  height="64"
-  viewBox="0 0 24 24"
-  xmlns="http://www.w3.org/2000/svg"
-  [attr.class]="buildFillColor()"
->
+<svg role="img" width="64" height="64" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
   <g [attr.transform]="buildTransform()">
     @for (path of model().paths; track path) {
       <path [attr.d]="path" [attr.stroke-width]="buildStrokeWidth()" />
