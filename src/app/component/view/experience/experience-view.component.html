@@ -8,24 +8,35 @@
   <flex-util gap="big">
     @for (experience of experience$ | async; track experience) {
       <flex-item-util>
-        <p>{{ experience.company.name }}</p>
-        <p>{{ experience.company.city }}</p>
-        <p>{{ experience.company.country }}</p>
-        <p>{{ experience.experience.employment }}</p>
-        <p>{{ experience.experience.startDate }}</p>
-        <p>{{ experience.experience.endDate }}</p>
-        <p>{{ experience.experience.location }}</p>
-        <p>{{ experience.experience.title }}</p>
-        @for (description of experience.experience.description; track description) {
-          <p>{{ description }}</p>
-        }
-        @for (group of experience.group; track group) {
-          @for (category of group.category; track category) {
-            @for (technology of category.technology; track technology) {
-              <p>{{ technology.technologyModel.name }}</p>
+        <flex-util gap="medium">
+          <flex-item-util>
+            <heading-text
+              [level]="4"
+              color="primary--500"
+              property="color"
+              [value]="experience.experience.title"
+            ></heading-text>
+            <p>{{ experience.company.name }}</p>
+            <p>{{ experience.company.city }}</p>
+            <p>{{ experience.company.country }}</p>
+            <p>{{ experience.experience.employment }}</p>
+            <p>{{ experience.experience.startDate }}</p>
+            <p>{{ experience.experience.endDate }}</p>
+            <p>{{ experience.experience.location }}</p>
+            @for (description of experience.experience.description; track description) {
+              <p>{{ description }}</p>
             }
-          }
-        }
+          </flex-item-util>
+          <flex-item-util>
+            @for (group of experience.group; track group) {
+              @for (category of group.category; track category) {
+                @for (technology of category.technology; track technology) {
+                  <p>{{ technology.technologyModel.name }}</p>
+                }
+              }
+            }
+          </flex-item-util>
+        </flex-util>
       </flex-item-util>
     }
   </flex-util>

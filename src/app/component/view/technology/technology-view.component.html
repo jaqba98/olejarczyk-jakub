@@ -8,12 +8,23 @@
   <flex-util gap="big">
     @for (technologyRoot of technology$ | async; track technologyRoot) {
       <flex-item-util>
-        <p>{{ technologyRoot.groupModel.name }}</p>
-        @for (category of technologyRoot.category; track category) {
-          @for (technology of category.technology; track technology) {
-            <p>{{ technology.technologyModel.name }}</p>
-          }
-        }
+        <flex-util gap="medium">
+          <flex-item-util>
+            <heading-text
+              [level]="4"
+              color="gray--100"
+              property="color"
+              [value]="technologyRoot.groupModel.name"
+            ></heading-text>
+          </flex-item-util>
+          <flex-item-util>
+            @for (category of technologyRoot.category; track category) {
+              @for (technology of category.technology; track technology) {
+                <p>{{ technology.technologyModel.name }}</p>
+              }
+            }
+          </flex-item-util>
+        </flex-util>
       </flex-item-util>
     }
   </flex-util>
