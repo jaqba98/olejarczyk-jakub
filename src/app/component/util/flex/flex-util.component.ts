@@ -13,11 +13,14 @@ import { BemUtil } from '../../../util/bem.util';
 export class FlexUtilComponent {
   gap = input<SizeType>('none');
 
+  directionRow = input<boolean>(false);
+
   constructor(private readonly bemUtil: BemUtil) {}
 
   buildClassNames() {
     return {
       [this.bemUtil.build('flex', 'gap', this.gap())]: true,
+      [this.bemUtil.build('flex', 'direction', 'row')]: this.directionRow(),
     };
   }
 }

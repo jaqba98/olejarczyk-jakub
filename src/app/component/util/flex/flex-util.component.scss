@@ -25,4 +25,11 @@
       gap: style.$huge;
     }
   }
+
+  &__direction {
+    &--row {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }

@@ -18,11 +18,14 @@
             ></heading-text>
           </flex-item-util>
           <flex-item-util>
-            @for (category of technologyRoot.category; track category) {
-              @for (technology of category.technology; track technology) {
-                <p>{{ technology.technologyModel.name }}</p>
+            <flex-util gap="small" [directionRow]="true">
+              @for (category of technologyRoot.category; track category) {
+                @for (technology of category.technology; track technology) {
+                  <!-- TODO: I am here -->
+                  <p>{{ technology.technologyModel.name }}</p>
+                }
               }
-            }
+            </flex-util>
           </flex-item-util>
         </flex-util>
       </flex-item-util>
