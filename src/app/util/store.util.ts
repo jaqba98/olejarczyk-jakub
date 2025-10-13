@@ -1,12 +1,12 @@
-import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { provideStore } from '@ngxs/store';
 import { applicationConfig } from '@storybook/angular';
+import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 
 import { CompanyState } from '../state/company/company.state';
 import { ExperienceState } from '../state/experience/experience.state';
-import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
-import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
 import { TechnologyState } from '../state/technology/technology.state';
+import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
+import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 
 export class StoreUtil {
   static getProvide() {
