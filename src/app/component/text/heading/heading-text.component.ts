@@ -3,7 +3,6 @@ import { Component, input } from '@angular/core';
 
 import { HeadingTextLevelType } from './heading-text.type';
 import { BemUtil } from '../../../util/bem.util';
-import { ColorUtil } from '../../../util/color.util';
 
 @Component({
   selector: 'heading-text',
@@ -18,14 +17,11 @@ export class HeadingTextComponent {
 
   rootColor = input.required<string>();
 
-  constructor(
-    private readonly bemUtil: BemUtil,
-    private readonly colorUtil: ColorUtil,
-  ) {}
+  constructor(private readonly bemUtil: BemUtil) {}
 
   buildClassNames() {
-    const accent = this.colorUtil.convertToAccent(this.rootColor());
-    const headingColorAccent = this.bemUtil.build('heading', 'color', accent);
+    // const accent = this.colorUtil.convertToAccent(this.rootColor());
+    const headingColorAccent = this.bemUtil.build('heading', 'color', 'accent');
     return {
       [headingColorAccent]: true,
     };

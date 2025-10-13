@@ -3,7 +3,6 @@ import { NgClass } from '@angular/common';
 
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { BemUtil } from '../../../util/bem.util';
-import { ColorUtil } from '../../../util/color.util';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 
 @Component({
@@ -29,14 +28,11 @@ export class TechnologyDumbComponent {
 
   rootColor = input.required<string>();
 
-  constructor(
-    private readonly bemUtil: BemUtil,
-    private readonly colorUtil: ColorUtil,
-  ) {}
+  constructor(private readonly bemUtil: BemUtil) {}
 
   buildClassNames() {
-    const accent = this.colorUtil.convertToAccent(this.rootColor());
-    const technologyColorAccent = this.bemUtil.build('technology', 'color', accent);
+    // const accent = this.colorUtil.convertToAccent(this.rootColor());
+    const technologyColorAccent = this.bemUtil.build('technology', 'color', 'accent');
     return {
       [technologyColorAccent]: true,
     };

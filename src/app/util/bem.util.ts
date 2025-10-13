@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class BemUtil {
-  build(block: string, element: string, modifier: string) {
+  build(block: string, element: string = '', modifier: string = '') {
     if (block === '') {
       throw new Error('The block can not be empty!');
     }

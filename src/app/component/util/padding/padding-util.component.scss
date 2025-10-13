@@ -1,0 +1,57 @@
+@use '../../../../style';
+
+.padding {
+  &__vertical {
+    &--none {
+      padding-top: style.$none;
+      padding-bottom: style.$none;
+    }
+
+    &--small {
+      padding-top: style.$small;
+      padding-bottom: style.$small;
+    }
+
+    &--medium {
+      padding-top: style.$medium;
+      padding-bottom: style.$medium;
+    }
+
+    &--big {
+      padding-top: style.$big;
+      padding-bottom: style.$big;
+    }
+
+    &--huge {
+      padding-top: style.$huge;
+      padding-bottom: style.$huge;
+    }
+  }
+
+  &__horizontal {
+    &--none {
+      padding-left: style.$none;
+      padding-right: style.$none;
+    }
+
+    &--small {
+      padding-left: style.$small;
+      padding-right: style.$small;
+    }
+
+    &--medium {
+      padding-left: style.$medium;
+      padding-right: style.$medium;
+    }
+
+    &--big {
+      padding-left: style.$big;
+      padding-right: style.$big;
+    }
+
+    &--huge {
+      padding-left: style.$huge;
+      padding-right: style.$huge;
+    }
+  }
+}
