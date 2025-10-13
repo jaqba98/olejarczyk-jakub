@@ -1,15 +1,18 @@
 import { Component, input } from '@angular/core';
 
 import { ColorType } from '../../type/color.type';
+import { PropertyType } from '../../type/property.type';
 
 @Component({
   selector: 'base',
   template: '',
 })
 export class BaseComponent {
+  property = input.required<PropertyType>();
+
   color = input.required<ColorType>();
 
-  protected buildFillColor() {
-    return `fill__${this.color()}`;
+  protected buildColor() {
+    return `${this.property()}__${this.color()}`;
   }
 }
