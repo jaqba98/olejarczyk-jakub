@@ -1,37 +1,11 @@
-import { Component, input } from '@angular/core';
-import { NgClass } from '@angular/common';
+import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
-import { BemUtil } from '../../../util/bem.util';
-import { HeadingTextComponent } from '../../text/heading/heading-text.component';
-import { MarginUtilComponent } from '../../util/margin/margin-util.component';
-import { FlexUtilComponent } from '../../util/flex/flex-util.component';
-import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
+import { BaseComponent } from '../../base/base.component';
 
 @Component({
   selector: 'section-block',
   templateUrl: './section-block.component.html',
-  styleUrl: './section-block.component.scss',
-  imports: [
-    NgClass,
-    HeadingTextComponent,
-    MarginUtilComponent,
-    FlexUtilComponent,
-    FlexItemUtilComponent,
-  ],
+  imports: [CommonModule],
 })
-export class SectionBlockComponent {
-  id = input.required<string>();
-
-  title = input.required<string>();
-
-  rootColor = input.required<string>();
-
-  constructor(private readonly bemUtil: BemUtil) {}
-
-  buildClassNames() {
-    const sectionColor = this.bemUtil.build('section', 'color', this.rootColor());
-    return {
-      [sectionColor]: true,
-    };
-  }
-}
+export class SectionBlockComponent extends BaseComponent {}

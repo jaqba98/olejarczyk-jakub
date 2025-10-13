@@ -1,12 +1,3 @@
-<section [id]="id()" class="section" [ngClass]="buildClassNames()">
-  <margin-util [autoLeft]="true" [autoRight]="true" maxWidth="960px">
-    <flex-util direction="column" gap="big">
-      <flex-item-util>
-        <heading-text [level]="2" [rootColor]="rootColor()" [value]="title()"></heading-text>
-      </flex-item-util>
-      <flex-item-util>
-        <ng-content></ng-content>
-      </flex-item-util>
-    </flex-util>
-  </margin-util>
+<section class="section" [ngClass]="buildColor()">
+  <ng-content></ng-content>
 </section>

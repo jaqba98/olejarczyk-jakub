@@ -2,7 +2,7 @@
 
 @function tonal-scale($color) {
   @return (
-    50: color.adjust($color, $lightness: 40%),
+    50: color.adjust($color, $lightness: 35%),
     100: color.adjust($color, $lightness: 30%),
     200: color.adjust($color, $lightness: 20%),
     300: color.adjust($color, $lightness: 10%),
