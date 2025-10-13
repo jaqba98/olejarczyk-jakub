@@ -5,5 +5,7 @@
   title="Technology"
   titleColor="gray--50"
 >
-  <p>{{ technology$ | async | json }}</p>
+  @for (technology of technology$ | async; track technology) {
+    <p>{{ technology.groupType }}</p>
+  }
 </section-block>

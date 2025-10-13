@@ -5,5 +5,7 @@
   title="Experience"
   titleColor="primary--500"
 >
-  <p>{{ experience$ | async | json }}</p>
+  @for (experience of experience$ | async; track experience) {
+    <p>{{ experience.company.name }}</p>
+  }
 </section-block>

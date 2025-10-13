@@ -1,47 +1,28 @@
-:host {
-  display: block;
-}
+@use '../../../../style';
 
 .flex {
   display: flex;
-
-  &--wrap {
-    flex-wrap: wrap;
-  }
-
-  &__direction {
-    &--column {
-      flex-direction: column;
-    }
-  }
+  flex-direction: column;
 
   &__gap {
     &--none {
-      gap: 0;
+      gap: style.$none;
     }
 
     &--small {
-      gap: 0.5rem;
+      gap: style.$small;
     }
 
     &--medium {
-      gap: 1rem;
+      gap: style.$medium;
     }
 
     &--big {
-      gap: 1.5rem;
+      gap: style.$big;
     }
-  }
 
-  &__align-items {
-    &--center {
-      align-items: center;
-    }
-  }
-
-  &__justify-content {
-    &--center {
-      justify-content: center;
+    &--huge {
+      gap: style.$huge;
     }
   }
 }
