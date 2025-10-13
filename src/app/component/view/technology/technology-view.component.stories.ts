@@ -12,8 +12,4 @@ const meta: Meta<TechnologyViewComponent> = {
 export default meta;
 type Story = StoryObj<TechnologyViewComponent>;
 
-export const Dominant: Story = {
-  args: {
-    rootColor: 'dominant',
-  },
-};
+export const Primary: Story = {};
