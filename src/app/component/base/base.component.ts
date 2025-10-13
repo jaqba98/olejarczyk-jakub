@@ -8,4 +8,8 @@ import { ColorType } from '../../type/color.type';
 })
 export class BaseComponent {
   color = input.required<ColorType>();
+
+  protected buildFillColor() {
+    return `fill__${this.color()}`;
+  }
 }

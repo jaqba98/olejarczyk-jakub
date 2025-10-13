@@ -1,4 +1,5 @@
 import { Component, input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { SvgModel } from '../../../model/svg.model';
 import { BaseComponent } from '../../base/base.component';
@@ -7,6 +8,7 @@ import { BaseComponent } from '../../base/base.component';
   selector: 'svg-image',
   templateUrl: './svg-image.component.html',
   styleUrl: './svg-image.component.scss',
+  imports: [CommonModule],
 })
 export class SvgImageComponent extends BaseComponent {
   model = input.required<SvgModel>();
