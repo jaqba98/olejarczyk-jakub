@@ -21,8 +21,12 @@
             <flex-util gap="small" [directionRow]="true">
               @for (category of technologyRoot.category; track category) {
                 @for (technology of category.technology; track technology) {
-                  <!-- TODO: I am here -->
-                  <p>{{ technology.technologyModel.name }}</p>
+                  <flex-item-util>
+                    <technology-dumb
+                      [value]="technology.technologyModel.name"
+                      [svg]="technology.technologyModel.svg"
+                    ></technology-dumb>
+                  </flex-item-util>
                 }
               }
             </flex-util>

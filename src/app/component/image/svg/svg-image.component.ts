@@ -14,8 +14,8 @@ export class SvgImageComponent extends BaseComponent {
   model = input.required<SvgModel>();
 
   buildTransform() {
-    const { transform, scale } = this.model().args;
-    return `translate(${transform.left}, ${transform.top}) scale(${scale})`;
+    const { scale } = this.model().args;
+    return `translate(2, 4) scale(${scale})`;
   }
 
   buildStrokeWidth() {

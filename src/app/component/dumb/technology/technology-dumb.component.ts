@@ -1,39 +1,28 @@
+import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { NgClass } from '@angular/common';
 
+import { SvgModel } from '../../../model/svg.model';
+import { SvgImageComponent } from '../../image/svg/svg-image.component';
+import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
-import { BemUtil } from '../../../util/bem.util';
+import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
+import { PaddingUtilComponent } from '../../util/padding/padding-util.component';
 
 @Component({
   selector: 'technology-dumb',
   templateUrl: './technology-dumb.component.html',
   styleUrl: './technology-dumb.component.scss',
-  imports: [FlexUtilComponent, NgClass],
+  imports: [
+    CommonModule,
+    SvgImageComponent,
+    HeadingTextComponent,
+    FlexUtilComponent,
+    FlexItemUtilComponent,
+    PaddingUtilComponent,
+  ],
 })
 export class TechnologyDumbComponent {
   value = input.required<string>();
 
-  svg = input.required<string[]>();
-
-  width = input.required<string>();
-
-  height = input.required<string>();
-
-  viewBox = input.required<string>();
-
-  fill = input.required<string>();
-
-  stroke = input.required<string>();
-
-  rootColor = input.required<string>();
-
-  constructor(private readonly bemUtil: BemUtil) {}
-
-  buildClassNames() {
-    // const accent = this.colorUtil.convertToAccent(this.rootColor());
-    const technologyColorAccent = this.bemUtil.build('technology', 'color', 'accent');
-    return {
-      [technologyColorAccent]: true,
-    };
-  }
+  svg = input.required<SvgModel>();
 }

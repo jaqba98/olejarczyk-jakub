@@ -3,6 +3,7 @@ import { Component, input } from '@angular/core';
 
 import { SizeType } from '../../../type/size.type';
 import { BemUtil } from '../../../util/bem.util';
+import { PositionType } from '../../../type/position.type';
 
 @Component({
   selector: 'flex-util',
@@ -17,6 +18,8 @@ export class FlexUtilComponent {
 
   directionColumnSmall = input<boolean>(false);
 
+  alignItems = input<PositionType>('start');
+
   constructor(private readonly bemUtil: BemUtil) {}
 
   buildClassNames() {
@@ -24,6 +27,7 @@ export class FlexUtilComponent {
       [this.bemUtil.build('flex', 'gap', this.gap())]: true,
       [this.bemUtil.build('flex', 'direction', 'row')]: this.directionRow(),
       [this.bemUtil.build('flex', 'direction', 'column-small')]: this.directionColumnSmall(),
+      [this.bemUtil.build('flex', 'align-items', this.alignItems())]: true,
     };
   }
 }

@@ -1,18 +1,17 @@
-<div class="technology" [ngClass]="buildClassNames()">
-  <flex-util gap="small" direction="column">
-    <svg
-      role="img"
-      [attr.viewBox]="viewBox()"
-      [attr.width]="width()"
-      [attr.height]="height()"
-      [attr.fill]="fill()"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <title>{{ value() }}</title>
-      @for (svg of svg(); track svg) {
-        <path [attr.d]="svg" [attr.stroke]="stroke()" stroke-width="8" />
-      }
-    </svg>
-    <!-- <heading-text [level]="6" [rootColor]="rootColor()" [value]="value()"></heading-text> -->
-  </flex-util>
+<div class="technology">
+  <padding-util horizontal="small" vertical="small">
+    <flex-util [directionRow]="true" alignItems="center" gap="small">
+      <flex-item-util>
+        <svg-image property="fill" color="primary--500" [model]="svg()"></svg-image>
+      </flex-item-util>
+      <flex-item-util>
+        <heading-text
+          property="color"
+          [level]="5"
+          color="primary--500"
+          [value]="value()"
+        ></heading-text>
+      </flex-item-util>
+    </flex-util>
+  </padding-util>
 </div>

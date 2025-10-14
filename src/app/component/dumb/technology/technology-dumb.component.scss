@@ -1,24 +1,5 @@
-:host {
-  display: block;
-}
-
 .technology {
-  padding: 0.5rem;
+  display: inline-block;
+  border: 1px solid red;
   border-radius: 0.25rem;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-
-  &__color {
-    &--dominant {
-      background-color: var(--dominant25);
-    }
-
-    &--accent {
-      background-color: var(--accent25);
-    }
-  }
 }

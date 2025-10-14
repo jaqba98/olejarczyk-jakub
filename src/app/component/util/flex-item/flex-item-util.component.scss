@@ -3,5 +3,13 @@
 }
 
 .flex-item {
-  flex: 1;
+  &__flex {
+    &--1 {
+      flex: 1;
+    }
+
+    &--2 {
+      flex: 2;
+    }
+  }
 }
