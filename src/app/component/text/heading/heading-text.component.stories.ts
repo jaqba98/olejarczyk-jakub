@@ -15,7 +15,7 @@ export const Heading1: Story = {
     level: 1,
     value: 'Heading 1',
     color: 'primary--500',
-    property: 'color',
+    property: ['color'],
   },
 };
 
@@ -24,7 +24,7 @@ export const Heading2: Story = {
     level: 2,
     value: 'Heading 2',
     color: 'primary--500',
-    property: 'color',
+    property: ['color'],
   },
 };
 
@@ -33,7 +33,7 @@ export const Heading3: Story = {
     level: 3,
     value: 'Heading 3',
     color: 'primary--500',
-    property: 'color',
+    property: ['color'],
   },
 };
 
@@ -42,7 +42,7 @@ export const Heading4: Story = {
     level: 4,
     value: 'Heading 4',
     color: 'primary--500',
-    property: 'color',
+    property: ['color'],
   },
 };
 
@@ -51,7 +51,7 @@ export const Heading5: Story = {
     level: 5,
     value: 'Heading 5',
     color: 'primary--500',
-    property: 'color',
+    property: ['color'],
   },
 };
 
@@ -60,6 +60,6 @@ export const Heading6: Story = {
     level: 6,
     value: 'Heading 6',
     color: 'primary--500',
-    property: 'color',
+    property: ['color'],
   },
 };

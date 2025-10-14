@@ -1,4 +1,11 @@
-<svg role="img" width="32" height="32" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+<svg
+  role="img"
+  width="32"
+  height="32"
+  viewBox="0 0 28 28"
+  xmlns="http://www.w3.org/2000/svg"
+  [ngClass]="buildColor()"
+>
   <g [attr.transform]="buildTransform()">
     @for (path of model().paths; track path) {
       <path [attr.d]="path" [attr.stroke-width]="buildStrokeWidth()" />

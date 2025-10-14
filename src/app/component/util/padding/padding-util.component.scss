@@ -7,6 +7,11 @@
       padding-bottom: size.$none;
     }
 
+    &--tiny {
+      padding-top: size.$tiny;
+      padding-bottom: size.$tiny;
+    }
+
     &--small {
       padding-top: size.$small;
       padding-bottom: size.$small;
@@ -37,6 +42,11 @@
     &--none {
       padding-left: size.$none;
       padding-right: size.$none;
+    }
+
+    &--tiny {
+      padding-left: size.$tiny;
+      padding-right: size.$tiny;
     }
 
     &--small {

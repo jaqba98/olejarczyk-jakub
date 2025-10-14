@@ -1,6 +1,6 @@
 <section-block
   color="primary--500"
-  property="background-color"
+  [property]="['background-color']"
   id="technology"
   title="Technology"
   titleColor="gray--50"
@@ -13,7 +13,7 @@
             <heading-text
               [level]="4"
               color="gray--100"
-              property="color"
+              [property]="['color']"
               [value]="technologyRoot.groupModel.name"
             ></heading-text>
           </flex-item-util>
@@ -25,6 +25,8 @@
                     <technology-dumb
                       [value]="technology.technologyModel.name"
                       [svg]="technology.technologyModel.svg"
+                      color="gray--50"
+                      [property]="['fill', 'border-color']"
                     ></technology-dumb>
                   </flex-item-util>
                 }
