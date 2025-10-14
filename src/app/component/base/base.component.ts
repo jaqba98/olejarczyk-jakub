@@ -8,11 +8,12 @@ import { PropertyType } from '../../type/property.type';
   template: '',
 })
 export class BaseComponent {
-  property = input.required<PropertyType[]>();
-
-  color = input.required<ColorType>();
+  color = input.required<[PropertyType, ColorType][]>();
 
   protected buildColor() {
-    return this.property().map((prop) => `${prop}__${this.color()}`);
+    const aaa = this.color().map((array) => `${array[0]}__${[array[1]]}`);
+    console.log(aaa);
+
+    return aaa;
   }
 }

@@ -2,15 +2,10 @@
   <padding-util horizontal="tiny" vertical="tiny">
     <flex-util [directionRow]="true" alignItems="center" gap="small">
       <flex-item-util>
-        <svg-image [property]="['fill']" [color]="color()" [model]="svg()"></svg-image>
+        <svg-image [color]="color()" [model]="svg()"></svg-image>
       </flex-item-util>
       <flex-item-util>
-        <heading-text
-          [property]="['color']"
-          [level]="6"
-          [color]="color()"
-          [value]="value()"
-        ></heading-text>
+        <heading-text [level]="6" [color]="color()" [value]="value()"></heading-text>
       </flex-item-util>
     </flex-util>
   </padding-util>

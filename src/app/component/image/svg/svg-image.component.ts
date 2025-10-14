@@ -7,7 +7,6 @@ import { BaseComponent } from '../../base/base.component';
 @Component({
   selector: 'svg-image',
   templateUrl: './svg-image.component.html',
-  styleUrl: './svg-image.component.scss',
   imports: [CommonModule],
 })
 export class SvgImageComponent extends BaseComponent {

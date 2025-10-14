@@ -1,6 +1,5 @@
 <section-block
-  color="gray--50"
-  [property]="['background-color']"
+  [color]="[['background-color', 'gray--50']]"
   id="experience"
   title="Experience"
   titleColor="primary--500"
@@ -9,12 +8,11 @@
     @for (experience of experience$ | async; track experience) {
       <flex-item-util>
         <flex-util gap="medium" [directionRow]="true" [directionColumnSmall]="true">
-          <flex-item-util flex="2">
+          <flex-item-util flex="1">
             <!-- TODO: I am here -->
             <heading-text
               [level]="4"
-              color="primary--500"
-              [property]="['color']"
+              [color]="[['color', 'primary--500']]"
               [value]="experience.experience.title"
             ></heading-text>
             <p>{{ experience.company.name }}</p>
@@ -37,8 +35,11 @@
                       <technology-dumb
                         [value]="technology.technologyModel.name"
                         [svg]="technology.technologyModel.svg"
-                        color="gray--800"
-                        [property]="['fill', 'border-color']"
+                        [color]="[
+                          ['fill', 'gray--800'],
+                          ['border-color', 'gray--200'],
+                          ['color', 'gray--800'],
+                        ]"
                       ></technology-dumb>
                     </flex-item-util>
                   }

@@ -12,8 +12,7 @@ type Story = StoryObj<SectionBlockComponent>;
 
 export const Primary: Story = {
   args: {
-    color: 'primary--500',
-    property: ['background-color'],
+    color: [['background-color', 'primary--500']],
     id: 'technology',
     title: 'Technology',
   },

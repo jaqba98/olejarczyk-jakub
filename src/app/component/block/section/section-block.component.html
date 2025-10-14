@@ -4,8 +4,7 @@
       <flex-util gap="huge">
         <flex-item-util>
           <heading-text
-            [property]="['color']"
-            [color]="titleColor()"
+            [color]="[['color', titleColor()]]"
             [level]="2"
             [value]="title()"
           ></heading-text>

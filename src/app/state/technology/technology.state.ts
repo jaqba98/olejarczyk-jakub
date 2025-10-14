@@ -105,16 +105,6 @@ import { Injectable } from '@angular/core';
         },
         svg: SvgConst.rxjs,
       },
-      ngxs: {
-        name: 'NGXS',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.ngxs,
-      },
       storybook: {
         name: 'Storybook',
         level: 'beginner',
