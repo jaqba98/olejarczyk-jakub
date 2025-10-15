@@ -1,10 +1,10 @@
-<!-- TODO: I am here -->
 <section-block
-  [color]="[['background-color', 'gray--50']]"
   id="experience"
   title="Experience"
-  titleColor="primary--500"
+  [color]="[['background-color', 'gray--100']]"
+  [titleColor]="['color', 'gray--800']"
 >
+  <!-- TODO: I am here -->
   <flex-util gap="big">
     @for (experience of experience$ | async; track experience; let first = $first) {
       <flex-item-util>

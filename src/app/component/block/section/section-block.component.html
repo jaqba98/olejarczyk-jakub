@@ -1,18 +1,14 @@
-<section [id]="id()" class="section" [ngClass]="buildColor()">
+<section [id]="id()" [ngClass]="buildColor()">
   <margin-util maxWidth="960px">
-    <padding-util vertical="double-huge" horizontal="big">
-      <flex-util gap="huge">
-        <flex-item-util>
-          <heading-text
-            [color]="[['color', titleColor()]]"
-            [level]="2"
-            [value]="title()"
-          ></heading-text>
-        </flex-item-util>
-        <flex-item-util>
-          <ng-content></ng-content>
-        </flex-item-util>
-      </flex-util>
+    <padding-util vertical="double-huge" horizontal="huge">
+      <interspace-util bottom="huge">
+        <heading-text [color]="[titleColor()]" [level]="2" [value]="title()"></heading-text>
+      </interspace-util>
+      @if (debug()) {
+        <paragraph-text [color]="[titleColor()]" value="Hello"></paragraph-text>
+      } @else {
+        <ng-content></ng-content>
+      }
     </padding-util>
   </margin-util>
 </section>

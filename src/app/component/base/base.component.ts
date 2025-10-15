@@ -10,6 +10,8 @@ import { PropertyType } from '../../type/property.type';
 export class BaseComponent {
   color = input.required<[PropertyType, ColorType][]>();
 
+  debug = input(false);
+
   protected buildColor() {
     return this.color().map((array) => `${array[0]}__${[array[1]]}`);
   }

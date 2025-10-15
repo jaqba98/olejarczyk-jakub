@@ -4,9 +4,9 @@
   @return (
     50: color.adjust($color, $lightness: 35%),
     100: color.adjust($color, $lightness: 30%),
-    200: color.adjust($color, $lightness: 20%),
-    300: color.adjust($color, $lightness: 10%),
-    400: color.adjust($color, $lightness: 5%),
+    200: color.adjust($color, $lightness: 25%),
+    300: color.adjust($color, $lightness: 20%),
+    400: color.adjust($color, $lightness: 15%),
     500: $color,
     600: color.adjust($color, $lightness: -10%),
     700: color.adjust($color, $lightness: -25%),
