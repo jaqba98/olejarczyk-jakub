@@ -1,3 +1,4 @@
+<!-- TODO: I am here -->
 <section-block
   [color]="[['background-color', 'gray--50']]"
   id="experience"
@@ -39,7 +40,10 @@
                     [level]="6"
                     [color]="[['color', 'gray--700']]"
                     [value]="
-                      buildDate(experience.experience.startDate, experience.experience.endDate)
+                      dateUtil.buildDate(
+                        experience.experience.startDate,
+                        experience.experience.endDate
+                      )
                     "
                   ></heading-text>
                 </flex-util>
