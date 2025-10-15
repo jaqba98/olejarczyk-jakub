@@ -27,12 +27,12 @@ import { DateUtil } from '../../../util/date.util';
   providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {
-  experience$;
+  experienceView$;
 
   constructor(
     private readonly builder: ExperienceBuilder,
     protected readonly dateUtil: DateUtil,
   ) {
-    this.experience$ = this.builder.build();
+    this.experienceView$ = this.builder.build();
   }
 }

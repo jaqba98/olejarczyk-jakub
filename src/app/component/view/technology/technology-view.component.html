@@ -4,39 +4,37 @@
   [color]="[['background-color', 'gray--200']]"
   [titleColor]="['color', 'gray--800']"
 >
-  <!-- TODO: I am here -->
-  <flex-util gap="big">
-    @for (technologyRoot of technology$ | async; track technologyRoot) {
-      <flex-item-util>
-        <flex-util gap="medium">
-          <flex-item-util>
-            <heading-text
-              [level]="5"
-              [color]="[['color', 'gray--50']]"
-              [value]="technologyRoot.groupModel.name"
-            ></heading-text>
-          </flex-item-util>
-          <flex-item-util>
-            <flex-util gap="small" [directionRow]="true">
-              @for (category of technologyRoot.category; track category) {
-                @for (technology of category.technology; track technology) {
-                  <flex-item-util>
-                    <technology-dumb
-                      [value]="technology.technologyModel.name"
-                      [svg]="technology.technologyModel.svg"
-                      [color]="[
-                        ['fill', 'gray--100'],
-                        ['border-color', 'primary--400'],
-                        ['color', 'gray--100'],
-                      ]"
-                    ></technology-dumb>
-                  </flex-item-util>
-                }
+  @for (technologyView of technologyView$ | async; track technologyView) {
+    <!-- TODO: I am here -->
+    <flex-item-util>
+      <flex-util gap="medium">
+        <flex-item-util>
+          <heading-text
+            [level]="5"
+            [color]="[['color', 'gray--50']]"
+            [value]="technologyView.groupModel.name"
+          ></heading-text>
+        </flex-item-util>
+        <flex-item-util>
+          <flex-util gap="small" [directionRow]="true">
+            @for (category of technologyView.category; track category) {
+              @for (technology of category.technology; track technology) {
+                <flex-item-util>
+                  <technology-dumb
+                    [value]="technology.technologyModel.name"
+                    [svg]="technology.technologyModel.svg"
+                    [color]="[
+                      ['fill', 'gray--100'],
+                      ['border-color', 'primary--400'],
+                      ['color', 'gray--100'],
+                    ]"
+                  ></technology-dumb>
+                </flex-item-util>
               }
-            </flex-util>
-          </flex-item-util>
-        </flex-util>
-      </flex-item-util>
-    }
-  </flex-util>
+            }
+          </flex-util>
+        </flex-item-util>
+      </flex-util>
+    </flex-item-util>
+  }
 </section-block>

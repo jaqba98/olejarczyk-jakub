@@ -22,9 +22,9 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
   providers: [TechnologyBuilder],
 })
 export class TechnologyViewComponent {
-  technology$;
+  technologyView$;
 
   constructor(private readonly builder: TechnologyBuilder) {
-    this.technology$ = this.builder.build();
+    this.technologyView$ = this.builder.build();
   }
 }
