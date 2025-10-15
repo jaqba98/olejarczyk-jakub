@@ -1,3 +1,5 @@
-<div class="mark">
-  <!--  <small-dumb>{{ text() }}</small-dumb>-->
+<div class="mark" [ngClass]="buildColor()">
+  <padding-util horizontal="small" vertical="tiny">
+    <heading-text [level]="6" [color]="[['color', 'gray--50']]" [value]="text()"></heading-text>
+  </padding-util>
 </div>

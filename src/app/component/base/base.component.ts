@@ -11,9 +11,6 @@ export class BaseComponent {
   color = input.required<[PropertyType, ColorType][]>();
 
   protected buildColor() {
-    const aaa = this.color().map((array) => `${array[0]}__${[array[1]]}`);
-    console.log(aaa);
-
-    return aaa;
+    return this.color().map((array) => `${array[0]}__${[array[1]]}`);
   }
 }

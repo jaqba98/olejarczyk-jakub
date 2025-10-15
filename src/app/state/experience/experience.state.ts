@@ -10,8 +10,8 @@ import { Injectable } from '@angular/core';
       {
         title: 'Full Stack Developer',
         employment: 'Full-time',
-        startDate: new Date('2020-08-01'),
-        endDate: new Date('2025-03-01'),
+        startDate: new Date(2020, 8, 1),
+        endDate: new Date(2025, 3, 1),
         location: 'On-site',
         description: [
           'Developed and styled user interfaces using HTML, CSS/SCSS, JavaScript, TypeScript, and the Angular framework.',
@@ -36,7 +36,7 @@ import { Injectable } from '@angular/core';
       {
         title: 'Integration Engineer',
         employment: 'Full-time',
-        startDate: new Date('2025-06-01'),
+        startDate: new Date(2025, 6, 1),
         endDate: null,
         location: 'Remote',
         description: [
