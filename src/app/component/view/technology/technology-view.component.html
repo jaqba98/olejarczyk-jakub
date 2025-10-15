@@ -1,8 +1,8 @@
 <section-block
   id="technology"
   title="Technology"
-  [color]="[['background-color', 'gray--200']]"
-  [titleColor]="['color', 'gray--800']"
+  [color]="[['background-color', 'primary--500']]"
+  [titleColor]="['color', 'gray--100']"
 >
   @for (technologyView of technologyView$ | async; track technologyView) {
     <flex-item-util>
@@ -11,7 +11,7 @@
         <flex-item-util>
           <heading-text
             [level]="5"
-            [color]="[['color', 'gray--50']]"
+            [color]="[['color', 'gray--100']]"
             [value]="technologyView.groupModel.name"
           ></heading-text>
         </flex-item-util>
