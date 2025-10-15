@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 
 import { TechnologyBuilder } from '../../../builder/technology.builder';
 import { SectionBlockComponent } from '../../block/section/section-block.component';
-import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
@@ -14,7 +13,6 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
   imports: [
     CommonModule,
     SectionBlockComponent,
-    FlexUtilComponent,
     FlexItemUtilComponent,
     HeadingTextComponent,
     TechnologyDumbComponent,
