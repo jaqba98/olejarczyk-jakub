@@ -14,7 +14,7 @@
                 <flex-util gap="small" [directionRow]="true">
                   <heading-text
                     [level]="5"
-                    [color]="[['color', 'primary--500']]"
+                    [color]="[['color', 'gray--800']]"
                     [value]="
                       buildTitle(experienceView.experience.title, experienceView.company.name)
                     "
@@ -28,7 +28,7 @@
                 </flex-util>
                 <flex-item-util>
                   <small-text
-                    [color]="[['color', 'gray--700']]"
+                    [color]="[['color', 'gray--800']]"
                     [value]="
                       dateUtil.buildDate(
                         experienceView.experience.startDate,
@@ -42,30 +42,30 @@
                 <flex-item-util>
                   <heading-text
                     [level]="5"
-                    [color]="[['color', 'gray--700']]"
+                    [color]="[['color', 'gray--800']]"
                     value="Location"
                   ></heading-text>
-                  <paragraph-text
-                    [color]="[['color', 'gray--700']]"
+                  <small-text
+                    [color]="[['color', 'gray--800']]"
                     [value]="experienceView.company.city + ', ' + experienceView.company.country"
-                  ></paragraph-text>
+                  ></small-text>
                 </flex-item-util>
                 <flex-item-util></flex-item-util>
                 <heading-text
                   [level]="5"
-                  [color]="[['color', 'gray--700']]"
+                  [color]="[['color', 'gray--800']]"
                   value="Employment type"
                 ></heading-text>
-                <paragraph-text
-                  [color]="[['color', 'gray--700']]"
+                <small-text
+                  [color]="[['color', 'gray--800']]"
                   [value]="
                     experienceView.experience.employment + ', ' + experienceView.experience.location
                   "
-                ></paragraph-text>
+                ></small-text>
                 <flex-item-util>
                   <heading-text
                     [level]="5"
-                    [color]="[['color', 'gray--700']]"
+                    [color]="[['color', 'gray--800']]"
                     value="Description"
                   ></heading-text>
                   <interspace-util left="big">
@@ -75,10 +75,10 @@
                         track description
                       ) {
                         <li>
-                          <paragraph-text
-                            [color]="[['color', 'gray--700']]"
+                          <small-text
+                            [color]="[['color', 'gray--800']]"
                             [value]="description"
-                          ></paragraph-text>
+                          ></small-text>
                         </li>
                       }
                     </ul>

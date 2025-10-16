@@ -8,7 +8,6 @@ import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.compo
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
 import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
-import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';
 import { DateUtil } from '../../../util/date.util';
 import { SmallTextComponent } from '../../text/small/small-text.component';
 import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
@@ -24,7 +23,6 @@ import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.c
     HeadingTextComponent,
     TechnologyDumbComponent,
     MarkDumbComponent,
-    ParagraphTextComponent,
     SmallTextComponent,
     InterspaceUtilComponent,
   ],
