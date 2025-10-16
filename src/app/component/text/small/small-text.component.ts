@@ -4,11 +4,11 @@ import { Component, input } from '@angular/core';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
-  selector: 'paragraph-text',
-  templateUrl: './paragraph-text.component.html',
-  styleUrl: './paragraph-text.component.scss',
+  selector: 'small-text',
+  templateUrl: './small-text.component.html',
+  styleUrl: './small-text.component.scss',
   imports: [CommonModule],
 })
-export class ParagraphTextComponent extends BaseComponent {
+export class SmallTextComponent extends BaseComponent {
   value = input.required<string>();
 }

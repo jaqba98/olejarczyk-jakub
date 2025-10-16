@@ -10,6 +10,8 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
 import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
 import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';
 import { DateUtil } from '../../../util/date.util';
+import { SmallTextComponent } from '../../text/small/small-text.component';
+import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
 
 @Component({
   selector: 'experience-view',
@@ -23,6 +25,8 @@ import { DateUtil } from '../../../util/date.util';
     TechnologyDumbComponent,
     MarkDumbComponent,
     ParagraphTextComponent,
+    SmallTextComponent,
+    InterspaceUtilComponent,
   ],
   providers: [ExperienceBuilder],
 })
@@ -34,5 +38,9 @@ export class ExperienceViewComponent {
     protected readonly dateUtil: DateUtil,
   ) {
     this.experienceView$ = this.builder.build();
+  }
+
+  buildTitle(title: string, name: string) {
+    return `${title} • ${name}`;
   }
 }
