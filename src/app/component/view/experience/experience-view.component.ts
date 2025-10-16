@@ -11,6 +11,7 @@ import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
 import { DateUtil } from '../../../util/date.util';
 import { SmallTextComponent } from '../../text/small/small-text.component';
 import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
+import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';
 
 @Component({
   selector: 'experience-view',
@@ -25,6 +26,7 @@ import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.c
     MarkDumbComponent,
     SmallTextComponent,
     InterspaceUtilComponent,
+    ParagraphTextComponent,
   ],
   providers: [ExperienceBuilder],
 })

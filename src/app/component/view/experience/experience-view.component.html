@@ -45,10 +45,10 @@
                     [color]="[['color', 'gray--800']]"
                     value="Location"
                   ></heading-text>
-                  <small-text
+                  <paragraph-text
                     [color]="[['color', 'gray--800']]"
                     [value]="experienceView.company.city + ', ' + experienceView.company.country"
-                  ></small-text>
+                  ></paragraph-text>
                 </flex-item-util>
                 <flex-item-util></flex-item-util>
                 <heading-text
@@ -56,12 +56,12 @@
                   [color]="[['color', 'gray--800']]"
                   value="Employment type"
                 ></heading-text>
-                <small-text
+                <paragraph-text
                   [color]="[['color', 'gray--800']]"
                   [value]="
                     experienceView.experience.employment + ', ' + experienceView.experience.location
                   "
-                ></small-text>
+                ></paragraph-text>
                 <flex-item-util>
                   <heading-text
                     [level]="5"
@@ -75,10 +75,10 @@
                         track description
                       ) {
                         <li>
-                          <small-text
+                          <paragraph-text
                             [color]="[['color', 'gray--800']]"
                             [value]="description"
-                          ></small-text>
+                          ></paragraph-text>
                         </li>
                       }
                     </ul>
