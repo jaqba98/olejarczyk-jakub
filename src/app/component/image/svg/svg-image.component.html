@@ -4,7 +4,7 @@
   height="28"
   viewBox="0 0 28 28"
   xmlns="http://www.w3.org/2000/svg"
-  [attr.fill]="model().color"
+  [attr.fill]="model().color[type()]"
 >
   <g [attr.transform]="buildTransform()">
     @for (path of model().paths; track path) {

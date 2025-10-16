@@ -1,13 +1,13 @@
-<div class="technology" [ngStyle]="{ 'border-color': svg().color }">
+<div class="technology" [ngStyle]="{ 'border-color': svg().color[type()] }">
   <padding-util horizontal="small">
     <flex-util [directionRow]="true" alignItems="center" gap="small">
       <flex-item-util>
-        <svg-image [model]="svg()"></svg-image>
+        <svg-image [model]="svg()" [type]="type()"></svg-image>
       </flex-item-util>
       <flex-item-util>
         <heading-text
           [level]="6"
-          [styles]="{ color: svg().color }"
+          [styles]="{ color: svg().color[type()] }"
           [value]="value()"
         ></heading-text>
       </flex-item-util>

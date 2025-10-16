@@ -12,6 +12,8 @@ import { BaseComponent } from '../../base/base.component';
 export class SvgImageComponent extends BaseComponent {
   model = input.required<SvgModel>();
 
+  type = input.required<'light' | 'dark'>();
+
   buildTransform() {
     const { scale } = this.model().args;
     const finalScale = scale - 0.2;

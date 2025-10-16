@@ -7,69 +7,73 @@
   <flex-util gap="huge">
     @for (experienceView of experienceView$ | async; track experienceView; let first = $first) {
       <flex-item-util>
-        <!-- TODO: I am here -->
-        <flex-item-util flex="2">
-          <flex-util>
-            <heading-text
-              [level]="5"
-              [color]="[['color', 'primary--500']]"
-              [value]="experienceView.experience.title"
-            ></heading-text>
-            <heading-text
-              [level]="5"
-              [color]="[['color', 'primary--500']]"
-              [value]="experienceView.company.name"
-            ></heading-text>
-            @if (first) {
-              <mark-dumb text="Current" [color]="[['background-color', 'success']]"></mark-dumb>
-            }
-          </flex-util>
-          <flex-util [directionRow]="true" gap="small" alignItems="center">
-            <heading-text
-              [level]="6"
-              [color]="[['color', 'gray--700']]"
-              [value]="
-                dateUtil.buildDate(
-                  experienceView.experience.startDate,
-                  experienceView.experience.endDate
-                )
-              "
-            ></heading-text>
-          </flex-util>
-          <flex-util>
-            <paragraph-text
-              [color]="[['color', 'gray--700']]"
-              [value]="experienceView.company.city + ', ' + experienceView.company.country"
-            ></paragraph-text>
-            <paragraph-text
-              [color]="[['color', 'gray--700']]"
-              [value]="
-                experienceView.experience.employment + ', ' + experienceView.experience.location
-              "
-            ></paragraph-text>
-          </flex-util>
-          @for (description of experienceView.experience.description; track description) {
-            <paragraph-text
-              [color]="[['color', 'gray--700']]"
-              [value]="description"
-            ></paragraph-text>
-          }
-        </flex-item-util>
-        <flex-item-util flex="1">
-          @for (group of experienceView.group; track group) {
-            @for (category of group.category; track category) {
-              @for (technology of category.technology; track technology) {
-                <flex-item-util>
-                  <technology-dumb
-                    [value]="technology.technologyModel.name"
-                    [svg]="technology.technologyModel.svg"
-                    [color]="[['background-color', 'gray--200']]"
-                  ></technology-dumb>
-                </flex-item-util>
+        <flex-util gap="big" [directionRow]="true" [directionColumnSmall]="true">
+          <flex-item-util flex="1">
+            <!-- TODO: I am here -->
+            <flex-util>
+              <heading-text
+                [level]="5"
+                [color]="[['color', 'primary--500']]"
+                [value]="experienceView.experience.title"
+              ></heading-text>
+              <heading-text
+                [level]="5"
+                [color]="[['color', 'primary--500']]"
+                [value]="experienceView.company.name"
+              ></heading-text>
+              @if (first) {
+                <mark-dumb text="Current" [color]="[['background-color', 'success']]"></mark-dumb>
               }
+            </flex-util>
+            <flex-util [directionRow]="true" gap="small" alignItems="center">
+              <heading-text
+                [level]="6"
+                [color]="[['color', 'gray--700']]"
+                [value]="
+                  dateUtil.buildDate(
+                    experienceView.experience.startDate,
+                    experienceView.experience.endDate
+                  )
+                "
+              ></heading-text>
+            </flex-util>
+            <flex-util>
+              <paragraph-text
+                [color]="[['color', 'gray--700']]"
+                [value]="experienceView.company.city + ', ' + experienceView.company.country"
+              ></paragraph-text>
+              <paragraph-text
+                [color]="[['color', 'gray--700']]"
+                [value]="
+                  experienceView.experience.employment + ', ' + experienceView.experience.location
+                "
+              ></paragraph-text>
+            </flex-util>
+            @for (description of experienceView.experience.description; track description) {
+              <paragraph-text
+                [color]="[['color', 'gray--700']]"
+                [value]="description"
+              ></paragraph-text>
             }
-          }
-        </flex-item-util>
+          </flex-item-util>
+          <flex-item-util flex="1">
+            <flex-util gap="medium" [directionRow]="true">
+              @for (group of experienceView.group; track group) {
+                @for (category of group.category; track category) {
+                  @for (technology of category.technology; track technology) {
+                    <flex-item-util>
+                      <technology-dumb
+                        [value]="technology.technologyModel.name"
+                        [svg]="technology.technologyModel.svg"
+                        type="dark"
+                      ></technology-dumb>
+                    </flex-item-util>
+                  }
+                }
+              }
+            </flex-util>
+          </flex-item-util>
+        </flex-util>
       </flex-item-util>
     }
   </flex-util>

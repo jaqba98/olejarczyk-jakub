@@ -26,4 +26,6 @@ export class TechnologyDumbComponent extends BaseComponent {
   value = input.required<string>();
 
   svg = input.required<SvgModel>();
+
+  type = input.required<'light' | 'dark'>();
 }

@@ -1,6 +1,9 @@
 export interface SvgModel {
   paths: string[];
-  color: string;
+  color: {
+    light: string;
+    dark: string;
+  };
   args: {
     scale: number;
     strokeWidth: number;
