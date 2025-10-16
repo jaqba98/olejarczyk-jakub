@@ -61,16 +61,6 @@ import { Injectable } from '@angular/core';
         },
         svg: SvgConst.typescript,
       },
-      java: {
-        name: 'Java',
-        level: 'beginner',
-        defaultGroup: 'backend',
-        companies: {
-          aprSystem: [],
-          primaris: [],
-        },
-        svg: SvgConst.java,
-      },
       python: {
         name: 'Python',
         level: 'beginner',

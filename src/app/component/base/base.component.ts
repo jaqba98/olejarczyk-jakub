@@ -8,7 +8,9 @@ import { PropertyType } from '../../type/property.type';
   template: '',
 })
 export class BaseComponent {
-  color = input.required<[PropertyType, ColorType][]>();
+  color = input<[PropertyType, ColorType][]>([]);
+
+  styles = input<Record<string, string>>();
 
   debug = input(false);
 

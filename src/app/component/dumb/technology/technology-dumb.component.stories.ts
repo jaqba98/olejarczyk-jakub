@@ -13,7 +13,7 @@ type Story = StoryObj<TechnologyDumbComponent>;
 
 export const Primary: Story = {
   args: {
-    value: 'Visual Studio Code',
-    svg: SvgConst.visualStudioCode,
+    value: 'HTML',
+    svg: SvgConst.html,
   },
 };

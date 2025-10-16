@@ -1,8 +1,16 @@
-<flex-util [directionRow]="true" alignItems="center" gap="tiny">
-  <flex-item-util>
-    <svg-image [model]="svg()"></svg-image>
-  </flex-item-util>
-  <flex-item-util>
-    <heading-text [level]="6" [color]="[]" [value]="value()"></heading-text>
-  </flex-item-util>
-</flex-util>
+<div class="technology" [ngStyle]="{ 'border-color': svg().color }">
+  <padding-util horizontal="small">
+    <flex-util [directionRow]="true" alignItems="center" gap="small">
+      <flex-item-util>
+        <svg-image [model]="svg()"></svg-image>
+      </flex-item-util>
+      <flex-item-util>
+        <heading-text
+          [level]="6"
+          [styles]="{ color: svg().color }"
+          [value]="value()"
+        ></heading-text>
+      </flex-item-util>
+    </flex-util>
+  </padding-util>
+</div>

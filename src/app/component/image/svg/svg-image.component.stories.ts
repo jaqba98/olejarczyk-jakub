@@ -14,6 +14,10 @@ type Story = StoryObj<SvgImageComponent>;
 export const html: Story = {
   args: {
     model: SvgConst.html,
+    color: [],
+    styles: {
+      fill: 'red',
+    },
   },
 };
 
@@ -42,13 +46,6 @@ export const typescript: Story = {
   args: {
     ...html.args,
     model: SvgConst.typescript,
-  },
-};
-
-export const java: Story = {
-  args: {
-    ...html.args,
-    model: SvgConst.java,
   },
 };
 

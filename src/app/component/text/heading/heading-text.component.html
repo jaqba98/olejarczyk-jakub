@@ -1,20 +1,20 @@
 @switch (level()) {
   @case (1) {
-    <h1 class="heading heading1" [ngClass]="buildColor()">{{ value() }}</h1>
+    <h1 class="heading heading1" [ngClass]="buildColor()" [ngStyle]="styles()">{{ value() }}</h1>
   }
   @case (2) {
-    <h2 class="heading heading2" [ngClass]="buildColor()">{{ value() }}</h2>
+    <h2 class="heading heading2" [ngClass]="buildColor()" [ngStyle]="styles()">{{ value() }}</h2>
   }
   @case (3) {
-    <h3 class="heading heading3" [ngClass]="buildColor()">{{ value() }}</h3>
+    <h3 class="heading heading3" [ngClass]="buildColor()" [ngStyle]="styles()">{{ value() }}</h3>
   }
   @case (4) {
-    <h4 class="heading heading4" [ngClass]="buildColor()">{{ value() }}</h4>
+    <h4 class="heading heading4" [ngClass]="buildColor()" [ngStyle]="styles()">{{ value() }}</h4>
   }
   @case (5) {
-    <h5 class="heading heading5" [ngClass]="buildColor()">{{ value() }}</h5>
+    <h5 class="heading heading5" [ngClass]="buildColor()" [ngStyle]="styles()">{{ value() }}</h5>
   }
   @case (6) {
-    <h6 class="heading heading6" [ngClass]="buildColor()">{{ value() }}</h6>
+    <h6 class="heading heading6" [ngClass]="buildColor()" [ngStyle]="styles()">{{ value() }}</h6>
   }
 }
