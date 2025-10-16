@@ -1,12 +1,8 @@
-<div class="technology" [ngClass]="buildColor()">
-  <padding-util horizontal="small" vertical="small">
-    <flex-util [directionRow]="true" alignItems="center" gap="small">
-      <flex-item-util>
-        <svg-image [color]="color()" [model]="svg()"></svg-image>
-      </flex-item-util>
-      <flex-item-util>
-        <heading-text [level]="6" [color]="color()" [value]="value()"></heading-text>
-      </flex-item-util>
-    </flex-util>
-  </padding-util>
-</div>
+<flex-util [directionRow]="true" alignItems="center" gap="tiny">
+  <flex-item-util>
+    <svg-image [model]="svg()"></svg-image>
+  </flex-item-util>
+  <flex-item-util>
+    <heading-text [level]="6" [color]="[]" [value]="value()"></heading-text>
+  </flex-item-util>
+</flex-util>

@@ -6,6 +6,7 @@ import { SectionBlockComponent } from '../../block/section/section-block.compone
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
+import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 
 @Component({
   selector: 'technology-view',
@@ -16,6 +17,7 @@ import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.c
     FlexItemUtilComponent,
     HeadingTextComponent,
     TechnologyDumbComponent,
+    FlexUtilComponent,
   ],
   providers: [TechnologyBuilder],
 })

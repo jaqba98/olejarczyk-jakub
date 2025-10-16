@@ -4,13 +4,11 @@
       <interspace-util bottom="huge">
         <heading-text [color]="[titleColor()]" [level]="2" [value]="title()"></heading-text>
       </interspace-util>
-      <flex-util gap="huge">
-        @if (debug()) {
-          <paragraph-text [color]="[titleColor()]" value="Hello"></paragraph-text>
-        } @else {
-          <ng-content></ng-content>
-        }
-      </flex-util>
+      @if (debug()) {
+        <paragraph-text [color]="[titleColor()]" value="Hello"></paragraph-text>
+      } @else {
+        <ng-content></ng-content>
+      }
     </padding-util>
   </margin-util>
 </section>

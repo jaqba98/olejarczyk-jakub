@@ -4,7 +4,7 @@
   height="27"
   viewBox="0 0 28 28"
   xmlns="http://www.w3.org/2000/svg"
-  [ngClass]="buildColor()"
+  [attr.fill]="model().color"
 >
   <g [attr.transform]="buildTransform()">
     @for (path of model().paths; track path) {

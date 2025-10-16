@@ -9,6 +9,10 @@
       gap: size.$none;
     }
 
+    &--tiny {
+      gap: size.$tiny;
+    }
+
     &--small {
       gap: size.$small;
     }

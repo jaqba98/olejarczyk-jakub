@@ -6,8 +6,6 @@ import { SvgImageComponent } from '../../image/svg/svg-image.component';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
-import { PaddingUtilComponent } from '../../util/padding/padding-util.component';
-import { BaseComponent } from '../../base/base.component';
 
 @Component({
   selector: 'technology-dumb',
@@ -19,10 +17,9 @@ import { BaseComponent } from '../../base/base.component';
     HeadingTextComponent,
     FlexUtilComponent,
     FlexItemUtilComponent,
-    PaddingUtilComponent,
   ],
 })
-export class TechnologyDumbComponent extends BaseComponent {
+export class TechnologyDumbComponent {
   value = input.required<string>();
 
   svg = input.required<SvgModel>();

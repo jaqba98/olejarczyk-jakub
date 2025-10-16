@@ -2,14 +2,13 @@ import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { SvgModel } from '../../../model/svg.model';
-import { BaseComponent } from '../../base/base.component';
 
 @Component({
   selector: 'svg-image',
   templateUrl: './svg-image.component.html',
   imports: [CommonModule],
 })
-export class SvgImageComponent extends BaseComponent {
+export class SvgImageComponent {
   model = input.required<SvgModel>();
 
   buildTransform() {
