@@ -1,58 +1,58 @@
 import { Selector, State } from '@ngxs/store';
-import { Injectable } from '@angular/core';
 
 import { TechnologyCategoryStateModel } from './technology-category-state.model';
+import { Injectable } from '@angular/core';
 
 @State<TechnologyCategoryStateModel>({
   name: 'technologyCategory',
   defaults: {
     markupLanguage: {
-      name: 'Markup Language',
+      order: 0,
     },
     stylesheetLanguage: {
-      name: 'Stylesheet Language',
+      order: 1,
     },
     programmingLanguage: {
-      name: 'Programming Language',
+      order: 2,
     },
     framework: {
-      name: 'Framework',
+      order: 3,
     },
     library: {
-      name: 'Library',
+      order: 4,
     },
     test: {
-      name: 'Test',
+      order: 5,
     },
     database: {
-      name: 'Database',
+      order: 6,
     },
     server: {
-      name: 'Server',
+      order: 7,
     },
     runtime: {
-      name: 'Runtime',
+      order: 8,
     },
     containerization: {
-      name: 'Containerization',
+      order: 9,
     },
     integrationPlatform: {
-      name: 'Integration Platform',
+      order: 10,
     },
     versionControlSystem: {
-      name: 'Version Control System',
+      order: 11,
     },
     packageManager: {
-      name: 'Package Manager',
+      order: 12,
     },
     codeQuality: {
-      name: 'Code Quality',
+      order: 13,
     },
     developerTool: {
-      name: 'Developer Tool',
+      order: 14,
     },
     operatingSystem: {
-      name: 'Operating System',
+      order: 15,
     },
   },
 })

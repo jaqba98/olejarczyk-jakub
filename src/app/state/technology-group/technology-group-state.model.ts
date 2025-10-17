@@ -1,8 +1,8 @@
-import { SvgModel } from '../../model/svg.model';
-import { TechnologyGroupStateType } from '../../domain/type/technology-group-domain.type';
+import { TechnologyGroupDomainType } from '../../domain/type/technology-group-domain.type';
 
 export interface TechnologyGroupModel {
   name: string;
+  order: number;
 }
 
-export type TechnologyGroupStateModel = Record<TechnologyGroupStateType, TechnologyGroupModel>;
+export type TechnologyGroupStateModel = Record<TechnologyGroupDomainType, TechnologyGroupModel>;

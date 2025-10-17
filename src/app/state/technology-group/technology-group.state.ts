@@ -1,5 +1,5 @@
-import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
+import { State, Selector } from '@ngxs/store';
 
 import { TechnologyGroupStateModel } from './technology-group-state.model';
 
@@ -8,21 +8,27 @@ import { TechnologyGroupStateModel } from './technology-group-state.model';
   defaults: {
     frontend: {
       name: 'Frontend',
+      order: 0,
     },
     backend: {
       name: 'Backend',
+      order: 1,
     },
     devops: {
       name: 'DevOps',
+      order: 2,
     },
     integration: {
       name: 'Integration',
+      order: 3,
     },
     ai: {
       name: 'AI',
+      order: 4,
     },
     common: {
       name: 'Common',
+      order: 5,
     },
   },
 })

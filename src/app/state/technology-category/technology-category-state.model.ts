@@ -1,10 +1,10 @@
-import { TechnologyCategoryStateType } from './technology-category-state.type';
+import { TechnologyCategoryDomainType } from '../../domain/type/technology-category-domain.type';
 
 export interface TechnologyCategoryModel {
-  name: string;
+  order: number;
 }
 
 export type TechnologyCategoryStateModel = Record<
-  TechnologyCategoryStateType,
+  TechnologyCategoryDomainType,
   TechnologyCategoryModel
 >;
