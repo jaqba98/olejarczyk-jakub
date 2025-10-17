@@ -15,11 +15,10 @@ import { ProjectStateModel } from './project-state.model';
       technologies: ['technology1', 'technology2', 'technology3'],
       repository: {
         kind: 'github',
-        link: 'https://github.com/jaqba98/api-architectures-benchmark',
-        fetch: true,
+        repoUrl: 'https://github.com/jaqba98/api-architectures-benchmark',
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
-      appLink: 'https://www.google.com',
+      appUrl: 'https://www.google.com',
     },
     project2: {
       banner: 'assetImage2',
@@ -30,11 +29,10 @@ import { ProjectStateModel } from './project-state.model';
       technologies: ['technology1'],
       repository: {
         kind: 'github',
-        link: 'https://github.com/jaqba98/api-architectures-benchmark',
-        fetch: false,
+        repoUrl: 'https://github.com/jaqba98/api-architectures-benchmark',
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
-      appLink: '',
+      appUrl: '',
     },
     project3: {
       banner: 'assetImage3',
@@ -47,7 +45,7 @@ import { ProjectStateModel } from './project-state.model';
         kind: 'none',
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
-      appLink: '',
+      appUrl: '',
     },
   },
 })

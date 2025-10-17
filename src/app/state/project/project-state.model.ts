@@ -11,8 +11,7 @@ interface ProjectRepositoryKindModel<TKind extends RepositoryKindDomainType> {
 interface ProjectRepositoryNoneModel extends ProjectRepositoryKindModel<'none'> {}
 
 interface ProjectRepositoryGitHubModel extends ProjectRepositoryKindModel<'github'> {
-  link: string;
-  fetch: boolean;
+  repoUrl: string;
 }
 
 type ProjectRepositoryType = ProjectRepositoryNoneModel | ProjectRepositoryGitHubModel;
@@ -26,7 +25,7 @@ interface ProjectModel {
   technologies: TechnologyDomainType[];
   repository: ProjectRepositoryType;
   gallery: AssetImageDomainType[];
-  appLink: string;
+  appUrl: string;
 }
 
 export type ProjectStateModel = Record<ProjectDomainType, ProjectModel>;
