@@ -7,6 +7,7 @@ import { ExperienceState } from '../state/experience/experience.state';
 import { TechnologyState } from '../state/technology/technology.state';
 import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
+import { ProjectState } from '../state/project/project.state';
 
 export class StoreUtil {
   static getProvide() {
@@ -18,6 +19,7 @@ export class StoreUtil {
           TechnologyState,
           TechnologyGroupState,
           TechnologyCategoryState,
+          ProjectState,
         ],
         withNgxsReduxDevtoolsPlugin(),
       ),
