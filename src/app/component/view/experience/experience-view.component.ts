@@ -2,41 +2,43 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 // import { ExperienceBuilder } from '../../../builder/experience.builder';
-import { SectionBlockComponent } from '../../block/section/section-block.component';
-import { FlexUtilComponent } from '../../util/flex/flex-util.component';
-import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
-import { HeadingTextComponent } from '../../text/heading/heading-text.component';
-import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
-import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
+// import { SectionBlockComponent } from '../../block/section/section-block.component';
+// import { FlexUtilComponent } from '../../util/flex/flex-util.component';
+// import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
+// import { HeadingTextComponent } from '../../text/heading/heading-text.component';
+// import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
+// import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
 import { DateUtil } from '../../../util/date.util';
-import { SmallTextComponent } from '../../text/small/small-text.component';
-import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
-import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';
+import { ExperienceBuilder } from '../../../builder/experience.builder';
+// import { SmallTextComponent } from '../../text/small/small-text.component';
+// import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
+// import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';
 
 @Component({
   selector: 'experience-view',
   templateUrl: './experience-view.component.html',
   imports: [
     CommonModule,
-    SectionBlockComponent,
-    FlexUtilComponent,
-    FlexItemUtilComponent,
-    HeadingTextComponent,
-    TechnologyDumbComponent,
-    MarkDumbComponent,
-    SmallTextComponent,
-    InterspaceUtilComponent,
-    ParagraphTextComponent,
+    // SectionBlockComponent,
+    // FlexUtilComponent,
+    // FlexItemUtilComponent,
+    // HeadingTextComponent,
+    // TechnologyDumbComponent,
+    // MarkDumbComponent,
+    // SmallTextComponent,
+    // InterspaceUtilComponent,
+    // ParagraphTextComponent,
   ],
-  // providers: [ExperienceBuilder],
+  providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {
   // experienceView$;
 
   constructor(
-    // private readonly builder: ExperienceBuilder,
+    private readonly builder: ExperienceBuilder,
     protected readonly dateUtil: DateUtil,
   ) {
+    this.builder.build().subscribe((state) => console.log(state));
     // this.experienceView$ = this.builder.build();
   }
 

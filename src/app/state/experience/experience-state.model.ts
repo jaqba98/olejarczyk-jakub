@@ -5,12 +5,6 @@ import {
   ExperienceTitleDomainType,
 } from '../../domain/type/experience-domain.type';
 import { TechnologyDomainType } from '../../domain/type/technology-domain.type';
-import { TechnologyGroupDomainType } from '../../domain/type/technology-group-domain.type';
-
-interface ExperienceTechnologyModel {
-  technology: TechnologyDomainType;
-  group: TechnologyGroupDomainType[];
-}
 
 export interface ExperienceModel {
   company: CompanyDomainType;
@@ -20,7 +14,7 @@ export interface ExperienceModel {
   endDate: Date | null;
   location: ExperienceLocationDomainType;
   description: string[];
-  technologies: ExperienceTechnologyModel[];
+  technologies: TechnologyDomainType[];
   order: number;
 }
 

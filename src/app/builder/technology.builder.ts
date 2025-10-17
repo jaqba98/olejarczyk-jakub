@@ -9,9 +9,6 @@ import { TechnologyDomainType } from '../domain/type/technology-domain.type';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 import { TechnologyCategoryDomainType } from '../domain/type/technology-category-domain.type';
 import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
-import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
-import { TechnologyGroupDomainType } from '../domain/type/technology-group-domain.type';
-import { TechnologyGroupModel } from '../state/technology-group/technology-group-state.model';
 
 @Injectable()
 export class TechnologyBuilder {
@@ -21,7 +18,6 @@ export class TechnologyBuilder {
     return this.store.selectOnce(TechnologyState.getState).pipe(
       map((state) => this.buildTechnology(state)),
       switchMap((state) => this.buildCategory(state)),
-      switchMap((state) => this.buildGroup(state)),
       map((state) => this.modelCleanUp(state)),
     );
   }
@@ -54,7 +50,7 @@ export class TechnologyBuilder {
     );
   }
 
-  private buildGroup(
+  private modelCleanUp(
     rootState: {
       technologies: {
         technologyType: TechnologyDomainType;
@@ -64,46 +60,13 @@ export class TechnologyBuilder {
       categoryModel: TechnologyCategoryModel;
     }[],
   ) {
-    return from(this.store.selectOnce(TechnologyGroupState.getState)).pipe(
-      map((state) => {
-        return Object.entries(state)
-          .map((array) => ({
-            groupType: array[0] as TechnologyGroupDomainType,
-            groupModel: array[1],
-          }))
-          .map((group) => ({ ...group, categories: rootState }))
-          .sort((prev, next) => prev.groupModel.order - next.groupModel.order);
-      }),
-    );
-  }
-
-  private modelCleanUp(
-    rootState: {
-      categories: {
-        technologies: {
-          technologyType: TechnologyDomainType;
-          technologyModel: TechnologyModel;
-        }[];
-        categoryType: TechnologyCategoryDomainType;
-        categoryModel: TechnologyCategoryModel;
-      }[];
-      groupType: TechnologyGroupDomainType;
-      groupModel: TechnologyGroupModel;
-    }[],
-  ) {
     return rootState
-      .map((group) => ({
-        ...group,
-        categories: group.categories
-          .map((category) => ({
-            ...category,
-            technologies: category.technologies
-              .map((technology) => ({ ...technology }))
-              .filter((technology) => technology.technologyModel.category === category.categoryType)
-              .filter((technology) => technology.technologyModel.group === group.groupType),
-          }))
-          .filter((category) => category.technologies.length > 0),
+      .map((category) => ({
+        ...category,
+        technologies: category.technologies.filter((technology) => {
+          return technology.technologyModel.category === category.categoryType;
+        }),
       }))
-      .filter((group) => group.categories.length > 0);
+      .filter((category) => category.technologies.length > 0);
   }
 }

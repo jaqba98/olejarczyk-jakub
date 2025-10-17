@@ -10,7 +10,6 @@ import { SvgConst } from '../../const/svg.const';
     html: {
       name: 'HTML',
       level: 'beginner',
-      group: 'frontend',
       category: 'markupLanguage',
       icon: SvgConst.html,
       order: 0,
@@ -18,7 +17,6 @@ import { SvgConst } from '../../const/svg.const';
     css: {
       name: 'CSS',
       level: 'beginner',
-      group: 'frontend',
       category: 'stylesheetLanguage',
       icon: SvgConst.css,
       order: 1,
@@ -26,7 +24,6 @@ import { SvgConst } from '../../const/svg.const';
     sass: {
       name: 'Sass',
       level: 'beginner',
-      group: 'frontend',
       category: 'stylesheetLanguage',
       icon: SvgConst.sass,
       order: 2,
@@ -34,7 +31,6 @@ import { SvgConst } from '../../const/svg.const';
     javascript: {
       name: 'JavaScript',
       level: 'beginner',
-      group: 'frontend',
       category: 'programmingLanguage',
       icon: SvgConst.javascript,
       order: 3,
@@ -42,7 +38,6 @@ import { SvgConst } from '../../const/svg.const';
     typescript: {
       name: 'TypeScript',
       level: 'beginner',
-      group: 'frontend',
       category: 'programmingLanguage',
       icon: SvgConst.typescript,
       order: 4,
@@ -50,7 +45,6 @@ import { SvgConst } from '../../const/svg.const';
     python: {
       name: 'Python',
       level: 'beginner',
-      group: 'ai',
       category: 'programmingLanguage',
       icon: SvgConst.python,
       order: 5,
@@ -58,7 +52,6 @@ import { SvgConst } from '../../const/svg.const';
     angular: {
       name: 'Angular',
       level: 'beginner',
-      group: 'frontend',
       category: 'framework',
       icon: SvgConst.angular,
       order: 6,
@@ -66,7 +59,6 @@ import { SvgConst } from '../../const/svg.const';
     rxjs: {
       name: 'RxJS',
       level: 'beginner',
-      group: 'frontend',
       category: 'library',
       icon: SvgConst.rxjs,
       order: 7,
@@ -74,7 +66,6 @@ import { SvgConst } from '../../const/svg.const';
     storybook: {
       name: 'Storybook',
       level: 'beginner',
-      group: 'frontend',
       category: 'library',
       icon: SvgConst.storybook,
       order: 8,
@@ -82,7 +73,6 @@ import { SvgConst } from '../../const/svg.const';
     primeng: {
       name: 'PrimeNG',
       level: 'beginner',
-      group: 'frontend',
       category: 'library',
       icon: SvgConst.primeng,
       order: 9,
@@ -90,7 +80,6 @@ import { SvgConst } from '../../const/svg.const';
     numpy: {
       name: 'NumPy',
       level: 'beginner',
-      group: 'ai',
       category: 'library',
       icon: SvgConst.numpy,
       order: 10,
@@ -98,7 +87,6 @@ import { SvgConst } from '../../const/svg.const';
     jest: {
       name: 'Jest',
       level: 'beginner',
-      group: 'frontend',
       category: 'test',
       icon: SvgConst.jest,
       order: 11,
@@ -106,7 +94,6 @@ import { SvgConst } from '../../const/svg.const';
     postgresql: {
       name: 'PostgreSQL',
       level: 'beginner',
-      group: 'backend',
       category: 'database',
       icon: SvgConst.postgresql,
       order: 12,
@@ -114,7 +101,6 @@ import { SvgConst } from '../../const/svg.const';
     microsoftSqlServer: {
       name: 'Microsoft SQL Server',
       level: 'beginner',
-      group: 'backend',
       category: 'database',
       icon: SvgConst.microsoftSqlServer,
       order: 13,
@@ -122,7 +108,6 @@ import { SvgConst } from '../../const/svg.const';
     nginx: {
       name: 'NGINX',
       level: 'beginner',
-      group: 'devops',
       category: 'server',
       icon: SvgConst.nginx,
       order: 14,
@@ -130,7 +115,6 @@ import { SvgConst } from '../../const/svg.const';
     nodejs: {
       name: 'Node.js',
       level: 'beginner',
-      group: 'backend',
       category: 'runtime',
       icon: SvgConst.nodejs,
       order: 15,
@@ -138,7 +122,6 @@ import { SvgConst } from '../../const/svg.const';
     docker: {
       name: 'Docker',
       level: 'beginner',
-      group: 'devops',
       category: 'containerization',
       icon: SvgConst.docker,
       order: 16,
@@ -146,7 +129,6 @@ import { SvgConst } from '../../const/svg.const';
     snaplogic: {
       name: 'SnapLogic',
       level: 'beginner',
-      group: 'integration',
       category: 'integrationPlatform',
       icon: SvgConst.snaplogic,
       order: 17,
@@ -154,7 +136,6 @@ import { SvgConst } from '../../const/svg.const';
     n8n: {
       name: 'N8N',
       level: 'beginner',
-      group: 'integration',
       category: 'integrationPlatform',
       icon: SvgConst.n8n,
       order: 18,
@@ -162,7 +143,6 @@ import { SvgConst } from '../../const/svg.const';
     git: {
       name: 'Git',
       level: 'beginner',
-      group: 'common',
       category: 'versionControlSystem',
       icon: SvgConst.git,
       order: 19,
@@ -170,7 +150,6 @@ import { SvgConst } from '../../const/svg.const';
     github: {
       name: 'GitHub',
       level: 'beginner',
-      group: 'common',
       category: 'versionControlSystem',
       icon: SvgConst.github,
       order: 20,
@@ -178,7 +157,6 @@ import { SvgConst } from '../../const/svg.const';
     gitlab: {
       name: 'GitLab',
       level: 'beginner',
-      group: 'common',
       category: 'versionControlSystem',
       icon: SvgConst.gitlab,
       order: 21,
@@ -186,7 +164,6 @@ import { SvgConst } from '../../const/svg.const';
     npm: {
       name: 'npm',
       level: 'beginner',
-      group: 'common',
       category: 'packageManager',
       icon: SvgConst.npm,
       order: 22,
@@ -194,7 +171,6 @@ import { SvgConst } from '../../const/svg.const';
     pnpm: {
       name: 'pnpm',
       level: 'beginner',
-      group: 'common',
       category: 'packageManager',
       icon: SvgConst.pnpm,
       order: 23,
@@ -202,7 +178,6 @@ import { SvgConst } from '../../const/svg.const';
     eslint: {
       name: 'Eslint',
       level: 'beginner',
-      group: 'common',
       category: 'codeQuality',
       icon: SvgConst.eslint,
       order: 24,
@@ -210,7 +185,6 @@ import { SvgConst } from '../../const/svg.const';
     prettier: {
       name: 'Prettier',
       level: 'beginner',
-      group: 'common',
       category: 'codeQuality',
       icon: SvgConst.prettier,
       order: 25,
@@ -218,7 +192,6 @@ import { SvgConst } from '../../const/svg.const';
     stylelint: {
       name: 'Stylelint',
       level: 'beginner',
-      group: 'common',
       category: 'codeQuality',
       icon: SvgConst.stylelint,
       order: 26,
@@ -226,7 +199,6 @@ import { SvgConst } from '../../const/svg.const';
     postman: {
       name: 'Postman',
       level: 'beginner',
-      group: 'common',
       category: 'developerTool',
       icon: SvgConst.postman,
       order: 27,
@@ -234,7 +206,6 @@ import { SvgConst } from '../../const/svg.const';
     nx: {
       name: 'Nx',
       level: 'beginner',
-      group: 'common',
       category: 'developerTool',
       icon: SvgConst.nx,
       order: 28,
@@ -242,7 +213,6 @@ import { SvgConst } from '../../const/svg.const';
     visualParadigm: {
       name: 'Visual Paradigm',
       level: 'beginner',
-      group: 'common',
       category: 'developerTool',
       icon: SvgConst.visualParadigm,
       order: 29,
@@ -250,7 +220,6 @@ import { SvgConst } from '../../const/svg.const';
     webstorm: {
       name: 'WebStorm',
       level: 'beginner',
-      group: 'common',
       category: 'developerTool',
       icon: SvgConst.webstorm,
       order: 30,
@@ -258,7 +227,6 @@ import { SvgConst } from '../../const/svg.const';
     visualStudioCode: {
       name: 'Visual Studio Code',
       level: 'beginner',
-      group: 'common',
       category: 'developerTool',
       icon: SvgConst.visualStudioCode,
       order: 31,
@@ -266,7 +234,6 @@ import { SvgConst } from '../../const/svg.const';
     eclipse: {
       name: 'Eclipse',
       level: 'beginner',
-      group: 'common',
       category: 'developerTool',
       icon: SvgConst.eclipse,
       order: 32,
@@ -274,7 +241,6 @@ import { SvgConst } from '../../const/svg.const';
     jira: {
       name: 'Jira',
       level: 'beginner',
-      group: 'common',
       category: 'developerTool',
       icon: SvgConst.jira,
       order: 33,
@@ -282,7 +248,6 @@ import { SvgConst } from '../../const/svg.const';
     windows: {
       name: 'Windows',
       level: 'beginner',
-      group: 'common',
       category: 'operatingSystem',
       icon: SvgConst.window,
       order: 34,
@@ -290,7 +255,6 @@ import { SvgConst } from '../../const/svg.const';
     linux: {
       name: 'Linux',
       level: 'beginner',
-      group: 'common',
       category: 'operatingSystem',
       icon: SvgConst.linux,
       order: 35,
