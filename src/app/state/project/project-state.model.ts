@@ -1,15 +1,16 @@
-import { AssetImageDomainEnum } from '../../domain/enum/asset-image-domain.enum';
-import { ProjectDomainEnum } from '../../domain/enum/project-domain.enum';
-import { RepositoryKindDomainEnum } from '../../domain/enum/repository-kind-domain.enum';
-import { StatusDomainEnum } from '../../domain/enum/status-domain.enum';
-import { TechnologyDomainEnum } from '../../domain/enum/technology-domain.enum';
+import { AssetImageDomainType } from '../../domain/type/asset-image-domain.type';
+import { ProjectDomainType } from '../../domain/type/project-domain.type';
+import { RepositoryKindDomainType } from '../../domain/type/repository-kind-domain.type';
+import { StatusDomainType } from '../../domain/type/status-domain.type';
+import { TechnologyDomainType } from '../../domain/type/technology-domain.type';
 
-interface ProjectRepositoryNoneModel {
-  kind: RepositoryKindDomainEnum.none;
+interface ProjectRepositoryKindModel<TKind extends RepositoryKindDomainType> {
+  kind: TKind;
 }
 
-interface ProjectRepositoryGitHubModel {
-  kind: RepositoryKindDomainEnum.github;
+interface ProjectRepositoryNoneModel extends ProjectRepositoryKindModel<'none'> {}
+
+interface ProjectRepositoryGitHubModel extends ProjectRepositoryKindModel<'github'> {
   link: string;
   fetch: boolean;
 }
@@ -17,15 +18,15 @@ interface ProjectRepositoryGitHubModel {
 type ProjectRepositoryType = ProjectRepositoryNoneModel | ProjectRepositoryGitHubModel;
 
 interface ProjectModel {
-  banner: AssetImageDomainEnum;
+  banner: AssetImageDomainType;
   name: string;
   creationDate: Date;
-  status: StatusDomainEnum;
+  status: StatusDomainType;
   description: string;
-  technologies: TechnologyDomainEnum[];
+  technologies: TechnologyDomainType[];
   repository: ProjectRepositoryType;
-  gallery: AssetImageDomainEnum[];
+  gallery: AssetImageDomainType[];
   appLink: string;
 }
 
-export type ProjectStateModel = Record<ProjectDomainEnum, ProjectModel>;
+export type ProjectStateModel = Record<ProjectDomainType, ProjectModel>;
