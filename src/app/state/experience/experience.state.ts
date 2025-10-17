@@ -2,6 +2,7 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ExperienceStateModel } from './experience-state.model';
+import { gitlab } from '../../component/image/svg/svg-image.component.stories';
 
 @State<ExperienceStateModel>({
   name: 'experience',
@@ -17,7 +18,15 @@ import { ExperienceStateModel } from './experience-state.model';
         'Designed, and managed relational databases using Microsoft SQL Server, including writing complex queries and stored procedures.',
         'Developed and maintained data integration pipelines in SnapLogic to automate workflows and enable seamless data exchange between systems.',
       ],
-      technologies: [],
+      technologies: [
+        'javascript',
+        'microsoftSqlServer',
+        'snaplogic',
+        'github',
+        'postman',
+        'jira',
+        'windows',
+      ],
       order: 0,
     },
     {
@@ -44,7 +53,33 @@ import { ExperienceStateModel } from './experience-state.model';
         'Tested and documented REST APIs to ensure correct client-server communication.',
         'Modeled system architectures and documented business processes using Enterprise Architect.',
       ],
-      technologies: [],
+      technologies: [
+        'html',
+        'css',
+        'sass',
+        'javascript',
+        'typescript',
+        'angular',
+        'rxjs',
+        'storybook',
+        'primeng',
+        'jest',
+        'postgresql',
+        'nodejs',
+        'docker',
+        'git',
+        'gitlab',
+        'npm',
+        'pnpm',
+        'eslint',
+        'prettier',
+        'stylelint',
+        'postman',
+        'nx',
+        'webstorm',
+        'visualStudioCode',
+        'windows',
+      ],
       order: 1,
     },
   ],
