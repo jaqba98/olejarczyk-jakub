@@ -1,4 +1,4 @@
-import { SvgBuilder } from '../builder/svg.builder';
+import { SvgBuilder } from '../util/svg.builder';
 
 export const TechnologyColorConst = {
   html: { light: '#E06C49', dark: '#494949' },
