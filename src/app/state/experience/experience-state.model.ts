@@ -1,18 +1,21 @@
-import { CompanyStateType } from '../../domain/type/company-domain.type';
-
-type ExperienceTitleType = 'Full Stack Developer' | 'Integration Engineer';
-
-type ExperienceEmploymentType = 'Full-time';
-
-type ExperienceLocationType = 'On-site' | 'Remote';
+import { CompanyDomainType } from '../../domain/type/company-domain.type';
+import {
+  ExperienceEmploymentDomainType,
+  ExperienceLocationDomainType,
+  ExperienceTitleDomainType,
+} from '../../domain/type/experience-domain.type';
+import { TechnologyDomainType } from '../../domain/type/technology-domain.type';
 
 export interface ExperienceModel {
-  title: ExperienceTitleType;
-  employment: ExperienceEmploymentType;
+  company: CompanyDomainType;
+  title: ExperienceTitleDomainType;
+  employment: ExperienceEmploymentDomainType;
   startDate: Date;
   endDate: Date | null;
-  location: ExperienceLocationType;
+  location: ExperienceLocationDomainType;
   description: string[];
+  technologies: TechnologyDomainType[];
+  order: number;
 }
 
-export type ExperienceStateModel = Record<CompanyStateType, ExperienceModel[]>;
+export type ExperienceStateModel = ExperienceModel[];
