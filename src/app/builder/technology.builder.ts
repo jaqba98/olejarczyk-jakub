@@ -3,108 +3,107 @@ import { Store } from '@ngxs/store';
 import { map, switchMap } from 'rxjs/operators';
 import { from } from 'rxjs';
 
-import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
-import {
-  TechnologyGroupModel,
-  TechnologyGroupStateModel,
-} from '../state/technology-group/technology-group-state.model';
-import { TechnologyGroupStateType } from '../domain/type/technology-group-domain.type';
-import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
-import { TechnologyCategoryStateType } from '../domain/type/technology-category-domain.type';
-import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
 import { TechnologyState } from '../state/technology/technology.state';
+import { TechnologyModel, TechnologyStateModel } from '../state/technology/technology-state.model';
+import { TechnologyDomainType } from '../domain/type/technology-domain.type';
+import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
+import { TechnologyCategoryDomainType } from '../domain/type/technology-category-domain.type';
+import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
+import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
+import { TechnologyGroupDomainType } from '../domain/type/technology-group-domain.type';
+import { TechnologyGroupModel } from '../state/technology-group/technology-group-state.model';
 
 @Injectable()
 export class TechnologyBuilder {
   constructor(private readonly store: Store) {}
 
   build() {
-    return this.store.selectOnce(TechnologyGroupState.getState).pipe(
-      map((state) => this.buildGroup(state)),
-      switchMap((state) => this.addCategory(state)),
-      switchMap((state) => this.addTechnology(state)),
+    return this.store.selectOnce(TechnologyState.getState).pipe(
+      map((state) => this.buildTechnology(state)),
+      switchMap((state) => this.buildCategory(state)),
+      switchMap((state) => this.buildGroup(state)),
+      map((state) => this.modelCleanUp(state)),
     );
   }
 
-  private buildGroup(state: TechnologyGroupStateModel) {
-    return Object.entries(state).map((array) => ({
-      groupType: array[0] as TechnologyGroupStateType,
-      groupModel: array[1],
-    }));
+  private buildTechnology(state: TechnologyStateModel) {
+    return Object.entries(state)
+      .map((array) => ({
+        technologyType: array[0] as TechnologyDomainType,
+        technologyModel: array[1],
+      }))
+      .sort((prev, next) => prev.technologyModel.order - next.technologyModel.order);
   }
 
-  private addCategory(
+  private buildCategory(
     rootState: {
-      groupType: TechnologyGroupStateType;
-      groupModel: TechnologyGroupModel;
+      technologyType: TechnologyDomainType;
+      technologyModel: TechnologyModel;
     }[],
   ) {
     return from(this.store.selectOnce(TechnologyCategoryState.getState)).pipe(
       map((state) => {
-        return rootState.map((rootStateItem) => ({
-          ...rootStateItem,
-          category: Object.entries(state).map((array) => ({
-            categoryType: array[0] as TechnologyCategoryStateType,
+        return Object.entries(state)
+          .map((array) => ({
+            categoryType: array[0] as TechnologyCategoryDomainType,
             categoryModel: array[1],
-          })),
-        }));
+          }))
+          .map((category) => ({ ...category, technologies: rootState }))
+          .sort((prev, next) => prev.categoryModel.order - next.categoryModel.order);
       }),
     );
   }
 
-  private addTechnology(
+  private buildGroup(
     rootState: {
-      category: {
-        categoryType: TechnologyCategoryStateType;
+      technologies: {
+        technologyType: TechnologyDomainType;
+        technologyModel: TechnologyModel;
+      }[];
+      categoryType: TechnologyCategoryDomainType;
+      categoryModel: TechnologyCategoryModel;
+    }[],
+  ) {
+    return from(this.store.selectOnce(TechnologyGroupState.getState)).pipe(
+      map((state) => {
+        return Object.entries(state)
+          .map((array) => ({
+            groupType: array[0] as TechnologyGroupDomainType,
+            groupModel: array[1],
+          }))
+          .map((group) => ({ ...group, categories: rootState }))
+          .sort((prev, next) => prev.groupModel.order - next.groupModel.order);
+      }),
+    );
+  }
+
+  private modelCleanUp(
+    rootState: {
+      categories: {
+        technologies: {
+          technologyType: TechnologyDomainType;
+          technologyModel: TechnologyModel;
+        }[];
+        categoryType: TechnologyCategoryDomainType;
         categoryModel: TechnologyCategoryModel;
       }[];
-      groupType: TechnologyGroupStateType;
+      groupType: TechnologyGroupDomainType;
       groupModel: TechnologyGroupModel;
     }[],
   ) {
-    return from(this.store.selectOnce(TechnologyState.getState)).pipe(
-      map((state) => {
-        return rootState
-          .map((rootStateItem) => ({
-            ...rootStateItem,
-            category: rootStateItem.category
-              .map((categoryItem) => ({
-                ...categoryItem,
-                technology: Object.entries(state)
-                  .map((array) => ({
-                    categoryType: array[0] as TechnologyCategoryStateType,
-                    technology: Object.entries(array[1]).map((array) => ({
-                      technologyType: array[0],
-                      technologyModel: array[1],
-                    })),
-                  }))
-                  .filter((technology) => technology.categoryType === categoryItem.categoryType)
-                  .map((technology) => technology.technology)
-                  .flat()
-                  .map((technology) => ({
-                    ...technology,
-                    groups: Object.values(technology.technologyModel.companies)
-                      .flat()
-                      .reduce((acc: TechnologyGroupStateType[], curr) => {
-                        if (!acc.includes(curr)) {
-                          acc.push(curr);
-                        }
-                        return acc;
-                      }, []),
-                  }))
-                  .map((technology) => ({
-                    ...technology,
-                    groups:
-                      technology.groups.length > 0
-                        ? technology.groups
-                        : [technology.technologyModel.defaultGroup],
-                  }))
-                  .filter((technology) => technology.groups.includes(rootStateItem.groupType)),
-              }))
-              .filter((categoryItem) => categoryItem.technology.length > 0),
+    return rootState
+      .map((group) => ({
+        ...group,
+        categories: group.categories
+          .map((category) => ({
+            ...category,
+            technologies: category.technologies
+              .map((technology) => ({ ...technology }))
+              .filter((technology) => technology.technologyModel.category === category.categoryType)
+              .filter((technology) => technology.technologyModel.group === group.groupType),
           }))
-          .filter((rootStateItem) => rootStateItem.category.length > 0);
-      }),
-    );
+          .filter((category) => category.technologies.length > 0),
+      }))
+      .filter((group) => group.categories.length > 0);
   }
 }

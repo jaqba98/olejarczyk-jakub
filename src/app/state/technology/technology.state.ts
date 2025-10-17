@@ -13,6 +13,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'markupLanguage',
       icon: SvgConst.html,
+      order: 0,
     },
     css: {
       name: 'CSS',
@@ -20,6 +21,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'stylesheetLanguage',
       icon: SvgConst.css,
+      order: 1,
     },
     sass: {
       name: 'Sass',
@@ -27,6 +29,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'stylesheetLanguage',
       icon: SvgConst.sass,
+      order: 2,
     },
     javascript: {
       name: 'JavaScript',
@@ -34,6 +37,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'programmingLanguage',
       icon: SvgConst.javascript,
+      order: 3,
     },
     typescript: {
       name: 'TypeScript',
@@ -41,6 +45,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'programmingLanguage',
       icon: SvgConst.typescript,
+      order: 4,
     },
     python: {
       name: 'Python',
@@ -48,6 +53,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'ai',
       category: 'programmingLanguage',
       icon: SvgConst.python,
+      order: 5,
     },
     angular: {
       name: 'Angular',
@@ -55,6 +61,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'framework',
       icon: SvgConst.angular,
+      order: 6,
     },
     rxjs: {
       name: 'RxJS',
@@ -62,6 +69,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'library',
       icon: SvgConst.rxjs,
+      order: 7,
     },
     storybook: {
       name: 'Storybook',
@@ -69,6 +77,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'library',
       icon: SvgConst.storybook,
+      order: 8,
     },
     primeng: {
       name: 'PrimeNG',
@@ -76,6 +85,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'library',
       icon: SvgConst.primeng,
+      order: 9,
     },
     numpy: {
       name: 'NumPy',
@@ -83,6 +93,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'ai',
       category: 'library',
       icon: SvgConst.numpy,
+      order: 10,
     },
     jest: {
       name: 'Jest',
@@ -90,6 +101,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'frontend',
       category: 'test',
       icon: SvgConst.jest,
+      order: 11,
     },
     postgresql: {
       name: 'PostgreSQL',
@@ -97,13 +109,15 @@ import { SvgConst } from '../../const/svg.const';
       group: 'backend',
       category: 'database',
       icon: SvgConst.postgresql,
+      order: 12,
     },
     microsoftSqlServer: {
       name: 'Microsoft SQL Server',
       level: 'beginner',
-      group: 'integration',
+      group: 'backend',
       category: 'database',
       icon: SvgConst.microsoftSqlServer,
+      order: 13,
     },
     nginx: {
       name: 'NGINX',
@@ -111,6 +125,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'devops',
       category: 'server',
       icon: SvgConst.nginx,
+      order: 14,
     },
     nodejs: {
       name: 'Node.js',
@@ -118,6 +133,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'backend',
       category: 'runtime',
       icon: SvgConst.nodejs,
+      order: 15,
     },
     docker: {
       name: 'Docker',
@@ -125,6 +141,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'devops',
       category: 'containerization',
       icon: SvgConst.docker,
+      order: 16,
     },
     snaplogic: {
       name: 'SnapLogic',
@@ -132,6 +149,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'integration',
       category: 'integrationPlatform',
       icon: SvgConst.snaplogic,
+      order: 17,
     },
     n8n: {
       name: 'N8N',
@@ -139,6 +157,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'integration',
       category: 'integrationPlatform',
       icon: SvgConst.n8n,
+      order: 18,
     },
     git: {
       name: 'Git',
@@ -146,13 +165,15 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'versionControlSystem',
       icon: SvgConst.git,
+      order: 19,
     },
     github: {
       name: 'GitHub',
       level: 'beginner',
       group: 'common',
-      category: 'integrationPlatform',
+      category: 'versionControlSystem',
       icon: SvgConst.github,
+      order: 20,
     },
     gitlab: {
       name: 'GitLab',
@@ -160,6 +181,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'versionControlSystem',
       icon: SvgConst.gitlab,
+      order: 21,
     },
     npm: {
       name: 'npm',
@@ -167,6 +189,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'packageManager',
       icon: SvgConst.npm,
+      order: 22,
     },
     pnpm: {
       name: 'pnpm',
@@ -174,6 +197,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'packageManager',
       icon: SvgConst.pnpm,
+      order: 23,
     },
     eslint: {
       name: 'Eslint',
@@ -181,6 +205,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'codeQuality',
       icon: SvgConst.eslint,
+      order: 24,
     },
     prettier: {
       name: 'Prettier',
@@ -188,6 +213,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'codeQuality',
       icon: SvgConst.prettier,
+      order: 25,
     },
     stylelint: {
       name: 'Stylelint',
@@ -195,6 +221,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'codeQuality',
       icon: SvgConst.stylelint,
+      order: 26,
     },
     postman: {
       name: 'Postman',
@@ -202,6 +229,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'developerTool',
       icon: SvgConst.postman,
+      order: 27,
     },
     nx: {
       name: 'Nx',
@@ -209,6 +237,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'developerTool',
       icon: SvgConst.nx,
+      order: 28,
     },
     visualParadigm: {
       name: 'Visual Paradigm',
@@ -216,6 +245,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'developerTool',
       icon: SvgConst.visualParadigm,
+      order: 29,
     },
     webstorm: {
       name: 'WebStorm',
@@ -223,6 +253,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'developerTool',
       icon: SvgConst.webstorm,
+      order: 30,
     },
     visualStudioCode: {
       name: 'Visual Studio Code',
@@ -230,6 +261,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'developerTool',
       icon: SvgConst.visualStudioCode,
+      order: 31,
     },
     eclipse: {
       name: 'Eclipse',
@@ -237,6 +269,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'developerTool',
       icon: SvgConst.eclipse,
+      order: 32,
     },
     jira: {
       name: 'Jira',
@@ -244,6 +277,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'developerTool',
       icon: SvgConst.jira,
+      order: 33,
     },
     windows: {
       name: 'Windows',
@@ -251,6 +285,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'operatingSystem',
       icon: SvgConst.window,
+      order: 34,
     },
     linux: {
       name: 'Linux',
@@ -258,6 +293,7 @@ import { SvgConst } from '../../const/svg.const';
       group: 'common',
       category: 'operatingSystem',
       icon: SvgConst.linux,
+      order: 35,
     },
   },
 })

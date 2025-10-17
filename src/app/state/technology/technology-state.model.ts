@@ -4,12 +4,13 @@ import { TechnologyGroupDomainType } from '../../domain/type/technology-group-do
 import { TechnologyLevelDomainType } from '../../domain/type/technology-level-domain.type';
 import { SvgModel } from '../../model/svg.model';
 
-interface TechnologyModel {
+export interface TechnologyModel {
   name: string;
   level: TechnologyLevelDomainType;
   group: TechnologyGroupDomainType;
   category: TechnologyCategoryDomainType;
   icon: SvgModel;
+  order: number;
 }
 
 export type TechnologyStateModel = Record<TechnologyDomainType, TechnologyModel>;

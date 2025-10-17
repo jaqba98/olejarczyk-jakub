@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ExperienceBuilder } from '../../../builder/experience.builder';
+// import { ExperienceBuilder } from '../../../builder/experience.builder';
 import { SectionBlockComponent } from '../../block/section/section-block.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
@@ -28,16 +28,16 @@ import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.comp
     InterspaceUtilComponent,
     ParagraphTextComponent,
   ],
-  providers: [ExperienceBuilder],
+  // providers: [ExperienceBuilder],
 })
 export class ExperienceViewComponent {
-  experienceView$;
+  // experienceView$;
 
   constructor(
-    private readonly builder: ExperienceBuilder,
+    // private readonly builder: ExperienceBuilder,
     protected readonly dateUtil: DateUtil,
   ) {
-    this.experienceView$ = this.builder.build();
+    // this.experienceView$ = this.builder.build();
   }
 
   buildTitle(title: string, name: string) {

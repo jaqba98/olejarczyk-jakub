@@ -22,9 +22,9 @@ import { FlexUtilComponent } from '../../util/flex/flex-util.component';
   providers: [TechnologyBuilder],
 })
 export class TechnologyViewComponent {
-  technologyView$;
+  // technologyView$;
 
   constructor(private readonly builder: TechnologyBuilder) {
-    this.technologyView$ = this.builder.build();
+    this.builder.build().subscribe((state) => console.log(state));
   }
 }
