@@ -1,7 +1,7 @@
 import { Selector, State } from '@ngxs/store';
+import { Injectable } from '@angular/core';
 
 import { CompanyStateModel } from './company-state.model';
-import { Injectable } from '@angular/core';
 
 @State<CompanyStateModel>({
   name: 'company',

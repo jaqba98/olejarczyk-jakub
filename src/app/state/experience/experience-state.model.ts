@@ -1,4 +1,4 @@
-import { CompanyStateType } from '../company/company-state.type';
+import { CompanyStateType } from '../../domain/type/company-domain.type';
 
 type ExperienceTitleType = 'Full Stack Developer' | 'Integration Engineer';
 
