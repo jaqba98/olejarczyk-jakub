@@ -9,10 +9,10 @@ import { CompanyStateType } from '../state/company/company-state.type';
 import { CompanyState } from '../state/company/company.state';
 import { CompanyModel } from '../state/company/company-state.model';
 import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
-import { TechnologyGroupStateType } from '../state/technology-group/technology-group-state.type';
+import { TechnologyGroupStateType } from '../domain/type/technology-group-domain.type';
 import { TechnologyGroupModel } from '../state/technology-group/technology-group-state.model';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
-import { TechnologyCategoryStateType } from '../state/technology-category/technology-category-state.type';
+import { TechnologyCategoryStateType } from '../domain/type/technology-category-domain.type';
 import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
 import { TechnologyState } from '../state/technology/technology.state';
 

@@ -1,5 +1,5 @@
 import { SvgModel } from '../../model/svg.model';
-import { TechnologyGroupStateType } from './technology-group-state.type';
+import { TechnologyGroupStateType } from '../../domain/type/technology-group-domain.type';
 
 export interface TechnologyGroupModel {
   name: string;

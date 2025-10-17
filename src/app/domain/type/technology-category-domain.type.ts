@@ -1,0 +1,17 @@
+export type TechnologyCategoryDomainType =
+  | 'markupLanguage'
+  | 'stylesheetLanguage'
+  | 'programmingLanguage'
+  | 'framework'
+  | 'library'
+  | 'test'
+  | 'database'
+  | 'server'
+  | 'runtime'
+  | 'containerization'
+  | 'integrationPlatform'
+  | 'versionControlSystem'
+  | 'packageManager'
+  | 'codeQuality'
+  | 'developerTool'
+  | 'operatingSystem';

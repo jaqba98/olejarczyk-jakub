@@ -8,9 +8,9 @@ import {
   TechnologyGroupModel,
   TechnologyGroupStateModel,
 } from '../state/technology-group/technology-group-state.model';
-import { TechnologyGroupStateType } from '../state/technology-group/technology-group-state.type';
+import { TechnologyGroupStateType } from '../domain/type/technology-group-domain.type';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
-import { TechnologyCategoryStateType } from '../state/technology-category/technology-category-state.type';
+import { TechnologyCategoryStateType } from '../domain/type/technology-category-domain.type';
 import { TechnologyCategoryModel } from '../state/technology-category/technology-category-state.model';
 import { TechnologyState } from '../state/technology/technology.state';
 

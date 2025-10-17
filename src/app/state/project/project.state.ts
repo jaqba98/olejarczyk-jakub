@@ -12,7 +12,7 @@ import { ProjectStateModel } from './project-state.model';
       creationDate: new Date(2025, 1, 1),
       status: 'notStarted',
       description: 'Project 1 description',
-      technologies: ['technology1', 'technology2', 'technology3'],
+      technologies: ['html', 'css', 'sass'],
       repository: {
         kind: 'github',
         repoUrl: 'https://github.com/jaqba98/api-architectures-benchmark',
@@ -26,7 +26,7 @@ import { ProjectStateModel } from './project-state.model';
       creationDate: new Date(2024, 1, 1),
       status: 'inProgress',
       description: 'Project 2 description',
-      technologies: ['technology1'],
+      technologies: ['html'],
       repository: {
         kind: 'github',
         repoUrl: 'https://github.com/jaqba98/api-architectures-benchmark',
@@ -40,7 +40,7 @@ import { ProjectStateModel } from './project-state.model';
       creationDate: new Date(2023, 1, 1),
       status: 'completed',
       description: 'Project 3 description',
-      technologies: ['technology2', 'technology3'],
+      technologies: ['css', 'sass'],
       repository: {
         kind: 'none',
       },

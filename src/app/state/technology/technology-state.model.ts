@@ -1,20 +1,15 @@
+import { TechnologyCategoryDomainType } from '../../domain/type/technology-category-domain.type';
+import { TechnologyDomainType } from '../../domain/type/technology-domain.type';
+import { TechnologyGroupDomainType } from '../../domain/type/technology-group-domain.type';
+import { TechnologyLevelDomainType } from '../../domain/type/technology-level-domain.type';
 import { SvgModel } from '../../model/svg.model';
-import { CompanyStateType } from '../company/company-state.type';
-import { TechnologyCategoryStateType } from '../technology-category/technology-category-state.type';
-import { TechnologyGroupStateType } from '../technology-group/technology-group-state.type';
 
-type TechnologyLevelType = 'beginner' | 'intermediate' | 'advanced';
-
-type TechnologyCompaniesType = Record<CompanyStateType, TechnologyGroupStateType[]>;
-
-export interface TechnologyModel {
+interface TechnologyModel {
   name: string;
-  level: TechnologyLevelType;
-  defaultGroup: TechnologyGroupStateType;
-  companies: TechnologyCompaniesType;
-  svg: SvgModel;
+  level: TechnologyLevelDomainType;
+  group: TechnologyGroupDomainType;
+  category: TechnologyCategoryDomainType;
+  icon: SvgModel;
 }
 
-type TechnologyType = Record<string, TechnologyModel>;
-
-export type TechnologyStateModel = Record<TechnologyCategoryStateType, TechnologyType>;
+export type TechnologyStateModel = Record<TechnologyDomainType, TechnologyModel>;

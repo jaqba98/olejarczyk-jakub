@@ -1,402 +1,263 @@
 import { Selector, State } from '@ngxs/store';
+import { Injectable } from '@angular/core';
+
 import { TechnologyStateModel } from './technology-state.model';
 import { SvgConst } from '../../const/svg.const';
-import { Injectable } from '@angular/core';
 
 @State<TechnologyStateModel>({
   name: 'technology',
   defaults: {
-    markupLanguage: {
-      html: {
-        name: 'HTML',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.html,
-      },
+    html: {
+      name: 'HTML',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'markupLanguage',
+      icon: SvgConst.html,
     },
-    stylesheetLanguage: {
-      css: {
-        name: 'CSS',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.css,
-      },
-      sass: {
-        name: 'Sass',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.sass,
-      },
+    css: {
+      name: 'CSS',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'stylesheetLanguage',
+      icon: SvgConst.css,
     },
-    programmingLanguage: {
-      javascript: {
-        name: 'JavaScript',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend', 'backend'],
-          primaris: ['integration'],
-        },
-        svg: SvgConst.javascript,
-      },
-      typescript: {
-        name: 'TypeScript',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend', 'backend'],
-          primaris: [],
-        },
-        svg: SvgConst.typescript,
-      },
-      python: {
-        name: 'Python',
-        level: 'beginner',
-        defaultGroup: 'ai',
-        companies: {
-          aprSystem: [],
-          primaris: [],
-        },
-        svg: SvgConst.python,
-      },
+    sass: {
+      name: 'Sass',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'stylesheetLanguage',
+      icon: SvgConst.sass,
     },
-    framework: {
-      angular: {
-        name: 'Angular',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.angular,
-      },
+    javascript: {
+      name: 'JavaScript',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'programmingLanguage',
+      icon: SvgConst.javascript,
     },
-    library: {
-      rxjs: {
-        name: 'RxJS',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.rxjs,
-      },
-      storybook: {
-        name: 'Storybook',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.storybook,
-      },
-      primeng: {
-        name: 'PrimeNG',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.primeng,
-      },
-      numpy: {
-        name: 'NumPy',
-        level: 'beginner',
-        defaultGroup: 'ai',
-        companies: {
-          aprSystem: [],
-          primaris: [],
-        },
-        svg: SvgConst.numpy,
-      },
+    typescript: {
+      name: 'TypeScript',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'programmingLanguage',
+      icon: SvgConst.typescript,
     },
-    test: {
-      jest: {
-        name: 'Jest',
-        level: 'beginner',
-        defaultGroup: 'frontend',
-        companies: {
-          aprSystem: ['frontend'],
-          primaris: [],
-        },
-        svg: SvgConst.jest,
-      },
+    python: {
+      name: 'Python',
+      level: 'beginner',
+      group: 'ai',
+      category: 'programmingLanguage',
+      icon: SvgConst.python,
     },
-    database: {
-      postgresql: {
-        name: 'PostgreSQL',
-        level: 'beginner',
-        defaultGroup: 'backend',
-        companies: {
-          aprSystem: ['backend'],
-          primaris: [],
-        },
-        svg: SvgConst.postgresql,
-      },
-      microsoftSqlServer: {
-        name: 'Microsoft SQL Server',
-        level: 'beginner',
-        defaultGroup: 'integration',
-        companies: {
-          aprSystem: [],
-          primaris: ['integration'],
-        },
-        svg: SvgConst.microsoftSqlServer,
-      },
+    angular: {
+      name: 'Angular',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'framework',
+      icon: SvgConst.angular,
     },
-    server: {
-      nginx: {
-        name: 'NGINX',
-        level: 'beginner',
-        defaultGroup: 'devops',
-        companies: {
-          aprSystem: [],
-          primaris: [],
-        },
-        svg: SvgConst.nginx,
-      },
+    rxjs: {
+      name: 'RxJS',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'library',
+      icon: SvgConst.rxjs,
     },
-    runtime: {
-      nodejs: {
-        name: 'Node.js',
-        level: 'beginner',
-        defaultGroup: 'backend',
-        companies: {
-          aprSystem: ['backend'],
-          primaris: [],
-        },
-        svg: SvgConst.nodejs,
-      },
+    storybook: {
+      name: 'Storybook',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'library',
+      icon: SvgConst.storybook,
     },
-    containerization: {
-      docker: {
-        name: 'Docker',
-        level: 'beginner',
-        defaultGroup: 'devops',
-        companies: {
-          aprSystem: ['devops'],
-          primaris: [],
-        },
-        svg: SvgConst.docker,
-      },
+    primeng: {
+      name: 'PrimeNG',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'library',
+      icon: SvgConst.primeng,
     },
-    integrationPlatform: {
-      snaplogic: {
-        name: 'SnapLogic',
-        level: 'beginner',
-        defaultGroup: 'integration',
-        companies: {
-          aprSystem: [],
-          primaris: ['integration'],
-        },
-        svg: SvgConst.snaplogic,
-      },
-      n8n: {
-        name: 'N8N',
-        level: 'beginner',
-        defaultGroup: 'integration',
-        companies: {
-          aprSystem: [],
-          primaris: [],
-        },
-        svg: SvgConst.n8n,
-      },
+    numpy: {
+      name: 'NumPy',
+      level: 'beginner',
+      group: 'ai',
+      category: 'library',
+      icon: SvgConst.numpy,
     },
-    versionControlSystem: {
-      git: {
-        name: 'Git',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.git,
-      },
-      github: {
-        name: 'GitHub',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: [],
-          primaris: ['common'],
-        },
-        svg: SvgConst.github,
-      },
-      gitlab: {
-        name: 'GitLab',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.gitlab,
-      },
+    jest: {
+      name: 'Jest',
+      level: 'beginner',
+      group: 'frontend',
+      category: 'test',
+      icon: SvgConst.jest,
     },
-    packageManager: {
-      npm: {
-        name: 'npm',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.npm,
-      },
-      pnpm: {
-        name: 'pnpm',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.pnpm,
-      },
+    postgresql: {
+      name: 'PostgreSQL',
+      level: 'beginner',
+      group: 'backend',
+      category: 'database',
+      icon: SvgConst.postgresql,
     },
-    codeQuality: {
-      eslint: {
-        name: 'Eslint',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.eslint,
-      },
-      prettier: {
-        name: 'Prettier',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.prettier,
-      },
-      stylelint: {
-        name: 'Stylelint',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.stylelint,
-      },
+    microsoftSqlServer: {
+      name: 'Microsoft SQL Server',
+      level: 'beginner',
+      group: 'integration',
+      category: 'database',
+      icon: SvgConst.microsoftSqlServer,
     },
-    developerTool: {
-      postman: {
-        name: 'Postman',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: ['common'],
-        },
-        svg: SvgConst.postman,
-      },
-      nx: {
-        name: 'Nx',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.nx,
-      },
-      visualParadigm: {
-        name: 'Visual Paradigm',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.visualParadigm,
-      },
-      webstorm: {
-        name: 'WebStorm',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.webstorm,
-      },
-      visualStudioCode: {
-        name: 'Visual Studio Code',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: ['common'],
-          primaris: [],
-        },
-        svg: SvgConst.visualStudioCode,
-      },
-      eclipse: {
-        name: 'Eclipse',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: [],
-          primaris: [],
-        },
-        svg: SvgConst.eclipse,
-      },
-      jira: {
-        name: 'Jira',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          aprSystem: [],
-          primaris: ['common'],
-        },
-        svg: SvgConst.jira,
-      },
+    nginx: {
+      name: 'NGINX',
+      level: 'beginner',
+      group: 'devops',
+      category: 'server',
+      icon: SvgConst.nginx,
     },
-    operatingSystem: {
-      windows: {
-        name: 'Windows',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          primaris: ['common'],
-          aprSystem: ['common'],
-        },
-        svg: SvgConst.window,
-      },
-      linux: {
-        name: 'Linux',
-        level: 'beginner',
-        defaultGroup: 'common',
-        companies: {
-          primaris: [],
-          aprSystem: [],
-        },
-        svg: SvgConst.linux,
-      },
+    nodejs: {
+      name: 'Node.js',
+      level: 'beginner',
+      group: 'backend',
+      category: 'runtime',
+      icon: SvgConst.nodejs,
+    },
+    docker: {
+      name: 'Docker',
+      level: 'beginner',
+      group: 'devops',
+      category: 'containerization',
+      icon: SvgConst.docker,
+    },
+    snaplogic: {
+      name: 'SnapLogic',
+      level: 'beginner',
+      group: 'integration',
+      category: 'integrationPlatform',
+      icon: SvgConst.snaplogic,
+    },
+    n8n: {
+      name: 'N8N',
+      level: 'beginner',
+      group: 'integration',
+      category: 'integrationPlatform',
+      icon: SvgConst.n8n,
+    },
+    git: {
+      name: 'Git',
+      level: 'beginner',
+      group: 'common',
+      category: 'versionControlSystem',
+      icon: SvgConst.git,
+    },
+    github: {
+      name: 'GitHub',
+      level: 'beginner',
+      group: 'common',
+      category: 'integrationPlatform',
+      icon: SvgConst.github,
+    },
+    gitlab: {
+      name: 'GitLab',
+      level: 'beginner',
+      group: 'common',
+      category: 'versionControlSystem',
+      icon: SvgConst.gitlab,
+    },
+    npm: {
+      name: 'npm',
+      level: 'beginner',
+      group: 'common',
+      category: 'packageManager',
+      icon: SvgConst.npm,
+    },
+    pnpm: {
+      name: 'pnpm',
+      level: 'beginner',
+      group: 'common',
+      category: 'packageManager',
+      icon: SvgConst.pnpm,
+    },
+    eslint: {
+      name: 'Eslint',
+      level: 'beginner',
+      group: 'common',
+      category: 'codeQuality',
+      icon: SvgConst.eslint,
+    },
+    prettier: {
+      name: 'Prettier',
+      level: 'beginner',
+      group: 'common',
+      category: 'codeQuality',
+      icon: SvgConst.prettier,
+    },
+    stylelint: {
+      name: 'Stylelint',
+      level: 'beginner',
+      group: 'common',
+      category: 'codeQuality',
+      icon: SvgConst.stylelint,
+    },
+    postman: {
+      name: 'Postman',
+      level: 'beginner',
+      group: 'common',
+      category: 'developerTool',
+      icon: SvgConst.postman,
+    },
+    nx: {
+      name: 'Nx',
+      level: 'beginner',
+      group: 'common',
+      category: 'developerTool',
+      icon: SvgConst.nx,
+    },
+    visualParadigm: {
+      name: 'Visual Paradigm',
+      level: 'beginner',
+      group: 'common',
+      category: 'developerTool',
+      icon: SvgConst.visualParadigm,
+    },
+    webstorm: {
+      name: 'WebStorm',
+      level: 'beginner',
+      group: 'common',
+      category: 'developerTool',
+      icon: SvgConst.webstorm,
+    },
+    visualStudioCode: {
+      name: 'Visual Studio Code',
+      level: 'beginner',
+      group: 'common',
+      category: 'developerTool',
+      icon: SvgConst.visualStudioCode,
+    },
+    eclipse: {
+      name: 'Eclipse',
+      level: 'beginner',
+      group: 'common',
+      category: 'developerTool',
+      icon: SvgConst.eclipse,
+    },
+    jira: {
+      name: 'Jira',
+      level: 'beginner',
+      group: 'common',
+      category: 'developerTool',
+      icon: SvgConst.jira,
+    },
+    windows: {
+      name: 'Windows',
+      level: 'beginner',
+      group: 'common',
+      category: 'operatingSystem',
+      icon: SvgConst.window,
+    },
+    linux: {
+      name: 'Linux',
+      level: 'beginner',
+      group: 'common',
+      category: 'operatingSystem',
+      icon: SvgConst.linux,
     },
   },
 })
