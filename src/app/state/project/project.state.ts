@@ -2,46 +2,69 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ProjectStateModel } from './project-state.model';
-import { TechnologyDomainEnum } from '../../domain/enum/technology-domain.enum';
-import { StatusDomainEnum } from '../../domain/enum/status-domain.enum';
+import { StateNameDomainEnum } from '../../domain/enum/state-name-domain.enum';
 import { AssetImageDomainEnum } from '../../domain/enum/asset-image-domain.enum';
+import { StatusDomainEnum } from '../../domain/enum/status-domain.enum';
+import { TechnologyDomainEnum } from '../../domain/enum/technology-domain.enum';
+import { RepositoryKindDomainEnum } from '../../domain/enum/repository-kind-domain.enum';
 
 @State<ProjectStateModel>({
-  name: 'project',
+  name: StateNameDomainEnum.project,
   defaults: {
     project1: {
+      banner: AssetImageDomainEnum.assetImage1,
       name: 'Project 1',
-      createDate: new Date(2025, 1, 1),
+      creationDate: new Date(2025, 1, 1),
       status: StatusDomainEnum.notStarted,
-      banner: AssetImageDomainEnum.image1,
       description: 'Project 1 description',
-      technologies: [
-        TechnologyDomainEnum.technology1,
-        TechnologyDomainEnum.technology2,
-        TechnologyDomainEnum.technology3,
+      technologies: [TechnologyDomainEnum.technology1],
+      repository: {
+        kind: RepositoryKindDomainEnum.github,
+        link: 'https://github.com/jaqba98/api-architectures-benchmark',
+        fetch: true,
+      },
+      gallery: [
+        AssetImageDomainEnum.assetImage1,
+        AssetImageDomainEnum.assetImage2,
+        AssetImageDomainEnum.assetImage3,
       ],
-      link: 'link2',
-      order: 0,
+      appLink: 'https://www.google.com',
     },
     project2: {
+      banner: AssetImageDomainEnum.assetImage2,
       name: 'Project 2',
-      createDate: new Date(2025, 1, 1),
+      creationDate: new Date(2024, 1, 1),
       status: StatusDomainEnum.inProgress,
-      banner: AssetImageDomainEnum.image1,
       description: 'Project 2 description',
-      technologies: [TechnologyDomainEnum.technology1],
-      link: 'link2',
-      order: 1,
+      technologies: [TechnologyDomainEnum.technology2],
+      repository: {
+        kind: RepositoryKindDomainEnum.github,
+        link: 'https://github.com/jaqba98/api-architectures-benchmark',
+        fetch: false,
+      },
+      gallery: [
+        AssetImageDomainEnum.assetImage1,
+        AssetImageDomainEnum.assetImage2,
+        AssetImageDomainEnum.assetImage3,
+      ],
+      appLink: '',
     },
     project3: {
+      banner: AssetImageDomainEnum.assetImage3,
       name: 'Project 3',
-      createDate: new Date(2025, 1, 1),
+      creationDate: new Date(2023, 1, 1),
       status: StatusDomainEnum.completed,
-      banner: AssetImageDomainEnum.image1,
       description: 'Project 3 description',
-      technologies: [TechnologyDomainEnum.technology2, TechnologyDomainEnum.technology3],
-      link: 'link3',
-      order: 2,
+      technologies: [TechnologyDomainEnum.technology3],
+      repository: {
+        kind: RepositoryKindDomainEnum.none,
+      },
+      gallery: [
+        AssetImageDomainEnum.assetImage1,
+        AssetImageDomainEnum.assetImage2,
+        AssetImageDomainEnum.assetImage3,
+      ],
+      appLink: '',
     },
   },
 })
