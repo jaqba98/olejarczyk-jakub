@@ -5,17 +5,16 @@ import { from } from 'rxjs';
 
 import { ExperienceState } from '../state/experience/experience.state';
 import { CompanyState } from '../state/company/company.state';
-import { ObjectUtil } from '../util/object.util';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 import { TechnologyState } from '../state/technology/technology.state';
 import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
+import { TechnologyGroupDomainType } from '../domain/type/technology-group-domain.type';
+import { TechnologyCategoryDomainType } from '../domain/type/technology-category-domain.type';
+import { TechnologyDomainType } from '../domain/type/technology-domain.type';
 
 @Injectable()
 export class ExperienceBuilder {
-  constructor(
-    private readonly store: Store,
-    private readonly objectUtil: ObjectUtil,
-  ) {}
+  constructor(private readonly store: Store) {}
 
   build() {
     return this.store.selectOnce(ExperienceState.getState).pipe(
@@ -34,7 +33,10 @@ export class ExperienceBuilder {
           map((state) => {
             return prevState.map((prevStateItem) => ({
               ...prevStateItem,
-              groups: this.objectUtil.convertObjectToArray(state),
+              groups: Object.entries(state).map((array) => ({
+                key: array[0] as TechnologyGroupDomainType,
+                value: array[1],
+              })),
             }));
           }),
         );
@@ -46,7 +48,10 @@ export class ExperienceBuilder {
               ...experience,
               groups: experience.groups.map((group) => ({
                 ...group,
-                categories: this.objectUtil.convertObjectToArray(state),
+                categories: Object.entries(state).map((array) => ({
+                  key: array[0] as TechnologyCategoryDomainType,
+                  value: array[1],
+                })),
               })),
             }));
           }),
@@ -61,7 +66,10 @@ export class ExperienceBuilder {
                 ...group,
                 categories: group.categories.map((category) => ({
                   ...category,
-                  technologies: this.objectUtil.convertObjectToArray(state),
+                  technologies: Object.entries(state).map((array) => ({
+                    key: array[0] as TechnologyDomainType,
+                    value: array[1],
+                  })),
                 })),
               })),
             }));

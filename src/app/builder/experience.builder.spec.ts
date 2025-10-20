@@ -46,6 +46,10 @@ const buildTechnologies = (types: TechnologyDomainType[]) => {
     .map((technology) => ({ key: technology.id, value: technology }));
 };
 
+const getExperienceByOrder = (order: number) => {
+  return ExperienceConst.find((experience) => experience.order === order);
+};
+
 describe('Experience builder', () => {
   let service: ExperienceBuilder;
 
@@ -59,7 +63,7 @@ describe('Experience builder', () => {
   it('Should return correct experience data', async () => {
     expect(await firstValueFrom(service.build())).toStrictEqual([
       {
-        ...ExperienceConst.find((experience) => experience.order === 0),
+        ...getExperienceByOrder(0),
         companyData: CompanyConst.primaris,
         groups: [
           buildGroup('integration', [
@@ -76,7 +80,7 @@ describe('Experience builder', () => {
         ],
       },
       {
-        ...ExperienceConst.find((experience) => experience.order === 1),
+        ...getExperienceByOrder(1),
         companyData: CompanyConst.aprSystem,
         groups: [
           buildGroup('frontend', [
