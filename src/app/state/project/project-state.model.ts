@@ -17,6 +17,7 @@ interface ProjectRepositoryGitHubModel extends ProjectRepositoryKindModel<'githu
 type ProjectRepositoryType = ProjectRepositoryNoneModel | ProjectRepositoryGitHubModel;
 
 interface ProjectModel {
+  id: ProjectDomainType;
   banner: AssetImageDomainType;
   name: string;
   creationDate: Date;

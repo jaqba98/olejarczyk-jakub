@@ -16,9 +16,9 @@ export class StoreUtil {
         [
           CompanyState,
           ExperienceState,
+          ProjectState,
           TechnologyState,
           TechnologyCategoryState,
-          ProjectState,
           TechnologyGroupState,
         ],
         withNgxsReduxDevtoolsPlugin(),

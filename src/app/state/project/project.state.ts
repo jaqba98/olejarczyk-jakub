@@ -7,6 +7,7 @@ import { ProjectStateModel } from './project-state.model';
   name: 'project',
   defaults: {
     project1: {
+      id: 'project1',
       banner: 'assetImage1',
       name: 'Project 1',
       creationDate: new Date(2025, 1, 1),
@@ -22,6 +23,7 @@ import { ProjectStateModel } from './project-state.model';
       order: 0,
     },
     project2: {
+      id: 'project2',
       banner: 'assetImage2',
       name: 'Project 2',
       creationDate: new Date(2024, 1, 1),
@@ -37,6 +39,7 @@ import { ProjectStateModel } from './project-state.model';
       order: 1,
     },
     project3: {
+      id: 'project3',
       banner: 'assetImage3',
       name: 'Project 3',
       creationDate: new Date(2023, 1, 1),

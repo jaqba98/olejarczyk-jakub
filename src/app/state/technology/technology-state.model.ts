@@ -6,6 +6,7 @@ import { TechnologyLevelDomainType } from '../../domain/type/technology-level-do
 import { SvgModel } from '../../model/svg.model';
 
 export interface TechnologyModel {
+  id: TechnologyDomainType;
   name: string;
   level: TechnologyLevelDomainType;
   ownGroups: TechnologyGroupDomainType[];

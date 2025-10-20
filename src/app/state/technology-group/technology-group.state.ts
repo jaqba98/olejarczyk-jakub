@@ -2,29 +2,11 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { TechnologyGroupStateModel } from './technology-group-state.model';
+import { TechnologyGroupConst } from './technology-group.const';
 
 @State<TechnologyGroupStateModel>({
   name: 'technologyGroup',
-  defaults: {
-    frontend: {
-      order: 0,
-    },
-    backend: {
-      order: 1,
-    },
-    devops: {
-      order: 2,
-    },
-    integration: {
-      order: 3,
-    },
-    ai: {
-      order: 4,
-    },
-    common: {
-      order: 5,
-    },
-  },
+  defaults: TechnologyGroupConst,
 })
 @Injectable()
 export class TechnologyGroupState {

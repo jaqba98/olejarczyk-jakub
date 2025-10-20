@@ -8,14 +8,13 @@ import { CompanyState } from '../state/company/company.state';
 import { ObjectUtil } from '../util/object.util';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 import { TechnologyState } from '../state/technology/technology.state';
-import { BaseBuilder } from './base.builder';
+import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
 
 @Injectable()
 export class ExperienceBuilder {
   constructor(
     private readonly store: Store,
     private readonly objectUtil: ObjectUtil,
-    private readonly baseBuilder: BaseBuilder,
   ) {}
 
   build() {
@@ -30,7 +29,16 @@ export class ExperienceBuilder {
           }),
         );
       }),
-      switchMap((prevState) => this.baseBuilder.buildTechnologyGroupState(prevState)),
+      switchMap((prevState) => {
+        return from(this.store.selectOnce(TechnologyGroupState.getState)).pipe(
+          map((state) => {
+            return prevState.map((prevStateItem) => ({
+              ...prevStateItem,
+              groups: this.objectUtil.convertObjectToArray(state),
+            }));
+          }),
+        );
+      }),
       switchMap((prevState) => {
         return from(this.store.selectOnce(TechnologyCategoryState.getState)).pipe(
           map((state) => {
