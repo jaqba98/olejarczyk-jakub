@@ -24,35 +24,50 @@ import { Injectable } from '@angular/core';
     test: {
       order: 5,
     },
-    database: {
+    codeQuality: {
       order: 6,
     },
-    server: {
+    database: {
       order: 7,
     },
-    runtime: {
+    server: {
       order: 8,
     },
-    containerization: {
+    runtime: {
       order: 9,
     },
-    integrationPlatform: {
+    containerization: {
       order: 10,
     },
-    versionControlSystem: {
+    integrationPlatform: {
       order: 11,
     },
-    packageManager: {
+    api: {
       order: 12,
     },
-    codeQuality: {
+    versionControlSystem: {
       order: 13,
     },
-    developerTool: {
+    packageManager: {
       order: 14,
     },
-    operatingSystem: {
+    monorepo: {
       order: 15,
+    },
+    ide: {
+      order: 16,
+    },
+    editor: {
+      order: 17,
+    },
+    diagram: {
+      order: 18,
+    },
+    projectManagement: {
+      order: 19,
+    },
+    operatingSystem: {
+      order: 20,
     },
   },
 })
