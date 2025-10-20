@@ -5,31 +5,23 @@ import { map, switchMap } from 'rxjs/operators';
 import { ProjectState } from '../state/project/project.state';
 import { ObjectUtil } from '../util/object.util';
 import { from } from 'rxjs';
-import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 import { TechnologyState } from '../state/technology/technology.state';
 import { TechnologyGroupDomainType } from '../domain/type/technology-group-domain.type';
+import { BaseBuilder } from './base.builder';
 
 @Injectable()
 export class ProjectBuilder {
   constructor(
     private readonly store: Store,
     private readonly objectUtil: ObjectUtil,
+    private readonly baseBuilder: BaseBuilder,
   ) {}
 
   build() {
     return this.store.selectOnce(ProjectState.getState).pipe(
       map((prevState) => this.objectUtil.convertObjectToArray(prevState)),
-      switchMap((prevState) => {
-        return from(this.store.selectOnce(TechnologyGroupState.getState)).pipe(
-          map((state) => {
-            return prevState.map((project) => ({
-              ...project,
-              groups: this.objectUtil.convertObjectToArray(state),
-            }));
-          }),
-        );
-      }),
+      switchMap((prevState) => this.baseBuilder.buildTechnologyGroupState(prevState)),
       switchMap((prevState) => {
         return from(this.store.selectOnce(TechnologyCategoryState.getState)).pipe(
           map((state) => {

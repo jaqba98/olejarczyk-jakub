@@ -6,15 +6,16 @@ import { from } from 'rxjs';
 import { ExperienceState } from '../state/experience/experience.state';
 import { CompanyState } from '../state/company/company.state';
 import { ObjectUtil } from '../util/object.util';
-import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 import { TechnologyState } from '../state/technology/technology.state';
+import { BaseBuilder } from './base.builder';
 
 @Injectable()
 export class ExperienceBuilder {
   constructor(
     private readonly store: Store,
     private readonly objectUtil: ObjectUtil,
+    private readonly baseBuilder: BaseBuilder,
   ) {}
 
   build() {
@@ -29,16 +30,7 @@ export class ExperienceBuilder {
           }),
         );
       }),
-      switchMap((prevState) => {
-        return from(this.store.selectOnce(TechnologyGroupState.getState)).pipe(
-          map((state) => {
-            return prevState.map((experience) => ({
-              ...experience,
-              groups: this.objectUtil.convertObjectToArray(state),
-            }));
-          }),
-        );
-      }),
+      switchMap((prevState) => this.baseBuilder.buildTechnologyGroupState(prevState)),
       switchMap((prevState) => {
         return from(this.store.selectOnce(TechnologyCategoryState.getState)).pipe(
           map((state) => {
