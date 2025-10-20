@@ -3,8 +3,9 @@ import { Injectable } from '@angular/core';
 
 import { TechnologyStateModel } from './technology-state.model';
 import { SvgConst } from '../../const/svg.const';
+import { TechnologyDomainType } from '../../domain/type/technology-domain.type';
 
-@State<TechnologyStateModel>({
+@State<TechnologyStateModel<TechnologyDomainType>>({
   name: 'technology',
   defaults: {
     html: {
@@ -444,7 +445,7 @@ import { SvgConst } from '../../const/svg.const';
 @Injectable()
 export class TechnologyState {
   @Selector()
-  static getState(state: TechnologyStateModel) {
+  static getState(state: TechnologyDomainType) {
     return state;
   }
 }

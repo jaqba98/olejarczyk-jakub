@@ -1,7 +1,5 @@
-import { TechnologyGroupDomainType } from '../../domain/type/technology-group-domain.type';
-
 export interface TechnologyGroupModel {
   order: number;
 }
 
-export type TechnologyGroupStateModel = Record<TechnologyGroupDomainType, TechnologyGroupModel>;
+export type TechnologyGroupStateModel<TKey extends string> = Record<TKey, TechnologyGroupModel>;

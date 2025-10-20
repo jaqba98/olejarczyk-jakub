@@ -1,80 +1,27 @@
 import { Selector, State } from '@ngxs/store';
-
-import { TechnologyCategoryStateModel } from './technology-category-state.model';
 import { Injectable } from '@angular/core';
 
-@State<TechnologyCategoryStateModel>({
+import { TechnologyCategoryStateModel } from './technology-category-state.model';
+import { TechnologyCategoryDomainMockType } from '../../domain/type/technology-category-domain.type';
+
+@State<TechnologyCategoryStateModel<TechnologyCategoryDomainMockType>>({
   name: 'technologyCategory',
   defaults: {
-    markupLanguage: {
+    category1: {
       order: 0,
     },
-    stylesheetLanguage: {
+    category2: {
       order: 1,
     },
-    programmingLanguage: {
+    category3: {
       order: 2,
-    },
-    framework: {
-      order: 3,
-    },
-    library: {
-      order: 4,
-    },
-    test: {
-      order: 5,
-    },
-    codeQuality: {
-      order: 6,
-    },
-    database: {
-      order: 7,
-    },
-    server: {
-      order: 8,
-    },
-    runtime: {
-      order: 9,
-    },
-    containerization: {
-      order: 10,
-    },
-    integrationPlatform: {
-      order: 11,
-    },
-    api: {
-      order: 12,
-    },
-    versionControlSystem: {
-      order: 13,
-    },
-    packageManager: {
-      order: 14,
-    },
-    monorepo: {
-      order: 15,
-    },
-    ide: {
-      order: 16,
-    },
-    editor: {
-      order: 17,
-    },
-    diagram: {
-      order: 18,
-    },
-    projectManagement: {
-      order: 19,
-    },
-    operatingSystem: {
-      order: 20,
     },
   },
 })
 @Injectable()
 export class TechnologyCategoryState {
   @Selector()
-  static getState(state: TechnologyCategoryStateModel) {
+  static getState(state: TechnologyCategoryStateModel<TechnologyCategoryDomainMockType>) {
     return state;
   }
 }

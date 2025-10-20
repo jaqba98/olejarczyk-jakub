@@ -1,9 +1,10 @@
 import { Selector, State } from '@ngxs/store';
-
-import { TechnologyGroupStateModel } from './technology-group-state.model';
 import { Injectable } from '@angular/core';
 
-@State<TechnologyGroupStateModel>({
+import { TechnologyGroupStateModel } from './technology-group-state.model';
+import { TechnologyGroupDomainType } from '../../domain/type/technology-group-domain.type';
+
+@State<TechnologyGroupStateModel<TechnologyGroupDomainType>>({
   name: 'technologyGroup',
   defaults: {
     frontend: {
@@ -29,7 +30,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class TechnologyGroupState {
   @Selector()
-  static getState(state: TechnologyGroupStateModel) {
+  static getState(state: TechnologyGroupStateModel<TechnologyGroupDomainType>) {
     return state;
   }
 }
