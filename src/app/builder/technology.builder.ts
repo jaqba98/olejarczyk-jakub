@@ -61,15 +61,15 @@ export class TechnologyBuilder {
               .map((category) => ({
                 ...category,
                 technologies: category.technologies
-                  .sort((prev, next) => prev.value.order - next.value.order)
                   .filter((technology) => technology.value.category === category.key)
-                  .filter((technology) => technology.commonGroups.includes(group.key)),
+                  .filter((technology) => technology.commonGroups.includes(group.key))
+                  .sort((prev, next) => prev.value.order - next.value.order),
               }))
-              .sort((prev, next) => prev.value.order - next.value.order)
-              .filter((technology) => technology.technologies.length > 0),
+              .filter((technology) => technology.technologies.length > 0)
+              .sort((prev, next) => prev.value.order - next.value.order),
           }))
-          .sort((prev, next) => prev.value.order - next.value.order)
-          .filter((technology) => technology.categories.length > 0);
+          .filter((technology) => technology.categories.length > 0)
+          .sort((prev, next) => prev.value.order - next.value.order);
       }),
     );
   }
