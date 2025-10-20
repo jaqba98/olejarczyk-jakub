@@ -2,8 +2,9 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ProjectStateModel } from './project-state.model';
+import { ProjectDomainType } from '../../domain/type/project-domain.type';
 
-@State<ProjectStateModel>({
+@State<ProjectStateModel<ProjectDomainType>>({
   name: 'project',
   defaults: {
     project1: {
@@ -19,6 +20,7 @@ import { ProjectStateModel } from './project-state.model';
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
       appUrl: 'https://www.google.com',
+      order: 0,
     },
     project2: {
       banner: 'assetImage2',
@@ -33,6 +35,7 @@ import { ProjectStateModel } from './project-state.model';
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
       appUrl: '',
+      order: 1,
     },
     project3: {
       banner: 'assetImage3',
@@ -46,13 +49,14 @@ import { ProjectStateModel } from './project-state.model';
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
       appUrl: '',
+      order: 2,
     },
   },
 })
 @Injectable()
 export class ProjectState {
   @Selector()
-  static getState(state: ProjectStateModel) {
+  static getState(state: ProjectStateModel<ProjectDomainType>) {
     return state;
   }
 }

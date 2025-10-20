@@ -2,9 +2,10 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ProjectStateModel } from './project-state.model';
+import { ProjectDomainMockType } from '../../domain/type/project-domain.type';
 
-@State<ProjectStateModel>({
-  name: 'project',
+@State<ProjectStateModel<ProjectDomainMockType>>({
+  name: 'projectMock',
   defaults: {
     project1: {
       banner: 'assetImage1',
@@ -19,6 +20,7 @@ import { ProjectStateModel } from './project-state.model';
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
       appUrl: 'https://www.google.com',
+      order: 0,
     },
     project2: {
       banner: 'assetImage2',
@@ -33,6 +35,7 @@ import { ProjectStateModel } from './project-state.model';
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
       appUrl: '',
+      order: 1,
     },
     project3: {
       banner: 'assetImage3',
@@ -46,13 +49,14 @@ import { ProjectStateModel } from './project-state.model';
       },
       gallery: ['assetImage1', 'assetImage2', 'assetImage3'],
       appUrl: '',
+      order: 2,
     },
   },
 })
 @Injectable()
-export class ProjectState {
+export class ProjectMockState {
   @Selector()
-  static getState(state: ProjectStateModel) {
+  static getState(state: ProjectStateModel<ProjectDomainMockType>) {
     return state;
   }
 }

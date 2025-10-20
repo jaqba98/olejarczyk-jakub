@@ -1,5 +1,4 @@
 import { AssetImageDomainType } from '../../domain/type/asset-image-domain.type';
-import { ProjectDomainType } from '../../domain/type/project-domain.type';
 import { RepositoryKindDomainType } from '../../domain/type/repository-kind-domain.type';
 import { StatusDomainType } from '../../domain/type/status-domain.type';
 import { TechnologyDomainType } from '../../domain/type/technology-domain.type';
@@ -26,6 +25,7 @@ interface ProjectModel {
   repository: ProjectRepositoryType;
   gallery: AssetImageDomainType[];
   appUrl: string;
+  order: number;
 }
 
-export type ProjectStateModel = Record<ProjectDomainType, ProjectModel>;
+export type ProjectStateModel<TKey extends string> = Record<TKey, ProjectModel>;

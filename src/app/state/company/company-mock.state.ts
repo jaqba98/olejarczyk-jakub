@@ -10,16 +10,18 @@ import { CompanyStateModel } from './company-state.model';
       name: 'aprSystemName',
       city: 'aprSystemCity',
       country: 'aprSystemCountry',
+      order: 0,
     },
     primaris: {
       name: 'primarisName',
       city: 'primarisCity',
       country: 'primarisCountry',
+      order: 1,
     },
   },
 })
 @Injectable()
-export class CompanyState {
+export class CompanyMockState {
   @Selector()
   static getState(state: CompanyStateModel) {
     return state;
