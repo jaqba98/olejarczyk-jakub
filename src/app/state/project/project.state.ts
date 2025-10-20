@@ -26,7 +26,7 @@ import { ProjectStateModel } from './project-state.model';
       creationDate: new Date(2024, 1, 1),
       status: 'inProgress',
       description: 'Project 2 description',
-      technologies: ['html'],
+      technologies: ['docker'],
       repository: {
         kind: 'github',
         repoUrl: 'https://github.com/jaqba98/api-architectures-benchmark',
@@ -40,7 +40,7 @@ import { ProjectStateModel } from './project-state.model';
       creationDate: new Date(2023, 1, 1),
       status: 'completed',
       description: 'Project 3 description',
-      technologies: ['css', 'sass'],
+      technologies: ['python', 'docker'],
       repository: {
         kind: 'none',
       },
