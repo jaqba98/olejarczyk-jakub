@@ -2,9 +2,8 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { TechnologyCategoryStateModel } from './technology-category-state.model';
-import { TechnologyCategoryDomainType } from '../../domain/type/technology-category-domain.type';
 
-@State<TechnologyCategoryStateModel<TechnologyCategoryDomainType>>({
+@State<TechnologyCategoryStateModel>({
   name: 'technologyCategory',
   defaults: {
     markupLanguage: {
@@ -75,7 +74,7 @@ import { TechnologyCategoryDomainType } from '../../domain/type/technology-categ
 @Injectable()
 export class TechnologyCategoryState {
   @Selector()
-  static getState(state: TechnologyCategoryStateModel<TechnologyCategoryDomainType>) {
+  static getState(state: TechnologyCategoryStateModel) {
     return state;
   }
 }

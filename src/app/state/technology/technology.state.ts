@@ -5,7 +5,7 @@ import { TechnologyStateModel } from './technology-state.model';
 import { SvgConst } from '../../const/svg.const';
 import { TechnologyDomainType } from '../../domain/type/technology-domain.type';
 
-@State<TechnologyStateModel<TechnologyDomainType>>({
+@State<TechnologyStateModel>({
   name: 'technology',
   defaults: {
     html: {

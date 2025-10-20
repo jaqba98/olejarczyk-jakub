@@ -20,5 +20,3 @@ export type TechnologyCategoryDomainType =
   | 'diagram'
   | 'projectManagement'
   | 'operatingSystem';
-
-export type TechnologyCategoryDomainMockType = 'category1' | 'category2' | 'category3';

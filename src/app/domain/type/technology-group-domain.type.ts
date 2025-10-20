@@ -5,5 +5,3 @@ export type TechnologyGroupDomainType =
   | 'integration'
   | 'ai'
   | 'common';
-
-export type TechnologyGroupDomainMockType = 'group1' | 'group2' | 'group3';

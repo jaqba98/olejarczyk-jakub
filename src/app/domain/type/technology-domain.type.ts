@@ -35,15 +35,3 @@ export type TechnologyDomainType =
   | 'jira'
   | 'windows'
   | 'linux';
-
-export type TechnologyDomainMockType =
-  | 'technology1'
-  | 'technology2'
-  | 'technology3'
-  | 'technology4'
-  | 'technology5'
-  | 'technology6'
-  | 'technology7'
-  | 'technology8'
-  | 'technology9'
-  | 'technology10';

@@ -2,9 +2,8 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ProjectStateModel } from './project-state.model';
-import { ProjectDomainType } from '../../domain/type/project-domain.type';
 
-@State<ProjectStateModel<ProjectDomainType>>({
+@State<ProjectStateModel>({
   name: 'project',
   defaults: {
     project1: {
@@ -56,7 +55,7 @@ import { ProjectDomainType } from '../../domain/type/project-domain.type';
 @Injectable()
 export class ProjectState {
   @Selector()
-  static getState(state: ProjectStateModel<ProjectDomainType>) {
+  static getState(state: ProjectStateModel) {
     return state;
   }
 }
