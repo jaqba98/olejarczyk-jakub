@@ -95,10 +95,10 @@ export class ExperienceDomainBuilder {
                       })
                       .sort((prev, next) => prev.order - next.order),
                   }))
-                  .filter((technology) => technology.technologies.length > 0)
+                  .filter((category) => category.technologies.length > 0)
                   .sort((prev, next) => prev.categoryModel.order - next.categoryModel.order),
               }))
-              .filter((technology) => technology.categories.length > 0)
+              .filter((group) => group.categories.length > 0)
               .sort((prev, next) => prev.groupModel.order - next.groupModel.order),
           }))
           .sort((prev, next) => {

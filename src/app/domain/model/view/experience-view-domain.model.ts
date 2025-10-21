@@ -4,19 +4,19 @@ import { TechnologyCategoryStateModel } from '../state/technology-category-state
 import { TechnologyGroupStateModel } from '../state/technology-group-state-domain.model';
 import { TechnologyStateModel } from '../state/technology-state-domain.model';
 
-interface ExperienceCategoryDomainModel {
+interface ExperienceCategoryViewModel {
   categoryModel: TechnologyCategoryStateModel;
   technologies: TechnologyStateModel[];
 }
 
-interface ExperienceGroupDomainModel {
+interface ExperienceGroupViewModel {
   groupModel: TechnologyGroupStateModel;
-  categories: ExperienceCategoryDomainModel[];
+  categories: ExperienceCategoryViewModel[];
 }
 
 interface ExperienceViewModel extends ExperienceStateModel {
   companyModel: CompanyStateModel;
-  groups: ExperienceGroupDomainModel[];
+  groups: ExperienceGroupViewModel[];
 }
 
 export type ExperienceViewDomainModel = ExperienceViewModel[];
