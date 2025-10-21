@@ -5,31 +5,31 @@ import { TechnologyIdDomainType } from '../../type/id/technology-id-domain.type'
 import { ProjectNameDomainType } from '../../type/name/project-name-domain.type';
 import { BaseStateDomainModel } from '../base/base-state-domain.model';
 
-interface ProjectRepositoryNoneDomainModel {
+interface ProjectRepositoryNoneStateModel {
   type: 'none';
 }
 
-interface ProjectRepositoryGitHubDomainModel {
+interface ProjectRepositoryGitHubStateModel {
   type: 'github';
   url: string;
 }
 
-type ProjectRepositoryModel = ProjectRepositoryNoneDomainModel | ProjectRepositoryGitHubDomainModel;
+type ProjectRepositoryModel = ProjectRepositoryNoneStateModel | ProjectRepositoryGitHubStateModel;
 
-interface ProjectApplicationNoneDomainModel {
+interface ProjectApplicationNoneStateModel {
   type: 'none';
 }
 
-interface ProjectApplicationGitHubPageDomainModel {
+interface ProjectApplicationGitHubPageStateModel {
   type: 'githubPage';
   url: string;
 }
 
 type ProjectApplicationModel =
-  | ProjectApplicationNoneDomainModel
-  | ProjectApplicationGitHubPageDomainModel;
+  | ProjectApplicationNoneStateModel
+  | ProjectApplicationGitHubPageStateModel;
 
-export interface ProjectDomainModel extends BaseStateDomainModel<ProjectIdDomainType> {
+export interface ProjectStateModel extends BaseStateDomainModel<ProjectIdDomainType> {
   banner: ImageAssetDomainType;
   name: ProjectNameDomainType;
   creationDate: Date;
@@ -41,4 +41,4 @@ export interface ProjectDomainModel extends BaseStateDomainModel<ProjectIdDomain
   gallery: ImageAssetDomainType[];
 }
 
-export type ProjectStateDomainModel = Record<ProjectIdDomainType, ProjectDomainModel>;
+export type ProjectStateDomainModel = Record<ProjectIdDomainType, ProjectStateModel>;

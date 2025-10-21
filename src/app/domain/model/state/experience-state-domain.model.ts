@@ -5,7 +5,7 @@ import { CompanyIdDomainType } from '../../type/id/company-id-domain.type';
 import { TechnologyIdDomainType } from '../../type/id/technology-id-domain.type';
 import { BaseStateDomainModel } from '../base/base-state-domain.model';
 
-export interface ExperienceDomainModel extends BaseStateDomainModel<CompanyIdDomainType> {
+export interface ExperienceStateModel extends BaseStateDomainModel<CompanyIdDomainType> {
   title: ExperienceTitleDomainType;
   employmentType: EmploymentTypeDomainType;
   startDate: Date;
@@ -15,8 +15,8 @@ export interface ExperienceDomainModel extends BaseStateDomainModel<CompanyIdDom
   technologyIds: TechnologyIdDomainType[];
 }
 
-export interface ExperienceCompanyDomainModel extends BaseStateDomainModel<CompanyIdDomainType> {
-  experiences: ExperienceDomainModel[];
+export interface ExperienceCompanyStateModel extends BaseStateDomainModel<CompanyIdDomainType> {
+  experiences: ExperienceStateModel[];
 }
 
-export type ExperienceStateDomainModel = Record<CompanyIdDomainType, ExperienceCompanyDomainModel>;
+export type ExperienceStateDomainModel = Record<CompanyIdDomainType, ExperienceCompanyStateModel>;

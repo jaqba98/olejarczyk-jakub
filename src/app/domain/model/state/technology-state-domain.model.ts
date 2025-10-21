@@ -7,7 +7,7 @@ import { TechnologyLevelDomainType } from '../../type/level/technology-level-dom
 import { TechnologyNameDomainType } from '../../type/name/technology-name-domain.type';
 import { BaseStateDomainModel } from '../base/base-state-domain.model';
 
-export interface TechnologyDomainModel extends BaseStateDomainModel<TechnologyIdDomainType> {
+export interface TechnologyStateModel extends BaseStateDomainModel<TechnologyIdDomainType> {
   name: TechnologyNameDomainType;
   level: TechnologyLevelDomainType;
   ownGroups: TechnologyGroupIdDomainType[];
@@ -16,4 +16,4 @@ export interface TechnologyDomainModel extends BaseStateDomainModel<TechnologyId
   category: TechnologyCategoryIdDomainType;
 }
 
-export type TechnologyStateDomainModel = Record<TechnologyIdDomainType, TechnologyDomainModel>;
+export type TechnologyStateDomainModel = Record<TechnologyIdDomainType, TechnologyStateModel>;

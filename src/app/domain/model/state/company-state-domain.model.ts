@@ -4,10 +4,10 @@ import { CountryEntityDomainType } from '../../type/entity/country-entity-domain
 import { CompanyIdDomainType } from '../../type/id/company-id-domain.type';
 import { BaseStateDomainModel } from '../base/base-state-domain.model';
 
-export interface CompanyDomainModel extends BaseStateDomainModel<CompanyIdDomainType> {
+export interface CompanyStateModel extends BaseStateDomainModel<CompanyIdDomainType> {
   name: CompanyNameDomainType;
   city: CityEntityDomainType;
   country: CountryEntityDomainType;
 }
 
-export type CompanyStateDomainModel = Record<CompanyIdDomainType, CompanyDomainModel>;
+export type CompanyStateDomainModel = Record<CompanyIdDomainType, CompanyStateModel>;
