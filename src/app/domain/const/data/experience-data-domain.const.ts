@@ -1,6 +1,6 @@
 import { ExperienceStateDomainModel } from '../../model/state/experience-state-domain.model';
 
-export const ExperienceDataDomainConst: ExperienceStateDomainModel = {
+export const experienceDataDomainConst: ExperienceStateDomainModel = {
   aprSystem: {
     id: 'aprSystem',
     order: 0,

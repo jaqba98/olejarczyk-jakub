@@ -1,5 +1,5 @@
 import { CompanyStateDomainModel } from '../../model/state/company-state-domain.model';
-import { CompanyDataDomainConst } from './company-data-domain.const';
+import { companyDataDomainConst } from './company-data-domain.const';
 
 describe('Company Data Domain Const', () => {
   it('should return correct data', () => {
@@ -19,6 +19,6 @@ describe('Company Data Domain Const', () => {
         country: 'Poland',
       },
     };
-    expect(CompanyDataDomainConst).toEqual(correctResult);
+    expect(companyDataDomainConst).toEqual(correctResult);
   });
 });

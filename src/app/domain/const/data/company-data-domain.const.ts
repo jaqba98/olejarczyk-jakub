@@ -1,6 +1,6 @@
 import { CompanyStateDomainModel } from '../../model/state/company-state-domain.model';
 
-export const CompanyDataDomainConst: CompanyStateDomainModel = {
+export const companyDataDomainConst: CompanyStateDomainModel = {
   aprSystem: {
     id: 'aprSystem',
     order: 0,

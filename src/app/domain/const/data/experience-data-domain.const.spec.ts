@@ -1,5 +1,5 @@
 import { ExperienceStateDomainModel } from '../../model/state/experience-state-domain.model';
-import { ExperienceDataDomainConst } from './experience-data-domain.const';
+import { experienceDataDomainConst } from './experience-data-domain.const';
 
 describe('Experience Data Domain Const', () => {
   it('should return correct data', () => {
@@ -92,6 +92,6 @@ describe('Experience Data Domain Const', () => {
         ],
       },
     };
-    expect(ExperienceDataDomainConst).toEqual(correctResult);
+    expect(experienceDataDomainConst).toEqual(correctResult);
   });
 });
