@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 
 import { ExperienceViewComponent } from './experience-view.component';
-import { StoreUtil } from '../../../util/store.util';
+import { StoreUtil } from '../../../domain/provider/store-domain.provider';
 
 const meta: Meta<ExperienceViewComponent> = {
   title: 'component/view/experience',
