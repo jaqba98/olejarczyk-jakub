@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 // import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
 // import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
 import { DateUtil } from '../../../util/date.util';
-import { ExperienceBuilder } from '../../../domain/builder/experience.builder';
+import { ExperienceBuilder } from '../../../domain/builder/experience-domain.builder';
 // import { SmallTextComponent } from '../../text/small/small-text.component';
 // import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
 // import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';

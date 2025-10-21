@@ -5,17 +5,17 @@ import { TechnologyGroupStateModel } from '../state/technology-group-state-domai
 import { TechnologyStateModel } from '../state/technology-state-domain.model';
 
 interface ExperienceCategoryDomainModel {
-  categoryDomain: TechnologyCategoryStateModel;
+  categoryModel: TechnologyCategoryStateModel;
   technologies: TechnologyStateModel[];
 }
 
 interface ExperienceGroupDomainModel {
-  groupDomain: TechnologyGroupStateModel;
+  groupModel: TechnologyGroupStateModel;
   categories: ExperienceCategoryDomainModel[];
 }
 
 interface ExperienceViewModel extends ExperienceStateModel {
-  companyDomain: CompanyStateModel;
+  companyModel: CompanyStateModel;
   groups: ExperienceGroupDomainModel[];
 }
 
