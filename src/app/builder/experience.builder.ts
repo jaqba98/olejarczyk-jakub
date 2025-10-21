@@ -8,9 +8,9 @@ import { CompanyState } from '../state/company/company.state';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 import { TechnologyState } from '../state/technology/technology.state';
 import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
-import { TechnologyGroupDomainType } from '../domain/type/technology-group-domain.type';
-import { TechnologyCategoryDomainType } from '../domain/type/technology-category-domain.type';
-import { TechnologyDomainType } from '../domain/type/technology-domain.type';
+import { TechnologyGroupDomainType } from '../domain/type/id/technology-group-id-domain.type';
+import { TechnologyCategoryDomainType } from '../domain/type/id/technology-category-id-domain.type';
+import { TechnologyDomainType } from '../domain/type/id/technology-id-domain.type';
 
 @Injectable()
 export class ExperienceBuilder {

@@ -1,4 +1,4 @@
-import { TechnologyGroupStateModel } from './technology-group-state.model';
+import { TechnologyGroupStateModel } from '../../domain/model/state/technology-group-state-domain.model';
 
 export const TechnologyGroupConst: TechnologyGroupStateModel = {
   frontend: {

@@ -1,4 +1,4 @@
-import { CompanyStateModel } from './company-state.model';
+import { CompanyStateModel } from '../../domain/model/state/company-state-domain.model';
 
 export const CompanyConst: CompanyStateModel = {
   aprSystem: {

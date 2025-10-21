@@ -1,7 +1,7 @@
 import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
-import { TechnologyStateModel } from './technology-state.model';
+import { TechnologyStateModel } from '../../domain/model/state/technology-state-domain.model';
 import { TechnologyConst } from './technology.const';
 
 @State<TechnologyStateModel>({

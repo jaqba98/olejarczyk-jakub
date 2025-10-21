@@ -1,4 +1,4 @@
-export type TechnologyDomainType =
+export type TechnologyNameDomainType =
   | 'html'
   | 'css'
   | 'sass'

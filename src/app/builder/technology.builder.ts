@@ -4,7 +4,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { from } from 'rxjs';
 
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
-import { TechnologyGroupDomainType } from '../domain/type/technology-group-domain.type';
+import { TechnologyGroupDomainType } from '../domain/type/id/technology-group-id-domain.type';
 import { TechnologyGroupState } from '../state/technology-group/technology-group.state';
 import { TechnologyState } from '../state/technology/technology.state';
 import { ObjectUtil } from '../util/object.util';

@@ -7,7 +7,7 @@ import { ObjectUtil } from '../util/object.util';
 import { from } from 'rxjs';
 import { TechnologyCategoryState } from '../state/technology-category/technology-category.state';
 import { TechnologyState } from '../state/technology/technology.state';
-import { TechnologyGroupDomainType } from '../domain/type/technology-group-domain.type';
+import { TechnologyGroupDomainType } from '../domain/type/id/technology-group-id-domain.type';
 import { BaseBuilder } from './base.builder';
 
 @Injectable()
