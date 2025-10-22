@@ -1,4 +1,4 @@
-import { MainNavStateDomainModel } from '../../model/state/main-nav-state-domain.model';
+import { MainNavStateDomainModel } from '../../model/state/section/main-nav-section-state-domain.model';
 import { mainNavDataDomainConst } from './main-nav-data-domain.const';
 
 describe('Main Nav Data Domain Const', () => {

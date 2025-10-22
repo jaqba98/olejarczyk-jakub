@@ -1,3 +1,3 @@
-import { MainNavStateDomainModel } from '../state/main-nav-state-domain.model';
+import { MainNavStateDomainModel } from '../state/section/main-nav-section-state-domain.model';
 
 export type MainNavViewDomainModel = MainNavStateDomainModel;

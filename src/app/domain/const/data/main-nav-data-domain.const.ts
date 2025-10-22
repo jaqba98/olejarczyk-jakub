@@ -1,4 +1,4 @@
-import { MainNavStateDomainModel } from '../../model/state/main-nav-state-domain.model';
+import { MainNavStateDomainModel } from '../../model/state/section/main-nav-section-state-domain.model';
 
 export const mainNavDataDomainConst: MainNavStateDomainModel = {
   title: 'Olejarczyk Jakub',
