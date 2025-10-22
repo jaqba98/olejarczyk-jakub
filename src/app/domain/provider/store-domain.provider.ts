@@ -10,6 +10,8 @@ import { TechnologyDomainState } from '../state/technology-domain.state';
 import { TechnologyGroupDomainState } from '../state/technology-group-domain.state';
 import { ApplicationConfig } from '@angular/core';
 import { MainNavDomainState } from '../state/main-nav-domain.state';
+import { HomeDomainBuilder } from '../builder/home-domain.builder';
+import { HomeDomainState } from '../state/home-domain.state';
 
 export class StoreDomainProvider {
   static getProvide() {
@@ -17,6 +19,7 @@ export class StoreDomainProvider {
       provideStore(
         [
           MainNavDomainState,
+          HomeDomainState,
           CompanyDomainState,
           ExperienceDomainState,
           ProjectDomainState,
