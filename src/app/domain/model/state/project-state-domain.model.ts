@@ -1,6 +1,7 @@
 import { ImageAssetDomainType } from '../../type/asset/image-asset-domain.type';
 import { StatusEntityDomainType } from '../../type/entity/status-entity-domain.type';
 import { ProjectIdDomainType } from '../../type/id/project-id-domain.type';
+import { TechnologyGroupIdDomainType } from '../../type/id/technology-group-id-domain.type';
 import { TechnologyIdDomainType } from '../../type/id/technology-id-domain.type';
 import { ProjectNameDomainType } from '../../type/name/project-name-domain.type';
 import { BaseStateDomainModel } from '../base/base-state-domain.model';
@@ -35,7 +36,10 @@ export interface ProjectStateModel extends BaseStateDomainModel<ProjectIdDomainT
   creationDate: Date;
   status: StatusEntityDomainType;
   description: string;
-  technologyIds: TechnologyIdDomainType[];
+  technologies: {
+    groupIds: TechnologyGroupIdDomainType[];
+    technologyId: TechnologyIdDomainType;
+  }[];
   repository: ProjectRepositoryModel;
   application: ProjectApplicationModel;
   gallery: ImageAssetDomainType[];

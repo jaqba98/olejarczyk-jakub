@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ProjectBuilder } from '../../../domain/builder/project.builder';
+import { ProjectBuilder } from '../../../domain/builder/project-domain.builder';
 
 @Component({
   selector: 'project-view',

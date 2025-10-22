@@ -3,35 +3,19 @@ import { Store } from '@ngxs/store';
 import { map, switchMap } from 'rxjs/operators';
 import { from, Observable } from 'rxjs';
 
-import { ExperienceDomainState } from '../state/experience-domain.state';
-import { ExperienceViewDomainModel } from '../model/view/experience-view-domain.model';
-import { CompanyDomainState } from '../state/company-domain.state';
+import { ProjectDomainState } from '../state/project-domain.state';
+import { ProjectViewDomainModel } from '../model/view/project-view-domain.model';
 import { TechnologyGroupDomainState } from '../state/technology-group-domain.state';
 import { TechnologyCategoryDomainState } from '../state/technology-category-domain.state';
 import { TechnologyDomainState } from '../state/technology-domain.state';
 
 @Injectable()
-export class ExperienceDomainBuilder {
+export class ProjectDomainBuilder {
   constructor(private readonly store: Store) {}
 
-  build(): Observable<ExperienceViewDomainModel> {
-    return this.store.selectOnce(ExperienceDomainState.getState).pipe(
-      map((prevState) =>
-        Object.values(prevState)
-          .sort((prev, next) => prev.order - next.order)
-          .map((state) => state.experiences)
-          .flat(),
-      ),
-      switchMap((prevState) => {
-        return from(this.store.selectOnce(CompanyDomainState.getState)).pipe(
-          map((state) => {
-            return prevState.map((prevStateItem) => ({
-              ...prevStateItem,
-              companyModel: state[prevStateItem.id],
-            }));
-          }),
-        );
-      }),
+  build(): Observable<ProjectViewDomainModel> {
+    return this.store.selectOnce(ProjectDomainState.getState).pipe(
+      map((prevState) => Object.values(prevState)),
       switchMap((prevState) => {
         return from(this.store.selectOnce(TechnologyGroupDomainState.getState)).pipe(
           map((state) => {
@@ -89,11 +73,14 @@ export class ExperienceDomainBuilder {
                     ...category,
                     technologies: category.technologies
                       .filter((technology) => technology.category === category.categoryModel.id)
-                      .filter((technology) => {
-                        return technology.companyGroups[prevStateItem.companyModel.id].includes(
-                          group.groupModel.id,
-                        );
-                      })
+                      .filter((technology) =>
+                        prevStateItem.technologies.some((i) => i.technologyId === technology.id),
+                      )
+                      .filter((technology) =>
+                        prevStateItem.technologies.some((i) =>
+                          i.groupIds.includes(group.groupModel.id),
+                        ),
+                      )
                       .sort((prev, next) => prev.order - next.order),
                   }))
                   .filter((category) => category.technologies.length > 0)
@@ -103,8 +90,8 @@ export class ExperienceDomainBuilder {
               .sort((prev, next) => prev.groupModel.order - next.groupModel.order),
           }))
           .sort((prev, next) => {
-            const prevStartDate = prev.startDate.getTime();
-            const nextStartDate = next.startDate.getTime();
+            const prevStartDate = prev.creationDate.getTime();
+            const nextStartDate = next.creationDate.getTime();
             return nextStartDate - prevStartDate;
           });
       }),

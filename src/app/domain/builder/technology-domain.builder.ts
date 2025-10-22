@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { from, map, Observable, switchMap } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
+import { from, Observable } from 'rxjs';
 
 import { TechnologyViewDomainModel } from '../model/view/technology-view-domain.model';
 import { TechnologyGroupDomainState } from '../state/technology-group-domain.state';

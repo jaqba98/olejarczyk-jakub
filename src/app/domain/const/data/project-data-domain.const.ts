@@ -9,7 +9,20 @@ export const projectDataDomainConst: ProjectStateDomainModel = {
     creationDate: new Date(2025, 1, 1),
     status: 'inProgress',
     description: 'Project 1 lorem ipsum',
-    technologyIds: ['html', 'css', 'javascript'],
+    technologies: [
+      {
+        groupIds: ['frontend'],
+        technologyId: 'html',
+      },
+      {
+        groupIds: ['frontend'],
+        technologyId: 'css',
+      },
+      {
+        groupIds: ['frontend'],
+        technologyId: 'javascript',
+      },
+    ],
     repository: {
       type: 'github',
       url: 'https://github.com/username/project1',
@@ -28,7 +41,20 @@ export const projectDataDomainConst: ProjectStateDomainModel = {
     creationDate: new Date(2024, 1, 1),
     status: 'completed',
     description: 'Project 2 lorem ipsum',
-    technologyIds: ['git', 'github', 'gitlab'],
+    technologies: [
+      {
+        groupIds: ['common'],
+        technologyId: 'git',
+      },
+      {
+        groupIds: ['common'],
+        technologyId: 'github',
+      },
+      {
+        groupIds: ['common'],
+        technologyId: 'gitlab',
+      },
+    ],
     repository: {
       type: 'github',
       url: 'https://github.com/username/project2',
@@ -46,7 +72,16 @@ export const projectDataDomainConst: ProjectStateDomainModel = {
     creationDate: new Date(2023, 1, 1),
     status: 'completed',
     description: 'Project 3 lorem ipsum',
-    technologyIds: ['snaplogic', 'javascript'],
+    technologies: [
+      {
+        groupIds: ['integration'],
+        technologyId: 'javascript',
+      },
+      {
+        groupIds: ['integration'],
+        technologyId: 'snaplogic',
+      },
+    ],
     repository: {
       type: 'none',
     },
