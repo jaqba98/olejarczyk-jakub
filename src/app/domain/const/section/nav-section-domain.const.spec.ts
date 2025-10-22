@@ -5,6 +5,8 @@ describe('Nav Section Domain Const', () => {
   it('should return correct data', () => {
     const correctResult: NavSectionStateDomainModel = {
       options: ['home'],
+      // TODO: Change to resume in the future
+      mainOption: 'home',
     };
     expect(navSectionDomainConst).toEqual(correctResult);
   });
