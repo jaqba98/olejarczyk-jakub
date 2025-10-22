@@ -12,6 +12,7 @@ import { ApplicationConfig } from '@angular/core';
 import { HomeDomainState } from '../state/home-domain.state';
 import { PersonalDataDomainState } from '../state/data/personal-data-domain.state';
 import { NavSectionDomainState } from '../state/section/nav-section-domain.state';
+import { SectionDataDomainState } from '../state/data/section-data-domain.state';
 
 export class StoreDomainProvider {
   static getProvide() {
@@ -35,7 +36,7 @@ export class StoreDomainProvider {
   }
 
   static getDataDomainState() {
-    return [PersonalDataDomainState];
+    return [PersonalDataDomainState, SectionDataDomainState];
   }
 
   static getSectionDomainState() {

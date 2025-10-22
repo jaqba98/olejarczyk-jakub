@@ -1,1 +1,1 @@
-export type SectionHrefDomainType = '#home';
+export type SectionHrefDomainType = '#nav' | '#home';

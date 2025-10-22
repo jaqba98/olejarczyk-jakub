@@ -6,6 +6,7 @@ import { StoreDomainProvider } from '../../provider/store-domain.provider';
 import { NavSectionViewDomainModel } from '../../model/view/section/nav-section-view-domain.model';
 import { navSectionDomainConst } from '../../const/section/nav-section-domain.const';
 import { personalDataDomainConst } from '../../const/data/personal-data-domain.const';
+import { sectionDataDomainConst } from '../../const/data/section-data-domain.const';
 
 describe('Nav Section Domain Builder', () => {
   let builder: NavSectionDomainBuilder;
@@ -21,6 +22,7 @@ describe('Nav Section Domain Builder', () => {
     const correctResult: NavSectionViewDomainModel = {
       navSection: navSectionDomainConst,
       personalData: personalDataDomainConst,
+      sectionData: [sectionDataDomainConst.home],
     };
     expect(await firstValueFrom(builder.build())).toEqual(correctResult);
   });

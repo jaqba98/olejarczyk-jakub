@@ -6,6 +6,7 @@ import { map, switchMap } from 'rxjs/operators';
 import { NavSectionViewDomainModel } from '../../model/view/section/nav-section-view-domain.model';
 import { NavSectionDomainState } from '../../state/section/nav-section-domain.state';
 import { PersonalDataDomainState } from '../../state/data/personal-data-domain.state';
+import { SectionDataDomainState } from '../../state/data/section-data-domain.state';
 
 @Injectable()
 export class NavSectionDomainBuilder {
@@ -18,6 +19,16 @@ export class NavSectionDomainBuilder {
           map((state) => ({
             navSection: prevState,
             personalData: state,
+          })),
+        );
+      }),
+      switchMap((prevState) => {
+        return from(this.store.selectOnce(SectionDataDomainState.getState)).pipe(
+          map((state) => ({
+            ...prevState,
+            sectionData: Object.values(state).filter((stateItem) =>
+              prevState.navSection.options.includes(stateItem.id),
+            ),
           })),
         );
       }),

@@ -4,12 +4,7 @@ import { navSectionDomainConst } from './nav-section-domain.const';
 describe('Nav Section Domain Const', () => {
   it('should return correct data', () => {
     const correctResult: NavSectionStateDomainModel = {
-      options: {
-        home: {
-          label: 'Home',
-          href: '#home',
-        },
-      },
+      options: ['home'],
     };
     expect(navSectionDomainConst).toEqual(correctResult);
   });
