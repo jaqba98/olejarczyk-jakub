@@ -7,8 +7,7 @@ export interface MainNavOptionModel {
   href: SectionHrefDomainType;
 }
 
-export interface MainNavSectionStateDomainModel {
+export interface NavSectionStateDomainModel {
   // TODO: I am here
-  title: string;
   options: Record<SectionIdDomainType, MainNavOptionModel>;
 }

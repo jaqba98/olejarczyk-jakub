@@ -9,9 +9,9 @@ import { TechnologyCategoryDomainState } from '../state/technology-category-doma
 import { TechnologyDomainState } from '../state/technology-domain.state';
 import { TechnologyGroupDomainState } from '../state/technology-group-domain.state';
 import { ApplicationConfig } from '@angular/core';
-import { MainNavDomainState } from '../state/main-nav-domain.state';
 import { HomeDomainState } from '../state/home-domain.state';
 import { PersonalDataDomainState } from '../state/data/personal-data-domain.state';
+import { NavSectionDomainState } from '../state/section/nav-section-domain.state';
 
 export class StoreDomainProvider {
   static getProvide() {
@@ -40,7 +40,7 @@ export class StoreDomainProvider {
 
   static getSectionDomainState() {
     return [
-      MainNavDomainState,
+      NavSectionDomainState,
       HomeDomainState,
       CompanyDomainState,
       ExperienceDomainState,
