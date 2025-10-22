@@ -1,4 +1,5 @@
 export enum StateNameDomainEnum {
+  personalData = 'personalData',
   mainNav = 'mainNav',
   home = 'home',
   company = 'company',
