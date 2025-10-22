@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { HomeStateDomainModel } from '../model/state/home-state-domain.model';
 import { StateNameDomainEnum } from '../enum/state-name-domain.enum';
-import { homeDataDomainConst } from '../const/data/greeting-data-domain.const';
+import { homeDataDomainConst } from '../const/data/home-data-domain.const';
 
 @State<HomeStateDomainModel>({
   name: StateNameDomainEnum.home,

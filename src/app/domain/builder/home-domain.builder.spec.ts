@@ -4,7 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { HomeDomainBuilder } from './home-domain.builder';
 import { StoreDomainProvider } from '../provider/store-domain.provider';
 import { HomeViewDomainModel } from '../model/view/home-view-domain.model';
-import { homeDataDomainConst } from '../const/data/greeting-data-domain.const';
+import { homeDataDomainConst } from '../const/data/home-data-domain.const';
 
 describe('Home Domain Builder', () => {
   let builder: HomeDomainBuilder;
