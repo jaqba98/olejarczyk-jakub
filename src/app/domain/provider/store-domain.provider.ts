@@ -9,12 +9,14 @@ import { TechnologyCategoryDomainState } from '../state/technology-category-doma
 import { TechnologyDomainState } from '../state/technology-domain.state';
 import { TechnologyGroupDomainState } from '../state/technology-group-domain.state';
 import { ApplicationConfig } from '@angular/core';
+import { MainNavDomainState } from '../state/main-nav-domain.state';
 
 export class StoreDomainProvider {
   static getProvide() {
     return [
       provideStore(
         [
+          MainNavDomainState,
           CompanyDomainState,
           ExperienceDomainState,
           ProjectDomainState,
