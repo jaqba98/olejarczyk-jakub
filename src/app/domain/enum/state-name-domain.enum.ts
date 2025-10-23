@@ -4,6 +4,7 @@ export enum StateNameDomainEnum {
   socialMediaData = 'socialMediaData',
   navSection = 'navSection',
   homeSection = 'homeSection',
+  aboutMeSection = 'aboutMeSection',
   company = 'company',
   experience = 'experience',
   project = 'project',

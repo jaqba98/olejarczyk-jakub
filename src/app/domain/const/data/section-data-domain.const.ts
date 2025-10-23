@@ -11,4 +11,9 @@ export const sectionDataDomainConst: SectionDataStateDomainModel = {
     label: 'Home',
     href: '#home',
   },
+  aboutMe: {
+    id: 'aboutMe',
+    label: 'About me',
+    href: '#about-me',
+  },
 };

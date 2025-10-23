@@ -14,6 +14,11 @@ describe('Section Data Domain Const', () => {
         label: 'Home',
         href: '#home',
       },
+      aboutMe: {
+        id: 'aboutMe',
+        label: 'About me',
+        href: '#about-me',
+      },
     };
     expect(sectionDataDomainConst).toEqual(correctResult);
   });

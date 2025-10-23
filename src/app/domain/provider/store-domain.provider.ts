@@ -14,6 +14,7 @@ import { NavSectionDomainState } from '../state/section/nav-section-domain.state
 import { SectionDataDomainState } from '../state/data/section-data-domain.state';
 import { HomeSectionDomainState } from '../state/section/home-section-domain.state';
 import { SocialMediaDataDomainState } from '../state/data/social-media-data-domain.state';
+import { AboutMeSectionDomainState } from '../state/section/about-me-section-domain.state';
 
 export class StoreDomainProvider {
   static getProvide() {
@@ -44,6 +45,7 @@ export class StoreDomainProvider {
     return [
       NavSectionDomainState,
       HomeSectionDomainState,
+      AboutMeSectionDomainState,
       CompanyDomainState,
       ExperienceDomainState,
       ProjectDomainState,
