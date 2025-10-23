@@ -19,6 +19,11 @@ describe('Section Data Domain Const', () => {
         label: 'About me',
         href: '#about-me',
       },
+      technology: {
+        id: 'technology',
+        label: 'Technology',
+        href: '#technology',
+      },
     };
     expect(sectionDataDomainConst).toEqual(correctResult);
   });

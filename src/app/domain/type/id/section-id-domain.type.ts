@@ -1,1 +1,1 @@
-export type SectionIdDomainType = 'nav' | 'home' | 'aboutMe';
+export type SectionIdDomainType = 'nav' | 'home' | 'aboutMe' | 'technology';
