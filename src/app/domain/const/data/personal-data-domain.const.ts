@@ -3,4 +3,7 @@ import { PersonalDataStateDomainModel } from '../../model/state/data/personal-da
 export const personalDataDomainConst: PersonalDataStateDomainModel = {
   firstName: 'Jakub',
   lastName: 'Olejarczyk',
+  experienceTitles: ['Full Stack Developer', 'Integration Engineer'],
+  // TODO: Set correct profile image
+  profileImage: 'assetImage1',
 };
