@@ -2,7 +2,7 @@ export enum StateNameDomainEnum {
   personalData = 'personalData',
   sectionData = 'sectionData',
   navSection = 'navSection',
-  home = 'home',
+  homeSection = 'homeSection',
   company = 'company',
   experience = 'experience',
   project = 'project',
