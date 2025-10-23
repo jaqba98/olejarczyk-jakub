@@ -1,7 +1,1 @@
-export type SocialMediaIdDomainType =
-  | 'linkedin'
-  | 'github'
-  | 'instagram'
-  | 'leetcode'
-  | 'npm'
-  | 'discord';
+export type SocialMediaIdDomainType = 'github' | 'npm';

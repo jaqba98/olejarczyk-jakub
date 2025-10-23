@@ -7,6 +7,7 @@ import { HomeSectionViewDomainModel } from '../../model/view/section/home-sectio
 import { HomeSectionDomainState } from '../../state/section/home-section-domain.state';
 import { PersonalDataDomainState } from '../../state/data/personal-data-domain.state';
 import { SectionDataDomainState } from '../../state/data/section-data-domain.state';
+import { SocialMediaDataDomainState } from '../../state/data/social-media-data-domain.state';
 
 @Injectable()
 export class HomeSectionDomainBuilder {
@@ -27,6 +28,14 @@ export class HomeSectionDomainBuilder {
           map((state) => ({
             ...prevState,
             sectionData: state.home,
+          })),
+        );
+      }),
+      switchMap((prevState) => {
+        return from(this.store.selectOnce(SocialMediaDataDomainState.getState)).pipe(
+          map((state) => ({
+            ...prevState,
+            socialMediaDatas: Object.values(state),
           })),
         );
       }),

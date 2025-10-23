@@ -13,6 +13,7 @@ import { PersonalDataDomainState } from '../state/data/personal-data-domain.stat
 import { NavSectionDomainState } from '../state/section/nav-section-domain.state';
 import { SectionDataDomainState } from '../state/data/section-data-domain.state';
 import { HomeSectionDomainState } from '../state/section/home-section-domain.state';
+import { SocialMediaDataDomainState } from '../state/data/social-media-data-domain.state';
 
 export class StoreDomainProvider {
   static getProvide() {
@@ -36,7 +37,7 @@ export class StoreDomainProvider {
   }
 
   static getDataDomainState() {
-    return [PersonalDataDomainState, SectionDataDomainState];
+    return [PersonalDataDomainState, SectionDataDomainState, SocialMediaDataDomainState];
   }
 
   static getSectionDomainState() {

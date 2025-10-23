@@ -7,6 +7,7 @@ import { HomeSectionViewDomainModel } from '../../model/view/section/home-sectio
 import { homeSectionDataDomainConst } from '../../const/section/home-section-domain.const';
 import { personalDataDomainConst } from '../../const/data/personal-data-domain.const';
 import { sectionDataDomainConst } from '../../const/data/section-data-domain.const';
+import { socialMediaDataDomainConst } from '../../const/data/social-media-data-domain.const';
 
 describe('Home Section Domain Builder', () => {
   let builder: HomeSectionDomainBuilder;
@@ -23,6 +24,7 @@ describe('Home Section Domain Builder', () => {
       homeSection: homeSectionDataDomainConst,
       personalData: personalDataDomainConst,
       sectionData: sectionDataDomainConst.home,
+      socialMediaDatas: [socialMediaDataDomainConst.github, socialMediaDataDomainConst.npm],
     };
     expect(await firstValueFrom(builder.build())).toEqual(correctResult);
   });
