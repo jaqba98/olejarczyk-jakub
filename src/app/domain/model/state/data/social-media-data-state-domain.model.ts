@@ -1,13 +1,10 @@
 import { SvgModel } from '../../../../model/svg.model';
 import { SocialMediaIdDomainType } from '../../../type/id/social-media-id-domain.type';
 
-export interface SocialMediaDataStateModel {
+export interface SocialMediaModel {
   id: SocialMediaIdDomainType;
   url: string;
   svg: SvgModel;
 }
 
-export type SocialMediaDataStateDomainModel = Record<
-  SocialMediaIdDomainType,
-  SocialMediaDataStateModel
->;
+export type SocialMediaDataStateDomainModel = Record<SocialMediaIdDomainType, SocialMediaModel>;

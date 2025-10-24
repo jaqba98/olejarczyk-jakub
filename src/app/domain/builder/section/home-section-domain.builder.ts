@@ -17,26 +17,17 @@ export class HomeSectionDomainBuilder {
     return this.store.selectOnce(HomeSectionDomainState.getState).pipe(
       switchMap((prevState) => {
         return from(this.store.selectOnce(PersonalDataDomainState.getState)).pipe(
-          map((state) => ({
-            homeSection: prevState,
-            personalData: state,
-          })),
+          map((state) => ({ ...prevState, personalData: state })),
         );
       }),
       switchMap((prevState) => {
         return from(this.store.selectOnce(SectionDataDomainState.getState)).pipe(
-          map((state) => ({
-            ...prevState,
-            sectionData: state.home,
-          })),
+          map((state) => ({ ...prevState, sectionData: state.home })),
         );
       }),
       switchMap((prevState) => {
         return from(this.store.selectOnce(SocialMediaDataDomainState.getState)).pipe(
-          map((state) => ({
-            ...prevState,
-            socialMediaDatas: Object.values(state),
-          })),
+          map((state) => ({ ...prevState, socialMediaData: state })),
         );
       }),
     );

@@ -21,10 +21,10 @@ describe('Home Section Domain Builder', () => {
 
   it('should return correct data', async () => {
     const correctResult: HomeSectionViewDomainModel = {
-      homeSection: homeSectionDataDomainConst,
+      ...homeSectionDataDomainConst,
       personalData: personalDataDomainConst,
       sectionData: sectionDataDomainConst.home,
-      socialMediaDatas: [socialMediaDataDomainConst.github, socialMediaDataDomainConst.npm],
+      socialMediaData: socialMediaDataDomainConst,
     };
     expect(await firstValueFrom(builder.build())).toEqual(correctResult);
   });
