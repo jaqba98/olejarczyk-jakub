@@ -4,7 +4,7 @@ import { homeSectionDataDomainConst } from './home-section-domain.const';
 describe('Home Section Domain Const', () => {
   it('should return correct data', () => {
     const correctResult: HomeSectionStateDomainModel = {
-      greeting: 'Hello',
+      greeting: "Hello there! I'm",
     };
     expect(homeSectionDataDomainConst).toEqual(correctResult);
   });

@@ -3,8 +3,7 @@ import { PersonalDataStateDomainModel } from '../../model/state/data/personal-da
 export const personalDataDomainConst: PersonalDataStateDomainModel = {
   firstName: 'Jakub',
   lastName: 'Olejarczyk',
-  // TODO: remove the experienceTitles
-  experienceTitles: ['Full Stack Developer', 'Integration Engineer'],
   // TODO: Set correct profile image
   profileImage: 'assetImage1',
+  experienceTitles: ['Full Stack Developer', 'Integration Engineer'],
 };

@@ -3,9 +3,8 @@ import { SectionDataStateModel } from '../../state/data/section-data-state-domai
 import { SocialMediaDataStateModel } from '../../state/data/social-media-data-state-domain.model';
 import { HomeSectionStateDomainModel } from '../../state/section/home-section-state-domain.model';
 
-export interface HomeSectionViewDomainModel {
-  homeSection: HomeSectionStateDomainModel;
-  personalData: PersonalDataStateDomainModel;
+export interface HomeSectionViewDomainModel extends HomeSectionStateDomainModel {
   sectionData: SectionDataStateModel;
+  personalData: PersonalDataStateDomainModel;
   socialMediaDatas: SocialMediaDataStateModel[];
 }

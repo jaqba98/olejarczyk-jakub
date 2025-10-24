@@ -4,7 +4,6 @@ import { ExperienceTitleDomainType } from '../../../type/title/experience-title-
 export interface PersonalDataStateDomainModel {
   firstName: string;
   lastName: string;
-  // TODO: remove the experienceTitles
-  experienceTitles: ExperienceTitleDomainType[];
   profileImage: ImageAssetDomainType;
+  experienceTitles: ExperienceTitleDomainType[];
 }
