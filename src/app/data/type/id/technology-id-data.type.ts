@@ -1,4 +1,4 @@
-export type TechnologyIconDomainType =
+export type TechnologyIdDataType =
   | 'html'
   | 'css'
   | 'sass'

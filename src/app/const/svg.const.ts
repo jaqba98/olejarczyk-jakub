@@ -267,7 +267,7 @@ export const SvgConst = {
     ],
     TechnologyColorConst.jira,
   ),
-  window: SvgBuilder.build(
+  windows: SvgBuilder.build(
     [
       'M6,6h17v17H6V6z',
       'M25.042,22.958V6H42v16.958H25.042z',

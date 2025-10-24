@@ -7,7 +7,7 @@ import { ProjectViewDomainModel } from '../model/view/project-view-domain.model'
 import { projectDataDomainConst } from '../const/data/project-data-domain.const';
 import { technologyGroupDataDomainConst } from '../const/data/technology-group-data-domain.const';
 import { technologyCategoryDataDomainConst } from '../const/data/technology-category-data-domain.const';
-import { technologyDataDomainConst } from '../const/data/technology-data-domain.const';
+import { technologyDataDomainConst } from '../../data/const/technology-data.const';
 
 describe('Project Domain Builder', () => {
   let builder: ProjectDomainBuilder;

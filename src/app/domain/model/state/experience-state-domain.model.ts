@@ -2,7 +2,7 @@ import { EmploymentTypeDomainType } from '../../type/type/employment-type-domain
 import { ExperienceTitleDomainType } from '../../type/title/experience-title-domain.type';
 import { LocationTypeDomainType } from '../../type/type/location-type-domain.type';
 import { CompanyIdDomainType } from '../../../data/type/id/company-id-data.type';
-import { TechnologyIdDomainType } from '../../type/id/technology-id-domain.type';
+import { TechnologyIdDomainType } from '../../../data/type/id/technology-id-data.type';
 import { BaseStateDomainModel } from '../base/base-state-domain.model';
 
 export interface ExperienceStateModel extends BaseStateDomainModel<CompanyIdDomainType> {

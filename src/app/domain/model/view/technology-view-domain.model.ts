@@ -1,6 +1,6 @@
 import { TechnologyCategoryStateModel } from '../state/technology-category-state-domain.model';
 import { TechnologyGroupStateModel } from '../state/technology-group-state-domain.model';
-import { TechnologyStateModel } from '../state/technology-state-domain.model';
+import { TechnologyStateModel } from '../../../data/model/technology-data.model';
 
 interface TechnologyCategoryViewModel {
   categoryModel: TechnologyCategoryStateModel;

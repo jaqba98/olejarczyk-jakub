@@ -6,7 +6,7 @@ import { technologyGroupDataDomainConst } from '../const/data/technology-group-d
 import { TechnologyDomainBuilder } from './technology-domain.builder';
 import { TechnologyViewDomainModel } from '../model/view/technology-view-domain.model';
 import { technologyCategoryDataDomainConst } from '../const/data/technology-category-data-domain.const';
-import { technologyDataDomainConst } from '../const/data/technology-data-domain.const';
+import { technologyDataDomainConst } from '../../data/const/technology-data.const';
 
 describe('Technology Domain Builder', () => {
   let builder: TechnologyDomainBuilder;
