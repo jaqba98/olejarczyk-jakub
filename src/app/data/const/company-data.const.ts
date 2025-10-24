@@ -1,4 +1,4 @@
-import { CompanyDataModel } from './model/company-data.model';
+import { CompanyDataModel } from '../model/company-data.model';
 
 export const companyDataConst: CompanyDataModel = {
   aprSystem: {

@@ -1,5 +1,5 @@
 import { SvgConst } from '../../const/svg.const';
-import { TechnologyDateModel } from './model/technology-data.model';
+import { TechnologyDateModel } from '../model/technology-data.model';
 
 export const technologyDataConst: TechnologyDateModel = {
   html: {

@@ -1,4 +1,4 @@
-import { TechnologyGroupDataModel } from './model/technology-group-data.model';
+import { TechnologyGroupDataModel } from '../model/technology-group-data.model';
 
 export const technologyGroupDataConst: TechnologyGroupDataModel = {
   frontend: {

@@ -1,4 +1,4 @@
-import { TechnologyCategoryDateModel } from './model/technology-category-data.model';
+import { TechnologyCategoryDateModel } from '../model/technology-category-data.model';
 
 export const technologyCategoryDataConst: TechnologyCategoryDateModel = {
   markupLanguage: {
