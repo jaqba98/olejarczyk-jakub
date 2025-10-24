@@ -1,0 +1,1 @@
+export type LastNameDataType = 'Olejarczyk';

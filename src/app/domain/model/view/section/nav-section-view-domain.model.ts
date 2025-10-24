@@ -1,4 +1,4 @@
-import { PersonalDataStateDomainModel } from '../../state/data/personal-data-state-domain.model';
+import { PersonalDataStateDomainModel } from '../../../../data/model/personal-data.model';
 import { SectionDataStateModel } from '../../state/data/section-data-state-domain.model';
 import { NavSectionStateOptionDomainModel } from '../../state/section/nav-section-state-domain.model';
 

@@ -5,7 +5,7 @@ import { HomeSectionDomainBuilder } from './home-section-domain.builder';
 import { StoreDomainProvider } from '../../provider/store-domain.provider';
 import { HomeSectionViewDomainModel } from '../../model/view/section/home-section-view-domain.model';
 import { homeSectionDataDomainConst } from '../../const/section/home-section-domain.const';
-import { personalDataDomainConst } from '../../const/data/personal-data-domain.const';
+import { personalDataDomainConst } from '../../../data/const/personal-data.const';
 import { sectionDataDomainConst } from '../../const/data/section-data-domain.const';
 import { socialMediaDataDomainConst } from '../../const/data/social-media-data-domain.const';
 

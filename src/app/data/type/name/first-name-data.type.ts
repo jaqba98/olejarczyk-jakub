@@ -1,0 +1,1 @@
+export type FirstNameDataType = 'Jakub';

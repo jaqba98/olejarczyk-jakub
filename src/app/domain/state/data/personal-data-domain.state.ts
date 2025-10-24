@@ -1,9 +1,9 @@
 import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
-import { PersonalDataStateDomainModel } from '../../model/state/data/personal-data-state-domain.model';
+import { PersonalDataStateDomainModel } from '../../../data/model/personal-data.model';
 import { StateNameDomainEnum } from '../../enum/state-name-domain.enum';
-import { personalDataDomainConst } from '../../const/data/personal-data-domain.const';
+import { personalDataDomainConst } from '../../../data/const/personal-data.const';
 
 @State<PersonalDataStateDomainModel>({
   name: StateNameDomainEnum.personalData,
