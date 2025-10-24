@@ -6,6 +6,7 @@ describe('Personal Data Domain Const', () => {
     const correctResult: PersonalDataStateDomainModel = {
       firstName: 'Jakub',
       lastName: 'Olejarczyk',
+      // TODO: remove the experienceTitles
       experienceTitles: ['Full Stack Developer', 'Integration Engineer'],
       // TODO: Set correct profile image
       profileImage: 'assetImage1',

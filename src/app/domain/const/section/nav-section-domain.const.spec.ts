@@ -4,9 +4,32 @@ import { navSectionDomainConst } from './nav-section-domain.const';
 describe('Nav Section Domain Const', () => {
   it('should return correct data', () => {
     const correctResult: NavSectionStateDomainModel = {
-      options: ['home'],
-      // TODO: Change to resume in the future
-      mainOption: 'home',
+      options: {
+        nav: {
+          id: 'nav',
+          order: 0,
+          visible: false,
+          primary: false,
+        },
+        home: {
+          id: 'home',
+          order: 1,
+          visible: true,
+          primary: false,
+        },
+        aboutMe: {
+          id: 'aboutMe',
+          order: 2,
+          visible: true,
+          primary: false,
+        },
+        technology: {
+          id: 'technology',
+          order: 3,
+          visible: true,
+          primary: false,
+        },
+      },
     };
     expect(navSectionDomainConst).toEqual(correctResult);
   });

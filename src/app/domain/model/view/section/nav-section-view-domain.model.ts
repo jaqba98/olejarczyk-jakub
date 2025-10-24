@@ -1,9 +1,13 @@
 import { PersonalDataStateDomainModel } from '../../state/data/personal-data-state-domain.model';
 import { SectionDataStateModel } from '../../state/data/section-data-state-domain.model';
-import { NavSectionStateDomainModel } from '../../state/section/nav-section-state-domain.model';
+import { NavSectionStateOptionDomainModel } from '../../state/section/nav-section-state-domain.model';
+
+export interface NavSectionViewOptionDomainModel extends NavSectionStateOptionDomainModel {
+  sectionData: SectionDataStateModel;
+}
 
 export interface NavSectionViewDomainModel {
-  navSection: NavSectionStateDomainModel;
+  sectionData: SectionDataStateModel;
   personalData: PersonalDataStateDomainModel;
-  sectionData: SectionDataStateModel[];
+  options: NavSectionViewOptionDomainModel[];
 }

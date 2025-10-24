@@ -20,9 +20,22 @@ describe('Nav Section Domain Builder', () => {
 
   it('should return correct data', async () => {
     const correctResult: NavSectionViewDomainModel = {
-      navSection: navSectionDomainConst,
+      sectionData: sectionDataDomainConst.nav,
       personalData: personalDataDomainConst,
-      sectionData: [sectionDataDomainConst.home],
+      options: [
+        {
+          ...navSectionDomainConst.options.home,
+          sectionData: sectionDataDomainConst.home,
+        },
+        {
+          ...navSectionDomainConst.options.aboutMe,
+          sectionData: sectionDataDomainConst.aboutMe,
+        },
+        {
+          ...navSectionDomainConst.options.technology,
+          sectionData: sectionDataDomainConst.technology,
+        },
+      ],
     };
     expect(await firstValueFrom(builder.build())).toEqual(correctResult);
   });
