@@ -3,7 +3,7 @@ import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { applicationConfig } from '@storybook/angular';
 import { ApplicationConfig } from '@angular/core';
 
-import { CompanyDomainState } from '../state/company-domain.state';
+import { CompanyDateDomainState } from '../state/data/company-data-domain.state';
 import { ExperienceDomainState } from '../state/experience-domain.state';
 import { ProjectDomainState } from '../state/project-domain.state';
 import { TechnologyCategoryDomainState } from '../state/technology-category-domain.state';
@@ -38,7 +38,12 @@ export class StoreDomainProvider {
   }
 
   static getDataDomainState() {
-    return [PersonalDataDomainState, SectionDataDomainState, SocialMediaDataDomainState];
+    return [
+      CompanyDateDomainState,
+      PersonalDataDomainState,
+      SectionDataDomainState,
+      SocialMediaDataDomainState,
+    ];
   }
 
   static getSectionDomainState() {
@@ -46,7 +51,6 @@ export class StoreDomainProvider {
       NavSectionDomainState,
       HomeSectionDomainState,
       AboutMeSectionDomainState,
-      CompanyDomainState,
       ExperienceDomainState,
       ProjectDomainState,
       TechnologyCategoryDomainState,

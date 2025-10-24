@@ -5,10 +5,10 @@ import { from, Observable } from 'rxjs';
 
 import { ExperienceDomainState } from '../state/experience-domain.state';
 import { ExperienceViewDomainModel } from '../model/view/experience-view-domain.model';
-import { CompanyDomainState } from '../state/company-domain.state';
 import { TechnologyGroupDomainState } from '../state/technology-group-domain.state';
 import { TechnologyCategoryDomainState } from '../state/technology-category-domain.state';
 import { TechnologyDomainState } from '../state/technology-domain.state';
+import { CompanyDateDomainState } from '../state/data/company-data-domain.state';
 
 @Injectable()
 export class ExperienceDomainBuilder {
@@ -23,7 +23,7 @@ export class ExperienceDomainBuilder {
           .flat(),
       ),
       switchMap((prevState) => {
-        return from(this.store.selectOnce(CompanyDomainState.getState)).pipe(
+        return from(this.store.selectOnce(CompanyDateDomainState.getState)).pipe(
           map((state) => {
             return prevState.map((prevStateItem) => ({
               ...prevStateItem,

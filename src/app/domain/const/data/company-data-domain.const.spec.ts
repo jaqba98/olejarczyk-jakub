@@ -1,9 +1,9 @@
-import { CompanyStateDomainModel } from '../../model/state/company-state-domain.model';
+import { CompanyDataStateDomainModel } from '../../model/state/data/company-data-state-domain.model';
 import { companyDataDomainConst } from './company-data-domain.const';
 
 describe('Company Data Domain Const', () => {
   it('should return correct data', () => {
-    const correctResult: CompanyStateDomainModel = {
+    const correctResult: CompanyDataStateDomainModel = {
       aprSystem: {
         id: 'aprSystem',
         order: 0,
