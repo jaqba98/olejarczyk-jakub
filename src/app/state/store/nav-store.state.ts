@@ -12,6 +12,7 @@ import { sectionDataConst } from '../../data/const/section-data.const';
     sectionData: {
       home: sectionDataConst.home,
       aboutMe: sectionDataConst.aboutMe,
+      technology: sectionDataConst.technology,
       skill: sectionDataConst.skill,
       experience: sectionDataConst.experience,
       resume: sectionDataConst.resume,

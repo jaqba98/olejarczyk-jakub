@@ -3,6 +3,7 @@ export type SectionIdDataType =
   | 'home'
   | 'aboutMe'
   | 'skill'
+  | 'technology'
   | 'experience'
   | 'resume'
   | 'education'

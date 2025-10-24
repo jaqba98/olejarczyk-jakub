@@ -3,6 +3,7 @@ export type SectionLabelDataType =
   | 'Home'
   | 'About me'
   | 'Skill'
+  | 'Technology'
   | 'Experience'
   | 'Resume'
   | 'Education'
