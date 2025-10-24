@@ -1,7 +1,8 @@
+import { SectionDataModel } from '../../data/model/section-data.model';
 import { TechnologyCategoryDateModel } from '../../data/model/technology-category-data.model';
 import { TechnologyDateModel } from '../../data/model/technology-data.model';
 
-export interface TechnologyStateModel {
+interface TechnologyCategoryModel {
   markupLanguage: {
     data: TechnologyCategoryDateModel['markupLanguage'];
     technologies: Pick<TechnologyDateModel, 'html'>;
@@ -82,4 +83,9 @@ export interface TechnologyStateModel {
     data: TechnologyCategoryDateModel['operatingSystem'];
     technologies: Pick<TechnologyDateModel, 'windows' | 'linux'>;
   };
+}
+
+export interface TechnologyStateModel {
+  technologySectionData: SectionDataModel['technology'];
+  technologyCategory: TechnologyCategoryModel;
 }
