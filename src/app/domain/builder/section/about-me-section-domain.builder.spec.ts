@@ -19,7 +19,7 @@ describe('About Me Section Domain Builder', () => {
 
   it('should return correct data', async () => {
     const correctResult: AboutMeSectionViewDomainModel = {
-      aboutMeSection: aboutMeSectionDataDomainConst,
+      ...aboutMeSectionDataDomainConst,
       sectionData: sectionDataDomainConst.aboutMe,
     };
     expect(await firstValueFrom(builder.build())).toEqual(correctResult);

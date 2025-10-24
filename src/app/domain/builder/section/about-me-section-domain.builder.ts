@@ -16,7 +16,7 @@ export class AboutMeSectionDomainBuilder {
       switchMap((prevState) => {
         return from(this.store.selectOnce(SectionDataDomainState.getState)).pipe(
           map((state) => ({
-            aboutMeSection: prevState,
+            ...prevState,
             sectionData: state.aboutMe,
           })),
         );
