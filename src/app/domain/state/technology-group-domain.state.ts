@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 import { StateNameDomainEnum } from '../enum/state-name-domain.enum';
 import { TechnologyGroupStateDomainModel } from '../model/state/technology-group-state-domain.model';
-import { technologyGroupDataDomainConst } from '../const/data/technology-group-data-domain.const';
+import { technologyGroupDataDomainConst } from '../../data/const/technology-group-data.const';
 
 @State<TechnologyGroupStateDomainModel>({
   name: StateNameDomainEnum.technologyGroup,

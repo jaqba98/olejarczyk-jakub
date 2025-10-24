@@ -1,4 +1,4 @@
-import { SectionDataModel } from '../model/section-data.model';
+import { SectionDataModel } from './model/section-data.model';
 
 export const sectionDataConst: SectionDataModel = {
   nav: {

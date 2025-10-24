@@ -1,4 +1,4 @@
-export type TechnologyGroupIdDomainType =
+export type TechnologyGroupIdDataType =
   | 'frontend'
   | 'backend'
   | 'devops'

@@ -1,6 +1,6 @@
-import { TechnologyCategoryStateDomainModel } from '../../model/state/technology-category-state-domain.model';
+import { TechnologyCategoryDateModel } from './model/technology-category-data.model';
 
-export const technologyCategoryDataDomainConst: TechnologyCategoryStateDomainModel = {
+export const technologyCategoryDataConst: TechnologyCategoryDateModel = {
   markupLanguage: {
     id: 'markupLanguage',
     order: 0,

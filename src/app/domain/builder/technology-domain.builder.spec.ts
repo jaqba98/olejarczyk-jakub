@@ -2,10 +2,10 @@ import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 
 import { StoreDomainProvider } from '../provider/store-domain.provider';
-import { technologyGroupDataDomainConst } from '../const/data/technology-group-data-domain.const';
+import { technologyGroupDataDomainConst } from '../../data/const/technology-group-data.const';
 import { TechnologyDomainBuilder } from './technology-domain.builder';
 import { TechnologyViewDomainModel } from '../model/view/technology-view-domain.model';
-import { technologyCategoryDataDomainConst } from '../const/data/technology-category-data-domain.const';
+import { technologyCategoryDataDomainConst } from '../../data/const/technology-category-data.const';
 import { technologyDataDomainConst } from '../../data/const/technology-data.const';
 
 describe('Technology Domain Builder', () => {

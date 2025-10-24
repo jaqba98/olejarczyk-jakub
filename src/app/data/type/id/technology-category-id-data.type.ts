@@ -1,4 +1,4 @@
-export type TechnologyCategoryIdDomainType =
+export type TechnologyCategoryIdDataType =
   | 'markupLanguage'
   | 'stylesheetLanguage'
   | 'programmingLanguage'

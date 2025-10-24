@@ -5,8 +5,8 @@ import { StoreDomainProvider } from '../provider/store-domain.provider';
 import { ProjectDomainBuilder } from './project-domain.builder';
 import { ProjectViewDomainModel } from '../model/view/project-view-domain.model';
 import { projectDataDomainConst } from '../const/data/project-data-domain.const';
-import { technologyGroupDataDomainConst } from '../const/data/technology-group-data-domain.const';
-import { technologyCategoryDataDomainConst } from '../const/data/technology-category-data-domain.const';
+import { technologyGroupDataDomainConst } from '../../data/const/technology-group-data.const';
+import { technologyCategoryDataDomainConst } from '../../data/const/technology-category-data.const';
 import { technologyDataDomainConst } from '../../data/const/technology-data.const';
 
 describe('Project Domain Builder', () => {

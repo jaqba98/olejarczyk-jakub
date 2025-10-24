@@ -6,8 +6,8 @@ import { StoreDomainProvider } from '../provider/store-domain.provider';
 import { ExperienceViewDomainModel } from '../model/view/experience-view-domain.model';
 import { experienceDataDomainConst } from '../const/data/experience-data-domain.const';
 import { companyDataDomainConst } from '../../data/const/company-data.const';
-import { technologyGroupDataDomainConst } from '../const/data/technology-group-data-domain.const';
-import { technologyCategoryDataDomainConst } from '../const/data/technology-category-data-domain.const';
+import { technologyGroupDataDomainConst } from '../../data/const/technology-group-data.const';
+import { technologyCategoryDataDomainConst } from '../../data/const/technology-category-data.const';
 import { technologyDataDomainConst } from '../../data/const/technology-data.const';
 
 describe('Experience Domain Builder', () => {

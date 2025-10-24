@@ -1,6 +1,6 @@
-import { TechnologyGroupStateDomainModel } from '../../model/state/technology-group-state-domain.model';
+import { TechnologyGroupDataModel } from './model/technology-group-data.model';
 
-export const technologyGroupDataDomainConst: TechnologyGroupStateDomainModel = {
+export const technologyGroupDataConst: TechnologyGroupDataModel = {
   frontend: {
     id: 'frontend',
     order: 0,

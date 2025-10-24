@@ -7,7 +7,7 @@ import { TechnologyViewDomainModel } from '../model/view/technology-view-domain.
 import { TechnologyGroupDomainState } from '../state/technology-group-domain.state';
 import { TechnologyCategoryDomainState } from '../state/technology-category-domain.state';
 import { TechnologyDomainState } from '../state/technology-domain.state';
-import { TechnologyGroupIdDomainType } from '../type/id/technology-group-id-domain.type';
+import { TechnologyGroupIdDomainType } from '../../data/type/id/technology-group-id-data.type';
 
 @Injectable()
 export class TechnologyDomainBuilder {
