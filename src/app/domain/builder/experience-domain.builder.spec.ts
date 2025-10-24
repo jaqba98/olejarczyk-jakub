@@ -5,7 +5,7 @@ import { ExperienceDomainBuilder } from './experience-domain.builder';
 import { StoreDomainProvider } from '../provider/store-domain.provider';
 import { ExperienceViewDomainModel } from '../model/view/experience-view-domain.model';
 import { experienceDataDomainConst } from '../const/data/experience-data-domain.const';
-import { companyDataDomainConst } from '../const/data/company-data-domain.const';
+import { companyDataDomainConst } from '../../data/const/company-data.const';
 import { technologyGroupDataDomainConst } from '../const/data/technology-group-data-domain.const';
 import { technologyCategoryDataDomainConst } from '../const/data/technology-category-data-domain.const';
 import { technologyDataDomainConst } from '../const/data/technology-data-domain.const';

@@ -1,18 +1,18 @@
-import { CompanyDataStateDomainModel } from '../../model/state/data/company-data-state-domain.model';
+import { CompanyDataModel } from '../model/company-data.model';
 
-export const companyDataDomainConst: CompanyDataStateDomainModel = {
+export const companyDataConst: CompanyDataModel = {
   aprSystem: {
     id: 'aprSystem',
-    order: 0,
     name: 'APR System',
     city: 'Kielce',
     country: 'Poland',
+    order: 0,
   },
   primaris: {
     id: 'primaris',
-    order: 1,
     name: 'Primaris',
     city: 'Warsaw',
     country: 'Poland',
+    order: 1,
   },
 };
