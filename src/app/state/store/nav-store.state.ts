@@ -9,6 +9,7 @@ import { sectionDataConst } from '../../data/const/section-data.const';
   name: 'nav',
   defaults: {
     personalData: personalDataConst,
+    navSectionData: sectionDataConst.nav,
     sectionData: {
       home: sectionDataConst.home,
       aboutMe: sectionDataConst.aboutMe,
