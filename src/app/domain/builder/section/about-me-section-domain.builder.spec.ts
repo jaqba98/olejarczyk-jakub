@@ -2,7 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { firstValueFrom } from 'rxjs';
 
 import { StoreDomainProvider } from '../../provider/store-domain.provider';
-import { sectionDataDomainConst } from '../../const/data/section-data-domain.const';
+import { sectionDataDomainConst } from '../../../data/const/section-data.const';
 import { AboutMeSectionDomainBuilder } from './about-me-section-domain.builder';
 import { AboutMeSectionViewDomainModel } from '../../model/view/section/about-me-section-view-domain.model';
 import { aboutMeSectionDataDomainConst } from '../../const/section/about-me-section-domain.const';

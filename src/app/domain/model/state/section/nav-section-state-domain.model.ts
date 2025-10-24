@@ -1,4 +1,4 @@
-import { SectionIdDomainType } from '../../../type/id/section-id-domain.type';
+import { SectionIdDomainType } from '../../../../data/type/id/section-id-data.type';
 import { BaseStateDomainModel } from '../../base/base-state-domain.model';
 
 export interface NavSectionStateOptionDomainModel

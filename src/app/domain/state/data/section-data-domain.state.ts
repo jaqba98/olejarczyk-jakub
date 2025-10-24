@@ -1,9 +1,9 @@
 import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
-import { SectionDataStateDomainModel } from '../../model/state/data/section-data-state-domain.model';
+import { SectionDataStateDomainModel } from '../../../data/model/section-data.model';
 import { StateNameDomainEnum } from '../../enum/state-name-domain.enum';
-import { sectionDataDomainConst } from '../../const/data/section-data-domain.const';
+import { sectionDataDomainConst } from '../../../data/const/section-data.const';
 
 @State<SectionDataStateDomainModel>({
   name: StateNameDomainEnum.sectionData,

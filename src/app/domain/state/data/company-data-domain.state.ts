@@ -2,7 +2,7 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { StateNameDomainEnum } from '../../enum/state-name-domain.enum';
-import { companyDataDomainConst } from '../../../data/const/company-data.const';
+import { companyDataDomainConst } from '../../../company-data.const';
 import { CompanyDataStateDomainModel } from '../../model/state/data/company-data-state-domain.model';
 
 @State<CompanyDataStateDomainModel>({
