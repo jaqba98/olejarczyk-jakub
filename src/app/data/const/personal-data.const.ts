@@ -1,6 +1,6 @@
-import { PersonalDataModel } from '../model/personal-data.model';
+import { PersonalData } from '../model/personal-data.model';
 
-export const personalDataConst: PersonalDataModel = {
+export const personalDataConst: PersonalData.Model = {
   firstName: 'Jakub',
   lastName: 'Olejarczyk',
 };
