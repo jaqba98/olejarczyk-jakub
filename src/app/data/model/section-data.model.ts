@@ -8,6 +8,7 @@ export namespace SectionData {
     id: SectionIdDataType;
     label: SectionLabelDataType;
     href: SectionHrefDataType;
+    navigable: boolean;
   }
 
   export type Type = Record<SectionKindDataType, Model>;

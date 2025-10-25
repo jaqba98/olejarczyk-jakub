@@ -8,4 +8,8 @@ export class SectionDataFinder {
     }
     throw new Error(`The ${sectionKind} does not exist in the sectionDataConst!`);
   }
+
+  static findNavigable() {
+    return Object.values(sectionDataConst).filter((sectionData) => sectionData.navigable);
+  }
 }

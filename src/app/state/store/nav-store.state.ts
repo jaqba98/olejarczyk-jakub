@@ -10,6 +10,7 @@ import { PersonalDataFinder } from '../../finder/data/personal-data.finder';
   defaults: {
     sectionData: SectionDataFinder.find('nav'),
     personalData: PersonalDataFinder.find(),
+    sectionDatas: SectionDataFinder.findNavigable(),
   },
 })
 @Injectable()
