@@ -1,11 +1,11 @@
-import { SectionIdDataType } from '../../data/type/id/section-id-data.type';
 import { sectionDataConst } from '../../data/const/section-data.const';
+import { SectionKindDataType } from '../../data/type/kind/section-kind-data.type';
 
 export class SectionDataFinder {
-  static find(sectionId: SectionIdDataType) {
-    if (sectionId in sectionDataConst) {
-      return sectionDataConst[sectionId];
+  static find(sectionKind: SectionKindDataType) {
+    if (sectionKind in sectionDataConst) {
+      return sectionDataConst[sectionKind];
     }
-    throw new Error(`The sectionId: ${sectionId} does not exist in the sectionDataConst!`);
+    throw new Error(`The ${sectionKind} does not exist in the sectionDataConst!`);
   }
 }

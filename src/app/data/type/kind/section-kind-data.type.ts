@@ -1,7 +1,7 @@
-export type SectionIdDataType =
+export type SectionKindDataType =
   | 'nav'
   | 'home'
-  | 'about-me'
+  | 'aboutMe'
   | 'technology'
   | 'skill'
   | 'experience'
