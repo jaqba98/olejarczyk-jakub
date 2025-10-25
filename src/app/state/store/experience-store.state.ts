@@ -2,10 +2,13 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ExperienceStateModel } from '../model/experience-state.model';
+import { SectionDataFinder } from '../../finder/data/section-data.finder';
 
 @State<ExperienceStateModel>({
   name: 'experience',
-  defaults: {},
+  defaults: {
+    sectionData: SectionDataFinder.find('experience'),
+  },
 })
 @Injectable()
 export class ExperienceStoreState {

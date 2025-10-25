@@ -2,10 +2,13 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { NavStateModel } from '../model/nav-state.model';
+import { SectionDataFinder } from '../../finder/data/section-data.finder';
 
 @State<NavStateModel>({
   name: 'nav',
-  defaults: {},
+  defaults: {
+    sectionData: SectionDataFinder.find('nav'),
+  },
 })
 @Injectable()
 export class NavStoreState {

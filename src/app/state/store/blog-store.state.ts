@@ -2,10 +2,13 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { BlogStateModel } from '../model/blog-state.model';
+import { SectionDataFinder } from '../../finder/data/section-data.finder';
 
 @State<BlogStateModel>({
   name: 'blog',
-  defaults: {},
+  defaults: {
+    sectionData: SectionDataFinder.find('blog'),
+  },
 })
 @Injectable()
 export class BlogStoreState {
