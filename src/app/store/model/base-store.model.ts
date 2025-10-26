@@ -1,5 +1,5 @@
-import { SectionDomain } from '../../domain/model/section-domain.model';
+import { SectionDataModel } from '../../finder/model/data/section-data.model';
 
 export interface BaseStoreModel {
-  sectionData: SectionDomain.Data;
+  sectionData: SectionDataModel;
 }

@@ -1,6 +1,6 @@
-import { PersonalDomain } from '../../domain/model/personal-domain.model';
+import { PersonalDataModel } from '../../finder/model/data/personal-data.model';
 import { BaseStoreModel } from './base-store.model';
 
 export interface NavStoreModel extends BaseStoreModel {
-  personalData: PersonalDomain.Data;
+  personalData: PersonalDataModel;
 }
