@@ -2,7 +2,7 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { TechnologyStateModel } from '../model/technology-state.model';
-import { SectionDataFinder } from '../../finder/data/section-data.finder';
+import { SectionDataFinder } from '../../finder/domain/section-domain.finder.ts';
 
 @State<TechnologyStateModel>({
   name: 'technology',

@@ -2,8 +2,8 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { NavStateModel } from '../model/nav-state.model';
-import { SectionDataFinder } from '../../finder/data/section-data.finder';
-import { PersonalDataFinder } from '../../finder/data/personal-data.finder';
+import { SectionDataFinder } from '../../finder/domain/section-domain.finder.ts';
+import { PersonalDataFinder } from '../../finder/domain/personal-data.finder';
 
 @State<NavStateModel>({
   name: 'nav',
