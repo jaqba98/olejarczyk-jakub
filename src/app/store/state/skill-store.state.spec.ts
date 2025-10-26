@@ -17,7 +17,7 @@ describe('Skill Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: SkillStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('skill'),
+      sectionData: SectionDomainFinder.findDataByKind('skill'),
     };
     expect(await firstValueFrom(store.selectOnce(SkillStoreState.getState))).toEqual(correctData);
   });

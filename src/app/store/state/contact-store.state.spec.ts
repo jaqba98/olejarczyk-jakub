@@ -17,7 +17,7 @@ describe('Contact Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ContactStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('contact'),
+      sectionData: SectionDomainFinder.findDataByKind('contact'),
     };
     expect(await firstValueFrom(store.selectOnce(ContactStoreState.getState))).toEqual(correctData);
   });

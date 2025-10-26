@@ -17,7 +17,7 @@ describe('Blog Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: BlogStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('blog'),
+      sectionData: SectionDomainFinder.findDataByKind('blog'),
     };
     expect(await firstValueFrom(store.selectOnce(BlogStoreState.getState))).toEqual(correctData);
   });

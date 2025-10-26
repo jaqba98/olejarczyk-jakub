@@ -17,7 +17,7 @@ describe('Education Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: EducationStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('education'),
+      sectionData: SectionDomainFinder.findDataByKind('education'),
     };
     expect(await firstValueFrom(store.selectOnce(EducationStoreState.getState))).toEqual(
       correctData,

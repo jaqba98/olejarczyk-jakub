@@ -17,7 +17,7 @@ describe('Footer Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: FooterStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('footer'),
+      sectionData: SectionDomainFinder.findDataByKind('footer'),
     };
     expect(await firstValueFrom(store.selectOnce(FooterStoreState.getState))).toEqual(correctData);
   });

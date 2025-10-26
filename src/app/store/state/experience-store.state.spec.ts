@@ -17,7 +17,7 @@ describe('Experience Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ExperienceStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('experience'),
+      sectionData: SectionDomainFinder.findDataByKind('experience'),
     };
     expect(await firstValueFrom(store.selectOnce(ExperienceStoreState.getState))).toEqual(
       correctData,

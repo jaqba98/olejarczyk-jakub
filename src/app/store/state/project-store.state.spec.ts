@@ -17,7 +17,7 @@ describe('Project Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ProjectStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('project'),
+      sectionData: SectionDomainFinder.findDataByKind('project'),
     };
     expect(await firstValueFrom(store.selectOnce(ProjectStoreState.getState))).toEqual(correctData);
   });

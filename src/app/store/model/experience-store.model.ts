@@ -1,5 +1,3 @@
-import { SectionDomain } from '../../domain/model/section-domain.model';
 import { BaseStoreModel } from './base-store.model';
 
-export interface ExperienceStoreModel
-  extends BaseStoreModel<SectionDomain.Data, SectionDomain.Metadata> {}
+export interface ExperienceStoreModel extends BaseStoreModel {}

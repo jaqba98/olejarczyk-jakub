@@ -7,7 +7,7 @@ import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
 @State<TechnologyStoreModel>({
   name: 'technology',
   defaults: {
-    sectionData: SectionDomainFinder.findByKind('technology'),
+    sectionData: SectionDomainFinder.findDataByKind('technology'),
   },
 })
 @Injectable()

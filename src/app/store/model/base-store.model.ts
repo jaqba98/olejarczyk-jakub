@@ -1,5 +1,5 @@
-import { BaseDomain } from '../../domain/model/base-domain.model';
+import { SectionDomain } from '../../domain/model/section-domain.model';
 
-export interface BaseStoreModel<TData, TMetadata> {
-  sectionData: BaseDomain.Model<TData, TMetadata>;
+export interface BaseStoreModel {
+  sectionData: SectionDomain.Data;
 }

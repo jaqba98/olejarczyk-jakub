@@ -7,7 +7,7 @@ import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
 @State<FooterStoreModel>({
   name: 'footer',
   defaults: {
-    sectionData: SectionDomainFinder.findByKind('footer'),
+    sectionData: SectionDomainFinder.findDataByKind('footer'),
   },
 })
 @Injectable()

@@ -17,7 +17,7 @@ describe('Technology Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: TechnologyStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('technology'),
+      sectionData: SectionDomainFinder.findDataByKind('technology'),
     };
     expect(await firstValueFrom(store.selectOnce(TechnologyStoreState.getState))).toEqual(
       correctData,

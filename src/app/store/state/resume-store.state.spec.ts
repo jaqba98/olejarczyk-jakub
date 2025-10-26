@@ -17,7 +17,7 @@ describe('Resume Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ResumeStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('resume'),
+      sectionData: SectionDomainFinder.findDataByKind('resume'),
     };
     expect(await firstValueFrom(store.selectOnce(ResumeStoreState.getState))).toEqual(correctData);
   });

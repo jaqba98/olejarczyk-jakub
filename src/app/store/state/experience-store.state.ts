@@ -7,7 +7,7 @@ import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
 @State<ExperienceStoreModel>({
   name: 'experience',
   defaults: {
-    sectionData: SectionDomainFinder.findByKind('experience'),
+    sectionData: SectionDomainFinder.findDataByKind('experience'),
   },
 })
 @Injectable()

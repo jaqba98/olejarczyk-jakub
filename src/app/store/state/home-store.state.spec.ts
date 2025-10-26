@@ -17,7 +17,7 @@ describe('Home Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: HomeStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('home'),
+      sectionData: SectionDomainFinder.findDataByKind('home'),
     };
     expect(await firstValueFrom(store.selectOnce(HomeStoreState.getState))).toEqual(correctData);
   });

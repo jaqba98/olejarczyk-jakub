@@ -19,7 +19,7 @@ describe('About Me Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: AboutMeStoreModel = {
-      sectionData: SectionDomainFinder.findByKind('aboutMe'),
+      sectionData: SectionDomainFinder.findDataByKind('aboutMe'),
     };
     expect(await firstValueFrom(store.selectOnce(AboutMeStoreState.getState))).toEqual(correctData);
   });

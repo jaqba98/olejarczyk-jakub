@@ -1,4 +1,6 @@
-import { SectionDomain } from '../../domain/model/section-domain.model';
+import { PersonalDomain } from '../../domain/model/personal-domain.model';
 import { BaseStoreModel } from './base-store.model';
 
-export interface NavStoreModel extends BaseStoreModel<SectionDomain.Data, SectionDomain.Metadata> {}
+export interface NavStoreModel extends BaseStoreModel {
+  personalData: PersonalDomain.Data;
+}
