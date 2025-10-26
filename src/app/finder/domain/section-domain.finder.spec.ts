@@ -1,9 +1,11 @@
+import { BaseDomain } from '../../domain/model/base-domain.model';
+import { SectionDomain } from '../../domain/model/section-domain.model';
 import { SectionKindDomainType } from '../../domain/type/kind/section-kind-domain.type';
 import { SectionDomainFinder } from './section-domain.finder';
 
 describe('Section Domain Finder', () => {
   it('Should return the correct data', () => {
-    expect(SectionDomainFinder.findByKind('home')).toEqual({
+    const correctData: BaseDomain.Model<SectionDomain.Data, SectionDomain.Metadata> = {
       data: {
         id: 'home',
         label: 'Home',
@@ -12,11 +14,12 @@ describe('Section Domain Finder', () => {
       metadata: {
         routable: true,
       },
-    });
+    };
+    expect(SectionDomainFinder.findByKind('home')).toEqual(correctData);
   });
 
   it('Should not return the wrong data', () => {
-    expect(SectionDomainFinder.findByKind('home')).not.toEqual({
+    const wrongData: BaseDomain.Model<SectionDomain.Data, SectionDomain.Metadata> = {
       data: {
         id: 'nav',
         label: 'Nav',
@@ -25,7 +28,8 @@ describe('Section Domain Finder', () => {
       metadata: {
         routable: false,
       },
-    });
+    };
+    expect(SectionDomainFinder.findByKind('home')).not.toEqual(wrongData);
   });
 
   it('Should throw an error when kind does not exist', () => {

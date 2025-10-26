@@ -11,7 +11,7 @@ import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
   },
 })
 @Injectable()
-export class AboutMeStateStore {
+export class AboutMeStoreState {
   @Selector()
   static getState(state: AboutMeStoreModel) {
     return state;

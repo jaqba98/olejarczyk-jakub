@@ -1,8 +1,15 @@
+import { BaseDomain } from '../model/base-domain.model';
+import { SectionDomain } from '../model/section-domain.model';
+import { SectionKindDomainType } from '../type/kind/section-kind-domain.type';
 import { sectionDomainConst } from './section-domain.const';
 
 describe('Section Domain Const', () => {
   it('Should return the correct data', () => {
-    expect(sectionDomainConst).toEqual({
+    const correctData: BaseDomain.Type<
+      SectionKindDomainType,
+      SectionDomain.Data,
+      SectionDomain.Metadata
+    > = {
       nav: {
         data: {
           id: 'nav',
@@ -123,6 +130,7 @@ describe('Section Domain Const', () => {
           routable: false,
         },
       },
-    });
+    };
+    expect(sectionDomainConst).toEqual(correctData);
   });
 });
