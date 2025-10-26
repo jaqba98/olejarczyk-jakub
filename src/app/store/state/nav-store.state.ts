@@ -1,15 +1,15 @@
 import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
-import { NavStoreModel } from '../model/nav-store.model';
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { PersonalDomainFinder } from '../../finder/domain/personal-domain.finder';
+import { NavStoreModel } from '../model/store/nav-store.model';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
 
 @State<NavStoreModel>({
   name: 'nav',
   defaults: {
-    sectionData: SectionDomainFinder.findDataByKind('nav'),
-    personalData: PersonalDomainFinder.findData(),
+    ownSectionData: SectionDataBuilder.buildDataForKind('nav'),
+    personalData: PersonalDataBuilder.buildData(),
   },
 })
 @Injectable()

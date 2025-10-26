@@ -3,8 +3,8 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { FooterStoreModel } from '../model/footer-store.model';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { FooterStoreModel } from '../model/store/footer-store.model';
 import { FooterStoreState } from './footer-store.state';
 
 describe('Footer Store State', () => {
@@ -17,7 +17,7 @@ describe('Footer Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: FooterStoreModel = {
-      sectionData: SectionDomainFinder.findDataByKind('footer'),
+      ownSectionData: SectionDataBuilder.buildDataForKind('footer'),
     };
     expect(await firstValueFrom(store.selectOnce(FooterStoreState.getState))).toEqual(correctData);
   });

@@ -1,8 +1,8 @@
 import { personalDomainConst } from '../../domain/const/personal-domain.const';
-import { PersonalDataModel } from '../model/data/personal-data.model';
+import { PersonalDataBuilderModel } from '../model/data/personal-data-builder.model';
 
-export class PersonalDomainFinder {
-  static findData(): PersonalDataModel {
+export class PersonalDataBuilder {
+  static buildData(): PersonalDataBuilderModel {
     const { data } = personalDomainConst;
     const firstNameFirstLetter = data.firstName.at(0);
     const lastNameFirstLetter = data.lastName.at(0);

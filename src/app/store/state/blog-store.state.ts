@@ -1,13 +1,13 @@
 import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
-import { BlogStoreModel } from '../model/blog-store.model';
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
+import { BlogStoreModel } from '../model/store/blog-store.model';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 
 @State<BlogStoreModel>({
   name: 'blog',
   defaults: {
-    sectionData: SectionDomainFinder.findDataByKind('blog'),
+    ownSectionData: SectionDataBuilder.buildDataForKind('blog'),
   },
 })
 @Injectable()

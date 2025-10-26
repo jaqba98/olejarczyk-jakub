@@ -3,9 +3,9 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { ResumeStoreModel } from '../model/resume-store.model';
+import { ResumeStoreModel } from '../model/store/resume-store.model';
 import { ResumeStoreState } from './resume-store.state';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 
 describe('Resume Store State', () => {
   let store: Store;
@@ -17,7 +17,7 @@ describe('Resume Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ResumeStoreModel = {
-      sectionData: SectionDomainFinder.findDataByKind('resume'),
+      ownSectionData: SectionDataBuilder.buildDataForKind('resume'),
     };
     expect(await firstValueFrom(store.selectOnce(ResumeStoreState.getState))).toEqual(correctData);
   });

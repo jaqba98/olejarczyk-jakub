@@ -3,8 +3,8 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { ProjectStoreModel } from '../model/project-store.model';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { ProjectStoreModel } from '../model/store/project-store.model';
 import { ProjectStoreState } from './project-store.state';
 
 describe('Project Store State', () => {
@@ -17,7 +17,7 @@ describe('Project Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ProjectStoreModel = {
-      sectionData: SectionDomainFinder.findDataByKind('project'),
+      ownSectionData: SectionDataBuilder.buildDataForKind('project'),
     };
     expect(await firstValueFrom(store.selectOnce(ProjectStoreState.getState))).toEqual(correctData);
   });

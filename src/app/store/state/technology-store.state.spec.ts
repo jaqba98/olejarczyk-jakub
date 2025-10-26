@@ -3,9 +3,9 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { TechnologyStoreModel } from '../model/technology-store.model';
+import { TechnologyStoreModel } from '../model/store/technology-store.model';
 import { TechnologyStoreState } from './technology-store.state';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 
 describe('Technology Store State', () => {
   let store: Store;
@@ -17,7 +17,7 @@ describe('Technology Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: TechnologyStoreModel = {
-      sectionData: SectionDomainFinder.findDataByKind('technology'),
+      ownSectionData: SectionDataBuilder.buildDataForKind('technology'),
     };
     expect(await firstValueFrom(store.selectOnce(TechnologyStoreState.getState))).toEqual(
       correctData,

@@ -3,9 +3,9 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { SkillStoreModel } from '../model/skill-store.model';
+import { SkillStoreModel } from '../model/store/skill-store.model';
 import { SkillStoreState } from './skill-store.state';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 
 describe('Skill Store State', () => {
   let store: Store;
@@ -17,7 +17,7 @@ describe('Skill Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: SkillStoreModel = {
-      sectionData: SectionDomainFinder.findDataByKind('skill'),
+      ownSectionData: SectionDataBuilder.buildDataForKind('skill'),
     };
     expect(await firstValueFrom(store.selectOnce(SkillStoreState.getState))).toEqual(correctData);
   });

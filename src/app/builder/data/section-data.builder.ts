@@ -1,9 +1,9 @@
 import { sectionDomainConst } from '../../domain/const/section-domain.const';
 import { SectionKindDomainType } from '../../domain/type/kind/section-kind-domain.type';
-import { SectionDataModel } from '../model/data/section-data.model';
+import { SectionDataBuilderModel } from '../model/data/section-data-builder.model';
 
-export class SectionDomainFinder {
-  static findDataByKind(kind: SectionKindDomainType): SectionDataModel {
+export class SectionDataBuilder {
+  static buildDataForKind(kind: SectionKindDomainType): SectionDataBuilderModel {
     if (kind in sectionDomainConst) {
       return sectionDomainConst[kind].data;
     }

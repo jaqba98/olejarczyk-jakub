@@ -3,9 +3,9 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { ExperienceStoreModel } from '../model/experience-store.model';
+import { ExperienceStoreModel } from '../model/store/experience-store.model';
 import { ExperienceStoreState } from './experience-store.state';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 
 describe('Experience Store State', () => {
   let store: Store;
@@ -17,7 +17,7 @@ describe('Experience Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ExperienceStoreModel = {
-      sectionData: SectionDomainFinder.findDataByKind('experience'),
+      ownSectionData: SectionDataBuilder.buildDataForKind('experience'),
     };
     expect(await firstValueFrom(store.selectOnce(ExperienceStoreState.getState))).toEqual(
       correctData,

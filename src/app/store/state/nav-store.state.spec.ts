@@ -3,10 +3,10 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDomainFinder } from '../../finder/domain/section-domain.finder';
-import { NavStoreModel } from '../model/nav-store.model';
+import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { NavStoreModel } from '../model/store/nav-store.model';
 import { NavStoreState } from './nav-store.state';
-import { PersonalDomainFinder } from '../../finder/domain/personal-domain.finder';
+import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
 
 describe('Nav Store State', () => {
   let store: Store;
@@ -18,8 +18,8 @@ describe('Nav Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: NavStoreModel = {
-      sectionData: SectionDomainFinder.findDataByKind('nav'),
-      personalData: PersonalDomainFinder.findData(),
+      ownSectionData: SectionDataBuilder.buildDataForKind('nav'),
+      personalData: PersonalDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(NavStoreState.getState))).toEqual(correctData);
   });
