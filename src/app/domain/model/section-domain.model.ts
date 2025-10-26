@@ -1,0 +1,15 @@
+import { SectionIdDomainType } from '../type/id/section-id-domain.type';
+import { SectionLabelDomainType } from '../type/label/section-label-domain.type';
+import { SectionHrefDomainType } from '../type/href/section-href-domain.type';
+
+export namespace SectionDomain {
+  export interface Data {
+    id: SectionIdDomainType;
+    label: SectionLabelDomainType;
+    href: SectionHrefDomainType;
+  }
+
+  export interface Metadata {
+    routable: boolean;
+  }
+}

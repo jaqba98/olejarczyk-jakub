@@ -1,12 +1,11 @@
-import { BaseDomainModel } from '../model/base/base-domain.model';
-import { SectionDataDomainModel } from '../model/data/section-data-domain.model';
-import { SectionMetadataDomainModel } from '../model/metadata/section-metadata-domain.model';
+import { BaseDomain } from '../model/base-domain.model';
+import { SectionDomain } from '../model/section-domain.model';
 import { SectionKindDomainType } from '../type/kind/section-kind-domain.type';
 
-export const sectionDomainConst: BaseDomainModel<
+export const sectionDomainConst: BaseDomain.Type<
   SectionKindDomainType,
-  SectionDataDomainModel,
-  SectionMetadataDomainModel
+  SectionDomain.Data,
+  SectionDomain.Metadata
 > = {
   nav: {
     data: {
