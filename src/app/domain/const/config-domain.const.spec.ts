@@ -7,6 +7,7 @@ describe('Config Domain Const', () => {
     const correctData: BaseDomain.Model<ConfigDomain.Data, ConfigDomain.Metadata> = {
       data: {
         rightsDescription: 'All rights reserved.',
+        greeting: "Hello, I'm",
       },
       metadata: {},
     };

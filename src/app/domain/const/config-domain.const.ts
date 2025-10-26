@@ -5,6 +5,7 @@ import { ConfigDomain } from '../model/config-domain.model';
 export const configDomainConst: BaseDomain.Model<ConfigDomain.Data, ConfigDomain.Metadata> = {
   data: {
     rightsDescription: 'All rights reserved.',
+    greeting: "Hello, I'm",
   },
   metadata: {},
 };
