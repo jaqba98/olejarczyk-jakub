@@ -6,7 +6,7 @@ import {
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { StoreUtil } from './domain/provider/store-domain.provider';
+import { StoreUtil } from './old/provider/store-domain.provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [

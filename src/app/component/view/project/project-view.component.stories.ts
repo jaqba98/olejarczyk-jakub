@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 
 import { ProjectViewComponent } from './project-view.component';
-import { StoreUtil } from '../../../domain/provider/store-domain.provider';
+import { StoreUtil } from '../../../old/provider/store-domain.provider';
 
 const meta: Meta<ProjectViewComponent> = {
   title: 'component/view/project',

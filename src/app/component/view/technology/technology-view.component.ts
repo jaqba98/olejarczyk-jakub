@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { TechnologyBuilder } from '../../../domain/builder/technology-domain.builder';
+import { TechnologyBuilder } from '../../../old/builder/technology-domain.builder';
 import { SectionBlockComponent } from '../../block/section/section-block.component';
 import { FlexItemUtilComponent } from '../../util/flex-item/flex-item-util.component';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
