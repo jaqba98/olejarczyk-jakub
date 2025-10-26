@@ -19,6 +19,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'nav',
           routable: false,
+          order: 0,
         },
       },
       home: {
@@ -30,6 +31,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'home',
           routable: true,
+          order: 1,
         },
       },
       aboutMe: {
@@ -41,6 +43,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'aboutMe',
           routable: true,
+          order: 2,
         },
       },
       technology: {
@@ -52,6 +55,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'technology',
           routable: true,
+          order: 3,
         },
       },
       skill: {
@@ -63,6 +67,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'skill',
           routable: true,
+          order: 4,
         },
       },
       experience: {
@@ -74,6 +79,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'experience',
           routable: true,
+          order: 5,
         },
       },
       resume: {
@@ -85,6 +91,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'resume',
           routable: true,
+          order: 6,
         },
       },
       education: {
@@ -96,6 +103,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'education',
           routable: true,
+          order: 7,
         },
       },
       project: {
@@ -107,6 +115,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'project',
           routable: true,
+          order: 8,
         },
       },
       blog: {
@@ -118,6 +127,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'blog',
           routable: true,
+          order: 9,
         },
       },
       contact: {
@@ -129,6 +139,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'contact',
           routable: true,
+          order: 10,
         },
       },
       footer: {
@@ -140,6 +151,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'footer',
           routable: false,
+          order: 11,
         },
       },
     };

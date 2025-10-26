@@ -16,6 +16,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'nav',
       routable: false,
+      order: 0,
     },
   },
   home: {
@@ -27,6 +28,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'home',
       routable: true,
+      order: 1,
     },
   },
   aboutMe: {
@@ -38,6 +40,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'aboutMe',
       routable: true,
+      order: 2,
     },
   },
   technology: {
@@ -49,6 +52,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'technology',
       routable: true,
+      order: 3,
     },
   },
   skill: {
@@ -60,6 +64,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'skill',
       routable: true,
+      order: 4,
     },
   },
   experience: {
@@ -71,6 +76,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'experience',
       routable: true,
+      order: 5,
     },
   },
   resume: {
@@ -82,6 +88,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'resume',
       routable: true,
+      order: 6,
     },
   },
   education: {
@@ -93,6 +100,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'education',
       routable: true,
+      order: 7,
     },
   },
   project: {
@@ -104,6 +112,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'project',
       routable: true,
+      order: 8,
     },
   },
   blog: {
@@ -115,6 +124,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'blog',
       routable: true,
+      order: 9,
     },
   },
   contact: {
@@ -126,6 +136,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'contact',
       routable: true,
+      order: 10,
     },
   },
   footer: {
@@ -137,6 +148,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'footer',
       routable: false,
+      order: 11,
     },
   },
 };

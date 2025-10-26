@@ -13,5 +13,6 @@ export namespace SectionDomain {
   export interface Metadata {
     kind: SectionKindDomainType;
     routable: boolean;
+    order: number;
   }
 }

@@ -13,6 +13,7 @@ export class SectionDataBuilder {
   static buildDataForRoutableSections(): SectionDataBuilderModel[] {
     return Object.values(sectionDomainConst)
       .filter((sectionDomain) => sectionDomain.metadata.routable)
+      .sort((prev, next) => prev.metadata.order - next.metadata.order)
       .map((sectionDomain) => sectionDomain.data);
   }
 }
