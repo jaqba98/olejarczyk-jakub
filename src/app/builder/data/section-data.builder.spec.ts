@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import { sectionDomainConst } from '../../domain/const/section-domain.const';
 import { SectionKindDomainType } from '../../domain/type/kind/section-kind-domain.type';
 import { SectionDataBuilderModel } from '../model/data/section-data-builder.model';
@@ -18,5 +20,22 @@ describe('Section Data Builder', () => {
     expect(() => SectionDataBuilder.buildDataForKind(<SectionKindDomainType>'hello')).toThrow(
       'The hello does not exist in the sectionDomainConst!',
     );
+  });
+
+  it('Should return only routable sections', () => {
+    const inputRoutableSections = SectionDataBuilder.buildDataForRoutableSections();
+    const resultRoutableSections: SectionDataBuilderModel[] = [
+      sectionDomainConst.home.data,
+      sectionDomainConst.aboutMe.data,
+      sectionDomainConst.technology.data,
+      sectionDomainConst.skill.data,
+      sectionDomainConst.experience.data,
+      sectionDomainConst.resume.data,
+      sectionDomainConst.education.data,
+      sectionDomainConst.project.data,
+      sectionDomainConst.blog.data,
+      sectionDomainConst.contact.data,
+    ];
+    expect(_.isEqual(inputRoutableSections, resultRoutableSections)).toBeTruthy();
   });
 });

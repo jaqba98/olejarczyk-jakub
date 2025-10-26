@@ -9,4 +9,10 @@ export class SectionDataBuilder {
     }
     throw new Error(`The ${kind} does not exist in the sectionDomainConst!`);
   }
+
+  static buildDataForRoutableSections(): SectionDataBuilderModel[] {
+    return Object.values(sectionDomainConst)
+      .filter((sectionDomain) => sectionDomain.metadata.routable)
+      .map((sectionDomain) => sectionDomain.data);
+  }
 }

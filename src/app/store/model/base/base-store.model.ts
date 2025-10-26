@@ -2,4 +2,5 @@ import { SectionDataBuilderModel } from '../../../builder/model/data/section-dat
 
 export interface BaseStoreModel {
   ownSectionData: SectionDataBuilderModel;
+  routableSections: SectionDataBuilderModel[];
 }

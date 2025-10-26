@@ -10,6 +10,7 @@ import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
   defaults: {
     ownSectionData: SectionDataBuilder.buildDataForKind('nav'),
     personalData: PersonalDataBuilder.buildData(),
+    routableSections: SectionDataBuilder.buildDataForRoutableSections(),
   },
 })
 @Injectable()

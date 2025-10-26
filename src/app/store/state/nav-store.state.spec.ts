@@ -20,6 +20,7 @@ describe('Nav Store State', () => {
     const correctData: NavStoreModel = {
       ownSectionData: SectionDataBuilder.buildDataForKind('nav'),
       personalData: PersonalDataBuilder.buildData(),
+      routableSections: SectionDataBuilder.buildDataForRoutableSections(),
     };
     expect(await firstValueFrom(store.selectOnce(NavStoreState.getState))).toEqual(correctData);
   });
