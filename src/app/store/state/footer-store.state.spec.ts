@@ -7,6 +7,7 @@ import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { FooterStoreModel } from '../model/store/footer-store.model';
 import { FooterStoreState } from './footer-store.state';
 import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
+import { ConfigDataBuilder } from '../../builder/data/config-data.builder';
 
 describe('Footer Store State', () => {
   let store: Store;
@@ -20,6 +21,7 @@ describe('Footer Store State', () => {
     const correctData: FooterStoreModel = {
       ownSectionData: SectionDataBuilder.buildDataForKind('footer'),
       personalData: PersonalDataBuilder.buildData(),
+      configData: ConfigDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(FooterStoreState.getState))).toEqual(correctData);
   });
