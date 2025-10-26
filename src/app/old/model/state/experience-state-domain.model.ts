@@ -1,5 +1,5 @@
 import { EmploymentTypeDomainType } from '../../type/type/employment-type-domain.type';
-import { ExperienceTitleDomainType } from '../../type/title/experience-title-domain.type';
+import { ExperienceTitleDomainType } from '../../../domain/type/title/experience-title-domain.type';
 import { LocationTypeDomainType } from '../../type/type/location-type-domain.type';
 import { CompanyIdDomainType } from '../../../data/type/id/company-id-data.type';
 import { TechnologyIdDomainType } from '../../../data/type/id/technology-id-data.type';

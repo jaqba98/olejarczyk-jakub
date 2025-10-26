@@ -8,6 +8,7 @@ describe('Personal Domain Const', () => {
       data: {
         firstName: 'Jakub',
         lastName: 'Olejarczyk',
+        experienceTitles: ['Full Stack Developer', 'Integration Engineer'],
       },
       metadata: {},
     };
