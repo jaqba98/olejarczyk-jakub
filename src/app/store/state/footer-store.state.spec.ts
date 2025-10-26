@@ -6,6 +6,7 @@ import { firstValueFrom } from 'rxjs';
 import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { FooterStoreModel } from '../model/store/footer-store.model';
 import { FooterStoreState } from './footer-store.state';
+import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
 
 describe('Footer Store State', () => {
   let store: Store;
@@ -18,6 +19,7 @@ describe('Footer Store State', () => {
   it('Should return the correct data', async () => {
     const correctData: FooterStoreModel = {
       ownSectionData: SectionDataBuilder.buildDataForKind('footer'),
+      personalData: PersonalDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(FooterStoreState.getState))).toEqual(correctData);
   });
