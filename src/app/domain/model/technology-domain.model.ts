@@ -5,13 +5,13 @@ import { TechnologyNameDomainType } from '../type/name/technology-name-domain.ty
 
 export namespace TechnologyDomain {
   export interface Data {
-    kind: TechnologyKindDomainType;
     name: TechnologyNameDomainType;
     level: TechnologyLevelDomainType;
     svg: SvgModel;
   }
 
   export interface Metadata {
+    kind: TechnologyKindDomainType;
     order: number;
   }
 }

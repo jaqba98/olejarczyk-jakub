@@ -5,13 +5,13 @@ import { CountryNameDomainType } from '../type/name/country-name-domain.type';
 
 export namespace CompanyDomain {
   export interface Data {
-    kind: CompanyKindDomainType;
     name: CompanyNameDomainType;
     city: CityNameDomainType;
     country: CountryNameDomainType;
   }
 
   export interface Metadata {
+    kind: CompanyKindDomainType;
     order: number;
   }
 }

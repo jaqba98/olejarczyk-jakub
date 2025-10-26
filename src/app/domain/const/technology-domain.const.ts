@@ -10,397 +10,397 @@ export const technologyDomainConst: BaseDomain.Type<
 > = {
   html: {
     data: {
-      kind: 'html',
       name: 'HTML',
       level: 'beginner',
       svg: SvgConst.html,
     },
     metadata: {
+      kind: 'html',
       order: 0,
     },
   },
   css: {
     data: {
-      kind: 'css',
       name: 'CSS',
       level: 'beginner',
       svg: SvgConst.css,
     },
     metadata: {
+      kind: 'css',
       order: 1,
     },
   },
   sass: {
     data: {
-      kind: 'sass',
       name: 'Sass',
       level: 'beginner',
       svg: SvgConst.sass,
     },
     metadata: {
+      kind: 'sass',
       order: 2,
     },
   },
   javascript: {
     data: {
-      kind: 'javascript',
       name: 'JavaScript',
       level: 'beginner',
       svg: SvgConst.javascript,
     },
     metadata: {
+      kind: 'javascript',
       order: 3,
     },
   },
   typescript: {
     data: {
-      kind: 'typescript',
       name: 'TypeScript',
       level: 'beginner',
       svg: SvgConst.typescript,
     },
     metadata: {
+      kind: 'typescript',
       order: 4,
     },
   },
   python: {
     data: {
-      kind: 'python',
       name: 'Python',
       level: 'beginner',
       svg: SvgConst.python,
     },
     metadata: {
+      kind: 'python',
       order: 5,
     },
   },
   angular: {
     data: {
-      kind: 'angular',
       name: 'Angular',
       level: 'beginner',
       svg: SvgConst.angular,
     },
     metadata: {
+      kind: 'angular',
       order: 6,
     },
   },
   rxjs: {
     data: {
-      kind: 'rxjs',
       name: 'RxJS',
       level: 'beginner',
       svg: SvgConst.rxjs,
     },
     metadata: {
+      kind: 'rxjs',
       order: 7,
     },
   },
   storybook: {
     data: {
-      kind: 'storybook',
       name: 'Storybook',
       level: 'beginner',
       svg: SvgConst.storybook,
     },
     metadata: {
+      kind: 'storybook',
       order: 8,
     },
   },
   primeng: {
     data: {
-      kind: 'primeng',
       name: 'PrimeNG',
       level: 'beginner',
       svg: SvgConst.primeng,
     },
     metadata: {
+      kind: 'primeng',
       order: 9,
     },
   },
   numpy: {
     data: {
-      kind: 'numpy',
       name: 'NumPy',
       level: 'beginner',
       svg: SvgConst.numpy,
     },
     metadata: {
+      kind: 'numpy',
       order: 10,
     },
   },
   jest: {
     data: {
-      kind: 'jest',
       name: 'Jest',
       level: 'beginner',
       svg: SvgConst.jest,
     },
     metadata: {
+      kind: 'jest',
       order: 11,
     },
   },
   eslint: {
     data: {
-      kind: 'eslint',
       name: 'Eslint',
       level: 'beginner',
       svg: SvgConst.eslint,
     },
     metadata: {
+      kind: 'eslint',
       order: 12,
     },
   },
   prettier: {
     data: {
-      kind: 'prettier',
       name: 'Prettier',
       level: 'beginner',
       svg: SvgConst.prettier,
     },
     metadata: {
+      kind: 'prettier',
       order: 13,
     },
   },
   stylelint: {
     data: {
-      kind: 'stylelint',
       name: 'Stylelint',
       level: 'beginner',
       svg: SvgConst.stylelint,
     },
     metadata: {
+      kind: 'stylelint',
       order: 14,
     },
   },
   postgresql: {
     data: {
-      kind: 'postgresql',
       name: 'PostgreSQL',
       level: 'beginner',
       svg: SvgConst.postgresql,
     },
     metadata: {
+      kind: 'postgresql',
       order: 15,
     },
   },
   microsoftSqlServer: {
     data: {
-      kind: 'microsoftSqlServer',
       name: 'Microsoft SQL Server',
       level: 'beginner',
       svg: SvgConst.microsoftSqlServer,
     },
     metadata: {
+      kind: 'microsoftSqlServer',
       order: 16,
     },
   },
   nginx: {
     data: {
-      kind: 'nginx',
       name: 'NGINX',
       level: 'beginner',
       svg: SvgConst.nginx,
     },
     metadata: {
+      kind: 'nginx',
       order: 17,
     },
   },
   nodejs: {
     data: {
-      kind: 'nodejs',
       name: 'Node.js',
       level: 'beginner',
       svg: SvgConst.nodejs,
     },
     metadata: {
+      kind: 'nodejs',
       order: 18,
     },
   },
   docker: {
     data: {
-      kind: 'docker',
       name: 'Docker',
       level: 'beginner',
       svg: SvgConst.docker,
     },
     metadata: {
+      kind: 'docker',
       order: 19,
     },
   },
   snaplogic: {
     data: {
-      kind: 'snaplogic',
       name: 'SnapLogic',
       level: 'beginner',
       svg: SvgConst.snaplogic,
     },
     metadata: {
+      kind: 'snaplogic',
       order: 20,
     },
   },
   n8n: {
     data: {
-      kind: 'n8n',
       name: 'n8n',
       level: 'beginner',
       svg: SvgConst.n8n,
     },
     metadata: {
+      kind: 'n8n',
       order: 21,
     },
   },
   postman: {
     data: {
-      kind: 'postman',
       name: 'Postman',
       level: 'beginner',
       svg: SvgConst.postman,
     },
     metadata: {
+      kind: 'postman',
       order: 22,
     },
   },
   git: {
     data: {
-      kind: 'git',
       name: 'Git',
       level: 'beginner',
       svg: SvgConst.git,
     },
     metadata: {
+      kind: 'git',
       order: 23,
     },
   },
   github: {
     data: {
-      kind: 'github',
       name: 'GitHub',
       level: 'beginner',
       svg: SvgConst.github,
     },
     metadata: {
+      kind: 'github',
       order: 24,
     },
   },
   gitlab: {
     data: {
-      kind: 'gitlab',
       name: 'GitLab',
       level: 'beginner',
       svg: SvgConst.gitlab,
     },
     metadata: {
+      kind: 'gitlab',
       order: 25,
     },
   },
   npm: {
     data: {
-      kind: 'npm',
       name: 'npm',
       level: 'beginner',
       svg: SvgConst.npm,
     },
     metadata: {
+      kind: 'npm',
       order: 26,
     },
   },
   pnpm: {
     data: {
-      kind: 'pnpm',
       name: 'pnpm',
       level: 'beginner',
       svg: SvgConst.pnpm,
     },
     metadata: {
+      kind: 'pnpm',
       order: 27,
     },
   },
   nx: {
     data: {
-      kind: 'nx',
       name: 'Nx',
       level: 'beginner',
       svg: SvgConst.nx,
     },
     metadata: {
+      kind: 'nx',
       order: 28,
     },
   },
   webstorm: {
     data: {
-      kind: 'webstorm',
       name: 'WebStorm',
       level: 'beginner',
       svg: SvgConst.webstorm,
     },
     metadata: {
+      kind: 'webstorm',
       order: 29,
     },
   },
   eclipse: {
     data: {
-      kind: 'eclipse',
       name: 'Eclipse',
       level: 'beginner',
       svg: SvgConst.eclipse,
     },
     metadata: {
+      kind: 'eclipse',
       order: 30,
     },
   },
   visualStudioCode: {
     data: {
-      kind: 'visualStudioCode',
       name: 'Visual Studio Code',
       level: 'beginner',
       svg: SvgConst.visualStudioCode,
     },
     metadata: {
+      kind: 'visualStudioCode',
       order: 31,
     },
   },
   visualParadigm: {
     data: {
-      kind: 'visualParadigm',
       name: 'Visual Paradigm',
       level: 'beginner',
       svg: SvgConst.visualParadigm,
     },
     metadata: {
+      kind: 'visualParadigm',
       order: 32,
     },
   },
   jira: {
     data: {
-      kind: 'jira',
       name: 'Jira',
       level: 'beginner',
       svg: SvgConst.jira,
     },
     metadata: {
+      kind: 'jira',
       order: 33,
     },
   },
   windows: {
     data: {
-      kind: 'windows',
       name: 'Windows',
       level: 'beginner',
       svg: SvgConst.windows,
     },
     metadata: {
+      kind: 'windows',
       order: 34,
     },
   },
   linux: {
     data: {
-      kind: 'linux',
       name: 'Linux',
       level: 'beginner',
       svg: SvgConst.linux,
     },
     metadata: {
+      kind: 'linux',
       order: 35,
     },
   },

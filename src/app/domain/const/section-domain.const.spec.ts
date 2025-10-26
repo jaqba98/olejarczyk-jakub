@@ -17,6 +17,7 @@ describe('Section Domain Const', () => {
           href: '#nav',
         },
         metadata: {
+          kind: 'nav',
           routable: false,
         },
       },
@@ -27,6 +28,7 @@ describe('Section Domain Const', () => {
           href: '#home',
         },
         metadata: {
+          kind: 'home',
           routable: true,
         },
       },
@@ -37,6 +39,7 @@ describe('Section Domain Const', () => {
           href: '#about-me',
         },
         metadata: {
+          kind: 'aboutMe',
           routable: true,
         },
       },
@@ -47,6 +50,7 @@ describe('Section Domain Const', () => {
           href: '#technology',
         },
         metadata: {
+          kind: 'technology',
           routable: true,
         },
       },
@@ -57,6 +61,7 @@ describe('Section Domain Const', () => {
           href: '#skill',
         },
         metadata: {
+          kind: 'skill',
           routable: true,
         },
       },
@@ -67,6 +72,7 @@ describe('Section Domain Const', () => {
           href: '#experience',
         },
         metadata: {
+          kind: 'experience',
           routable: true,
         },
       },
@@ -77,6 +83,7 @@ describe('Section Domain Const', () => {
           href: '#resume',
         },
         metadata: {
+          kind: 'resume',
           routable: true,
         },
       },
@@ -87,6 +94,7 @@ describe('Section Domain Const', () => {
           href: '#education',
         },
         metadata: {
+          kind: 'education',
           routable: true,
         },
       },
@@ -97,6 +105,7 @@ describe('Section Domain Const', () => {
           href: '#project',
         },
         metadata: {
+          kind: 'project',
           routable: true,
         },
       },
@@ -107,6 +116,7 @@ describe('Section Domain Const', () => {
           href: '#blog',
         },
         metadata: {
+          kind: 'blog',
           routable: true,
         },
       },
@@ -117,6 +127,7 @@ describe('Section Domain Const', () => {
           href: '#contact',
         },
         metadata: {
+          kind: 'contact',
           routable: true,
         },
       },
@@ -127,6 +138,7 @@ describe('Section Domain Const', () => {
           href: '#footer',
         },
         metadata: {
+          kind: 'footer',
           routable: false,
         },
       },

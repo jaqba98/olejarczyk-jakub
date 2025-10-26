@@ -9,23 +9,23 @@ export const companyDomainConst: BaseDomain.Type<
 > = {
   aprSystem: {
     data: {
-      kind: 'aprSystem',
       name: 'APR System',
       city: 'Kielce',
       country: 'Poland',
     },
     metadata: {
+      kind: 'aprSystem',
       order: 0,
     },
   },
   primaris: {
     data: {
-      kind: 'primaris',
       name: 'Primaris',
       city: 'Warsaw',
       country: 'Poland',
     },
     metadata: {
+      kind: 'primaris',
       order: 1,
     },
   },

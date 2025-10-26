@@ -9,190 +9,190 @@ export const technologyCategoryDomainConst: BaseDomain.Type<
 > = {
   markupLanguage: {
     data: {
-      kind: 'markupLanguage',
       name: 'Markup Language',
     },
     metadata: {
+      kind: 'markupLanguage',
       order: 0,
     },
   },
   stylesheetLanguage: {
     data: {
-      kind: 'stylesheetLanguage',
       name: 'Stylesheet Language',
     },
     metadata: {
+      kind: 'stylesheetLanguage',
       order: 1,
     },
   },
   programmingLanguage: {
     data: {
-      kind: 'programmingLanguage',
       name: 'Programming Language',
     },
     metadata: {
+      kind: 'programmingLanguage',
       order: 2,
     },
   },
   framework: {
     data: {
-      kind: 'framework',
       name: 'Framework',
     },
     metadata: {
+      kind: 'framework',
       order: 3,
     },
   },
   library: {
     data: {
-      kind: 'library',
       name: 'Library',
     },
     metadata: {
+      kind: 'library',
       order: 4,
     },
   },
   test: {
     data: {
-      kind: 'test',
       name: 'Test',
     },
     metadata: {
+      kind: 'test',
       order: 5,
     },
   },
   codeQuality: {
     data: {
-      kind: 'codeQuality',
       name: 'Code Quality',
     },
     metadata: {
+      kind: 'codeQuality',
       order: 6,
     },
   },
   database: {
     data: {
-      kind: 'database',
       name: 'Database',
     },
     metadata: {
+      kind: 'database',
       order: 7,
     },
   },
   server: {
     data: {
-      kind: 'server',
       name: 'Server',
     },
     metadata: {
+      kind: 'server',
       order: 8,
     },
   },
   runtime: {
     data: {
-      kind: 'runtime',
       name: 'Runtime',
     },
     metadata: {
+      kind: 'runtime',
       order: 9,
     },
   },
   containerization: {
     data: {
-      kind: 'containerization',
       name: 'Containerization',
     },
     metadata: {
+      kind: 'containerization',
       order: 10,
     },
   },
   integrationPlatform: {
     data: {
-      kind: 'integrationPlatform',
       name: 'Integration Platform',
     },
     metadata: {
+      kind: 'integrationPlatform',
       order: 11,
     },
   },
   api: {
     data: {
-      kind: 'api',
       name: 'API',
     },
     metadata: {
+      kind: 'api',
       order: 12,
     },
   },
   versionControlSystem: {
     data: {
-      kind: 'versionControlSystem',
       name: 'Version Control System',
     },
     metadata: {
+      kind: 'versionControlSystem',
       order: 13,
     },
   },
   packageManager: {
     data: {
-      kind: 'packageManager',
       name: 'Package Manager',
     },
     metadata: {
+      kind: 'packageManager',
       order: 14,
     },
   },
   monorepo: {
     data: {
-      kind: 'monorepo',
       name: 'Monorepo',
     },
     metadata: {
+      kind: 'monorepo',
       order: 15,
     },
   },
   ide: {
     data: {
-      kind: 'ide',
       name: 'IDE',
     },
     metadata: {
+      kind: 'ide',
       order: 16,
     },
   },
   editor: {
     data: {
-      kind: 'editor',
       name: 'Editor',
     },
     metadata: {
+      kind: 'editor',
       order: 17,
     },
   },
   diagram: {
     data: {
-      kind: 'diagram',
       name: 'Diagram',
     },
     metadata: {
+      kind: 'diagram',
       order: 18,
     },
   },
   projectManagement: {
     data: {
-      kind: 'projectManagement',
       name: 'Project Management',
     },
     metadata: {
+      kind: 'projectManagement',
       order: 19,
     },
   },
   operatingSystem: {
     data: {
-      kind: 'operatingSystem',
       name: 'Operating System',
     },
     metadata: {
+      kind: 'operatingSystem',
       order: 20,
     },
   },

@@ -14,6 +14,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#nav',
     },
     metadata: {
+      kind: 'nav',
       routable: false,
     },
   },
@@ -24,6 +25,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#home',
     },
     metadata: {
+      kind: 'home',
       routable: true,
     },
   },
@@ -34,6 +36,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#about-me',
     },
     metadata: {
+      kind: 'aboutMe',
       routable: true,
     },
   },
@@ -44,6 +47,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#technology',
     },
     metadata: {
+      kind: 'technology',
       routable: true,
     },
   },
@@ -54,6 +58,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#skill',
     },
     metadata: {
+      kind: 'skill',
       routable: true,
     },
   },
@@ -64,6 +69,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#experience',
     },
     metadata: {
+      kind: 'experience',
       routable: true,
     },
   },
@@ -74,6 +80,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#resume',
     },
     metadata: {
+      kind: 'resume',
       routable: true,
     },
   },
@@ -84,6 +91,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#education',
     },
     metadata: {
+      kind: 'education',
       routable: true,
     },
   },
@@ -94,6 +102,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#project',
     },
     metadata: {
+      kind: 'project',
       routable: true,
     },
   },
@@ -104,6 +113,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#blog',
     },
     metadata: {
+      kind: 'blog',
       routable: true,
     },
   },
@@ -114,6 +124,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#contact',
     },
     metadata: {
+      kind: 'contact',
       routable: true,
     },
   },
@@ -124,6 +135,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#footer',
     },
     metadata: {
+      kind: 'footer',
       routable: false,
     },
   },

@@ -3,11 +3,11 @@ import { TechnologyCategoryNameDomainType } from '../type/name/technology-catego
 
 export namespace TechnologyCategoryDomain {
   export interface Data {
-    kind: TechnologyCategoryKindDomainType;
     name: TechnologyCategoryNameDomainType;
   }
 
   export interface Metadata {
+    kind: TechnologyCategoryKindDomainType;
     order: number;
   }
 }
