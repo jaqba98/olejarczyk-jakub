@@ -4,12 +4,14 @@ import { Injectable } from '@angular/core';
 import { HomeStoreModel } from '../model/store/home-store.model';
 import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
+import { SocialMediaDataBuilder } from '../../builder/data/social-media-data.builder';
 
 @State<HomeStoreModel>({
   name: 'home',
   defaults: {
     ownSectionData: SectionDataBuilder.buildDataForKind('home'),
     personalData: PersonalDataBuilder.buildData(),
+    socialMediaDatas: SocialMediaDataBuilder.buildData(),
   },
 })
 @Injectable()

@@ -1,5 +1,5 @@
 import { SvgConst } from '../../../const/svg.const';
-import { SocialMediaDataStateDomainModel } from '../../model/state/data/social-media-data-state-domain.model';
+import { SocialMediaDataStateDomainModel } from '../../../domain/model/social-media-domain.model';
 import { socialMediaDataDomainConst } from './social-media-data-domain.const';
 
 describe('Social Media Data Domain Const', () => {

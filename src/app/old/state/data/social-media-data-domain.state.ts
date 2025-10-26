@@ -1,7 +1,7 @@
 import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
-import { SocialMediaDataStateDomainModel } from '../../model/state/data/social-media-data-state-domain.model';
+import { SocialMediaDataStateDomainModel } from '../../../domain/model/social-media-domain.model';
 import { StateNameDomainEnum } from '../../enum/state-name-domain.enum';
 import { socialMediaDataDomainConst } from '../../const/data/social-media-data-domain.const';
 

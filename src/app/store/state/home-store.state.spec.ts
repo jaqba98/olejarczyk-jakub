@@ -7,6 +7,7 @@ import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { HomeStoreModel } from '../model/store/home-store.model';
 import { HomeStoreState } from './home-store.state';
 import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
+import { SocialMediaDataBuilder } from '../../builder/data/social-media-data.builder';
 
 describe('Home Store State', () => {
   let store: Store;
@@ -20,6 +21,7 @@ describe('Home Store State', () => {
     const correctData: HomeStoreModel = {
       ownSectionData: SectionDataBuilder.buildDataForKind('home'),
       personalData: PersonalDataBuilder.buildData(),
+      socialMediaDatas: SocialMediaDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(HomeStoreState.getState))).toEqual(correctData);
   });
