@@ -1,4 +1,4 @@
-export type SectionHrefDataType =
+export type SectionHrefDomainType =
   | '#nav'
   | '#home'
   | '#about-me'

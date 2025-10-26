@@ -1,4 +1,4 @@
-export type SectionLabelDataType =
+export type SectionLabelDomainType =
   | 'Nav'
   | 'Home'
   | 'About me'

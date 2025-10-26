@@ -1,4 +1,4 @@
-export type SectionIdDataType =
+export type SectionIdDomainType =
   | 'nav'
   | 'home'
   | 'about-me'
