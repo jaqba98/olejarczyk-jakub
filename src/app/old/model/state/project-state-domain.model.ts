@@ -1,4 +1,4 @@
-import { ImageAssetDomainType } from '../../type/asset/image-asset-domain.type';
+import { ImageAssetDomainType } from '../../../domain/type/asset/image-asset-domain.type';
 import { StatusEntityDomainType } from '../../type/entity/status-entity-domain.type';
 import { ProjectIdDomainType } from '../../type/id/project-id-domain.type';
 import { TechnologyGroupIdDomainType } from '../../../data/type/id/technology-group-id-data.type';

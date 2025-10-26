@@ -6,6 +6,7 @@ export const personalDomainConst: BaseDomain.Model<PersonalDomain.Data, Personal
     firstName: 'Jakub',
     lastName: 'Olejarczyk',
     experienceTitles: ['Full Stack Developer', 'Integration Engineer'],
+    profileImage: 'personal/profile.jpeg',
   },
   metadata: {},
 };
