@@ -4,14 +4,14 @@ import { Injectable } from '@angular/core';
 import { FooterStoreModel } from '../model/store/footer-store.model';
 import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
-import { ConfigDataBuilder } from '../../builder/data/config-data.builder';
+import { FooterDataBuilder } from '../../builder/data/footer-data.builder';
 
 @State<FooterStoreModel>({
   name: 'footer',
   defaults: {
     ownSectionData: SectionDataBuilder.buildDataForKind('footer'),
     personalData: PersonalDataBuilder.buildData(),
-    configData: ConfigDataBuilder.buildData(),
+    footerData: FooterDataBuilder.buildData(),
   },
 })
 @Injectable()
