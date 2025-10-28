@@ -3,11 +3,13 @@ import { Injectable } from '@angular/core';
 
 import { TechnologyStoreModel } from '../model/store/technology-store.model';
 import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { TechnologyDataBuilder } from '../../builder/data/technology-data.builder';
 
 @State<TechnologyStoreModel>({
   name: 'technology',
   defaults: {
     ownSectionData: SectionDataBuilder.buildDataForKind('technology'),
+    technologyData: TechnologyDataBuilder.buildData(),
   },
 })
 @Injectable()

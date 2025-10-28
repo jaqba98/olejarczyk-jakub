@@ -19,6 +19,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'html',
+          categoryKind: 'markupLanguage',
           order: 0,
         },
       },
@@ -30,6 +31,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'css',
+          categoryKind: 'stylesheetLanguage',
           order: 1,
         },
       },
@@ -41,6 +43,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'sass',
+          categoryKind: 'stylesheetLanguage',
           order: 2,
         },
       },
@@ -52,6 +55,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'javascript',
+          categoryKind: 'programmingLanguage',
           order: 3,
         },
       },
@@ -63,6 +67,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'typescript',
+          categoryKind: 'programmingLanguage',
           order: 4,
         },
       },
@@ -74,6 +79,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'python',
+          categoryKind: 'programmingLanguage',
           order: 5,
         },
       },
@@ -85,6 +91,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'angular',
+          categoryKind: 'framework',
           order: 6,
         },
       },
@@ -96,6 +103,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'rxjs',
+          categoryKind: 'library',
           order: 7,
         },
       },
@@ -107,6 +115,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'storybook',
+          categoryKind: 'library',
           order: 8,
         },
       },
@@ -118,6 +127,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'primeng',
+          categoryKind: 'library',
           order: 9,
         },
       },
@@ -129,6 +139,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'numpy',
+          categoryKind: 'library',
           order: 10,
         },
       },
@@ -140,6 +151,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'jest',
+          categoryKind: 'test',
           order: 11,
         },
       },
@@ -151,6 +163,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'eslint',
+          categoryKind: 'codeQuality',
           order: 12,
         },
       },
@@ -162,6 +175,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'prettier',
+          categoryKind: 'codeQuality',
           order: 13,
         },
       },
@@ -173,6 +187,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'stylelint',
+          categoryKind: 'codeQuality',
           order: 14,
         },
       },
@@ -184,6 +199,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'postgresql',
+          categoryKind: 'database',
           order: 15,
         },
       },
@@ -195,6 +211,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'microsoftSqlServer',
+          categoryKind: 'database',
           order: 16,
         },
       },
@@ -206,6 +223,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'nginx',
+          categoryKind: 'server',
           order: 17,
         },
       },
@@ -217,6 +235,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'nodejs',
+          categoryKind: 'runtime',
           order: 18,
         },
       },
@@ -228,6 +247,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'docker',
+          categoryKind: 'containerization',
           order: 19,
         },
       },
@@ -239,6 +259,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'snaplogic',
+          categoryKind: 'integrationPlatform',
           order: 20,
         },
       },
@@ -250,6 +271,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'n8n',
+          categoryKind: 'integrationPlatform',
           order: 21,
         },
       },
@@ -261,6 +283,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'postman',
+          categoryKind: 'api',
           order: 22,
         },
       },
@@ -272,6 +295,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'git',
+          categoryKind: 'versionControlSystem',
           order: 23,
         },
       },
@@ -283,6 +307,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'github',
+          categoryKind: 'versionControlSystem',
           order: 24,
         },
       },
@@ -294,6 +319,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'gitlab',
+          categoryKind: 'versionControlSystem',
           order: 25,
         },
       },
@@ -305,6 +331,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'npm',
+          categoryKind: 'packageManager',
           order: 26,
         },
       },
@@ -316,6 +343,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'pnpm',
+          categoryKind: 'packageManager',
           order: 27,
         },
       },
@@ -327,6 +355,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'nx',
+          categoryKind: 'monorepo',
           order: 28,
         },
       },
@@ -338,6 +367,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'webstorm',
+          categoryKind: 'ide',
           order: 29,
         },
       },
@@ -349,6 +379,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'eclipse',
+          categoryKind: 'ide',
           order: 30,
         },
       },
@@ -360,6 +391,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'visualStudioCode',
+          categoryKind: 'editor',
           order: 31,
         },
       },
@@ -371,6 +403,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'visualParadigm',
+          categoryKind: 'diagram',
           order: 32,
         },
       },
@@ -382,6 +415,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'jira',
+          categoryKind: 'projectManagement',
           order: 33,
         },
       },
@@ -393,6 +427,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'windows',
+          categoryKind: 'operatingSystem',
           order: 34,
         },
       },
@@ -404,6 +439,7 @@ describe('Technology Domain Const', () => {
         },
         metadata: {
           kind: 'linux',
+          categoryKind: 'operatingSystem',
           order: 35,
         },
       },

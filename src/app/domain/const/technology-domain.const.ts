@@ -16,6 +16,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'html',
+      categoryKind: 'markupLanguage',
       order: 0,
     },
   },
@@ -27,6 +28,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'css',
+      categoryKind: 'stylesheetLanguage',
       order: 1,
     },
   },
@@ -38,6 +40,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'sass',
+      categoryKind: 'stylesheetLanguage',
       order: 2,
     },
   },
@@ -49,6 +52,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'javascript',
+      categoryKind: 'programmingLanguage',
       order: 3,
     },
   },
@@ -60,6 +64,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'typescript',
+      categoryKind: 'programmingLanguage',
       order: 4,
     },
   },
@@ -71,6 +76,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'python',
+      categoryKind: 'programmingLanguage',
       order: 5,
     },
   },
@@ -82,6 +88,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'angular',
+      categoryKind: 'framework',
       order: 6,
     },
   },
@@ -93,6 +100,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'rxjs',
+      categoryKind: 'library',
       order: 7,
     },
   },
@@ -104,6 +112,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'storybook',
+      categoryKind: 'library',
       order: 8,
     },
   },
@@ -115,6 +124,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'primeng',
+      categoryKind: 'library',
       order: 9,
     },
   },
@@ -126,6 +136,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'numpy',
+      categoryKind: 'library',
       order: 10,
     },
   },
@@ -137,6 +148,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'jest',
+      categoryKind: 'test',
       order: 11,
     },
   },
@@ -148,6 +160,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'eslint',
+      categoryKind: 'codeQuality',
       order: 12,
     },
   },
@@ -159,6 +172,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'prettier',
+      categoryKind: 'codeQuality',
       order: 13,
     },
   },
@@ -170,6 +184,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'stylelint',
+      categoryKind: 'codeQuality',
       order: 14,
     },
   },
@@ -181,6 +196,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'postgresql',
+      categoryKind: 'database',
       order: 15,
     },
   },
@@ -192,6 +208,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'microsoftSqlServer',
+      categoryKind: 'database',
       order: 16,
     },
   },
@@ -203,6 +220,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'nginx',
+      categoryKind: 'server',
       order: 17,
     },
   },
@@ -214,6 +232,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'nodejs',
+      categoryKind: 'runtime',
       order: 18,
     },
   },
@@ -225,6 +244,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'docker',
+      categoryKind: 'containerization',
       order: 19,
     },
   },
@@ -236,6 +256,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'snaplogic',
+      categoryKind: 'integrationPlatform',
       order: 20,
     },
   },
@@ -247,6 +268,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'n8n',
+      categoryKind: 'integrationPlatform',
       order: 21,
     },
   },
@@ -258,6 +280,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'postman',
+      categoryKind: 'api',
       order: 22,
     },
   },
@@ -269,6 +292,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'git',
+      categoryKind: 'versionControlSystem',
       order: 23,
     },
   },
@@ -280,6 +304,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'github',
+      categoryKind: 'versionControlSystem',
       order: 24,
     },
   },
@@ -291,6 +316,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'gitlab',
+      categoryKind: 'versionControlSystem',
       order: 25,
     },
   },
@@ -302,6 +328,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'npm',
+      categoryKind: 'packageManager',
       order: 26,
     },
   },
@@ -313,6 +340,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'pnpm',
+      categoryKind: 'packageManager',
       order: 27,
     },
   },
@@ -324,6 +352,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'nx',
+      categoryKind: 'monorepo',
       order: 28,
     },
   },
@@ -335,6 +364,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'webstorm',
+      categoryKind: 'ide',
       order: 29,
     },
   },
@@ -346,6 +376,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'eclipse',
+      categoryKind: 'ide',
       order: 30,
     },
   },
@@ -357,6 +388,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'visualStudioCode',
+      categoryKind: 'editor',
       order: 31,
     },
   },
@@ -368,6 +400,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'visualParadigm',
+      categoryKind: 'diagram',
       order: 32,
     },
   },
@@ -379,6 +412,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'jira',
+      categoryKind: 'projectManagement',
       order: 33,
     },
   },
@@ -390,6 +424,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'windows',
+      categoryKind: 'operatingSystem',
       order: 34,
     },
   },
@@ -401,6 +436,7 @@ export const technologyDomainConst: BaseDomain.Type<
     },
     metadata: {
       kind: 'linux',
+      categoryKind: 'operatingSystem',
       order: 35,
     },
   },
