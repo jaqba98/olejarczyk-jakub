@@ -2,7 +2,7 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { StateNameDomainEnum } from '../enum/state-name-domain.enum';
-import { ExperienceStateDomainModel } from '../model/state/experience-state-domain.model';
+import { ExperienceStateDomainModel } from '../../domain/model/experience-domain.model';
 import { experienceDataDomainConst } from '../const/data/experience-data-domain.const';
 
 @State<ExperienceStateDomainModel>({

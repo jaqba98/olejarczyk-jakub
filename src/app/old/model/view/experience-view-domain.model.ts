@@ -1,5 +1,5 @@
 import { CompanyStateModel } from '../state/company-state-domain.model';
-import { ExperienceStateModel } from '../state/experience-state-domain.model';
+import { ExperienceStateModel } from '../../../domain/model/experience-domain.model';
 import { TechnologyCategoryStateModel } from '../state/technology-category-state-domain.model';
 import { TechnologyGroupStateModel } from '../state/technology-group-state-domain.model';
 import { TechnologyStateModel } from '../../../data/const/model/technology-data.model';

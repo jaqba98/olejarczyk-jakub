@@ -1,4 +1,4 @@
-import { ExperienceStateDomainModel } from '../../model/state/experience-state-domain.model';
+import { ExperienceStateDomainModel } from '../../../domain/model/experience-domain.model';
 import { experienceDataDomainConst } from './experience-data-domain.const';
 
 describe('Experience Data Domain Const', () => {

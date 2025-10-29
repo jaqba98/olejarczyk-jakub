@@ -6,6 +6,7 @@ import { firstValueFrom } from 'rxjs';
 import { ExperienceStoreModel } from '../model/store/experience-store.model';
 import { ExperienceStoreState } from './experience-store.state';
 import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { ExperienceDataBuilder } from '../../builder/data/experience-data.builder';
 
 describe('Experience Store State', () => {
   let store: Store;
@@ -18,6 +19,7 @@ describe('Experience Store State', () => {
   it('Should return the correct data', async () => {
     const correctData: ExperienceStoreModel = {
       ownSectionData: SectionDataBuilder.buildDataForKind('experience'),
+      experienceData: ExperienceDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(ExperienceStoreState.getState))).toEqual(
       correctData,
