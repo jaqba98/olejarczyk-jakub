@@ -11,7 +11,6 @@ import { ExperienceStoreState } from '../state/experience-store.state';
 import { ResumeStoreState } from '../state/resume-store.state';
 import { EducationStoreState } from '../state/education-store.state';
 import { ProjectStoreState } from '../state/project-store.state';
-import { BlogStoreState } from '../state/blog-store.state';
 import { ContactStoreState } from '../state/contact-store.state';
 import { FooterStoreState } from '../state/footer-store.state';
 import { AboutMeStoreState } from '../state/about-me-store.state';
@@ -30,7 +29,6 @@ export class StoreProvider {
           ResumeStoreState,
           EducationStoreState,
           ProjectStoreState,
-          BlogStoreState,
           ContactStoreState,
           FooterStoreState,
         ],
