@@ -1,1 +1,1 @@
-export type ImageAssetDomainType = 'none' | 'personal/profile.jpeg';
+export type ImageAssetDomainType = 'none' | 'asset/image/personal/profile.jpeg';
