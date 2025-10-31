@@ -7,6 +7,10 @@ export const personalDomainConst: BaseDomain.Model<PersonalDomain.Data, Personal
     lastName: 'Olejarczyk',
     experienceTitles: ['Full Stack Developer', 'Integration Engineer'],
     profileImage: 'asset/image/personal/profile.jpeg',
+    email: 'jakubolejarczyk98@gmail.com',
+    city: 'Kielce',
+    country: 'Poland',
+    phoneNumber: '501007197',
   },
   metadata: {},
 };

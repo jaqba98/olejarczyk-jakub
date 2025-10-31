@@ -7,7 +7,7 @@ import { socialMediaDomainConst } from '../../domain/const/social-media-domain.c
 describe('Social Media Data Builder', () => {
   it('Should return all social medias', () => {
     const inputSocialMedial = SocialMediaDataBuilder.buildData();
-    const resultSocialMedias: SocialMediaDataBuilderModel[] = [
+    const resultSocialMedias: SocialMediaDataBuilderModel = [
       socialMediaDomainConst.linkedin.data,
       socialMediaDomainConst.github.data,
       socialMediaDomainConst.gitlab.data,
