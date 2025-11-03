@@ -1,4 +1,4 @@
-import { ProjectStateModel } from '../state/project-state-domain.model';
+import { ProjectStateModel } from '../../../domain/model/project-domain.model';
 import { TechnologyCategoryStateModel } from '../state/technology-category-state-domain.model';
 import { TechnologyGroupStateModel } from '../state/technology-group-state-domain.model';
 import { TechnologyStateModel } from '../../../data/const/model/technology-data.model';

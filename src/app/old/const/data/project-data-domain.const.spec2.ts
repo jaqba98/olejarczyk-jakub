@@ -1,4 +1,4 @@
-import { ProjectStateDomainModel } from '../../model/state/project-state-domain.model';
+import { ProjectStateDomainModel } from '../../../domain/model/project-domain.model';
 import { projectDataDomainConst } from './project-data-domain.const';
 
 describe('Project Data Domain Const', () => {

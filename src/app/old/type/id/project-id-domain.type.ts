@@ -1,1 +1,0 @@
-export type ProjectIdDomainType = 'project1' | 'project2' | 'project3';
