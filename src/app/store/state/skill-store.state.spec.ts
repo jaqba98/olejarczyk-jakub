@@ -6,6 +6,7 @@ import { firstValueFrom } from 'rxjs';
 import { SkillStoreModel } from '../model/store/skill-store.model';
 import { SkillStoreState } from './skill-store.state';
 import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { SkillDataBuilder } from '../../builder/data/skill-data.builder';
 
 describe('Skill Store State', () => {
   let store: Store;
@@ -18,6 +19,7 @@ describe('Skill Store State', () => {
   it('Should return the correct data', async () => {
     const correctData: SkillStoreModel = {
       ownSectionData: SectionDataBuilder.buildDataForKind('skill'),
+      skillData: SkillDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(SkillStoreState.getState))).toEqual(correctData);
   });
