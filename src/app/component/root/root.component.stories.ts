@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 
 import { RootComponent } from './root.component';
-import { StoreUtil } from '../../old/provider/store-domain.provider';
+import { StoreProvider } from '../../store/provider/store.provider';
 
 const meta: Meta<RootComponent> = {
   title: 'component/root',
   component: RootComponent,
-  decorators: [...StoreUtil.getStorybookProvide()],
+  decorators: [...StoreProvider.getStorybookProvider()],
   parameters: {
     layout: 'fullscreen',
   },

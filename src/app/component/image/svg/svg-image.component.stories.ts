@@ -255,7 +255,7 @@ export const jira: Story = {
 export const window: Story = {
   args: {
     ...html.args,
-    model: SvgConst.window,
+    model: SvgConst.windows,
   },
 };
 

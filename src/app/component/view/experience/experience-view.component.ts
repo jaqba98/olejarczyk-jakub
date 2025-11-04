@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
 // import { TechnologyDumbComponent } from '../../dumb/technology/technology-dumb.component';
 // import { MarkDumbComponent } from '../../dumb/mark/mark-dumb.component';
 import { DateUtil } from '../../../util/date.util';
-import { ExperienceBuilder } from '../../../old/builder/experience-domain.builder';
 // import { SmallTextComponent } from '../../text/small/small-text.component';
 // import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
 // import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';
@@ -29,16 +28,16 @@ import { ExperienceBuilder } from '../../../old/builder/experience-domain.builde
     // InterspaceUtilComponent,
     // ParagraphTextComponent,
   ],
-  providers: [ExperienceBuilder],
+  providers: [],
 })
 export class ExperienceViewComponent {
   // experienceView$;
 
   constructor(
-    private readonly builder: ExperienceBuilder,
+    // private readonly builder: ExperienceBuilder,
     protected readonly dateUtil: DateUtil,
   ) {
-    this.builder.build().subscribe((state) => console.log(state));
+    // this.builder.build().subscribe((state) => console.log(state));
     // this.experienceView$ = this.builder.build();
   }
 

@@ -6,13 +6,13 @@ import {
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import { StoreUtil } from './old/provider/store-domain.provider';
+import { StoreProvider } from './store/provider/store.provider';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
-    ...StoreUtil.getProvide(),
+    ...StoreProvider.getProvider(),
   ],
 };

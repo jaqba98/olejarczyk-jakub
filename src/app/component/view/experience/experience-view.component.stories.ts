@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 
 import { ExperienceViewComponent } from './experience-view.component';
-import { StoreUtil } from '../../../old/provider/store-domain.provider';
+import { StoreProvider } from '../../../store/provider/store.provider';
 
 const meta: Meta<ExperienceViewComponent> = {
   title: 'component/view/experience',
   component: ExperienceViewComponent,
-  decorators: [...StoreUtil.getStorybookProvide()],
+  decorators: [...StoreProvider.getStorybookProvider()],
 };
 
 export default meta;

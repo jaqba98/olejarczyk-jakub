@@ -5,6 +5,6 @@ import { BaseStoreModel } from '../base/base-store.model';
 
 export interface HomeStoreModel extends BaseStoreModel {
   personalData: PersonalDataBuilderModel;
-  socialMediaDatas: SocialMediaDataBuilderModel[];
+  socialMediaDatas: SocialMediaDataBuilderModel;
   homeData: HomeDataBuilderModel;
 }
