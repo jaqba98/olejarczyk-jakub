@@ -5,13 +5,13 @@ import { SectionLabelDomainType } from '../type/label/section-label-domain.type'
 
 export namespace SectionDomain {
   export interface Data {
+    kind: SectionKindDomainType;
     id: SectionIdDomainType;
     label: SectionLabelDomainType;
     href: SectionHrefDomainType;
   }
 
   export interface Metadata {
-    kind: SectionKindDomainType;
     routable: boolean;
     order: number;
   }
