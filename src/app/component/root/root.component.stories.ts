@@ -6,13 +6,10 @@ import { StoreProvider } from '../../store/provider/store.provider';
 const meta: Meta<RootComponent> = {
   title: 'component/root',
   component: RootComponent,
-  decorators: [...StoreProvider.getStorybookProvider()],
-  parameters: {
-    layout: 'fullscreen',
-  },
+  decorators: StoreProvider.getStorybookProvider(),
 };
 
 export default meta;
 type Story = StoryObj<RootComponent>;
 
-export const Primary: Story = {};
+export const Default: Story = {};
