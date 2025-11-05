@@ -115,18 +115,6 @@ export const sectionDomainConst: BaseDomain.Type<
       order: 8,
     },
   },
-  blog: {
-    data: {
-      id: 'blog',
-      label: 'Blog',
-      href: '#blog',
-    },
-    metadata: {
-      kind: 'blog',
-      routable: true,
-      order: 9,
-    },
-  },
   contact: {
     data: {
       id: 'contact',
@@ -136,7 +124,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'contact',
       routable: true,
-      order: 10,
+      order: 9,
     },
   },
   footer: {
@@ -148,7 +136,7 @@ export const sectionDomainConst: BaseDomain.Type<
     metadata: {
       kind: 'footer',
       routable: false,
-      order: 11,
+      order: 10,
     },
   },
 };

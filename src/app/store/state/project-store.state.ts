@@ -8,7 +8,7 @@ import { ProjectDataBuilder } from '../../builder/data/project-data.builder';
 @State<ProjectStoreModel>({
   name: 'project',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('project'),
+    ownSection: SectionDataBuilder.buildDataForKind('project'),
     projectData: ProjectDataBuilder.buildData(),
   },
 })

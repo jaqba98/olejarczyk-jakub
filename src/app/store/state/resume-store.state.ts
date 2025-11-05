@@ -8,7 +8,7 @@ import { ResumeDataBuilder } from '../../builder/data/resume-data.builder';
 @State<ResumeStoreModel>({
   name: 'resume',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('resume'),
+    ownSection: SectionDataBuilder.buildDataForKind('resume'),
     resumeData: ResumeDataBuilder.buildData(),
   },
 })

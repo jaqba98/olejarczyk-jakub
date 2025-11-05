@@ -1,3 +1,5 @@
 import { SectionDomain } from '../../../domain/model/section-domain.model';
 
-export interface SectionDataBuilderModel extends SectionDomain.Data {}
+export type SectionDataBuilderModel = SectionDomain.Data;
+
+export type SectionsDataBuilderModel = SectionDataBuilderModel[];

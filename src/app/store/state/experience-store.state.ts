@@ -8,7 +8,7 @@ import { ExperienceDataBuilder } from '../../builder/data/experience-data.builde
 @State<ExperienceStoreModel>({
   name: 'experience',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('experience'),
+    ownSection: SectionDataBuilder.buildDataForKind('experience'),
     experienceData: ExperienceDataBuilder.buildData(),
   },
 })

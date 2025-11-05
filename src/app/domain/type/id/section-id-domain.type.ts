@@ -8,6 +8,5 @@ export type SectionIdDomainType =
   | 'resume'
   | 'education'
   | 'project'
-  | 'blog'
   | 'contact'
   | 'footer';

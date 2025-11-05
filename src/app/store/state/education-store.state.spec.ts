@@ -18,7 +18,7 @@ describe('Education Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: EducationStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('education'),
+      ownSection: SectionDataBuilder.buildDataForKind('education'),
       educationData: EducationDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(EducationStoreState.getState))).toEqual(

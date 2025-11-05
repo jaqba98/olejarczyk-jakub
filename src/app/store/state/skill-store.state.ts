@@ -8,7 +8,7 @@ import { SkillDataBuilder } from '../../builder/data/skill-data.builder';
 @State<SkillStoreModel>({
   name: 'skill',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('skill'),
+    ownSection: SectionDataBuilder.buildDataForKind('skill'),
     skillData: SkillDataBuilder.buildData(),
   },
 })

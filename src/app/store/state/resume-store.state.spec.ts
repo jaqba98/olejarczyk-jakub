@@ -18,7 +18,7 @@ describe('Resume Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ResumeStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('resume'),
+      ownSection: SectionDataBuilder.buildDataForKind('resume'),
       resumeData: ResumeDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(ResumeStoreState.getState))).toEqual(correctData);

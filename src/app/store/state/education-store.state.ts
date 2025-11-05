@@ -8,7 +8,7 @@ import { EducationDataBuilder } from '../../builder/data/education-data.builder'
 @State<EducationStoreModel>({
   name: 'education',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('education'),
+    ownSection: SectionDataBuilder.buildDataForKind('education'),
     educationData: EducationDataBuilder.buildData(),
   },
 })

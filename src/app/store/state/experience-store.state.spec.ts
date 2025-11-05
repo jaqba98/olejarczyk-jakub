@@ -18,7 +18,7 @@ describe('Experience Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ExperienceStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('experience'),
+      ownSection: SectionDataBuilder.buildDataForKind('experience'),
       experienceData: ExperienceDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(ExperienceStoreState.getState))).toEqual(

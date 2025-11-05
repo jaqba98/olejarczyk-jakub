@@ -20,7 +20,7 @@ describe('About Me Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: AboutMeStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('aboutMe'),
+      ownSection: SectionDataBuilder.buildDataForKind('aboutMe'),
       aboutMeData: AboutMeDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(AboutMeStoreState.getState))).toEqual(correctData);

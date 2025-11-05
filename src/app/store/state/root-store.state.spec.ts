@@ -3,12 +3,11 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SkillStoreModel } from '../model/store/skill-store.model';
-import { SkillStoreState } from './skill-store.state';
+import { RootStoreModel } from '../model/store/root-store.model';
 import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { SkillDataBuilder } from '../../builder/data/skill-data.builder';
+import { RootStoreState } from './root-store.state';
 
-describe('Skill Store State', () => {
+describe('Root Store State', () => {
   let store: Store;
 
   beforeAll(() => {
@@ -17,10 +16,9 @@ describe('Skill Store State', () => {
   });
 
   it('Should return the correct data', async () => {
-    const correctData: SkillStoreModel = {
-      ownSection: SectionDataBuilder.buildDataForKind('skill'),
-      skillData: SkillDataBuilder.buildData(),
+    const correctData: RootStoreModel = {
+      sections: SectionDataBuilder.buildDataForAllSections(),
     };
-    expect(await firstValueFrom(store.selectOnce(SkillStoreState.getState))).toEqual(correctData);
+    expect(await firstValueFrom(store.selectOnce(RootStoreState.getState))).toEqual(correctData);
   });
 });

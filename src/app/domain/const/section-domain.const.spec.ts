@@ -118,18 +118,6 @@ describe('Section Domain Const', () => {
           order: 8,
         },
       },
-      blog: {
-        data: {
-          id: 'blog',
-          label: 'Blog',
-          href: '#blog',
-        },
-        metadata: {
-          kind: 'blog',
-          routable: true,
-          order: 9,
-        },
-      },
       contact: {
         data: {
           id: 'contact',
@@ -139,7 +127,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'contact',
           routable: true,
-          order: 10,
+          order: 9,
         },
       },
       footer: {
@@ -151,7 +139,7 @@ describe('Section Domain Const', () => {
         metadata: {
           kind: 'footer',
           routable: false,
-          order: 11,
+          order: 10,
         },
       },
     };

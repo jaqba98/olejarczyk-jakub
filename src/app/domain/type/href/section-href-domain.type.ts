@@ -8,6 +8,5 @@ export type SectionHrefDomainType =
   | '#resume'
   | '#education'
   | '#project'
-  | '#blog'
   | '#contact'
   | '#footer';

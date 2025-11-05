@@ -19,7 +19,7 @@ describe('Footer Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: FooterStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('footer'),
+      ownSection: SectionDataBuilder.buildDataForKind('footer'),
       personalData: PersonalDataBuilder.buildData(),
       footerData: FooterDataBuilder.buildData(),
     };

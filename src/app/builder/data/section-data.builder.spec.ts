@@ -2,7 +2,10 @@ import _ from 'lodash';
 
 import { sectionDomainConst } from '../../domain/const/section-domain.const';
 import { SectionKindDomainType } from '../../domain/type/kind/section-kind-domain.type';
-import { SectionDataBuilderModel } from '../model/data/section-data-builder.model';
+import {
+  SectionDataBuilderModel,
+  SectionsDataBuilderModel,
+} from '../model/data/section-data-builder.model';
 import { SectionDataBuilder } from './section-data.builder';
 
 describe('Section Data Builder', () => {
@@ -23,8 +26,8 @@ describe('Section Data Builder', () => {
   });
 
   it('Should return only routable sections', () => {
-    const inputRoutableSections = SectionDataBuilder.buildDataForRoutableSections();
-    const resultRoutableSections: SectionDataBuilderModel[] = [
+    const inputData = SectionDataBuilder.buildDataForRoutableSections();
+    const outputData: SectionsDataBuilderModel = [
       sectionDomainConst.home.data,
       sectionDomainConst.aboutMe.data,
       sectionDomainConst.technology.data,
@@ -33,9 +36,26 @@ describe('Section Data Builder', () => {
       sectionDomainConst.resume.data,
       sectionDomainConst.education.data,
       sectionDomainConst.project.data,
-      sectionDomainConst.blog.data,
       sectionDomainConst.contact.data,
     ];
-    expect(_.isEqual(inputRoutableSections, resultRoutableSections)).toBeTruthy();
+    expect(_.isEqual(inputData, outputData)).toBeTruthy();
+  });
+
+  it('Should return all sections', () => {
+    const inputData = SectionDataBuilder.buildDataForAllSections();
+    const outputData: SectionsDataBuilderModel = [
+      sectionDomainConst.nav.data,
+      sectionDomainConst.home.data,
+      sectionDomainConst.aboutMe.data,
+      sectionDomainConst.technology.data,
+      sectionDomainConst.skill.data,
+      sectionDomainConst.experience.data,
+      sectionDomainConst.resume.data,
+      sectionDomainConst.education.data,
+      sectionDomainConst.project.data,
+      sectionDomainConst.contact.data,
+      sectionDomainConst.footer.data,
+    ];
+    expect(_.isEqual(inputData, outputData)).toBeTruthy();
   });
 });

@@ -10,7 +10,7 @@ import { HomeDataBuilder } from '../../builder/data/home-data.builder';
 @State<HomeStoreModel>({
   name: 'home',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('home'),
+    ownSection: SectionDataBuilder.buildDataForKind('home'),
     personalData: PersonalDataBuilder.buildData(),
     socialMediaDatas: SocialMediaDataBuilder.buildData(),
     homeData: HomeDataBuilder.buildData(),

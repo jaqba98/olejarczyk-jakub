@@ -19,7 +19,7 @@ describe('Contact Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: ContactStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('contact'),
+      ownSection: SectionDataBuilder.buildDataForKind('contact'),
       personalData: PersonalDataBuilder.buildData(),
       socialMediaData: SocialMediaDataBuilder.buildData(),
     };

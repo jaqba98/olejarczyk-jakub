@@ -9,7 +9,7 @@ import { FooterDataBuilder } from '../../builder/data/footer-data.builder';
 @State<FooterStoreModel>({
   name: 'footer',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('footer'),
+    ownSection: SectionDataBuilder.buildDataForKind('footer'),
     personalData: PersonalDataBuilder.buildData(),
     footerData: FooterDataBuilder.buildData(),
   },

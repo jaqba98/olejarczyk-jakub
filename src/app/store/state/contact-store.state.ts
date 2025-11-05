@@ -9,7 +9,7 @@ import { SocialMediaDataBuilder } from '../../builder/data/social-media-data.bui
 @State<ContactStoreModel>({
   name: 'contact',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('contact'),
+    ownSection: SectionDataBuilder.buildDataForKind('contact'),
     personalData: PersonalDataBuilder.buildData(),
     socialMediaData: SocialMediaDataBuilder.buildData(),
   },

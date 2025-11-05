@@ -8,7 +8,7 @@ import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
 @State<NavStoreModel>({
   name: 'nav',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('nav'),
+    ownSection: SectionDataBuilder.buildDataForKind('nav'),
     personalData: PersonalDataBuilder.buildData(),
     routableSections: SectionDataBuilder.buildDataForRoutableSections(),
   },

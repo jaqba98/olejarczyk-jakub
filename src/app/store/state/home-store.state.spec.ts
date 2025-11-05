@@ -20,7 +20,7 @@ describe('Home Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: HomeStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('home'),
+      ownSection: SectionDataBuilder.buildDataForKind('home'),
       personalData: PersonalDataBuilder.buildData(),
       socialMediaDatas: SocialMediaDataBuilder.buildData(),
       homeData: HomeDataBuilder.buildData(),

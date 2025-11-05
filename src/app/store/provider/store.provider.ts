@@ -14,12 +14,14 @@ import { ProjectStoreState } from '../state/project-store.state';
 import { ContactStoreState } from '../state/contact-store.state';
 import { FooterStoreState } from '../state/footer-store.state';
 import { AboutMeStoreState } from '../state/about-me-store.state';
+import { RootStoreState } from '../state/root-store.state';
 
 export class StoreProvider {
   static getProvider() {
     return [
       provideStore(
         [
+          RootStoreState,
           NavStoreState,
           HomeStoreState,
           AboutMeStoreState,

@@ -8,6 +8,5 @@ export type SectionLabelDomainType =
   | 'Resume'
   | 'Education'
   | 'Project'
-  | 'Blog'
   | 'Contact'
   | 'Footer';

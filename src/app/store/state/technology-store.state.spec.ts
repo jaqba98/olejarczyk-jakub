@@ -18,7 +18,7 @@ describe('Technology Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: TechnologyStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('technology'),
+      ownSection: SectionDataBuilder.buildDataForKind('technology'),
       technologyData: TechnologyDataBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(TechnologyStoreState.getState))).toEqual(

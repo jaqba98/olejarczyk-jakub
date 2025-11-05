@@ -18,7 +18,7 @@ describe('Nav Store State', () => {
 
   it('Should return the correct data', async () => {
     const correctData: NavStoreModel = {
-      ownSectionData: SectionDataBuilder.buildDataForKind('nav'),
+      ownSection: SectionDataBuilder.buildDataForKind('nav'),
       personalData: PersonalDataBuilder.buildData(),
       routableSections: SectionDataBuilder.buildDataForRoutableSections(),
     };

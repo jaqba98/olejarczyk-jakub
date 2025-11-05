@@ -8,6 +8,5 @@ export type SectionKindDomainType =
   | 'resume'
   | 'education'
   | 'project'
-  | 'blog'
   | 'contact'
   | 'footer';

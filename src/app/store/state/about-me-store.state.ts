@@ -8,7 +8,7 @@ import { AboutMeDataBuilder } from '../../builder/data/about-me-data.builder';
 @State<AboutMeStoreModel>({
   name: 'aboutMe',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('aboutMe'),
+    ownSection: SectionDataBuilder.buildDataForKind('aboutMe'),
     aboutMeData: AboutMeDataBuilder.buildData(),
   },
 })

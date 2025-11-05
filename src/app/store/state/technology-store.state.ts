@@ -8,7 +8,7 @@ import { TechnologyDataBuilder } from '../../builder/data/technology-data.builde
 @State<TechnologyStoreModel>({
   name: 'technology',
   defaults: {
-    ownSectionData: SectionDataBuilder.buildDataForKind('technology'),
+    ownSection: SectionDataBuilder.buildDataForKind('technology'),
     technologyData: TechnologyDataBuilder.buildData(),
   },
 })
