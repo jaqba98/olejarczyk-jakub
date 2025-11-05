@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { BaseSectionComponent } from '../base-section/base-section.component';
+import { EducationStoreState } from '../../../store/state/education-store.state';
 
 @Component({
   selector: 'education-section',
   templateUrl: './education-section.component.html',
-  imports: [BaseSectionComponent],
+  imports: [CommonModule],
 })
 @SectionDecorator('education')
-export class EducationSectionComponent {}
+export class EducationSectionComponent {
+  state$;
+
+  constructor(private readonly store: Store) {
+    this.state$ = this.store.selectOnce(EducationStoreState.getState);
+  }
+}
