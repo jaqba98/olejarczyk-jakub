@@ -3,12 +3,12 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { HomeStoreModel } from '../model/store/home-store.model';
 import { HomeStoreState } from './home-store.state';
-import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
-import { SocialMediaDataBuilder } from '../../builder/data/social-media-data.builder';
-import { HomeDataBuilder } from '../../builder/data/home-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { PersonalBuilder } from '../../builder/service/personal.builder';
+import { SocialMediaBuilder } from '../../builder/service/social-media.builder';
+import { HomeBuilder } from '../../builder/service/home.builder';
 
 describe('Home Store State', () => {
   let store: Store;
@@ -19,12 +19,12 @@ describe('Home Store State', () => {
   });
 
   it('Should return the correct data', async () => {
-    const correctData: HomeStoreModel = {
-      ownSection: SectionDataBuilder.buildDataForKind('home'),
-      personalData: PersonalDataBuilder.buildData(),
-      socialMediaDatas: SocialMediaDataBuilder.buildData(),
-      homeData: HomeDataBuilder.buildData(),
+    const result: HomeStoreModel = {
+      sectionBuilder: SectionBuilder.buildDataForKind('home'),
+      personalBuilder: PersonalBuilder.buildData(),
+      socialMediaBuilder: SocialMediaBuilder.buildData(),
+      homeBuilder: HomeBuilder.buildData(),
     };
-    expect(await firstValueFrom(store.selectOnce(HomeStoreState.getState))).toEqual(correctData);
+    expect(await firstValueFrom(store.selectOnce(HomeStoreState.getState))).toEqual(result);
   });
 });

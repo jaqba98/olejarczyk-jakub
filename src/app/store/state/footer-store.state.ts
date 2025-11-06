@@ -2,16 +2,16 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { FooterStoreModel } from '../model/store/footer-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
-import { FooterDataBuilder } from '../../builder/data/footer-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { PersonalBuilder } from '../../builder/service/personal.builder';
+import { FooterBuilder } from '../../builder/service/footer.builder';
 
 @State<FooterStoreModel>({
   name: 'footer',
   defaults: {
-    ownSection: SectionDataBuilder.buildDataForKind('footer'),
-    personalData: PersonalDataBuilder.buildData(),
-    footerData: FooterDataBuilder.buildData(),
+    sectionBuilder: SectionBuilder.buildDataForKind('footer'),
+    personalBuilder: PersonalBuilder.buildData(),
+    footerBuilder: FooterBuilder.buildData(),
   },
 })
 @Injectable()

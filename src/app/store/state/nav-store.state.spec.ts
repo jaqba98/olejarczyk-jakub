@@ -3,10 +3,10 @@ import { StoreProvider } from '../provider/store.provider';
 import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { NavStoreModel } from '../model/store/nav-store.model';
 import { NavStoreState } from './nav-store.state';
-import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { PersonalBuilder } from '../../builder/service/personal.builder';
 
 describe('Nav Store State', () => {
   let store: Store;
@@ -17,11 +17,11 @@ describe('Nav Store State', () => {
   });
 
   it('Should return the correct data', async () => {
-    const correctData: NavStoreModel = {
-      ownSection: SectionDataBuilder.buildDataForKind('nav'),
-      personalData: PersonalDataBuilder.buildData(),
-      routableSections: SectionDataBuilder.buildDataForRoutableSections(),
+    const result: NavStoreModel = {
+      sectionBuilder: SectionBuilder.buildDataForKind('nav'),
+      personalBuilder: PersonalBuilder.buildData(),
+      sectionsBuilder: SectionBuilder.buildDataForRoutableSections(),
     };
-    expect(await firstValueFrom(store.selectOnce(NavStoreState.getState))).toEqual(correctData);
+    expect(await firstValueFrom(store.selectOnce(NavStoreState.getState))).toEqual(result);
   });
 });

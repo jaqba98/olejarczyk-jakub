@@ -1,6 +1,6 @@
-import { ProjectDataBuilderModel } from '../../../builder/model/data/project-data-builder.model';
+import { ProjectBuilderModel } from '../../../builder/model/builder/project-builder.model';
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface ProjectStoreModel extends BaseStoreModel {
-  projectData: ProjectDataBuilderModel;
+  projectBuilder: ProjectBuilderModel;
 }

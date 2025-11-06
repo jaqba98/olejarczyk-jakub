@@ -29,6 +29,6 @@ export class RootComponent {
   constructor(private readonly store: Store) {
     this.sections$ = this.store
       .selectOnce(RootStoreState.getState)
-      .pipe(map((state) => state.sections.map((section) => getSection(section.kind))));
+      .pipe(map((state) => state.sectionsBuilder.map((section) => getSection(section.data.kind))));
   }
 }

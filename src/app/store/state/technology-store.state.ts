@@ -2,14 +2,14 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { TechnologyStoreModel } from '../model/store/technology-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { TechnologyDataBuilder } from '../../builder/data/technology-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { TechnologyBuilder } from '../../builder/service/technology.builder';
 
 @State<TechnologyStoreModel>({
   name: 'technology',
   defaults: {
-    ownSection: SectionDataBuilder.buildDataForKind('technology'),
-    technologyData: TechnologyDataBuilder.buildData(),
+    sectionBuilder: SectionBuilder.buildDataForKind('technology'),
+    technologyBuilder: TechnologyBuilder.buildData(),
   },
 })
 @Injectable()

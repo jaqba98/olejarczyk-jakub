@@ -2,14 +2,14 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { AboutMeStoreModel } from '../model/store/about-me-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { AboutMeDataBuilder } from '../../builder/data/about-me-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { AboutMeBuilder } from '../../builder/service/about-me.builder';
 
 @State<AboutMeStoreModel>({
   name: 'aboutMe',
   defaults: {
-    ownSection: SectionDataBuilder.buildDataForKind('aboutMe'),
-    aboutMeData: AboutMeDataBuilder.buildData(),
+    sectionBuilder: SectionBuilder.buildDataForKind('aboutMe'),
+    aboutMeBuilder: AboutMeBuilder.buildData(),
   },
 })
 @Injectable()

@@ -5,9 +5,9 @@ import { firstValueFrom } from 'rxjs';
 
 import { ContactStoreModel } from '../model/store/contact-store.model';
 import { ContactStoreState } from './contact-store.state';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
-import { SocialMediaDataBuilder } from '../../builder/data/social-media-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { PersonalBuilder } from '../../builder/service/personal.builder';
+import { SocialMediaBuilder } from '../../builder/service/social-media.builder';
 
 describe('Contact Store State', () => {
   let store: Store;
@@ -18,11 +18,11 @@ describe('Contact Store State', () => {
   });
 
   it('Should return the correct data', async () => {
-    const correctData: ContactStoreModel = {
-      ownSection: SectionDataBuilder.buildDataForKind('contact'),
-      personalData: PersonalDataBuilder.buildData(),
-      socialMediaData: SocialMediaDataBuilder.buildData(),
+    const result: ContactStoreModel = {
+      sectionBuilder: SectionBuilder.buildDataForKind('contact'),
+      personalBuilder: PersonalBuilder.buildData(),
+      socialMediaBuilder: SocialMediaBuilder.buildData(),
     };
-    expect(await firstValueFrom(store.selectOnce(ContactStoreState.getState))).toEqual(correctData);
+    expect(await firstValueFrom(store.selectOnce(ContactStoreState.getState))).toEqual(result);
   });
 });

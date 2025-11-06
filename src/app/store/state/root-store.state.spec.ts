@@ -4,8 +4,8 @@ import { Store } from '@ngxs/store';
 import { firstValueFrom } from 'rxjs';
 
 import { RootStoreModel } from '../model/store/root-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
 import { RootStoreState } from './root-store.state';
+import { SectionBuilder } from '../../builder/service/section.builder';
 
 describe('Root Store State', () => {
   let store: Store;
@@ -16,9 +16,9 @@ describe('Root Store State', () => {
   });
 
   it('Should return the correct data', async () => {
-    const correctData: RootStoreModel = {
-      sections: SectionDataBuilder.buildDataForAllSections(),
+    const result: RootStoreModel = {
+      sectionsBuilder: SectionBuilder.buildDataForAllSections(),
     };
-    expect(await firstValueFrom(store.selectOnce(RootStoreState.getState))).toEqual(correctData);
+    expect(await firstValueFrom(store.selectOnce(RootStoreState.getState))).toEqual(result);
   });
 });

@@ -5,8 +5,8 @@ import { firstValueFrom } from 'rxjs';
 
 import { TechnologyStoreModel } from '../model/store/technology-store.model';
 import { TechnologyStoreState } from './technology-store.state';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { TechnologyDataBuilder } from '../../builder/data/technology-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { TechnologyBuilder } from '../../builder/service/technology.builder';
 
 describe('Technology Store State', () => {
   let store: Store;
@@ -17,12 +17,10 @@ describe('Technology Store State', () => {
   });
 
   it('Should return the correct data', async () => {
-    const correctData: TechnologyStoreModel = {
-      ownSection: SectionDataBuilder.buildDataForKind('technology'),
-      technologyData: TechnologyDataBuilder.buildData(),
+    const result: TechnologyStoreModel = {
+      sectionBuilder: SectionBuilder.buildDataForKind('technology'),
+      technologyBuilder: TechnologyBuilder.buildData(),
     };
-    expect(await firstValueFrom(store.selectOnce(TechnologyStoreState.getState))).toEqual(
-      correctData,
-    );
+    expect(await firstValueFrom(store.selectOnce(TechnologyStoreState.getState))).toEqual(result);
   });
 });

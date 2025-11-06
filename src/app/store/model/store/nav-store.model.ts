@@ -1,8 +1,8 @@
-import { PersonalDataBuilderModel } from '../../../builder/model/data/personal-data-builder.model';
-import { SectionDataBuilderModel } from '../../../builder/model/data/section-data-builder.model';
+import { PersonalBuilderModel } from '../../../builder/model/builder/personal-builder.model';
+import { SectionsBuilderModel } from '../../../builder/model/builder/section-builder.model';
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface NavStoreModel extends BaseStoreModel {
-  personalData: PersonalDataBuilderModel;
-  routableSections: SectionDataBuilderModel[];
+  personalBuilder: PersonalBuilderModel;
+  sectionsBuilder: SectionsBuilderModel;
 }

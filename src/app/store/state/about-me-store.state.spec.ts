@@ -5,8 +5,8 @@ import { firstValueFrom } from 'rxjs';
 
 import { AboutMeStoreModel } from '../model/store/about-me-store.model';
 import { AboutMeStoreState } from './about-me-store.state';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { AboutMeDataBuilder } from '../../builder/data/about-me-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { AboutMeBuilder } from '../../builder/service/about-me.builder';
 
 describe('About Me Store State', () => {
   let store: Store;
@@ -19,10 +19,10 @@ describe('About Me Store State', () => {
   afterAll(() => {});
 
   it('Should return the correct data', async () => {
-    const correctData: AboutMeStoreModel = {
-      ownSection: SectionDataBuilder.buildDataForKind('aboutMe'),
-      aboutMeData: AboutMeDataBuilder.buildData(),
+    const result: AboutMeStoreModel = {
+      sectionBuilder: SectionBuilder.buildDataForKind('aboutMe'),
+      aboutMeBuilder: AboutMeBuilder.buildData(),
     };
-    expect(await firstValueFrom(store.selectOnce(AboutMeStoreState.getState))).toEqual(correctData);
+    expect(await firstValueFrom(store.selectOnce(AboutMeStoreState.getState))).toEqual(result);
   });
 });

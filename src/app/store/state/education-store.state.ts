@@ -2,14 +2,14 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { EducationStoreModel } from '../model/store/education-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { EducationDataBuilder } from '../../builder/data/education-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { EducationBuilder } from '../../builder/service/education.builder';
 
 @State<EducationStoreModel>({
   name: 'education',
   defaults: {
-    ownSection: SectionDataBuilder.buildDataForKind('education'),
-    educationData: EducationDataBuilder.buildData(),
+    sectionBuilder: SectionBuilder.buildDataForKind('education'),
+    educationBuilder: EducationBuilder.buildData(),
   },
 })
 @Injectable()

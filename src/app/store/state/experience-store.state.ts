@@ -2,14 +2,14 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ExperienceStoreModel } from '../model/store/experience-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { ExperienceDataBuilder } from '../../builder/data/experience-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { ExperienceBuilder } from '../../builder/service/experience.builder';
 
 @State<ExperienceStoreModel>({
   name: 'experience',
   defaults: {
-    ownSection: SectionDataBuilder.buildDataForKind('experience'),
-    experienceData: ExperienceDataBuilder.buildData(),
+    sectionBuilder: SectionBuilder.buildDataForKind('experience'),
+    experienceBuilder: ExperienceBuilder.buildData(),
   },
 })
 @Injectable()

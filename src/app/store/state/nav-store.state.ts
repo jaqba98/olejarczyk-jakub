@@ -2,15 +2,15 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { NavStoreModel } from '../model/store/nav-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { PersonalDataBuilder } from '../../builder/data/personal-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { PersonalBuilder } from '../../builder/service/personal.builder';
 
 @State<NavStoreModel>({
   name: 'nav',
   defaults: {
-    ownSection: SectionDataBuilder.buildDataForKind('nav'),
-    personalData: PersonalDataBuilder.buildData(),
-    routableSections: SectionDataBuilder.buildDataForRoutableSections(),
+    sectionBuilder: SectionBuilder.buildDataForKind('nav'),
+    personalBuilder: PersonalBuilder.buildData(),
+    sectionsBuilder: SectionBuilder.buildDataForRoutableSections(),
   },
 })
 @Injectable()

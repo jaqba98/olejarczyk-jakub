@@ -2,14 +2,14 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { ResumeStoreModel } from '../model/store/resume-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { ResumeDataBuilder } from '../../builder/data/resume-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { ResumeBuilder } from '../../builder/service/resume.builder';
 
 @State<ResumeStoreModel>({
   name: 'resume',
   defaults: {
-    ownSection: SectionDataBuilder.buildDataForKind('resume'),
-    resumeData: ResumeDataBuilder.buildData(),
+    sectionBuilder: SectionBuilder.buildDataForKind('resume'),
+    resumeBuilder: ResumeBuilder.buildData(),
   },
 })
 @Injectable()

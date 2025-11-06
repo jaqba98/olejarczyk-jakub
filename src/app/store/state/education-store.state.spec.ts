@@ -5,8 +5,8 @@ import { firstValueFrom } from 'rxjs';
 
 import { EducationStoreModel } from '../model/store/education-store.model';
 import { EducationStoreState } from './education-store.state';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
-import { EducationDataBuilder } from '../../builder/data/education-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
+import { EducationBuilder } from '../../builder/service/education.builder';
 
 describe('Education Store State', () => {
   let store: Store;
@@ -17,12 +17,10 @@ describe('Education Store State', () => {
   });
 
   it('Should return the correct data', async () => {
-    const correctData: EducationStoreModel = {
-      ownSection: SectionDataBuilder.buildDataForKind('education'),
-      educationData: EducationDataBuilder.buildData(),
+    const result: EducationStoreModel = {
+      sectionBuilder: SectionBuilder.buildDataForKind('education'),
+      educationBuilder: EducationBuilder.buildData(),
     };
-    expect(await firstValueFrom(store.selectOnce(EducationStoreState.getState))).toEqual(
-      correctData,
-    );
+    expect(await firstValueFrom(store.selectOnce(EducationStoreState.getState))).toEqual(result);
   });
 });

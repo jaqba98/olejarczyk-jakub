@@ -2,12 +2,12 @@ import { Selector, State } from '@ngxs/store';
 import { Injectable } from '@angular/core';
 
 import { RootStoreModel } from '../model/store/root-store.model';
-import { SectionDataBuilder } from '../../builder/data/section-data.builder';
+import { SectionBuilder } from '../../builder/service/section.builder';
 
 @State<RootStoreModel>({
   name: 'root',
   defaults: {
-    sections: SectionDataBuilder.buildDataForAllSections(),
+    sectionsBuilder: SectionBuilder.buildDataForAllSections(),
   },
 })
 @Injectable()

@@ -1,5 +1,5 @@
-import { SectionsDataBuilderModel } from '../../../builder/model/data/section-data-builder.model';
+import { SectionsBuilderModel } from '../../../builder/model/builder/section-builder.model';
 
 export interface RootStoreModel {
-  sections: SectionsDataBuilderModel;
+  sectionsBuilder: SectionsBuilderModel;
 }
