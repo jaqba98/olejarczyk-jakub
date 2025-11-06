@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngxs/store';
+import { Observable } from 'rxjs';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
 import { HomeStoreState } from '../../../store/state/home-store.state';
+import { HomeStoreModel } from '../../../store/model/store/home-store.model';
 
 @Component({
   selector: 'home-section',
@@ -12,7 +14,7 @@ import { HomeStoreState } from '../../../store/state/home-store.state';
 })
 @SectionDecorator('home')
 export class HomeSectionComponent {
-  state$;
+  state$: Observable<HomeStoreModel>;
 
   constructor(private readonly store: Store) {
     this.state$ = this.store.selectOnce(HomeStoreState.getState);

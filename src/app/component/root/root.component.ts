@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
-import { Store } from '@ngxs/store';
-import { map } from 'rxjs/operators';
+import { Component, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Store } from '@ngxs/store';
+import { map, Observable } from 'rxjs';
 
 import { RootStoreState } from '../../store/state/root-store.state';
 import { getSection } from '../../decorator/section.decorator';
+import { SectionAbstract } from '../../abstract/section.abstract';
 
 import '../section/nav/nav-section.component';
 import '../section/home/home-section.component';
@@ -24,7 +25,7 @@ import '../section/footer/footer-section.component';
   imports: [CommonModule],
 })
 export class RootComponent {
-  sections$;
+  sections$: Observable<Type<SectionAbstract>[]>;
 
   constructor(private readonly store: Store) {
     this.sections$ = this.store
