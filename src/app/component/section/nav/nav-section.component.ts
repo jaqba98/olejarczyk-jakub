@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
 import { SectionDecorator } from '../../../decorator/section.decorator';
 import { NavStoreState } from '../../../store/state/nav-store.state';
 import { NavStoreModel } from '../../../store/model/store/nav-store.model';
+import { ViewComponent } from '../../view/view.component';
 
 @Component({
   selector: 'nav-section',
-  templateUrl: './nav-section.component.html',
-  imports: [CommonModule],
+  template: '<view [state]="state$"></view>',
+  imports: [CommonModule, ViewComponent],
 })
 @SectionDecorator('nav')
 export class NavSectionComponent {

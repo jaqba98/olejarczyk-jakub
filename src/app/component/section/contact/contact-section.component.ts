@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
 import { SectionDecorator } from '../../../decorator/section.decorator';
 import { ContactStoreState } from '../../../store/state/contact-store.state';
 import { ContactStoreModel } from '../../../store/model/store/contact-store.model';
+import { ViewComponent } from '../../view/view.component';
 
 @Component({
   selector: 'contact-section',
-  templateUrl: './contact-section.component.html',
-  imports: [CommonModule],
+  template: '<view [state]="state$"></view>',
+  imports: [CommonModule, ViewComponent],
 })
 @SectionDecorator('contact')
 export class ContactSectionComponent {

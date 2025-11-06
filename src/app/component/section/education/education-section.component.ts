@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
 import { SectionDecorator } from '../../../decorator/section.decorator';
 import { EducationStoreState } from '../../../store/state/education-store.state';
 import { EducationStoreModel } from '../../../store/model/store/education-store.model';
+import { ViewComponent } from '../../view/view.component';
 
 @Component({
   selector: 'education-section',
-  templateUrl: './education-section.component.html',
-  imports: [CommonModule],
+  template: '<view [state]="state$"></view>',
+  imports: [CommonModule, ViewComponent],
 })
 @SectionDecorator('education')
 export class EducationSectionComponent {

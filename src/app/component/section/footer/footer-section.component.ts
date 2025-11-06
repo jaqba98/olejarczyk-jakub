@@ -6,11 +6,12 @@ import { Observable } from 'rxjs';
 import { SectionDecorator } from '../../../decorator/section.decorator';
 import { FooterStoreState } from '../../../store/state/footer-store.state';
 import { FooterStoreModel } from '../../../store/model/store/footer-store.model';
+import { ViewComponent } from '../../view/view.component';
 
 @Component({
   selector: 'footer-section',
-  templateUrl: './footer-section.component.html',
-  imports: [CommonModule],
+  template: '<view [state]="state$"></view>',
+  imports: [CommonModule, ViewComponent],
 })
 @SectionDecorator('footer')
 export class FooterSectionComponent {
