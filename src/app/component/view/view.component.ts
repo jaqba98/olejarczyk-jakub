@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'view',
@@ -8,5 +7,5 @@ import { Observable } from 'rxjs';
   imports: [CommonModule],
 })
 export class ViewComponent {
-  state = input.required<Observable<any>>();
+  state = input.required<any>();
 }

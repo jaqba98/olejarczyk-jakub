@@ -10,7 +10,7 @@ import { ViewComponent } from '../../view/view.component';
 
 @Component({
   selector: 'contact-section',
-  template: '<view [state]="state$"></view>',
+  template: '<view [state]="state$ | async"></view>',
   imports: [CommonModule, ViewComponent],
 })
 @SectionDecorator('contact')

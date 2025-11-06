@@ -5,12 +5,12 @@ import { Observable } from 'rxjs';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
 import { AboutMeStoreState } from '../../../store/state/about-me-store.state';
-import { AboutMeStoreModel } from '../../../store/model/store/about-me-store.model';
 import { ViewComponent } from '../../view/view.component';
+import { AboutMeStoreModel } from '../../../store/model/store/about-me-store.model';
 
 @Component({
   selector: 'about-me-section',
-  template: '<view [state]="state$"></view>',
+  template: '<view [state]="state$ | async"></view>',
   imports: [CommonModule, ViewComponent],
 })
 @SectionDecorator('aboutMe')
