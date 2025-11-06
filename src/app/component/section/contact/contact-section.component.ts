@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { ContactStoreState } from '../../../store/state/contact-store.state';
+import { ContactViewComponent } from '../../view/contact-section.component';
 import { ContactStoreModel } from '../../../store/model/store/contact-store.model';
-import { ViewComponent } from '../../view/view.component';
+import { ContactStoreState } from '../../../store/state/contact-store.state';
 
 @Component({
   selector: 'contact-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <contact-view [model]="state"></contact-view>
+    }
+  `,
+  imports: [CommonModule, ContactViewComponent],
 })
 @SectionDecorator('contact')
 export class ContactSectionComponent {

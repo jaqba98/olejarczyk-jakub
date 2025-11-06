@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { ProjectStoreState } from '../../../store/state/project-store.state';
+import { ProjectViewComponent } from '../../view/project-section.component';
 import { ProjectStoreModel } from '../../../store/model/store/project-store.model';
-import { ViewComponent } from '../../view/view.component';
+import { ProjectStoreState } from '../../../store/state/project-store.state';
 
 @Component({
   selector: 'project-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <project-view [model]="state"></project-view>
+    }
+  `,
+  imports: [CommonModule, ProjectViewComponent],
 })
 @SectionDecorator('project')
 export class ProjectSectionComponent {

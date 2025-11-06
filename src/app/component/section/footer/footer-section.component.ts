@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { FooterStoreState } from '../../../store/state/footer-store.state';
+import { FooterViewComponent } from '../../view/footer-section.component';
 import { FooterStoreModel } from '../../../store/model/store/footer-store.model';
-import { ViewComponent } from '../../view/view.component';
+import { FooterStoreState } from '../../../store/state/footer-store.state';
 
 @Component({
   selector: 'footer-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <footer-view [model]="state"></footer-view>
+    }
+  `,
+  imports: [CommonModule, FooterViewComponent],
 })
 @SectionDecorator('footer')
 export class FooterSectionComponent {

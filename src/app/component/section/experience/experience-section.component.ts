@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
+import { ExperienceViewComponent } from '../../view/experience-section.component';
 import { ExperienceStoreState } from '../../../store/state/experience-store.state';
 import { ExperienceStoreModel } from '../../../store/model/store/experience-store.model';
-import { ViewComponent } from '../../view/view.component';
 
 @Component({
   selector: 'experience-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <experience-view [model]="state"></experience-view>
+    }
+  `,
+  imports: [CommonModule, ExperienceViewComponent],
 })
 @SectionDecorator('experience')
 export class ExperienceSectionComponent {

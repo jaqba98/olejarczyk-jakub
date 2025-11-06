@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { SkillStoreState } from '../../../store/state/skill-store.state';
+import { SkillViewComponent } from '../../view/skill-section.component';
 import { SkillStoreModel } from '../../../store/model/store/skill-store.model';
-import { ViewComponent } from '../../view/view.component';
+import { SkillStoreState } from '../../../store/state/skill-store.state';
 
 @Component({
   selector: 'skill-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <skill-view [model]="state"></skill-view>
+    }
+  `,
+  imports: [CommonModule, SkillViewComponent],
 })
 @SectionDecorator('skill')
 export class SkillSectionComponent {

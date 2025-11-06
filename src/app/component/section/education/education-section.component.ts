@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { EducationStoreState } from '../../../store/state/education-store.state';
+import { EducationViewComponent } from '../../view/education-section.component';
 import { EducationStoreModel } from '../../../store/model/store/education-store.model';
-import { ViewComponent } from '../../view/view.component';
+import { EducationStoreState } from '../../../store/state/education-store.state';
 
 @Component({
   selector: 'education-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <education-view [model]="state"></education-view>
+    }
+  `,
+  imports: [CommonModule, EducationViewComponent],
 })
 @SectionDecorator('education')
 export class EducationSectionComponent {

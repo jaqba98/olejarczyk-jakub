@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { ResumeStoreState } from '../../../store/state/resume-store.state';
+import { ResumeViewComponent } from '../../view/resume-section.component';
 import { ResumeStoreModel } from '../../../store/model/store/resume-store.model';
-import { ViewComponent } from '../../view/view.component';
+import { ResumeStoreState } from '../../../store/state/resume-store.state';
 
 @Component({
   selector: 'resume-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <resume-view [model]="state"></resume-view>
+    }
+  `,
+  imports: [CommonModule, ResumeViewComponent],
 })
 @SectionDecorator('resume')
 export class ResumeSectionComponent {

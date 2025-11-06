@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Store } from '@ngxs/store';
+import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Store } from '@ngxs/store';
 
 import { SectionDecorator } from '../../../decorator/section.decorator';
-import { HomeStoreState } from '../../../store/state/home-store.state';
+import { HomeViewComponent } from '../../view/home-section.component';
 import { HomeStoreModel } from '../../../store/model/store/home-store.model';
-import { ViewComponent } from '../../view/view.component';
+import { HomeStoreState } from '../../../store/state/home-store.state';
 
 @Component({
   selector: 'home-section',
-  template: '<view [state]="state$ | async"></view>',
-  imports: [CommonModule, ViewComponent],
+  template: `
+    @if (state$ | async; as state) {
+      <home-view [model]="state"></home-view>
+    }
+  `,
+  imports: [CommonModule, HomeViewComponent],
 })
 @SectionDecorator('home')
 export class HomeSectionComponent {
