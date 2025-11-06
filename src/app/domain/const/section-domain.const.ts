@@ -1,8 +1,8 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { SectionDomain } from '../model/section-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { SectionDomain } from '../model/domain/section-domain.model';
 import { SectionKindDomainType } from '../type/kind/section-kind-domain.type';
 
-export const sectionDomainConst: BaseDomain.Type<
+export const sectionDomainConst: BaseCompose.Type<
   SectionKindDomainType,
   SectionDomain.Data,
   SectionDomain.Metadata
@@ -15,6 +15,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#nav',
     },
     metadata: {
+      test: 'test',
       routable: false,
       order: 0,
     },
@@ -27,6 +28,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#home',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 1,
     },
@@ -39,6 +41,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#about-me',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 2,
     },
@@ -51,6 +54,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#technology',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 3,
     },
@@ -63,6 +67,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#skill',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 4,
     },
@@ -75,6 +80,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#experience',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 5,
     },
@@ -87,6 +93,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#resume',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 6,
     },
@@ -99,6 +106,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#education',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 7,
     },
@@ -111,6 +119,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#project',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 8,
     },
@@ -123,6 +132,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#contact',
     },
     metadata: {
+      test: 'test',
       routable: true,
       order: 9,
     },
@@ -135,6 +145,7 @@ export const sectionDomainConst: BaseDomain.Type<
       href: '#footer',
     },
     metadata: {
+      test: 'test',
       routable: false,
       order: 10,
     },

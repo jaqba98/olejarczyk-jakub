@@ -1,5 +1,5 @@
-import { ProjectDomain } from '../../../domain/model/project-domain.model';
-import { TechnologyDomain } from '../../../domain/model/technology-domain.model';
+import { ProjectDomain } from '../../../domain/model/domain/project-domain.model';
+import { TechnologyDomain } from '../../../domain/model/domain/technology-domain.model';
 
 interface ProjectDataModel {
   project: ProjectDomain.Data;

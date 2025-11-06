@@ -1,8 +1,9 @@
-import { ImageAssetDomainType } from '../type/asset/image-asset-domain.type';
-import { StatusEntityDomainType } from '../type/entity/status-entity-domain.type';
-import { ProjectKindDomainType } from '../type/kind/project-kind-domain.type';
-import { TechnologyKindDomainType } from '../type/kind/technology-kind-domain.type';
-import { ProjectNameDomainType } from '../type/name/project-name-domain.type';
+import { ImageAssetDomainType } from '../../type/asset/image-asset-domain.type';
+import { StatusEntityDomainType } from '../../type/entity/status-entity-domain.type';
+import { ProjectKindDomainType } from '../../type/kind/project-kind-domain.type';
+import { TechnologyKindDomainType } from '../../type/kind/technology-kind-domain.type';
+import { ProjectNameDomainType } from '../../type/name/project-name-domain.type';
+import { BaseDomain } from '../base/base-domain.model';
 
 export namespace ProjectDomain {
   interface RepositoryNoneModel {
@@ -27,7 +28,7 @@ export namespace ProjectDomain {
 
   type ApplicationModel = ApplicationNoneModel | ApplicationGitHubPageModel;
 
-  export interface Data {
+  export interface Data extends BaseDomain.Data {
     banner: ImageAssetDomainType;
     name: ProjectNameDomainType;
     creationDate: Date;
@@ -38,7 +39,7 @@ export namespace ProjectDomain {
     gallery: ImageAssetDomainType[];
   }
 
-  export interface Metadata {
+  export interface Metadata extends BaseDomain.Metadata {
     kind: ProjectKindDomainType;
     technologyIds: TechnologyKindDomainType[];
     order: number;

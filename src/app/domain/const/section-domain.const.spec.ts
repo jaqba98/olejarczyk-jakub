@@ -1,11 +1,11 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { SectionDomain } from '../model/section-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { SectionDomain } from '../model/domain/section-domain.model';
 import { SectionKindDomainType } from '../type/kind/section-kind-domain.type';
 import { sectionDomainConst } from './section-domain.const';
 
 describe('Section Domain Const', () => {
   it('Should return the correct data', () => {
-    const correctData: BaseDomain.Type<
+    const correctData: BaseCompose.Type<
       SectionKindDomainType,
       SectionDomain.Data,
       SectionDomain.Metadata
@@ -18,6 +18,7 @@ describe('Section Domain Const', () => {
           href: '#nav',
         },
         metadata: {
+          test: 'test',
           routable: false,
           order: 0,
         },
@@ -30,6 +31,7 @@ describe('Section Domain Const', () => {
           href: '#home',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 1,
         },
@@ -42,6 +44,7 @@ describe('Section Domain Const', () => {
           href: '#about-me',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 2,
         },
@@ -54,6 +57,7 @@ describe('Section Domain Const', () => {
           href: '#technology',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 3,
         },
@@ -66,6 +70,7 @@ describe('Section Domain Const', () => {
           href: '#skill',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 4,
         },
@@ -78,6 +83,7 @@ describe('Section Domain Const', () => {
           href: '#experience',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 5,
         },
@@ -90,6 +96,7 @@ describe('Section Domain Const', () => {
           href: '#resume',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 6,
         },
@@ -102,6 +109,7 @@ describe('Section Domain Const', () => {
           href: '#education',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 7,
         },
@@ -114,6 +122,7 @@ describe('Section Domain Const', () => {
           href: '#project',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 8,
         },
@@ -126,6 +135,7 @@ describe('Section Domain Const', () => {
           href: '#contact',
         },
         metadata: {
+          test: 'test',
           routable: true,
           order: 9,
         },
@@ -138,6 +148,7 @@ describe('Section Domain Const', () => {
           href: '#footer',
         },
         metadata: {
+          test: 'test',
           routable: false,
           order: 10,
         },

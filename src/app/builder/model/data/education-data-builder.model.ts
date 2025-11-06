@@ -1,4 +1,4 @@
-import { EducationDomain } from '../../../domain/model/education-domain.model';
+import { EducationDomain } from '../../../domain/model/domain/education-domain.model';
 
 interface EducationDataModel {
   educations: EducationDomain.Data[];

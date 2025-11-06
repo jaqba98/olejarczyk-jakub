@@ -1,11 +1,11 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { ProjectDomain } from '../model/project-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { ProjectDomain } from '../model/domain/project-domain.model';
 import { ProjectKindDomainType } from '../type/kind/project-kind-domain.type';
 import { projectDomainConst } from './project-domain.const';
 
 describe('Project Domain Const', () => {
   it('Should return the correct data', () => {
-    const correctData: BaseDomain.Type<
+    const correctData: BaseCompose.Type<
       ProjectKindDomainType,
       ProjectDomain.Data,
       ProjectDomain.Metadata
@@ -32,6 +32,7 @@ describe('Project Domain Const', () => {
           ],
         },
         metadata: {
+          test: 'test',
           kind: 'project1',
           technologyIds: ['html', 'css', 'javascript'],
           order: 0,
@@ -58,6 +59,7 @@ describe('Project Domain Const', () => {
           ],
         },
         metadata: {
+          test: 'test',
           kind: 'project2',
           technologyIds: ['git', 'github', 'gitlab'],
           order: 1,

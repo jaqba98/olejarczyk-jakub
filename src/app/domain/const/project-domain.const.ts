@@ -1,8 +1,8 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { ProjectDomain } from '../model/project-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { ProjectDomain } from '../model/domain/project-domain.model';
 import { ProjectKindDomainType } from '../type/kind/project-kind-domain.type';
 
-export const projectDomainConst: BaseDomain.Type<
+export const projectDomainConst: BaseCompose.Type<
   ProjectKindDomainType,
   ProjectDomain.Data,
   ProjectDomain.Metadata
@@ -29,6 +29,7 @@ export const projectDomainConst: BaseDomain.Type<
       ],
     },
     metadata: {
+      test: 'test',
       kind: 'project1',
       technologyIds: ['html', 'css', 'javascript'],
       order: 0,
@@ -55,6 +56,7 @@ export const projectDomainConst: BaseDomain.Type<
       ],
     },
     metadata: {
+      test: 'test',
       kind: 'project2',
       technologyIds: ['git', 'github', 'gitlab'],
       order: 1,

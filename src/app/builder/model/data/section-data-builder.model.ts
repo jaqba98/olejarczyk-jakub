@@ -1,4 +1,4 @@
-import { SectionDomain } from '../../../domain/model/section-domain.model';
+import { SectionDomain } from '../../../domain/model/domain/section-domain.model';
 
 export type SectionDataBuilderModel = SectionDomain.Data;
 

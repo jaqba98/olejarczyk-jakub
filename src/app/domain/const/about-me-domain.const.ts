@@ -1,7 +1,7 @@
-import { AboutMeDomain } from '../model/about-me-domain.model';
-import { BaseDomain } from '../model/base-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { AboutMeDomain } from '../model/domain/about-me-domain.model';
 
-export const aboutMeDomainConst: BaseDomain.Model<AboutMeDomain.Data, AboutMeDomain.Metadata> = {
+export const aboutMeDomainConst: BaseCompose.Model<AboutMeDomain.Data, AboutMeDomain.Metadata> = {
   data: {
     descriptions: [
       'I am a software engineer with over 5 years of experience, for whom clean, readable, and well-thought-out code is a priority. I follow the principle of "Do not repeat yourself", striving for elegant and efficient solutions. My strong analytical thinking allows me to effectively solve complex technical challenges.',
@@ -10,5 +10,7 @@ export const aboutMeDomainConst: BaseDomain.Model<AboutMeDomain.Data, AboutMeDom
       'I am eager to take on new challenges — both technological and architectural. I continuously aim to improve efficiency, scalability, and maintainability in every project I work on. In my free time, I develop personal projects and enhance my English skills.',
     ],
   },
-  metadata: {},
+  metadata: {
+    test: 'test',
+  },
 };

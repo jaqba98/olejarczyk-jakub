@@ -1,12 +1,12 @@
 import { SvgConst } from '../../const/svg.const';
-import { BaseDomain } from '../model/base-domain.model';
-import { SocialMediaDomain } from '../model/social-media-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { SocialMediaDomain } from '../model/domain/social-media-domain.model';
 import { SocialMediaKindDomainType } from '../type/kind/social-media-kind-domain.type';
 import { socialMediaDomainConst } from './social-media-domain.const';
 
 describe('Social Media Domain Const', () => {
   it('Should return the correct data', () => {
-    const correctData: BaseDomain.Type<
+    const correctData: BaseCompose.Type<
       SocialMediaKindDomainType,
       SocialMediaDomain.Data,
       SocialMediaDomain.Metadata
@@ -17,6 +17,7 @@ describe('Social Media Domain Const', () => {
           svg: SvgConst.linkedin,
         },
         metadata: {
+          test: 'test',
           kind: 'linkedin',
           order: 0,
         },
@@ -27,6 +28,7 @@ describe('Social Media Domain Const', () => {
           svg: SvgConst.github,
         },
         metadata: {
+          test: 'test',
           kind: 'github',
           order: 1,
         },
@@ -37,6 +39,7 @@ describe('Social Media Domain Const', () => {
           svg: SvgConst.gitlab,
         },
         metadata: {
+          test: 'test',
           kind: 'gitlab',
           order: 2,
         },
@@ -47,6 +50,7 @@ describe('Social Media Domain Const', () => {
           svg: SvgConst.npm,
         },
         metadata: {
+          test: 'test',
           kind: 'npm',
           order: 3,
         },

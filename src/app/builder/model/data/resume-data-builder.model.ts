@@ -1,3 +1,3 @@
-import { ResumeDomain } from '../../../domain/model/resume-domain.model';
+import { ResumeDomain } from '../../../domain/model/domain/resume-domain.model';
 
 export type ResumeDataBuilderModel = ResumeDomain.Data;

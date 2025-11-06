@@ -1,11 +1,11 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { EducationDomain } from '../model/education-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { EducationDomain } from '../model/domain/education-domain.model';
 import { EducationKindDomainType } from '../type/kind/education-kind-domain.type';
 import { educationDomainConst } from './education-domain.const';
 
 describe('Education Domain Const', () => {
   it('Should return the correct data', () => {
-    const correctData: BaseDomain.Type<
+    const correctData: BaseCompose.Type<
       EducationKindDomainType,
       EducationDomain.Data,
       EducationDomain.Metadata
@@ -20,6 +20,7 @@ describe('Education Domain Const', () => {
           grade: 4,
         },
         metadata: {
+          test: 'test',
           kind: 'ujk',
           order: 0,
         },
@@ -34,6 +35,7 @@ describe('Education Domain Const', () => {
           grade: 'none',
         },
         metadata: {
+          test: 'test',
           kind: 'psk',
           order: 1,
         },

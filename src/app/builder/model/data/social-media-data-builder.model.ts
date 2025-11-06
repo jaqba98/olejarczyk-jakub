@@ -1,3 +1,3 @@
-import { SocialMediaDomain } from '../../../domain/model/social-media-domain.model';
+import { SocialMediaDomain } from '../../../domain/model/domain/social-media-domain.model';
 
 export type SocialMediaDataBuilderModel = SocialMediaDomain.Data[];

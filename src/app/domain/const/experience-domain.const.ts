@@ -1,8 +1,8 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { ExperienceDomain } from '../model/experience-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { ExperienceDomain } from '../model/domain/experience-domain.model';
 import { CompanyKindDomainType } from '../type/kind/company-kind-domain.type';
 
-export const experienceDomainConst: BaseDomain.Type<
+export const experienceDomainConst: BaseCompose.Type<
   CompanyKindDomainType,
   ExperienceDomain.Data,
   ExperienceDomain.Metadata
@@ -65,6 +65,7 @@ export const experienceDomainConst: BaseDomain.Type<
       ],
     },
     metadata: {
+      test: 'test',
       companyKind: 'aprSystem',
       order: 0,
     },
@@ -96,6 +97,7 @@ export const experienceDomainConst: BaseDomain.Type<
       ],
     },
     metadata: {
+      test: 'test',
       companyKind: 'primaris',
       order: 1,
     },

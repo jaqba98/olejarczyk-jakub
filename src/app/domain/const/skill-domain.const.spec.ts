@@ -1,10 +1,10 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { SkillDomain } from '../model/skill-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { SkillDomain } from '../model/domain/skill-domain.model';
 import { skillDomainConst } from './skill-domain.const';
 
 describe('Skill Me Domain Const', () => {
   it('Should return the correct data', () => {
-    const correctData: BaseDomain.Model<SkillDomain.Data, SkillDomain.Metadata> = {
+    const correctData: BaseCompose.Model<SkillDomain.Data, SkillDomain.Metadata> = {
       data: {
         languages: [
           {
@@ -24,7 +24,9 @@ describe('Skill Me Domain Const', () => {
           },
         ],
       },
-      metadata: {},
+      metadata: {
+        test: 'test',
+      },
     };
     expect(skillDomainConst).toEqual(correctData);
   });

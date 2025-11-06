@@ -1,9 +1,9 @@
 import { SvgConst } from '../../const/svg.const';
-import { BaseDomain } from '../model/base-domain.model';
-import { TechnologyDomain } from '../model/technology-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { TechnologyDomain } from '../model/domain/technology-domain.model';
 import { TechnologyKindDomainType } from '../type/kind/technology-kind-domain.type';
 
-export const technologyDomainConst: BaseDomain.Type<
+export const technologyDomainConst: BaseCompose.Type<
   TechnologyKindDomainType,
   TechnologyDomain.Data,
   TechnologyDomain.Metadata
@@ -15,6 +15,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.html,
     },
     metadata: {
+      test: 'test',
       kind: 'html',
       categoryKind: 'markupLanguage',
       order: 0,
@@ -27,6 +28,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.css,
     },
     metadata: {
+      test: 'test',
       kind: 'css',
       categoryKind: 'stylesheetLanguage',
       order: 1,
@@ -39,6 +41,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.sass,
     },
     metadata: {
+      test: 'test',
       kind: 'sass',
       categoryKind: 'stylesheetLanguage',
       order: 2,
@@ -51,6 +54,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.javascript,
     },
     metadata: {
+      test: 'test',
       kind: 'javascript',
       categoryKind: 'programmingLanguage',
       order: 3,
@@ -63,6 +67,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.typescript,
     },
     metadata: {
+      test: 'test',
       kind: 'typescript',
       categoryKind: 'programmingLanguage',
       order: 4,
@@ -75,6 +80,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.python,
     },
     metadata: {
+      test: 'test',
       kind: 'python',
       categoryKind: 'programmingLanguage',
       order: 5,
@@ -87,6 +93,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.angular,
     },
     metadata: {
+      test: 'test',
       kind: 'angular',
       categoryKind: 'framework',
       order: 6,
@@ -99,6 +106,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.rxjs,
     },
     metadata: {
+      test: 'test',
       kind: 'rxjs',
       categoryKind: 'library',
       order: 7,
@@ -111,6 +119,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.storybook,
     },
     metadata: {
+      test: 'test',
       kind: 'storybook',
       categoryKind: 'library',
       order: 8,
@@ -123,6 +132,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.primeng,
     },
     metadata: {
+      test: 'test',
       kind: 'primeng',
       categoryKind: 'library',
       order: 9,
@@ -135,6 +145,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.numpy,
     },
     metadata: {
+      test: 'test',
       kind: 'numpy',
       categoryKind: 'library',
       order: 10,
@@ -147,6 +158,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.jest,
     },
     metadata: {
+      test: 'test',
       kind: 'jest',
       categoryKind: 'test',
       order: 11,
@@ -159,6 +171,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.eslint,
     },
     metadata: {
+      test: 'test',
       kind: 'eslint',
       categoryKind: 'codeQuality',
       order: 12,
@@ -171,6 +184,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.prettier,
     },
     metadata: {
+      test: 'test',
       kind: 'prettier',
       categoryKind: 'codeQuality',
       order: 13,
@@ -183,6 +197,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.stylelint,
     },
     metadata: {
+      test: 'test',
       kind: 'stylelint',
       categoryKind: 'codeQuality',
       order: 14,
@@ -195,6 +210,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.postgresql,
     },
     metadata: {
+      test: 'test',
       kind: 'postgresql',
       categoryKind: 'database',
       order: 15,
@@ -207,6 +223,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.microsoftSqlServer,
     },
     metadata: {
+      test: 'test',
       kind: 'microsoftSqlServer',
       categoryKind: 'database',
       order: 16,
@@ -219,6 +236,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.nginx,
     },
     metadata: {
+      test: 'test',
       kind: 'nginx',
       categoryKind: 'server',
       order: 17,
@@ -231,6 +249,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.nodejs,
     },
     metadata: {
+      test: 'test',
       kind: 'nodejs',
       categoryKind: 'runtime',
       order: 18,
@@ -243,6 +262,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.docker,
     },
     metadata: {
+      test: 'test',
       kind: 'docker',
       categoryKind: 'containerization',
       order: 19,
@@ -255,6 +275,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.snaplogic,
     },
     metadata: {
+      test: 'test',
       kind: 'snaplogic',
       categoryKind: 'integrationPlatform',
       order: 20,
@@ -267,6 +288,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.n8n,
     },
     metadata: {
+      test: 'test',
       kind: 'n8n',
       categoryKind: 'integrationPlatform',
       order: 21,
@@ -279,6 +301,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.postman,
     },
     metadata: {
+      test: 'test',
       kind: 'postman',
       categoryKind: 'api',
       order: 22,
@@ -291,6 +314,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.git,
     },
     metadata: {
+      test: 'test',
       kind: 'git',
       categoryKind: 'versionControlSystem',
       order: 23,
@@ -303,6 +327,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.github,
     },
     metadata: {
+      test: 'test',
       kind: 'github',
       categoryKind: 'versionControlSystem',
       order: 24,
@@ -315,6 +340,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.gitlab,
     },
     metadata: {
+      test: 'test',
       kind: 'gitlab',
       categoryKind: 'versionControlSystem',
       order: 25,
@@ -327,6 +353,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.npm,
     },
     metadata: {
+      test: 'test',
       kind: 'npm',
       categoryKind: 'packageManager',
       order: 26,
@@ -339,6 +366,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.pnpm,
     },
     metadata: {
+      test: 'test',
       kind: 'pnpm',
       categoryKind: 'packageManager',
       order: 27,
@@ -351,6 +379,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.nx,
     },
     metadata: {
+      test: 'test',
       kind: 'nx',
       categoryKind: 'monorepo',
       order: 28,
@@ -363,6 +392,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.webstorm,
     },
     metadata: {
+      test: 'test',
       kind: 'webstorm',
       categoryKind: 'ide',
       order: 29,
@@ -375,6 +405,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.eclipse,
     },
     metadata: {
+      test: 'test',
       kind: 'eclipse',
       categoryKind: 'ide',
       order: 30,
@@ -387,6 +418,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.visualStudioCode,
     },
     metadata: {
+      test: 'test',
       kind: 'visualStudioCode',
       categoryKind: 'editor',
       order: 31,
@@ -399,6 +431,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.visualParadigm,
     },
     metadata: {
+      test: 'test',
       kind: 'visualParadigm',
       categoryKind: 'diagram',
       order: 32,
@@ -411,6 +444,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.jira,
     },
     metadata: {
+      test: 'test',
       kind: 'jira',
       categoryKind: 'projectManagement',
       order: 33,
@@ -423,6 +457,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.windows,
     },
     metadata: {
+      test: 'test',
       kind: 'windows',
       categoryKind: 'operatingSystem',
       order: 34,
@@ -435,6 +470,7 @@ export const technologyDomainConst: BaseDomain.Type<
       svg: SvgConst.linux,
     },
     metadata: {
+      test: 'test',
       kind: 'linux',
       categoryKind: 'operatingSystem',
       order: 35,

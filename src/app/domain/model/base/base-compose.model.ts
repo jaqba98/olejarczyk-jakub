@@ -1,4 +1,4 @@
-export namespace BaseDomain {
+export namespace BaseCompose {
   export interface Model<TData, TMetadata> {
     data: TData;
     metadata: TMetadata;

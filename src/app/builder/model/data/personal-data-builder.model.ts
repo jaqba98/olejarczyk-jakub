@@ -1,4 +1,4 @@
-import { PersonalDomain } from '../../../domain/model/personal-domain.model';
+import { PersonalDomain } from '../../../domain/model/domain/personal-domain.model';
 
 export interface PersonalDataBuilderModel extends PersonalDomain.Data {
   initials: string;

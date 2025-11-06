@@ -1,8 +1,8 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { EducationDomain } from '../model/education-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { EducationDomain } from '../model/domain/education-domain.model';
 import { EducationKindDomainType } from '../type/kind/education-kind-domain.type';
 
-export const educationDomainConst: BaseDomain.Type<
+export const educationDomainConst: BaseCompose.Type<
   EducationKindDomainType,
   EducationDomain.Data,
   EducationDomain.Metadata
@@ -17,6 +17,7 @@ export const educationDomainConst: BaseDomain.Type<
       grade: 4,
     },
     metadata: {
+      test: 'test',
       kind: 'ujk',
       order: 0,
     },
@@ -31,6 +32,7 @@ export const educationDomainConst: BaseDomain.Type<
       grade: 'none',
     },
     metadata: {
+      test: 'test',
       kind: 'psk',
       order: 1,
     },

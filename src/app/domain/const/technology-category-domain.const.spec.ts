@@ -1,11 +1,11 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { TechnologyCategoryDomain } from '../model/technology-category-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { TechnologyCategoryDomain } from '../model/domain/technology-category-domain.model';
 import { TechnologyCategoryKindDomainType } from '../type/kind/technology-category-kind-domain.type';
 import { technologyCategoryDomainConst } from './technology-category-domain.const';
 
 describe('Technology Category Domain Const', () => {
   it('Should return the correct data', () => {
-    const correctData: BaseDomain.Type<
+    const correctData: BaseCompose.Type<
       TechnologyCategoryKindDomainType,
       TechnologyCategoryDomain.Data,
       TechnologyCategoryDomain.Metadata
@@ -15,6 +15,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Markup Language',
         },
         metadata: {
+          test: 'test',
           kind: 'markupLanguage',
           order: 0,
         },
@@ -24,6 +25,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Stylesheet Language',
         },
         metadata: {
+          test: 'test',
           kind: 'stylesheetLanguage',
           order: 1,
         },
@@ -33,6 +35,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Programming Language',
         },
         metadata: {
+          test: 'test',
           kind: 'programmingLanguage',
           order: 2,
         },
@@ -42,6 +45,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Framework',
         },
         metadata: {
+          test: 'test',
           kind: 'framework',
           order: 3,
         },
@@ -51,6 +55,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Library',
         },
         metadata: {
+          test: 'test',
           kind: 'library',
           order: 4,
         },
@@ -60,6 +65,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Test',
         },
         metadata: {
+          test: 'test',
           kind: 'test',
           order: 5,
         },
@@ -69,6 +75,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Code Quality',
         },
         metadata: {
+          test: 'test',
           kind: 'codeQuality',
           order: 6,
         },
@@ -78,6 +85,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Database',
         },
         metadata: {
+          test: 'test',
           kind: 'database',
           order: 7,
         },
@@ -87,6 +95,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Server',
         },
         metadata: {
+          test: 'test',
           kind: 'server',
           order: 8,
         },
@@ -96,6 +105,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Runtime',
         },
         metadata: {
+          test: 'test',
           kind: 'runtime',
           order: 9,
         },
@@ -105,6 +115,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Containerization',
         },
         metadata: {
+          test: 'test',
           kind: 'containerization',
           order: 10,
         },
@@ -114,6 +125,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Integration Platform',
         },
         metadata: {
+          test: 'test',
           kind: 'integrationPlatform',
           order: 11,
         },
@@ -123,6 +135,7 @@ describe('Technology Category Domain Const', () => {
           name: 'API',
         },
         metadata: {
+          test: 'test',
           kind: 'api',
           order: 12,
         },
@@ -132,6 +145,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Version Control System',
         },
         metadata: {
+          test: 'test',
           kind: 'versionControlSystem',
           order: 13,
         },
@@ -141,6 +155,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Package Manager',
         },
         metadata: {
+          test: 'test',
           kind: 'packageManager',
           order: 14,
         },
@@ -150,6 +165,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Monorepo',
         },
         metadata: {
+          test: 'test',
           kind: 'monorepo',
           order: 15,
         },
@@ -159,6 +175,7 @@ describe('Technology Category Domain Const', () => {
           name: 'IDE',
         },
         metadata: {
+          test: 'test',
           kind: 'ide',
           order: 16,
         },
@@ -168,6 +185,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Editor',
         },
         metadata: {
+          test: 'test',
           kind: 'editor',
           order: 17,
         },
@@ -177,6 +195,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Diagram',
         },
         metadata: {
+          test: 'test',
           kind: 'diagram',
           order: 18,
         },
@@ -186,6 +205,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Project Management',
         },
         metadata: {
+          test: 'test',
           kind: 'projectManagement',
           order: 19,
         },
@@ -195,6 +215,7 @@ describe('Technology Category Domain Const', () => {
           name: 'Operating System',
         },
         metadata: {
+          test: 'test',
           kind: 'operatingSystem',
           order: 20,
         },

@@ -1,7 +1,7 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { SkillDomain } from '../model/skill-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { SkillDomain } from '../model/domain/skill-domain.model';
 
-export const skillDomainConst: BaseDomain.Model<SkillDomain.Data, SkillDomain.Metadata> = {
+export const skillDomainConst: BaseCompose.Model<SkillDomain.Data, SkillDomain.Metadata> = {
   data: {
     languages: [
       {
@@ -21,5 +21,7 @@ export const skillDomainConst: BaseDomain.Model<SkillDomain.Data, SkillDomain.Me
       },
     ],
   },
-  metadata: {},
+  metadata: {
+    test: 'test',
+  },
 };

@@ -1,11 +1,11 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { ExperienceDomain } from '../model/experience-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { ExperienceDomain } from '../model/domain/experience-domain.model';
 import { CompanyKindDomainType } from '../type/kind/company-kind-domain.type';
 import { experienceDomainConst } from './experience-domain.const';
 
 describe('Experience Domain Const', () => {
   it('Should return the correct data', () => {
-    const correctData: BaseDomain.Type<
+    const correctData: BaseCompose.Type<
       CompanyKindDomainType,
       ExperienceDomain.Data,
       ExperienceDomain.Metadata
@@ -68,6 +68,7 @@ describe('Experience Domain Const', () => {
           ],
         },
         metadata: {
+          test: 'test',
           companyKind: 'aprSystem',
           order: 0,
         },
@@ -99,6 +100,7 @@ describe('Experience Domain Const', () => {
           ],
         },
         metadata: {
+          test: 'test',
           companyKind: 'primaris',
           order: 1,
         },

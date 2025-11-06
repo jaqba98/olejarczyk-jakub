@@ -1,9 +1,11 @@
-import { BaseDomain } from '../model/base-domain.model';
-import { HomeDomain } from '../model/home-domain.model';
+import { BaseCompose } from '../model/base/base-compose.model';
+import { HomeDomain } from '../model/domain/home-domain.model';
 
-export const homeDomainConst: BaseDomain.Model<HomeDomain.Data, HomeDomain.Metadata> = {
+export const homeDomainConst: BaseCompose.Model<HomeDomain.Data, HomeDomain.Metadata> = {
   data: {
     greeting: "Hello, I'm",
   },
-  metadata: {},
+  metadata: {
+    test: 'test',
+  },
 };

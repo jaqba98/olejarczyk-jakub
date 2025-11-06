@@ -1,5 +1,5 @@
-import { TechnologyCategoryDomain } from '../../../domain/model/technology-category-domain.model';
-import { TechnologyDomain } from '../../../domain/model/technology-domain.model';
+import { TechnologyCategoryDomain } from '../../../domain/model/domain/technology-category-domain.model';
+import { TechnologyDomain } from '../../../domain/model/domain/technology-domain.model';
 
 interface TechnologyDataModel {
   category: TechnologyCategoryDomain.Data;
