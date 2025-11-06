@@ -8,9 +8,9 @@ import { PersonalBuilder } from '../../builder/service/personal.builder';
 @State<NavStoreModel>({
   name: 'nav',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('nav'),
-    personalBuilder: PersonalBuilder.buildData(),
-    sectionsBuilder: SectionBuilder.buildDataForRoutableSections(),
+    ownSection: SectionBuilder.buildDataForKind('nav'),
+    personal: PersonalBuilder.buildData(),
+    sections: SectionBuilder.buildDataForRoutableSections(),
   },
 })
 @Injectable()

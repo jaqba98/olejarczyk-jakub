@@ -3,6 +3,6 @@ import { SocialMediaBuilderModel } from '../../../builder/model/builder/social-m
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface ContactStoreModel extends BaseStoreModel {
-  personalBuilder: PersonalBuilderModel;
-  socialMediaBuilder: SocialMediaBuilderModel;
+  personal: PersonalBuilderModel;
+  socialMedia: SocialMediaBuilderModel;
 }

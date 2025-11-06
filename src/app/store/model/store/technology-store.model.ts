@@ -2,5 +2,5 @@ import { TechnologyBuilderModel } from '../../../builder/model/builder/technolog
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface TechnologyStoreModel extends BaseStoreModel {
-  technologyBuilder: TechnologyBuilderModel;
+  technology: TechnologyBuilderModel;
 }

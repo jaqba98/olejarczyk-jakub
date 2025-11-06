@@ -8,8 +8,8 @@ import { ExperienceBuilder } from '../../builder/service/experience.builder';
 @State<ExperienceStoreModel>({
   name: 'experience',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('experience'),
-    experienceBuilder: ExperienceBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('experience'),
+    experience: ExperienceBuilder.buildData(),
   },
 })
 @Injectable()

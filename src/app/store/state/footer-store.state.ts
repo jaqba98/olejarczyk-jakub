@@ -9,9 +9,9 @@ import { FooterBuilder } from '../../builder/service/footer.builder';
 @State<FooterStoreModel>({
   name: 'footer',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('footer'),
-    personalBuilder: PersonalBuilder.buildData(),
-    footerBuilder: FooterBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('footer'),
+    personal: PersonalBuilder.buildData(),
+    footer: FooterBuilder.buildData(),
   },
 })
 @Injectable()

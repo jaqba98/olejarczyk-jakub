@@ -10,10 +10,10 @@ import { HomeBuilder } from '../../builder/service/home.builder';
 @State<HomeStoreModel>({
   name: 'home',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('home'),
-    personalBuilder: PersonalBuilder.buildData(),
-    socialMediaBuilder: SocialMediaBuilder.buildData(),
-    homeBuilder: HomeBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('home'),
+    personal: PersonalBuilder.buildData(),
+    socialMedia: SocialMediaBuilder.buildData(),
+    home: HomeBuilder.buildData(),
   },
 })
 @Injectable()

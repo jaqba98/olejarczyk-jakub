@@ -12,12 +12,12 @@ describe('Section Domain Const', () => {
     > = {
       nav: {
         data: {
-          kind: 'nav',
           id: 'nav',
           label: 'Nav',
           href: '#nav',
         },
         metadata: {
+          kind: 'nav',
           test: 'test',
           routable: false,
           order: 0,
@@ -25,12 +25,12 @@ describe('Section Domain Const', () => {
       },
       home: {
         data: {
-          kind: 'home',
           id: 'home',
           label: 'Home',
           href: '#home',
         },
         metadata: {
+          kind: 'home',
           test: 'test',
           routable: true,
           order: 1,
@@ -38,12 +38,12 @@ describe('Section Domain Const', () => {
       },
       aboutMe: {
         data: {
-          kind: 'aboutMe',
           id: 'about-me',
           label: 'About me',
           href: '#about-me',
         },
         metadata: {
+          kind: 'aboutMe',
           test: 'test',
           routable: true,
           order: 2,
@@ -51,12 +51,12 @@ describe('Section Domain Const', () => {
       },
       technology: {
         data: {
-          kind: 'technology',
           id: 'technology',
           label: 'Technology',
           href: '#technology',
         },
         metadata: {
+          kind: 'technology',
           test: 'test',
           routable: true,
           order: 3,
@@ -64,12 +64,12 @@ describe('Section Domain Const', () => {
       },
       skill: {
         data: {
-          kind: 'skill',
           id: 'skill',
           label: 'Skill',
           href: '#skill',
         },
         metadata: {
+          kind: 'skill',
           test: 'test',
           routable: true,
           order: 4,
@@ -77,12 +77,12 @@ describe('Section Domain Const', () => {
       },
       experience: {
         data: {
-          kind: 'experience',
           id: 'experience',
           label: 'Experience',
           href: '#experience',
         },
         metadata: {
+          kind: 'experience',
           test: 'test',
           routable: true,
           order: 5,
@@ -90,12 +90,12 @@ describe('Section Domain Const', () => {
       },
       resume: {
         data: {
-          kind: 'resume',
           id: 'resume',
           label: 'Resume',
           href: '#resume',
         },
         metadata: {
+          kind: 'resume',
           test: 'test',
           routable: true,
           order: 6,
@@ -103,12 +103,12 @@ describe('Section Domain Const', () => {
       },
       education: {
         data: {
-          kind: 'education',
           id: 'education',
           label: 'Education',
           href: '#education',
         },
         metadata: {
+          kind: 'education',
           test: 'test',
           routable: true,
           order: 7,
@@ -116,12 +116,12 @@ describe('Section Domain Const', () => {
       },
       project: {
         data: {
-          kind: 'project',
           id: 'project',
           label: 'Project',
           href: '#project',
         },
         metadata: {
+          kind: 'project',
           test: 'test',
           routable: true,
           order: 8,
@@ -129,12 +129,12 @@ describe('Section Domain Const', () => {
       },
       contact: {
         data: {
-          kind: 'contact',
           id: 'contact',
           label: 'Contact',
           href: '#contact',
         },
         metadata: {
+          kind: 'contact',
           test: 'test',
           routable: true,
           order: 9,
@@ -142,12 +142,12 @@ describe('Section Domain Const', () => {
       },
       footer: {
         data: {
-          kind: 'footer',
           id: 'footer',
           label: 'Footer',
           href: '#footer',
         },
         metadata: {
+          kind: 'footer',
           test: 'test',
           routable: false,
           order: 10,

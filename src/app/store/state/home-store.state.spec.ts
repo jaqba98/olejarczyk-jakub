@@ -20,10 +20,10 @@ describe('Home Store State', () => {
 
   it('Should return the correct data', async () => {
     const result: HomeStoreModel = {
-      sectionBuilder: SectionBuilder.buildDataForKind('home'),
-      personalBuilder: PersonalBuilder.buildData(),
-      socialMediaBuilder: SocialMediaBuilder.buildData(),
-      homeBuilder: HomeBuilder.buildData(),
+      ownSection: SectionBuilder.buildDataForKind('home'),
+      personal: PersonalBuilder.buildData(),
+      socialMedia: SocialMediaBuilder.buildData(),
+      home: HomeBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(HomeStoreState.getState))).toEqual(result);
   });

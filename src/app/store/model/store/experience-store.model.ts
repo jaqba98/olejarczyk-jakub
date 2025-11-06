@@ -2,5 +2,5 @@ import { ExperienceBuilderModel } from '../../../builder/model/builder/experienc
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface ExperienceStoreModel extends BaseStoreModel {
-  experienceBuilder: ExperienceBuilderModel;
+  experience: ExperienceBuilderModel;
 }

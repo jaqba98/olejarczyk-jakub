@@ -8,8 +8,8 @@ import { SkillBuilder } from '../../builder/service/skill.builder';
 @State<SkillStoreModel>({
   name: 'skill',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('skill'),
-    skillBuilder: SkillBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('skill'),
+    skill: SkillBuilder.buildData(),
   },
 })
 @Injectable()

@@ -9,9 +9,9 @@ import { SocialMediaBuilder } from '../../builder/service/social-media.builder';
 @State<ContactStoreModel>({
   name: 'contact',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('contact'),
-    personalBuilder: PersonalBuilder.buildData(),
-    socialMediaBuilder: SocialMediaBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('contact'),
+    personal: PersonalBuilder.buildData(),
+    socialMedia: SocialMediaBuilder.buildData(),
   },
 })
 @Injectable()

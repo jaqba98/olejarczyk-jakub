@@ -8,8 +8,8 @@ import { ProjectBuilder } from '../../builder/service/project.builder';
 @State<ProjectStoreModel>({
   name: 'project',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('project'),
-    projectBuilder: ProjectBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('project'),
+    project: ProjectBuilder.buildData(),
   },
 })
 @Injectable()

@@ -17,7 +17,7 @@ describe('Root Store State', () => {
 
   it('Should return the correct data', async () => {
     const result: RootStoreModel = {
-      sectionsBuilder: SectionBuilder.buildDataForAllSections(),
+      sections: SectionBuilder.buildDataForAllSections(),
     };
     expect(await firstValueFrom(store.selectOnce(RootStoreState.getState))).toEqual(result);
   });

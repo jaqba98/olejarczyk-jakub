@@ -3,6 +3,6 @@ import { PersonalBuilderModel } from '../../../builder/model/builder/personal-bu
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface FooterStoreModel extends BaseStoreModel {
-  personalBuilder: PersonalBuilderModel;
-  footerBuilder: FooterBuilderModel;
+  personal: PersonalBuilderModel;
+  footer: FooterBuilderModel;
 }

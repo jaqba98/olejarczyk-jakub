@@ -8,8 +8,8 @@ import { TechnologyBuilder } from '../../builder/service/technology.builder';
 @State<TechnologyStoreModel>({
   name: 'technology',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('technology'),
-    technologyBuilder: TechnologyBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('technology'),
+    technology: TechnologyBuilder.buildData(),
   },
 })
 @Injectable()

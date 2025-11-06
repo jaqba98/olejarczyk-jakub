@@ -18,9 +18,9 @@ describe('Nav Store State', () => {
 
   it('Should return the correct data', async () => {
     const result: NavStoreModel = {
-      sectionBuilder: SectionBuilder.buildDataForKind('nav'),
-      personalBuilder: PersonalBuilder.buildData(),
-      sectionsBuilder: SectionBuilder.buildDataForRoutableSections(),
+      ownSection: SectionBuilder.buildDataForKind('nav'),
+      personal: PersonalBuilder.buildData(),
+      sections: SectionBuilder.buildDataForRoutableSections(),
     };
     expect(await firstValueFrom(store.selectOnce(NavStoreState.getState))).toEqual(result);
   });

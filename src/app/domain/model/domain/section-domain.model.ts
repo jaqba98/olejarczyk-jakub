@@ -6,13 +6,13 @@ import { BaseDomain } from '../base/base-domain.model';
 
 export namespace SectionDomain {
   export interface Data extends BaseDomain.Data {
-    kind: SectionKindDomainType;
     id: SectionIdDomainType;
     label: SectionLabelDomainType;
     href: SectionHrefDomainType;
   }
 
   export interface Metadata extends BaseDomain.Metadata {
+    kind: SectionKindDomainType;
     routable: boolean;
     order: number;
   }

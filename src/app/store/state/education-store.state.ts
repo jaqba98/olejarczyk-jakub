@@ -8,8 +8,8 @@ import { EducationBuilder } from '../../builder/service/education.builder';
 @State<EducationStoreModel>({
   name: 'education',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('education'),
-    educationBuilder: EducationBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('education'),
+    education: EducationBuilder.buildData(),
   },
 })
 @Injectable()

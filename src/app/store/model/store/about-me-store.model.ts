@@ -2,5 +2,5 @@ import { AboutMeBuilderModel } from '../../../builder/model/builder/about-me-bui
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface AboutMeStoreModel extends BaseStoreModel {
-  aboutMeBuilder: AboutMeBuilderModel;
+  aboutMe: AboutMeBuilderModel;
 }

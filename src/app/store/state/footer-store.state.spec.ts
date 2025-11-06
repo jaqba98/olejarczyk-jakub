@@ -19,9 +19,9 @@ describe('Footer Store State', () => {
 
   it('Should return the correct data', async () => {
     const result: FooterStoreModel = {
-      sectionBuilder: SectionBuilder.buildDataForKind('footer'),
-      personalBuilder: PersonalBuilder.buildData(),
-      footerBuilder: FooterBuilder.buildData(),
+      ownSection: SectionBuilder.buildDataForKind('footer'),
+      personal: PersonalBuilder.buildData(),
+      footer: FooterBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(FooterStoreState.getState))).toEqual(result);
   });

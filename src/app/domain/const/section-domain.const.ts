@@ -9,12 +9,12 @@ export const sectionDomainConst: BaseCompose.Type<
 > = {
   nav: {
     data: {
-      kind: 'nav',
       id: 'nav',
       label: 'Nav',
       href: '#nav',
     },
     metadata: {
+      kind: 'nav',
       test: 'test',
       routable: false,
       order: 0,
@@ -22,12 +22,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   home: {
     data: {
-      kind: 'home',
       id: 'home',
       label: 'Home',
       href: '#home',
     },
     metadata: {
+      kind: 'home',
       test: 'test',
       routable: true,
       order: 1,
@@ -35,12 +35,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   aboutMe: {
     data: {
-      kind: 'aboutMe',
       id: 'about-me',
       label: 'About me',
       href: '#about-me',
     },
     metadata: {
+      kind: 'aboutMe',
       test: 'test',
       routable: true,
       order: 2,
@@ -48,12 +48,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   technology: {
     data: {
-      kind: 'technology',
       id: 'technology',
       label: 'Technology',
       href: '#technology',
     },
     metadata: {
+      kind: 'technology',
       test: 'test',
       routable: true,
       order: 3,
@@ -61,12 +61,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   skill: {
     data: {
-      kind: 'skill',
       id: 'skill',
       label: 'Skill',
       href: '#skill',
     },
     metadata: {
+      kind: 'skill',
       test: 'test',
       routable: true,
       order: 4,
@@ -74,12 +74,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   experience: {
     data: {
-      kind: 'experience',
       id: 'experience',
       label: 'Experience',
       href: '#experience',
     },
     metadata: {
+      kind: 'experience',
       test: 'test',
       routable: true,
       order: 5,
@@ -87,12 +87,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   resume: {
     data: {
-      kind: 'resume',
       id: 'resume',
       label: 'Resume',
       href: '#resume',
     },
     metadata: {
+      kind: 'resume',
       test: 'test',
       routable: true,
       order: 6,
@@ -100,12 +100,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   education: {
     data: {
-      kind: 'education',
       id: 'education',
       label: 'Education',
       href: '#education',
     },
     metadata: {
+      kind: 'education',
       test: 'test',
       routable: true,
       order: 7,
@@ -113,12 +113,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   project: {
     data: {
-      kind: 'project',
       id: 'project',
       label: 'Project',
       href: '#project',
     },
     metadata: {
+      kind: 'project',
       test: 'test',
       routable: true,
       order: 8,
@@ -126,12 +126,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   contact: {
     data: {
-      kind: 'contact',
       id: 'contact',
       label: 'Contact',
       href: '#contact',
     },
     metadata: {
+      kind: 'contact',
       test: 'test',
       routable: true,
       order: 9,
@@ -139,12 +139,12 @@ export const sectionDomainConst: BaseCompose.Type<
   },
   footer: {
     data: {
-      kind: 'footer',
       id: 'footer',
       label: 'Footer',
       href: '#footer',
     },
     metadata: {
+      kind: 'footer',
       test: 'test',
       routable: false,
       order: 10,

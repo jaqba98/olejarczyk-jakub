@@ -8,8 +8,8 @@ import { ResumeBuilder } from '../../builder/service/resume.builder';
 @State<ResumeStoreModel>({
   name: 'resume',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('resume'),
-    resumeBuilder: ResumeBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('resume'),
+    resume: ResumeBuilder.buildData(),
   },
 })
 @Injectable()

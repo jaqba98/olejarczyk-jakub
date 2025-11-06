@@ -3,6 +3,6 @@ import { SectionsBuilderModel } from '../../../builder/model/builder/section-bui
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface NavStoreModel extends BaseStoreModel {
-  personalBuilder: PersonalBuilderModel;
-  sectionsBuilder: SectionsBuilderModel;
+  personal: PersonalBuilderModel;
+  sections: SectionsBuilderModel;
 }

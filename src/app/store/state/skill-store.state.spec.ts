@@ -18,8 +18,8 @@ describe('Skill Store State', () => {
 
   it('Should return the correct data', async () => {
     const result: SkillStoreModel = {
-      sectionBuilder: SectionBuilder.buildDataForKind('skill'),
-      skillBuilder: SkillBuilder.buildData(),
+      ownSection: SectionBuilder.buildDataForKind('skill'),
+      skill: SkillBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(SkillStoreState.getState))).toEqual(result);
   });

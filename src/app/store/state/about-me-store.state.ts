@@ -8,8 +8,8 @@ import { AboutMeBuilder } from '../../builder/service/about-me.builder';
 @State<AboutMeStoreModel>({
   name: 'aboutMe',
   defaults: {
-    sectionBuilder: SectionBuilder.buildDataForKind('aboutMe'),
-    aboutMeBuilder: AboutMeBuilder.buildData(),
+    ownSection: SectionBuilder.buildDataForKind('aboutMe'),
+    aboutMe: AboutMeBuilder.buildData(),
   },
 })
 @Injectable()

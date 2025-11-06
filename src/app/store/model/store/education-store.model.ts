@@ -2,5 +2,5 @@ import { EducationBuilderModel } from '../../../builder/model/builder/education-
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface EducationStoreModel extends BaseStoreModel {
-  educationBuilder: EducationBuilderModel;
+  education: EducationBuilderModel;
 }

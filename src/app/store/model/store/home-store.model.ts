@@ -4,7 +4,7 @@ import { SocialMediaBuilderModel } from '../../../builder/model/builder/social-m
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface HomeStoreModel extends BaseStoreModel {
-  personalBuilder: PersonalBuilderModel;
-  socialMediaBuilder: SocialMediaBuilderModel;
-  homeBuilder: HomeBuilderModel;
+  personal: PersonalBuilderModel;
+  socialMedia: SocialMediaBuilderModel;
+  home: HomeBuilderModel;
 }

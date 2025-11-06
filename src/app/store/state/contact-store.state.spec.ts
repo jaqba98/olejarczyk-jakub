@@ -19,9 +19,9 @@ describe('Contact Store State', () => {
 
   it('Should return the correct data', async () => {
     const result: ContactStoreModel = {
-      sectionBuilder: SectionBuilder.buildDataForKind('contact'),
-      personalBuilder: PersonalBuilder.buildData(),
-      socialMediaBuilder: SocialMediaBuilder.buildData(),
+      ownSection: SectionBuilder.buildDataForKind('contact'),
+      personal: PersonalBuilder.buildData(),
+      socialMedia: SocialMediaBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(ContactStoreState.getState))).toEqual(result);
   });

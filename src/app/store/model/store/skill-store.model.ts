@@ -2,5 +2,5 @@ import { SkillBuilderModel } from '../../../builder/model/builder/skill-builder.
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface SkillStoreModel extends BaseStoreModel {
-  skillBuilder: SkillBuilderModel;
+  skill: SkillBuilderModel;
 }

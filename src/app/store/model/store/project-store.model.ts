@@ -2,5 +2,5 @@ import { ProjectBuilderModel } from '../../../builder/model/builder/project-buil
 import { BaseStoreModel } from '../base/base-store.model';
 
 export interface ProjectStoreModel extends BaseStoreModel {
-  projectBuilder: ProjectBuilderModel;
+  project: ProjectBuilderModel;
 }

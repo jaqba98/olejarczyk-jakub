@@ -7,7 +7,7 @@ import { SectionBuilder } from '../../builder/service/section.builder';
 @State<RootStoreModel>({
   name: 'root',
   defaults: {
-    sectionsBuilder: SectionBuilder.buildDataForAllSections(),
+    sections: SectionBuilder.buildDataForAllSections(),
   },
 })
 @Injectable()

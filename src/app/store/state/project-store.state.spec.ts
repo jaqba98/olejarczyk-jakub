@@ -18,8 +18,8 @@ describe('Project Store State', () => {
 
   it('Should return the correct data', async () => {
     const result: ProjectStoreModel = {
-      sectionBuilder: SectionBuilder.buildDataForKind('project'),
-      projectBuilder: ProjectBuilder.buildData(),
+      ownSection: SectionBuilder.buildDataForKind('project'),
+      project: ProjectBuilder.buildData(),
     };
     expect(await firstValueFrom(store.selectOnce(ProjectStoreState.getState))).toEqual(result);
   });
