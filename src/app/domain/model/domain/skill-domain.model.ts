@@ -1,6 +1,6 @@
 import { LanguageLevelDomainType } from '../../type/level/language-level-domain.type';
 import { LanguageNameDomainType } from '../../type/name/language-name-domain.type';
-import { BaseDomain } from '../base/base-domain.model';
+import { BaseDomain } from '../../../data/model/base/base-data.model';
 
 export namespace SkillDomain {
   interface LanguageModel {

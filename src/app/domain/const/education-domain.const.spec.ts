@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-combo.model';
+import { BaseCompose } from '../../data/model/base/base-combo-data.model';
 import { EducationDomain } from '../model/domain/education-domain.model';
 import { EducationKindDomainType } from '../type/kind/education-kind-domain.type';
 import { educationDomainConst } from './education-domain.const';

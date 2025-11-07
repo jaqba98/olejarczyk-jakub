@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-combo.model';
+import { BaseCompose } from '../../data/model/base/base-combo-data.model';
 import { HomeDomain } from '../model/domain/home-domain.model';
 import { homeDomainConst } from './home-domain.const';
 

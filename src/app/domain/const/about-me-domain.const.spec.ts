@@ -1,5 +1,5 @@
-import { BaseComboModel } from '../model/base/base-combo.model';
-import { AboutMeFieldDomainType } from '../type/field/about-me-field-domain.type';
+import { BaseComboModel } from '../../data/model/base/base-combo-data.model';
+import { AboutMeFieldDomainType } from '../../data/type/field/about-me-field-data.type';
 import { aboutMeDomainConst } from './about-me-domain.const';
 
 describe('Domain const: About me', () => {

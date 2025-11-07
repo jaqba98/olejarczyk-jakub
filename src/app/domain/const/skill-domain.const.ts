@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-combo.model';
+import { BaseCompose } from '../../data/model/base/base-combo-data.model';
 import { SkillDomain } from '../model/domain/skill-domain.model';
 
 export const skillDomainConst: BaseCompose.Model<SkillDomain.Data, SkillDomain.Metadata> = {

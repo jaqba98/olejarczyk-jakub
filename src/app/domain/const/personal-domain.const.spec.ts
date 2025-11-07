@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-combo.model';
+import { BaseCompose } from '../../data/model/base/base-combo-data.model';
 import { PersonalDomain } from '../model/domain/personal-domain.model';
 import { personalDomainConst } from './personal-domain.const';
 

@@ -1,4 +1,4 @@
-import { BaseDomain } from '../base/base-domain.model';
+import { BaseDomain } from '../../../data/model/base/base-data.model';
 
 export namespace FooterDomain {
   export interface Data extends BaseDomain.Data {

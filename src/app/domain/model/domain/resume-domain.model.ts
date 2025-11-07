@@ -1,5 +1,5 @@
 import { DocumentAssetDomainType } from '../../type/asset/document-asset-domain.type';
-import { BaseDomain } from '../base/base-domain.model';
+import { BaseDomain } from '../../../data/model/base/base-data.model';
 
 export namespace ResumeDomain {
   export interface Data extends BaseDomain.Data {

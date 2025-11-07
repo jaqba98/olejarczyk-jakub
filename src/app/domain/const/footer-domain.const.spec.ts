@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-combo.model';
+import { BaseCompose } from '../../data/model/base/base-combo-data.model';
 import { FooterDomain } from '../model/domain/footer-domain.model';
 import { footerDomainConst } from './footer-domain.const';
 

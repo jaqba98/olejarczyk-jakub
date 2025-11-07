@@ -3,7 +3,7 @@ import { TechnologyKindDomainType } from '../../type/kind/technology-kind-domain
 import { ExperienceTitleDomainType } from '../../type/title/experience-title-domain.type';
 import { EmploymentTypeDomainType } from '../../type/type/employment-type-domain.type';
 import { LocationTypeDomainType } from '../../type/type/location-type-domain.type';
-import { BaseDomain } from '../base/base-domain.model';
+import { BaseDomain } from '../../../data/model/base/base-data.model';
 
 export namespace ExperienceDomain {
   export interface Model {

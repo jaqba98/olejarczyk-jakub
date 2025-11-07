@@ -4,7 +4,7 @@ import { CountryNameDomainType } from '../../type/name/country-name-domain.type'
 import { FirstNameDomainType } from '../../type/name/first-name-domain.type';
 import { LastNameDomainType } from '../../type/name/last-name-domain.type';
 import { ExperienceTitleDomainType } from '../../type/title/experience-title-domain.type';
-import { BaseDomain } from '../base/base-domain.model';
+import { BaseDomain } from '../../../data/model/base/base-data.model';
 
 export namespace PersonalDomain {
   export interface Data extends BaseDomain.Data {

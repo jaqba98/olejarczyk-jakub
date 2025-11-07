@@ -1,0 +1,1 @@
+export type AboutMeFieldDataType = 'descriptions';

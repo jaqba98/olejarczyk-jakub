@@ -3,7 +3,7 @@ import { TechnologyCategoryKindDomainType } from '../../type/kind/technology-cat
 import { TechnologyKindDomainType } from '../../type/kind/technology-kind-domain.type';
 import { TechnologyLevelDomainType } from '../../type/level/technology-level-domain.type';
 import { TechnologyNameDomainType } from '../../type/name/technology-name-domain.type';
-import { BaseDomain } from '../base/base-domain.model';
+import { BaseDomain } from '../../../data/model/base/base-data.model';
 
 export namespace TechnologyDomain {
   export interface Data extends BaseDomain.Data {

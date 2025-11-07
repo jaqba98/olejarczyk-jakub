@@ -3,7 +3,7 @@ import { StatusEntityDomainType } from '../../type/entity/status-entity-domain.t
 import { ProjectKindDomainType } from '../../type/kind/project-kind-domain.type';
 import { TechnologyKindDomainType } from '../../type/kind/technology-kind-domain.type';
 import { ProjectNameDomainType } from '../../type/name/project-name-domain.type';
-import { BaseDomain } from '../base/base-domain.model';
+import { BaseDomain } from '../../../data/model/base/base-data.model';
 
 export namespace ProjectDomain {
   interface RepositoryNoneModel {
