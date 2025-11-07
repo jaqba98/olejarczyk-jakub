@@ -1,3 +1,3 @@
-import { SectionData } from '../../data/model/section-data.model';
+import { SectionData } from '../../domain/model/section-domain.model';
 
 export type SectionLayoutModel = SectionData.Model[];
