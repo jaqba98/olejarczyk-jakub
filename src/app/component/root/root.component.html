@@ -1,1 +1,3 @@
-<p>root component!</p>
+@for (section of sections$ | async; track section) {
+  <p>{{ section.id }}</p>
+}
