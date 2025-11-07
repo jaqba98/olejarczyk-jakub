@@ -6,6 +6,7 @@ describe('Domain: Section', () => {
     const domain: SectionDomain.Type = {
       nav: {
         data: {
+          type: 'nav',
           id: 'nav',
           label: 'Nav',
           href: '#nav',
@@ -17,6 +18,7 @@ describe('Domain: Section', () => {
       },
       home: {
         data: {
+          type: 'home',
           id: 'home',
           label: 'Home',
           href: '#home',
@@ -28,6 +30,7 @@ describe('Domain: Section', () => {
       },
       aboutMe: {
         data: {
+          type: 'aboutMe',
           id: 'about-me',
           label: 'About me',
           href: '#about-me',
@@ -39,6 +42,7 @@ describe('Domain: Section', () => {
       },
       technology: {
         data: {
+          type: 'technology',
           id: 'technology',
           label: 'Technology',
           href: '#technology',
@@ -50,6 +54,7 @@ describe('Domain: Section', () => {
       },
       skill: {
         data: {
+          type: 'skill',
           id: 'skill',
           label: 'Skill',
           href: '#skill',
@@ -61,6 +66,7 @@ describe('Domain: Section', () => {
       },
       experience: {
         data: {
+          type: 'experience',
           id: 'experience',
           label: 'Experience',
           href: '#experience',
@@ -72,6 +78,7 @@ describe('Domain: Section', () => {
       },
       resume: {
         data: {
+          type: 'resume',
           id: 'resume',
           label: 'Resume',
           href: '#resume',
@@ -83,6 +90,7 @@ describe('Domain: Section', () => {
       },
       education: {
         data: {
+          type: 'education',
           id: 'education',
           label: 'Education',
           href: '#education',
@@ -94,6 +102,7 @@ describe('Domain: Section', () => {
       },
       project: {
         data: {
+          type: 'project',
           id: 'project',
           label: 'Project',
           href: '#project',
@@ -105,6 +114,7 @@ describe('Domain: Section', () => {
       },
       contact: {
         data: {
+          type: 'contact',
           id: 'contact',
           label: 'Contact',
           href: '#contact',
@@ -116,6 +126,7 @@ describe('Domain: Section', () => {
       },
       footer: {
         data: {
+          type: 'footer',
           id: 'footer',
           label: 'Footer',
           href: '#footer',

@@ -1,3 +1,3 @@
 @for (section of sections$ | async; track section) {
-  <p>{{ section.id }}</p>
+  <ng-container *ngComponentOutlet="section"></ng-container>
 }

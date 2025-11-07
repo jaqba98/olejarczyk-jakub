@@ -1,17 +1,17 @@
-// import { Type } from '@angular/core';
-// import { SectionAbstract } from '../abstract/section.abstract';
-// import { SectionKindDomainType } from '../type/kind/section-kind.type';
+import { SectionDomainType } from '../domain/type/section-domain.type';
 
-// const sectionStore = new Map<SectionKindDomainType, Type<SectionAbstract>>();
+const sectionStore = new Map<SectionDomainType, any>();
 
-// export const SectionDecorator = (kind: SectionKindDomainType) => {
-//   return (component: Type<SectionAbstract>) => {
-//     sectionStore.set(kind, component);
-//   };
-// };
+export const SectionDecorator = (type: SectionDomainType) => {
+  return (component: any) => {
+    sectionStore.set(type, component);
+  };
+};
 
-// export const getSection = (kind: SectionKindDomainType): Type<SectionAbstract> => {
-//   const section = sectionStore.get(kind);
-//   if (section) return section;
-//   throw new Error(`The ${kind} does not exist in the section store!`);
-// };
+export const getSection = (type: SectionDomainType) => {
+  const section = sectionStore.get(type);
+  if (section === undefined) {
+    throw new Error(`The ${type} does not exist in the section store!`);
+  }
+  return section;
+};

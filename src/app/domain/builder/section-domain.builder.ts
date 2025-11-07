@@ -5,6 +5,7 @@ export class SectionDomainBuilder {
     return {
       nav: {
         data: {
+          type: 'nav',
           id: 'nav',
           label: 'Nav',
           href: '#nav',
@@ -16,6 +17,7 @@ export class SectionDomainBuilder {
       },
       home: {
         data: {
+          type: 'home',
           id: 'home',
           label: 'Home',
           href: '#home',
@@ -27,6 +29,7 @@ export class SectionDomainBuilder {
       },
       aboutMe: {
         data: {
+          type: 'aboutMe',
           id: 'about-me',
           label: 'About me',
           href: '#about-me',
@@ -38,6 +41,7 @@ export class SectionDomainBuilder {
       },
       technology: {
         data: {
+          type: 'technology',
           id: 'technology',
           label: 'Technology',
           href: '#technology',
@@ -49,6 +53,7 @@ export class SectionDomainBuilder {
       },
       skill: {
         data: {
+          type: 'skill',
           id: 'skill',
           label: 'Skill',
           href: '#skill',
@@ -60,6 +65,7 @@ export class SectionDomainBuilder {
       },
       experience: {
         data: {
+          type: 'experience',
           id: 'experience',
           label: 'Experience',
           href: '#experience',
@@ -71,6 +77,7 @@ export class SectionDomainBuilder {
       },
       resume: {
         data: {
+          type: 'resume',
           id: 'resume',
           label: 'Resume',
           href: '#resume',
@@ -82,6 +89,7 @@ export class SectionDomainBuilder {
       },
       education: {
         data: {
+          type: 'education',
           id: 'education',
           label: 'Education',
           href: '#education',
@@ -93,6 +101,7 @@ export class SectionDomainBuilder {
       },
       project: {
         data: {
+          type: 'project',
           id: 'project',
           label: 'Project',
           href: '#project',
@@ -104,6 +113,7 @@ export class SectionDomainBuilder {
       },
       contact: {
         data: {
+          type: 'contact',
           id: 'contact',
           label: 'Contact',
           href: '#contact',
@@ -115,6 +125,7 @@ export class SectionDomainBuilder {
       },
       footer: {
         data: {
+          type: 'footer',
           id: 'footer',
           label: 'Footer',
           href: '#footer',
