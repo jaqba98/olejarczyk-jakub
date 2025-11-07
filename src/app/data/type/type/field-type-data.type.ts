@@ -1,9 +1,1 @@
-export type FieldTypeDataType =
-  | 'string'
-  | 'number'
-  | 'boolean'
-  | 'date'
-  | 'string[]'
-  | 'number[]'
-  | 'boolean[]'
-  | 'date[]';
+export type FieldTypeDataType = 'string' | 'number' | 'boolean' | 'date';

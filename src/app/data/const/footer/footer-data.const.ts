@@ -3,8 +3,11 @@ import { FooterDomainDataModel } from '../../model/domain/footer-domain-data.mod
 export const footerDataConst: FooterDomainDataModel = {
   field: {
     rightsDescription: {
-      kind: 'string',
-      value: 'All rights reserved.',
+      type: 'string',
+      value: {
+        type: 'single',
+        value: 'All rights reserved.',
+      },
     },
   },
 };

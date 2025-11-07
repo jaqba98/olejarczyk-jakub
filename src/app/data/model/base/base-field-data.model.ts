@@ -1,25 +1,18 @@
 import { FieldTypeDataType } from '../../type/type/field-type-data.type';
+import { BaseValueDataModel } from './base-value-data.model';
 
-interface BaseGenericFieldDataModel<TKind extends FieldTypeDataType, TValue> {
-  kind: TKind;
-  value: TValue;
+interface GenericBaseFieldDataModel<T extends FieldTypeDataType, TValue> {
+  type: T;
+  value: BaseValueDataModel<TValue>;
 }
 
-type BaseStringFieldDataModel = BaseGenericFieldDataModel<'string', string>;
-type BaseNumberFieldDataModel = BaseGenericFieldDataModel<'number', number>;
-type BaseBooleanFieldDataModel = BaseGenericFieldDataModel<'boolean', boolean>;
-type BaseDateFieldDataModel = BaseGenericFieldDataModel<'date', Date>;
-type BaseStringArrayFieldDataModel = BaseGenericFieldDataModel<'string[]', string[]>;
-type BaseNumberArrayFieldDataModel = BaseGenericFieldDataModel<'number[]', number[]>;
-type BaseBooleanArrayFieldDataModel = BaseGenericFieldDataModel<'boolean[]', boolean[]>;
-type BaseDateArrayFieldDataModel = BaseGenericFieldDataModel<'date[]', Date[]>;
+type StringBaseFieldDataModel = GenericBaseFieldDataModel<'string', string>;
+type NumberBaseFieldDataModel = GenericBaseFieldDataModel<'number', number>;
+type BooleanBaseFieldDataModel = GenericBaseFieldDataModel<'boolean', boolean>;
+type DateBaseFieldDataModel = GenericBaseFieldDataModel<'date', Date>;
 
 export type BaseFieldDataModel =
-  | BaseStringFieldDataModel
-  | BaseNumberFieldDataModel
-  | BaseBooleanFieldDataModel
-  | BaseDateFieldDataModel
-  | BaseStringArrayFieldDataModel
-  | BaseNumberArrayFieldDataModel
-  | BaseBooleanArrayFieldDataModel
-  | BaseDateArrayFieldDataModel;
+  | StringBaseFieldDataModel
+  | NumberBaseFieldDataModel
+  | BooleanBaseFieldDataModel
+  | DateBaseFieldDataModel;
