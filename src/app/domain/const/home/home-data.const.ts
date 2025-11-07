@@ -1,4 +1,4 @@
-import { BaseDataModel } from '../../model/base-data.model';
+import { BaseDataModel } from '../../model/domain.model';
 
 export const homeDataConst: BaseDataModel = {
   field: {

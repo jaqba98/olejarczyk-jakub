@@ -1,4 +1,4 @@
-import { BaseDataModel } from '../../model/base-data.model';
+import { BaseDataModel } from '../../model/domain.model';
 import { BaseFieldDataModel } from '../../model/base-field-data.model';
 
 const build = (
