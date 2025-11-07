@@ -1,7 +1,6 @@
-import { BaseDataModel } from '../../model/base/base-data.model';
-import { AboutMeFieldDataType } from '../../type/field/about-me-field-data.type';
+import { AboutMeDomainDataModel } from '../../model/domain/about-me-domain-data.model';
 
-export const aboutMeDataConst: BaseDataModel<AboutMeFieldDataType> = {
+export const aboutMeDataConst: AboutMeDomainDataModel = {
   field: {
     descriptions: {
       kind: 'string[]',

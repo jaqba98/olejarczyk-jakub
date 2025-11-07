@@ -1,7 +1,6 @@
-import { BaseDataModel } from '../../model/base/base-data.model';
-import { HomeFieldDataType } from '../../type/field/home-field-data.type';
+import { HomeDomainDataModel } from '../../model/domain/home-domain-data.model';
 
-export const homeDataConst: BaseDataModel<HomeFieldDataType> = {
+export const homeDataConst: HomeDomainDataModel = {
   field: {
     greeting: {
       kind: 'string',

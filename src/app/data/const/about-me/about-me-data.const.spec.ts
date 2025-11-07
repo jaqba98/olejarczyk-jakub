@@ -1,10 +1,9 @@
-import { BaseDataModel } from '../../model/base/base-data.model';
-import { AboutMeFieldDataType } from '../../type/field/about-me-field-data.type';
+import { AboutMeDomainDataModel } from '../../model/domain/about-me-domain-data.model';
 import { aboutMeDataConst } from './about-me-data.const';
 
 describe('Data Const: About Me', () => {
   it('should return valid data', () => {
-    const data: BaseDataModel<AboutMeFieldDataType> = {
+    const data: AboutMeDomainDataModel = {
       field: {
         descriptions: {
           kind: 'string[]',

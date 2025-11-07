@@ -1,10 +1,9 @@
-import { BaseDataModel } from '../../model/base/base-data.model';
-import { FooterFieldDataType } from '../../type/field/footer-field-data.type';
+import { FooterDomainDataModel } from '../../model/domain/footer-domain-data.model';
 import { footerDataConst } from './footer-data.const';
 
 describe('Data Const: Footer', () => {
   it('should return valid data', () => {
-    const data: BaseDataModel<FooterFieldDataType> = {
+    const data: FooterDomainDataModel = {
       field: {
         rightsDescription: {
           kind: 'string',

@@ -1,10 +1,9 @@
-import { BaseDataModel } from '../../model/base/base-data.model';
-import { HomeFieldDataType } from '../../type/field/home-field-data.type';
+import { HomeDomainDataModel } from '../../model/domain/home-domain-data.model';
 import { homeDataConst } from './home-data.const';
 
 describe('Data Const: Home', () => {
   it('should return valid data', () => {
-    const data: BaseDataModel<HomeFieldDataType> = {
+    const data: HomeDomainDataModel = {
       field: {
         greeting: {
           kind: 'string',
