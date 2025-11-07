@@ -1,9 +1,9 @@
 import { sectionMetadataConst } from '../const/section-metadata.const';
-import { SectionMetadataModel } from '../model/section-metadata.model';
+import { SectionMetadata } from '../model/section-metadata.model';
 
 describe('Metadata: Section', () => {
   it('should return valid data', () => {
-    const metadata: SectionMetadataModel = {
+    const metadata: SectionMetadata.Type = {
       nav: {
         routable: false,
         order: 0,

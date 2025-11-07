@@ -1,3 +1,7 @@
 import { SectionKindType } from '../../type/kind/section-kind.type';
 
-export type SectionLayoutModel = Record<SectionKindType, string>;
+export namespace SectionLayout {
+  export interface Model {}
+
+  export type Type = Record<SectionKindType, Model>;
+}

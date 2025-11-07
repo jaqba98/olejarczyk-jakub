@@ -1,8 +1,10 @@
 import { SectionKindType } from '../../type/kind/section-kind.type';
 
-interface MetadataModel {
-  routable: boolean;
-  order: number;
-}
+export namespace SectionMetadata {
+  export interface Model {
+    routable: boolean;
+    order: number;
+  }
 
-export type SectionMetadataModel = Record<SectionKindType, MetadataModel>;
+  export type Type = Record<SectionKindType, Model>;
+}

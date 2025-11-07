@@ -1,6 +1,6 @@
-import { SectionMetadataModel } from '../model/section-metadata.model';
+import { SectionMetadata } from '../model/section-metadata.model';
 
-export const sectionMetadataConst: SectionMetadataModel = {
+export const sectionMetadataConst: SectionMetadata.Type = {
   nav: {
     routable: false,
     order: 0,

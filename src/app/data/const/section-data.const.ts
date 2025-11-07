@@ -1,6 +1,6 @@
-import { SectionDataModel } from '../model/section-data.model';
+import { SectionData } from '../model/section-data.model';
 
-export const sectionDataConst: SectionDataModel = {
+export const sectionDataConst: SectionData.Type = {
   nav: {
     id: 'nav',
     label: 'Nav',

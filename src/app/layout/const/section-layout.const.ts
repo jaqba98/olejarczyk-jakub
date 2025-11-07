@@ -1,6 +1,6 @@
-import { SectionLayoutModel } from '../model/section-layout.model';
+import { SectionLayout } from '../model/section-layout.model';
 
-export const sectionLayoutConst: SectionLayoutModel = {
+export const sectionLayoutConst: SectionLayout.Type = {
   nav: '',
   home: '',
   aboutMe: '',

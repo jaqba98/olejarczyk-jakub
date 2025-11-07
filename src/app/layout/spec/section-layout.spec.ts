@@ -1,9 +1,9 @@
 import { sectionLayoutConst } from '../const/section-layout.const';
-import { SectionLayoutModel } from '../model/section-layout.model';
+import { SectionLayout } from '../model/section-layout.model';
 
 describe('Layout: Section', () => {
   it('should return valid data', () => {
-    const data: SectionLayoutModel = {
+    const data: SectionLayout.Type = {
       nav: '',
       home: '',
       aboutMe: '',

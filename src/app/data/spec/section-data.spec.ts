@@ -1,9 +1,9 @@
 import { sectionDataConst } from '../const/section-data.const';
-import { SectionDataModel } from '../model/section-data.model';
+import { SectionData } from '../model/section-data.model';
 
 describe('Data: Section', () => {
   it('should return valid data', () => {
-    const data: SectionDataModel = {
+    const data: SectionData.Type = {
       nav: {
         id: 'nav',
         label: 'Nav',

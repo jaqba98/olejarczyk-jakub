@@ -1,9 +1,11 @@
 import { SectionKindType } from '../../type/kind/section-kind.type';
 
-interface DataModel {
-  id: string;
-  label: string;
-  href: string;
-}
+export namespace SectionData {
+  export interface Model {
+    id: string;
+    label: string;
+    href: string;
+  }
 
-export type SectionDataModel = Record<SectionKindType, DataModel>;
+  export type Type = Record<SectionKindType, Model>;
+}
