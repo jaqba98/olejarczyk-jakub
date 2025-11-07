@@ -1,15 +1,13 @@
-// import type { Meta, StoryObj } from '@storybook/angular';
+import type { Meta, StoryObj } from '@storybook/angular';
 
-// import { RootComponent } from './root.component';
-// import { StoreProvider } from '../../store/provider/store.provider';
+import { RootComponent } from './root.component';
 
-// const meta: Meta<RootComponent> = {
-//   title: 'component/root',
-//   component: RootComponent,
-//   decorators: StoreProvider.getStorybookProvider(),
-// };
+const meta: Meta<RootComponent> = {
+  title: 'component/root',
+  component: RootComponent,
+};
 
-// export default meta;
-// type Story = StoryObj<RootComponent>;
+export default meta;
+type Story = StoryObj<RootComponent>;
 
-// export const Default: Story = {};
+export const Default: Story = {};
