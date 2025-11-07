@@ -1,6 +1,6 @@
 import { Type } from '@angular/core';
 import { SectionAbstract } from '../abstract/section.abstract';
-import { SectionKindDomainType } from '../domain/type/kind/section-kind-domain.type';
+import { SectionKindDomainType } from '../data/type/section-data.type';
 
 const sectionStore = new Map<SectionKindDomainType, Type<SectionAbstract>>();
 

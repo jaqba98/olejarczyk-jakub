@@ -1,4 +1,4 @@
-export type SectionKindDomainType =
+export type SectionDataType =
   | 'nav'
   | 'home'
   | 'aboutMe'

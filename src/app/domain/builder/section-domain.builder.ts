@@ -1,5 +1,5 @@
 import { RecordModel } from '../model/domain.model';
-import { SectionKindDomainType } from '../type/kind/section-kind-domain.type';
+import { SectionKindDomainType } from '../../data/type/section-data.type';
 import {
   booleanDomainBuilder,
   numberDomainBuilder,
