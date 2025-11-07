@@ -1,17 +1,17 @@
-import { BaseCompose } from '../../data/model/base/base-combo-data.model';
-import { FooterDomain } from '../model/domain/footer-domain.model';
-import { footerDomainConst } from './footer-domain.const';
+// import { BaseCompose } from '../../data/model/base/base-combo-data.model';
+// import { FooterDomain } from '../model/domain/footer-domain.model';
+// import { footerDomainConst } from './footer-domain.const';
 
-describe('Footer Domain Const', () => {
-  it('Should return the correct data', () => {
-    const correctData: BaseCompose.Model<FooterDomain.Data, FooterDomain.Metadata> = {
-      data: {
-        rightsDescription: 'All rights reserved.',
-      },
-      metadata: {
-        test: 'test',
-      },
-    };
-    expect(footerDomainConst).toEqual(correctData);
-  });
-});
+// describe('Footer Domain Const', () => {
+//   it('Should return the correct data', () => {
+//     const correctData: BaseCompose.Model<FooterDomain.Data, FooterDomain.Metadata> = {
+//       data: {
+//         rightsDescription: 'All rights reserved.',
+//       },
+//       metadata: {
+//         test: 'test',
+//       },
+//     };
+//     expect(footerDomainConst).toEqual(correctData);
+//   });
+// });

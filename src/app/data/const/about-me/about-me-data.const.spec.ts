@@ -1,6 +1,6 @@
-import { aboutMeDomainConst } from '../../../domain/const/about-me-domain.const';
 import { BaseDataModel } from '../../model/base/base-data.model';
 import { AboutMeFieldDataType } from '../../type/field/about-me-field-data.type';
+import { aboutMeDataConst } from './about-me-data.const';
 
 describe('Data Const: About Me', () => {
   it('should return valid data', () => {
@@ -17,6 +17,6 @@ describe('Data Const: About Me', () => {
         },
       },
     };
-    expect(aboutMeDomainConst).toEqual(data);
+    expect(aboutMeDataConst).toEqual(data);
   });
 });
