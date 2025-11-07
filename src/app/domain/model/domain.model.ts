@@ -5,12 +5,12 @@ interface GenericModel<TType extends DomainType, TValue> {
   value: TValue;
 }
 
-type StringModel = GenericModel<'string', string>;
-type StringArrayModel = GenericModel<'string', string[]>;
-type NumberModel = GenericModel<'number', number>;
-type BooleanModel = GenericModel<'boolean', boolean>;
-type DateModel = GenericModel<'Date', Date>;
-type RecordModel = GenericModel<'Record', DomainModel>;
+export type StringModel = GenericModel<'string', string>;
+export type StringArrayModel = GenericModel<'string[]', string[]>;
+export type NumberModel = GenericModel<'number', number>;
+export type BooleanModel = GenericModel<'boolean', boolean>;
+export type DateModel = GenericModel<'Date', Date>;
+export type RecordModel = GenericModel<'Record', DomainModel>;
 
 type ComplexType =
   | StringModel
