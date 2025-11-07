@@ -1,4 +1,4 @@
-import { SectionDataType } from '../type/section-data.type';
+import { SectionKindType } from '../../type/kind/section-kind.type';
 
 interface SectionModel {
   id: string;
@@ -6,4 +6,4 @@ interface SectionModel {
   href: string;
 }
 
-export type SectionDataModel = Record<SectionDataType, SectionModel>;
+export type SectionDataModel = Record<SectionKindType, SectionModel>;
