@@ -1,6 +1,6 @@
-import { ResumeBuilderModel } from '../../../builder/model/builder/resume-builder.model';
-import { BaseStoreModel } from '../base/base-store.model';
+// import { ResumeBuilderModel } from '../../../builder/model/builder/resume-builder.model';
+// import { BaseStoreModel } from '../base/base-store.model';
 
-export interface ResumeStoreModel extends BaseStoreModel {
-  resume: ResumeBuilderModel;
-}
+// export interface ResumeStoreModel extends BaseStoreModel {
+//   resume: ResumeBuilderModel;
+// }

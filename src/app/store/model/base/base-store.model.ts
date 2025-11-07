@@ -1,5 +1,5 @@
-import { SectionBuilderModel } from '../../../builder/model/builder/section-builder.model';
+// import { SectionBuilderModel } from '../../../builder/model/builder/section-builder.model';
 
-export interface BaseStoreModel {
-  ownSection: SectionBuilderModel;
-}
+// export interface BaseStoreModel {
+//   ownSection: SectionBuilderModel;
+// }
