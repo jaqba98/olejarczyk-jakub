@@ -1,5 +1,5 @@
-import { sectionDomainConst } from '../const/section-domain.const';
 import { SectionDomain } from '../model/section-domain.model';
+import { SectionDomainBuilder } from './section-domain.builder';
 
 describe('Domain: Section', () => {
   it('should return valid data', () => {
@@ -126,6 +126,6 @@ describe('Domain: Section', () => {
         },
       },
     };
-    expect(sectionDomainConst).toEqual(domain);
+    expect(SectionDomainBuilder.build()).toEqual(domain);
   });
 });

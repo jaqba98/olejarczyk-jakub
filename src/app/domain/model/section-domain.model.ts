@@ -1,7 +1,7 @@
 import { SectionDomainType } from '../type/section-domain.type';
 
 export namespace SectionDomain {
-  interface Data {
+  export interface Data {
     id: string;
     label: string;
     href: string;
