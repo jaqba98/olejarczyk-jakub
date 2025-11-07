@@ -1,1 +1,0 @@
-export type HomeFieldDataType = 'greeting';

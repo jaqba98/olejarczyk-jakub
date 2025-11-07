@@ -1,14 +1,14 @@
-import { HomeDomainDataModel } from '../../model/domain/home-domain-data.model';
+import { BaseDataModel } from '../../model/base-data.model';
 import { homeDataConst } from './home-data.const';
 
 describe('Data Const: Home', () => {
   it('should return valid data', () => {
-    const data: HomeDomainDataModel = {
+    const data: BaseDataModel = {
       field: {
         greeting: {
-          type: 'string',
+          kind: 'string',
           value: {
-            type: 'single',
+            kind: 'single',
             value: "Hello, I'm",
           },
         },

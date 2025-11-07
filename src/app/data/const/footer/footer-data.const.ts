@@ -1,11 +1,11 @@
-import { FooterDomainDataModel } from '../../model/domain/footer-domain-data.model';
+import { BaseDataModel } from '../../model/base-data.model';
 
-export const footerDataConst: FooterDomainDataModel = {
+export const footerDataConst: BaseDataModel = {
   field: {
     rightsDescription: {
-      type: 'string',
+      kind: 'string',
       value: {
-        type: 'single',
+        kind: 'single',
         value: 'All rights reserved.',
       },
     },

@@ -1,14 +1,14 @@
-import { AboutMeDomainDataModel } from '../../model/domain/about-me-domain-data.model';
+import { BaseDataModel } from '../../model/base-data.model';
 import { aboutMeDataConst } from './about-me-data.const';
 
 describe('Data Const: About Me', () => {
   it('should return valid data', () => {
-    const data: AboutMeDomainDataModel = {
+    const data: BaseDataModel = {
       field: {
         descriptions: {
-          type: 'string',
+          kind: 'string',
           value: {
-            type: 'array',
+            kind: 'array',
             value: [
               'I am a software engineer with over 5 years of experience, for whom clean, readable, and well-thought-out code is a priority. I follow the principle of "Do not repeat yourself", striving for elegant and efficient solutions. My strong analytical thinking allows me to effectively solve complex technical challenges.',
               'I have hands-on experience in front-end and back-end development, creating scalable web applications using Angular, TypeScript, Node.js, and PostgreSQL. I build reusable components, design monorepo-based architectures, and ensure efficient client-server communication through REST APIs. I also focus on maintaining high code quality using Jest, ESLint, Prettier, and automated CI/CD workflows supported by Docker and GitLab.',
