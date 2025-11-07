@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { TechnologyCategoryDomain } from '../model/domain/technology-category-domain.model';
 import { TechnologyCategoryKindDomainType } from '../type/kind/technology-category-kind-domain.type';
 

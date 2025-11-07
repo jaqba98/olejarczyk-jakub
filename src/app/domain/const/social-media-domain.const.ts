@@ -1,5 +1,5 @@
 import { SvgConst } from '../../const/svg.const';
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { SocialMediaDomain } from '../model/domain/social-media-domain.model';
 import { SocialMediaKindDomainType } from '../type/kind/social-media-kind-domain.type';
 

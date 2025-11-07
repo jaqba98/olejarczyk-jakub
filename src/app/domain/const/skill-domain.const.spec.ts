@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { SkillDomain } from '../model/domain/skill-domain.model';
 import { skillDomainConst } from './skill-domain.const';
 

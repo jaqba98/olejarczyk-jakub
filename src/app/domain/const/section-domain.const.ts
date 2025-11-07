@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { SectionDomain } from '../model/domain/section-domain.model';
 import { SectionKindDomainType } from '../type/kind/section-kind-domain.type';
 

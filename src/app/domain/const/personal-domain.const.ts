@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { PersonalDomain } from '../model/domain/personal-domain.model';
 
 export const personalDomainConst: BaseCompose.Model<PersonalDomain.Data, PersonalDomain.Metadata> =

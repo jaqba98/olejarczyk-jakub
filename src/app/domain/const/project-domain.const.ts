@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { ProjectDomain } from '../model/domain/project-domain.model';
 import { ProjectKindDomainType } from '../type/kind/project-kind-domain.type';
 

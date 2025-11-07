@@ -1,5 +1,5 @@
 import { SvgConst } from '../../const/svg.const';
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { TechnologyDomain } from '../model/domain/technology-domain.model';
 import { TechnologyKindDomainType } from '../type/kind/technology-kind-domain.type';
 

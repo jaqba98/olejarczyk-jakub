@@ -1,4 +1,4 @@
-import { BaseCompose } from '../model/base/base-compose.model';
+import { BaseCompose } from '../model/base/base-combo.model';
 import { ResumeDomain } from '../model/domain/resume-domain.model';
 import { resumeDomainConst } from './resume-domain.const';
 
