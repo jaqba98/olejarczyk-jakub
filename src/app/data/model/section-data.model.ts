@@ -1,3 +1,9 @@
 import { SectionDataType } from '../type/section-data.type';
 
-export type SectionDataModel = Record<SectionDataType, string>;
+interface SectionModel {
+  id: string;
+  label: string;
+  href: string;
+}
+
+export type SectionDataModel = Record<SectionDataType, SectionModel>;
