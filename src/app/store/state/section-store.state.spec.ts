@@ -17,7 +17,7 @@ describe('About Me Store State', () => {
 
   it('should return valid data', async () => {
     const result: SectionStoreModel = {
-      layout: SectionLayoutBuilder.build(),
+      section: SectionLayoutBuilder.build(),
     };
     expect(await firstValueFrom(store.selectOnce(SectionStoreState.getState))).toEqual(result);
   });

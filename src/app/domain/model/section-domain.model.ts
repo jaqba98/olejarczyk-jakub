@@ -1,19 +1,19 @@
 import { SectionDomainType } from '../type/section-domain.type';
 
 export namespace SectionDomain {
-  export interface Data {
-    type: SectionDomainType;
+  interface Data {
     id: string;
     label: string;
     href: string;
   }
 
   interface Metadata {
+    type: SectionDomainType;
     routable: boolean;
     order: number;
   }
 
-  interface Model {
+  export interface Model {
     data: Data;
     metadata: Metadata;
   }

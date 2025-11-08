@@ -7,7 +7,7 @@ import { SectionLayoutBuilder } from '../../layout/builder/section-layout.builde
 @State<SectionStoreModel>({
   name: 'section',
   defaults: {
-    layout: SectionLayoutBuilder.build(),
+    section: SectionLayoutBuilder.build(),
   },
 })
 @Injectable()
