@@ -1,0 +1,11 @@
+import '../nav/nav-section.component';
+import '../home/home-section.component';
+import '../about-me/about-me-section.component';
+import '../technology/technology-section.component';
+import '../skill/skill-section.component';
+import '../experience/experience-section.component';
+import '../resume/resume-section.component';
+import '../education/education-section.component';
+import '../project/project-section.component';
+import '../contact/contact-section.component';
+import '../footer/footer-section.component';
