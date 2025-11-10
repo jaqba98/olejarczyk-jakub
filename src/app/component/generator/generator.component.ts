@@ -1,18 +1,21 @@
 import { Component, input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { LayoutModel } from '../../layout/model/layout.model';
-import { KindLayoutEnum } from '../../layout/enum/kind-layout.enum';
-import { GroupComponent } from '../group/group.component';
-import { LeafComponent } from '../leaf/leaf.component';
+import { getLayoutComponent } from '../../decorator/layout-component.decorator';
+
+import '../group/group.component';
+import '../leaf/leaf.component';
 
 @Component({
   selector: 'generator-component',
   templateUrl: './generator.component.html',
-  imports: [GroupComponent, LeafComponent],
+  imports: [CommonModule],
 })
 export class GeneratorComponent {
   layout = input.required<LayoutModel>();
 
-  readonly GROUP = KindLayoutEnum.group;
-  readonly LEAF = KindLayoutEnum.leaf;
+  getLayoutComponent() {
+    return getLayoutComponent(this.layout().kind);
+  }
 }

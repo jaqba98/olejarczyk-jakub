@@ -1,1 +1,1 @@
-export type TComponent = any;
+export type ComponentType = any;
