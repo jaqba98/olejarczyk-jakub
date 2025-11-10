@@ -1,1 +1,8 @@
-<p>{{ layout().kind }}</p>
+@switch (layout().kind) {
+  @case (GROUP) {
+    <group-component></group-component>
+  }
+  @case (LEAF) {
+    <leaf-component></leaf-component>
+  }
+}

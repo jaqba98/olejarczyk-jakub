@@ -4,4 +4,4 @@ import { Component } from '@angular/core';
   selector: 'leaf-component',
   templateUrl: './leaf.component.html',
 })
-export class GroupComponent {}
+export class LeafComponent {}
