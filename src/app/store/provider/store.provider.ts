@@ -1,13 +1,13 @@
+import { ApplicationConfig } from '@angular/core';
 import { provideStore } from '@ngxs/store';
 import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
-import { ApplicationConfig } from '@angular/core';
 import { applicationConfig } from '@storybook/angular';
 
-import { SectionStoreState } from '../state/section-store.state';
+import { LayoutStoreState } from '../state/layout-store.state';
 
 export class StoreProvider {
   static getProvider() {
-    return [provideStore([SectionStoreState], withNgxsReduxDevtoolsPlugin())];
+    return [provideStore([LayoutStoreState], withNgxsReduxDevtoolsPlugin())];
   }
 
   static getStorybookProvider(providers: ApplicationConfig['providers'] = []) {

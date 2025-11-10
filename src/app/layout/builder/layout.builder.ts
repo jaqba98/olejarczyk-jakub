@@ -4,7 +4,7 @@ import { LayoutModel } from '../model/layout.model';
 import { KindLayoutEnum } from '../enum/kind-layout.enum';
 import { KindDataEnum } from '../../data/enum/kind-data.enum';
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class LayoutBuilder {
   build(): LayoutModel {
     return {
