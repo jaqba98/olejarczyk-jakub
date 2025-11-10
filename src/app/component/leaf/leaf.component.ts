@@ -23,6 +23,8 @@ export class LeafComponent {
   }
 
   getDataInputs() {
-    return { model: this.model().data };
+    return {
+      model: this.model().data,
+    };
   }
 }

@@ -17,6 +17,8 @@ export class GeneratorComponent {
   }
 
   getLayoutInputs() {
-    return { model: this.model() };
+    return {
+      model: this.model(),
+    };
   }
 }

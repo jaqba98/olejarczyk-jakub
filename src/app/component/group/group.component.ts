@@ -6,6 +6,7 @@ import { KindLayoutEnum } from '../../layout/enum/kind-layout.enum';
 import { GroupLayoutModel, LeafLayoutModel } from '../../layout/model/layout.model';
 import { GeneratorComponent } from '../generator/generator.component';
 import { LeafComponent } from '../leaf/leaf.component';
+import { KindDataEnum } from '../../data/enum/kind-data.enum';
 
 @Component({
   selector: 'group-component',
@@ -16,7 +17,9 @@ import { LeafComponent } from '../leaf/leaf.component';
 export class GroupComponent {
   model = input.required<GroupLayoutModel>();
 
-  buildLeafLayout(): LeafLayoutModel {
+  readonly EMPTY = KindDataEnum.empty;
+
+  buildLeafModel(): LeafLayoutModel {
     return {
       kind: KindLayoutEnum.leaf,
       data: this.model().data,

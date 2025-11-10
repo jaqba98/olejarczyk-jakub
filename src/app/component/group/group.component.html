@@ -1,4 +1,7 @@
-<leaf-component [model]="buildLeafLayout()"></leaf-component>
+@if (model().data.kind != EMPTY) {
+  <leaf-component [model]="buildLeafModel()"></leaf-component>
+}
+
 @for (child of model().children; track child) {
   <generator-component [model]="child"></generator-component>
 }
