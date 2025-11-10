@@ -1,15 +1,15 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LayoutComponentDecorator } from '../../decorator/layout-component.decorator';
-import { KindLayoutEnum } from '../../layout/enum/kind-layout.enum';
-import { GroupLayoutModel, LeafLayoutModel } from '../../layout/model/layout.model';
-import { GeneratorComponent } from '../generator/generator.component';
+import { GeneratorComponent } from '../../generator/generator.component';
 import { LeafComponent } from '../leaf/leaf.component';
-import { KindDataEnum } from '../../data/enum/kind-data.enum';
+import { LayoutComponentDecorator } from '../../../decorator/layout-component.decorator';
+import { KindLayoutEnum } from '../../../layout/enum/kind-layout.enum';
+import { GroupLayoutModel, LeafLayoutModel } from '../../../layout/model/layout.model';
+import { KindDataEnum } from '../../../data/enum/kind-data.enum';
 
 @Component({
-  selector: 'group-component',
+  selector: 'layout-group-component',
   templateUrl: './group.component.html',
   imports: [CommonModule, GeneratorComponent, LeafComponent],
 })
