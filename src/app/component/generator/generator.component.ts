@@ -4,18 +4,19 @@ import { CommonModule } from '@angular/common';
 import { LayoutModel } from '../../layout/model/layout.model';
 import { getLayoutComponent } from '../../decorator/layout-component.decorator';
 
-import '../group/group.component';
-import '../leaf/leaf.component';
-
 @Component({
   selector: 'generator-component',
   templateUrl: './generator.component.html',
   imports: [CommonModule],
 })
 export class GeneratorComponent {
-  layout = input.required<LayoutModel>();
+  model = input.required<LayoutModel>();
 
   getLayoutComponent() {
-    return getLayoutComponent(this.layout().kind);
+    return getLayoutComponent(this.model().kind);
+  }
+
+  getInputs() {
+    return { model: this.model() };
   }
 }

@@ -5,11 +5,11 @@ interface BaseLayoutModel {
   data: DataModel;
 }
 
-interface LeafLayoutModel extends BaseLayoutModel {
+export interface LeafLayoutModel extends BaseLayoutModel {
   kind: KindLayoutEnum.leaf;
 }
 
-interface GroupLayoutModel extends BaseLayoutModel {
+export interface GroupLayoutModel extends BaseLayoutModel {
   kind: KindLayoutEnum.group;
   children: LayoutModel[];
 }

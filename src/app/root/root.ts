@@ -9,6 +9,9 @@ import { LayoutStoreState } from '../store/state/layout-store.state';
 import { LayoutModel } from '../layout/model/layout.model';
 import { GeneratorComponent } from '../component/generator/generator.component';
 
+import '../component/group/group.component';
+import '../component/leaf/leaf.component';
+
 @Component({
   selector: 'root',
   templateUrl: './root.html',

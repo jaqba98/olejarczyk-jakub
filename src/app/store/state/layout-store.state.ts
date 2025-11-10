@@ -1,4 +1,4 @@
-import { Action, NgxsOnInit, Selector, State, StateContext } from '@ngxs/store';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 
 import { LayoutModel } from '../../layout/model/layout.model';
 import { Injectable } from '@angular/core';
@@ -11,12 +11,6 @@ import { LayoutStoreInitAction } from '../action/layout-store.action';
 @Injectable()
 export class LayoutStoreState {
   constructor(private readonly builder: LayoutBuilder) {}
-
-  ngxsOnInit(ctx: StateContext<LayoutModel>) {
-    const aaa = this.builder.build();
-    console.log(aaa);
-    ctx.patchState(aaa);
-  }
 
   @Action(LayoutStoreInitAction)
   increment(ctx: StateContext<LayoutModel>) {

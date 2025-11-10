@@ -1,1 +1,3 @@
-<p>group component</p>
+@for (child of model().children; track child) {
+  <generator-component [model]="child"></generator-component>
+}
