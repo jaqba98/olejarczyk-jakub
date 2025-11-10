@@ -12,6 +12,9 @@ import { GeneratorComponent } from '../component/generator/generator.component';
 import '../component/group/group.component';
 import '../component/leaf/leaf.component';
 
+import '../component/data/empty/empty.component';
+import '../component/data/section/section.component';
+
 @Component({
   selector: 'root',
   templateUrl: './root.html',

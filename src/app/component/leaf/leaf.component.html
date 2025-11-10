@@ -1,2 +1,1 @@
-<p>{{ model().kind }}</p>
-<p>{{ model().data | json }}</p>
+<ng-container *ngComponentOutlet="getDataComponent(); inputs: getDataInputs()"></ng-container>
