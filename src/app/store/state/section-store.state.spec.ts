@@ -4,7 +4,7 @@ import { firstValueFrom } from 'rxjs';
 
 import { StoreProvider } from '../provider/store.provider';
 import { SectionStoreModel } from '../model/section-store.model';
-import { SectionLayoutBuilder } from '../../layout/builder/section-layout.builder';
+import { SectionLayoutBuilder } from '../../layout/builder/root-layout.builder';
 import { SectionStoreState } from './section-store.state';
 
 describe('About Me Store State', () => {

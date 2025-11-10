@@ -1,4 +1,4 @@
-import { SectionLayoutModel } from '../../layout/model/section-layout.model';
+import { SectionLayoutModel } from '../../layout/model/root-layout.model';
 
 export interface SectionStoreModel {
   section: SectionLayoutModel;
