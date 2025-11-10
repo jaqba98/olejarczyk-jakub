@@ -1,1 +1,3 @@
-<ng-container *ngComponentOutlet="getDataComponent(); inputs: getDataInputs()"></ng-container>
+@if (model().data.kind !== EMPTY) {
+  <ng-container *ngComponentOutlet="getDataComponent(); inputs: getDataInputs()"></ng-container>
+}

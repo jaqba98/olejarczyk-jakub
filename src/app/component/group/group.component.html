@@ -1,4 +1,4 @@
-<ng-container *ngComponentOutlet="getDataComponent(); inputs: getDataInputs()"></ng-container>
+<leaf-component [model]="buildLeafLayout()"></leaf-component>
 @for (child of model().children; track child) {
   <generator-component [model]="child"></generator-component>
 }
