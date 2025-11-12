@@ -6,6 +6,7 @@ import { DataComponentDecorator } from '../../../decorator/data-component.decora
 @Component({
   selector: 'data-section-component',
   templateUrl: './section.component.html',
+  styleUrl: './section.component.scss',
 })
 @DataComponentDecorator('section')
 export class SectionComponent {

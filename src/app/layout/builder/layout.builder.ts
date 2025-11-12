@@ -93,15 +93,6 @@ export class LayoutBuilder {
           kind: 'leaf',
           data: {
             kind: 'section',
-            id: 'project',
-            label: 'Project',
-            href: '#project',
-          },
-        },
-        {
-          kind: 'leaf',
-          data: {
-            kind: 'section',
             id: 'contact',
             label: 'Contact',
             href: '#contact',
