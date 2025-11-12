@@ -1,4 +1,14 @@
-@forward 'style';
+@use 'style/builder/min-width-builder';
+
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include min-width-builder.min-width-builder__build('min');
+}
 
 // html {
 //   font-size: 100%;
