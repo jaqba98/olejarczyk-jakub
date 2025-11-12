@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutComponentDecorator } from '../../../decorator/layout-component.decorator';
 import { LeafLayoutModel } from '../../../layout/model/layout.model';
-import { getDataComponent } from '../../../decorator/data-component.decorator';
+import { getComplexComponent } from '../../../decorator/complex-component.decorator';
 
 @Component({
   selector: 'leaf-layout-component',
@@ -15,12 +15,12 @@ export class LeafComponent {
   model = input.required<LeafLayoutModel>();
 
   getComponent() {
-    const { kind } = this.model().data;
-    return getDataComponent(kind);
+    const { kind } = this.model().complex;
+    return getComplexComponent(kind);
   }
 
   getInputs() {
-    const model = this.model().data;
+    const model = this.model().complex;
     return { model };
   }
 }

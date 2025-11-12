@@ -1,6 +1,4 @@
-import { BaseDataModel } from './base-data.model';
-
-export interface SectionDataModel extends BaseDataModel<'section'> {
+export interface SectionDataModel {
   id: string;
   label: string;
   href: string;

@@ -12,7 +12,7 @@ import { GeneratorComponent } from '../component/generator/generator.component';
 import '../component/layout/group/group.component';
 import '../component/layout/leaf/leaf.component';
 
-import '../component/data/section/section.component';
+import '../component/complex/section/section.component';
 
 @Component({
   selector: 'root',

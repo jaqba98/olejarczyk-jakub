@@ -10,101 +10,156 @@ export class LayoutBuilder {
       children: [
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'nav',
-            label: 'Nav',
-            href: '#nav',
+            data: {
+              id: 'nav',
+              label: 'Nav',
+              href: '#nav',
+            },
+            metadata: {
+              test: false,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'home',
-            label: 'Home',
-            href: '#home',
+            data: {
+              id: 'home',
+              label: 'Home',
+              href: '#home',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'about-me',
-            label: 'About me',
-            href: '#about-me',
+            data: {
+              id: 'about-me',
+              label: 'About me',
+              href: '#about-me',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'technology',
-            label: 'Technology',
-            href: '#technology',
+            data: {
+              id: 'technology',
+              label: 'Technology',
+              href: '#technology',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'skill',
-            label: 'Skill',
-            href: '#skill',
+            data: {
+              id: 'skill',
+              label: 'Skill',
+              href: '#skill',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'experience',
-            label: 'Experience',
-            href: '#experience',
+            data: {
+              id: 'experience',
+              label: 'Experience',
+              href: '#experience',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'resume',
-            label: 'Resume',
-            href: '#resume',
+            data: {
+              id: 'resume',
+              label: 'Resume',
+              href: '#resume',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'education',
-            label: 'Education',
-            href: '#education',
+            data: {
+              id: 'education',
+              label: 'Education',
+              href: '#education',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'project',
-            label: 'Project',
-            href: '#project',
+            data: {
+              id: 'project',
+              label: 'Project',
+              href: '#project',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'contact',
-            label: 'Contact',
-            href: '#contact',
+            data: {
+              id: 'contact',
+              label: 'Contact',
+              href: '#contact',
+            },
+            metadata: {
+              test: true,
+            },
           },
         },
         {
           kind: 'leaf',
-          data: {
+          complex: {
             kind: 'section',
-            id: 'footer',
-            label: 'Footer',
-            href: '#footer',
+            data: {
+              id: 'footer',
+              label: 'Footer',
+              href: '#footer',
+            },
+            metadata: {
+              test: false,
+            },
           },
         },
       ],
