@@ -1,16 +1,16 @@
-@use 'sass:color';
+// @use 'sass:color';
 
-@function tonal-scale($color) {
-  @return (
-    50: color.adjust($color, $lightness: 40%),
-    100: color.adjust($color, $lightness: 35%),
-    200: color.adjust($color, $lightness: 30%),
-    300: color.adjust($color, $lightness: 25%),
-    400: color.adjust($color, $lightness: 20%),
-    500: $color,
-    600: color.adjust($color, $lightness: -10%),
-    700: color.adjust($color, $lightness: -25%),
-    800: color.adjust($color, $lightness: -35%),
-    900: color.adjust($color, $lightness: -50%)
-  );
-}
+// @function tonal-scale($color) {
+//   @return (
+//     50: color.adjust($color, $lightness: 40%),
+//     100: color.adjust($color, $lightness: 35%),
+//     200: color.adjust($color, $lightness: 30%),
+//     300: color.adjust($color, $lightness: 25%),
+//     400: color.adjust($color, $lightness: 20%),
+//     500: $color,
+//     600: color.adjust($color, $lightness: -10%),
+//     700: color.adjust($color, $lightness: -25%),
+//     800: color.adjust($color, $lightness: -35%),
+//     900: color.adjust($color, $lightness: -50%)
+//   );
+// }

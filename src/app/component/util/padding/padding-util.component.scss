@@ -1,77 +1,77 @@
-@use '../../../../style/const/size';
+// @use '../../../../style/const/size';
 
-.padding {
-  &__vertical {
-    &--none {
-      padding-top: size.$none;
-      padding-bottom: size.$none;
-    }
+// .padding {
+//   &__vertical {
+//     &--none {
+//       padding-top: size.$none;
+//       padding-bottom: size.$none;
+//     }
 
-    &--tiny {
-      padding-top: size.$tiny;
-      padding-bottom: size.$tiny;
-    }
+//     &--tiny {
+//       padding-top: size.$tiny;
+//       padding-bottom: size.$tiny;
+//     }
 
-    &--small {
-      padding-top: size.$small;
-      padding-bottom: size.$small;
-    }
+//     &--small {
+//       padding-top: size.$small;
+//       padding-bottom: size.$small;
+//     }
 
-    &--medium {
-      padding-top: size.$medium;
-      padding-bottom: size.$medium;
-    }
+//     &--medium {
+//       padding-top: size.$medium;
+//       padding-bottom: size.$medium;
+//     }
 
-    &--big {
-      padding-top: size.$big;
-      padding-bottom: size.$big;
-    }
+//     &--big {
+//       padding-top: size.$big;
+//       padding-bottom: size.$big;
+//     }
 
-    &--huge {
-      padding-top: size.$huge;
-      padding-bottom: size.$huge;
-    }
+//     &--huge {
+//       padding-top: size.$huge;
+//       padding-bottom: size.$huge;
+//     }
 
-    &--double-huge {
-      padding-top: size.$double-huge;
-      padding-bottom: size.$double-huge;
-    }
-  }
+//     &--double-huge {
+//       padding-top: size.$double-huge;
+//       padding-bottom: size.$double-huge;
+//     }
+//   }
 
-  &__horizontal {
-    &--none {
-      padding-left: size.$none;
-      padding-right: size.$none;
-    }
+//   &__horizontal {
+//     &--none {
+//       padding-left: size.$none;
+//       padding-right: size.$none;
+//     }
 
-    &--tiny {
-      padding-left: size.$tiny;
-      padding-right: size.$tiny;
-    }
+//     &--tiny {
+//       padding-left: size.$tiny;
+//       padding-right: size.$tiny;
+//     }
 
-    &--small {
-      padding-left: size.$small;
-      padding-right: size.$small;
-    }
+//     &--small {
+//       padding-left: size.$small;
+//       padding-right: size.$small;
+//     }
 
-    &--medium {
-      padding-left: size.$medium;
-      padding-right: size.$medium;
-    }
+//     &--medium {
+//       padding-left: size.$medium;
+//       padding-right: size.$medium;
+//     }
 
-    &--big {
-      padding-left: size.$big;
-      padding-right: size.$big;
-    }
+//     &--big {
+//       padding-left: size.$big;
+//       padding-right: size.$big;
+//     }
 
-    &--huge {
-      padding-left: size.$huge;
-      padding-right: size.$huge;
-    }
+//     &--huge {
+//       padding-left: size.$huge;
+//       padding-right: size.$huge;
+//     }
 
-    &--double-huge {
-      padding-left: size.$double-huge;
-      padding-right: size.$double-huge;
-    }
-  }
-}
+//     &--double-huge {
+//       padding-left: size.$double-huge;
+//       padding-right: size.$double-huge;
+//     }
+//   }
+// }
