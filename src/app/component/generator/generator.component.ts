@@ -1,24 +1,25 @@
-import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 
-import { LayoutModel } from '../../layout/model/layout.model';
-import { getLayoutComponent } from '../../decorator/layout-component.decorator';
+import { GroupLayoutModel, LayoutModel, LeafLayoutModel } from '../../layout/model/layout.model';
+import { LeafComponent } from '../layout/leaf/leaf.component';
+import { GroupComponent } from '../layout/group/group.component';
 
 @Component({
   selector: 'generator-component',
   templateUrl: './generator.component.html',
-  imports: [CommonModule],
+  imports: [CommonModule, LeafComponent, GroupComponent],
 })
 export class GeneratorComponent {
   model = input.required<LayoutModel>();
 
-  getLayoutComponent() {
-    return getLayoutComponent(this.model().kind);
+  get leaf(): LeafLayoutModel | null {
+    const model = this.model();
+    return model.kind === 'leaf' ? model : null;
   }
 
-  getLayoutInputs() {
-    return {
-      model: this.model(),
-    };
+  get group(): GroupLayoutModel | null {
+    const model = this.model();
+    return model.kind === 'group' ? model : null;
   }
 }

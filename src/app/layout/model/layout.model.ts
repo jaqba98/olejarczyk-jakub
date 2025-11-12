@@ -1,16 +1,15 @@
 import { DataModel } from '../../data/model/data.model';
-import { KindLayoutEnum } from '../enum/kind-layout.enum';
+import { KindLayoutType } from '../type/kind-layout.type';
 
-interface BaseLayoutModel {
+export interface BaseLayoutModel<TKind extends KindLayoutType> {
+  kind: TKind;
+}
+
+export interface LeafLayoutModel extends BaseLayoutModel<'leaf'> {
   data: DataModel;
 }
 
-export interface LeafLayoutModel extends BaseLayoutModel {
-  kind: KindLayoutEnum.leaf;
-}
-
-export interface GroupLayoutModel extends BaseLayoutModel {
-  kind: KindLayoutEnum.group;
+export interface GroupLayoutModel extends BaseLayoutModel<'group'> {
   children: LayoutModel[];
 }
 

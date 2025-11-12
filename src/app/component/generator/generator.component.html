@@ -1,1 +1,5 @@
-<ng-container *ngComponentOutlet="getLayoutComponent(); inputs: getLayoutInputs()"></ng-container>
+@if (leaf) {
+  <leaf-layout-component [model]="leaf"></leaf-layout-component>
+} @else if (group) {
+  <group-layout-component [model]="group"></group-layout-component>
+}

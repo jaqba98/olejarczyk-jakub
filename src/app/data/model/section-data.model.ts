@@ -1,7 +1,6 @@
-import { KindDataEnum } from '../enum/kind-data.enum';
+import { BaseDataModel } from './base-data.model';
 
-export interface SectionDataModel {
-  kind: KindDataEnum.section;
+export interface SectionDataModel extends BaseDataModel<'section'> {
   id: string;
   label: string;
   href: string;

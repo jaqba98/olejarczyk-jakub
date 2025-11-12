@@ -1,7 +1,7 @@
-@if (model().data.kind != EMPTY) {
-  <layout-leaf-component [model]="buildLeafModel()"></layout-leaf-component>
-}
-
 @for (child of model().children; track child) {
-  <generator-component [model]="child"></generator-component>
+  @if (child.kind === 'leaf') {
+    <leaf-layout-component [model]="child"></leaf-layout-component>
+  } @else if (child.kind === 'group') {
+    <group-layout-component [model]="child"></group-layout-component>
+  }
 }
