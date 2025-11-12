@@ -4,7 +4,7 @@ import { SectionDataModel } from '../../../data/model/section-data.model';
 import { DataComponentDecorator } from '../../../decorator/data-component.decorator';
 
 @Component({
-  selector: 'data-section-component',
+  selector: 'section-data-component',
   templateUrl: './section.component.html',
   styleUrl: './section.component.scss',
 })
