@@ -1,6 +1,11 @@
-@use '../../../../style/builder';
+@use '../../../../style/builder/padding-builder';
 
 .section {
-  @include builder.padding-builder($left: 'md', $top: 'xxl', $right: 'md', $bottom: 'xxl');
+  @include padding-builder.padding-builder__build(
+    $left: 'md',
+    $top: 'xxl',
+    $right: 'md',
+    $bottom: 'xxl'
+  );
   border: 1px solid red;
 }

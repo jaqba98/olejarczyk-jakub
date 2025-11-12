@@ -1,8 +1,8 @@
-@use '../chooser';
+@use '../chooser/size-chooser';
 
-@mixin padding-builder($left: 'none', $top: 'none', $right: 'none', $bottom: 'none') {
-  padding-left: chooser.size-chooser($left);
-  padding-top: chooser.size-chooser($top);
-  padding-right: chooser.size-chooser($right);
-  padding-bottom: chooser.size-chooser($bottom);
+@mixin padding-builder__build($left: 'none', $top: 'none', $right: 'none', $bottom: 'none') {
+  padding-left: size-chooser.size-chooser__choose($left);
+  padding-top: size-chooser.size-chooser__choose($top);
+  padding-right: size-chooser.size-chooser__choose($right);
+  padding-bottom: size-chooser.size-chooser__choose($bottom);
 }

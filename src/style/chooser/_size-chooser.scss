@@ -1,21 +1,21 @@
-@use '../const';
+@use '../const/size-const';
 
-@function size-chooser($type) {
-  @if ($type == 'none') {
-    @return const.$size-none;
-  } @else if ($type == 'xs') {
-    @return const.$size-xs;
-  } @else if ($type == 'sm') {
-    @return const.$size-sm;
-  } @else if ($type == 'md') {
-    @return const.$size-md;
-  } @else if ($type == 'lg') {
-    @return const.$size-lg;
-  } @else if ($type == 'xl') {
-    @return const.$size-xl;
-  } @else if ($type == 'xxl') {
-    @return const.$size-xxl;
+@function size-chooser__choose($size-kind) {
+  @if ($size-kind == 'none') {
+    @return size-const.$size-const__none;
+  } @else if ($size-kind == 'xs') {
+    @return size-const.$size-const__xs;
+  } @else if ($size-kind == 'sm') {
+    @return size-const.$size-const__sm;
+  } @else if ($size-kind == 'md') {
+    @return size-const.$size-const__md;
+  } @else if ($size-kind == 'lg') {
+    @return size-const.$size-const__lg;
+  } @else if ($size-kind == 'xl') {
+    @return size-const.$size-const__xl;
+  } @else if ($size-kind == 'xxl') {
+    @return size-const.$size-const__xxl;
   } @else {
-    @error "Not supported size type!";
+    @error "Not supported size kind!";
   }
 }
