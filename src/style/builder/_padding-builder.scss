@@ -1,8 +1,9 @@
 @use '../chooser/size-chooser';
 
-@mixin padding-builder__build($left: 'none', $top: 'none', $right: 'none', $bottom: 'none') {
-  padding-left: size-chooser.size-chooser__choose($left);
-  padding-top: size-chooser.size-chooser__choose($top);
-  padding-right: size-chooser.size-chooser__choose($right);
-  padding-bottom: size-chooser.size-chooser__choose($bottom);
+@mixin build($top, $right, $bottom, $left) {
+  $padding-top: size-chooser.choose($top);
+  $padding-right: size-chooser.choose($right);
+  $padding-bottom: size-chooser.choose($bottom);
+  $padding-left: size-chooser.choose($left);
+  padding: $padding-top $padding-right $padding-bottom $padding-left;
 }

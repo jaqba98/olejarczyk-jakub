@@ -1,21 +1,21 @@
 @use '../const/size-const';
 
-@function size-chooser__choose($size-kind) {
-  @if ($size-kind == 'none') {
-    @return size-const.$size-const__none;
-  } @else if ($size-kind == 'xs') {
-    @return size-const.$size-const__xs;
-  } @else if ($size-kind == 'sm') {
-    @return size-const.$size-const__sm;
-  } @else if ($size-kind == 'md') {
-    @return size-const.$size-const__md;
-  } @else if ($size-kind == 'lg') {
-    @return size-const.$size-const__lg;
-  } @else if ($size-kind == 'xl') {
-    @return size-const.$size-const__xl;
-  } @else if ($size-kind == 'xxl') {
-    @return size-const.$size-const__xxl;
+@function choose($kind) {
+  @if ($kind == 'none') {
+    @return size-const.$none;
+  } @else if ($kind == 'xs') {
+    @return size-const.$xs;
+  } @else if ($kind == 'sm') {
+    @return size-const.$sm;
+  } @else if ($kind == 'md') {
+    @return size-const.$md;
+  } @else if ($kind == 'lg') {
+    @return size-const.$lg;
+  } @else if ($kind == 'xl') {
+    @return size-const.$xl;
+  } @else if ($kind == 'xxl') {
+    @return size-const.$xxl;
   } @else {
-    @error "Not supported size kind!";
+    @error "Not supported kind!";
   }
 }

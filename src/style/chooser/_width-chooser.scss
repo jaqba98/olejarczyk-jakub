@@ -1,9 +1,9 @@
 @use '../const/width-const';
 
-@function width-chooser__choose($width-kind) {
-  @if ($width-kind == 'min') {
-    @return width-const.$width-const__min;
+@function choose($kind) {
+  @if ($kind == 'min') {
+    @return width-const.$min;
   } @else {
-    @error "Not supported width kind!";
+    @error "Not supported kind!";
   }
 }

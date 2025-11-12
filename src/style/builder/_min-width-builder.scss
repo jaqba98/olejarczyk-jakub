@@ -1,5 +1,5 @@
 @use '../chooser/width-chooser';
 
-@mixin min-width-builder__build($width-kind) {
-  min-width: width-chooser.width-chooser__choose($width-kind);
+@mixin build($width) {
+  min-width: width-chooser.choose($width);
 }

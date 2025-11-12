@@ -1,7 +1,7 @@
-@use '../builder/min-width-builder';
+@use '../builder/padding-builder';
 
 * {
+  @include padding-builder.build($top: 'none', $right: 'none', $bottom: 'none', $left: 'none');
   margin: auto;
-  padding: 0;
   box-sizing: border-box;
 }
