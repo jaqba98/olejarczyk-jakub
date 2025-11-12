@@ -1,0 +1,21 @@
+@use '../const';
+
+@function size-chooser($type) {
+  @if ($type == 'none') {
+    @return const.$size-none;
+  } @else if ($type == 'xs') {
+    @return const.$size-xs;
+  } @else if ($type == 'sm') {
+    @return const.$size-sm;
+  } @else if ($type == 'md') {
+    @return const.$size-md;
+  } @else if ($type == 'lg') {
+    @return const.$size-lg;
+  } @else if ($type == 'xl') {
+    @return const.$size-xl;
+  } @else if ($type == 'xxl') {
+    @return const.$size-xxl;
+  } @else {
+    @error "Not supported size type!";
+  }
+}

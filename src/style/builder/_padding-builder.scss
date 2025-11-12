@@ -1,0 +1,8 @@
+@use '../chooser';
+
+@mixin padding-builder($left: 'none', $top: 'none', $right: 'none', $bottom: 'none') {
+  padding-left: chooser.size-chooser($left);
+  padding-top: chooser.size-chooser($top);
+  padding-right: chooser.size-chooser($right);
+  padding-bottom: chooser.size-chooser($bottom);
+}
