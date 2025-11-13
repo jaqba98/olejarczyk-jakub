@@ -1,3 +1,3 @@
 export interface SectionMetadataModel {
-  test: boolean;
+  hasTitle: boolean;
 }

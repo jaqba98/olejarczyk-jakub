@@ -1,4 +1,8 @@
-<section [id]="model().data.id" class="section">
-  <p>{{ model().data.label }}</p>
-  <p>{{ model().metadata.test }}</p>
+<section class="section">
+  <div class="section__container">
+    @if (model().metadata.hasTitle) {
+      <h1 class="section__title">Title</h1>
+    }
+    <div class="section__content">Content</div>
+  </div>
 </section>

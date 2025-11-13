@@ -18,7 +18,7 @@ export class LayoutBuilder {
               href: '#nav',
             },
             metadata: {
-              test: false,
+              hasTitle: false,
             },
           },
         },
@@ -32,7 +32,7 @@ export class LayoutBuilder {
               href: '#home',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -46,7 +46,7 @@ export class LayoutBuilder {
               href: '#about-me',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -60,7 +60,7 @@ export class LayoutBuilder {
               href: '#technology',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -74,7 +74,7 @@ export class LayoutBuilder {
               href: '#skill',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -88,7 +88,7 @@ export class LayoutBuilder {
               href: '#experience',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -102,7 +102,7 @@ export class LayoutBuilder {
               href: '#resume',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -116,7 +116,7 @@ export class LayoutBuilder {
               href: '#education',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -130,7 +130,7 @@ export class LayoutBuilder {
               href: '#project',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -144,7 +144,7 @@ export class LayoutBuilder {
               href: '#contact',
             },
             metadata: {
-              test: true,
+              hasTitle: true,
             },
           },
         },
@@ -158,7 +158,7 @@ export class LayoutBuilder {
               href: '#footer',
             },
             metadata: {
-              test: false,
+              hasTitle: false,
             },
           },
         },
