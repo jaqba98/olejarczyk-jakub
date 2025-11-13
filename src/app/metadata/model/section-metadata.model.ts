@@ -1,3 +1,7 @@
+interface SectionTitleMetadataModel {
+  visible: boolean;
+}
+
 export interface SectionMetadataModel {
-  hasTitle: boolean;
+  title: SectionTitleMetadataModel;
 }
