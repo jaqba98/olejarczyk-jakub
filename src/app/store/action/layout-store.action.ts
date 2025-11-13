@@ -1,3 +1,3 @@
 export class LayoutStoreInitAction {
-  static readonly type = '[Layout] Init';
+  static readonly type = '[Layout Store Action] Init';
 }
