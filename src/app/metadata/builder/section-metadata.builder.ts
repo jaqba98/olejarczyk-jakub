@@ -6,6 +6,9 @@ export class SectionMetadataBuilder {
       title: {
         visible: false,
       },
+      container: {
+        maxWidth: '100%',
+      },
     };
   }
 
@@ -13,6 +16,9 @@ export class SectionMetadataBuilder {
     return {
       title: {
         visible: true,
+      },
+      container: {
+        maxWidth: '960px',
       },
     };
   }
@@ -22,6 +28,9 @@ export class SectionMetadataBuilder {
       title: {
         visible: true,
       },
+      container: {
+        maxWidth: '960px',
+      },
     };
   }
 
@@ -29,6 +38,9 @@ export class SectionMetadataBuilder {
     return {
       title: {
         visible: true,
+      },
+      container: {
+        maxWidth: '960px',
       },
     };
   }
@@ -38,6 +50,9 @@ export class SectionMetadataBuilder {
       title: {
         visible: true,
       },
+      container: {
+        maxWidth: '960px',
+      },
     };
   }
 
@@ -45,6 +60,9 @@ export class SectionMetadataBuilder {
     return {
       title: {
         visible: true,
+      },
+      container: {
+        maxWidth: '960px',
       },
     };
   }
@@ -54,6 +72,9 @@ export class SectionMetadataBuilder {
       title: {
         visible: true,
       },
+      container: {
+        maxWidth: '960px',
+      },
     };
   }
 
@@ -61,6 +82,9 @@ export class SectionMetadataBuilder {
     return {
       title: {
         visible: true,
+      },
+      container: {
+        maxWidth: '960px',
       },
     };
   }
@@ -70,6 +94,9 @@ export class SectionMetadataBuilder {
       title: {
         visible: true,
       },
+      container: {
+        maxWidth: '960px',
+      },
     };
   }
 
@@ -78,6 +105,9 @@ export class SectionMetadataBuilder {
       title: {
         visible: true,
       },
+      container: {
+        maxWidth: '960px',
+      },
     };
   }
 
@@ -85,6 +115,9 @@ export class SectionMetadataBuilder {
     return {
       title: {
         visible: false,
+      },
+      container: {
+        maxWidth: '100%',
       },
     };
   }

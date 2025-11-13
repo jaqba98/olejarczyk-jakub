@@ -1,12 +1,27 @@
 <section [id]="data().id" class="section">
   <div class="section__container">
-    @if (metadata().title.visible) {
-      <div class="section__header">
-        <h1>{{ data().label }}</h1>
+    @if (metadata().container.maxWidth === '100%') {
+      <div style="max-width: 100%">
+        @if (metadata().title.visible) {
+          <div class="section__header">
+            <h1>{{ data().label }}</h1>
+          </div>
+        }
+        <div class="section__content">
+          <p>Content</p>
+        </div>
+      </div>
+    } @else if (metadata().container.maxWidth === '960px') {
+      <div style="max-width: 960px">
+        @if (metadata().title.visible) {
+          <div class="section__header">
+            <h1>{{ data().label }}</h1>
+          </div>
+        }
+        <div class="section__content">
+          <p>Content</p>
+        </div>
       </div>
     }
-    <div class="section__content">
-      <p>Content</p>
-    </div>
   </div>
 </section>
