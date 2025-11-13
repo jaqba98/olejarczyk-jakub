@@ -1,25 +1,12 @@
-import { SectionDataModel } from '../../data/model/section-data.model';
-import { SectionMetadataModel } from '../../metadata/model/section-metadata.model';
-import { KindComplexType } from '../type/kind-complex.type';
+import { DomainModel } from '../../domain/model/domain/domain.model';
 import { KindLayoutType } from '../type/kind-layout.type';
 
-interface BaseComplexModel<TKind extends KindComplexType, TData, TMetadata> {
-  kind: TKind;
-  data: TData;
-  metadata: TMetadata;
-}
-
-export interface SectionComplexModel
-  extends BaseComplexModel<'section', SectionDataModel, SectionMetadataModel> {}
-
-type ComplexType = SectionComplexModel;
-
-export interface BaseLayoutModel<TKind extends KindLayoutType> {
+interface BaseLayoutModel<TKind extends KindLayoutType> {
   kind: TKind;
 }
 
 export interface LeafLayoutModel extends BaseLayoutModel<'leaf'> {
-  complex: ComplexType;
+  domain: DomainModel;
 }
 
 export interface GroupLayoutModel extends BaseLayoutModel<'group'> {
