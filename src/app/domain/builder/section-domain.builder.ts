@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { SectionDomainModel } from '../model/section-domain.model';
+import { SectionDomainModel } from '../model/builder/section-domain.model';
 import { SectionDataBuilder } from '../../data/builder/section-data.builder';
 import { SectionMetadataBuilder } from '../../metadata/builder/section-metadata.builder';
 
@@ -13,6 +13,7 @@ export class SectionDomainBuilder {
 
   buildNav(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildNav(),
       metadata: this.metadata.buildNav(),
     };
@@ -20,6 +21,7 @@ export class SectionDomainBuilder {
 
   buildHome(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildHome(),
       metadata: this.metadata.buildHome(),
     };
@@ -27,6 +29,7 @@ export class SectionDomainBuilder {
 
   buildAboutMe(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildAboutMe(),
       metadata: this.metadata.buildAboutMe(),
     };
@@ -34,6 +37,7 @@ export class SectionDomainBuilder {
 
   buildTechnology(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildTechnology(),
       metadata: this.metadata.buildTechnology(),
     };
@@ -41,6 +45,7 @@ export class SectionDomainBuilder {
 
   buildSkill(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildSkill(),
       metadata: this.metadata.buildSkill(),
     };
@@ -48,6 +53,7 @@ export class SectionDomainBuilder {
 
   buildExperience(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildExperience(),
       metadata: this.metadata.buildExperience(),
     };
@@ -55,6 +61,7 @@ export class SectionDomainBuilder {
 
   buildResume(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildResume(),
       metadata: this.metadata.buildResume(),
     };
@@ -62,6 +69,7 @@ export class SectionDomainBuilder {
 
   buildEducation(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildEducation(),
       metadata: this.metadata.buildEducation(),
     };
@@ -69,6 +77,7 @@ export class SectionDomainBuilder {
 
   buildProject(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildProject(),
       metadata: this.metadata.buildProject(),
     };
@@ -76,6 +85,7 @@ export class SectionDomainBuilder {
 
   buildContact(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildContact(),
       metadata: this.metadata.buildContact(),
     };
@@ -83,6 +93,7 @@ export class SectionDomainBuilder {
 
   buildFooter(): SectionDomainModel {
     return {
+      kind: 'section',
       data: this.data.buildFooter(),
       metadata: this.metadata.buildFooter(),
     };
