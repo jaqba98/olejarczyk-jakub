@@ -1,10 +1,8 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
-import { LayoutStoreInitAction } from '../store/action/layout-store.action';
 import { LayoutStoreState } from '../store/state/layout-store.state';
 import { LayoutModel } from '../layout/model/layout.model';
 import { GeneratorComponent } from '../component/generator/generator.component';
@@ -12,7 +10,7 @@ import { GeneratorComponent } from '../component/generator/generator.component';
 import '../component/layout/group/group.component';
 import '../component/layout/leaf/leaf.component';
 
-import '../component/complex/section/section.component';
+import '../component/domain/section/section.component';
 
 @Component({
   selector: 'root',
@@ -23,8 +21,6 @@ export class Root {
   state$: Observable<LayoutModel>;
 
   constructor(private readonly store: Store) {
-    this.state$ = this.store
-      .dispatch(LayoutStoreInitAction)
-      .pipe(switchMap(() => this.store.select(LayoutStoreState.getState)));
+    this.state$ = this.store.select(LayoutStoreState.getState);
   }
 }

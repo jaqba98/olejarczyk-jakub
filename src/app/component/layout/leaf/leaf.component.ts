@@ -1,9 +1,9 @@
-import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 
 import { LayoutComponentDecorator } from '../../../decorator/layout-component.decorator';
 import { LeafLayoutModel } from '../../../layout/model/layout.model';
-import { getComplexComponent } from '../../../decorator/domain-component.decorator';
+import { getDomainComponent } from '../../../decorator/domain-component.decorator';
 
 @Component({
   selector: 'leaf-layout-component',
@@ -15,12 +15,12 @@ export class LeafComponent {
   model = input.required<LeafLayoutModel>();
 
   getComponent() {
-    const { kind } = this.model().complex;
-    return getComplexComponent(kind);
+    const { kind } = this.model().domain;
+    return getDomainComponent(kind);
   }
 
   getInputs() {
-    const model = this.model().complex;
-    return { model };
+    const { data, metadata } = this.model().domain;
+    return { data, metadata };
   }
 }
