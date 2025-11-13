@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { SectionMetadataModel } from '../model/section-metadata.model';
 
 @Injectable({ providedIn: 'root' })
-export class SectionMetadata {
+export class SectionMetadataBuilder {
   buildNav(): SectionMetadataModel {
     return {
       title: {

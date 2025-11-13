@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { SectionDataModel } from '../model/section-data.model';
 
 @Injectable({ providedIn: 'root' })
-export class SectionData {
+export class SectionDataBuilder {
   buildNav(): SectionDataModel {
     return {
       id: 'nav',
