@@ -1,59 +1,54 @@
-import { Injectable } from '@angular/core';
-
 import { LayoutModel } from '../model/layout.model';
 import { SectionDomainBuilder } from '../../domain/builder/section-domain.builder';
 
-@Injectable({ providedIn: 'root' })
 export class LayoutBuilder {
-  constructor(private readonly section: SectionDomainBuilder) {}
-
-  build(): LayoutModel {
+  static build(): LayoutModel {
     return {
       kind: 'group',
       children: [
         {
           kind: 'leaf',
-          domain: this.section.buildNav(),
+          domain: SectionDomainBuilder.buildNav(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildHome(),
+          domain: SectionDomainBuilder.buildHome(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildAboutMe(),
+          domain: SectionDomainBuilder.buildAboutMe(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildTechnology(),
+          domain: SectionDomainBuilder.buildTechnology(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildSkill(),
+          domain: SectionDomainBuilder.buildSkill(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildExperience(),
+          domain: SectionDomainBuilder.buildExperience(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildResume(),
+          domain: SectionDomainBuilder.buildResume(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildEducation(),
+          domain: SectionDomainBuilder.buildEducation(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildProject(),
+          domain: SectionDomainBuilder.buildProject(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildContact(),
+          domain: SectionDomainBuilder.buildContact(),
         },
         {
           kind: 'leaf',
-          domain: this.section.buildFooter(),
+          domain: SectionDomainBuilder.buildFooter(),
         },
       ],
     };

@@ -1,10 +1,7 @@
-import { Injectable } from '@angular/core';
-
 import { SectionDataModel } from '../model/section-data.model';
 
-@Injectable({ providedIn: 'root' })
 export class SectionDataBuilder {
-  buildNav(): SectionDataModel {
+  static buildNav(): SectionDataModel {
     return {
       id: 'nav',
       label: 'Nav',
@@ -12,7 +9,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildHome(): SectionDataModel {
+  static buildHome(): SectionDataModel {
     return {
       id: 'home',
       label: 'Home',
@@ -20,7 +17,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildAboutMe(): SectionDataModel {
+  static buildAboutMe(): SectionDataModel {
     return {
       id: 'about-me',
       label: 'About me',
@@ -28,7 +25,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildTechnology(): SectionDataModel {
+  static buildTechnology(): SectionDataModel {
     return {
       id: 'technology',
       label: 'Technology',
@@ -36,7 +33,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildSkill(): SectionDataModel {
+  static buildSkill(): SectionDataModel {
     return {
       id: 'skill',
       label: 'Skill',
@@ -44,7 +41,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildExperience(): SectionDataModel {
+  static buildExperience(): SectionDataModel {
     return {
       id: 'experience',
       label: 'Experience',
@@ -52,7 +49,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildResume(): SectionDataModel {
+  static buildResume(): SectionDataModel {
     return {
       id: 'resume',
       label: 'Resume',
@@ -60,7 +57,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildEducation(): SectionDataModel {
+  static buildEducation(): SectionDataModel {
     return {
       id: 'education',
       label: 'Education',
@@ -68,7 +65,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildProject(): SectionDataModel {
+  static buildProject(): SectionDataModel {
     return {
       id: 'project',
       label: 'Project',
@@ -76,7 +73,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildContact(): SectionDataModel {
+  static buildContact(): SectionDataModel {
     return {
       id: 'contact',
       label: 'Contact',
@@ -84,7 +81,7 @@ export class SectionDataBuilder {
     };
   }
 
-  buildFooter(): SectionDataModel {
+  static buildFooter(): SectionDataModel {
     return {
       id: 'footer',
       label: 'Footer',

@@ -1,10 +1,7 @@
-import { Injectable } from '@angular/core';
-
 import { SectionMetadataModel } from '../model/section-metadata.model';
 
-@Injectable({ providedIn: 'root' })
 export class SectionMetadataBuilder {
-  buildNav(): SectionMetadataModel {
+  static buildNav(): SectionMetadataModel {
     return {
       title: {
         visible: false,
@@ -12,7 +9,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildHome(): SectionMetadataModel {
+  static buildHome(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -20,7 +17,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildAboutMe(): SectionMetadataModel {
+  static buildAboutMe(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -28,7 +25,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildTechnology(): SectionMetadataModel {
+  static buildTechnology(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -36,7 +33,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildSkill(): SectionMetadataModel {
+  static buildSkill(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -44,7 +41,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildExperience(): SectionMetadataModel {
+  static buildExperience(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -52,7 +49,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildResume(): SectionMetadataModel {
+  static buildResume(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -60,7 +57,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildEducation(): SectionMetadataModel {
+  static buildEducation(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -68,7 +65,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildProject(): SectionMetadataModel {
+  static buildProject(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -76,7 +73,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildContact(): SectionMetadataModel {
+  static buildContact(): SectionMetadataModel {
     return {
       title: {
         visible: true,
@@ -84,7 +81,7 @@ export class SectionMetadataBuilder {
     };
   }
 
-  buildFooter(): SectionMetadataModel {
+  static buildFooter(): SectionMetadataModel {
     return {
       title: {
         visible: false,

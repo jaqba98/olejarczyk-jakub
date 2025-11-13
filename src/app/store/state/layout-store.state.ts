@@ -1,23 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Action, Selector, State, StateContext } from '@ngxs/store';
+import { Selector, State } from '@ngxs/store';
 
 import { LayoutModel } from '../../layout/model/layout.model';
 import { LayoutBuilder } from '../../layout/builder/layout.builder';
-import { LayoutStoreInitAction } from '../action/layout-store.action';
 
 @State<LayoutModel>({
   name: 'layout',
+  defaults: LayoutBuilder.build(),
 })
 @Injectable()
 export class LayoutStoreState {
-  constructor(private readonly builder: LayoutBuilder) {}
-
-  @Action(LayoutStoreInitAction)
-  init(ctx: StateContext<LayoutModel>) {
-    const layout = this.builder.build();
-    ctx.patchState(layout);
-  }
-
   @Selector()
   static getState(state: LayoutModel) {
     return state;

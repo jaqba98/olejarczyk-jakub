@@ -1,101 +1,93 @@
-import { Injectable } from '@angular/core';
-
-import { SectionDomainModel } from '../model/builder/section-domain.model';
 import { SectionDataBuilder } from '../../data/builder/section-data.builder';
 import { SectionMetadataBuilder } from '../../metadata/builder/section-metadata.builder';
+import { SectionDomainModel } from '../model/builder/section-domain.model';
 
-@Injectable({ providedIn: 'root' })
 export class SectionDomainBuilder {
-  constructor(
-    private readonly data: SectionDataBuilder,
-    private readonly metadata: SectionMetadataBuilder,
-  ) {}
-
-  buildNav(): SectionDomainModel {
+  static buildNav(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildNav(),
-      metadata: this.metadata.buildNav(),
+      data: SectionDataBuilder.buildNav(),
+      metadata: SectionMetadataBuilder.buildNav(),
     };
   }
 
-  buildHome(): SectionDomainModel {
+  static buildHome(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildHome(),
-      metadata: this.metadata.buildHome(),
+      data: SectionDataBuilder.buildHome(),
+      metadata: SectionMetadataBuilder.buildHome(),
     };
   }
 
-  buildAboutMe(): SectionDomainModel {
+  static buildAboutMe(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildAboutMe(),
-      metadata: this.metadata.buildAboutMe(),
+      data: SectionDataBuilder.buildAboutMe(),
+      metadata: SectionMetadataBuilder.buildAboutMe(),
     };
   }
 
-  buildTechnology(): SectionDomainModel {
+  static buildTechnology(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildTechnology(),
-      metadata: this.metadata.buildTechnology(),
+      data: SectionDataBuilder.buildTechnology(),
+      metadata: SectionMetadataBuilder.buildTechnology(),
     };
   }
 
-  buildSkill(): SectionDomainModel {
+  static buildSkill(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildSkill(),
-      metadata: this.metadata.buildSkill(),
+      data: SectionDataBuilder.buildSkill(),
+      metadata: SectionMetadataBuilder.buildSkill(),
     };
   }
 
-  buildExperience(): SectionDomainModel {
+  static buildExperience(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildExperience(),
-      metadata: this.metadata.buildExperience(),
+      data: SectionDataBuilder.buildExperience(),
+      metadata: SectionMetadataBuilder.buildExperience(),
     };
   }
 
-  buildResume(): SectionDomainModel {
+  static buildResume(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildResume(),
-      metadata: this.metadata.buildResume(),
+      data: SectionDataBuilder.buildResume(),
+      metadata: SectionMetadataBuilder.buildResume(),
     };
   }
 
-  buildEducation(): SectionDomainModel {
+  static buildEducation(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildEducation(),
-      metadata: this.metadata.buildEducation(),
+      data: SectionDataBuilder.buildEducation(),
+      metadata: SectionMetadataBuilder.buildEducation(),
     };
   }
 
-  buildProject(): SectionDomainModel {
+  static buildProject(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildProject(),
-      metadata: this.metadata.buildProject(),
+      data: SectionDataBuilder.buildProject(),
+      metadata: SectionMetadataBuilder.buildProject(),
     };
   }
 
-  buildContact(): SectionDomainModel {
+  static buildContact(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildContact(),
-      metadata: this.metadata.buildContact(),
+      data: SectionDataBuilder.buildContact(),
+      metadata: SectionMetadataBuilder.buildContact(),
     };
   }
 
-  buildFooter(): SectionDomainModel {
+  static buildFooter(): SectionDomainModel {
     return {
       kind: 'section',
-      data: this.data.buildFooter(),
-      metadata: this.metadata.buildFooter(),
+      data: SectionDataBuilder.buildFooter(),
+      metadata: SectionMetadataBuilder.buildFooter(),
     };
   }
 }
