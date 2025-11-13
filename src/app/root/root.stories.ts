@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 
-import { Root } from '../root/root';
+import { Root } from './root';
 import { StoreProvider } from '../store/provider/store.provider';
 
 const meta: Meta<Root> = {
