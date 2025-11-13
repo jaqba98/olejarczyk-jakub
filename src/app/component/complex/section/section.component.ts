@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 
-import { ComplexComponentDecorator } from '../../../decorator/complex-component.decorator';
+import { ComplexComponentDecorator } from '../../../decorator/domain-component.decorator';
 import { SectionComplexModel } from '../../../layout/model/layout.model';
 
 @Component({

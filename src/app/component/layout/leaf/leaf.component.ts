@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { LayoutComponentDecorator } from '../../../decorator/layout-component.decorator';
 import { LeafLayoutModel } from '../../../layout/model/layout.model';
-import { getComplexComponent } from '../../../decorator/complex-component.decorator';
+import { getComplexComponent } from '../../../decorator/domain-component.decorator';
 
 @Component({
   selector: 'leaf-layout-component',

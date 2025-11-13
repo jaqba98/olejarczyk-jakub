@@ -10,9 +10,9 @@ export const LayoutComponentDecorator = (kind: KindLayoutType) => {
 };
 
 export const getLayoutComponent = (type: KindLayoutType): ComponentType => {
-  const layoutComponent = store.get(type);
-  if (layoutComponent === undefined) {
+  const component = store.get(type);
+  if (component === undefined) {
     throw new Error(`The ${type} does not exist in the layout component store!`);
   }
-  return layoutComponent;
+  return component;
 };
