@@ -1,7 +1,0 @@
-@for (child of model().children; track child) {
-  @if (child.kind === 'leaf') {
-    <leaf-layout-component [model]="child"></leaf-layout-component>
-  } @else if (child.kind === 'group') {
-    <group-layout-component [model]="child"></group-layout-component>
-  }
-}

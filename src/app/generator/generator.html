@@ -1,5 +1,15 @@
-<!-- @if (leaf) {
-  <leaf-layout-component [model]="leaf"></leaf-layout-component>
-} @else if (group) {
-  <group-layout-component [model]="group"></group-layout-component>
+<div #generator></div>
+
+<!-- @if (layout(); as layout) {
+  @if (layout.kind === 'leaf') {
+    <ng-container *ngComponentOutlet="getComponent(); inputs: getInputs()"></ng-container>
+  } @else if (layout.kind === 'group') {
+    @if (layout.domain) {
+      <ng-container *ngComponentOutlet="getComponent(); inputs: getInputs()"></ng-container>
+    } @else {
+      @for (child of layout.children; track child) {
+        <generator [layout]="child"></generator>
+      }
+    }
+  }
 } -->
