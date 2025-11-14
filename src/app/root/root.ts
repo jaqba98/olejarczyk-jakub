@@ -1,22 +1,19 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Store } from '@ngxs/store';
 import { Observable } from 'rxjs';
-import { CommonModule } from '@angular/common';
 
 import { LayoutStoreState } from '../store/state/layout-store.state';
 import { LayoutModel } from '../layout/model/layout.model';
-import { GeneratorComponent } from '../component/generator/generator.component';
+import { Generator } from '../generator/generator';
 
-import '../component/layout/group/group.component';
-import '../component/layout/leaf/leaf.component';
-
-import '../component/domain/section/section.component';
 import '../component/domain/paragraph/paragraph.component';
+import '../component/domain/section/section.component';
 
 @Component({
   selector: 'root',
   templateUrl: './root.html',
-  imports: [CommonModule, GeneratorComponent],
+  imports: [CommonModule, Generator],
 })
 export class Root {
   state$: Observable<LayoutModel>;
