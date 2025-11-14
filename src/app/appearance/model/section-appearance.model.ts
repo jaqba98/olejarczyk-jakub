@@ -1,16 +1,15 @@
-type SectionContainerMaxWidthType = 'full' | '960px';
-
-type SectionRootPaddingType = 'normal' | 'big';
+import { SizeAppearanceType } from '../type/size-appearance.type';
+import { WidthAppearanceType } from '../type/width-appearance.type';
 
 interface SectionContainerModel {
-  maxWidth: SectionContainerMaxWidthType;
+  maxWidth: WidthAppearanceType;
 }
 
-interface SectionRootModel {
-  padding: SectionRootPaddingType;
+interface SectionModel {
+  padding: SizeAppearanceType;
+  container: SectionContainerModel;
 }
 
 export interface SectionAppearanceModel {
-  container: SectionContainerModel;
-  root: SectionRootModel;
+  section: SectionModel;
 }

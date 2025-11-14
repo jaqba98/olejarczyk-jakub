@@ -3,121 +3,121 @@ import { SectionAppearanceModel } from '../model/section-appearance.model';
 export class SectionAppearanceBuilder {
   static buildNav(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: 'full',
-      },
-      root: {
-        padding: 'normal',
+      section: {
+        padding: 'md',
+        container: {
+          maxWidth: 'max',
+        },
       },
     };
   }
 
   static buildHome(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildAboutMe(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildTechnology(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildSkill(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildExperience(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildResume(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildEducation(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildProject(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildContact(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: '960px',
-      },
-      root: {
-        padding: 'big',
+      section: {
+        padding: 'xl',
+        container: {
+          maxWidth: 'container',
+        },
       },
     };
   }
 
   static buildFooter(): SectionAppearanceModel {
     return {
-      container: {
-        maxWidth: 'full',
-      },
-      root: {
-        padding: 'normal',
+      section: {
+        padding: 'md',
+        container: {
+          maxWidth: 'max',
+        },
       },
     };
   }

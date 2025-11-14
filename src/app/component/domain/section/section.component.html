@@ -1,4 +1,4 @@
-<section class="section" [ngClass]="buildSectionClassList()">
+<section [id]="data().id" [ngClass]="buildSectionClassList()">
   <div [ngClass]="buildSectionContentClassList()">
     @if (metadata().showTitle) {
       <h2>{{ data().label }}</h2>

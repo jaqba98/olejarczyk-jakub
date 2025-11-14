@@ -1,10 +1,10 @@
-import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 
 import { DomainComponentDecorator } from '../../../decorator/domain-component.decorator';
+import { SectionAppearanceModel } from '../../../appearance/model/section-appearance.model';
 import { SectionDataModel } from '../../../data/model/section-data.model';
 import { SectionMetadataModel } from '../../../metadata/model/section-metadata.model';
-import { SectionAppearanceModel } from '../../../appearance/model/section-appearance.model';
 import { BemUtil } from '../../../util/bem.util';
 
 @Component({
@@ -22,10 +22,18 @@ export class SectionComponent {
   constructor(private readonly bemUtil: BemUtil) {}
 
   buildSectionClassList() {
-    return [this.bemUtil.build('section', 'padding', this.appearance().root.padding)];
+    const sectionPadding = this.appearance().section.padding;
+    return [
+      this.bemUtil.build('section'),
+      this.bemUtil.build('section', 'padding', sectionPadding),
+    ];
   }
 
   buildSectionContentClassList() {
-    return [this.bemUtil.build('section', 'container', this.appearance().container.maxWidth)];
+    const sectionContainerMaxWidth = this.appearance().section.container.maxWidth;
+    return [
+      this.bemUtil.build('section', 'container'),
+      this.bemUtil.build('section', 'container', sectionContainerMaxWidth),
+    ];
   }
 }

@@ -1,28 +1,25 @@
 .section {
   border: 1px solid red;
-  padding: 0.5rem;
 
   &__padding {
-    &--normal {
-      padding: 1rem;
+    &--md {
+      padding: var(--size-medium);
     }
 
-    &--big {
-      padding: 3rem 1rem;
+    &--xl {
+      padding: var(--size-extra-large) var(--size-medium);
     }
-  }
-
-  &--padding-xl {
-    padding: var(--padding-xl) var(--padding-md);
   }
 
   &__container {
-    &--full {
+    border: 1px solid blue;
+
+    &--max {
       max-width: var(--width-full);
     }
 
-    &--960px {
-      max-width: var(--width-960px);
+    &--container {
+      max-width: var(--width-container);
     }
   }
 }
