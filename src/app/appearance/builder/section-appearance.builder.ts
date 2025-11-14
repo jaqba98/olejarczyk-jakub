@@ -4,7 +4,10 @@ export class SectionAppearanceBuilder {
   static buildNav(): SectionAppearanceModel {
     return {
       container: {
-        maxWidth: '100%',
+        maxWidth: 'full',
+      },
+      root: {
+        padding: 'normal',
       },
     };
   }
@@ -14,6 +17,9 @@ export class SectionAppearanceBuilder {
       container: {
         maxWidth: '960px',
       },
+      root: {
+        padding: 'big',
+      },
     };
   }
 
@@ -21,6 +27,9 @@ export class SectionAppearanceBuilder {
     return {
       container: {
         maxWidth: '960px',
+      },
+      root: {
+        padding: 'big',
       },
     };
   }
@@ -30,6 +39,9 @@ export class SectionAppearanceBuilder {
       container: {
         maxWidth: '960px',
       },
+      root: {
+        padding: 'big',
+      },
     };
   }
 
@@ -37,6 +49,9 @@ export class SectionAppearanceBuilder {
     return {
       container: {
         maxWidth: '960px',
+      },
+      root: {
+        padding: 'big',
       },
     };
   }
@@ -46,6 +61,9 @@ export class SectionAppearanceBuilder {
       container: {
         maxWidth: '960px',
       },
+      root: {
+        padding: 'big',
+      },
     };
   }
 
@@ -53,6 +71,9 @@ export class SectionAppearanceBuilder {
     return {
       container: {
         maxWidth: '960px',
+      },
+      root: {
+        padding: 'big',
       },
     };
   }
@@ -62,6 +83,9 @@ export class SectionAppearanceBuilder {
       container: {
         maxWidth: '960px',
       },
+      root: {
+        padding: 'big',
+      },
     };
   }
 
@@ -69,6 +93,9 @@ export class SectionAppearanceBuilder {
     return {
       container: {
         maxWidth: '960px',
+      },
+      root: {
+        padding: 'big',
       },
     };
   }
@@ -78,13 +105,19 @@ export class SectionAppearanceBuilder {
       container: {
         maxWidth: '960px',
       },
+      root: {
+        padding: 'big',
+      },
     };
   }
 
   static buildFooter(): SectionAppearanceModel {
     return {
       container: {
-        maxWidth: '100%',
+        maxWidth: 'full',
+      },
+      root: {
+        padding: 'normal',
       },
     };
   }

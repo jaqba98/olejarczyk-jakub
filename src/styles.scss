@@ -1,1 +1,15 @@
-@use 'style';
+:root {
+  --width-min: 300px;
+  --width-960px: 960px;
+  --width-full: 100%;
+}
+
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-width: var(--width-min);
+}

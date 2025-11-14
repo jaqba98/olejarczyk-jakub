@@ -1,5 +1,0 @@
-@use '../builder/min-width-builder';
-
-body {
-  @include min-width-builder.build('min');
-}

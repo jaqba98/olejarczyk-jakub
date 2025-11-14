@@ -1,7 +1,28 @@
 .section {
   border: 1px solid red;
+  padding: 0.5rem;
+
+  &__padding {
+    &--normal {
+      padding: 1rem;
+    }
+
+    &--big {
+      padding: 3rem 1rem;
+    }
+  }
+
+  &--padding-xl {
+    padding: var(--padding-xl) var(--padding-md);
+  }
 
   &__container {
-    margin: auto;
+    &--full {
+      max-width: var(--width-full);
+    }
+
+    &--960px {
+      max-width: var(--width-960px);
+    }
   }
 }

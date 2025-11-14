@@ -1,7 +1,7 @@
-<section [id]="data().id" class="section">
-  <div class="section__container">
+<section class="section" [ngClass]="buildSectionClassList()">
+  <div [ngClass]="buildSectionContentClassList()">
     @if (metadata().showTitle) {
-      <h1>{{ data().label }}</h1>
+      <h2>{{ data().label }}</h2>
     }
     <p>Content</p>
   </div>
