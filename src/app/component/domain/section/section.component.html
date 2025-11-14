@@ -3,6 +3,8 @@
     @if (metadata().showTitle) {
       <h2>{{ data().label }}</h2>
     }
-    <p>Content</p>
+    <div>
+      <generator [model]="buildChildrenLayoutModel()"></generator>
+    </div>
   </div>
 </section>

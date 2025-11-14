@@ -8,44 +8,104 @@ export class LayoutBuilder {
       kind: 'group',
       children: [
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildNav(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildNav(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildHome(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildHome(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildAboutMe(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildAboutMe(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildTechnology(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildTechnology(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildSkill(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildSkill(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildExperience(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildExperience(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildResume(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildResume(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildEducation(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildEducation(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildProject(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildProject(),
+            },
+          ],
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildContact(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildContact(),
+            },
+          ],
         },
         {
           kind: 'group',
