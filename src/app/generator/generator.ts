@@ -1,7 +1,8 @@
-import { Component, input, ViewChild, ViewContainerRef } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { LayoutModel } from '../layout/model/layout.model';
+import { GroupLayoutModel, LayoutModel, LeafLayoutModel } from '../layout/model/layout.model';
+import { getDomainComponent } from '../decorator/domain-component.decorator';
 
 @Component({
   selector: 'generator',
@@ -9,62 +10,43 @@ import { LayoutModel } from '../layout/model/layout.model';
   imports: [CommonModule],
 })
 export class Generator {
-  @ViewChild('generator', { read: ViewContainerRef })
-  generator!: ViewContainerRef;
-
   model = input.required<LayoutModel>();
 
-  // ngOnInit() {
-  //   this.generator.clear();
-  //   const model = this.model();
-  //   switch (model.kind) {
-  //     case 'leaf':
-  //       const component = getDomainComponent(model.domain.kind);
-  //       const ref: any = this.generator.createComponent(component);
-  //       ref.instance.data = model.domain.data;
-  //       ref.instance.metadata = model.domain.metadata;
-  //       ref.instance.appearance = model.domain.appearance;
-  //       ref.instance.children = [];
-  //       ref.changeDetectorRef.detectChanges();
-  //       break;
-  //     case 'group':
-  //       const { domain, children } = model;
-  //       if (domain) {
-  //         const component = getDomainComponent(domain.kind);
-  //         const ref: any = this.generator.createComponent(component);
-  //         ref.instance.data = domain.data;
-  //         ref.instance.metadata = domain.metadata;
-  //         ref.instance.appearance = domain.appearance;
-  //         ref.instance.children = children;
-  //         ref.changeDetectorRef.detectChanges();
-  //       } else {
-  //         children.forEach((child) => {
-  //           const ref = this.generator.createComponent(Generator);
-  //           ref.instance.model = child;
-  //           ref.changeDetectorRef.detectChanges();
-  //         });
-  //       }
-  //       break;
-  //     default:
-  //       throw new Error('Not supported kind!');
-  //   }
-  // }
+  get leaf(): LeafLayoutModel | null {
+    const selfModel = this.model();
+    return selfModel.kind === 'leaf' ? selfModel : null;
+  }
 
-  // getComponent() {
-  //   const { domain } = this.layout();
-  //   if (domain) {
-  //     return getDomainComponent(domain.kind);
-  //   }
-  //   throw new Error('The domain is not defined!');
-  // }
+  get group(): GroupLayoutModel | null {
+    const selfModel = this.model();
+    return selfModel.kind === 'group' ? selfModel : null;
+  }
 
-  // getInputs() {
-  //   const selfLayoput = this.layout();
-  //   if (selfLayoput.domain) {
-  //     const { data, metadata, appearance } = selfLayoput.domain;
-  //     const children = selfLayoput.kind === 'group' ? selfLayoput.children : [];
-  //     return { data, metadata, appearance, children };
-  //   }
-  //   throw new Error('The domain is not defined!');
-  // }
+  getComponent() {
+    if (this.leaf) {
+      return getDomainComponent(this.leaf.domain.kind);
+    } else if (this.group && this.group.domain) {
+      return getDomainComponent(this.group.domain.kind);
+    }
+    throw new Error('The model is not defined!');
+  }
+
+  getInputs() {
+    if (this.leaf) {
+      return {
+        data: this.leaf.domain.data,
+        metadata: this.leaf.domain.metadata,
+        appearance: this.leaf.domain.appearance,
+        children: [],
+      };
+    } else if (this.group && this.group.domain) {
+      return {
+        data: this.group.domain.data,
+        metadata: this.group.domain.metadata,
+        appearance: this.group.domain.appearance,
+        children: this.group.children,
+      };
+    }
+    throw new Error('The model is not defined!');
+  }
 }
