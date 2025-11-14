@@ -20,7 +20,7 @@ export class LeafComponent {
   }
 
   getInputs() {
-    const { data, metadata } = this.model().domain;
-    return { data, metadata };
+    const { data, metadata, appearance } = this.model().domain;
+    return { data, metadata, appearance };
   }
 }
