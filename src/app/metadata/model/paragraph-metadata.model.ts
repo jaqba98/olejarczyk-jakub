@@ -1,1 +1,3 @@
-export interface ParagraphMetadataModel {}
+export interface ParagraphMetadataModel {
+  test: boolean;
+}

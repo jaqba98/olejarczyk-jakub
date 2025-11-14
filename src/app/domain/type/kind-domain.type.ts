@@ -1,1 +1,1 @@
-export type KindDomainType = 'section' | 'paragraph';
+export type KindDomainType = 'paragraph' | 'section';
