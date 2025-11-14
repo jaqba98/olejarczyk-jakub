@@ -4,6 +4,7 @@ export class SectionAppearanceBuilder {
   static buildNav(): SectionAppearanceModel {
     return {
       section: {
+        color: 'primary',
         padding: 'md',
         container: {
           maxWidth: 'max',
@@ -15,6 +16,7 @@ export class SectionAppearanceBuilder {
   static buildHome(): SectionAppearanceModel {
     return {
       section: {
+        color: 'secondary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -26,6 +28,7 @@ export class SectionAppearanceBuilder {
   static buildAboutMe(): SectionAppearanceModel {
     return {
       section: {
+        color: 'primary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -37,6 +40,7 @@ export class SectionAppearanceBuilder {
   static buildTechnology(): SectionAppearanceModel {
     return {
       section: {
+        color: 'secondary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -48,6 +52,7 @@ export class SectionAppearanceBuilder {
   static buildSkill(): SectionAppearanceModel {
     return {
       section: {
+        color: 'primary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -59,6 +64,7 @@ export class SectionAppearanceBuilder {
   static buildExperience(): SectionAppearanceModel {
     return {
       section: {
+        color: 'secondary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -70,6 +76,7 @@ export class SectionAppearanceBuilder {
   static buildResume(): SectionAppearanceModel {
     return {
       section: {
+        color: 'primary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -81,6 +88,7 @@ export class SectionAppearanceBuilder {
   static buildEducation(): SectionAppearanceModel {
     return {
       section: {
+        color: 'secondary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -92,6 +100,7 @@ export class SectionAppearanceBuilder {
   static buildProject(): SectionAppearanceModel {
     return {
       section: {
+        color: 'primary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -103,6 +112,7 @@ export class SectionAppearanceBuilder {
   static buildContact(): SectionAppearanceModel {
     return {
       section: {
+        color: 'secondary',
         padding: 'xl',
         container: {
           maxWidth: 'container',
@@ -114,6 +124,7 @@ export class SectionAppearanceBuilder {
   static buildFooter(): SectionAppearanceModel {
     return {
       section: {
+        color: 'primary',
         padding: 'md',
         container: {
           maxWidth: 'max',

@@ -1,5 +1,13 @@
 .section {
-  border: 1px solid red;
+  &__color {
+    &--primary {
+      background-color: var(--color-primary);
+    }
+
+    &--secondary {
+      background-color: var(--color-secondary);
+    }
+  }
 
   &__padding {
     &--md {
@@ -12,8 +20,6 @@
   }
 
   &__container {
-    border: 1px solid blue;
-
     &--max {
       max-width: var(--width-full);
     }

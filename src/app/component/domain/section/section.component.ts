@@ -22,9 +22,11 @@ export class SectionComponent {
   constructor(private readonly bemUtil: BemUtil) {}
 
   buildSectionClassList() {
+    const sectionColor = this.appearance().section.color;
     const sectionPadding = this.appearance().section.padding;
     return [
       this.bemUtil.build('section'),
+      this.bemUtil.build('section', 'color', sectionColor),
       this.bemUtil.build('section', 'padding', sectionPadding),
     ];
   }
