@@ -1,22 +1,12 @@
 import { LayoutModel } from '../model/layout.model';
 import { SectionDomainBuilder } from '../../domain/builder/section-domain.builder';
+import { ParagraphDomainBuilder } from '../../domain/builder/paragraph-domain.builder';
 
 export class LayoutBuilder {
   static build(): LayoutModel {
     return {
       kind: 'group',
       children: [
-        {
-          kind: 'leaf',
-          domain: {
-            kind: 'paragraph',
-            data: {
-              value: 'Hello World',
-            },
-            metadata: {},
-            appearance: {},
-          },
-        },
         {
           kind: 'leaf',
           domain: SectionDomainBuilder.buildNav(),
@@ -58,8 +48,14 @@ export class LayoutBuilder {
           domain: SectionDomainBuilder.buildContact(),
         },
         {
-          kind: 'leaf',
+          kind: 'group',
           domain: SectionDomainBuilder.buildFooter(),
+          children: [
+            {
+              kind: 'leaf',
+              domain: ParagraphDomainBuilder.buildFooter(),
+            },
+          ],
         },
       ],
     };

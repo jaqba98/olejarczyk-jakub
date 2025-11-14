@@ -1,1 +1,1 @@
-export type KindLayoutType = 'group' | 'leaf';
+export type KindLayoutType = 'leaf' | 'group';

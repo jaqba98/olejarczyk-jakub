@@ -10,6 +10,7 @@ export interface LeafLayoutModel extends BaseLayoutModel<'leaf'> {
 }
 
 export interface GroupLayoutModel extends BaseLayoutModel<'group'> {
+  domain?: DomainModel;
   children: LayoutModel[];
 }
 
