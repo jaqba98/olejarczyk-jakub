@@ -11,6 +11,7 @@ import '../component/layout/group/group.component';
 import '../component/layout/leaf/leaf.component';
 
 import '../component/domain/section/section.component';
+import '../component/domain/paragraph/paragraph.component';
 
 @Component({
   selector: 'root',

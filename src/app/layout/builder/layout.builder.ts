@@ -8,6 +8,17 @@ export class LayoutBuilder {
       children: [
         {
           kind: 'leaf',
+          domain: {
+            kind: 'paragraph',
+            data: {
+              value: 'Hello World',
+            },
+            metadata: {},
+            appearance: {},
+          },
+        },
+        {
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildNav(),
         },
         {
