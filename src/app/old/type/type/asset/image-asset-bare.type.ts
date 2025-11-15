@@ -1,4 +1,4 @@
-export type ImageAssetDomainType =
+export type ImageAssetBareType =
   | 'none'
   | 'asset/image/personal/profile.jpeg'
   | 'asset/image/personal/project1.jpeg'
