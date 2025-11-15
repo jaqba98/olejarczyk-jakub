@@ -3,133 +3,78 @@ import { SectionAppearanceModel } from '../model/section-appearance.model';
 export class SectionAppearanceBuilder {
   static buildNav(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'primary',
-        padding: 'md',
-        container: {
-          maxWidth: 'max',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildHome(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'secondary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildAboutMe(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'primary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildTechnology(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'secondary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildSkill(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'primary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildExperience(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'secondary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildResume(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'primary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildEducation(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'secondary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildProject(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'primary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildContact(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'secondary',
-        padding: 'xl',
-        container: {
-          maxWidth: 'container',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 
   static buildFooter(): SectionAppearanceModel {
     return {
-      section: {
-        color: 'primary',
-        padding: 'md',
-        container: {
-          maxWidth: 'max',
-        },
-      },
+      section: [],
+      container: [],
     };
   }
 }
