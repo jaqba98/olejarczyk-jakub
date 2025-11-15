@@ -1,4 +1,4 @@
-import { PersonalBareModel } from '../../model/personal-bare.model';
+import { PersonalBareModel } from '../model/personal-bare.model';
 
 export const personalBareConst: PersonalBareModel = {
   firstName: 'Jakub',

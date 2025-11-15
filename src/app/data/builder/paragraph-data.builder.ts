@@ -1,3 +1,4 @@
+import { FooterDataBuilder } from '../../builder/data/footer-data.builder';
 import { ParagraphDataModel } from '../model/paragraph-data.model';
 
 export class ParagraphDataBuilder {
@@ -63,7 +64,7 @@ export class ParagraphDataBuilder {
 
   static buildFooter(): ParagraphDataModel {
     return {
-      text: 'Content footer',
+      text: FooterDataBuilder.buildCopyright(),
     };
   }
 }
