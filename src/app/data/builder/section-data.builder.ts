@@ -1,7 +1,7 @@
 import { SectionBuilderData } from '../../builder/data/section-builder.date';
 import { SectionDataModel } from '../model/section-data.model';
 
-export class SectionData2Builder {
+export class SectionDataBuilder {
   static buildNav(): SectionDataModel {
     return {
       id: SectionBuilderData.buildSectionId('nav'),
