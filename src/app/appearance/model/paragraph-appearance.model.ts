@@ -1,3 +1,1 @@
-export interface ParagraphAppearanceModel {
-  hello: boolean;
-}
+export interface ParagraphAppearanceModel {}

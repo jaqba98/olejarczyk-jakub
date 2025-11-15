@@ -8,104 +8,44 @@ export class LayoutBuilder {
       kind: 'group',
       children: [
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildNav(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildNav(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildHome(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildHome(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildAboutMe(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildAboutMe(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildTechnology(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildTechnology(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildSkill(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildSkill(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildExperience(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildExperience(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildResume(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildResume(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildEducation(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildEducation(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildProject(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildProject(),
-            },
-          ],
         },
         {
-          kind: 'group',
+          kind: 'leaf',
           domain: SectionDomainBuilder.buildContact(),
-          children: [
-            {
-              kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildContact(),
-            },
-          ],
         },
         {
           kind: 'group',
@@ -113,7 +53,7 @@ export class LayoutBuilder {
           children: [
             {
               kind: 'leaf',
-              domain: ParagraphDomainBuilder.buildFooter(),
+              domain: ParagraphDomainBuilder.buildFooterCopyright(),
             },
           ],
         },
