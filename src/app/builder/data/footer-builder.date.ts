@@ -1,7 +1,7 @@
 import { personalBareConst } from '../../bare/const/personal-bare.const';
 import { websiteBareConst } from '../../bare/const/website-bare.const';
 
-export class FooterDataBuilder {
+export class FooterBuilderData {
   static buildCopyright(): string {
     const { firstName, lastName } = personalBareConst;
     const { creationYear } = websiteBareConst;
