@@ -10,7 +10,6 @@ import { LayoutModel } from '../../../layout/model/layout.model';
 @Component({
   selector: 'paragraph-domain-component',
   templateUrl: './paragraph.component.html',
-  styleUrl: './paragraph.component.scss',
   imports: [CommonModule],
 })
 @DomainComponentDecorator('paragraph')

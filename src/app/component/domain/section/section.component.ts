@@ -11,7 +11,6 @@ import { Generator } from '../../../generator/generator';
 @Component({
   selector: 'section-domain-component',
   templateUrl: './section.component.html',
-  styleUrl: './section.component.scss',
   imports: [CommonModule, Generator],
 })
 @DomainComponentDecorator('section')

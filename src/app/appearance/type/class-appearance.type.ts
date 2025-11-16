@@ -1,1 +1,1 @@
-export type ClassAppearanceType = 'test';
+export type ClassAppearanceType = 'text-align--center';
