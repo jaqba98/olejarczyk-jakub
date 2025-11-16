@@ -7,7 +7,7 @@ import { SectionRawBuilder } from '../builder/section-raw.builder';
 import { WebsiteRawBuilder } from '../builder/website-raw.builder';
 
 @Injectable({ providedIn: 'root' })
-export class RawInit {
+export class RawInitiator {
   constructor(
     private readonly store: Store,
     private readonly personal: PersonalRawBuilder,

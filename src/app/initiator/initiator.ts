@@ -1,13 +1,23 @@
 import { Injectable } from '@angular/core';
-import { take } from 'rxjs';
+import { of, switchMap, take } from 'rxjs';
 
-import { RawInit } from '../raw/init/raw.init';
+import { RawInitiator } from '../raw/initiator/raw.initiator';
+import { MapperInitiator } from '../mapper/initiator/mapper.initiator';
 
 @Injectable({ providedIn: 'root' })
 export class Initiator {
-  constructor(private readonly rawInit: RawInit) {}
+  constructor(
+    private readonly raw: RawInitiator,
+    private readonly mapper: MapperInitiator,
+  ) {}
 
   init() {
-    this.rawInit.init().pipe(take(1)).subscribe();
+    of(true)
+      .pipe(
+        switchMap(() => this.raw.init()),
+        switchMap(() => this.mapper.init()),
+        take(1),
+      )
+      .subscribe();
   }
 }
