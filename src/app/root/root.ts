@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Store } from '@ngxs/store';
-import { from, Observable } from 'rxjs';
+// import { from, Observable } from 'rxjs';
 
 // import { LayoutStoreState } from '../state/state/layout-store.state';
-import { LayoutModel } from '../layout/model/layout.model';
-import { Generator } from '../generator/generator';
+// import { LayoutModel } from '../layout/model/layout.model';
+// import { Generator } from '../generator/generator';
 
 import '../component/domain/paragraph/paragraph.component';
 import '../component/domain/section/section.component';
@@ -14,7 +14,7 @@ import '../component/domain/section/section.component';
 @Component({
   selector: 'root',
   templateUrl: './root.html',
-  imports: [CommonModule, Generator],
+  imports: [CommonModule],
 })
 export class Root {
   // state$;
