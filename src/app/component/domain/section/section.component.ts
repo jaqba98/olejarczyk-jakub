@@ -6,12 +6,11 @@ import { SectionAppearanceModel } from '../../../appearance/model/section-appear
 import { SectionDataModel } from '../../../model/data/section-data.model';
 import { SectionMetadataModel } from '../../../metadata/model/section-metadata.model';
 import { LayoutModel } from '../../../layout/model/layout.model';
-import { Generator } from '../../../generator/generator';
 
 @Component({
   selector: 'section-domain-component',
   templateUrl: './section.component.html',
-  imports: [CommonModule, Generator],
+  imports: [CommonModule],
 })
 @DomainComponentDecorator('section')
 export class SectionComponent {

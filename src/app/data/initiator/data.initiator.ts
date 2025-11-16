@@ -5,12 +5,14 @@ import { of, switchMap, take } from 'rxjs';
 import { CopyrightDataBuilder } from '../builder/copyright-data.builder';
 import { MapperState } from '../../state/mapper.state';
 import { DataStateInitAction } from '../../action/state-init.action';
+import { SectionDataBuilder } from '../builder/section-data.builder';
 
 @Injectable({ providedIn: 'root' })
 export class DataInitiator {
   constructor(
     private readonly store: Store,
     private readonly copyright: CopyrightDataBuilder,
+    private readonly section: SectionDataBuilder,
   ) {}
 
   init() {
@@ -20,6 +22,7 @@ export class DataInitiator {
         return this.store.dispatch(
           new DataStateInitAction({
             copyright: this.copyright.build(state),
+            section: this.section.build(state),
           }),
         );
       }),
