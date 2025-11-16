@@ -1,80 +1,55 @@
-import { SectionAppearanceModel } from '../model/section-appearance.model';
+import { Injectable } from '@angular/core';
 
+import { SectionAppearanceModel } from '../../model/appearance/section-appearance.model';
+
+@Injectable({ providedIn: 'root' })
 export class SectionAppearanceBuilder {
-  static buildNav(): SectionAppearanceModel {
+  build(): SectionAppearanceModel {
     return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildHome(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildAboutMe(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildTechnology(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildSkill(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildExperience(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildResume(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildEducation(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildProject(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildContact(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
-    };
-  }
-
-  static buildFooter(): SectionAppearanceModel {
-    return {
-      section: [],
-      container: [],
+      nav: {
+        section: [],
+        container: [],
+      },
+      home: {
+        section: [],
+        container: [],
+      },
+      aboutMe: {
+        section: [],
+        container: [],
+      },
+      technology: {
+        section: [],
+        container: [],
+      },
+      skill: {
+        section: [],
+        container: [],
+      },
+      experience: {
+        section: [],
+        container: [],
+      },
+      resume: {
+        section: [],
+        container: [],
+      },
+      education: {
+        section: [],
+        container: [],
+      },
+      project: {
+        section: [],
+        container: [],
+      },
+      contact: {
+        section: [],
+        container: [],
+      },
+      footer: {
+        section: [],
+        container: [],
+      },
     };
   }
 }

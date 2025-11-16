@@ -1,4 +1,4 @@
-import { SectionAppearanceModel } from '../../../appearance/model/section-appearance.model';
+import { SectionAppearanceModel } from '../../../model/appearance/section-appearance.model';
 import { SectionDataModel } from '../../../model/data/section-data.model';
 import { SectionMetadataModel } from '../../../model/metadata/section-metadata.model';
 import { BaseDomainModel } from '../base/base-domain.model';

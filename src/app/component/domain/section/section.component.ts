@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 import { DomainComponentDecorator } from '../../../decorator/domain-component.decorator';
-import { SectionAppearanceModel } from '../../../appearance/model/section-appearance.model';
+import { SectionAppearanceModel } from '../../../model/appearance/section-appearance.model';
 import { SectionDataModel } from '../../../model/data/section-data.model';
 import { SectionMetadataModel } from '../../../model/metadata/section-metadata.model';
 import { LayoutModel } from '../../../layout/model/layout.model';

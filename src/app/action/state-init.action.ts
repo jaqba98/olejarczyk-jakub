@@ -1,3 +1,4 @@
+import { AppearanceStateModel } from '../model/state/appearance-state.model';
 import { DataStateModel } from '../model/state/data-state.model';
 import { MapperStateModel } from '../model/state/mapper-state.model';
 import { MetadataStateModel } from '../model/state/metadata-state.model';
@@ -25,4 +26,10 @@ export class MetadataStateInitAction {
   static readonly type = '[Metadata] Init';
 
   constructor(public state: MetadataStateModel) {}
+}
+
+export class AppearanceStateInitAction {
+  static readonly type = '[Appearance] Init';
+
+  constructor(public state: AppearanceStateModel) {}
 }

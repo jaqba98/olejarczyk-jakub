@@ -2,23 +2,23 @@ import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
 import { of, switchMap, take } from 'rxjs';
 
-import { MetadataStateInitAction } from '../../action/state-init.action';
-import { CopyrightMetadataBuilder } from '../builder/copyright-metadata.builder';
-import { SectionMetadataBuilder } from '../builder/section-metadata.builder';
+import { CopyrightAppearanceBuilder } from '../builder/copyright-appearance.builder';
+import { SectionAppearanceBuilder } from '../builder/section-appearance.builder';
+import { AppearanceStateInitAction } from '../../action/state-init.action';
 
 @Injectable({ providedIn: 'root' })
-export class MetadataInitiator {
+export class AppearanceInitiator {
   constructor(
     private readonly store: Store,
-    private readonly copyright: CopyrightMetadataBuilder,
-    private readonly section: SectionMetadataBuilder,
+    private readonly copyright: CopyrightAppearanceBuilder,
+    private readonly section: SectionAppearanceBuilder,
   ) {}
 
   init() {
     return of(true).pipe(
       switchMap(() => {
         return this.store.dispatch(
-          new MetadataStateInitAction({
+          new AppearanceStateInitAction({
             copyright: this.copyright.build(),
             section: this.section.build(),
           }),

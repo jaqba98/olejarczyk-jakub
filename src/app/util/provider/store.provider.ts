@@ -6,12 +6,13 @@ import { RawState } from '../../state/raw.state';
 import { MapperState } from '../../state/mapper.state';
 import { DataState } from '../../state/data.state';
 import { MetadataState } from '../../state/metadata.state';
+import { AppearanceState } from '../../state/appearance.state';
 
 export class StoreProvider {
   static getProvider() {
     return [
       provideStore(
-        [RawState, MapperState, DataState, MetadataState],
+        [RawState, MapperState, DataState, MetadataState, AppearanceState],
         withNgxsReduxDevtoolsPlugin(),
       ),
     ];
