@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
 
-import { SvgModel } from '../../../model/svg.model';
+import { SvgModel } from '../../../old/svg.model';
 import { SvgImageComponent } from '../../image/svg/svg-image.component';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { FlexUtilComponent } from '../../util/flex/flex-util.component';

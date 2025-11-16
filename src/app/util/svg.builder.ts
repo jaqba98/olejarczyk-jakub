@@ -1,4 +1,4 @@
-import { SvgModel } from '../model/svg.model';
+import { SvgModel } from '../old/svg.model';
 
 export class SvgBuilder {
   static build(
