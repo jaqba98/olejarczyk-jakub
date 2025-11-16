@@ -4,7 +4,7 @@ import { Component, input } from '@angular/core';
 import { DomainComponentDecorator } from '../../../decorator/domain-component.decorator';
 import { SectionAppearanceModel } from '../../../appearance/model/section-appearance.model';
 import { SectionDataModel } from '../../../model/data/section-data.model';
-import { SectionMetadataModel } from '../../../metadata/model/section-metadata.model';
+import { SectionMetadataModel } from '../../../model/metadata/section-metadata.model';
 import { LayoutModel } from '../../../layout/model/layout.model';
 
 @Component({

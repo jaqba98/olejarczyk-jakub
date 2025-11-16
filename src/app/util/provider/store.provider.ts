@@ -5,10 +5,16 @@ import { applicationConfig } from '@storybook/angular';
 import { RawState } from '../../state/raw.state';
 import { MapperState } from '../../state/mapper.state';
 import { DataState } from '../../state/data.state';
+import { MetadataState } from '../../state/metadata.state';
 
 export class StoreProvider {
   static getProvider() {
-    return [provideStore([RawState, MapperState, DataState], withNgxsReduxDevtoolsPlugin())];
+    return [
+      provideStore(
+        [RawState, MapperState, DataState, MetadataState],
+        withNgxsReduxDevtoolsPlugin(),
+      ),
+    ];
   }
 
   static getStorybookProvider(providers: ApplicationConfig['providers'] = []) {

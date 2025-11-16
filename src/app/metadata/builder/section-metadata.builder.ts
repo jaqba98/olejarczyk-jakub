@@ -1,69 +1,44 @@
-import { SectionMetadataModel } from '../model/section-metadata.model';
+import { Injectable } from '@angular/core';
 
+import { SectionMetadataModel } from '../../model/metadata/section-metadata.model';
+
+@Injectable({ providedIn: 'root' })
 export class SectionMetadataBuilder {
-  static buildNav(): SectionMetadataModel {
+  build(): SectionMetadataModel {
     return {
-      showTitle: false,
-    };
-  }
-
-  static buildHome(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildAboutMe(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildTechnology(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildSkill(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildExperience(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildResume(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildEducation(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildProject(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildContact(): SectionMetadataModel {
-    return {
-      showTitle: true,
-    };
-  }
-
-  static buildFooter(): SectionMetadataModel {
-    return {
-      showTitle: false,
+      nav: {
+        showTitle: false,
+      },
+      home: {
+        showTitle: true,
+      },
+      aboutMe: {
+        showTitle: true,
+      },
+      technology: {
+        showTitle: true,
+      },
+      skill: {
+        showTitle: true,
+      },
+      experience: {
+        showTitle: true,
+      },
+      resume: {
+        showTitle: true,
+      },
+      education: {
+        showTitle: true,
+      },
+      project: {
+        showTitle: true,
+      },
+      contact: {
+        showTitle: true,
+      },
+      footer: {
+        showTitle: false,
+      },
     };
   }
 }

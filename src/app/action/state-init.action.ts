@@ -1,5 +1,6 @@
 import { DataStateModel } from '../model/state/data-state.model';
 import { MapperStateModel } from '../model/state/mapper-state.model';
+import { MetadataStateModel } from '../model/state/metadata-state.model';
 import { RawStateModel } from '../model/state/raw-state.model';
 
 export class RawStateInitAction {
@@ -18,4 +19,10 @@ export class DataStateInitAction {
   static readonly type = '[Data] Init';
 
   constructor(public state: DataStateModel) {}
+}
+
+export class MetadataStateInitAction {
+  static readonly type = '[Metadata] Init';
+
+  constructor(public state: MetadataStateModel) {}
 }
