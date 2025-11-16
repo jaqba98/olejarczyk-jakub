@@ -1,5 +1,9 @@
+import { RawStoreModel } from '../model/raw-store.model';
+
 export class InitRawStoreAction {
   static readonly type = '[Raw] Init';
+
+  constructor(public model: RawStoreModel) {}
 }
 
 export class InitMapperStoreAction {

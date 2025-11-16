@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { SectionRawModel } from '../model/section-raw.model';
+import { SectionRawModel } from '../../model/raw/section-raw.model';
 
 @Injectable({ providedIn: 'root' })
 export class SectionRawBuilder {

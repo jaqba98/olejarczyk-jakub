@@ -1,6 +1,6 @@
-import { PersonalRawModel } from '../../raw/model/personal-raw.model';
-import { SectionRawModel } from '../../raw/model/section-raw.model';
-import { WebsiteRawModel } from '../../raw/model/website-raw.model';
+import { PersonalRawModel } from '../../model/raw/personal-raw.model';
+import { SectionRawModel } from '../../model/raw/section-raw.model';
+import { WebsiteRawModel } from '../../model/raw/website-raw.model';
 
 export interface RawStoreModel {
   personal: PersonalRawModel;
