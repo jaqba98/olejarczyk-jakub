@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+
 import { PersonalRawModel } from '../../model/raw/personal-raw.model';
 
 @Injectable({ providedIn: 'root' })

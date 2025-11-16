@@ -1,5 +1,5 @@
-import { Action, State, StateContext } from '@ngxs/store';
 import { Injectable } from '@angular/core';
+import { Action, State, StateContext } from '@ngxs/store';
 
 import { RawStateModel } from '../model/state/raw-state.model';
 import { RawStateInitAction } from '../action/state-init.action';
