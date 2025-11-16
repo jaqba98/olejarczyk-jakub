@@ -11,7 +11,7 @@ export class CopyrightMapperBuilder {
     const currYear = new Date().getFullYear();
     const year = creationYear === currYear ? `${currYear}` : `${creationYear} - ${currYear}`;
     return {
-      copyright: `© ${year} ${firstName} ${lastName}. All rights reserved.`,
+      text: `© ${year} ${firstName} ${lastName}. All rights reserved.`,
     };
   }
 }

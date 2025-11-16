@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Action, State, StateContext } from '@ngxs/store';
+import { Action, Selector, State, StateContext } from '@ngxs/store';
 
 import { MapperStateModel } from '../model/state/mapper-state.model';
 import { MapperStateInitAction } from '../action/state-init.action';
@@ -9,6 +9,11 @@ import { MapperStateInitAction } from '../action/state-init.action';
 })
 @Injectable({ providedIn: 'root' })
 export class MapperState {
+  @Selector()
+  static getState(state: MapperStateModel) {
+    return state;
+  }
+
   @Action(MapperStateInitAction)
   init(ctx: StateContext<MapperStateModel>, action: MapperStateInitAction) {
     ctx.patchState(action.state);

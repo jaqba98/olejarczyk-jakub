@@ -1,3 +1,3 @@
 export interface CopyrightMapperModel {
-  copyright: string;
+  text: string;
 }

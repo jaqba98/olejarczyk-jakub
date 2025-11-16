@@ -1,105 +1,104 @@
 import { SectionAppearanceBuilder } from '../../appearance/builder/section-appearance.builder';
-import { SectionDataBuilder } from '../../data/builder/section-data.builder';
+// import { SectionDataBuilder } from '../../data/builder/section-data.builder';
 import { SectionMetadataBuilder } from '../../metadata/builder/section-metadata.builder';
-import { SectionDomainModel } from '../model/builder/section-domain.model';
-
+//
 export class SectionDomainBuilder {
-  static buildNav(): SectionDomainModel {
+  static buildNav(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildNav(),
-      metadata: SectionMetadataBuilder.buildNav(),
-      appearance: SectionAppearanceBuilder.buildNav(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildNav(),
+      // metadata: SectionMetadataBuilder.buildNav(),
+      // appearance: SectionAppearanceBuilder.buildNav(),
     };
   }
 
-  static buildHome(): SectionDomainModel {
+  static buildHome(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildHome(),
-      metadata: SectionMetadataBuilder.buildHome(),
-      appearance: SectionAppearanceBuilder.buildHome(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildHome(),
+      // metadata: SectionMetadataBuilder.buildHome(),
+      // appearance: SectionAppearanceBuilder.buildHome(),
     };
   }
 
-  static buildAboutMe(): SectionDomainModel {
+  static buildAboutMe(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildAboutMe(),
-      metadata: SectionMetadataBuilder.buildAboutMe(),
-      appearance: SectionAppearanceBuilder.buildAboutMe(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildAboutMe(),
+      // metadata: SectionMetadataBuilder.buildAboutMe(),
+      // appearance: SectionAppearanceBuilder.buildAboutMe(),
     };
   }
 
-  static buildTechnology(): SectionDomainModel {
+  static buildTechnology(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildTechnology(),
-      metadata: SectionMetadataBuilder.buildTechnology(),
-      appearance: SectionAppearanceBuilder.buildTechnology(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildTechnology(),
+      // metadata: SectionMetadataBuilder.buildTechnology(),
+      // appearance: SectionAppearanceBuilder.buildTechnology(),
     };
   }
 
-  static buildSkill(): SectionDomainModel {
+  static buildSkill(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildSkill(),
-      metadata: SectionMetadataBuilder.buildSkill(),
-      appearance: SectionAppearanceBuilder.buildSkill(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildSkill(),
+      // metadata: SectionMetadataBuilder.buildSkill(),
+      // appearance: SectionAppearanceBuilder.buildSkill(),
     };
   }
 
-  static buildExperience(): SectionDomainModel {
+  static buildExperience(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildExperience(),
-      metadata: SectionMetadataBuilder.buildExperience(),
-      appearance: SectionAppearanceBuilder.buildExperience(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildExperience(),
+      // metadata: SectionMetadataBuilder.buildExperience(),
+      // appearance: SectionAppearanceBuilder.buildExperience(),
     };
   }
 
-  static buildResume(): SectionDomainModel {
+  static buildResume(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildResume(),
-      metadata: SectionMetadataBuilder.buildResume(),
-      appearance: SectionAppearanceBuilder.buildResume(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildResume(),
+      // metadata: SectionMetadataBuilder.buildResume(),
+      // appearance: SectionAppearanceBuilder.buildResume(),
     };
   }
 
-  static buildEducation(): SectionDomainModel {
+  static buildEducation(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildEducation(),
-      metadata: SectionMetadataBuilder.buildEducation(),
-      appearance: SectionAppearanceBuilder.buildEducation(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildEducation(),
+      // metadata: SectionMetadataBuilder.buildEducation(),
+      // appearance: SectionAppearanceBuilder.buildEducation(),
     };
   }
 
-  static buildProject(): SectionDomainModel {
+  static buildProject(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildProject(),
-      metadata: SectionMetadataBuilder.buildProject(),
-      appearance: SectionAppearanceBuilder.buildProject(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildProject(),
+      // metadata: SectionMetadataBuilder.buildProject(),
+      // appearance: SectionAppearanceBuilder.buildProject(),
     };
   }
 
-  static buildContact(): SectionDomainModel {
+  static buildContact(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildContact(),
-      metadata: SectionMetadataBuilder.buildContact(),
-      appearance: SectionAppearanceBuilder.buildContact(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildContact(),
+      // metadata: SectionMetadataBuilder.buildContact(),
+      // appearance: SectionAppearanceBuilder.buildContact(),
     };
   }
 
-  static buildFooter(): SectionDomainModel {
+  static buildFooter(): any {
     return {
-      kind: 'section',
-      data: SectionDataBuilder.buildFooter(),
-      metadata: SectionMetadataBuilder.buildFooter(),
-      appearance: SectionAppearanceBuilder.buildFooter(),
+      // kind: 'section',
+      // data: SectionDataBuilder.buildFooter(),
+      // metadata: SectionMetadataBuilder.buildFooter(),
+      // appearance: SectionAppearanceBuilder.buildFooter(),
     };
   }
 }

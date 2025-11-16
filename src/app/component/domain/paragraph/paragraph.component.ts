@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
 
 import { DomainComponentDecorator } from '../../../decorator/domain-component.decorator';
-import { ParagraphDataModel } from '../../../data/model/paragraph-data.model';
+import { ParagraphDataModel } from '../../../model/data/paragraph-data.model';
 import { ParagraphMetadataModel } from '../../../metadata/model/paragraph-metadata.model';
 import { ParagraphAppearanceModel } from '../../../appearance/model/paragraph-appearance.model';
 import { LayoutModel } from '../../../layout/model/layout.model';

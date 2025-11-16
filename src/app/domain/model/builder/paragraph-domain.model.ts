@@ -1,5 +1,5 @@
 import { ParagraphAppearanceModel } from '../../../appearance/model/paragraph-appearance.model';
-import { ParagraphDataModel } from '../../../data/model/paragraph-data.model';
+import { ParagraphDataModel } from '../../../model/data/paragraph-data.model';
 import { ParagraphMetadataModel } from '../../../metadata/model/paragraph-metadata.model';
 import { BaseDomainModel } from '../base/base-domain.model';
 

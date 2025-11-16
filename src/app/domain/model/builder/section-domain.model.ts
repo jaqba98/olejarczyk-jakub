@@ -1,5 +1,5 @@
 import { SectionAppearanceModel } from '../../../appearance/model/section-appearance.model';
-import { SectionDataModel } from '../../../data/model/section-data.model';
+import { SectionDataModel } from '../../../model/data/section-data.model';
 import { SectionMetadataModel } from '../../../metadata/model/section-metadata.model';
 import { BaseDomainModel } from '../base/base-domain.model';
 
