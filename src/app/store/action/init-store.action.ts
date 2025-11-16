@@ -1,4 +1,4 @@
-import { RawStoreModel } from '../model/raw-store.model';
+import { RawStoreModel } from '../../model/state/raw-state.model';
 
 export class InitRawStoreAction {
   static readonly type = '[Raw] Init';
