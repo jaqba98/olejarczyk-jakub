@@ -8,12 +8,12 @@ export class SectionRawBuilder {
       nav: {
         id: 'nav',
         label: 'Nav',
-        href: `#nav`,
+        href: '#nav',
       },
       home: {
         id: 'home',
         label: 'Home',
-        href: `#home`,
+        href: '#home',
       },
       aboutMe: {
         id: 'about-me',
