@@ -1,5 +1,5 @@
 import { KindDomainType } from '../domain/type/kind-domain.type';
-import { ComponentType } from '../type/component-type';
+import { ComponentType } from '../old/type2/component-type';
 
 const store = new Map<KindDomainType, ComponentType>();
 

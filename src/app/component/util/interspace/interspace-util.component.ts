@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
 
-import { SizeType } from '../../../type/size.type';
+import { SizeType } from '../../../old/type2/size.type';
 import { BemUtil } from '../../../util/bem.util';
 
 @Component({

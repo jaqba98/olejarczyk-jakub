@@ -5,8 +5,8 @@ import { BaseComponent } from '../../base/base.component';
 import { PaddingUtilComponent } from '../../util/padding/padding-util.component';
 import { HeadingTextComponent } from '../../text/heading/heading-text.component';
 import { MarginUtilComponent } from '../../util/margin/margin-util.component';
-import { ColorType } from '../../../type/color.type';
-import { PropertyType } from '../../../type/property.type';
+import { ColorType } from '../../../old/type2/color.type';
+import { PropertyType } from '../../../old/type2/property.type';
 import { ParagraphTextComponent } from '../../text/paragraph/paragraph-text.component';
 import { InterspaceUtilComponent } from '../../util/interspace/interspace-util.component';
 

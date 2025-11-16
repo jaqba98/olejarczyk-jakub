@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 
-import { ColorType } from '../../type/color.type';
-import { PropertyType } from '../../type/property.type';
+import { ColorType } from '../../old/type2/color.type';
+import { PropertyType } from '../../old/type2/property.type';
 
 @Component({
   selector: 'base',
