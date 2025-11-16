@@ -4,10 +4,11 @@ import { withNgxsReduxDevtoolsPlugin } from '@ngxs/devtools-plugin';
 import { applicationConfig } from '@storybook/angular';
 
 import { LayoutStoreState } from '../state/layout-store.state';
+import { RawStoreState } from '../state/raw-store.state';
 
 export class StoreProvider {
   static getProvider() {
-    return [provideStore([LayoutStoreState], withNgxsReduxDevtoolsPlugin())];
+    return [provideStore([LayoutStoreState, RawStoreState], withNgxsReduxDevtoolsPlugin())];
   }
 
   static getStorybookProvider(providers: ApplicationConfig['providers'] = []) {
