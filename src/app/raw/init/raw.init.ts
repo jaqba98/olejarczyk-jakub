@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { Observable } from 'rxjs';
 
 import { RawStateInitAction } from '../../action/state-init.action';
 import { PersonalRawBuilder } from '../builder/personal-raw.builder';
@@ -16,7 +15,7 @@ export class RawInit {
     private readonly website: WebsiteRawBuilder,
   ) {}
 
-  init(): Observable<void> {
+  init() {
     return this.store.dispatch(
       new RawStateInitAction({
         personal: this.personal.build(),
