@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, State, StateContext } from '@ngxs/store';
 
-import { InitRawStoreAction } from '../action/init-store.action';
+import { InitRawStoreAction } from '../../action/store-init.action';
 import { RawStoreModel } from '../../model/state/raw-state.model';
 
 @State<RawStoreModel>({

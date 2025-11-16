@@ -9,7 +9,7 @@ import { Generator } from '../generator/generator';
 
 import '../component/domain/paragraph/paragraph.component';
 import '../component/domain/section/section.component';
-import { InitRawStoreAction } from '../store/action/init-store.action';
+import { InitRawStoreAction } from '../action/store-init.action';
 
 @Component({
   selector: 'root',
