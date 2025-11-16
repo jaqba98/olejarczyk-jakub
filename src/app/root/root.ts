@@ -3,13 +3,13 @@ import { CommonModule } from '@angular/common';
 import { Store } from '@ngxs/store';
 import { from, Observable } from 'rxjs';
 
-import { LayoutStoreState } from '../store/state/layout-store.state';
+// import { LayoutStoreState } from '../state/state/layout-store.state';
 import { LayoutModel } from '../layout/model/layout.model';
 import { Generator } from '../generator/generator';
 
 import '../component/domain/paragraph/paragraph.component';
 import '../component/domain/section/section.component';
-import { InitRawStoreAction } from '../action/store-init.action';
+// import { InitRawStoreAction } from '../action/state-init.action';
 
 @Component({
   selector: 'root',
@@ -17,10 +17,10 @@ import { InitRawStoreAction } from '../action/store-init.action';
   imports: [CommonModule, Generator],
 })
 export class Root {
-  state$: Observable<LayoutModel>;
+  // state$;
 
   constructor(private readonly store: Store) {
-    this.state$ = this.store.select(LayoutStoreState.getState);
-    from(this.store.dispatch(new InitRawStoreAction()));
+    // this.state$ = this.store.select(LayoutStoreState.getState);
+    // from(this.store.dispatch(new InitRawStoreAction()));
   }
 }
