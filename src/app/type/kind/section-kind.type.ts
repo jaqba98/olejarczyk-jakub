@@ -1,4 +1,4 @@
-export type SectionKindBareType =
+export type SectionKindType =
   | 'nav'
   | 'home'
   | 'aboutMe'

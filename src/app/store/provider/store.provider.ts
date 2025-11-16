@@ -8,7 +8,7 @@ import { RawStoreState } from '../state/raw-store.state';
 
 export class StoreProvider {
   static getProvider() {
-    return [provideStore([LayoutStoreState, RawStoreState], withNgxsReduxDevtoolsPlugin())];
+    return [provideStore([RawStoreState, LayoutStoreState], withNgxsReduxDevtoolsPlugin())];
   }
 
   static getStorybookProvider(providers: ApplicationConfig['providers'] = []) {

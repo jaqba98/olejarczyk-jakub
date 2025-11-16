@@ -21,7 +21,6 @@ export class Root {
 
   constructor(private readonly store: Store) {
     this.state$ = this.store.select(LayoutStoreState.getState);
-
     from(this.store.dispatch(new InitRawStoreAction()));
   }
 }

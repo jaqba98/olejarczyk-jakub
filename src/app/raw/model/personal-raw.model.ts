@@ -1,4 +1,4 @@
-export interface PersonalBareModel {
+export interface PersonalRawModel {
   firstName: string;
   lastName: string;
 }

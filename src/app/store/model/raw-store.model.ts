@@ -1,3 +1,9 @@
+import { PersonalRawModel } from '../../raw/model/personal-raw.model';
+import { SectionRawModel } from '../../raw/model/section-raw.model';
+import { WebsiteRawModel } from '../../raw/model/website-raw.model';
+
 export interface RawStoreModel {
-  test: string;
+  personal: PersonalRawModel;
+  section: SectionRawModel;
+  website: WebsiteRawModel;
 }

@@ -1,19 +1,19 @@
-import { sectionBareConst } from '../../bare/const/section-bare.const';
-import { SectionKindBareType } from '../../bare/type/kind/section-kind-bare.type';
+// import { sectionRawConst } from '../../raw/builder/section-raw.const';
+import { SectionKindType } from '../../type/kind/section-kind.type';
 
 export class SectionBuilderData {
-  static buildSectionId(kind: SectionKindBareType): string {
-    const section = sectionBareConst[kind];
-    return section.id;
+  static buildSectionId(kind: SectionKindType): string {
+    const section = 'sectionRawConst[kind]';
+    return section;
   }
 
-  static buildSectionLabel(kind: SectionKindBareType): string {
-    const section = sectionBareConst[kind];
-    return section.label;
+  static buildSectionLabel(kind: SectionKindType): string {
+    const section = 'sectionRawConst[kind]';
+    return section;
   }
 
-  static buildSectionHref(kind: SectionKindBareType): string {
-    const section = sectionBareConst[kind];
-    return section.href;
+  static buildSectionHref(kind: SectionKindType): string {
+    const section = 'sectionRawConst[kind]';
+    return section;
   }
 }
