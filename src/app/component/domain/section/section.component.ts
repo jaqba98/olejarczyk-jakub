@@ -5,7 +5,7 @@ import { DomainComponentDecorator } from '../../../decorator/domain-component.de
 import { SectionAppearanceModel } from '../../../model/appearance/section-appearance.model';
 import { SectionDataModel } from '../../../model/data/section-data.model';
 import { SectionMetadataModel } from '../../../model/metadata/section-metadata.model';
-import { LayoutModel } from '../../../layout/model/layout.model';
+import { LayoutModel } from '../../../model/layout/layout.model';
 
 @Component({
   selector: 'section-domain-component',
@@ -19,10 +19,10 @@ export class SectionComponent {
   appearance = input.required<SectionAppearanceModel>();
   children = input.required<LayoutModel[]>();
 
-  buildChildrenLayoutModel(): LayoutModel {
-    return {
-      kind: 'group',
-      children: this.children(),
-    };
+  buildChildrenLayoutModel(): any {
+    // return {
+    //   kind: 'group',
+    //   children: this.children(),
+    // };
   }
 }

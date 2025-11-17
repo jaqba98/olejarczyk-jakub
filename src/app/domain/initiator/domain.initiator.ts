@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { combineLatest, of, switchMap, take } from 'rxjs';
+import { combineLatest, switchMap, take } from 'rxjs';
 
 import { CopyrightDomainBuilder } from '../builder/copyright-domain.builder';
 import { SectionDomainBuilder } from '../builder/section-domain.builder';

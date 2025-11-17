@@ -1,6 +1,7 @@
 import { AppearanceStateModel } from '../model/state/appearance-state.model';
 import { DataStateModel } from '../model/state/data-state.model';
 import { DomainStateModel } from '../model/state/domain-state.model';
+import { LayoutStateModel } from '../model/state/layout-state.model';
 import { MapperStateModel } from '../model/state/mapper-state.model';
 import { MetadataStateModel } from '../model/state/metadata-state.model';
 import { RawStateModel } from '../model/state/raw-state.model';
@@ -39,4 +40,10 @@ export class DomainStateInitAction {
   static readonly type = '[Domain] Init';
 
   constructor(public state: DomainStateModel) {}
+}
+
+export class LayoutStateInitAction {
+  static readonly type = '[Layout] Init';
+
+  constructor(public state: LayoutStateModel) {}
 }

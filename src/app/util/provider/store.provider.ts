@@ -8,12 +8,21 @@ import { DataState } from '../../state/data.state';
 import { MetadataState } from '../../state/metadata.state';
 import { AppearanceState } from '../../state/appearance.state';
 import { DomainState } from '../../state/domain.state';
+import { LayoutState } from '../../state/layout.state';
 
 export class StoreProvider {
   static getProvider() {
     return [
       provideStore(
-        [RawState, MapperState, DataState, MetadataState, AppearanceState, DomainState],
+        [
+          RawState,
+          MapperState,
+          DataState,
+          MetadataState,
+          AppearanceState,
+          DomainState,
+          LayoutState,
+        ],
         withNgxsReduxDevtoolsPlugin(),
       ),
     ];

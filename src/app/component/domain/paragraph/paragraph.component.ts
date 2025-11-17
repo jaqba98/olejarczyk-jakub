@@ -5,7 +5,7 @@ import { DomainComponentDecorator } from '../../../decorator/domain-component.de
 import { ParagraphDataModel } from '../../../model/data/paragraph-data.model';
 import { ParagraphMetadataModel } from '../../../model/metadata/paragraph-metadata.model';
 import { ParagraphAppearanceModel } from '../../../model/appearance/paragraph-appearance.model';
-import { LayoutModel } from '../../../layout/model/layout.model';
+import { LayoutModel } from '../../../model/layout/layout.model';
 
 @Component({
   selector: 'paragraph-domain-component',

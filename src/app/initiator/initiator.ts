@@ -7,6 +7,7 @@ import { DataInitiator } from '../data/initiator/data.initiator';
 import { MetadataInitiator } from '../metadata/initiator/metadata.initiator';
 import { AppearanceInitiator } from '../appearance/initiator/appearance.initiator';
 import { DomainInitiator } from '../domain/initiator/domain.initiator';
+import { LayoutInitiator } from '../layout/initiator/layout.initiator';
 
 @Injectable({ providedIn: 'root' })
 export class Initiator {
@@ -17,6 +18,7 @@ export class Initiator {
     private readonly metadata: MetadataInitiator,
     private readonly appearance: AppearanceInitiator,
     private readonly domain: DomainInitiator,
+    private readonly layout: LayoutInitiator,
   ) {}
 
   init() {
@@ -28,6 +30,7 @@ export class Initiator {
         switchMap(() => this.metadata.init()),
         switchMap(() => this.appearance.init()),
         switchMap(() => this.domain.init()),
+        switchMap(() => this.layout.init()),
         take(1),
       )
       .subscribe();
