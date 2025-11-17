@@ -1,4 +1,4 @@
-import { DomainModel } from '../../domain/model/domain/domain.model';
+import { DomainModel } from '../../model/domain/domain/domain.model';
 import { KindLayoutType } from '../type/kind-layout.type';
 
 interface BaseLayoutModel<TKind extends KindLayoutType> {
