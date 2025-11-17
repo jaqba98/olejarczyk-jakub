@@ -22,31 +22,31 @@ export class Generator {
     return selfModel.kind === 'group' ? selfModel : null;
   }
 
-  getComponent() {
-    if (this.leaf) {
-      return getDomainComponent(this.leaf.domain.kind);
-    } else if (this.group && this.group.domain) {
-      return getDomainComponent(this.group.domain.kind);
-    }
-    throw new Error('The model is not defined!');
-  }
+  // getComponent() {
+  //   if (this.leaf) {
+  //     return getDomainComponent(this.leaf.domain.kind);
+  //   } else if (this.group && this.group.domain) {
+  //     return getDomainComponent(this.group.domain.kind);
+  //   }
+  //   throw new Error('The model is not defined!');
+  // }
 
-  getInputs() {
-    if (this.leaf) {
-      return {
-        data: this.leaf.domain.data,
-        metadata: this.leaf.domain.metadata,
-        appearance: this.leaf.domain.appearance,
-        children: [],
-      };
-    } else if (this.group && this.group.domain) {
-      return {
-        data: this.group.domain.data,
-        metadata: this.group.domain.metadata,
-        appearance: this.group.domain.appearance,
-        children: this.group.children,
-      };
-    }
-    throw new Error('The model is not defined!');
-  }
+  // getInputs() {
+  //   if (this.leaf) {
+  //     return {
+  //       data: this.leaf.domain.data,
+  //       metadata: this.leaf.domain.metadata,
+  //       appearance: this.leaf.domain.appearance,
+  //       children: [],
+  //     };
+  //   } else if (this.group && this.group.domain) {
+  //     return {
+  //       data: this.group.domain.data,
+  //       metadata: this.group.domain.metadata,
+  //       appearance: this.group.domain.appearance,
+  //       children: this.group.children,
+  //     };
+  //   }
+  //   throw new Error('The model is not defined!');
+  // }
 }

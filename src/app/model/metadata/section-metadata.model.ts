@@ -1,7 +1,7 @@
 import { SectionKindType } from '../../type/kind/section-kind.type';
 
-interface SectionModel {
+export interface SectionMetadataValueModel {
   showTitle: boolean;
 }
 
-export type SectionMetadataModel = Record<SectionKindType, SectionModel>;
+export type SectionMetadataModel = Record<SectionKindType, SectionMetadataValueModel>;

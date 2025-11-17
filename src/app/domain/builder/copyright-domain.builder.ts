@@ -13,7 +13,6 @@ export class CopyrightDomainBuilder {
     appearanceState: AppearanceStateModel,
   ): ParagraphDomainModel {
     return {
-      kind: 'paragraph',
       data: dataState.copyright,
       metadata: metadataState.copyright,
       appearance: appearanceState.copyright,
