@@ -2,7 +2,6 @@ import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GroupLayoutModel, LayoutModel, LeafLayoutModel } from '../model/layout/layout.model';
-import { getDomainComponent } from '../decorator/domain-component.decorator';
 
 @Component({
   selector: 'generator',

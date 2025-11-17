@@ -22,17 +22,15 @@ export class Initiator {
   ) {}
 
   init() {
-    of(true)
-      .pipe(
-        switchMap(() => this.raw.init()),
-        switchMap(() => this.mapper.init()),
-        switchMap(() => this.data.init()),
-        switchMap(() => this.metadata.init()),
-        switchMap(() => this.appearance.init()),
-        switchMap(() => this.domain.init()),
-        switchMap(() => this.layout.init()),
-        take(1),
-      )
-      .subscribe();
+    return of(true).pipe(
+      switchMap(() => this.raw.init()),
+      switchMap(() => this.mapper.init()),
+      switchMap(() => this.data.init()),
+      switchMap(() => this.metadata.init()),
+      switchMap(() => this.appearance.init()),
+      switchMap(() => this.domain.init()),
+      switchMap(() => this.layout.init()),
+      take(1),
+    );
   }
 }

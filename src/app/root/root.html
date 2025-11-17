@@ -1,1 +1,3 @@
-<p>root</p>
+@if (model$ | async; as model) {
+  <generator [model]="model"></generator>
+}
