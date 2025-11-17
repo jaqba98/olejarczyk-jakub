@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { of, switchMap, take } from 'rxjs';
 
-import { RawInitiator } from '../raw/initiator/raw.initiator';
-import { MapperInitiator } from '../mapper/initiator/mapper.initiator';
-import { DataInitiator } from '../data/initiator/data.initiator';
-import { MetadataInitiator } from '../metadata/initiator/metadata.initiator';
-import { AppearanceInitiator } from '../appearance/initiator/appearance.initiator';
-import { DomainInitiator } from '../domain/initiator/domain.initiator';
-import { LayoutInitiator } from '../layout/initiator/layout.initiator';
+import { AppearanceInitiator } from '../data/appearance/initiator/appearance.initiator';
+import { DataInitiator } from '../data/data/initiator/data.initiator';
+import { DomainInitiator } from '../data/domain/initiator/domain.initiator';
+import { LayoutInitiator } from '../data/layout/initiator/layout.initiator';
+import { MapperInitiator } from '../data/mapper/initiator/mapper.initiator';
+import { MetadataInitiator } from '../data/metadata/initiator/metadata.initiator';
+import { RawInitiator } from '../data/raw/initiator/raw.initiator';
 
 @Injectable({ providedIn: 'root' })
 export class Initiator {
