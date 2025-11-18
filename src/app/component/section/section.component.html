@@ -1,0 +1,10 @@
+<section [id]="data().id" [ngClass]="appearance().section">
+  <div [ngClass]="appearance().container">
+    @if (metadata().showTitle) {
+      <h2>{{ data().label }}</h2>
+    }
+    @if (children().length > 0) {
+      <generator [model]="getModel()"></generator>
+    }
+  </div>
+</section>

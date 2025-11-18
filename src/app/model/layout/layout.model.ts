@@ -1,5 +1,4 @@
 import { ComponentKindType } from '../../type/kind/component-kind.type';
-import { GroupModeKindType } from '../../type/kind/group-mode-kind.type';
 import { LayoutKindType } from '../../type/kind/layout-kind.type';
 import { ParagraphAppearanceModel } from '../appearance/paragraph-appearance.model';
 import { SectionAppearanceValueModel } from '../appearance/section-appearance.model';
@@ -37,7 +36,6 @@ export interface LeafLayoutModel extends BaseLayoutModel<'leaf'> {
 export interface GroupLayoutModel extends BaseLayoutModel<'group'> {
   children: LayoutModel[];
   component?: ComponentModel;
-  mode: GroupModeKindType;
 }
 
 export type LayoutModel = LeafLayoutModel | GroupLayoutModel;

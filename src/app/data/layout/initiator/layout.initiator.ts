@@ -35,7 +35,6 @@ export class LayoutInitiator {
                 this.section.build(state, 'contact', []),
                 this.section.build(state, 'footer', [this.copyright.build(state)]),
               ],
-              mode: 'after',
             },
           }),
         );

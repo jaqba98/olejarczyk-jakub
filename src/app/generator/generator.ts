@@ -1,7 +1,8 @@
-import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, input } from '@angular/core';
 
 import { GroupLayoutModel, LayoutModel, LeafLayoutModel } from '../model/layout/layout.model';
+import { getComponent } from '../decorator/component.decorator';
 
 @Component({
   selector: 'generator',
@@ -12,40 +13,42 @@ export class Generator {
   model = input.required<LayoutModel>();
 
   get leaf(): LeafLayoutModel | null {
-    const selfModel = this.model();
-    return selfModel.kind === 'leaf' ? selfModel : null;
+    const model = this.model();
+    return model.kind === 'leaf' ? model : null;
   }
 
   get group(): GroupLayoutModel | null {
-    const selfModel = this.model();
-    return selfModel.kind === 'group' ? selfModel : null;
+    const model = this.model();
+    return model.kind === 'group' ? model : null;
   }
 
-  // getComponent() {
-  //   if (this.leaf) {
-  //     return getDomainComponent(this.leaf.domain.kind);
-  //   } else if (this.group && this.group.domain) {
-  //     return getDomainComponent(this.group.domain.kind);
-  //   }
-  //   throw new Error('The model is not defined!');
-  // }
+  getComponent() {
+    if (this.leaf) {
+      return getComponent(this.leaf.component.kind);
+    }
+    if (this.group && this.group.component) {
+      return getComponent(this.group.component.kind);
+    }
+    throw new Error('Neither leaf nor group defined!');
+  }
 
-  // getInputs() {
-  //   if (this.leaf) {
-  //     return {
-  //       data: this.leaf.domain.data,
-  //       metadata: this.leaf.domain.metadata,
-  //       appearance: this.leaf.domain.appearance,
-  //       children: [],
-  //     };
-  //   } else if (this.group && this.group.domain) {
-  //     return {
-  //       data: this.group.domain.data,
-  //       metadata: this.group.domain.metadata,
-  //       appearance: this.group.domain.appearance,
-  //       children: this.group.children,
-  //     };
-  //   }
-  //   throw new Error('The model is not defined!');
-  // }
+  getInputs() {
+    if (this.leaf) {
+      return {
+        data: this.leaf.component.data,
+        metadata: this.leaf.component.metadata,
+        appearance: this.leaf.component.appearance,
+        children: [],
+      };
+    }
+    if (this.group && this.group.component) {
+      return {
+        data: this.group.component.data,
+        metadata: this.group.component.metadata,
+        appearance: this.group.component.appearance,
+        children: this.group.children,
+      };
+    }
+    throw new Error('Neither leaf nor group defined!');
+  }
 }

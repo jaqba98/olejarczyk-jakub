@@ -16,7 +16,6 @@ export class SectionLayoutBuilder {
         appearance: state.section[kind].appearance,
       },
       children,
-      mode: 'inside',
     };
   }
 }
