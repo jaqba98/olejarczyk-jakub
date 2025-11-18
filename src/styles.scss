@@ -1,13 +1,1 @@
-* {
-  margin: auto;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  min-width: 300px;
-}
-
-.text-align--center {
-  text-align: center;
-}
+@forward 'style';
