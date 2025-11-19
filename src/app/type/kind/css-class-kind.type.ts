@@ -1,1 +1,1 @@
-export type CssClassKindType = 'text-align--center';
+export type CssClassKindType = 'background-primary';

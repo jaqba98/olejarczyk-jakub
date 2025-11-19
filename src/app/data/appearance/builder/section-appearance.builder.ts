@@ -7,47 +7,47 @@ export class SectionAppearanceBuilder {
   build(): SectionAppearanceModel {
     return {
       nav: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       home: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       aboutMe: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       technology: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       skill: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       experience: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       resume: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       education: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       project: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       contact: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
       footer: {
-        section: [],
+        section: ['background-primary'],
         container: [],
       },
     };
