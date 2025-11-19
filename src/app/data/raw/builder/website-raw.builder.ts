@@ -6,7 +6,7 @@ import { WebsiteRawModel } from '../../../model/raw/website-raw.model';
 export class WebsiteRawBuilder {
   build(): WebsiteRawModel {
     return {
-      creationYear: 2025,
+      creationYear: 2020,
     };
   }
 }
