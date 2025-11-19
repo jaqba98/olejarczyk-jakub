@@ -7,7 +7,7 @@ export class SectionMetadataBuilder {
   build(): SectionMetadataModel {
     return {
       nav: {
-        showTitle: false,
+        showTitle: true,
       },
       home: {
         showTitle: true,

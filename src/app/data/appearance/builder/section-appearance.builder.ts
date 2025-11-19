@@ -7,47 +7,47 @@ export class SectionAppearanceBuilder {
   build(): SectionAppearanceModel {
     return {
       nav: {
-        section: ['background-primary'],
+        section: ['palette-brand'],
         container: [],
       },
       home: {
-        section: ['background-primary'],
+        section: ['palette-brand'],
         container: [],
       },
       aboutMe: {
-        section: ['background-primary'],
+        section: ['palette-content'],
         container: [],
       },
       technology: {
-        section: ['background-primary'],
+        section: ['palette-content-separation'],
         container: [],
       },
       skill: {
-        section: ['background-primary'],
+        section: ['palette-content'],
         container: [],
       },
       experience: {
-        section: ['background-primary'],
+        section: ['palette-content-separation'],
         container: [],
       },
       resume: {
-        section: ['background-primary'],
+        section: ['palette-content'],
         container: [],
       },
       education: {
-        section: ['background-primary'],
+        section: ['palette-content-separation'],
         container: [],
       },
       project: {
-        section: ['background-primary'],
+        section: ['palette-content'],
         container: [],
       },
       contact: {
-        section: ['background-primary'],
+        section: ['palette-content-separation'],
         container: [],
       },
       footer: {
-        section: ['background-primary'],
+        section: ['palette-footer'],
         container: [],
       },
     };

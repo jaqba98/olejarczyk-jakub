@@ -1,20 +1,37 @@
 :root {
-  --color-primary: 210;
+  --hue-primary: 210;
+  --hue-neutral: 220;
 }
 
 :root {
-  --color-primary-50: hsl(var(--color-primary) 100% 95%);
-  --color-primary-100: hsl(var(--color-primary) 95% 90%);
-  --color-primary-200: hsl(var(--color-primary) 90% 80%);
-  --color-primary-300: hsl(var(--color-primary) 85% 70%);
-  --color-primary-400: hsl(var(--color-primary) 80% 60%);
-  --color-primary-500: hsl(var(--color-primary) 75% 50%);
-  --color-primary-600: hsl(var(--color-primary) 70% 40%);
-  --color-primary-700: hsl(var(--color-primary) 65% 30%);
-  --color-primary-800: hsl(var(--color-primary) 60% 20%);
-  --color-primary-900: hsl(var(--color-primary) 55% 15%);
+  --color-primary-50: hsl(var(--hue-primary) 100% 95%);
+  --color-primary-100: hsl(var(--hue-primary) 95% 90%);
+  --color-primary-200: hsl(var(--hue-primary) 90% 80%);
+  --color-primary-300: hsl(var(--hue-primary) 85% 70%);
+  --color-primary-400: hsl(var(--hue-primary) 80% 60%);
+  --color-primary-500: hsl(var(--hue-primary) 75% 50%);
+  --color-primary-600: hsl(var(--hue-primary) 70% 40%);
+  --color-primary-700: hsl(var(--hue-primary) 65% 30%);
+  --color-primary-800: hsl(var(--hue-primary) 60% 20%);
+  --color-primary-900: hsl(var(--hue-primary) 55% 15%);
 }
 
 :root {
-  --color-primary-background: var(--color-primary-500);
+  --color-neutral-50: hsl(var(--hue-neutral) 15% 97%);
+  --color-neutral-100: hsl(var(--hue-neutral) 14% 93%);
+  --color-neutral-200: hsl(var(--hue-neutral) 13% 88%);
+  --color-neutral-300: hsl(var(--hue-neutral) 12% 82%);
+  --color-neutral-400: hsl(var(--hue-neutral) 11% 65%);
+  --color-neutral-500: hsl(var(--hue-neutral) 10% 50%);
+  --color-neutral-600: hsl(var(--hue-neutral) 10% 40%);
+  --color-neutral-700: hsl(var(--hue-neutral) 10% 32%);
+  --color-neutral-800: hsl(var(--hue-neutral) 10% 22%);
+  --color-neutral-900: hsl(var(--hue-neutral) 10% 12%);
+}
+
+:root {
+  --color-background-brand: var(--color-primary-500);
+  --color-background-content: var(--color-neutral-50);
+  --color-background-content-separation: var(--color-neutral-100);
+  --color-background-footer: var(--color-neutral-800);
 }
