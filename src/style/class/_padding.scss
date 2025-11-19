@@ -1,0 +1,11 @@
+.padding {
+  &-section {
+    &-content {
+      padding: var(--size-xxl) var(--size-md);
+    }
+
+    &-ui {
+      padding: var(--size-md);
+    }
+  }
+}

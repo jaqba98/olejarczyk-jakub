@@ -1,15 +1,17 @@
-.palette-brand {
-  background-color: var(--color-background-brand);
-}
+.palette {
+  &-brand {
+    background-color: var(--color-background-brand);
+  }
 
-.palette-content {
-  background-color: var(--color-background-content);
-}
+  &-content {
+    background-color: var(--color-background-content);
 
-.palette-content-separation {
-  background-color: var(--color-background-content-separation);
-}
+    &-separation {
+      background-color: var(--color-background-content-separation);
+    }
+  }
 
-.palette-footer {
-  background-color: var(--color-background-footer);
+  &-footer {
+    background-color: var(--color-background-footer);
+  }
 }
