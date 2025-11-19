@@ -15,39 +15,39 @@ export class SectionAppearanceBuilder {
         container: [],
       },
       aboutMe: {
-        section: ['palette-content', 'padding-section-content'],
+        section: ['palette-content-light', 'padding-section-content'],
         container: [],
       },
       technology: {
-        section: ['palette-content-separation', 'padding-section-content'],
+        section: ['palette-content-light-contrast', 'padding-section-content'],
         container: [],
       },
       skill: {
-        section: ['palette-content', 'padding-section-content'],
+        section: ['palette-content-light', 'padding-section-content'],
         container: [],
       },
       experience: {
-        section: ['palette-content-separation', 'padding-section-content'],
+        section: ['palette-content-light-contrast', 'padding-section-content'],
         container: [],
       },
       resume: {
-        section: ['palette-content', 'padding-section-content'],
+        section: ['palette-content-light', 'padding-section-content'],
         container: [],
       },
       education: {
-        section: ['palette-content-separation', 'padding-section-content'],
+        section: ['palette-content-light-contrast', 'padding-section-content'],
         container: [],
       },
       project: {
-        section: ['palette-content', 'padding-section-content'],
+        section: ['palette-content-light', 'padding-section-content'],
         container: [],
       },
       contact: {
-        section: ['palette-content-separation', 'padding-section-content'],
+        section: ['palette-content-light-contrast', 'padding-section-content'],
         container: [],
       },
       footer: {
-        section: ['palette-footer', 'padding-section-ui'],
+        section: ['palette-content-dark', 'padding-section-ui'],
         container: [],
       },
     };

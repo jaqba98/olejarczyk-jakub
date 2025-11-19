@@ -25,7 +25,7 @@ export class Root {
     private readonly store: Store,
   ) {
     this.model$ = this.initiator.init().pipe(
-      switchMap(() => this.store.selectOnce(LayoutState.getState)),
+      switchMap(() => this.store.select(LayoutState.getState)),
       map((state) => state.model),
     );
   }

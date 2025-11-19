@@ -1,7 +1,8 @@
 export type CssClassKindType =
   | 'palette-brand'
-  | 'palette-content'
-  | 'palette-content-separation'
-  | 'palette-footer'
+  | 'palette-content-light'
+  | 'palette-content-light-contrast'
+  | 'palette-content-dark'
   | 'padding-section-content'
-  | 'padding-section-ui';
+  | 'padding-section-ui'
+  | 'text-align-center';
