@@ -2,8 +2,8 @@ import { TechnologyCategoryKindType } from '../../type/kind/technology-category-
 import { TechnologyCategoryLabelType } from '../../type/label/technology-category-label.type';
 
 interface TechnologyCategoryModel {
-  label: TechnologyCategoryLabelType;
   kind: TechnologyCategoryKindType;
+  label: TechnologyCategoryLabelType;
   order: number;
 }
 

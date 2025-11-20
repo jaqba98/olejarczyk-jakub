@@ -1,4 +1,4 @@
-export type TechnologyNameDomainType =
+export type TechnologyLabelType =
   | 'HTML'
   | 'CSS'
   | 'Sass'
