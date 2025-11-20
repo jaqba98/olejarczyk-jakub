@@ -11,6 +11,7 @@ import { LayoutModel } from '../model/layout/layout.model';
 
 import '../component/paragraph/paragraph.component';
 import '../component/section/section.component';
+import '../component/technologies/technologies.component';
 
 @Component({
   selector: 'root',

@@ -5,6 +5,7 @@ import { of, switchMap, take } from 'rxjs';
 import { CopyrightAppearanceBuilder } from '../builder/copyright-appearance.builder';
 import { SectionAppearanceBuilder } from '../builder/section-appearance.builder';
 import { AppearanceStateInitAction } from '../../../action/state-init.action';
+import { TechnologiesAppearanceBuilder } from '../builder/technologies-appearance.builder';
 
 @Injectable({ providedIn: 'root' })
 export class AppearanceInitiator {
@@ -12,6 +13,7 @@ export class AppearanceInitiator {
     private readonly store: Store,
     private readonly copyright: CopyrightAppearanceBuilder,
     private readonly section: SectionAppearanceBuilder,
+    private readonly technologies: TechnologiesAppearanceBuilder,
   ) {}
 
   init() {
@@ -21,6 +23,7 @@ export class AppearanceInitiator {
           new AppearanceStateInitAction({
             copyright: this.copyright.build(),
             section: this.section.build(),
+            technologies: this.technologies.build(),
           }),
         );
       }),

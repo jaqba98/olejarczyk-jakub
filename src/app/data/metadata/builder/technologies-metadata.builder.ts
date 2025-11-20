@@ -1,0 +1,10 @@
+import { Injectable } from '@angular/core';
+
+import { TechnologiesMetadataModel } from '../../../model/metadata/technologies-metadata.model';
+
+@Injectable({ providedIn: 'root' })
+export class TechnologiesMetadataBuilder {
+  build(): TechnologiesMetadataModel {
+    return {};
+  }
+}

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 
 import { SectionDataModel } from '../../../model/data/section-data.model';
-import { DataStateModel } from '../../../model/state/data-state.model';
+import { MapperStateModel } from '../../../model/state/mapper-state.model';
 
 @Injectable({ providedIn: 'root' })
 export class SectionDataBuilder {
-  build(state: DataStateModel): SectionDataModel {
+  build(state: MapperStateModel): SectionDataModel {
     const { section } = state;
     return {
       nav: {
