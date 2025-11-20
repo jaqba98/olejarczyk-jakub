@@ -1,4 +1,4 @@
-export type TechnologyCategoryNameDomainType =
+export type TechnologyCategoryLabelType =
   | 'Markup Language'
   | 'Stylesheet Language'
   | 'Programming Language'
