@@ -30,7 +30,7 @@ export class LayoutInitiator {
                 this.section.build(state, 'nav', []),
                 this.section.build(state, 'home', []),
                 this.section.build(state, 'aboutMe', [this.aboutMe.build(state)]),
-                this.section.build(state, 'technology', [this.technologies.build(state)]),
+                this.section.build(state, 'technology', []),
                 this.section.build(state, 'skill', []),
                 this.section.build(state, 'experience', []),
                 this.section.build(state, 'resume', []),
