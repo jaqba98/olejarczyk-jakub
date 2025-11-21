@@ -1,3 +1,3 @@
 export interface ParagraphDataModel {
-  text: string;
+  texts: string[];
 }

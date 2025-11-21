@@ -7,6 +7,6 @@ import { MapperStateModel } from '../../../model/state/mapper-state.model';
 export class CopyrightDataBuilder {
   build(state: MapperStateModel): ParagraphDataModel {
     const { text } = state.copyright;
-    return { text };
+    return { texts: [text] };
   }
 }

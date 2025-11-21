@@ -1,1 +1,3 @@
-<p [ngClass]="this.appearance().paragraph">{{ this.data().text }}</p>
+@for (text of data().texts; track text) {
+  <p [ngClass]="appearance().paragraph">{{ text }}</p>
+}
