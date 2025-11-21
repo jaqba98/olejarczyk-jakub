@@ -7,6 +7,7 @@ import { SectionMapperBuilder } from '../builder/section-mapper.builder';
 import { MapperInitAction } from '../../../action/init.action';
 import { RawState } from '../../../state/raw.state';
 import { DescriptionMapperBuilder } from '../builder/description-mapper.builder';
+import { MapperStateModel } from '../../../model/state/mapper-state.model';
 
 @Injectable({ providedIn: 'root' })
 export class MapperInitiator {
@@ -19,11 +20,13 @@ export class MapperInitiator {
 
   init() {
     return this.store.selectOnce(RawState.getState).pipe(
-      map((state) => ({
-        copyright: this.copyright.build(state),
-        description: this.description.build(state),
-        section: this.section.build(state),
-      })),
+      map((state): MapperStateModel => {
+        return {
+          copyright: this.copyright.build(state),
+          description: this.description.build(state),
+          section: this.section.build(state),
+        };
+      }),
       map((state) => this.store.dispatch(new MapperInitAction(state))),
     );
   }

@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
 
-import { ParagraphDataModel } from '../../../model/data/paragraph-data.model';
 import { MapperStateModel } from '../../../model/state/mapper-state.model';
+import { ParagraphDataModel } from '../../../model/data/paragraph-data.model';
 
 @Injectable({ providedIn: 'root' })
-export class AboutMeDataBuilder {
+export class DescriptionDataBuilder {
   build(state: MapperStateModel): ParagraphDataModel {
-    const { texts } = state.aboutMe;
-    return { texts };
+    return state.description.data;
   }
 }
