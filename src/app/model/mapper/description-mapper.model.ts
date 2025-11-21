@@ -1,5 +1,5 @@
 import { ParagraphDataModel } from '../data/paragraph-data.model';
 
-export interface CopyrightMapperModel {
+export interface DescriptionMapperModel {
   data: ParagraphDataModel;
 }

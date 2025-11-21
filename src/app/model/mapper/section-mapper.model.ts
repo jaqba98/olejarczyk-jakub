@@ -1,8 +1,5 @@
-import { SectionKindType } from '../../type/kind/section-kind.type';
+import { SectionDataModel } from '../data/section-data.model';
 
-interface SectionModel {
-  id: string;
-  label: string;
+export interface SectionMapperModel {
+  data: SectionDataModel;
 }
-
-export type SectionMapperModel = Record<SectionKindType, SectionModel>;

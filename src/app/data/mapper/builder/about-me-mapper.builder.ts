@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { RawStateModel } from '../../../model/state/raw-state.model';
-import { AboutMeMapperModel } from '../../../model/mapper/about-me-mapper.model';
+import { AboutMeMapperModel } from '../../../model/mapper/description-mapper.model';
 
 @Injectable({ providedIn: 'root' })
 export class AboutMeMapperBuilder {
