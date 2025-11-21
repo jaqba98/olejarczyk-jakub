@@ -8,6 +8,9 @@ import { Initiator } from '../initiator/initiator';
 import { LayoutState } from '../state/layout.state';
 import { Generator } from '../generator/generator';
 
+import '../component/paragraph/paragraph.component';
+import '../component/section/section.component';
+
 @Component({
   selector: 'root',
   templateUrl: './root.html',
