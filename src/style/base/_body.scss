@@ -3,12 +3,8 @@ body {
   font-weight: 400;
   font-style: normal;
   min-width: 300px;
-  background-color: var(--color-primary-background);
-  font-size: 100%;
-}
 
-@media (max-width: 480px) {
-  body {
+  @media (max-width: 480px) {
     font-size: 70%;
   }
 }
