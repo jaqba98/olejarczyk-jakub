@@ -5,4 +5,5 @@ export type CssClassKindType =
   | 'palette-content-dark'
   | 'padding-section-content'
   | 'padding-section-ui'
-  | 'text-align-center';
+  | 'text-align-center'
+  | 'width-content';

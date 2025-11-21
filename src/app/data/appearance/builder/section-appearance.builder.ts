@@ -12,39 +12,39 @@ export class SectionAppearanceBuilder {
       },
       home: {
         section: ['palette-brand', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       aboutMe: {
         section: ['palette-content-light', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       technology: {
         section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       skill: {
         section: ['palette-content-light', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       experience: {
         section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       resume: {
         section: ['palette-content-light', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       education: {
         section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       project: {
         section: ['palette-content-light', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       contact: {
         section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: [],
+        container: ['width-content'],
       },
       footer: {
         section: ['palette-content-dark', 'padding-section-ui'],
