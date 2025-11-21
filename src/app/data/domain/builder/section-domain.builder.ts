@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 
-import { SectionDomainModel } from '../../../model/domain/section-domain.model';
-import { AppearanceStateModel } from '../../../model/state/appearance-state.model';
 import { DataStateModel } from '../../../model/state/data-state.model';
 import { MetadataStateModel } from '../../../model/state/metadata-state.model';
+import { AppearanceStateModel } from '../../../model/state/appearance-state.model';
+import { SectionDomainModel } from '../../../model/domain/section-domain.model';
 
 @Injectable({ providedIn: 'root' })
 export class SectionDomainBuilder {
