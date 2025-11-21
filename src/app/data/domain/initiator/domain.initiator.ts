@@ -9,6 +9,7 @@ import { AppearanceState } from '../../../state/appearance.state';
 import { DataState } from '../../../state/data.state';
 import { MetadataState } from '../../../state/metadata.state';
 import { TechnologiesDomainBuilder } from '../builder/technologies-domain.builder';
+import { AboutMeDomainBuilder } from '../builder/about-me-domain.builder';
 
 @Injectable({ providedIn: 'root' })
 export class DomainInitiator {
@@ -17,6 +18,7 @@ export class DomainInitiator {
     private readonly copyright: CopyrightDomainBuilder,
     private readonly section: SectionDomainBuilder,
     private readonly technologies: TechnologiesDomainBuilder,
+    private readonly aboutMe: AboutMeDomainBuilder,
   ) {}
 
   init() {
@@ -31,6 +33,7 @@ export class DomainInitiator {
             copyright: this.copyright.build(dataState, metadataState, appearanceState),
             section: this.section.build(dataState, metadataState, appearanceState),
             technologies: this.technologies.build(dataState, metadataState, appearanceState),
+            aboutMe: this.aboutMe.build(dataState, metadataState, appearanceState),
           }),
         );
       }),

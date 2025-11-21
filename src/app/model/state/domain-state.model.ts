@@ -6,4 +6,5 @@ export interface DomainStateModel {
   copyright: ParagraphDomainModel;
   section: SectionDomainModel;
   technologies: TechnologiesDomainModel;
+  aboutMe: ParagraphDomainModel;
 }

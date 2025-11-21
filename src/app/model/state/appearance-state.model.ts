@@ -6,4 +6,5 @@ export interface AppearanceStateModel {
   copyright: ParagraphAppearanceModel;
   section: SectionAppearanceModel;
   technologies: TechnologiesAppearanceModel;
+  aboutMe: ParagraphAppearanceModel;
 }

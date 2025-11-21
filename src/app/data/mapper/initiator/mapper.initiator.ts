@@ -6,6 +6,7 @@ import { CopyrightMapperBuilder } from '../builder/copyright-mapper.builder';
 import { SectionMapperBuilder } from '../builder/section-mapper.builder';
 import { MapperStateInitAction } from '../../../action/state-init.action';
 import { RawState } from '../../../state/raw.state';
+import { AboutMeMapperBuilder } from '../builder/about-me-mapper.builder';
 
 @Injectable({ providedIn: 'root' })
 export class MapperInitiator {
@@ -13,6 +14,7 @@ export class MapperInitiator {
     private readonly store: Store,
     private readonly copyright: CopyrightMapperBuilder,
     private readonly section: SectionMapperBuilder,
+    private readonly aboutMe: AboutMeMapperBuilder,
   ) {}
 
   init() {
@@ -23,6 +25,7 @@ export class MapperInitiator {
           new MapperStateInitAction({
             copyright: this.copyright.build(state),
             section: this.section.build(state),
+            aboutMe: this.aboutMe.build(state),
           }),
         );
       }),

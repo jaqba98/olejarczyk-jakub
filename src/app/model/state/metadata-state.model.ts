@@ -6,4 +6,5 @@ export interface MetadataStateModel {
   copyright: ParagraphMetadataModel;
   section: SectionMetadataModel;
   technologies: TechnologiesMetadataModel;
+  aboutMe: ParagraphMetadataModel;
 }

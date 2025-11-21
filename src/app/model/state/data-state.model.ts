@@ -6,4 +6,5 @@ export interface DataStateModel {
   copyright: ParagraphDataModel;
   section: SectionDataModel;
   technologies: TechnologiesDataModel;
+  aboutMe: ParagraphDataModel;
 }
