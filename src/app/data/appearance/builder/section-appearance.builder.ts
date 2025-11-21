@@ -7,47 +7,47 @@ export class SectionAppearanceBuilder {
   build(): SectionAppearanceModel {
     return {
       nav: {
-        section: ['palette-brand', 'padding-section-ui'],
+        main: [],
         container: [],
       },
       home: {
-        section: ['palette-brand', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       aboutMe: {
-        section: ['palette-content-light', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       technology: {
-        section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       skill: {
-        section: ['palette-content-light', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       experience: {
-        section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       resume: {
-        section: ['palette-content-light', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       education: {
-        section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       project: {
-        section: ['palette-content-light', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       contact: {
-        section: ['palette-content-light-contrast', 'padding-section-content'],
-        container: ['width-content'],
+        main: [],
+        container: [],
       },
       footer: {
-        section: ['palette-content-dark', 'padding-section-ui'],
+        main: [],
         container: [],
       },
     };

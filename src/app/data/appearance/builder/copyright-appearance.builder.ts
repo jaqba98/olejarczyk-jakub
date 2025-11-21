@@ -6,7 +6,7 @@ import { ParagraphAppearanceModel } from '../../../model/appearance/paragraph-ap
 export class CopyrightAppearanceBuilder {
   build(): ParagraphAppearanceModel {
     return {
-      paragraph: ['text-align-center'],
+      main: [],
     };
   }
 }
