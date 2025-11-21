@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { CopyrightMapperModel } from '../../../model/mapper/copyright-mapper.model';
 import { RawStateModel } from '../../../model/state/raw-state.model';
+import { CopyrightMapperModel } from '../../../model/mapper/copyright-mapper.model';
 
 @Injectable({ providedIn: 'root' })
 export class CopyrightMapperBuilder {
@@ -9,9 +9,12 @@ export class CopyrightMapperBuilder {
     const { firstName, lastName } = state.personal;
     const { creationYear } = state.website;
     const currYear = new Date().getFullYear();
-    const year = creationYear === currYear ? `${currYear}` : `${creationYear} - ${currYear}`;
+    const year = creationYear === currYear ? `${creationYear}` : `${creationYear} - ${currYear}`;
+    const copyright = `© ${year} ${firstName} ${lastName}. All rights reserved.`;
     return {
-      text: `© ${year} ${firstName} ${lastName}. All rights reserved.`,
+      data: {
+        paragraphs: [copyright],
+      },
     };
   }
 }
