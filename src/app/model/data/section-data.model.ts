@@ -1,8 +1,6 @@
 import { SectionKindType } from '../../type/kind/section-kind.type';
+import { SectionRawItemModel } from '../raw/section-raw.model';
 
-export interface SectionDataValueModel {
-  id: string;
-  label: string;
-}
+export interface SectionDataItemModel extends Pick<SectionRawItemModel, 'id' | 'label'> {}
 
-export type SectionDataModel = Record<SectionKindType, SectionDataValueModel>;
+export type SectionDataModel = Record<SectionKindType, SectionDataItemModel>;
