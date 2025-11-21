@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
-import { MetadataStateInitAction } from '../action/state-init.action';
+import { MetadataInitAction } from '../action/init.action';
 import { MetadataStateModel } from '../model/state/metadata-state.model';
 
 @State<MetadataStateModel>({
@@ -14,8 +14,8 @@ export class MetadataState {
     return state;
   }
 
-  @Action(MetadataStateInitAction)
-  init(ctx: StateContext<MetadataStateModel>, action: MetadataStateInitAction) {
+  @Action(MetadataInitAction)
+  init(ctx: StateContext<MetadataStateModel>, action: MetadataInitAction) {
     ctx.patchState(action.state);
   }
 }

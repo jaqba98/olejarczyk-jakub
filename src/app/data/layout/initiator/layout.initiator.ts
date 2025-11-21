@@ -4,7 +4,7 @@ import { combineLatest, switchMap, take } from 'rxjs';
 
 import { SectionLayoutBuilder } from '../builder/section-layout.builder';
 import { CopyrightLayoutBuilder } from '../builder/copyright-layout.builder';
-import { LayoutStateInitAction } from '../../../action/state-init.action';
+import { LayoutInitAction } from '../../../action/init.action';
 import { DomainState } from '../../../state/domain.state';
 import { TechnologiesLayoutBuilder } from '../builder/technologies-layout.builder';
 import { AboutMeLayoutBuilder } from '../builder/about-me-layout.builder';
@@ -23,7 +23,7 @@ export class LayoutInitiator {
     return combineLatest([this.store.selectOnce(DomainState.getState)]).pipe(
       switchMap(([state]) => {
         return this.store.dispatch(
-          new LayoutStateInitAction({
+          new LayoutInitAction({
             model: {
               kind: 'group',
               children: [

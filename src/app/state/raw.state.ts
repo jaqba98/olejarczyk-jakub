@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
 import { RawStateModel } from '../model/state/raw-state.model';
-import { RawStateInitAction } from '../action/state-init.action';
+import { RawInitAction } from '../action/init.action';
 
 @State<RawStateModel>({
   name: 'raw',
@@ -14,8 +14,8 @@ export class RawState {
     return state;
   }
 
-  @Action(RawStateInitAction)
-  init(ctx: StateContext<RawStateModel>, action: RawStateInitAction) {
+  @Action(RawInitAction)
+  init(ctx: StateContext<RawStateModel>, action: RawInitAction) {
     ctx.patchState(action.state);
   }
 }

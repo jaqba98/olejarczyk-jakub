@@ -4,7 +4,7 @@ import { of, switchMap, take } from 'rxjs';
 
 import { CopyrightDataBuilder } from '../builder/copyright-data.builder';
 import { SectionDataBuilder } from '../builder/section-data.builder';
-import { DataStateInitAction } from '../../../action/state-init.action';
+import { DataInitAction } from '../../../action/init.action';
 import { MapperState } from '../../../state/mapper.state';
 import { TechnologiesDataBuilder } from '../builder/technologies-data.builder';
 import { AboutMeDataBuilder } from '../builder/about-me-data.builder';
@@ -24,7 +24,7 @@ export class DataInitiator {
       switchMap(() => this.store.select(MapperState.getState)),
       switchMap((state) => {
         return this.store.dispatch(
-          new DataStateInitAction({
+          new DataInitAction({
             copyright: this.copyright.build(state),
             section: this.section.build(state),
             technologies: this.technologies.build(),

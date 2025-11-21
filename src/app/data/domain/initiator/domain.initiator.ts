@@ -4,7 +4,7 @@ import { combineLatest, switchMap, take } from 'rxjs';
 
 import { CopyrightDomainBuilder } from '../builder/copyright-domain.builder';
 import { SectionDomainBuilder } from '../builder/section-domain.builder';
-import { DomainStateInitAction } from '../../../action/state-init.action';
+import { DomainInitAction } from '../../../action/init.action';
 import { AppearanceState } from '../../../state/appearance.state';
 import { DataState } from '../../../state/data.state';
 import { MetadataState } from '../../../state/metadata.state';
@@ -29,7 +29,7 @@ export class DomainInitiator {
     ]).pipe(
       switchMap(([dataState, metadataState, appearanceState]) => {
         return this.store.dispatch(
-          new DomainStateInitAction({
+          new DomainInitAction({
             copyright: this.copyright.build(dataState, metadataState, appearanceState),
             section: this.section.build(dataState, metadataState, appearanceState),
             technologies: this.technologies.build(dataState, metadataState, appearanceState),

@@ -6,43 +6,43 @@ import { MapperStateModel } from '../model/state/mapper-state.model';
 import { MetadataStateModel } from '../model/state/metadata-state.model';
 import { RawStateModel } from '../model/state/raw-state.model';
 
-export class RawStateInitAction {
+export class RawInitAction {
   static readonly type = '[Raw] Init';
 
   constructor(public state: RawStateModel) {}
 }
 
-export class MapperStateInitAction {
+export class MapperInitAction {
   static readonly type = '[Mapper] Init';
 
   constructor(public state: MapperStateModel) {}
 }
 
-export class DataStateInitAction {
+export class DataInitAction {
   static readonly type = '[Data] Init';
 
   constructor(public state: DataStateModel) {}
 }
 
-export class MetadataStateInitAction {
+export class MetadataInitAction {
   static readonly type = '[Metadata] Init';
 
   constructor(public state: MetadataStateModel) {}
 }
 
-export class AppearanceStateInitAction {
+export class AppearanceInitAction {
   static readonly type = '[Appearance] Init';
 
   constructor(public state: AppearanceStateModel) {}
 }
 
-export class DomainStateInitAction {
+export class DomainInitAction {
   static readonly type = '[Domain] Init';
 
   constructor(public state: DomainStateModel) {}
 }
 
-export class LayoutStateInitAction {
+export class LayoutInitAction {
   static readonly type = '[Layout] Init';
 
   constructor(public state: LayoutStateModel) {}

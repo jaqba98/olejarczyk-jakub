@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
 import { DataStateModel } from '../model/state/data-state.model';
-import { DataStateInitAction } from '../action/state-init.action';
+import { DataInitAction } from '../action/init.action';
 
 @State<DataStateModel>({
   name: 'data',
@@ -14,8 +14,8 @@ export class DataState {
     return state;
   }
 
-  @Action(DataStateInitAction)
-  init(ctx: StateContext<DataStateModel>, action: DataStateInitAction) {
+  @Action(DataInitAction)
+  init(ctx: StateContext<DataStateModel>, action: DataInitAction) {
     ctx.patchState(action.state);
   }
 }

@@ -4,7 +4,7 @@ import { of, switchMap, take } from 'rxjs';
 
 import { CopyrightMetadataBuilder } from '../builder/copyright-metadata.builder';
 import { SectionMetadataBuilder } from '../builder/section-metadata.builder';
-import { MetadataStateInitAction } from '../../../action/state-init.action';
+import { MetadataInitAction } from '../../../action/init.action';
 import { TechnologiesMetadataBuilder } from '../builder/technologies-metadata.builder';
 import { AboutMeMetadataBuilder } from '../builder/about-me-metadata.builder';
 
@@ -22,7 +22,7 @@ export class MetadataInitiator {
     return of(true).pipe(
       switchMap(() => {
         return this.store.dispatch(
-          new MetadataStateInitAction({
+          new MetadataInitAction({
             copyright: this.copyright.build(),
             section: this.section.build(),
             technologies: this.technologies.build(),

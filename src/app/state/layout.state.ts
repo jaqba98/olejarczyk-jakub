@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
 import { LayoutStateModel } from '../model/state/layout-state.model';
-import { LayoutStateInitAction } from '../action/state-init.action';
+import { LayoutInitAction } from '../action/init.action';
 
 @State<LayoutStateModel>({
   name: 'layout',
@@ -14,8 +14,8 @@ export class LayoutState {
     return state;
   }
 
-  @Action(LayoutStateInitAction)
-  init(ctx: StateContext<LayoutStateModel>, action: LayoutStateInitAction) {
+  @Action(LayoutInitAction)
+  init(ctx: StateContext<LayoutStateModel>, action: LayoutInitAction) {
     ctx.patchState(action.state);
   }
 }

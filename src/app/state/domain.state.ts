@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action, Selector, State, StateContext } from '@ngxs/store';
 
 import { DomainStateModel } from '../model/state/domain-state.model';
-import { DomainStateInitAction } from '../action/state-init.action';
+import { DomainInitAction } from '../action/init.action';
 
 @State<DomainStateModel>({
   name: 'domain',
@@ -14,8 +14,8 @@ export class DomainState {
     return state;
   }
 
-  @Action(DomainStateInitAction)
-  init(ctx: StateContext<DomainStateModel>, action: DomainStateInitAction) {
+  @Action(DomainInitAction)
+  init(ctx: StateContext<DomainStateModel>, action: DomainInitAction) {
     ctx.patchState(action.state);
   }
 }

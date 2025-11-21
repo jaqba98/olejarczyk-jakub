@@ -4,7 +4,7 @@ import { Store } from '@ngxs/store';
 import { PersonalRawBuilder } from '../builder/personal-raw.builder';
 import { SectionRawBuilder } from '../builder/section-raw.builder';
 import { WebsiteRawBuilder } from '../builder/website-raw.builder';
-import { RawStateInitAction } from '../../../action/state-init.action';
+import { RawInitAction } from '../../../action/init.action';
 import { TechnologyCategoryRawBuilder } from '../builder/technology-category-raw.builder';
 import { TechnologyRawBuilder } from '../builder/technology-raw.builder';
 
@@ -21,7 +21,7 @@ export class RawInitiator {
 
   init() {
     return this.store.dispatch(
-      new RawStateInitAction({
+      new RawInitAction({
         personal: this.personal.build(),
         section: this.section.build(),
         website: this.website.build(),

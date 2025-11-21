@@ -4,7 +4,7 @@ import { of, switchMap, take } from 'rxjs';
 
 import { CopyrightAppearanceBuilder } from '../builder/copyright-appearance.builder';
 import { SectionAppearanceBuilder } from '../builder/section-appearance.builder';
-import { AppearanceStateInitAction } from '../../../action/state-init.action';
+import { AppearanceInitAction } from '../../../action/init.action';
 import { TechnologiesAppearanceBuilder } from '../builder/technologies-appearance.builder';
 import { AboutMeAppearanceBuilder } from '../builder/about-me-appearance.builder';
 
@@ -22,7 +22,7 @@ export class AppearanceInitiator {
     return of(true).pipe(
       switchMap(() => {
         return this.store.dispatch(
-          new AppearanceStateInitAction({
+          new AppearanceInitAction({
             copyright: this.copyright.build(),
             section: this.section.build(),
             technologies: this.technologies.build(),

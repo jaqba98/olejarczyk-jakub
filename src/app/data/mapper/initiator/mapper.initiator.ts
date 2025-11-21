@@ -4,7 +4,7 @@ import { of, switchMap, take } from 'rxjs';
 
 import { CopyrightMapperBuilder } from '../builder/copyright-mapper.builder';
 import { SectionMapperBuilder } from '../builder/section-mapper.builder';
-import { MapperStateInitAction } from '../../../action/state-init.action';
+import { MapperInitAction } from '../../../action/init.action';
 import { RawState } from '../../../state/raw.state';
 import { AboutMeMapperBuilder } from '../builder/about-me-mapper.builder';
 
@@ -22,7 +22,7 @@ export class MapperInitiator {
       switchMap(() => this.store.select(RawState.getState)),
       switchMap((state) => {
         return this.store.dispatch(
-          new MapperStateInitAction({
+          new MapperInitAction({
             copyright: this.copyright.build(state),
             section: this.section.build(state),
             aboutMe: this.aboutMe.build(state),
