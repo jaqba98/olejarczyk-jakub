@@ -1,10 +1,8 @@
-import { ParagraphDomainModel } from '../domain/domain/paragraph-domain.model';
-import { SectionDomainModel } from '../domain/domain/section-domain.model';
-import { TechnologiesDomainModel } from '../domain/domain/technologies-domain.model';
+import { ParagraphDomainModel } from '../domain/paragraph-domain.model';
+import { SectionDomainModel } from '../domain/section-domain.model';
 
 export interface DomainStateModel {
   copyright: ParagraphDomainModel;
+  description: ParagraphDomainModel;
   section: SectionDomainModel;
-  technologies: TechnologiesDomainModel;
-  aboutMe: ParagraphDomainModel;
 }
