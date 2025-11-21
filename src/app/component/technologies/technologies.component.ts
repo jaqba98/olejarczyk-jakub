@@ -5,7 +5,7 @@ import { ComponentDecorator } from '../../decorator/component.decorator';
 import { LayoutModel } from '../../model/layout/layout.model';
 import { TechnologiesAppearanceModel } from '../../model/appearance/technologies-appearance.model';
 import { TechnologiesDataModel } from '../../model/data/technologies-data.model';
-import { TechnologiesMetadataModel } from '../../model/metadata/technologies-metadata.model';
+import { TechnologiesMetadataModel } from '../../model/metadata/description-metadata.model';
 
 @Component({
   selector: 'technologies-component',

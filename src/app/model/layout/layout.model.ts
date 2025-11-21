@@ -8,7 +8,7 @@ import { SectionDataValueModel } from '../data/section-data.model';
 import { TechnologiesDataModel } from '../data/technologies-data.model';
 import { ParagraphMetadataModel } from '../metadata/paragraph-metadata.model';
 import { SectionMetadataValueModel } from '../metadata/section-metadata.model';
-import { TechnologiesMetadataModel } from '../metadata/technologies-metadata.model';
+import { TechnologiesMetadataModel } from '../metadata/description-metadata.model';
 
 interface BaseComponentModel<TKind extends ComponentKindType> {
   kind: TKind;
