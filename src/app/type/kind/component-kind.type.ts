@@ -1,1 +1,1 @@
-export type ComponentKindType = 'paragraph' | 'section' | 'technologies';
+export type ComponentKindType = 'paragraph' | 'section';

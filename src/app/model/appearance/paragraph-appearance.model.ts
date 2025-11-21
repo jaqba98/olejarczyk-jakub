@@ -1,4 +1,4 @@
-import { CssClassKindType } from '../../type/kind/css-class-kind.type';
+import { CssClassKindType } from '../../type/css/class-css.type';
 
 export interface ParagraphAppearanceModel {
   paragraph: CssClassKindType[];
