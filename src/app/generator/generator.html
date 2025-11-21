@@ -2,7 +2,7 @@
   <ng-container *ngComponentOutlet="getComponent(); inputs: getInputs()"></ng-container>
 } @else if (group) {
   @for (child of group.children; track child) {
-    <generator [model]="child"></generator>
+    <generator [layout]="child"></generator>
   }
 } @else {
   <p>Layout cannot be generated: unsupported or invalid data.</p>

@@ -13,13 +13,13 @@ export class Generator {
   layout = input.required<LayoutModel>();
 
   get leaf(): LeafLayoutModel | null {
-    const model = this.layout();
-    return model.kind === 'leaf' ? model : null;
+    const layout = this.layout();
+    return layout.kind === 'leaf' ? layout : null;
   }
 
   get group(): GroupLayoutModel | null {
-    const model = this.layout();
-    return model.kind === 'group' ? model : null;
+    const layout = this.layout();
+    return layout.kind === 'group' ? layout : null;
   }
 
   getComponent() {
