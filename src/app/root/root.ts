@@ -1,17 +1,12 @@
 import { Component } from '@angular/core';
+import { map, Observable, switchMap } from 'rxjs';
 import { Store } from '@ngxs/store';
 import { CommonModule } from '@angular/common';
-import { Observable } from 'rxjs';
-import { map, switchMap } from 'rxjs/operators';
 
-import { Generator } from '../generator/generator';
+import { LayoutModel } from '../model/layout/layout.model';
 import { Initiator } from '../initiator/initiator';
 import { LayoutState } from '../state/layout.state';
-import { LayoutModel } from '../model/layout/layout.model';
-
-import '../component/paragraph/paragraph.component';
-import '../component/section/section.component';
-import '../component/technologies/technologies.component';
+import { Generator } from '../generator/generator';
 
 @Component({
   selector: 'root',
@@ -19,15 +14,15 @@ import '../component/technologies/technologies.component';
   imports: [CommonModule, Generator],
 })
 export class Root {
-  model$: Observable<LayoutModel>;
+  layout$: Observable<LayoutModel>;
 
   constructor(
     private readonly initiator: Initiator,
     private readonly store: Store,
   ) {
-    this.model$ = this.initiator.init().pipe(
-      switchMap(() => this.store.select(LayoutState.getState)),
-      map((state) => state.model),
+    this.layout$ = this.initiator.init().pipe(
+      switchMap(() => this.store.selectOnce(LayoutState.getState)),
+      map((state) => state.layout),
     );
   }
 }

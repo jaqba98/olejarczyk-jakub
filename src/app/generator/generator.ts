@@ -10,15 +10,15 @@ import { getComponent } from '../decorator/component.decorator';
   imports: [CommonModule],
 })
 export class Generator {
-  model = input.required<LayoutModel>();
+  layout = input.required<LayoutModel>();
 
   get leaf(): LeafLayoutModel | null {
-    const model = this.model();
+    const model = this.layout();
     return model.kind === 'leaf' ? model : null;
   }
 
   get group(): GroupLayoutModel | null {
-    const model = this.model();
+    const model = this.layout();
     return model.kind === 'group' ? model : null;
   }
 

@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { combineLatest, switchMap, take } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 import { SectionLayoutBuilder } from '../builder/section-layout.builder';
 import { CopyrightLayoutBuilder } from '../builder/copyright-layout.builder';
-import { LayoutInitAction } from '../../../action/init.action';
+import { DescriptionLayoutBuilder } from '../builder/description-layout.builder';
 import { DomainState } from '../../../state/domain.state';
-import { TechnologiesLayoutBuilder } from '../builder/technologies-layout.builder';
-import { AboutMeLayoutBuilder } from '../builder/about-me-layout.builder';
+import { LayoutInitAction } from '../../../action/init.action';
 
 @Injectable({ providedIn: 'root' })
 export class LayoutInitiator {
@@ -15,35 +14,33 @@ export class LayoutInitiator {
     private readonly store: Store,
     private readonly section: SectionLayoutBuilder,
     private readonly copyright: CopyrightLayoutBuilder,
-    private readonly technologies: TechnologiesLayoutBuilder,
-    private readonly aboutMe: AboutMeLayoutBuilder,
+    private readonly description: DescriptionLayoutBuilder,
   ) {}
 
   init() {
-    return combineLatest([this.store.selectOnce(DomainState.getState)]).pipe(
-      switchMap(([state]) => {
+    return this.store.selectOnce(DomainState.getState).pipe(
+      map((state) => {
         return this.store.dispatch(
           new LayoutInitAction({
-            model: {
+            layout: {
               kind: 'group',
               children: [
-                this.section.build(state, 'nav', []),
-                this.section.build(state, 'home', []),
-                this.section.build(state, 'aboutMe', [this.aboutMe.build(state)]),
-                this.section.build(state, 'technology', []),
-                this.section.build(state, 'skill', []),
-                this.section.build(state, 'experience', []),
-                this.section.build(state, 'resume', []),
-                this.section.build(state, 'education', []),
-                this.section.build(state, 'project', []),
-                this.section.build(state, 'contact', []),
-                this.section.build(state, 'footer', [this.copyright.build(state)]),
+                this.section.buildNav(state, []),
+                this.section.buildHome(state, []),
+                this.section.buildAboutMe(state, [this.description.build(state)]),
+                this.section.buildTechnology(state, []),
+                this.section.buildSkill(state, []),
+                this.section.buildExperience(state, []),
+                this.section.buildResume(state, []),
+                this.section.buildEducation(state, []),
+                this.section.buildProject(state, []),
+                this.section.buildContact(state, []),
+                this.section.buildFooter(state, [this.copyright.build(state)]),
               ],
             },
           }),
         );
       }),
-      take(1),
     );
   }
 }

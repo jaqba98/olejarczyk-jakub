@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { of, switchMap, take } from 'rxjs';
+import { map, take } from 'rxjs/operators';
+import { of } from 'rxjs';
 
 import { AppearanceInitiator } from '../data/appearance/initiator/appearance.initiator';
 import { DataInitiator } from '../data/data/initiator/data.initiator';
@@ -23,13 +24,13 @@ export class Initiator {
 
   init() {
     return of(true).pipe(
-      switchMap(() => this.raw.init()),
-      switchMap(() => this.mapper.init()),
-      switchMap(() => this.data.init()),
-      switchMap(() => this.metadata.init()),
-      switchMap(() => this.appearance.init()),
-      switchMap(() => this.domain.init()),
-      switchMap(() => this.layout.init()),
+      map(() => this.raw.init()),
+      map(() => this.mapper.init()),
+      map(() => this.data.init()),
+      map(() => this.metadata.init()),
+      map(() => this.appearance.init()),
+      map(() => this.domain.init()),
+      map(() => this.layout.init()),
       take(1),
     );
   }
