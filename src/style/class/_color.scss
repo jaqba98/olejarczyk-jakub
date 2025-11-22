@@ -1,0 +1,23 @@
+.color {
+  &__brand {
+    background-color: var(--color-primary-500);
+    color: var(--color-neutral-100);
+  }
+
+  &__content {
+    &--light {
+      background-color: var(--color-neutral-100);
+      color: var(--color-neutral-800);
+    }
+
+    &--soft {
+      background-color: var(--color-neutral-200);
+      color: var(--color-neutral-800);
+    }
+
+    &--dark {
+      background-color: var(--color-neutral-800);
+      color: var(--color-neutral-100);
+    }
+  }
+}

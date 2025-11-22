@@ -7,47 +7,47 @@ export class SectionAppearanceBuilder {
   build(): SectionAppearanceModel {
     return {
       nav: {
-        main: [],
+        main: ['color__brand'],
         container: [],
       },
       home: {
-        main: [],
+        main: ['color__brand'],
         container: [],
       },
       aboutMe: {
-        main: [],
+        main: ['color__content--light'],
         container: [],
       },
       technology: {
-        main: [],
+        main: ['color__content--soft'],
         container: [],
       },
       skill: {
-        main: [],
+        main: ['color__content--light'],
         container: [],
       },
       experience: {
-        main: [],
+        main: ['color__content--soft'],
         container: [],
       },
       resume: {
-        main: [],
+        main: ['color__content--light'],
         container: [],
       },
       education: {
-        main: [],
+        main: ['color__content--soft'],
         container: [],
       },
       project: {
-        main: [],
+        main: ['color__content--light'],
         container: [],
       },
       contact: {
-        main: [],
+        main: ['color__content--soft'],
         container: [],
       },
       footer: {
-        main: [],
+        main: ['color__content--dark'],
         container: [],
       },
     };
