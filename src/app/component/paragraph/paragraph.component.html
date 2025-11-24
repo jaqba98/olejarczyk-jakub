@@ -1,3 +1,5 @@
-@for (paragraph of data().paragraphs; track paragraph) {
-  <p [ngClass]="appearance().main">{{ paragraph }}</p>
-}
+<div [ngClass]="appearance().main">
+  @for (paragraph of data().paragraphs; track paragraph) {
+    <p>{{ paragraph }}</p>
+  }
+</div>

@@ -6,4 +6,7 @@ export type ClassCssType =
   | 'shape__nav'
   | 'shape__footer'
   | 'shape__container'
-  | 'shape__container--title';
+  | 'shape__container--title'
+  | 'text__center'
+  | 'text__justify'
+  | 'gap__small';

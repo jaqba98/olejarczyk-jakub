@@ -3,4 +3,9 @@ body {
   font-weight: 400;
   font-style: normal;
   min-width: var(--width-min);
+  font-size: 100%;
+
+  @media (max-width: 460px) {
+    font-size: 70%;
+  }
 }
