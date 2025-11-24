@@ -1,0 +1,15 @@
+.shape {
+  &__nav,
+  &__footer {
+    padding: var(--size-md);
+  }
+
+  &__container {
+    padding: var(--size-xl) var(--size-md);
+    max-width: var(--width-container);
+
+    &--title {
+      margin-bottom: var(--size-lg);
+    }
+  }
+}

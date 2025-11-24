@@ -1,7 +1,7 @@
 <section [id]="data().id" [ngClass]="appearance().main">
   <div [ngClass]="appearance().container">
     @if (metadata().showTitle) {
-      <h2>{{ data().label }}</h2>
+      <h2 [ngClass]="appearance().title">{{ data().label }}</h2>
     }
     @if (children().length > 0) {
       <generator [layout]="getLayout()"></generator>

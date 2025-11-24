@@ -8,47 +8,58 @@ export class SectionAppearanceBuilder {
     return {
       nav: {
         main: ['color__brand'],
-        container: [],
+        container: ['shape__nav'],
+        title: [],
       },
       home: {
         main: ['color__brand'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       aboutMe: {
         main: ['color__content--light'],
-        container: [],
+        container: ['shape__container'],
+        title: ['shape__container--title'],
       },
       technology: {
         main: ['color__content--soft'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       skill: {
         main: ['color__content--light'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       experience: {
         main: ['color__content--soft'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       resume: {
         main: ['color__content--light'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       education: {
         main: ['color__content--soft'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       project: {
         main: ['color__content--light'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       contact: {
         main: ['color__content--soft'],
-        container: [],
+        container: ['shape__container'],
+        title: [],
       },
       footer: {
         main: ['color__content--dark'],
-        container: [],
+        container: ['shape__footer'],
+        title: [],
       },
     };
   }
