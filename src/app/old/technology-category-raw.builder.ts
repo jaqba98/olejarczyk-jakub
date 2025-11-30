@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { TechnologyCategoryRawModel } from './technology-category-raw.model';
+import { TechnologyCategoryRawModel } from '../model/raw/technology-category-raw.model';
 
 @Injectable({ providedIn: 'root' })
 export class TechnologyCategoryRawBuilder {
