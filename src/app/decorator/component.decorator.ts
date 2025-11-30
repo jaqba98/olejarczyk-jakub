@@ -1,4 +1,4 @@
-import { ComponentType } from '../type/component/component.type';
+import { ComponentType } from '../type/common/common.type';
 import { ComponentKindType } from '../type/kind/component-kind.type';
 
 const store = new Map<ComponentKindType, ComponentType>();
