@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, input } from '@angular/core';
 
-import { GroupLayoutModel, LayoutModel, LeafLayoutModel } from '../model/layout/layout.model';
+import { LayoutGroupModel, LayoutModel, LayoutLeafModel } from '../model/layout/layout.model';
 import { getComponent } from '../decorator/component.decorator';
 
 @Component({
@@ -12,12 +12,12 @@ import { getComponent } from '../decorator/component.decorator';
 export class Generator {
   layout = input.required<LayoutModel>();
 
-  get leaf(): LeafLayoutModel | null {
+  get leaf(): LayoutLeafModel | null {
     const layout = this.layout();
     return layout.kind === 'leaf' ? layout : null;
   }
 
-  get group(): GroupLayoutModel | null {
+  get group(): LayoutGroupModel | null {
     const layout = this.layout();
     return layout.kind === 'group' ? layout : null;
   }

@@ -5,13 +5,13 @@ interface BaseLayoutModel<TKind extends LayoutKindType> {
   kind: TKind;
 }
 
-export interface LeafLayoutModel extends BaseLayoutModel<'leaf'> {
+export interface LayoutLeafModel extends BaseLayoutModel<'leaf'> {
   component: ComponentModel;
 }
 
-export interface GroupLayoutModel extends BaseLayoutModel<'group'> {
+export interface LayoutGroupModel extends BaseLayoutModel<'group'> {
   component?: ComponentModel;
   children: LayoutModel[];
 }
 
-export type LayoutModel = LeafLayoutModel | GroupLayoutModel;
+export type LayoutModel = LayoutLeafModel | LayoutGroupModel;
