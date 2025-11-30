@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SvgModel } from '../../../old/svg.model';
+import { SvgModel } from '../../../model/svg/svg.model';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
