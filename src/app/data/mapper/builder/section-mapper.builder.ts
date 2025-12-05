@@ -8,7 +8,7 @@ export class SectionMapperBuilder {
   build(state: RawStateModel): SectionMapperModel {
     const { section } = state;
     return {
-      data: {
+      section: {
         nav: {
           id: section.nav.id,
           label: section.nav.label,

@@ -8,6 +8,7 @@ import { MapperInitAction } from '../../../action/init.action';
 import { RawState } from '../../../state/raw.state';
 import { DescriptionMapperBuilder } from '../builder/description-mapper.builder';
 import { MapperStateModel } from '../../../model/state/mapper-state.model';
+import { TechnologyMapperBuilder } from '../builder/technology-mapper.builder';
 
 @Injectable({ providedIn: 'root' })
 export class MapperInitiator {
@@ -16,6 +17,7 @@ export class MapperInitiator {
     private readonly copyright: CopyrightMapperBuilder,
     private readonly description: DescriptionMapperBuilder,
     private readonly section: SectionMapperBuilder,
+    private readonly technology: TechnologyMapperBuilder,
   ) {}
 
   init() {
@@ -25,6 +27,7 @@ export class MapperInitiator {
           copyright: this.copyright.build(state),
           description: this.description.build(state),
           section: this.section.build(state),
+          technology: this.technology.build(state),
         };
       }),
       map((state) => this.store.dispatch(new MapperInitAction(state))),

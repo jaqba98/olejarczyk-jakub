@@ -8,7 +8,7 @@ export class DescriptionMapperBuilder {
   build(state: RawStateModel): DescriptionMapperModel {
     const { description } = state.personal;
     return {
-      data: {
+      paragraph: {
         paragraphs: description,
       },
     };
