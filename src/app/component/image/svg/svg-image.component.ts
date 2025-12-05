@@ -1,7 +1,7 @@
 import { Component, input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { SvgModel } from '../../../model/svg/svg.model';
+// import { SvgModel } from '../../../model/svg/svg.model';
 import { BaseComponent } from '../../base/base.component';
 
 @Component({
@@ -10,7 +10,7 @@ import { BaseComponent } from '../../base/base.component';
   imports: [CommonModule],
 })
 export class SvgImageComponent extends BaseComponent {
-  model = input.required<SvgModel>();
+  model = input.required<any>();
 
   type = input.required<'light' | 'dark'>();
 

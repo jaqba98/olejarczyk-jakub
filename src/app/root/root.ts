@@ -10,6 +10,7 @@ import { Generator } from '../generator/generator';
 
 import '../component/paragraph/paragraph.component';
 import '../component/section/section.component';
+import '../component/technology/technology.component';
 
 @Component({
   selector: 'root',
