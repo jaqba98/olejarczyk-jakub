@@ -6,6 +6,6 @@ import { SectionDataModel } from '../../../model/data/section-data.model';
 @Injectable({ providedIn: 'root' })
 export class SectionDataBuilder {
   build(state: MapperStateModel): SectionDataModel {
-    return state.section.data;
+    return state.section.section;
   }
 }

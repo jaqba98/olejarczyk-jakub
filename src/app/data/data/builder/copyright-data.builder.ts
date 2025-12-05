@@ -6,6 +6,6 @@ import { ParagraphDataModel } from '../../../model/data/paragraph-data.model';
 @Injectable({ providedIn: 'root' })
 export class CopyrightDataBuilder {
   build(state: MapperStateModel): ParagraphDataModel {
-    return state.copyright.data;
+    return state.copyright.paragraph;
   }
 }

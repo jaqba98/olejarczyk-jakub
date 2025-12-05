@@ -8,6 +8,7 @@ import { DataInitAction } from '../../../action/init.action';
 import { MapperState } from '../../../state/mapper.state';
 import { DescriptionDataBuilder } from '../builder/description-data.builder';
 import { DataStateModel } from '../../../model/state/data-state.model';
+import { TechnpologyDataBuilder } from '../builder/technology-data.builder';
 
 @Injectable({ providedIn: 'root' })
 export class DataInitiator {
@@ -16,6 +17,7 @@ export class DataInitiator {
     private readonly copyright: CopyrightDataBuilder,
     private readonly section: SectionDataBuilder,
     private readonly description: DescriptionDataBuilder,
+    private readonly technology: TechnpologyDataBuilder,
   ) {}
 
   init() {
@@ -25,6 +27,7 @@ export class DataInitiator {
           copyright: this.copyright.build(state),
           description: this.description.build(state),
           section: this.section.build(state),
+          technology: this.technology.build(state),
         };
       }),
       map((state) => this.store.dispatch(new DataInitAction(state))),

@@ -6,6 +6,6 @@ import { ParagraphDataModel } from '../../../model/data/paragraph-data.model';
 @Injectable({ providedIn: 'root' })
 export class DescriptionDataBuilder {
   build(state: MapperStateModel): ParagraphDataModel {
-    return state.description.data;
+    return state.description.paragraph;
   }
 }
