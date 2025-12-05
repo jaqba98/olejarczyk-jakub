@@ -35,17 +35,17 @@ export class Generator {
   getInputs() {
     if (this.leaf) {
       return {
-        data: this.leaf.component.data,
-        metadata: this.leaf.component.metadata,
-        appearance: this.leaf.component.appearance,
+        data: this.leaf.component.domain.data,
+        metadata: this.leaf.component.domain.metadata,
+        appearance: this.leaf.component.domain.appearance,
         children: [],
       };
     }
     if (this.group && this.group.component) {
       return {
-        data: this.group.component.data,
-        metadata: this.group.component.metadata,
-        appearance: this.group.component.appearance,
+        data: this.group.component.domain.data,
+        metadata: this.group.component.domain.metadata,
+        appearance: this.group.component.domain.appearance,
         children: this.group.children,
       };
     }
