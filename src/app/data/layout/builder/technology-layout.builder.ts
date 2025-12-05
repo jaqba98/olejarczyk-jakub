@@ -4,16 +4,16 @@ import { LayoutModel } from '../../../model/layout/layout.model';
 import { DomainStateModel } from '../../../model/state/domain-state.model';
 
 @Injectable({ providedIn: 'root' })
-export class DescriptionLayoutBuilder {
+export class TechnologyLayoutBuilder {
   build(state: DomainStateModel): LayoutModel {
     return {
       kind: 'leaf',
       component: {
-        kind: 'paragraph',
+        kind: 'technology',
         domain: {
-          data: state.description.data,
-          metadata: state.description.metadata,
-          appearance: state.description.appearance,
+          data: state.technology.data,
+          metadata: state.technology.metadata,
+          appearance: state.technology.appearance,
         },
       },
     };

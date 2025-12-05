@@ -5,6 +5,7 @@ import { CopyrightMetadataBuilder } from '../builder/copyright-metadata.builder'
 import { SectionMetadataBuilder } from '../builder/section-metadata.builder';
 import { MetadataInitAction } from '../../../action/init.action';
 import { DescriptionMetadataBuilder } from '../builder/description-metadata.builder';
+import { TechnologyMetadataBuilder } from '../builder/technology-metadata.builder';
 
 @Injectable({ providedIn: 'root' })
 export class MetadataInitiator {
@@ -13,6 +14,7 @@ export class MetadataInitiator {
     private readonly copyright: CopyrightMetadataBuilder,
     private readonly description: DescriptionMetadataBuilder,
     private readonly section: SectionMetadataBuilder,
+    private readonly technology: TechnologyMetadataBuilder,
   ) {}
 
   init() {
@@ -21,6 +23,7 @@ export class MetadataInitiator {
         copyright: this.copyright.build(),
         description: this.description.build(),
         section: this.section.build(),
+        technology: this.technology.build(),
       }),
     );
   }

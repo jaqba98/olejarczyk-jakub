@@ -7,6 +7,7 @@ import { CopyrightLayoutBuilder } from '../builder/copyright-layout.builder';
 import { DescriptionLayoutBuilder } from '../builder/description-layout.builder';
 import { DomainState } from '../../../state/domain.state';
 import { LayoutInitAction } from '../../../action/init.action';
+import { TechnologyLayoutBuilder } from '../builder/technology-layout.builder';
 
 @Injectable({ providedIn: 'root' })
 export class LayoutInitiator {
@@ -15,6 +16,7 @@ export class LayoutInitiator {
     private readonly section: SectionLayoutBuilder,
     private readonly copyright: CopyrightLayoutBuilder,
     private readonly description: DescriptionLayoutBuilder,
+    private readonly technology: TechnologyLayoutBuilder,
   ) {}
 
   init() {
@@ -28,7 +30,7 @@ export class LayoutInitiator {
                 this.section.buildNav(state, []),
                 this.section.buildHome(state, []),
                 this.section.buildAboutMe(state, [this.description.build(state)]),
-                this.section.buildTechnology(state, []),
+                this.section.buildTechnology(state, [this.technology.build(state)]),
                 this.section.buildSkill(state, []),
                 this.section.buildExperience(state, []),
                 this.section.buildResume(state, []),

@@ -10,9 +10,11 @@ export class CopyrightLayoutBuilder {
       kind: 'leaf',
       component: {
         kind: 'paragraph',
-        data: state.copyright.data,
-        metadata: state.copyright.metadata,
-        appearance: state.copyright.appearance,
+        domain: {
+          data: state.copyright.data,
+          metadata: state.copyright.metadata,
+          appearance: state.copyright.appearance,
+        },
       },
     };
   }

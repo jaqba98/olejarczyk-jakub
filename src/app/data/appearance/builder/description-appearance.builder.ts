@@ -6,7 +6,7 @@ import { ParagraphAppearanceModel } from '../../../model/appearance/paragraph-ap
 export class DescriptionAppearanceBuilder {
   build(): ParagraphAppearanceModel {
     return {
-      main: ['gap__small', 'text__justify'],
+      main: [],
     };
   }
 }

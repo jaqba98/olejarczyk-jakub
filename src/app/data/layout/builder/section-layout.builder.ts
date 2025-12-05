@@ -59,9 +59,11 @@ export class SectionLayoutBuilder {
       kind: 'group',
       component: {
         kind: 'section',
-        data: state.section[kind].data,
-        metadata: state.section[kind].metadata,
-        appearance: state.section[kind].appearance,
+        domain: {
+          data: state.section[kind].data,
+          metadata: state.section[kind].metadata,
+          appearance: state.section[kind].appearance,
+        },
       },
       children,
     };

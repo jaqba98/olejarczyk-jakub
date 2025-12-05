@@ -5,6 +5,7 @@ import { CopyrightAppearanceBuilder } from '../builder/copyright-appearance.buil
 import { SectionAppearanceBuilder } from '../builder/section-appearance.builder';
 import { AppearanceInitAction } from '../../../action/init.action';
 import { DescriptionAppearanceBuilder } from '../builder/description-appearance.builder';
+import { TechnologyAppearanceBuilder } from '../builder/technology-appearance.builder';
 
 @Injectable({ providedIn: 'root' })
 export class AppearanceInitiator {
@@ -13,6 +14,7 @@ export class AppearanceInitiator {
     private readonly copyright: CopyrightAppearanceBuilder,
     private readonly description: DescriptionAppearanceBuilder,
     private readonly section: SectionAppearanceBuilder,
+    private readonly technology: TechnologyAppearanceBuilder,
   ) {}
 
   init() {
@@ -21,6 +23,7 @@ export class AppearanceInitiator {
         copyright: this.copyright.build(),
         description: this.description.build(),
         section: this.section.build(),
+        technology: this.technology.build(),
       }),
     );
   }
